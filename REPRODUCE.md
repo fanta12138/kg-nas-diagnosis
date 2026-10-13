@@ -9,9 +9,11 @@ Two levels of reproduction are possible from this repository.
   the MVTec-AD dataset, and hours to days (the 210-detector matrix alone is 210
   training runs of 500 epochs). Level 2 is documented at the end.
 
-Level 1 was verified end-to-end on the released tree: all five figures regenerate
-**byte for byte**, and every script below reproduces the numbers printed in the
-paper.
+Level 1 was verified end-to-end on the released tree, and again on a fresh
+`git clone` in a different location: every script below reproduces the numbers
+printed in the paper, the five PNG figures regenerate **byte for byte** (the PDF
+siblings differ only in embedded creation metadata), and the manuscript compiles
+to 22 pages with no undefined references.
 
 ---
 
