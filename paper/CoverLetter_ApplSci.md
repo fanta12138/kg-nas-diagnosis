@@ -43,7 +43,7 @@ We do not claim state of the art. The pipeline reaches 82.47% mean AUROC against
 
 - **Authorship.** All authors listed qualify for authorship and have approved the submitted version. Author contributions are stated in the manuscript (initial contributions are not equal; the corresponding author is P.D.).
 - **Competing interests.** The authors declare no conflict of interest.
-- **Funding.** This work was supported by the Guangxi Natural Science Foundation (Grant No. `2025GXNSFHA069076`) and the Guangxi University of Science and Technology Doctoral Fund (Grant Nos. `26Z15`, `26Z25`). The funders had no role in the design of the study, the analysis, or the decision to publish.
+- **Funding.** This work was supported by the Guangxi Natural Science Foundation (Grant No. `2025GXNSFHA069076`, awarded to P.D.) and the Guangxi University of Science and Technology Doctoral Fund (Grant Nos. `26Z15`, awarded to P.D., and `26Z25`, awarded to H.L.). The funders had no role in the design of the study, in the collection, analysis or interpretation of data, or in the decision to publish.
 - **Data availability.** This work uses only the publicly available MVTec-AD benchmark; no new image data were generated. All derived artefacts are released with the code.
 - **Code availability.** The complete source code, raw logs and frozen results are publicly released; the repository link is given in the manuscript and will be confirmed to the Editorial Office.
 - **Ethics.** Not applicable: this study did not involve human participants or animals.
