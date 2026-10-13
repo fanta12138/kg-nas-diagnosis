@@ -3,15 +3,17 @@ message: "If you use this code or the released results, please cite the paper be
 title: "The Architecture Axis Is Not the Axis: A Diagnostic Study of Neural Architecture Search and Score Fusion in Unsupervised Industrial Anomaly Detection"
 type: software
 authors:
-  - family-names: Deng
-    given-names: Peng
-    email: dengpeng@gxust.edu.cn
-    affiliation: "School of Civil and Architectural Engineering, Guangxi University of Science and Technology, Liuzhou 545006, China"
   - family-names: Li
     given-names: Hong
+    email: lihong@gxust.edu.cn
     affiliation: "School of Civil and Architectural Engineering, Guangxi University of Science and Technology, Liuzhou 545006, China"
   - family-names: Zhou
     given-names: Yuanwu
+    email: zhouyuanwu@gxust.edu.cn
+    affiliation: "School of Civil and Architectural Engineering, Guangxi University of Science and Technology, Liuzhou 545006, China"
+  - family-names: Deng
+    given-names: Peng
+    email: dengpeng@gxust.edu.cn
     affiliation: "School of Civil and Architectural Engineering, Guangxi University of Science and Technology, Liuzhou 545006, China"
 contact:
   - family-names: Deng

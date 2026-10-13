@@ -4,7 +4,7 @@
 
 > *The Architecture Axis Is Not the Axis: A Diagnostic Study of Neural Architecture
 > Search and Score Fusion in Unsupervised Industrial Anomaly Detection*
-> Peng Deng, Hong Li, Yuanwu Zhou — Guangxi University of Science and Technology
+> Hong Li, Yuanwu Zhou, Peng Deng — Guangxi University of Science and Technology
 
 This repository accompanies a **benchmark and evaluation study**. It is not a new
 detector. It contains the pipeline that was diagnosed, every experiment that
@@ -163,7 +163,7 @@ Two strong checks that the release is intact and self-consistent:
 1. `python make_figures_v2.py` regenerates `paper/figures_v2/*.png`
    **byte for byte** from the shipped JSONs.
 2. The manuscript compiles standalone: `cd paper && latexmk -pdf main_v2.tex`
-   → 22 pages, 0 undefined references.
+   → 23 pages, 0 undefined references.
 
 ## Scope and caveats
 
@@ -192,7 +192,7 @@ University of Science and Technology Doctoral Fund (Grant Nos. `26Z15`, `26Z25`)
 
 ## Licence
 
-MIT — see [`LICENSE`](LICENSE). Copyright (c) 2026 Peng Deng, Hong Li, Yuanwu Zhou.
+MIT — see [`LICENSE`](LICENSE). Copyright (c) 2026 Hong Li, Yuanwu Zhou, Peng Deng.
 
 ## Contact
 

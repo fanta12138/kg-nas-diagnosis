@@ -13,7 +13,7 @@ Level 1 was verified end-to-end on the released tree, and again on a fresh
 `git clone` in a different location: every script below reproduces the numbers
 printed in the paper, the five PNG figures regenerate **byte for byte** (the PDF
 siblings differ only in embedded creation metadata), and the manuscript compiles
-to 22 pages with no undefined references.
+to 23 pages with no undefined references.
 
 ---
 
@@ -218,7 +218,7 @@ python adbench/trim_bib.py
 The manuscript compiles standalone from `paper/`:
 
 ```bash
-cd paper && latexmk -pdf -interaction=nonstopmode main_v2.tex   # 22 pages, 0 undefined
+cd paper && latexmk -pdf -interaction=nonstopmode main_v2.tex   # 23 pages, 0 undefined
 ```
 
 ---
