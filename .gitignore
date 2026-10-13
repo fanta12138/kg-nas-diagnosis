@@ -1,0 +1,61 @@
+# --- datasets (download separately; see docs/DATA.md)
+datasets/
+datasets-2/
+datasets-3/
+mvtec_loco_anomaly_detection/
+data/
+*.tar
+*.zip
+
+# --- model checkpoints and training output
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.pickle
+*.npz
+*.npy
+*.onnx
+*.h5
+runs/
+outputs/
+checkpoints/
+lightning_logs/
+
+# --- LaTeX build products (paper/main_v2.pdf IS tracked)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.spl
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# --- python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+*.egg-info/
+
+# --- editors / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*~
+*.bak
+*.bak_*
+*_bak_*
+*_prev*
+*.tmp
+~$*
+
+# --- local overrides
+.env
+.env.*

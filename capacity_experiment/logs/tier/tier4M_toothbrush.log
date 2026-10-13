@@ -1,0 +1,26 @@
+  [tier4/toothbrush] epoch 20: loss=0.2653 AUROC=0.5306 AP=0.7701
+  [tier4/toothbrush] epoch 40: loss=0.1999 AUROC=0.5278 AP=0.7559
+  [tier4/toothbrush] epoch 60: loss=0.1748 AUROC=0.6528 AP=0.8635
+  [tier4/toothbrush] epoch 80: loss=0.1585 AUROC=0.7111 AP=0.8872
+  [tier4/toothbrush] epoch 100: loss=0.1447 AUROC=0.7083 AP=0.8879
+  [tier4/toothbrush] epoch 120: loss=0.1423 AUROC=0.7167 AP=0.8905
+  [tier4/toothbrush] epoch 140: loss=0.1280 AUROC=0.7194 AP=0.8922
+  [tier4/toothbrush] epoch 160: loss=0.1175 AUROC=0.7361 AP=0.9012
+  [tier4/toothbrush] epoch 180: loss=0.1109 AUROC=0.7639 AP=0.9146
+  [tier4/toothbrush] epoch 200: loss=0.1090 AUROC=0.7722 AP=0.9182
+  [tier4/toothbrush] epoch 220: loss=0.1048 AUROC=0.7778 AP=0.9200
+  [tier4/toothbrush] epoch 240: loss=0.1018 AUROC=0.7778 AP=0.9200
+  [tier4/toothbrush] epoch 260: loss=0.1017 AUROC=0.7944 AP=0.9256
+  [tier4/toothbrush] epoch 280: loss=0.0978 AUROC=0.7889 AP=0.9241
+  [tier4/toothbrush] epoch 300: loss=0.0961 AUROC=0.8056 AP=0.9303
+  [tier4/toothbrush] epoch 320: loss=0.0939 AUROC=0.7972 AP=0.9264
+  [tier4/toothbrush] epoch 340: loss=0.0932 AUROC=0.7972 AP=0.9269
+  [tier4/toothbrush] epoch 360: loss=0.0912 AUROC=0.8111 AP=0.9318
+  [tier4/toothbrush] epoch 380: loss=0.0906 AUROC=0.8083 AP=0.9305
+  [tier4/toothbrush] epoch 400: loss=0.0897 AUROC=0.8306 AP=0.9379
+  [tier4/toothbrush] epoch 420: loss=0.0890 AUROC=0.8333 AP=0.9391
+  [tier4/toothbrush] epoch 440: loss=0.0900 AUROC=0.8333 AP=0.9391
+  [tier4/toothbrush] epoch 460: loss=0.0894 AUROC=0.8194 AP=0.9333
+  [tier4/toothbrush] epoch 480: loss=0.0893 AUROC=0.8194 AP=0.9333
+  [tier4/toothbrush] epoch 500: loss=0.0889 AUROC=0.8333 AP=0.9391
+DONE tier=4 cat=toothbrush resnet18 AUROC=0.8333 AP=0.9391 (0.8 min wall)

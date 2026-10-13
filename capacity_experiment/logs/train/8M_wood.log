@@ -1,0 +1,26 @@
+  [cap8/wood] epoch 20: loss=0.3409 AUROC=0.9298 AP=0.9766
+  [cap8/wood] epoch 40: loss=0.3263 AUROC=0.9561 AP=0.9854
+  [cap8/wood] epoch 60: loss=0.2996 AUROC=0.9298 AP=0.9770
+  [cap8/wood] epoch 80: loss=0.2712 AUROC=0.9412 AP=0.9805
+  [cap8/wood] epoch 100: loss=0.2681 AUROC=0.9219 AP=0.9738
+  [cap8/wood] epoch 120: loss=0.2492 AUROC=0.9377 AP=0.9796
+  [cap8/wood] epoch 140: loss=0.4539 AUROC=0.8763 AP=0.9574
+  [cap8/wood] epoch 160: loss=0.3087 AUROC=0.9360 AP=0.9786
+  [cap8/wood] epoch 180: loss=0.2773 AUROC=0.9193 AP=0.9730
+  [cap8/wood] epoch 200: loss=0.2655 AUROC=0.9298 AP=0.9766
+  [cap8/wood] epoch 220: loss=0.2605 AUROC=0.9281 AP=0.9767
+  [cap8/wood] epoch 240: loss=0.2511 AUROC=0.9404 AP=0.9805
+  [cap8/wood] epoch 260: loss=0.2501 AUROC=0.9395 AP=0.9802
+  [cap8/wood] epoch 280: loss=0.2436 AUROC=0.9404 AP=0.9805
+  [cap8/wood] epoch 300: loss=0.2465 AUROC=0.9368 AP=0.9793
+  [cap8/wood] epoch 320: loss=0.2391 AUROC=0.9395 AP=0.9802
+  [cap8/wood] epoch 340: loss=0.2383 AUROC=0.9368 AP=0.9793
+  [cap8/wood] epoch 360: loss=0.2402 AUROC=0.9377 AP=0.9796
+  [cap8/wood] epoch 380: loss=0.2376 AUROC=0.9368 AP=0.9793
+  [cap8/wood] epoch 400: loss=0.2417 AUROC=0.9386 AP=0.9799
+  [cap8/wood] epoch 420: loss=0.2376 AUROC=0.9386 AP=0.9799
+  [cap8/wood] epoch 440: loss=0.2332 AUROC=0.9395 AP=0.9801
+  [cap8/wood] epoch 460: loss=0.2357 AUROC=0.9386 AP=0.9799
+  [cap8/wood] epoch 480: loss=0.2348 AUROC=0.9386 AP=0.9799
+  [cap8/wood] epoch 500: loss=0.2359 AUROC=0.9386 AP=0.9799
+DONE budget=8 cat=wood deit_tiny_patch16_224 AUROC=0.9386 AP=0.9799 (3.4 min wall)

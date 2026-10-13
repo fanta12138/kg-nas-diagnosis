@@ -1,0 +1,9 @@
+{
+  "auroc": 0.7007142857142858,
+  "ap": 0.800611635943603,
+  "backbone": "resnet18",
+  "feature_dim": 512,
+  "seed": 42,
+  "epochs": 200,
+  "minutes": 1.7
+}

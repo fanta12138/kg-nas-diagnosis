@@ -1,0 +1,10 @@
+[
+  {
+    "name": "F9c_tie_wording_supplement",
+    "must_appear": [],
+    "must_absent": [
+      "including two ties within 0.02 pp"
+    ],
+    "sources": true
+  }
+]

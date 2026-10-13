@@ -1,0 +1,29 @@
+{
+  "auroc": 0.7275,
+  "ap": 0.5595774380934726,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_transistor\\best_model.pth",
+  "per_defect_type": {
+    "bent_lead": {
+      "auroc": 0.0,
+      "count": 10
+    },
+    "cut_lead": {
+      "auroc": 0.0,
+      "count": 10
+    },
+    "damaged_case": {
+      "auroc": 0.0,
+      "count": 10
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 60
+    },
+    "misplaced": {
+      "auroc": 0.0,
+      "count": 10
+    }
+  }
+}

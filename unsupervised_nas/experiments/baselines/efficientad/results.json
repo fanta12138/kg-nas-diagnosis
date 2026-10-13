@@ -1,0 +1,9 @@
+{
+  "method": "EfficientAD",
+  "year": 2024,
+  "conference": "WACV",
+  "teacher_backbone": "resnet18",
+  "epochs": 50,
+  "auroc": 0.9254385964912281,
+  "ap": 0.9777820054239559
+}

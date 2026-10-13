@@ -1,0 +1,129 @@
+{
+  "best_architecture": {
+    "backbone": "efficientnet_b0",
+    "feature_dim": 512
+  },
+  "all_results": [
+    {
+      "trial": 1,
+      "architecture": {
+        "backbone": "convnext_tiny",
+        "feature_dim": 256
+      },
+      "score": 17.40882968902588
+    },
+    {
+      "trial": 2,
+      "architecture": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 512
+      },
+      "score": 2.2481939792633057
+    },
+    {
+      "trial": 3,
+      "architecture": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 512
+      },
+      "score": 1.542107567191124
+    },
+    {
+      "trial": 4,
+      "architecture": {
+        "backbone": "convnextv2_tiny",
+        "feature_dim": 256
+      },
+      "score": 8.967780590057373
+    },
+    {
+      "trial": 6,
+      "architecture": {
+        "backbone": "convnext_tiny",
+        "feature_dim": 512
+      },
+      "score": 8.44883942604065
+    },
+    {
+      "trial": 7,
+      "architecture": {
+        "backbone": "convnext_tiny",
+        "feature_dim": 128
+      },
+      "score": 4.277244329452515
+    },
+    {
+      "trial": 9,
+      "architecture": {
+        "backbone": "convnext_tiny",
+        "feature_dim": 256
+      },
+      "score": 21.571282386779785
+    },
+    {
+      "trial": 10,
+      "architecture": {
+        "backbone": "convnextv2_tiny",
+        "feature_dim": 512
+      },
+      "score": 19.62549114227295
+    },
+    {
+      "trial": 11,
+      "architecture": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 128
+      },
+      "score": 3.252564400434494
+    },
+    {
+      "trial": 16,
+      "architecture": {
+        "backbone": "convnextv2_tiny",
+        "feature_dim": 128
+      },
+      "score": 43.426198959350586
+    },
+    {
+      "trial": 22,
+      "architecture": {
+        "backbone": "convnextv2_tiny",
+        "feature_dim": 128
+      },
+      "score": 8.200893878936768
+    },
+    {
+      "trial": 24,
+      "architecture": {
+        "backbone": "convnext_tiny",
+        "feature_dim": 128
+      },
+      "score": 38.56326675415039
+    },
+    {
+      "trial": 27,
+      "architecture": {
+        "backbone": "convnext_tiny",
+        "feature_dim": 512
+      },
+      "score": 6.301114559173584
+    },
+    {
+      "trial": 28,
+      "architecture": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 128
+      },
+      "score": 4.7703375816345215
+    },
+    {
+      "trial": 30,
+      "architecture": {
+        "backbone": "convnextv2_tiny",
+        "feature_dim": 256
+      },
+      "score": 15.558140754699707
+    }
+  ],
+  "num_trials": 15
+}

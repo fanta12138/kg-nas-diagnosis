@@ -1,0 +1,26 @@
+  [tier5/screw] epoch 20: loss=0.1805 AUROC=0.4720 AP=0.7591
+  [tier5/screw] epoch 40: loss=0.1397 AUROC=0.2662 AP=0.6597
+  [tier5/screw] epoch 60: loss=0.1238 AUROC=0.2671 AP=0.6554
+  [tier5/screw] epoch 80: loss=0.1152 AUROC=0.2761 AP=0.6552
+  [tier5/screw] epoch 100: loss=0.1088 AUROC=0.3019 AP=0.6759
+  [tier5/screw] epoch 120: loss=0.1045 AUROC=0.3308 AP=0.6930
+  [tier5/screw] epoch 140: loss=0.1017 AUROC=0.3521 AP=0.7049
+  [tier5/screw] epoch 160: loss=0.0953 AUROC=0.3493 AP=0.7037
+  [tier5/screw] epoch 180: loss=0.0938 AUROC=0.3771 AP=0.7217
+  [tier5/screw] epoch 200: loss=0.0896 AUROC=0.3802 AP=0.7260
+  [tier5/screw] epoch 220: loss=0.0870 AUROC=0.3894 AP=0.7272
+  [tier5/screw] epoch 240: loss=0.0842 AUROC=0.4005 AP=0.7305
+  [tier5/screw] epoch 260: loss=0.0824 AUROC=0.4056 AP=0.7393
+  [tier5/screw] epoch 280: loss=0.0801 AUROC=0.4091 AP=0.7429
+  [tier5/screw] epoch 300: loss=0.0776 AUROC=0.4206 AP=0.7480
+  [tier5/screw] epoch 320: loss=0.0772 AUROC=0.4220 AP=0.7502
+  [tier5/screw] epoch 340: loss=0.0764 AUROC=0.4255 AP=0.7501
+  [tier5/screw] epoch 360: loss=0.0750 AUROC=0.4271 AP=0.7508
+  [tier5/screw] epoch 380: loss=0.0757 AUROC=0.4296 AP=0.7514
+  [tier5/screw] epoch 400: loss=0.0742 AUROC=0.4263 AP=0.7512
+  [tier5/screw] epoch 420: loss=0.0735 AUROC=0.4294 AP=0.7524
+  [tier5/screw] epoch 440: loss=0.0750 AUROC=0.4323 AP=0.7535
+  [tier5/screw] epoch 460: loss=0.0738 AUROC=0.4310 AP=0.7529
+  [tier5/screw] epoch 480: loss=0.0738 AUROC=0.4304 AP=0.7527
+  [tier5/screw] epoch 500: loss=0.0738 AUROC=0.4290 AP=0.7519
+DONE tier=5 cat=screw resnet50 AUROC=0.4290 AP=0.7519 (8.4 min wall)

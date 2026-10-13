@@ -1,0 +1,9 @@
+{
+  "auroc": 0.3248616519778643,
+  "ap": 0.6526841267151855,
+  "backbone": "swin_tiny_patch4_window7_224",
+  "feature_dim": 512,
+  "seed": 42,
+  "epochs": 200,
+  "minutes": 4.0
+}

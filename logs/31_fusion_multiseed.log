@@ -1,0 +1,71 @@
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[06:49:16]   [  1/30] s43 bottle      mean=0.9643 topk=0.9921 (3.7 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[06:53:21]   [  2/30] s43 cable       mean=0.8728 topk=0.8201 (4.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[06:57:19]   [  3/30] s43 capsule     mean=0.7339 topk=0.8480 (4.0 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:02:21]   [  4/30] s43 carpet      mean=0.6922 topk=0.8904 (5.0 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:07:08]   [  5/30] s43 grid        mean=0.5748 topk=0.8129 (4.8 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:14:16]   [  6/30] s43 hazelnut    mean=0.9729 topk=0.9975 (7.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:18:39]   [  7/30] s43 leather     mean=0.9827 topk=0.9990 (4.4 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:22:32]   [  8/30] s43 metal_nut   mean=0.7473 topk=0.9521 (3.9 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:27:24]   [  9/30] s43 pill        mean=0.8309 topk=0.7788 (4.9 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:33:00]   [ 10/30] s43 screw       mean=0.4308 topk=0.8229 (5.6 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:37:06]   [ 11/30] s43 tile        mean=0.9387 topk=0.9058 (4.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:38:12]   [ 12/30] s43 toothbrush  mean=0.8000 topk=0.9361 (1.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:42:05]   [ 13/30] s43 transistor  mean=0.8554 topk=0.8329 (3.9 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:46:30]   [ 14/30] s43 wood        mean=0.9430 topk=0.9912 (4.4 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:50:44]   [ 15/30] s43 zipper      mean=0.9680 topk=0.9386 (4.2 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:54:28]   [ 16/30] s44 bottle      mean=0.9619 topk=0.9921 (3.7 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[07:58:33]   [ 17/30] s44 cable       mean=0.8683 topk=0.8162 (4.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:02:31]   [ 18/30] s44 capsule     mean=0.7387 topk=0.8596 (4.0 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:07:33]   [ 19/30] s44 carpet      mean=0.7873 topk=0.9310 (5.0 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:12:20]   [ 20/30] s44 grid        mean=0.5739 topk=0.8145 (4.8 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:19:27]   [ 21/30] s44 hazelnut    mean=0.9696 topk=0.9975 (7.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:23:49]   [ 22/30] s44 leather     mean=0.9759 topk=0.9990 (4.4 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:27:42]   [ 23/30] s44 metal_nut   mean=0.7542 topk=0.9541 (3.9 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:32:33]   [ 24/30] s44 pill        mean=0.8249 topk=0.7542 (4.8 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:38:08]   [ 25/30] s44 screw       mean=0.4403 topk=0.8729 (5.6 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:42:13]   [ 26/30] s44 tile        mean=0.9398 topk=0.9030 (4.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:43:19]   [ 27/30] s44 toothbrush  mean=0.8194 topk=0.9472 (1.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:47:11]   [ 28/30] s44 transistor  mean=0.8312 topk=0.8075 (3.9 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:51:36]   [ 29/30] s44 wood        mean=0.9544 topk=0.9921 (4.4 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[08:55:50]   [ 30/30] s44 zipper      mean=0.9606 topk=0.9262 (4.2 min)
+[08:55:50] 
+[08:55:50] ====================================================================
+[08:55:50] cells (category x seed) = 30   seeds = [43, 44]
+[08:55:50]   sum_mean               mean AUROC = 82.3598%
+[08:55:50]   sum_topk               mean AUROC = 90.2848%
+[08:55:50]   sum_max                mean AUROC = 86.5578%
+[08:55:50]   w0.3_0.6_0.1_topk      mean AUROC = 90.5331%
+[08:55:50]   w0.2_0.6_0.2_topk      mean AUROC = 90.5249%
+[08:55:50]   top-k minus mean: +7.92 pp (sd 12.88, range -7.06 .. +43.27)
+[08:55:50] ====================================================================
+[08:55:50] saved -> D:/autopaper/fusion_multiseed\fusion_multiseed_summary.json

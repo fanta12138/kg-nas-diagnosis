@@ -1,0 +1,5 @@
+model,params_m,flops_g,fps_estimated
+ResNet-50,25.6,4.1,120
+EfficientNet-B0,5.3,0.4,350
+ViT-Tiny,5.7,1.3,200
+Ours (Eff-B0+256d),6.0,0.5,320

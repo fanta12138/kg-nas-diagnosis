@@ -1,0 +1,81 @@
+% ============================================================================
+% Figure 1 -- the pipeline under study, and the scoring policy.
+% Vector (TikZ); no raster resolution limit applies.
+% Included with \input from Section 3 (method).
+% ============================================================================
+
+\begin{figure*}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  font=\small,
+  node distance=4mm,
+  box/.style={draw, rounded corners=1pt, align=center, inner sep=3pt,
+              minimum height=9mm, line width=0.5pt},
+  stage/.style={box, fill=black!4, minimum width=20mm},
+  data/.style={box, fill=blue!6, minimum width=17mm},
+  sel/.style={box, fill=orange!14, minimum width=20mm},
+  arr/.style={->, >=latex, line width=0.5pt},
+  lab/.style={font=\scriptsize, inner sep=1pt},
+]
+
+%% ---------- Stage 1 ----------
+\node[data] (imgs) {normal\\images};
+\node[stage, right=6mm of imgs] (teacher) {contrastive\\pre-training};
+\node[data, right=6mm of teacher] (frozen) {frozen teacher\\$t_1,t_2,t_3$};
+
+\draw[arr] (imgs) -- (teacher);
+\draw[arr] (teacher) -- (frozen);
+\node[lab, above=0.5mm of teacher] {Stage 1};
+\node[lab, below=0.5mm of teacher] {100 epochs};
+
+%% ---------- Stage 2 ----------
+\node[sel, below=11mm of teacher] (space) {42 configurations\\14 backbones $\times$ 3 dims};
+\node[sel, right=6mm of space] (proxy) {KD proxy\\$s(a)=\overline{\mathrm{kd}+0.3\,\mathrm{cons}}$};
+\node[sel, right=6mm of proxy] (argmin) {$\arg\min s(a)$\\single sample};
+
+\draw[arr] (space) -- (proxy);
+\draw[arr] (proxy) -- (argmin);
+\node[lab, below=0.5mm of proxy] {3 epochs, wood};
+\node[lab, above=0.5mm of space, xshift=6mm] {Stage 2};
+
+%% ---------- Stage 3 ----------
+\node[stage, below=11mm of proxy] (rd) {train student $+$ decoder\\500 epochs};
+\node[data, right=6mm of rd, minimum width=23mm] (maps) {discrepancy maps\\$m_1,m_2,m_3$};
+
+\draw[arr] (rd) -- (maps);
+\node[lab, above=0.5mm of rd, xshift=8mm] {Stage 3};
+
+%% ---------- the scoring policy ----------
+\node[data, right=6mm of maps] (pool) {$S(x)=\rho\!\left(\sum_k w_k m_k\right)$\\[1pt]
+     $\rho\in\{\text{mean},\text{top-}k,\max\}$};
+
+\draw[arr] (maps) -- (pool);
+
+%% ---------- arrows between stages ----------
+\draw[arr] (argmin.south) |- ([yshift=2mm]rd.east) -- (rd.east);
+\draw[arr] (frozen.east) -| ([xshift=3mm]space.north) -- (space.north);
+
+%% ---------- annotation: what the paper measures ----------
+\node[lab, align=left, text width=44mm, anchor=north west]
+  at ([xshift=-2mm,yshift=-4mm]space.south west) {%
+  \textcolor{orange!80!black}{Sections 4.1--4.3:} the searched dimension does not
+  reach the detector; the proxy does not separate architectures; the axis carries
+  $0.54\%$ of the variance.};
+
+\node[lab, align=left, text width=40mm, anchor=north west]
+  at ([xshift=2mm,yshift=-4mm]pool.south west) {%
+  \textcolor{green!45!black}{Section 5:} the reduction $(\mathbf{w},\rho)$ is the
+  axis that moves accuracy, and it can be chosen without labels.};
+
+\end{tikzpicture}
+}
+\caption{The pipeline under study. A teacher is pre-trained on normal images
+(Stage~1); an architecture is selected from 42 configurations by minimising a
+short-training distillation proxy on one category (Stage~2); the selected
+architecture is then trained as a reverse-distillation detector (Stage~3) and each
+test image is scored by reducing its multi-scale discrepancy maps with a policy
+$(\mathbf{w},\rho)$. This paper measures the two axes in bold: the architecture
+that Stage~2 selects, and the reduction that Stage~3 applies.}
+\label{fig:pipeline}
+\end{figure*}

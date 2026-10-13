@@ -1,0 +1,17 @@
+{
+  "auroc": 0.4666666666666667,
+  "ap": 0.6763067792564251,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_toothbrush\\best_model.pth",
+  "per_defect_type": {
+    "defective": {
+      "auroc": 0.0,
+      "count": 30
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 12
+    }
+  }
+}

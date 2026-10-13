@@ -1,0 +1,37 @@
+====================================================================
+VERIFY F1 / F2 — 500-epoch winner counts and mean AUROC
+====================================================================
+  nas/ep500      categories found: 15
+  resnet18       categories found: 15
+  mbv3_small     categories found: 15
+  swin_tiny      categories found: 15
+
+  nas         n=15  mean AUROC = 0.8240 (82.4%)
+  resnet18    n=15  mean AUROC = 0.8395 (84.0%)
+  mbv3_small  n=15  mean AUROC = 0.8196 (82.0%)
+  swin_tiny   n=15  mean AUROC = 0.8020 (80.2%)
+
+  common categories: 15
+
+  500-epoch winner counts (ties counted for each):
+     resnet18    8
+     nas         3
+     mbv3_small  2
+     swin_tiny   2
+
+  per-category detail (AUROC, higher better):
+     bottle       resnet18=0.9635  nas=0.9627  swin_tiny=0.9587  mbv3_small=0.9579   -> resnet18
+     cable        resnet18=0.8831  nas=0.8714  mbv3_small=0.8593  swin_tiny=0.8456   -> resnet18
+     capsule      nas=0.7483  resnet18=0.7475  mbv3_small=0.7423  swin_tiny=0.6590   -> nas
+     carpet       resnet18=0.8656  swin_tiny=0.8030  nas=0.7765  mbv3_small=0.6906   -> resnet18
+     grid         nas=0.6775  resnet18=0.6182  mbv3_small=0.5698  swin_tiny=0.5556   -> nas
+     hazelnut     resnet18=0.9721  mbv3_small=0.9664  nas=0.9629  swin_tiny=0.9546   -> resnet18
+     leather      resnet18=0.9895  mbv3_small=0.9857  swin_tiny=0.8726  nas=0.8186   -> resnet18
+     metal_nut    nas=0.7610  resnet18=0.7419  mbv3_small=0.7414  swin_tiny=0.7292   -> nas
+     pill         resnet18=0.8298  nas=0.8279  mbv3_small=0.8208  swin_tiny=0.7695   -> resnet18
+     screw        resnet18=0.4403  nas=0.4396  swin_tiny=0.4394  mbv3_small=0.4337   -> resnet18
+     tile         mbv3_small=0.9542  resnet18=0.9452  nas=0.9325  swin_tiny=0.9260   -> mbv3_small
+     toothbrush   resnet18=0.8361  nas=0.8194  mbv3_small=0.8139  swin_tiny=0.7528   -> resnet18
+     transistor   swin_tiny=0.8608  resnet18=0.8512  nas=0.8471  mbv3_small=0.8396   -> swin_tiny
+     wood         swin_tiny=0.9509  mbv3_small=0.9491  nas=0.9456  resnet18=0.9421   -> swin_tiny
+     zipper       mbv3_small=0.9695  nas=0.9690  resnet18=0.9672  swin_tiny=0.9527   -> mbv3_small

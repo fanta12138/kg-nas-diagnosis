@@ -1,0 +1,25 @@
+# 阶段1: 对比学习预训练配置
+
+data:
+  data_dir: '../datasets/MVTec-AD/wood'
+  img_size: 224
+  num_workers: 4
+
+model:
+  backbone: 'convnextv2_tiny'  # 2023 SOTA with GRN (原resnet18太老)
+  projection_dim: 256  # 增加到256以匹配更强的backbone
+  pretrained: true  # 使用ImageNet预训练权重
+
+training:
+  epochs: 100
+  batch_size: 32  # ConvNeXtV2较大，保持32避免OOM
+  lr: 0.0005  # 降低学习率以适应更强的backbone
+  weight_decay: 0.0001
+  save_freq: 10
+
+loss:
+  temperature: 0.5
+
+output:
+  dir: 'experiments/stage1'
+  experiment_name: 'contrastive_pretraining'

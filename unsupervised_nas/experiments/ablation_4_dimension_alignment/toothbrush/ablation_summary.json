@@ -1,0 +1,32 @@
+{
+  "fixed_alignment": {
+    "resnet18": {
+      "auroc": 0.7666666666666666
+    },
+    "efficientnet_b0": {
+      "auroc": 0.7027777777777777
+    },
+    "vit_tiny_patch16_224": {
+      "auroc": 0.9611111111111111
+    },
+    "convnextv2_tiny": {
+      "auroc": 0.575
+    }
+  },
+  "dynamic_alignment": {
+    "resnet18": {
+      "auroc": 0.6861111111111111
+    },
+    "efficientnet_b0": {
+      "auroc": 0.8416666666666667
+    },
+    "vit_tiny_patch16_224": {
+      "auroc": 0.8361111111111111
+    },
+    "convnextv2_tiny": {
+      "auroc": 0.6083333333333333
+    }
+  },
+  "teacher_dim": 768,
+  "epochs": 50
+}

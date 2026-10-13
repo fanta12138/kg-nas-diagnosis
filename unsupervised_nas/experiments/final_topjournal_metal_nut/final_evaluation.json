@@ -1,0 +1,29 @@
+{
+  "auroc": 0.5571847507331378,
+  "ap": 0.8553076833372956,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_metal_nut\\best_model.pth",
+  "per_defect_type": {
+    "bent": {
+      "auroc": 0.0,
+      "count": 25
+    },
+    "color": {
+      "auroc": 0.0,
+      "count": 22
+    },
+    "flip": {
+      "auroc": 0.0,
+      "count": 23
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 22
+    },
+    "scratch": {
+      "auroc": 0.0,
+      "count": 23
+    }
+  }
+}

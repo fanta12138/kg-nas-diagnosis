@@ -1,0 +1,7 @@
+{
+  "method": "STPM",
+  "teacher_backbone": "resnet18",
+  "epochs": 50,
+  "auroc": 0.900877192982456,
+  "ap": 0.9677996513758796
+}

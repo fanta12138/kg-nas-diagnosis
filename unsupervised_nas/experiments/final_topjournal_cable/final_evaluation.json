@@ -1,0 +1,45 @@
+{
+  "auroc": 0.6088830584707646,
+  "ap": 0.6933574201190191,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_cable\\best_model.pth",
+  "per_defect_type": {
+    "bent_wire": {
+      "auroc": 0.0,
+      "count": 13
+    },
+    "cable_swap": {
+      "auroc": 0.0,
+      "count": 12
+    },
+    "combined": {
+      "auroc": 0.0,
+      "count": 11
+    },
+    "cut_inner_insulation": {
+      "auroc": 0.0,
+      "count": 14
+    },
+    "cut_outer_insulation": {
+      "auroc": 0.0,
+      "count": 10
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 58
+    },
+    "missing_cable": {
+      "auroc": 0.0,
+      "count": 12
+    },
+    "missing_wire": {
+      "auroc": 0.0,
+      "count": 10
+    },
+    "poke_insulation": {
+      "auroc": 0.0,
+      "count": 10
+    }
+  }
+}

@@ -1,0 +1,50 @@
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:15:13]   [ 1/15] bottle      mean=0.9619 topk1%=0.9921  (3.4 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:18:59]   [ 2/15] cable       mean=0.8728 topk1%=0.8332  (3.8 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:22:39]   [ 3/15] capsule     mean=0.7431 topk1%=0.8516  (3.7 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:27:14]   [ 4/15] carpet      mean=0.7596 topk1%=0.9217  (4.6 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:31:34]   [ 5/15] grid        mean=0.5723 topk1%=0.8028  (4.3 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:38:05]   [ 6/15] hazelnut    mean=0.9664 topk1%=0.9964  (6.5 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:42:14]   [ 7/15] leather     mean=0.9847 topk1%=0.9993  (4.2 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:45:49]   [ 8/15] metal_nut   mean=0.7561 topk1%=0.9506  (3.6 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:50:18]   [ 9/15] pill        mean=0.8295 topk1%=0.7646  (4.5 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:55:27]   [10/15] screw       mean=0.4312 topk1%=0.8336  (5.2 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[12:59:17]   [11/15] tile        mean=0.9347 topk1%=0.8828  (3.8 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[13:00:18]   [12/15] toothbrush  mean=0.8222 topk1%=0.9583  (1.0 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[13:04:09]   [13/15] transistor  mean=0.8454 topk1%=0.8142  (3.8 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[13:08:16]   [14/15] wood        mean=0.9500 topk1%=0.9912  (4.1 min)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[13:12:20]   [15/15] zipper      mean=0.9706 topk1%=0.9393  (4.1 min)
+[13:12:20] 
+[13:12:20] ========================================================================
+[13:12:20] policy                   mean AUROC    worst cat
+[13:12:20] ------------------------------------------------------------------------
+[13:12:20] uniform|mean               82.6707%     43.1236%
+[13:12:20] uniform|max                86.7390%     68.5215%
+[13:12:20] uniform|top1px             86.7390%     68.5215%
+[13:12:20] uniform|topk_0.001         87.8572%     70.4583%
+[13:12:20] uniform|topk_0.002         88.5538%     71.6585%
+[13:12:20] uniform|topk_0.005         89.6388%     74.0862%
+[13:12:20] uniform|topk_0.01          90.2123%     76.4594%
+[13:12:20] uniform|topk_0.02          90.6647%     79.2417%
+[13:12:20] uniform|topk_0.05          91.0785%     77.5272%
+[13:12:20] uniform|topk_0.1           90.9160%     73.6842%
+[13:12:20] uniform|topk_0.2           90.1651%     71.5121%
+[13:12:20] ------------------------------------------------------------------------
+[13:12:20] w0.3_0.6_0.1|topk_0.01     90.6541%     74.3863%
+[13:12:20] w0.3_0.6_0.1|topk_0.02     91.0536%     76.7594%
+[13:12:20] ========================================================================
+[13:12:20] saved -> D:/autopaper/fusion_ksweep\fusion_ksweep_summary.json

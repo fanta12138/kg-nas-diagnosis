@@ -1,0 +1,14 @@
+{
+  "auroc": 0.5505430242272347,
+  "ap": 0.7484057342172563,
+  "student_backbone": "convnextv2_tiny",
+  "teacher": "resnet18",
+  "epochs": 500,
+  "seed": 44,
+  "minutes": 16.2,
+  "micro_batch": 48,
+  "accum_steps": 1,
+  "effective_batch": 48,
+  "probe_peak_gb": 9.54,
+  "cached": false
+}

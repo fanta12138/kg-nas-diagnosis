@@ -1,0 +1,13 @@
+{
+  "tag": "round07_discrete_45",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "sections/3_method.tex",
+      "id": "U1-t",
+      "find": "our search space (45 discrete configurations) is small",
+      "replace": "our search space (42 discrete configurations) is small",
+      "note": "U1: ninth occurrence, word order not covered by the earlier needles."
+    }
+  ]
+}

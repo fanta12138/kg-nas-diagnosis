@@ -1,0 +1,26 @@
+  [cap8/bottle] epoch 20: loss=0.1386 AUROC=0.9548 AP=0.9859
+  [cap8/bottle] epoch 40: loss=0.1027 AUROC=0.9548 AP=0.9868
+  [cap8/bottle] epoch 60: loss=0.0831 AUROC=0.9571 AP=0.9877
+  [cap8/bottle] epoch 80: loss=0.0733 AUROC=0.9579 AP=0.9880
+  [cap8/bottle] epoch 100: loss=0.0675 AUROC=0.9571 AP=0.9878
+  [cap8/bottle] epoch 120: loss=0.0624 AUROC=0.9563 AP=0.9875
+  [cap8/bottle] epoch 140: loss=0.0613 AUROC=0.9556 AP=0.9872
+  [cap8/bottle] epoch 160: loss=0.0561 AUROC=0.9587 AP=0.9881
+  [cap8/bottle] epoch 180: loss=0.0540 AUROC=0.9587 AP=0.9881
+  [cap8/bottle] epoch 200: loss=0.0515 AUROC=0.9579 AP=0.9879
+  [cap8/bottle] epoch 220: loss=0.0518 AUROC=0.9579 AP=0.9879
+  [cap8/bottle] epoch 240: loss=0.0486 AUROC=0.9571 AP=0.9877
+  [cap8/bottle] epoch 260: loss=0.0486 AUROC=0.9595 AP=0.9883
+  [cap8/bottle] epoch 280: loss=0.0460 AUROC=0.9587 AP=0.9881
+  [cap8/bottle] epoch 300: loss=0.0469 AUROC=0.9595 AP=0.9883
+  [cap8/bottle] epoch 320: loss=0.0450 AUROC=0.9611 AP=0.9888
+  [cap8/bottle] epoch 340: loss=0.0454 AUROC=0.9603 AP=0.9885
+  [cap8/bottle] epoch 360: loss=0.0444 AUROC=0.9595 AP=0.9883
+  [cap8/bottle] epoch 380: loss=0.0430 AUROC=0.9603 AP=0.9885
+  [cap8/bottle] epoch 400: loss=0.0448 AUROC=0.9619 AP=0.9890
+  [cap8/bottle] epoch 420: loss=0.0447 AUROC=0.9603 AP=0.9885
+  [cap8/bottle] epoch 440: loss=0.0440 AUROC=0.9603 AP=0.9885
+  [cap8/bottle] epoch 460: loss=0.0445 AUROC=0.9603 AP=0.9885
+  [cap8/bottle] epoch 480: loss=0.0445 AUROC=0.9611 AP=0.9887
+  [cap8/bottle] epoch 500: loss=0.0436 AUROC=0.9611 AP=0.9887
+DONE budget=8 cat=bottle deit_tiny_patch16_224 AUROC=0.9611 AP=0.9887 (2.9 min wall)

@@ -1,0 +1,126 @@
+{
+  "tag": "round01_claim_fixes",
+  "paper_dir": "G:/submission_KBS",
+  "generated_from": ".aris/traces/paper-claim-audit/2026-10-08_run01/reviewer_report.md",
+  "patches": [
+    {
+      "file": "main_springer.tex",
+      "id": "F1",
+      "find": "whereas at 500 epochs the discovered architecture closes the gap and wins 12 of 15.",
+      "replace": "whereas at 500 epochs ResNet-18 still leads on 8 of 15 and the discovered architecture wins 3, the two separated by 1.6 points of average AUROC.",
+      "note": "F1: verified 500-ep winners = resnet18 8 / nas 3 (p2_rd/*/ep500). Abstract said 12/15."
+    },
+    {
+      "file": "main_springer.tex",
+      "id": "F2a",
+      "find": "attains 82.4\\% average AUROC across 15 categories, exceeding a 12.9M ResNet-18 student under an identical protocol while using 2.4$\\times$ fewer parameters.",
+      "replace": "attains 82.4\\% average AUROC across 15 categories, matching 98.2\\% of the average AUROC of a 12.9M ResNet-18 student under an identical protocol while using 2.4$\\times$ fewer parameters.",
+      "note": "F2: ResNet-18 fixed = 83.95% > discovered 82.40%; ratio 82.4009/83.95 = 98.2%."
+    },
+    {
+      "file": "sections/1_introduction.tex",
+      "id": "F2b",
+      "find": "attains 82.4\\% AUROC on MVTec-AD, exceeding a 12.9M ResNet-18 student trained under an identical protocol at less than half the parameter count.",
+      "replace": "attains 82.4\\% AUROC on MVTec-AD, matching 98.2\\% of the average AUROC of a 12.9M ResNet-18 student trained under an identical protocol at less than half the parameter count.",
+      "note": "F2: same direction error as the abstract."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F6a",
+      "find": "\\caption{Comparison with state-of-the-art methods on MVTec-AD dataset (15 categories). AUROC (\\%) is reported. Best results are highlighted in \\textbf{bold}, second best are \\underline{underlined}. KG-NAS (82.4\\%) exceeds PaDiM (78.0\\%) and Reverse Distillation (80.5\\%) while remaining below CFA (89.8\\%), using only 5.3M parameters (student encoder$+$decoder).}",
+      "replace": "\\caption{Comparison with state-of-the-art methods on MVTec-AD dataset (15 categories). AUROC (\\%) is reported. Best results are highlighted in \\textbf{bold}, second best are \\underline{underlined}. KG-NAS (82.4\\%) exceeds PaDiM (77.9\\%) and Reverse Distillation (80.5\\%) while remaining below CFA (89.8\\%), using only 5.3M parameters (student encoder$+$decoder).}",
+      "note": "F6: PaDiM mean = 77.9182 -> 77.9 under both direct and two-step rounding."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F6b",
+      "find": "\\textbf{Average} & 58.0 & 47.6 & 78.0 & 50.6 & 51.1 & 80.5 & \\textbf{89.8} & 78.7 & 71.3 & 60.1 & 50.5 & \\underline{82.4} \\\\",
+      "replace": "\\textbf{Average} & 58.0 & 47.6 & 77.9 & 50.6 & 51.1 & 80.5 & \\textbf{89.8} & 78.7 & 71.3 & 60.1 & 50.5 & \\underline{82.4} \\\\",
+      "note": "F6: main-table Average row."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F6c",
+      "find": "above PaDiM (78.0\\%) and Reverse Distillation (80.5\\%) and approaching CFA (89.8\\%)",
+      "replace": "above PaDiM (77.9\\%) and Reverse Distillation (80.5\\%) and approaching CFA (89.8\\%)",
+      "note": "F6: key-observations sentence."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F9a",
+      "find": "taking best place in 9 of 15 categories (60\\%; strictly 8, tying with itself on bottle and leather within 0.02\\,pp)",
+      "replace": "taking best place in 9 of 15 categories (60\\%; strictly 8, sharing the ninth with Reverse Distillation on bottle and holding leather by 0.03\\,pp)",
+      "note": "F9: only ONE tie involves CFA (bottle, exact); leather margin is 0.034 pp, not within 0.02."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F9b",
+      "find": "CFA achieves best performance in 9 out of 15 categories (60\\%; strictly 8, with two ties within 0.02\\,pp), while other methods excel",
+      "replace": "CFA achieves best performance in 9 out of 15 categories (60\\%; strictly 8, sharing the ninth with Reverse Distillation on bottle and holding leather by 0.03\\,pp), while other methods excel",
+      "note": "F9: same wording in the baseline-distribution paragraph."
+    },
+    {
+      "file": "supplementary/supplementary.tex",
+      "id": "F9c",
+      "find": "\\caption{Best method distribution across MVTec-AD categories. CFA dominates (best on 9/15 categories, including two ties within 0.02 pp), but 5 other methods achieve best results in at least one category, demonstrating method complementarity.}",
+      "replace": "\\caption{Best method distribution across MVTec-AD categories. CFA dominates (best on 9/15 categories: 8 outright plus a shared best with Reverse Distillation on bottle), but 5 other methods achieve best results in at least one category, demonstrating method complementarity.}",
+      "note": "F9: supplementary figure caption carried the same inaccurate clause."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F10",
+      "find": "CNNs (13 types, 65 trials) yield a median score of 0.064 with Std 3.84, while Transformers (3 types, 20 trials)",
+      "replace": "CNNs (10 types, 65 trials) yield a median score of 0.064 with Std 3.84, while Transformers (3 types, 20 trials)",
+      "note": "F10: backbone_distribution.csv covers 13 backbones total = 10 CNN + 3 Transformer."
+    },
+    {
+      "file": "sections/3_method.tex",
+      "id": "F11",
+      "find": "NAS trials per config & $\\sim$2.1 (100 total) \\\\",
+      "replace": "NAS trials per config & $\\sim$2.2 (100 total) \\\\",
+      "note": "F11: 100/45 = 2.22; body text already says 2.2."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F13a",
+      "find": "Train samples & 100--300 & 200--500 & 400--1000 \\\\",
+      "replace": "Train samples & 100--300 & 200--500 & 399--1000 \\\\",
+      "note": "F13: body states Product 02 has 399 training samples."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F13b",
+      "find": "and 400--1000 (BTAD) training samples",
+      "replace": "and 399--1000 (BTAD) training samples",
+      "note": "F13: consistency with the table and the body."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F4",
+      "find": "Note that the NAS-discovered configuration (EfficientNet-B0+256d) attained the single best trial score (0.0023), so the final choice reflects per-trial evidence rather than the dimension-level average.",
+      "replace": "Within this subset the 256-dim configuration holds the single lowest-scoring trial (0.0023, against 0.0032 for 128-dim and 0.0166 for 512-dim), so the final choice reflects per-trial evidence rather than the dimension-level average.",
+      "note": "F4: 0.0023 is the 256-dim minimum of the 39-trial subset, not the 93-trial NAS optimum (0.0097, Ablation 3)."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "F5+M1a",
+      "find": "\\textbf{KG-NAS (Ours)} & 82.4 & - & \\textbf{6} & 142$^{\\dagger}$ & Single-class + NAS \\\\\n\\bottomrule\n\\multicolumn{6}{l}{\\footnotesize $^{\\dagger}$Student throughput, measured on an idle RTX 3090 (batch size 1, 224$\\times$224, fp32); the full teacher--student detector runs at $\\sim$107 FPS.} \\\\",
+      "replace": "\\textbf{KG-NAS (Ours)} & 82.4 & - & \\textbf{5.3} & 142$^{\\dagger}$ & Single-class + NAS \\\\\n\\bottomrule\n\\multicolumn{6}{l}{\\footnotesize $^{\\dagger}$Student throughput, measured on an idle RTX 3090 (batch size 1, 224$\\times$224, fp32).} \\\\",
+      "note": "F5: 6 -> 5.3 to match the measured 5.33M and the rest of the paper. M1: 107 FPS has no artefact."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "M1b",
+      "find": "\\textbf{KG-NAS (Ours)} & 82.40 & \\textbf{5.3} & 142$^{\\dagger}$ & 102 & \\textbf{Resource-constrained} \\\\\n\\bottomrule\n\\multicolumn{6}{l}{\\footnotesize $^{\\dagger}$Student throughput, measured on an idle RTX 3090 (batch size 1, 224$\\times$224, fp32); the full teacher--student detector runs at $\\sim$107 FPS.} \\\\",
+      "replace": "\\textbf{KG-NAS (Ours)} & 82.40 & \\textbf{5.3} & 142$^{\\dagger}$ & 102 & \\textbf{Resource-constrained} \\\\\n\\bottomrule\n\\multicolumn{6}{l}{\\footnotesize $^{\\dagger}$Student throughput, measured on an idle RTX 3090 (batch size 1, 224$\\times$224, fp32).} \\\\",
+      "note": "M1: no measurement of the full-pipeline throughput exists in the evidence tree."
+    },
+    {
+      "file": "sections/5_conclusion.tex",
+      "id": "M1c",
+      "find": "$\\sim$142 FPS student throughput and $\\sim$107 FPS for the full detection pipeline",
+      "replace": "$\\sim$142 FPS student throughput",
+      "note": "M1: same untraceable claim in the conclusion."
+    }
+  ]
+}

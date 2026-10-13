@@ -1,0 +1,4 @@
+stage,time_min,description
+Stage 1 (Teacher Pre-training),13,"ResNet-18, 100 epochs, contrastive learning"
+Stage 2 (NAS Search),30,"100 trials, 3 epochs/trial, 16 backbones x 3 dims"
+Stage 3 (Final Training),59,"Discovered architecture, 500 epochs"

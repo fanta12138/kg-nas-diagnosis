@@ -1,0 +1,13 @@
+{
+  "tag": "round08_drop_multiplier",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "sections/3_method.tex",
+      "id": "U4",
+      "find": "With our configuration ($|\\mathcal{A}|=42$, $K \\approx 2.4$, $E_S=3$), the NAS stage requires only $\\sim$6$\\times$ the computation of training a single architecture, making it highly efficient compared to exhaustive search.",
+      "replace": "With our configuration ($|\\mathcal{A}|=42$, $K \\approx 2.4$, $E_S=3$), the NAS stage consists of 100 trials of three epochs each, which keeps the search cheap relative to evaluating the full space at the final training budget.",
+      "note": "U4: the \"~6x\" multiplier had no artefact and is dimensionally ambiguous (0.6x by epoch count, 6x only by wall clock). Replaced with the audited trial count."
+    }
+  ]
+}

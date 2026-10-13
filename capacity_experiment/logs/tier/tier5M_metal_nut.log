@@ -1,0 +1,26 @@
+  [tier5/metal_nut] epoch 20: loss=0.2290 AUROC=0.5455 AP=0.8485
+  [tier5/metal_nut] epoch 40: loss=0.1749 AUROC=0.6212 AP=0.8801
+  [tier5/metal_nut] epoch 60: loss=0.1520 AUROC=0.6745 AP=0.9020
+  [tier5/metal_nut] epoch 80: loss=0.1388 AUROC=0.6935 AP=0.9089
+  [tier5/metal_nut] epoch 100: loss=0.1316 AUROC=0.6994 AP=0.9111
+  [tier5/metal_nut] epoch 120: loss=0.1243 AUROC=0.7053 AP=0.9137
+  [tier5/metal_nut] epoch 140: loss=0.1211 AUROC=0.7268 AP=0.9219
+  [tier5/metal_nut] epoch 160: loss=0.1132 AUROC=0.7224 AP=0.9206
+  [tier5/metal_nut] epoch 180: loss=0.1121 AUROC=0.7248 AP=0.9216
+  [tier5/metal_nut] epoch 200: loss=0.1063 AUROC=0.7243 AP=0.9218
+  [tier5/metal_nut] epoch 220: loss=0.1093 AUROC=0.7307 AP=0.9240
+  [tier5/metal_nut] epoch 240: loss=0.1029 AUROC=0.7400 AP=0.9274
+  [tier5/metal_nut] epoch 260: loss=0.1013 AUROC=0.7424 AP=0.9289
+  [tier5/metal_nut] epoch 280: loss=0.1006 AUROC=0.7341 AP=0.9252
+  [tier5/metal_nut] epoch 300: loss=0.0993 AUROC=0.7454 AP=0.9297
+  [tier5/metal_nut] epoch 320: loss=0.0966 AUROC=0.7468 AP=0.9302
+  [tier5/metal_nut] epoch 340: loss=0.0948 AUROC=0.7502 AP=0.9311
+  [tier5/metal_nut] epoch 360: loss=0.0949 AUROC=0.7483 AP=0.9305
+  [tier5/metal_nut] epoch 380: loss=0.0937 AUROC=0.7478 AP=0.9302
+  [tier5/metal_nut] epoch 400: loss=0.0928 AUROC=0.7478 AP=0.9304
+  [tier5/metal_nut] epoch 420: loss=0.0944 AUROC=0.7502 AP=0.9311
+  [tier5/metal_nut] epoch 440: loss=0.0934 AUROC=0.7498 AP=0.9311
+  [tier5/metal_nut] epoch 460: loss=0.0921 AUROC=0.7493 AP=0.9309
+  [tier5/metal_nut] epoch 480: loss=0.0921 AUROC=0.7493 AP=0.9310
+  [tier5/metal_nut] epoch 500: loss=0.0929 AUROC=0.7502 AP=0.9311
+DONE tier=5 cat=metal_nut resnet50 AUROC=0.7502 AP=0.9311 (5.8 min wall)

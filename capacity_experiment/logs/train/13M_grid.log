@@ -1,0 +1,26 @@
+  [cap13/grid] epoch 20: loss=0.3979 AUROC=0.4670 AP=0.7259
+  [cap13/grid] epoch 40: loss=0.4034 AUROC=0.5430 AP=0.7759
+  [cap13/grid] epoch 60: loss=0.3391 AUROC=0.4002 AP=0.6751
+  [cap13/grid] epoch 80: loss=0.2670 AUROC=0.4110 AP=0.6698
+  [cap13/grid] epoch 100: loss=0.1804 AUROC=0.4837 AP=0.7323
+  [cap13/grid] epoch 120: loss=0.1710 AUROC=0.4277 AP=0.6677
+  [cap13/grid] epoch 140: loss=0.1460 AUROC=0.4954 AP=0.7222
+  [cap13/grid] epoch 160: loss=0.1572 AUROC=0.4603 AP=0.6995
+  [cap13/grid] epoch 180: loss=0.1272 AUROC=0.4904 AP=0.7299
+  [cap13/grid] epoch 200: loss=0.1454 AUROC=0.5046 AP=0.7333
+  [cap13/grid] epoch 220: loss=0.1208 AUROC=0.3634 AP=0.6538
+  [cap13/grid] epoch 240: loss=0.1210 AUROC=0.4369 AP=0.7114
+  [cap13/grid] epoch 260: loss=0.1157 AUROC=0.5063 AP=0.7409
+  [cap13/grid] epoch 280: loss=0.1054 AUROC=0.5272 AP=0.7612
+  [cap13/grid] epoch 300: loss=0.1028 AUROC=0.5447 AP=0.7622
+  [cap13/grid] epoch 320: loss=0.1049 AUROC=0.5497 AP=0.7935
+  [cap13/grid] epoch 340: loss=0.1037 AUROC=0.5422 AP=0.7729
+  [cap13/grid] epoch 360: loss=0.1105 AUROC=0.5948 AP=0.8069
+  [cap13/grid] epoch 380: loss=0.0993 AUROC=0.6115 AP=0.8184
+  [cap13/grid] epoch 400: loss=0.1096 AUROC=0.5998 AP=0.8066
+  [cap13/grid] epoch 420: loss=0.1010 AUROC=0.6057 AP=0.8095
+  [cap13/grid] epoch 440: loss=0.0984 AUROC=0.5639 AP=0.7875
+  [cap13/grid] epoch 460: loss=0.1102 AUROC=0.5865 AP=0.7939
+  [cap13/grid] epoch 480: loss=0.0974 AUROC=0.5965 AP=0.8038
+  [cap13/grid] epoch 500: loss=0.1029 AUROC=0.5840 AP=0.8013
+DONE budget=13 cat=grid vit_tiny_patch16_224 AUROC=0.5840 AP=0.8013 (3.7 min wall)

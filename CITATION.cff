@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this code or the released results, please cite the paper below."
+title: "The Architecture Axis Is Not the Axis: A Diagnostic Study of Neural Architecture Search and Score Fusion in Unsupervised Industrial Anomaly Detection"
+type: software
+authors:
+  - family-names: Deng
+    given-names: Peng
+    email: dengpeng@gxust.edu.cn
+    affiliation: "School of Civil and Architectural Engineering, Guangxi University of Science and Technology, Liuzhou 545006, China"
+  - family-names: Li
+    given-names: Hong
+    affiliation: "School of Civil and Architectural Engineering, Guangxi University of Science and Technology, Liuzhou 545006, China"
+  - family-names: Zhou
+    given-names: Yuanwu
+    affiliation: "School of Civil and Architectural Engineering, Guangxi University of Science and Technology, Liuzhou 545006, China"
+contact:
+  - family-names: Deng
+    given-names: Peng
+    email: dengpeng@gxust.edu.cn
+license: MIT
+keywords:
+  - unsupervised anomaly detection
+  - neural architecture search
+  - reverse distillation
+  - benchmark evaluation
+  - reproducibility
+  - industrial visual inspection
+abstract: >-
+  Code, frozen results and audit trail for a benchmark-and-evaluation study of
+  neural architecture search and score fusion in unsupervised industrial anomaly
+  detection. Contains the diagnosed pipeline, the experiments behind every number
+  in the paper, the frozen outputs, and the scripts that regenerate every table
+  and figure. Includes an analysis showing that the standard single-category
+  comparison on MVTec-AD resolves 2.98 AUROC points while the margin the field
+  contests is 0.5 points.
+funding:
+  - type: "Grant"
+    name: "Guangxi Natural Science Foundation"
+    identifier: "2025GXNSFHA069076"
+  - type: "Grant"
+    name: "Guangxi University of Science and Technology Doctoral Fund"
+    identifier: "26Z15"
+  - type: "Grant"
+    name: "Guangxi University of Science and Technology Doctoral Fund"
+    identifier: "26Z25"

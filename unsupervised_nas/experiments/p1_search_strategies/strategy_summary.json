@@ -1,0 +1,68 @@
+{
+  "capsule/bayesian": {
+    "trials": 30,
+    "valid": 30,
+    "best": 0.07220487296581268,
+    "best_arch": {
+      "backbone": "resnet18",
+      "feature_dim": 512
+    },
+    "mean_valid": 4.811910037448009,
+    "median_valid": 0.10909882001578808
+  },
+  "capsule/evolutionary": {
+    "trials": 30,
+    "valid": 27,
+    "best": 0.09214028343558311,
+    "best_arch": {
+      "backbone": "deit_tiny_patch16_224",
+      "feature_dim": 512
+    },
+    "mean_valid": 0.8030911697833626,
+    "median_valid": 0.1075218953192234
+  },
+  "hazelnut/bayesian": {
+    "trials": 30,
+    "valid": 27,
+    "best": 0.33570510149002075,
+    "best_arch": {
+      "backbone": "mobileone_s0",
+      "feature_dim": 128
+    },
+    "mean_valid": 0.5504938062326408,
+    "median_valid": 0.3847537736097972
+  },
+  "hazelnut/evolutionary": {
+    "trials": 30,
+    "valid": 27,
+    "best": 0.32676249742507935,
+    "best_arch": {
+      "backbone": "resnet18",
+      "feature_dim": 256
+    },
+    "mean_valid": 3.2041756271580115,
+    "median_valid": 0.40058059493700665
+  },
+  "wood/bayesian": {
+    "trials": 30,
+    "valid": 26,
+    "best": 6.935445785522461,
+    "best_arch": {
+      "backbone": "vit_tiny_patch16_224",
+      "feature_dim": 512
+    },
+    "mean_valid": 7.707389758183406,
+    "median_valid": 7.715146780014038
+  },
+  "wood/evolutionary": {
+    "trials": 30,
+    "valid": 27,
+    "best": 6.16759181022644,
+    "best_arch": {
+      "backbone": "deit_tiny_patch16_224",
+      "feature_dim": 512
+    },
+    "mean_valid": 7.706569397891009,
+    "median_valid": 7.833523750305176
+  }
+}

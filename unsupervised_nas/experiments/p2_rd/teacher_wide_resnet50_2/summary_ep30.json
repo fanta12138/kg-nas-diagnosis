@@ -1,0 +1,10 @@
+[
+  {
+    "category": "wood",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.9543859649122807,
+    "ap": 0.9862789413924834,
+    "minutes": 0.838287103176117
+  }
+]

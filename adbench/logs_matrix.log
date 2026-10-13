@@ -1,0 +1,18 @@
+[23:41:41] loading backbone resnet50.a1_in1k
+[23:45:02] loading backbone resnet50.a1_in1k
+[23:45:25] bottle done (30s, 18 cells total)
+[23:47:55] cable done (150s, 36 cells total)
+[23:50:18] capsule done (143s, 54 cells total)
+[23:52:55] carpet done (157s, 72 cells total)
+[23:55:07] grid done (132s, 90 cells total)
+[23:58:19] hazelnut done (191s, 108 cells total)
+[00:00:44] leather done (145s, 126 cells total)
+[00:02:55] metal_nut done (130s, 144 cells total)
+[02:23:13] pill done (8418s, 162 cells total)
+[02:26:03] screw done (170s, 180 cells total)
+[02:28:21] tile done (138s, 198 cells total)
+[02:29:07] toothbrush done (46s, 216 cells total)
+[02:31:17] transistor done (130s, 234 cells total)
+[02:33:32] wood done (134s, 252 cells total)
+[02:35:58] zipper done (146s, 270 cells total)
+[02:35:58] MATRIX DONE: 270 cells

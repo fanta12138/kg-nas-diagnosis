@@ -1,0 +1,9 @@
+{
+  "auroc": 0.43943431030948965,
+  "ap": 0.7674138589284399,
+  "student_backbone": "swin_tiny_patch4_window7_224",
+  "teacher": "resnet18",
+  "epochs": 500,
+  "seed": 42,
+  "minutes": 10.6
+}

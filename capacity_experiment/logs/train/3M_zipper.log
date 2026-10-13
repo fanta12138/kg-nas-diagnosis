@@ -1,0 +1,27 @@
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [cap3/zipper] epoch 20: loss=0.1631 AUROC=0.7860 AP=0.9113
+  [cap3/zipper] epoch 40: loss=0.1338 AUROC=0.8356 AP=0.9387
+  [cap3/zipper] epoch 60: loss=0.1248 AUROC=0.8881 AP=0.9633
+  [cap3/zipper] epoch 80: loss=0.1194 AUROC=0.9005 AP=0.9687
+  [cap3/zipper] epoch 100: loss=0.1168 AUROC=0.9278 AP=0.9781
+  [cap3/zipper] epoch 120: loss=0.1137 AUROC=0.9420 AP=0.9830
+  [cap3/zipper] epoch 140: loss=0.1128 AUROC=0.9454 AP=0.9841
+  [cap3/zipper] epoch 160: loss=0.1102 AUROC=0.9512 AP=0.9861
+  [cap3/zipper] epoch 180: loss=0.1091 AUROC=0.9640 AP=0.9897
+  [cap3/zipper] epoch 200: loss=0.1066 AUROC=0.9622 AP=0.9894
+  [cap3/zipper] epoch 220: loss=0.1076 AUROC=0.9643 AP=0.9900
+  [cap3/zipper] epoch 240: loss=0.1049 AUROC=0.9661 AP=0.9907
+  [cap3/zipper] epoch 260: loss=0.1038 AUROC=0.9706 AP=0.9918
+  [cap3/zipper] epoch 280: loss=0.1019 AUROC=0.9722 AP=0.9921
+  [cap3/zipper] epoch 300: loss=0.0973 AUROC=0.9706 AP=0.9918
+  [cap3/zipper] epoch 320: loss=0.0951 AUROC=0.9724 AP=0.9922
+  [cap3/zipper] epoch 340: loss=0.0938 AUROC=0.9740 AP=0.9926
+  [cap3/zipper] epoch 360: loss=0.0927 AUROC=0.9735 AP=0.9925
+  [cap3/zipper] epoch 380: loss=0.0925 AUROC=0.9737 AP=0.9926
+  [cap3/zipper] epoch 400: loss=0.0929 AUROC=0.9730 AP=0.9923
+  [cap3/zipper] epoch 420: loss=0.0923 AUROC=0.9735 AP=0.9925
+  [cap3/zipper] epoch 440: loss=0.0902 AUROC=0.9735 AP=0.9925
+  [cap3/zipper] epoch 460: loss=0.0907 AUROC=0.9740 AP=0.9926
+  [cap3/zipper] epoch 480: loss=0.0902 AUROC=0.9737 AP=0.9925
+  [cap3/zipper] epoch 500: loss=0.0913 AUROC=0.9740 AP=0.9926
+DONE budget=3 cat=zipper mobilenetv3_small_100 AUROC=0.9740 AP=0.9926 (8.9 min wall)

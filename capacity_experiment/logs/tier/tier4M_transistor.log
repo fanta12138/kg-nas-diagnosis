@@ -1,0 +1,26 @@
+  [tier4/transistor] epoch 20: loss=0.2603 AUROC=0.5237 AP=0.5192
+  [tier4/transistor] epoch 40: loss=0.1738 AUROC=0.6654 AP=0.6419
+  [tier4/transistor] epoch 60: loss=0.1356 AUROC=0.7417 AP=0.7169
+  [tier4/transistor] epoch 80: loss=0.1238 AUROC=0.7792 AP=0.7541
+  [tier4/transistor] epoch 100: loss=0.1156 AUROC=0.8042 AP=0.7879
+  [tier4/transistor] epoch 120: loss=0.1065 AUROC=0.8104 AP=0.7893
+  [tier4/transistor] epoch 140: loss=0.1043 AUROC=0.8121 AP=0.7969
+  [tier4/transistor] epoch 160: loss=0.1004 AUROC=0.8233 AP=0.8070
+  [tier4/transistor] epoch 180: loss=0.0955 AUROC=0.8237 AP=0.8081
+  [tier4/transistor] epoch 200: loss=0.0897 AUROC=0.8271 AP=0.8089
+  [tier4/transistor] epoch 220: loss=0.0916 AUROC=0.8392 AP=0.8189
+  [tier4/transistor] epoch 240: loss=0.0881 AUROC=0.8400 AP=0.8234
+  [tier4/transistor] epoch 260: loss=0.0850 AUROC=0.8442 AP=0.8296
+  [tier4/transistor] epoch 280: loss=0.0851 AUROC=0.8454 AP=0.8279
+  [tier4/transistor] epoch 300: loss=0.0852 AUROC=0.8492 AP=0.8326
+  [tier4/transistor] epoch 320: loss=0.0808 AUROC=0.8512 AP=0.8351
+  [tier4/transistor] epoch 340: loss=0.0810 AUROC=0.8471 AP=0.8309
+  [tier4/transistor] epoch 360: loss=0.0804 AUROC=0.8525 AP=0.8365
+  [tier4/transistor] epoch 380: loss=0.0802 AUROC=0.8554 AP=0.8407
+  [tier4/transistor] epoch 400: loss=0.0814 AUROC=0.8542 AP=0.8408
+  [tier4/transistor] epoch 420: loss=0.0780 AUROC=0.8546 AP=0.8405
+  [tier4/transistor] epoch 440: loss=0.0824 AUROC=0.8550 AP=0.8411
+  [tier4/transistor] epoch 460: loss=0.0765 AUROC=0.8558 AP=0.8414
+  [tier4/transistor] epoch 480: loss=0.0783 AUROC=0.8554 AP=0.8413
+  [tier4/transistor] epoch 500: loss=0.0813 AUROC=0.8542 AP=0.8400
+DONE tier=4 cat=transistor resnet18 AUROC=0.8542 AP=0.8400 (2.9 min wall)

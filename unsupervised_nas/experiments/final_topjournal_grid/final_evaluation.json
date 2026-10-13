@@ -1,0 +1,33 @@
+{
+  "auroc": 0.6925647451963242,
+  "ap": 0.8548137927137269,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_grid\\best_model.pth",
+  "per_defect_type": {
+    "bent": {
+      "auroc": 0.0,
+      "count": 12
+    },
+    "broken": {
+      "auroc": 0.0,
+      "count": 12
+    },
+    "glue": {
+      "auroc": 0.0,
+      "count": 11
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 21
+    },
+    "metal_contamination": {
+      "auroc": 0.0,
+      "count": 11
+    },
+    "thread": {
+      "auroc": 0.0,
+      "count": 11
+    }
+  }
+}

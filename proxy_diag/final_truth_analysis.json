@@ -1,0 +1,107 @@
+{
+  "categories": [
+    "bottle",
+    "cable",
+    "capsule",
+    "carpet",
+    "grid",
+    "hazelnut",
+    "leather",
+    "metal_nut",
+    "pill",
+    "screw",
+    "tile",
+    "toothbrush",
+    "transistor",
+    "wood",
+    "zipper"
+  ],
+  "backbones": [
+    "convnext_small",
+    "convnext_tiny",
+    "convnextv2_base",
+    "convnextv2_tiny",
+    "deit_tiny_patch16_224",
+    "efficientnet_b0",
+    "efficientnet_b1",
+    "mobilenetv3_small_100",
+    "mobileone_s0",
+    "resnet18",
+    "resnet34",
+    "resnet50",
+    "swin_tiny_patch4_window7_224",
+    "vit_tiny_patch16_224"
+  ],
+  "variance": {
+    "backbone": 0.544545515007935,
+    "category": 95.3211761723001,
+    "interaction": 4.134278312691967
+  },
+  "F": 1.8440067730096974,
+  "df": [
+    13,
+    182
+  ],
+  "p": 0.039468262111456376,
+  "ranking": [
+    [
+      "resnet18",
+      0.8334095080229638
+    ],
+    [
+      "resnet34",
+      0.8298971227159154
+    ],
+    [
+      "resnet50",
+      0.8275182588127332
+    ],
+    [
+      "mobileone_s0",
+      0.8257792665686909
+    ],
+    [
+      "efficientnet_b0",
+      0.8246691797449427
+    ],
+    [
+      "deit_tiny_patch16_224",
+      0.820310878212138
+    ],
+    [
+      "mobilenetv3_small_100",
+      0.8185265904073151
+    ],
+    [
+      "vit_tiny_patch16_224",
+      0.8150630977218642
+    ],
+    [
+      "convnext_small",
+      0.8143227009688273
+    ],
+    [
+      "convnextv2_tiny",
+      0.8135397111769946
+    ],
+    [
+      "convnext_tiny",
+      0.8090704674948939
+    ],
+    [
+      "efficientnet_b1",
+      0.804324340203582
+    ],
+    [
+      "swin_tiny_patch4_window7_224",
+      0.8010794576584159
+    ],
+    [
+      "convnextv2_base",
+      0.7936141102608527
+    ]
+  ],
+  "cross_cat_mean_spearman": 0.21511756495460033,
+  "reversed_pairs": 33,
+  "total_pairs": 105
+}

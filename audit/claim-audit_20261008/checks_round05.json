@@ -1,0 +1,66 @@
+[
+  {
+    "name": "U1_search_space_42",
+    "must_appear": [
+      "14 backbones"
+    ],
+    "must_absent": [
+      "45 configurations",
+      "15 backbones",
+      "15 CNN"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U1_table_row_removed",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "MobileOne-S0 & CNN & 2022 & 5.3 & 1.1"
+    ],
+    "must_absent": [
+      "EfficientNetV2-S & CNN & 2021 & 21.5 & 8.4"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U1_trials_per_config",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "\\$\\sim\\.4 (100 total)"
+    ],
+    "must_absent": [
+      "\\$\\sim\\.2 (100 total)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U3_spread_106",
+    "must_appear": [
+      "106"
+    ],
+    "must_absent": [
+      "81"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U5_data_availability",
+    "must_appear": [
+      "a single 100-trial search for MVTec-AD run on one category"
+    ],
+    "must_absent": [
+      "100 NAS trials per category on each of the three datasets"
+    ],
+    "sources": true
+  },
+  {
+    "name": "M1_pipeline_fps_restored",
+    "must_appear": [
+      "the full teacher--student detector measures 111 FPS"
+    ],
+    "must_absent": [
+      "runs at \\$\\sim\u0007 FPS"
+    ],
+    "sources": true
+  }
+]

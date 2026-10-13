@@ -1,0 +1,55 @@
+# 阶段2: NAS搜索配置
+
+data:
+  data_dir: '../datasets/mvtec_anomaly_detection/wood'
+  img_size: 224
+  num_workers: 4
+
+teacher:
+  model_path: 'experiments/stage1/best_teacher.pth'
+
+nas:
+  search_space:
+    # ===== 2023-2024 最新SOTA CNN ⭐⭐⭐ (顶刊必备) =====
+    backbones:
+      # ConvNeXt V2系列 (2023, GRN归一化)
+      - 'convnextv2_tiny'       # 2023 SOTA, ImageNet Top-1: 82.0%
+      - 'convnextv2_base'       # 2023 SOTA, 更大容量
+      
+      # EfficientNet V2系列 (2021-2024, 快速训练)
+      # - 'efficientnetv2_s'    # 无预训练权重，暂时移除
+      
+      # MobileOne (2022-2023, 超快推理)
+      - 'mobileone_s0'          # 2022, 轻量级(修复维度问题)
+      
+      # ===== 2022-2023 现代CNN ⭐⭐ =====
+      - 'convnext_tiny'         # 2022, 原版ConvNeXt
+      - 'convnext_small'        # 2022, 中等规模
+      
+      # ===== Vision Transformers (2020-2023) ⭐⭐⭐ =====
+      - 'vit_tiny_patch16_224'  # 2020 ViT, 视觉Transformer
+      - 'deit_tiny_patch16_224' # 2021 DeiT, 数据高效ViT
+      - 'swin_tiny_patch4_window7_224'  # 2021 Swin, 层次化ViT
+      
+      # ===== 2019-2021 经典高效架构 ⭐⭐ =====
+      - 'efficientnet_b0'       # 2019, NAS搜索的经典结果
+      - 'efficientnet_b1'       # 2019, 稍大版本
+      - 'mobilenetv3_small_100' # 2019, 移动端优化
+      
+      # ===== 2015-2016 经典基线 ⭐ (用于对比) =====
+      - 'resnet18'              # 2015, 经典残差网络
+      - 'resnet34'              # 2015, 更深版本
+      - 'resnet50'              # 2015, 工业界标准
+    
+    feature_dims: [128, 256, 512]  # 多维度选择
+  
+  num_trials: 100  # 增加到100以充分探索搜索空间（顶会论文级别）
+  alpha: 0.5   # KD loss weight
+  beta: 0.3    # Consistency loss weight
+  gamma: 0.2   # Reconstruction loss weight
+  
+  batch_size: 16
+  quick_train_epochs: 3
+
+output:
+  dir: 'experiments/stage2'

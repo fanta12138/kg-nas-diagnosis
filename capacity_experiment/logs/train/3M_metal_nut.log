@@ -1,0 +1,27 @@
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [cap3/metal_nut] epoch 20: loss=0.2018 AUROC=0.5293 AP=0.8337
+  [cap3/metal_nut] epoch 40: loss=0.1650 AUROC=0.6217 AP=0.8796
+  [cap3/metal_nut] epoch 60: loss=0.1491 AUROC=0.6496 AP=0.8920
+  [cap3/metal_nut] epoch 80: loss=0.1369 AUROC=0.6691 AP=0.8986
+  [cap3/metal_nut] epoch 100: loss=0.1292 AUROC=0.6901 AP=0.9065
+  [cap3/metal_nut] epoch 120: loss=0.1214 AUROC=0.6960 AP=0.9091
+  [cap3/metal_nut] epoch 140: loss=0.1195 AUROC=0.7102 AP=0.9148
+  [cap3/metal_nut] epoch 160: loss=0.1116 AUROC=0.7151 AP=0.9169
+  [cap3/metal_nut] epoch 180: loss=0.1117 AUROC=0.7136 AP=0.9174
+  [cap3/metal_nut] epoch 200: loss=0.1090 AUROC=0.7199 AP=0.9193
+  [cap3/metal_nut] epoch 220: loss=0.1076 AUROC=0.7253 AP=0.9210
+  [cap3/metal_nut] epoch 240: loss=0.1022 AUROC=0.7283 AP=0.9224
+  [cap3/metal_nut] epoch 260: loss=0.1021 AUROC=0.7346 AP=0.9253
+  [cap3/metal_nut] epoch 280: loss=0.1005 AUROC=0.7341 AP=0.9256
+  [cap3/metal_nut] epoch 300: loss=0.0995 AUROC=0.7346 AP=0.9258
+  [cap3/metal_nut] epoch 320: loss=0.0995 AUROC=0.7346 AP=0.9257
+  [cap3/metal_nut] epoch 340: loss=0.0989 AUROC=0.7346 AP=0.9259
+  [cap3/metal_nut] epoch 360: loss=0.0961 AUROC=0.7400 AP=0.9276
+  [cap3/metal_nut] epoch 380: loss=0.0953 AUROC=0.7385 AP=0.9271
+  [cap3/metal_nut] epoch 400: loss=0.0956 AUROC=0.7390 AP=0.9273
+  [cap3/metal_nut] epoch 420: loss=0.0954 AUROC=0.7400 AP=0.9279
+  [cap3/metal_nut] epoch 440: loss=0.0947 AUROC=0.7395 AP=0.9276
+  [cap3/metal_nut] epoch 460: loss=0.0952 AUROC=0.7405 AP=0.9279
+  [cap3/metal_nut] epoch 480: loss=0.0957 AUROC=0.7405 AP=0.9279
+  [cap3/metal_nut] epoch 500: loss=0.0943 AUROC=0.7405 AP=0.9279
+DONE budget=3 cat=metal_nut mobilenetv3_small_100 AUROC=0.7405 AP=0.9279 (7.7 min wall)

@@ -1,0 +1,66 @@
+{
+  "source": "proxy_diag/phaseB_truth.json",
+  "n_cells": 210,
+  "n_multiseed_cells": 90,
+  "seed_noise_pp": {
+    "pooled_sd": 1.9558937737704463,
+    "df": 180.0,
+    "mean_of_cell_sd": 1.268410624614516,
+    "median_of_cell_sd": 0.5755066548826293,
+    "max_of_cell_sd": 7.740923341917638,
+    "note": "The mean of per-cell SDs (1.036 pp) is the figure quoted in earlier internal notes; it is a ddof=0 mean over 90 three-sample cells and understates the noise because the per-cell SD distribution is heavily right-skewed (median 0.576 pp, max 7.741 pp). The pooled SD over all 180 residual df is the honest single number."
+  },
+  "anova_seed42_matrix": {
+    "a": 14,
+    "b": 15,
+    "ss_rows": 0.02608283657517405,
+    "ss_cols": 4.565727917563069,
+    "ss_res": 0.19802514686887118,
+    "ss_tot": 4.789835901007114,
+    "ms_rows": 0.0020063720442441576,
+    "ms_cols": 0.32612342268307637,
+    "ms_res": 0.0010880502575212703,
+    "F_rows": 1.8440067730096878,
+    "F_cols": 299.7319475168646,
+    "share_rows": 0.005445455150079328,
+    "share_cols": 0.9532117617230009,
+    "share_res": 0.041342783126919705
+  },
+  "paired_diff_sd_pp": {
+    "n_pairs": 91,
+    "mean": 4.117273424832563,
+    "median": 3.781123313905363,
+    "min": 0.947334348222519,
+    "max": 10.223748297046399
+  },
+  "working_noise_pp": {
+    "sigma_anova_residual": 3.2985606823602174,
+    "sigma_paired_diff": 4.117273424832563
+  },
+  "resolvability": {
+    "delta_0.5pp": {
+      "delta_pp": 0.5,
+      "n_per_arm_single_category_unpaired": 240.2083998872212,
+      "mdd_with_15_categories_paired": 2.978296403181762,
+      "categories_needed_paired": 532.2149679123252,
+      "sigma_per_cell_15cat_x3seed_pp": 2.886200894895694,
+      "mdd_with_15cat_x3seed_paired": 2.9525670087553704
+    },
+    "delta_0.3pp": {
+      "delta_pp": 0.3,
+      "n_per_arm_single_category_unpaired": 667.2455552422811,
+      "mdd_with_15_categories_paired": 2.978296403181762,
+      "categories_needed_paired": 1478.37491086757,
+      "sigma_per_cell_15cat_x3seed_pp": 2.886200894895694,
+      "mdd_with_15cat_x3seed_paired": 2.9525670087553704
+    }
+  },
+  "headline": {
+    "pooled_seed_sd_pp": 1.956,
+    "backbone_spread_pp": 3.979539776211094,
+    "resolve_0.5pp_needs_detectors_per_arm_single_category": 240,
+    "mdd_single_category_one_shot_pp": 1.956,
+    "mdd_paired_15cat_pp": 2.978,
+    "categories_needed_for_0.5pp": 532
+  }
+}

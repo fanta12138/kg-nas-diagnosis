@@ -1,0 +1,14 @@
+{
+  "auroc": 0.6549707602339182,
+  "ap": 0.844722997860401,
+  "student_backbone": "deit_tiny_patch16_224",
+  "teacher": "resnet18",
+  "epochs": 500,
+  "seed": 42,
+  "minutes": 4.1,
+  "micro_batch": 64,
+  "accum_steps": 1,
+  "effective_batch": 64,
+  "probe_peak_gb": 3.57,
+  "cached": false
+}

@@ -1,0 +1,30 @@
+# Environment for the released code.
+# Versions in the right-hand column are those the paper's numbers were produced
+# with (Python 3.9.13, single RTX 3090). Lower bounds are what the code needs.
+#
+#   pip install -r requirements.txt
+
+# --- core (needed by the pipeline and every analysis script)
+numpy>=1.24.0            # 1.26.4
+scipy>=1.11.0            # 1.13.1
+scikit-learn>=1.3.0      # 1.0.2  (lower bound raised: 1.3 recommended)
+
+# --- the pipeline under study / re-running the experiments
+torch>=2.0.0             # 2.5.1+cu121
+torchvision>=0.15.0      # 0.20.1+cu121
+timm>=0.9.0              # 1.0.26
+tqdm>=4.65.0
+PyYAML>=6.0
+tensorboard>=2.14.0
+albumentations>=1.3.0
+opencv-python>=4.8.0
+scikit-image>=0.21.0
+Pillow>=10.0.0
+
+# --- figures and tables
+matplotlib>=3.7.0        # 3.9.4
+seaborn>=0.12.0
+pandas>=2.0.0            # 2.3.3
+
+# --- optional: the external-baseline comparison in anomalib_baselines/
+# anomalib>=1.0.0

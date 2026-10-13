@@ -1,0 +1,12 @@
+{
+  "loss_type": "full",
+  "result": {
+    "auroc": 0.6856060606060606,
+    "ap": 0.8218986717678693
+  },
+  "config": {
+    "backbone": "efficientnet_b0",
+    "feature_dim": 256,
+    "epochs": 100
+  }
+}

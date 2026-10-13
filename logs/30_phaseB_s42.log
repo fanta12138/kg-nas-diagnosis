@@ -1,0 +1,2372 @@
+  [convnextv2_base/bottle] epoch 50: loss=0.1174 AUROC=0.9611 AP=0.9885
+  [convnextv2_base/bottle] epoch 100: loss=0.0864 AUROC=0.9460 AP=0.9842
+  [convnextv2_base/bottle] epoch 150: loss=0.0782 AUROC=0.9405 AP=0.9826
+  [convnextv2_base/bottle] epoch 200: loss=0.0773 AUROC=0.9310 AP=0.9799
+  [convnextv2_base/bottle] epoch 250: loss=0.0678 AUROC=0.9278 AP=0.9791
+  [convnextv2_base/bottle] epoch 300: loss=0.0671 AUROC=0.9198 AP=0.9765
+  [convnextv2_base/bottle] epoch 350: loss=0.0671 AUROC=0.9175 AP=0.9754
+  [convnextv2_base/bottle] epoch 400: loss=0.0597 AUROC=0.9444 AP=0.9844
+  [convnextv2_base/bottle] epoch 450: loss=0.0612 AUROC=0.9397 AP=0.9829
+  [convnextv2_base/bottle] epoch 500: loss=0.0607 AUROC=0.9381 AP=0.9824
+[00:09:29]   [   2/210] s42 bottle      convnextv2_base                AUROC=0.9381 (28.2 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/bottle] epoch 50: loss=0.0948 AUROC=0.9603 AP=0.9886
+  [mobileone_s0/bottle] epoch 100: loss=0.0700 AUROC=0.9627 AP=0.9892
+  [mobileone_s0/bottle] epoch 150: loss=0.0591 AUROC=0.9603 AP=0.9885
+  [mobileone_s0/bottle] epoch 200: loss=0.0520 AUROC=0.9627 AP=0.9892
+  [mobileone_s0/bottle] epoch 250: loss=0.0501 AUROC=0.9627 AP=0.9893
+  [mobileone_s0/bottle] epoch 300: loss=0.0492 AUROC=0.9643 AP=0.9898
+  [mobileone_s0/bottle] epoch 350: loss=0.0474 AUROC=0.9627 AP=0.9893
+  [mobileone_s0/bottle] epoch 400: loss=0.0461 AUROC=0.9627 AP=0.9893
+  [mobileone_s0/bottle] epoch 450: loss=0.0456 AUROC=0.9627 AP=0.9893
+  [mobileone_s0/bottle] epoch 500: loss=0.0464 AUROC=0.9627 AP=0.9893
+[00:15:50]   [   3/210] s42 bottle      mobileone_s0                   AUROC=0.9627 (6.3 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/bottle] epoch 50: loss=0.1181 AUROC=0.9476 AP=0.9840
+  [convnext_tiny/bottle] epoch 100: loss=0.0804 AUROC=0.9587 AP=0.9880
+  [convnext_tiny/bottle] epoch 150: loss=0.0664 AUROC=0.9508 AP=0.9860
+  [convnext_tiny/bottle] epoch 200: loss=0.0583 AUROC=0.9516 AP=0.9862
+  [convnext_tiny/bottle] epoch 250: loss=0.0582 AUROC=0.9500 AP=0.9857
+  [convnext_tiny/bottle] epoch 300: loss=0.0537 AUROC=0.9548 AP=0.9869
+  [convnext_tiny/bottle] epoch 350: loss=0.0521 AUROC=0.9571 AP=0.9876
+  [convnext_tiny/bottle] epoch 400: loss=0.0509 AUROC=0.9556 AP=0.9871
+  [convnext_tiny/bottle] epoch 450: loss=0.0510 AUROC=0.9548 AP=0.9869
+  [convnext_tiny/bottle] epoch 500: loss=0.0506 AUROC=0.9563 AP=0.9873
+[00:26:04]   [   4/210] s42 bottle      convnext_tiny                  AUROC=0.9563 (10.2 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/bottle] epoch 50: loss=0.1121 AUROC=0.9460 AP=0.9841
+  [convnext_small/bottle] epoch 100: loss=0.0765 AUROC=0.9508 AP=0.9860
+  [convnext_small/bottle] epoch 150: loss=0.0627 AUROC=0.9492 AP=0.9857
+  [convnext_small/bottle] epoch 200: loss=0.0562 AUROC=0.9484 AP=0.9854
+  [convnext_small/bottle] epoch 250: loss=0.0559 AUROC=0.9540 AP=0.9869
+  [convnext_small/bottle] epoch 300: loss=0.0527 AUROC=0.9532 AP=0.9865
+  [convnext_small/bottle] epoch 350: loss=0.0500 AUROC=0.9571 AP=0.9876
+  [convnext_small/bottle] epoch 400: loss=0.0493 AUROC=0.9563 AP=0.9874
+  [convnext_small/bottle] epoch 450: loss=0.0468 AUROC=0.9556 AP=0.9872
+  [convnext_small/bottle] epoch 500: loss=0.0490 AUROC=0.9556 AP=0.9872
+[00:41:54]   [   5/210] s42 bottle      convnext_small                 AUROC=0.9556 (15.8 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/bottle] epoch 50: loss=0.1145 AUROC=0.9484 AP=0.9850
+  [vit_tiny_patch16_224/bottle] epoch 100: loss=0.0758 AUROC=0.9603 AP=0.9886
+  [vit_tiny_patch16_224/bottle] epoch 150: loss=0.0634 AUROC=0.9540 AP=0.9869
+  [vit_tiny_patch16_224/bottle] epoch 200: loss=0.0567 AUROC=0.9548 AP=0.9871
+  [vit_tiny_patch16_224/bottle] epoch 250: loss=0.0518 AUROC=0.9579 AP=0.9879
+  [vit_tiny_patch16_224/bottle] epoch 300: loss=0.0487 AUROC=0.9587 AP=0.9881
+  [vit_tiny_patch16_224/bottle] epoch 350: loss=0.0483 AUROC=0.9595 AP=0.9883
+  [vit_tiny_patch16_224/bottle] epoch 400: loss=0.0470 AUROC=0.9595 AP=0.9883
+  [vit_tiny_patch16_224/bottle] epoch 450: loss=0.0471 AUROC=0.9603 AP=0.9885
+  [vit_tiny_patch16_224/bottle] epoch 500: loss=0.0453 AUROC=0.9603 AP=0.9885
+[00:45:08]   [   6/210] s42 bottle      vit_tiny_patch16_224           AUROC=0.9603 (3.2 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/bottle] epoch 50: loss=0.0885 AUROC=0.9532 AP=0.9861
+  [deit_tiny_patch16_224/bottle] epoch 100: loss=0.0654 AUROC=0.9540 AP=0.9868
+  [deit_tiny_patch16_224/bottle] epoch 150: loss=0.0570 AUROC=0.9587 AP=0.9881
+  [deit_tiny_patch16_224/bottle] epoch 200: loss=0.0510 AUROC=0.9579 AP=0.9878
+  [deit_tiny_patch16_224/bottle] epoch 250: loss=0.0466 AUROC=0.9587 AP=0.9881
+  [deit_tiny_patch16_224/bottle] epoch 300: loss=0.0441 AUROC=0.9587 AP=0.9881
+  [deit_tiny_patch16_224/bottle] epoch 350: loss=0.0438 AUROC=0.9603 AP=0.9886
+  [deit_tiny_patch16_224/bottle] epoch 400: loss=0.0427 AUROC=0.9619 AP=0.9890
+  [deit_tiny_patch16_224/bottle] epoch 450: loss=0.0428 AUROC=0.9611 AP=0.9888
+  [deit_tiny_patch16_224/bottle] epoch 500: loss=0.0411 AUROC=0.9619 AP=0.9890
+[00:48:23]   [   7/210] s42 bottle      deit_tiny_patch16_224          AUROC=0.9619 (3.2 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/bottle] epoch 50: loss=0.1399 AUROC=0.9429 AP=0.9819
+  [swin_tiny_patch4_window7_224/bottle] epoch 100: loss=0.0856 AUROC=0.9563 AP=0.9876
+  [swin_tiny_patch4_window7_224/bottle] epoch 150: loss=0.0688 AUROC=0.9516 AP=0.9862
+  [swin_tiny_patch4_window7_224/bottle] epoch 200: loss=0.0592 AUROC=0.9532 AP=0.9866
+  [swin_tiny_patch4_window7_224/bottle] epoch 250: loss=0.0590 AUROC=0.9579 AP=0.9879
+  [swin_tiny_patch4_window7_224/bottle] epoch 300: loss=0.0543 AUROC=0.9571 AP=0.9877
+  [swin_tiny_patch4_window7_224/bottle] epoch 350: loss=0.0531 AUROC=0.9579 AP=0.9879
+  [swin_tiny_patch4_window7_224/bottle] epoch 400: loss=0.0521 AUROC=0.9556 AP=0.9871
+  [swin_tiny_patch4_window7_224/bottle] epoch 450: loss=0.0517 AUROC=0.9540 AP=0.9867
+  [swin_tiny_patch4_window7_224/bottle] epoch 500: loss=0.0512 AUROC=0.9556 AP=0.9872
+[00:56:17]   [   8/210] s42 bottle      swin_tiny_patch4_window7_224   AUROC=0.9556 (7.9 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/bottle] epoch 50: loss=0.0970 AUROC=0.9452 AP=0.9832
+  [efficientnet_b0/bottle] epoch 100: loss=0.0701 AUROC=0.9611 AP=0.9889
+  [efficientnet_b0/bottle] epoch 150: loss=0.0701 AUROC=0.9651 AP=0.9902
+  [efficientnet_b0/bottle] epoch 200: loss=0.0553 AUROC=0.9611 AP=0.9888
+  [efficientnet_b0/bottle] epoch 250: loss=0.0518 AUROC=0.9611 AP=0.9888
+  [efficientnet_b0/bottle] epoch 300: loss=0.0516 AUROC=0.9635 AP=0.9895
+  [efficientnet_b0/bottle] epoch 350: loss=0.0506 AUROC=0.9619 AP=0.9890
+  [efficientnet_b0/bottle] epoch 400: loss=0.0474 AUROC=0.9643 AP=0.9896
+  [efficientnet_b0/bottle] epoch 450: loss=0.0471 AUROC=0.9643 AP=0.9896
+  [efficientnet_b0/bottle] epoch 500: loss=0.0473 AUROC=0.9635 AP=0.9894
+[01:00:03]   [   9/210] s42 bottle      efficientnet_b0                AUROC=0.9635 (3.8 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/bottle] epoch 50: loss=0.1194 AUROC=0.9190 AP=0.9737
+  [efficientnet_b1/bottle] epoch 100: loss=0.0777 AUROC=0.9508 AP=0.9861
+  [efficientnet_b1/bottle] epoch 150: loss=0.0653 AUROC=0.9508 AP=0.9861
+  [efficientnet_b1/bottle] epoch 200: loss=0.0581 AUROC=0.9500 AP=0.9860
+  [efficientnet_b1/bottle] epoch 250: loss=0.0568 AUROC=0.9476 AP=0.9852
+  [efficientnet_b1/bottle] epoch 300: loss=0.0539 AUROC=0.9532 AP=0.9866
+  [efficientnet_b1/bottle] epoch 350: loss=0.0526 AUROC=0.9492 AP=0.9855
+  [efficientnet_b1/bottle] epoch 400: loss=0.0513 AUROC=0.9556 AP=0.9872
+  [efficientnet_b1/bottle] epoch 450: loss=0.0515 AUROC=0.9532 AP=0.9866
+  [efficientnet_b1/bottle] epoch 500: loss=0.0510 AUROC=0.9540 AP=0.9868
+[01:04:52]   [  10/210] s42 bottle      efficientnet_b1                AUROC=0.9540 (4.8 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/bottle] epoch 50: loss=0.0929 AUROC=0.9603 AP=0.9887
+  [mobilenetv3_small_100/bottle] epoch 100: loss=0.0666 AUROC=0.9540 AP=0.9868
+  [mobilenetv3_small_100/bottle] epoch 150: loss=0.0568 AUROC=0.9595 AP=0.9884
+  [mobilenetv3_small_100/bottle] epoch 200: loss=0.0530 AUROC=0.9595 AP=0.9883
+  [mobilenetv3_small_100/bottle] epoch 250: loss=0.0516 AUROC=0.9603 AP=0.9884
+  [mobilenetv3_small_100/bottle] epoch 300: loss=0.0481 AUROC=0.9619 AP=0.9889
+  [mobilenetv3_small_100/bottle] epoch 350: loss=0.0472 AUROC=0.9619 AP=0.9890
+  [mobilenetv3_small_100/bottle] epoch 400: loss=0.0460 AUROC=0.9603 AP=0.9885
+  [mobilenetv3_small_100/bottle] epoch 450: loss=0.0451 AUROC=0.9611 AP=0.9888
+  [mobilenetv3_small_100/bottle] epoch 500: loss=0.0448 AUROC=0.9603 AP=0.9885
+[01:06:52]   [  11/210] s42 bottle      mobilenetv3_small_100          AUROC=0.9603 (2.0 min, mb=64 x1, peak=2.2GB)
+  [resnet18/bottle] epoch 50: loss=0.0898 AUROC=0.9611 AP=0.9888
+  [resnet18/bottle] epoch 100: loss=0.0681 AUROC=0.9587 AP=0.9882
+  [resnet18/bottle] epoch 150: loss=0.0577 AUROC=0.9611 AP=0.9888
+  [resnet18/bottle] epoch 200: loss=0.0540 AUROC=0.9603 AP=0.9886
+  [resnet18/bottle] epoch 250: loss=0.0509 AUROC=0.9611 AP=0.9889
+  [resnet18/bottle] epoch 300: loss=0.0474 AUROC=0.9635 AP=0.9895
+  [resnet18/bottle] epoch 350: loss=0.0463 AUROC=0.9627 AP=0.9893
+  [resnet18/bottle] epoch 400: loss=0.0468 AUROC=0.9627 AP=0.9893
+  [resnet18/bottle] epoch 450: loss=0.0466 AUROC=0.9619 AP=0.9891
+  [resnet18/bottle] epoch 500: loss=0.0450 AUROC=0.9619 AP=0.9891
+[01:09:40]   [  12/210] s42 bottle      resnet18                       AUROC=0.9619 (2.8 min, mb=64 x1, peak=3.0GB)
+  [resnet34/bottle] epoch 50: loss=0.0847 AUROC=0.9611 AP=0.9889
+  [resnet34/bottle] epoch 100: loss=0.0634 AUROC=0.9603 AP=0.9884
+  [resnet34/bottle] epoch 150: loss=0.0560 AUROC=0.9643 AP=0.9896
+  [resnet34/bottle] epoch 200: loss=0.0498 AUROC=0.9627 AP=0.9892
+  [resnet34/bottle] epoch 250: loss=0.0494 AUROC=0.9627 AP=0.9892
+  [resnet34/bottle] epoch 300: loss=0.0476 AUROC=0.9643 AP=0.9896
+  [resnet34/bottle] epoch 350: loss=0.0450 AUROC=0.9667 AP=0.9904
+  [resnet34/bottle] epoch 400: loss=0.0437 AUROC=0.9659 AP=0.9901
+  [resnet34/bottle] epoch 450: loss=0.0437 AUROC=0.9659 AP=0.9902
+  [resnet34/bottle] epoch 500: loss=0.0420 AUROC=0.9659 AP=0.9901
+[01:13:35]   [  13/210] s42 bottle      resnet34                       AUROC=0.9659 (3.9 min, mb=64 x1, peak=4.1GB)
+  [resnet50/bottle] epoch 50: loss=0.0918 AUROC=0.9571 AP=0.9877
+  [resnet50/bottle] epoch 100: loss=0.0681 AUROC=0.9563 AP=0.9875
+  [resnet50/bottle] epoch 150: loss=0.0590 AUROC=0.9540 AP=0.9867
+  [resnet50/bottle] epoch 200: loss=0.0510 AUROC=0.9587 AP=0.9880
+  [resnet50/bottle] epoch 250: loss=0.0503 AUROC=0.9611 AP=0.9887
+  [resnet50/bottle] epoch 300: loss=0.0479 AUROC=0.9579 AP=0.9877
+  [resnet50/bottle] epoch 350: loss=0.0445 AUROC=0.9571 AP=0.9876
+  [resnet50/bottle] epoch 400: loss=0.0452 AUROC=0.9587 AP=0.9880
+  [resnet50/bottle] epoch 450: loss=0.0451 AUROC=0.9571 AP=0.9876
+  [resnet50/bottle] epoch 500: loss=0.0440 AUROC=0.9571 AP=0.9876
+[01:19:11]   [  14/210] s42 bottle      resnet50                       AUROC=0.9571 (5.6 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/cable] epoch 50: loss=0.2373 AUROC=0.7170 AP=0.7605
+  [convnextv2_tiny/cable] epoch 100: loss=0.1982 AUROC=0.7779 AP=0.8174
+  [convnextv2_tiny/cable] epoch 150: loss=0.1782 AUROC=0.8070 AP=0.8379
+  [convnextv2_tiny/cable] epoch 200: loss=0.1659 AUROC=0.8218 AP=0.8501
+  [convnextv2_tiny/cable] epoch 250: loss=0.1560 AUROC=0.8370 AP=0.8652
+  [convnextv2_tiny/cable] epoch 300: loss=0.1510 AUROC=0.8405 AP=0.8701
+  [convnextv2_tiny/cable] epoch 350: loss=0.1481 AUROC=0.8456 AP=0.8757
+  [convnextv2_tiny/cable] epoch 400: loss=0.1441 AUROC=0.8473 AP=0.8766
+  [convnextv2_tiny/cable] epoch 450: loss=0.1444 AUROC=0.8484 AP=0.8778
+  [convnextv2_tiny/cable] epoch 500: loss=0.1456 AUROC=0.8491 AP=0.8782
+[01:33:06]   [  15/210] s42 cable       convnextv2_tiny                AUROC=0.8491 (13.9 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/cable] epoch 50: loss=0.2497 AUROC=0.6705 AP=0.7241
+  [convnextv2_base/cable] epoch 100: loss=0.2355 AUROC=0.6604 AP=0.7136
+  [convnextv2_base/cable] epoch 150: loss=0.2063 AUROC=0.7787 AP=0.8181
+  [convnextv2_base/cable] epoch 200: loss=0.1820 AUROC=0.8025 AP=0.8394
+  [convnextv2_base/cable] epoch 250: loss=0.1690 AUROC=0.8351 AP=0.8637
+  [convnextv2_base/cable] epoch 300: loss=0.1607 AUROC=0.8456 AP=0.8777
+  [convnextv2_base/cable] epoch 350: loss=0.1552 AUROC=0.8518 AP=0.8832
+  [convnextv2_base/cable] epoch 400: loss=0.1490 AUROC=0.8574 AP=0.8893
+  [convnextv2_base/cable] epoch 450: loss=0.1493 AUROC=0.8579 AP=0.8892
+  [convnextv2_base/cable] epoch 500: loss=0.1483 AUROC=0.8578 AP=0.8892
+[02:03:00]   [  16/210] s42 cable       convnextv2_base                AUROC=0.8578 (29.9 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/cable] epoch 50: loss=0.2192 AUROC=0.7541 AP=0.7853
+  [mobileone_s0/cable] epoch 100: loss=0.1865 AUROC=0.8083 AP=0.8364
+  [mobileone_s0/cable] epoch 150: loss=0.1903 AUROC=0.8043 AP=0.8170
+  [mobileone_s0/cable] epoch 200: loss=0.1623 AUROC=0.8544 AP=0.8859
+  [mobileone_s0/cable] epoch 250: loss=0.1561 AUROC=0.8521 AP=0.8844
+  [mobileone_s0/cable] epoch 300: loss=0.1516 AUROC=0.8669 AP=0.8956
+  [mobileone_s0/cable] epoch 350: loss=0.1519 AUROC=0.6780 AP=0.7544
+  [mobileone_s0/cable] epoch 400: loss=0.1458 AUROC=0.8703 AP=0.8979
+  [mobileone_s0/cable] epoch 450: loss=0.1458 AUROC=0.8711 AP=0.8998
+  [mobileone_s0/cable] epoch 500: loss=0.1460 AUROC=0.8716 AP=0.8997
+[02:09:39]   [  17/210] s42 cable       mobileone_s0                   AUROC=0.8716 (6.7 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/cable] epoch 50: loss=0.2445 AUROC=0.7073 AP=0.7494
+  [convnext_tiny/cable] epoch 100: loss=0.2026 AUROC=0.7933 AP=0.8198
+  [convnext_tiny/cable] epoch 150: loss=0.1813 AUROC=0.8083 AP=0.8476
+  [convnext_tiny/cable] epoch 200: loss=0.1661 AUROC=0.8323 AP=0.8637
+  [convnext_tiny/cable] epoch 250: loss=0.1571 AUROC=0.8388 AP=0.8713
+  [convnext_tiny/cable] epoch 300: loss=0.1507 AUROC=0.8484 AP=0.8797
+  [convnext_tiny/cable] epoch 350: loss=0.1452 AUROC=0.8521 AP=0.8850
+  [convnext_tiny/cable] epoch 400: loss=0.1422 AUROC=0.8542 AP=0.8858
+  [convnext_tiny/cable] epoch 450: loss=0.1399 AUROC=0.8561 AP=0.8876
+  [convnext_tiny/cable] epoch 500: loss=0.1397 AUROC=0.8561 AP=0.8872
+[02:20:31]   [  18/210] s42 cable       convnext_tiny                  AUROC=0.8561 (10.9 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/cable] epoch 50: loss=0.2336 AUROC=0.7418 AP=0.7763
+  [convnext_small/cable] epoch 100: loss=0.2008 AUROC=0.7959 AP=0.8356
+  [convnext_small/cable] epoch 150: loss=0.1741 AUROC=0.8304 AP=0.8649
+  [convnext_small/cable] epoch 200: loss=0.1584 AUROC=0.8383 AP=0.8707
+  [convnext_small/cable] epoch 250: loss=0.1482 AUROC=0.8467 AP=0.8816
+  [convnext_small/cable] epoch 300: loss=0.1428 AUROC=0.8546 AP=0.8867
+  [convnext_small/cable] epoch 350: loss=0.1351 AUROC=0.8585 AP=0.8900
+  [convnext_small/cable] epoch 400: loss=0.1309 AUROC=0.8602 AP=0.8921
+  [convnext_small/cable] epoch 450: loss=0.1290 AUROC=0.8583 AP=0.8910
+  [convnext_small/cable] epoch 500: loss=0.1277 AUROC=0.8585 AP=0.8912
+[02:37:22]   [  19/210] s42 cable       convnext_small                 AUROC=0.8585 (16.9 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/cable] epoch 50: loss=0.1981 AUROC=0.8143 AP=0.8618
+  [vit_tiny_patch16_224/cable] epoch 100: loss=0.1628 AUROC=0.8416 AP=0.8804
+  [vit_tiny_patch16_224/cable] epoch 150: loss=0.1488 AUROC=0.8394 AP=0.8707
+  [vit_tiny_patch16_224/cable] epoch 200: loss=0.1447 AUROC=0.8366 AP=0.8876
+  [vit_tiny_patch16_224/cable] epoch 250: loss=0.1345 AUROC=0.8497 AP=0.8827
+  [vit_tiny_patch16_224/cable] epoch 300: loss=0.1298 AUROC=0.8315 AP=0.8651
+  [vit_tiny_patch16_224/cable] epoch 350: loss=0.1261 AUROC=0.8400 AP=0.8692
+  [vit_tiny_patch16_224/cable] epoch 400: loss=0.1245 AUROC=0.8411 AP=0.8691
+  [vit_tiny_patch16_224/cable] epoch 450: loss=0.1227 AUROC=0.8388 AP=0.8676
+  [vit_tiny_patch16_224/cable] epoch 500: loss=0.1232 AUROC=0.8400 AP=0.8685
+[02:40:53]   [  20/210] s42 cable       vit_tiny_patch16_224           AUROC=0.8400 (3.5 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/cable] epoch 50: loss=0.2170 AUROC=0.7361 AP=0.8343
+  [deit_tiny_patch16_224/cable] epoch 100: loss=0.1552 AUROC=0.8137 AP=0.8480
+  [deit_tiny_patch16_224/cable] epoch 150: loss=0.1408 AUROC=0.8253 AP=0.8583
+  [deit_tiny_patch16_224/cable] epoch 200: loss=0.1300 AUROC=0.8285 AP=0.8610
+  [deit_tiny_patch16_224/cable] epoch 250: loss=0.1221 AUROC=0.8355 AP=0.8689
+  [deit_tiny_patch16_224/cable] epoch 300: loss=0.1174 AUROC=0.8396 AP=0.8732
+  [deit_tiny_patch16_224/cable] epoch 350: loss=0.1134 AUROC=0.8394 AP=0.8723
+  [deit_tiny_patch16_224/cable] epoch 400: loss=0.1122 AUROC=0.8400 AP=0.8724
+  [deit_tiny_patch16_224/cable] epoch 450: loss=0.1101 AUROC=0.8392 AP=0.8719
+  [deit_tiny_patch16_224/cable] epoch 500: loss=0.1108 AUROC=0.8396 AP=0.8720
+[02:44:25]   [  21/210] s42 cable       deit_tiny_patch16_224          AUROC=0.8396 (3.5 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/cable] epoch 50: loss=0.2952 AUROC=0.6154 AP=0.7172
+  [swin_tiny_patch4_window7_224/cable] epoch 100: loss=0.2452 AUROC=0.7187 AP=0.7696
+  [swin_tiny_patch4_window7_224/cable] epoch 150: loss=0.2153 AUROC=0.8015 AP=0.8378
+  [swin_tiny_patch4_window7_224/cable] epoch 200: loss=0.1954 AUROC=0.8122 AP=0.8533
+  [swin_tiny_patch4_window7_224/cable] epoch 250: loss=0.1815 AUROC=0.8165 AP=0.8610
+  [swin_tiny_patch4_window7_224/cable] epoch 300: loss=0.1728 AUROC=0.8280 AP=0.8713
+  [swin_tiny_patch4_window7_224/cable] epoch 350: loss=0.1669 AUROC=0.8328 AP=0.8774
+  [swin_tiny_patch4_window7_224/cable] epoch 400: loss=0.1643 AUROC=0.8317 AP=0.8756
+  [swin_tiny_patch4_window7_224/cable] epoch 450: loss=0.1630 AUROC=0.8345 AP=0.8776
+  [swin_tiny_patch4_window7_224/cable] epoch 500: loss=0.1649 AUROC=0.8343 AP=0.8773
+[02:52:53]   [  22/210] s42 cable       swin_tiny_patch4_window7_224   AUROC=0.8343 (8.5 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/cable] epoch 50: loss=0.2236 AUROC=0.7650 AP=0.8006
+  [efficientnet_b0/cable] epoch 100: loss=0.1911 AUROC=0.8235 AP=0.8386
+  [efficientnet_b0/cable] epoch 150: loss=0.1708 AUROC=0.8308 AP=0.8623
+  [efficientnet_b0/cable] epoch 200: loss=0.1620 AUROC=0.8446 AP=0.8745
+  [efficientnet_b0/cable] epoch 250: loss=0.1537 AUROC=0.8529 AP=0.8884
+  [efficientnet_b0/cable] epoch 300: loss=0.1509 AUROC=0.8615 AP=0.8956
+  [efficientnet_b0/cable] epoch 350: loss=0.1488 AUROC=0.8668 AP=0.8997
+  [efficientnet_b0/cable] epoch 400: loss=0.1467 AUROC=0.8701 AP=0.9019
+  [efficientnet_b0/cable] epoch 450: loss=0.1444 AUROC=0.8703 AP=0.9021
+  [efficientnet_b0/cable] epoch 500: loss=0.1468 AUROC=0.8703 AP=0.9022
+[02:56:56]   [  23/210] s42 cable       efficientnet_b0                AUROC=0.8703 (4.1 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/cable] epoch 50: loss=0.2390 AUROC=0.7614 AP=0.8106
+  [efficientnet_b1/cable] epoch 100: loss=0.1919 AUROC=0.7922 AP=0.7882
+  [efficientnet_b1/cable] epoch 150: loss=0.1727 AUROC=0.8120 AP=0.8257
+  [efficientnet_b1/cable] epoch 200: loss=0.1616 AUROC=0.8460 AP=0.8787
+  [efficientnet_b1/cable] epoch 250: loss=0.1552 AUROC=0.8548 AP=0.8845
+  [efficientnet_b1/cable] epoch 300: loss=0.1522 AUROC=0.8630 AP=0.8915
+  [efficientnet_b1/cable] epoch 350: loss=0.1475 AUROC=0.8741 AP=0.9013
+  [efficientnet_b1/cable] epoch 400: loss=0.1452 AUROC=0.8748 AP=0.9008
+  [efficientnet_b1/cable] epoch 450: loss=0.1445 AUROC=0.8750 AP=0.9014
+  [efficientnet_b1/cable] epoch 500: loss=0.1441 AUROC=0.8748 AP=0.9011
+[03:02:05]   [  24/210] s42 cable       efficientnet_b1                AUROC=0.8748 (5.2 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/cable] epoch 50: loss=0.2083 AUROC=0.7815 AP=0.8060
+  [mobilenetv3_small_100/cable] epoch 100: loss=0.1791 AUROC=0.8203 AP=0.8417
+  [mobilenetv3_small_100/cable] epoch 150: loss=0.1647 AUROC=0.8308 AP=0.8627
+  [mobilenetv3_small_100/cable] epoch 200: loss=0.1538 AUROC=0.8411 AP=0.8730
+  [mobilenetv3_small_100/cable] epoch 250: loss=0.1490 AUROC=0.8501 AP=0.8811
+  [mobilenetv3_small_100/cable] epoch 300: loss=0.1457 AUROC=0.8570 AP=0.8881
+  [mobilenetv3_small_100/cable] epoch 350: loss=0.1417 AUROC=0.8639 AP=0.8935
+  [mobilenetv3_small_100/cable] epoch 400: loss=0.1400 AUROC=0.8630 AP=0.8931
+  [mobilenetv3_small_100/cable] epoch 450: loss=0.1391 AUROC=0.8630 AP=0.8934
+  [mobilenetv3_small_100/cable] epoch 500: loss=0.1382 AUROC=0.8645 AP=0.8942
+[03:04:12]   [  25/210] s42 cable       mobilenetv3_small_100          AUROC=0.8645 (2.1 min, mb=64 x1, peak=2.2GB)
+  [resnet18/cable] epoch 50: loss=0.2145 AUROC=0.7931 AP=0.8349
+  [resnet18/cable] epoch 100: loss=0.1825 AUROC=0.8448 AP=0.8737
+  [resnet18/cable] epoch 150: loss=0.1658 AUROC=0.8531 AP=0.8864
+  [resnet18/cable] epoch 200: loss=0.1568 AUROC=0.8660 AP=0.8986
+  [resnet18/cable] epoch 250: loss=0.1497 AUROC=0.8754 AP=0.9076
+  [resnet18/cable] epoch 300: loss=0.1454 AUROC=0.8797 AP=0.9093
+  [resnet18/cable] epoch 350: loss=0.1434 AUROC=0.8855 AP=0.9150
+  [resnet18/cable] epoch 400: loss=0.1415 AUROC=0.8825 AP=0.9124
+  [resnet18/cable] epoch 450: loss=0.1403 AUROC=0.8847 AP=0.9145
+  [resnet18/cable] epoch 500: loss=0.1418 AUROC=0.8844 AP=0.9139
+[03:07:15]   [  26/210] s42 cable       resnet18                       AUROC=0.8844 (3.0 min, mb=64 x1, peak=3.0GB)
+  [resnet34/cable] epoch 50: loss=0.2117 AUROC=0.8032 AP=0.8389
+  [resnet34/cable] epoch 100: loss=0.1801 AUROC=0.8343 AP=0.8676
+  [resnet34/cable] epoch 150: loss=0.1664 AUROC=0.8594 AP=0.8885
+  [resnet34/cable] epoch 200: loss=0.1565 AUROC=0.8696 AP=0.8995
+  [resnet34/cable] epoch 250: loss=0.1486 AUROC=0.8784 AP=0.9079
+  [resnet34/cable] epoch 300: loss=0.1471 AUROC=0.8774 AP=0.9064
+  [resnet34/cable] epoch 350: loss=0.1416 AUROC=0.8810 AP=0.9100
+  [resnet34/cable] epoch 400: loss=0.1403 AUROC=0.8825 AP=0.9105
+  [resnet34/cable] epoch 450: loss=0.1398 AUROC=0.8832 AP=0.9112
+  [resnet34/cable] epoch 500: loss=0.1393 AUROC=0.8827 AP=0.9112
+[03:11:27]   [  27/210] s42 cable       resnet34                       AUROC=0.8827 (4.2 min, mb=64 x1, peak=4.1GB)
+  [resnet50/cable] epoch 50: loss=0.2171 AUROC=0.7858 AP=0.8245
+  [resnet50/cable] epoch 100: loss=0.1840 AUROC=0.8233 AP=0.8528
+  [resnet50/cable] epoch 150: loss=0.1681 AUROC=0.8413 AP=0.8746
+  [resnet50/cable] epoch 200: loss=0.1568 AUROC=0.8488 AP=0.8846
+  [resnet50/cable] epoch 250: loss=0.1534 AUROC=0.8589 AP=0.8929
+  [resnet50/cable] epoch 300: loss=0.1491 AUROC=0.8651 AP=0.8982
+  [resnet50/cable] epoch 350: loss=0.1436 AUROC=0.8679 AP=0.9013
+  [resnet50/cable] epoch 400: loss=0.1435 AUROC=0.8681 AP=0.9007
+  [resnet50/cable] epoch 450: loss=0.1419 AUROC=0.8677 AP=0.9003
+  [resnet50/cable] epoch 500: loss=0.1418 AUROC=0.8688 AP=0.9009
+[03:17:28]   [  28/210] s42 cable       resnet50                       AUROC=0.8688 (6.0 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/capsule] epoch 50: loss=0.1217 AUROC=0.5529 AP=0.8461
+  [convnextv2_tiny/capsule] epoch 100: loss=0.0924 AUROC=0.5955 AP=0.8691
+  [convnextv2_tiny/capsule] epoch 150: loss=0.0925 AUROC=0.5624 AP=0.8536
+  [convnextv2_tiny/capsule] epoch 200: loss=0.0727 AUROC=0.6582 AP=0.8935
+  [convnextv2_tiny/capsule] epoch 250: loss=0.0696 AUROC=0.6637 AP=0.8966
+  [convnextv2_tiny/capsule] epoch 300: loss=0.0692 AUROC=0.6809 AP=0.9044
+  [convnextv2_tiny/capsule] epoch 350: loss=0.0654 AUROC=0.7000 AP=0.9118
+  [convnextv2_tiny/capsule] epoch 400: loss=0.0654 AUROC=0.6992 AP=0.9114
+  [convnextv2_tiny/capsule] epoch 450: loss=0.0626 AUROC=0.6988 AP=0.9115
+  [convnextv2_tiny/capsule] epoch 500: loss=0.0631 AUROC=0.6984 AP=0.9113
+[03:30:50]   [  29/210] s42 capsule     convnextv2_tiny                AUROC=0.6984 (13.4 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/capsule] epoch 50: loss=0.1363 AUROC=0.5700 AP=0.8602
+  [convnextv2_base/capsule] epoch 100: loss=0.1185 AUROC=0.6051 AP=0.8763
+  [convnextv2_base/capsule] epoch 150: loss=0.1091 AUROC=0.6239 AP=0.8814
+  [convnextv2_base/capsule] epoch 200: loss=0.1080 AUROC=0.6195 AP=0.8811
+  [convnextv2_base/capsule] epoch 250: loss=0.1152 AUROC=0.6183 AP=0.8821
+  [convnextv2_base/capsule] epoch 300: loss=0.1038 AUROC=0.6262 AP=0.8847
+  [convnextv2_base/capsule] epoch 350: loss=0.1091 AUROC=0.6243 AP=0.8848
+  [convnextv2_base/capsule] epoch 400: loss=0.1031 AUROC=0.6294 AP=0.8865
+  [convnextv2_base/capsule] epoch 450: loss=0.1049 AUROC=0.6250 AP=0.8855
+  [convnextv2_base/capsule] epoch 500: loss=0.1052 AUROC=0.6258 AP=0.8858
+[03:59:33]   [  30/210] s42 capsule     convnextv2_base                AUROC=0.6258 (28.7 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/capsule] epoch 50: loss=0.1073 AUROC=0.6099 AP=0.8667
+  [mobileone_s0/capsule] epoch 100: loss=0.0841 AUROC=0.6590 AP=0.8946
+  [mobileone_s0/capsule] epoch 150: loss=0.0692 AUROC=0.6877 AP=0.9070
+  [mobileone_s0/capsule] epoch 200: loss=0.0642 AUROC=0.7008 AP=0.9141
+  [mobileone_s0/capsule] epoch 250: loss=0.0615 AUROC=0.7208 AP=0.9214
+  [mobileone_s0/capsule] epoch 300: loss=0.0616 AUROC=0.7108 AP=0.9183
+  [mobileone_s0/capsule] epoch 350: loss=0.0596 AUROC=0.7264 AP=0.9237
+  [mobileone_s0/capsule] epoch 400: loss=0.0586 AUROC=0.7292 AP=0.9247
+  [mobileone_s0/capsule] epoch 450: loss=0.0570 AUROC=0.7331 AP=0.9258
+  [mobileone_s0/capsule] epoch 500: loss=0.0572 AUROC=0.7304 AP=0.9249
+[04:05:57]   [  31/210] s42 capsule     mobileone_s0                   AUROC=0.7304 (6.4 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/capsule] epoch 50: loss=0.1121 AUROC=0.5636 AP=0.8509
+  [convnext_tiny/capsule] epoch 100: loss=0.0880 AUROC=0.6434 AP=0.8816
+  [convnext_tiny/capsule] epoch 150: loss=0.0757 AUROC=0.6546 AP=0.8923
+  [convnext_tiny/capsule] epoch 200: loss=0.0675 AUROC=0.6833 AP=0.9039
+  [convnext_tiny/capsule] epoch 250: loss=0.0648 AUROC=0.6961 AP=0.9100
+  [convnext_tiny/capsule] epoch 300: loss=0.0646 AUROC=0.7112 AP=0.9156
+  [convnext_tiny/capsule] epoch 350: loss=0.0617 AUROC=0.7204 AP=0.9200
+  [convnext_tiny/capsule] epoch 400: loss=0.0620 AUROC=0.7272 AP=0.9224
+  [convnext_tiny/capsule] epoch 450: loss=0.0596 AUROC=0.7292 AP=0.9229
+  [convnext_tiny/capsule] epoch 500: loss=0.0601 AUROC=0.7272 AP=0.9223
+[04:16:30]   [  32/210] s42 capsule     convnext_tiny                  AUROC=0.7272 (10.5 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/capsule] epoch 50: loss=0.1235 AUROC=0.5732 AP=0.8588
+  [convnext_small/capsule] epoch 100: loss=0.0966 AUROC=0.6059 AP=0.8749
+  [convnext_small/capsule] epoch 150: loss=0.0761 AUROC=0.6598 AP=0.8926
+  [convnext_small/capsule] epoch 200: loss=0.0700 AUROC=0.6829 AP=0.9036
+  [convnext_small/capsule] epoch 250: loss=0.0668 AUROC=0.6957 AP=0.9079
+  [convnext_small/capsule] epoch 300: loss=0.0660 AUROC=0.7080 AP=0.9127
+  [convnext_small/capsule] epoch 350: loss=0.0630 AUROC=0.7152 AP=0.9152
+  [convnext_small/capsule] epoch 400: loss=0.0607 AUROC=0.7216 AP=0.9182
+  [convnext_small/capsule] epoch 450: loss=0.0615 AUROC=0.7268 AP=0.9204
+  [convnext_small/capsule] epoch 500: loss=0.0605 AUROC=0.7284 AP=0.9208
+[04:32:45]   [  33/210] s42 capsule     convnext_small                 AUROC=0.7284 (16.2 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/capsule] epoch 50: loss=0.1108 AUROC=0.5903 AP=0.8684
+  [vit_tiny_patch16_224/capsule] epoch 100: loss=0.0853 AUROC=0.6414 AP=0.8896
+  [vit_tiny_patch16_224/capsule] epoch 150: loss=0.0765 AUROC=0.6773 AP=0.9027
+  [vit_tiny_patch16_224/capsule] epoch 200: loss=0.0681 AUROC=0.6953 AP=0.9100
+  [vit_tiny_patch16_224/capsule] epoch 250: loss=0.0637 AUROC=0.7124 AP=0.9155
+  [vit_tiny_patch16_224/capsule] epoch 300: loss=0.0628 AUROC=0.7236 AP=0.9203
+  [vit_tiny_patch16_224/capsule] epoch 350: loss=0.0620 AUROC=0.7276 AP=0.9220
+  [vit_tiny_patch16_224/capsule] epoch 400: loss=0.0602 AUROC=0.7339 AP=0.9246
+  [vit_tiny_patch16_224/capsule] epoch 450: loss=0.0597 AUROC=0.7351 AP=0.9248
+  [vit_tiny_patch16_224/capsule] epoch 500: loss=0.0604 AUROC=0.7339 AP=0.9247
+[04:36:06]   [  34/210] s42 capsule     vit_tiny_patch16_224           AUROC=0.7339 (3.4 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/capsule] epoch 50: loss=0.1080 AUROC=0.5752 AP=0.8620
+  [deit_tiny_patch16_224/capsule] epoch 100: loss=0.0841 AUROC=0.6326 AP=0.8868
+  [deit_tiny_patch16_224/capsule] epoch 150: loss=0.0714 AUROC=0.6853 AP=0.9045
+  [deit_tiny_patch16_224/capsule] epoch 200: loss=0.0656 AUROC=0.6929 AP=0.9095
+  [deit_tiny_patch16_224/capsule] epoch 250: loss=0.0616 AUROC=0.7176 AP=0.9185
+  [deit_tiny_patch16_224/capsule] epoch 300: loss=0.0609 AUROC=0.7288 AP=0.9231
+  [deit_tiny_patch16_224/capsule] epoch 350: loss=0.0601 AUROC=0.7296 AP=0.9239
+  [deit_tiny_patch16_224/capsule] epoch 400: loss=0.0584 AUROC=0.7327 AP=0.9255
+  [deit_tiny_patch16_224/capsule] epoch 450: loss=0.0579 AUROC=0.7371 AP=0.9270
+  [deit_tiny_patch16_224/capsule] epoch 500: loss=0.0586 AUROC=0.7351 AP=0.9262
+[04:39:28]   [  35/210] s42 capsule     deit_tiny_patch16_224          AUROC=0.7351 (3.4 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/capsule] epoch 50: loss=0.1537 AUROC=0.5201 AP=0.8450
+  [swin_tiny_patch4_window7_224/capsule] epoch 100: loss=0.1224 AUROC=0.5844 AP=0.8783
+  [swin_tiny_patch4_window7_224/capsule] epoch 150: loss=0.0937 AUROC=0.6075 AP=0.8881
+  [swin_tiny_patch4_window7_224/capsule] epoch 200: loss=0.0794 AUROC=0.6326 AP=0.8950
+  [swin_tiny_patch4_window7_224/capsule] epoch 250: loss=0.0788 AUROC=0.6418 AP=0.8969
+  [swin_tiny_patch4_window7_224/capsule] epoch 300: loss=0.0769 AUROC=0.6649 AP=0.9045
+  [swin_tiny_patch4_window7_224/capsule] epoch 350: loss=0.0722 AUROC=0.6669 AP=0.9047
+  [swin_tiny_patch4_window7_224/capsule] epoch 400: loss=0.0721 AUROC=0.6717 AP=0.9065
+  [swin_tiny_patch4_window7_224/capsule] epoch 450: loss=0.0685 AUROC=0.6765 AP=0.9079
+  [swin_tiny_patch4_window7_224/capsule] epoch 500: loss=0.0704 AUROC=0.6765 AP=0.9079
+[04:47:34]   [  36/210] s42 capsule     swin_tiny_patch4_window7_224   AUROC=0.6765 (8.1 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/capsule] epoch 50: loss=0.1021 AUROC=0.5911 AP=0.8566
+  [efficientnet_b0/capsule] epoch 100: loss=0.0818 AUROC=0.6733 AP=0.9010
+  [efficientnet_b0/capsule] epoch 150: loss=0.0711 AUROC=0.6849 AP=0.8942
+  [efficientnet_b0/capsule] epoch 200: loss=0.0638 AUROC=0.6996 AP=0.9075
+  [efficientnet_b0/capsule] epoch 250: loss=0.0604 AUROC=0.7252 AP=0.9219
+  [efficientnet_b0/capsule] epoch 300: loss=0.0615 AUROC=0.7316 AP=0.9245
+  [efficientnet_b0/capsule] epoch 350: loss=0.0594 AUROC=0.7383 AP=0.9269
+  [efficientnet_b0/capsule] epoch 400: loss=0.0575 AUROC=0.7431 AP=0.9286
+  [efficientnet_b0/capsule] epoch 450: loss=0.0570 AUROC=0.7435 AP=0.9289
+  [efficientnet_b0/capsule] epoch 500: loss=0.0569 AUROC=0.7443 AP=0.9291
+[04:51:27]   [  37/210] s42 capsule     efficientnet_b0                AUROC=0.7443 (3.9 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/capsule] epoch 50: loss=0.1083 AUROC=0.5696 AP=0.8571
+  [efficientnet_b1/capsule] epoch 100: loss=0.0908 AUROC=0.4352 AP=0.8228
+  [efficientnet_b1/capsule] epoch 150: loss=0.0724 AUROC=0.6817 AP=0.9013
+  [efficientnet_b1/capsule] epoch 200: loss=0.0662 AUROC=0.7132 AP=0.9175
+  [efficientnet_b1/capsule] epoch 250: loss=0.0640 AUROC=0.7327 AP=0.9234
+  [efficientnet_b1/capsule] epoch 300: loss=0.0631 AUROC=0.7407 AP=0.9271
+  [efficientnet_b1/capsule] epoch 350: loss=0.0595 AUROC=0.7527 AP=0.9313
+  [efficientnet_b1/capsule] epoch 400: loss=0.0593 AUROC=0.7571 AP=0.9325
+  [efficientnet_b1/capsule] epoch 450: loss=0.0593 AUROC=0.7603 AP=0.9332
+  [efficientnet_b1/capsule] epoch 500: loss=0.0577 AUROC=0.7607 AP=0.9331
+[04:56:22]   [  38/210] s42 capsule     efficientnet_b1                AUROC=0.7607 (4.9 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/capsule] epoch 50: loss=0.1054 AUROC=0.6055 AP=0.8673
+  [mobilenetv3_small_100/capsule] epoch 100: loss=0.0859 AUROC=0.6625 AP=0.8944
+  [mobilenetv3_small_100/capsule] epoch 150: loss=0.0705 AUROC=0.6968 AP=0.9094
+  [mobilenetv3_small_100/capsule] epoch 200: loss=0.0639 AUROC=0.7148 AP=0.9173
+  [mobilenetv3_small_100/capsule] epoch 250: loss=0.0620 AUROC=0.7284 AP=0.9224
+  [mobilenetv3_small_100/capsule] epoch 300: loss=0.0612 AUROC=0.7308 AP=0.9233
+  [mobilenetv3_small_100/capsule] epoch 350: loss=0.0595 AUROC=0.7383 AP=0.9266
+  [mobilenetv3_small_100/capsule] epoch 400: loss=0.0588 AUROC=0.7399 AP=0.9270
+  [mobilenetv3_small_100/capsule] epoch 450: loss=0.0569 AUROC=0.7411 AP=0.9281
+  [mobilenetv3_small_100/capsule] epoch 500: loss=0.0582 AUROC=0.7427 AP=0.9284
+[04:58:24]   [  39/210] s42 capsule     mobilenetv3_small_100          AUROC=0.7427 (2.0 min, mb=64 x1, peak=2.2GB)
+  [resnet18/capsule] epoch 50: loss=0.1029 AUROC=0.6143 AP=0.8759
+  [resnet18/capsule] epoch 100: loss=0.0856 AUROC=0.6769 AP=0.9008
+  [resnet18/capsule] epoch 150: loss=0.0716 AUROC=0.7060 AP=0.9141
+  [resnet18/capsule] epoch 200: loss=0.0638 AUROC=0.7192 AP=0.9196
+  [resnet18/capsule] epoch 250: loss=0.0607 AUROC=0.7280 AP=0.9237
+  [resnet18/capsule] epoch 300: loss=0.0626 AUROC=0.7351 AP=0.9272
+  [resnet18/capsule] epoch 350: loss=0.0599 AUROC=0.7435 AP=0.9293
+  [resnet18/capsule] epoch 400: loss=0.0584 AUROC=0.7487 AP=0.9315
+  [resnet18/capsule] epoch 450: loss=0.0573 AUROC=0.7503 AP=0.9320
+  [resnet18/capsule] epoch 500: loss=0.0576 AUROC=0.7495 AP=0.9319
+[05:01:19]   [  40/210] s42 capsule     resnet18                       AUROC=0.7495 (2.9 min, mb=64 x1, peak=3.0GB)
+  [resnet34/capsule] epoch 50: loss=0.1026 AUROC=0.6167 AP=0.8744
+  [resnet34/capsule] epoch 100: loss=0.0855 AUROC=0.6769 AP=0.8994
+  [resnet34/capsule] epoch 150: loss=0.0728 AUROC=0.7020 AP=0.9121
+  [resnet34/capsule] epoch 200: loss=0.0644 AUROC=0.7124 AP=0.9177
+  [resnet34/capsule] epoch 250: loss=0.0618 AUROC=0.7280 AP=0.9239
+  [resnet34/capsule] epoch 300: loss=0.0617 AUROC=0.7347 AP=0.9271
+  [resnet34/capsule] epoch 350: loss=0.0594 AUROC=0.7403 AP=0.9292
+  [resnet34/capsule] epoch 400: loss=0.0581 AUROC=0.7435 AP=0.9301
+  [resnet34/capsule] epoch 450: loss=0.0560 AUROC=0.7455 AP=0.9306
+  [resnet34/capsule] epoch 500: loss=0.0575 AUROC=0.7431 AP=0.9301
+[05:05:21]   [  41/210] s42 capsule     resnet34                       AUROC=0.7431 (4.0 min, mb=64 x1, peak=4.1GB)
+  [resnet50/capsule] epoch 50: loss=0.1043 AUROC=0.6003 AP=0.8701
+  [resnet50/capsule] epoch 100: loss=0.0816 AUROC=0.6741 AP=0.9010
+  [resnet50/capsule] epoch 150: loss=0.0691 AUROC=0.7044 AP=0.9135
+  [resnet50/capsule] epoch 200: loss=0.0633 AUROC=0.7184 AP=0.9216
+  [resnet50/capsule] epoch 250: loss=0.0594 AUROC=0.7312 AP=0.9252
+  [resnet50/capsule] epoch 300: loss=0.0600 AUROC=0.7395 AP=0.9290
+  [resnet50/capsule] epoch 350: loss=0.0576 AUROC=0.7447 AP=0.9296
+  [resnet50/capsule] epoch 400: loss=0.0577 AUROC=0.7499 AP=0.9314
+  [resnet50/capsule] epoch 450: loss=0.0550 AUROC=0.7535 AP=0.9328
+  [resnet50/capsule] epoch 500: loss=0.0559 AUROC=0.7511 AP=0.9315
+[05:11:06]   [  42/210] s42 capsule     resnet50                       AUROC=0.7511 (5.7 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/carpet] epoch 50: loss=0.6804 AUROC=0.8852 AP=0.9622
+  [convnextv2_tiny/carpet] epoch 100: loss=0.3599 AUROC=0.7897 AP=0.9214
+  [convnextv2_tiny/carpet] epoch 150: loss=0.3610 AUROC=0.8050 AP=0.9276
+  [convnextv2_tiny/carpet] epoch 200: loss=0.3594 AUROC=0.7933 AP=0.9226
+  [convnextv2_tiny/carpet] epoch 250: loss=0.3575 AUROC=0.8098 AP=0.9300
+  [convnextv2_tiny/carpet] epoch 300: loss=0.3572 AUROC=0.7986 AP=0.9244
+  [convnextv2_tiny/carpet] epoch 350: loss=0.3572 AUROC=0.7994 AP=0.9250
+  [convnextv2_tiny/carpet] epoch 400: loss=0.3572 AUROC=0.7945 AP=0.9228
+  [convnextv2_tiny/carpet] epoch 450: loss=0.3560 AUROC=0.7893 AP=0.9201
+  [convnextv2_tiny/carpet] epoch 500: loss=0.3555 AUROC=0.8050 AP=0.9278
+[05:27:56]   [  43/210] s42 carpet      convnextv2_tiny                AUROC=0.8050 (16.8 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/carpet] epoch 50: loss=0.3649 AUROC=0.8162 AP=0.9317
+  [convnextv2_base/carpet] epoch 100: loss=0.3673 AUROC=0.7769 AP=0.9150
+  [convnextv2_base/carpet] epoch 150: loss=0.3584 AUROC=0.8142 AP=0.9324
+  [convnextv2_base/carpet] epoch 200: loss=0.3546 AUROC=0.7817 AP=0.9159
+  [convnextv2_base/carpet] epoch 250: loss=0.3467 AUROC=0.7600 AP=0.9056
+  [convnextv2_base/carpet] epoch 300: loss=0.3392 AUROC=0.7552 AP=0.9037
+  [convnextv2_base/carpet] epoch 350: loss=0.3156 AUROC=0.7287 AP=0.8856
+  [convnextv2_base/carpet] epoch 400: loss=0.2940 AUROC=0.7047 AP=0.8710
+  [convnextv2_base/carpet] epoch 450: loss=0.2874 AUROC=0.6970 AP=0.8679
+  [convnextv2_base/carpet] epoch 500: loss=0.2875 AUROC=0.6946 AP=0.8671
+[06:04:32]   [  44/210] s42 carpet      convnextv2_base                AUROC=0.6946 (36.6 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/carpet] epoch 50: loss=0.3657 AUROC=0.7949 AP=0.9222
+  [mobileone_s0/carpet] epoch 100: loss=0.3588 AUROC=0.7793 AP=0.9061
+  [mobileone_s0/carpet] epoch 150: loss=0.3616 AUROC=0.7905 AP=0.9209
+  [mobileone_s0/carpet] epoch 200: loss=0.3574 AUROC=0.7765 AP=0.9145
+  [mobileone_s0/carpet] epoch 250: loss=0.3534 AUROC=0.7777 AP=0.9146
+  [mobileone_s0/carpet] epoch 300: loss=0.3530 AUROC=0.7648 AP=0.9078
+  [mobileone_s0/carpet] epoch 350: loss=0.3515 AUROC=0.7560 AP=0.9031
+  [mobileone_s0/carpet] epoch 400: loss=0.3492 AUROC=0.7468 AP=0.8976
+  [mobileone_s0/carpet] epoch 450: loss=0.3479 AUROC=0.7476 AP=0.8987
+  [mobileone_s0/carpet] epoch 500: loss=0.3468 AUROC=0.7552 AP=0.9022
+[06:12:39]   [  45/210] s42 carpet      mobileone_s0                   AUROC=0.7552 (8.1 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/carpet] epoch 50: loss=1.0691 AUROC=0.8146 AP=0.9286
+  [convnext_tiny/carpet] epoch 100: loss=0.3609 AUROC=0.7929 AP=0.9231
+  [convnext_tiny/carpet] epoch 150: loss=0.3597 AUROC=0.7970 AP=0.9249
+  [convnext_tiny/carpet] epoch 200: loss=0.3583 AUROC=0.7986 AP=0.9260
+  [convnext_tiny/carpet] epoch 250: loss=0.3575 AUROC=0.8078 AP=0.9299
+  [convnext_tiny/carpet] epoch 300: loss=0.3576 AUROC=0.8102 AP=0.9309
+  [convnext_tiny/carpet] epoch 350: loss=0.3578 AUROC=0.8090 AP=0.9301
+  [convnext_tiny/carpet] epoch 400: loss=0.3580 AUROC=0.8018 AP=0.9268
+  [convnext_tiny/carpet] epoch 450: loss=0.3569 AUROC=0.7945 AP=0.9232
+  [convnext_tiny/carpet] epoch 500: loss=0.3564 AUROC=0.8106 AP=0.9308
+[06:26:01]   [  46/210] s42 carpet      convnext_tiny                  AUROC=0.8106 (13.4 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/carpet] epoch 50: loss=0.3649 AUROC=0.8202 AP=0.9340
+  [convnext_small/carpet] epoch 100: loss=0.3597 AUROC=0.7913 AP=0.9212
+  [convnext_small/carpet] epoch 150: loss=0.3604 AUROC=0.7917 AP=0.9210
+  [convnext_small/carpet] epoch 200: loss=0.3570 AUROC=0.7941 AP=0.9226
+  [convnext_small/carpet] epoch 250: loss=0.3615 AUROC=0.7953 AP=0.9233
+  [convnext_small/carpet] epoch 300: loss=0.3588 AUROC=0.8050 AP=0.9274
+  [convnext_small/carpet] epoch 350: loss=0.3588 AUROC=0.7957 AP=0.9231
+  [convnext_small/carpet] epoch 400: loss=0.3576 AUROC=0.7998 AP=0.9257
+  [convnext_small/carpet] epoch 450: loss=0.3560 AUROC=0.7925 AP=0.9216
+  [convnext_small/carpet] epoch 500: loss=0.3571 AUROC=0.8086 AP=0.9294
+[06:46:38]   [  47/210] s42 carpet      convnext_small                 AUROC=0.8086 (20.6 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/carpet] epoch 50: loss=0.3495 AUROC=0.6738 AP=0.8520
+  [vit_tiny_patch16_224/carpet] epoch 100: loss=0.3319 AUROC=0.8242 AP=0.9397
+  [vit_tiny_patch16_224/carpet] epoch 150: loss=0.2864 AUROC=0.6569 AP=0.8422
+  [vit_tiny_patch16_224/carpet] epoch 200: loss=0.2623 AUROC=0.6621 AP=0.8483
+  [vit_tiny_patch16_224/carpet] epoch 250: loss=0.2517 AUROC=0.6489 AP=0.8419
+  [vit_tiny_patch16_224/carpet] epoch 300: loss=0.2370 AUROC=0.6557 AP=0.8436
+  [vit_tiny_patch16_224/carpet] epoch 350: loss=0.2361 AUROC=0.6553 AP=0.8443
+  [vit_tiny_patch16_224/carpet] epoch 400: loss=0.2286 AUROC=0.6537 AP=0.8419
+  [vit_tiny_patch16_224/carpet] epoch 450: loss=0.2242 AUROC=0.6505 AP=0.8411
+  [vit_tiny_patch16_224/carpet] epoch 500: loss=0.2234 AUROC=0.6513 AP=0.8391
+[06:50:52]   [  48/210] s42 carpet      vit_tiny_patch16_224           AUROC=0.6513 (4.2 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/carpet] epoch 50: loss=0.4131 AUROC=0.7821 AP=0.9106
+  [deit_tiny_patch16_224/carpet] epoch 100: loss=0.3358 AUROC=0.8287 AP=0.9373
+  [deit_tiny_patch16_224/carpet] epoch 150: loss=0.3017 AUROC=0.7372 AP=0.8984
+  [deit_tiny_patch16_224/carpet] epoch 200: loss=0.2939 AUROC=0.8106 AP=0.9208
+  [deit_tiny_patch16_224/carpet] epoch 250: loss=0.2705 AUROC=0.6372 AP=0.8301
+  [deit_tiny_patch16_224/carpet] epoch 300: loss=0.2554 AUROC=0.6417 AP=0.8365
+  [deit_tiny_patch16_224/carpet] epoch 350: loss=0.2590 AUROC=0.6770 AP=0.8596
+  [deit_tiny_patch16_224/carpet] epoch 400: loss=0.2413 AUROC=0.6633 AP=0.8441
+  [deit_tiny_patch16_224/carpet] epoch 450: loss=0.2385 AUROC=0.6637 AP=0.8408
+  [deit_tiny_patch16_224/carpet] epoch 500: loss=0.2372 AUROC=0.6633 AP=0.8413
+[06:55:07]   [  49/210] s42 carpet      deit_tiny_patch16_224          AUROC=0.6633 (4.2 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/carpet] epoch 50: loss=0.3641 AUROC=0.7809 AP=0.9153
+  [swin_tiny_patch4_window7_224/carpet] epoch 100: loss=0.3929 AUROC=0.7833 AP=0.9173
+  [swin_tiny_patch4_window7_224/carpet] epoch 150: loss=0.3576 AUROC=0.7978 AP=0.9242
+  [swin_tiny_patch4_window7_224/carpet] epoch 200: loss=0.3579 AUROC=0.8018 AP=0.9264
+  [swin_tiny_patch4_window7_224/carpet] epoch 250: loss=0.3570 AUROC=0.8022 AP=0.9268
+  [swin_tiny_patch4_window7_224/carpet] epoch 300: loss=0.3569 AUROC=0.8090 AP=0.9297
+  [swin_tiny_patch4_window7_224/carpet] epoch 350: loss=0.3563 AUROC=0.8002 AP=0.9255
+  [swin_tiny_patch4_window7_224/carpet] epoch 400: loss=0.3563 AUROC=0.7941 AP=0.9225
+  [swin_tiny_patch4_window7_224/carpet] epoch 450: loss=0.3572 AUROC=0.7849 AP=0.9182
+  [swin_tiny_patch4_window7_224/carpet] epoch 500: loss=0.3556 AUROC=0.8006 AP=0.9260
+[07:05:22]   [  50/210] s42 carpet      swin_tiny_patch4_window7_224   AUROC=0.8006 (10.2 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/carpet] epoch 50: loss=0.3626 AUROC=0.7769 AP=0.9169
+  [efficientnet_b0/carpet] epoch 100: loss=0.3483 AUROC=0.7841 AP=0.9180
+  [efficientnet_b0/carpet] epoch 150: loss=0.3558 AUROC=0.7556 AP=0.9040
+  [efficientnet_b0/carpet] epoch 200: loss=0.3455 AUROC=0.7608 AP=0.9050
+  [efficientnet_b0/carpet] epoch 250: loss=0.3413 AUROC=0.7287 AP=0.8888
+  [efficientnet_b0/carpet] epoch 300: loss=0.3383 AUROC=0.7251 AP=0.8872
+  [efficientnet_b0/carpet] epoch 350: loss=0.3351 AUROC=0.7155 AP=0.8818
+  [efficientnet_b0/carpet] epoch 400: loss=0.3323 AUROC=0.7018 AP=0.8583
+  [efficientnet_b0/carpet] epoch 450: loss=0.3322 AUROC=0.7115 AP=0.8785
+  [efficientnet_b0/carpet] epoch 500: loss=0.3290 AUROC=0.7111 AP=0.8767
+[07:10:15]   [  51/210] s42 carpet      efficientnet_b0                AUROC=0.7111 (4.9 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/carpet] epoch 50: loss=0.3646 AUROC=0.7765 AP=0.9143
+  [efficientnet_b1/carpet] epoch 100: loss=0.3631 AUROC=0.7652 AP=0.9088
+  [efficientnet_b1/carpet] epoch 150: loss=0.3573 AUROC=0.7982 AP=0.9245
+  [efficientnet_b1/carpet] epoch 200: loss=0.3555 AUROC=0.7644 AP=0.9081
+  [efficientnet_b1/carpet] epoch 250: loss=0.3509 AUROC=0.7753 AP=0.9135
+  [efficientnet_b1/carpet] epoch 300: loss=0.3509 AUROC=0.7949 AP=0.9234
+  [efficientnet_b1/carpet] epoch 350: loss=0.3498 AUROC=0.7974 AP=0.9244
+  [efficientnet_b1/carpet] epoch 400: loss=0.3504 AUROC=0.7873 AP=0.9195
+  [efficientnet_b1/carpet] epoch 450: loss=0.3489 AUROC=0.7785 AP=0.9153
+  [efficientnet_b1/carpet] epoch 500: loss=0.3487 AUROC=0.8018 AP=0.9263
+[07:16:30]   [  52/210] s42 carpet      efficientnet_b1                AUROC=0.8018 (6.2 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/carpet] epoch 50: loss=0.3612 AUROC=0.8166 AP=0.9352
+  [mobilenetv3_small_100/carpet] epoch 100: loss=0.3454 AUROC=0.7785 AP=0.9161
+  [mobilenetv3_small_100/carpet] epoch 150: loss=0.3346 AUROC=0.7841 AP=0.9175
+  [mobilenetv3_small_100/carpet] epoch 200: loss=0.3222 AUROC=0.7596 AP=0.9044
+  [mobilenetv3_small_100/carpet] epoch 250: loss=0.3100 AUROC=0.7271 AP=0.8870
+  [mobilenetv3_small_100/carpet] epoch 300: loss=0.2981 AUROC=0.6990 AP=0.8692
+  [mobilenetv3_small_100/carpet] epoch 350: loss=0.2940 AUROC=0.7006 AP=0.8706
+  [mobilenetv3_small_100/carpet] epoch 400: loss=0.2879 AUROC=0.6946 AP=0.8668
+  [mobilenetv3_small_100/carpet] epoch 450: loss=0.2878 AUROC=0.6954 AP=0.8681
+  [mobilenetv3_small_100/carpet] epoch 500: loss=0.2886 AUROC=0.6862 AP=0.8603
+[07:19:04]   [  53/210] s42 carpet      mobilenetv3_small_100          AUROC=0.6862 (2.6 min, mb=64 x1, peak=2.2GB)
+  [resnet18/carpet] epoch 50: loss=0.3701 AUROC=0.7925 AP=0.9222
+  [resnet18/carpet] epoch 100: loss=0.3541 AUROC=0.8274 AP=0.9375
+  [resnet18/carpet] epoch 150: loss=0.3472 AUROC=0.8142 AP=0.9309
+  [resnet18/carpet] epoch 200: loss=0.3386 AUROC=0.7998 AP=0.9231
+  [resnet18/carpet] epoch 250: loss=0.3302 AUROC=0.8054 AP=0.9263
+  [resnet18/carpet] epoch 300: loss=0.3161 AUROC=0.8046 AP=0.9245
+  [resnet18/carpet] epoch 350: loss=0.3066 AUROC=0.8022 AP=0.9228
+  [resnet18/carpet] epoch 400: loss=0.2982 AUROC=0.8022 AP=0.9236
+  [resnet18/carpet] epoch 450: loss=0.2987 AUROC=0.7970 AP=0.9217
+  [resnet18/carpet] epoch 500: loss=0.3075 AUROC=0.8058 AP=0.9252
+[07:22:44]   [  54/210] s42 carpet      resnet18                       AUROC=0.8058 (3.7 min, mb=64 x1, peak=3.0GB)
+  [resnet34/carpet] epoch 50: loss=0.3609 AUROC=0.8022 AP=0.9258
+  [resnet34/carpet] epoch 100: loss=0.3522 AUROC=0.7765 AP=0.9145
+  [resnet34/carpet] epoch 150: loss=0.3468 AUROC=0.7809 AP=0.9158
+  [resnet34/carpet] epoch 200: loss=0.3395 AUROC=0.7524 AP=0.9012
+  [resnet34/carpet] epoch 250: loss=0.3355 AUROC=0.7512 AP=0.8986
+  [resnet34/carpet] epoch 300: loss=0.3221 AUROC=0.7584 AP=0.9028
+  [resnet34/carpet] epoch 350: loss=0.3057 AUROC=0.7620 AP=0.9051
+  [resnet34/carpet] epoch 400: loss=0.2987 AUROC=0.7669 AP=0.9068
+  [resnet34/carpet] epoch 450: loss=0.3010 AUROC=0.7661 AP=0.9064
+  [resnet34/carpet] epoch 500: loss=0.2977 AUROC=0.7709 AP=0.9079
+[07:27:48]   [  55/210] s42 carpet      resnet34                       AUROC=0.7709 (5.1 min, mb=64 x1, peak=4.1GB)
+  [resnet50/carpet] epoch 50: loss=0.3603 AUROC=0.7797 AP=0.9132
+  [resnet50/carpet] epoch 100: loss=0.3577 AUROC=0.7600 AP=0.9034
+  [resnet50/carpet] epoch 150: loss=0.3476 AUROC=0.7524 AP=0.9005
+  [resnet50/carpet] epoch 200: loss=0.3395 AUROC=0.7612 AP=0.9042
+  [resnet50/carpet] epoch 250: loss=0.3297 AUROC=0.7604 AP=0.9040
+  [resnet50/carpet] epoch 300: loss=0.3146 AUROC=0.7681 AP=0.9060
+  [resnet50/carpet] epoch 350: loss=0.3142 AUROC=0.7733 AP=0.9104
+  [resnet50/carpet] epoch 400: loss=0.3041 AUROC=0.7817 AP=0.9152
+  [resnet50/carpet] epoch 450: loss=0.3022 AUROC=0.7608 AP=0.9036
+  [resnet50/carpet] epoch 500: loss=0.2938 AUROC=0.7777 AP=0.9126
+[07:35:05]   [  56/210] s42 carpet      resnet50                       AUROC=0.7777 (7.3 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/grid] epoch 50: loss=0.3920 AUROC=0.5564 AP=0.7582
+  [convnextv2_tiny/grid] epoch 100: loss=0.3888 AUROC=0.5388 AP=0.7326
+  [convnextv2_tiny/grid] epoch 150: loss=0.3856 AUROC=0.5347 AP=0.7466
+  [convnextv2_tiny/grid] epoch 200: loss=0.3759 AUROC=0.5489 AP=0.7461
+  [convnextv2_tiny/grid] epoch 250: loss=0.3808 AUROC=0.5305 AP=0.7338
+  [convnextv2_tiny/grid] epoch 300: loss=0.3814 AUROC=0.5380 AP=0.7363
+  [convnextv2_tiny/grid] epoch 350: loss=0.3857 AUROC=0.5806 AP=0.7622
+  [convnextv2_tiny/grid] epoch 400: loss=0.3585 AUROC=0.5840 AP=0.7581
+  [convnextv2_tiny/grid] epoch 450: loss=0.3623 AUROC=0.6132 AP=0.7833
+  [convnextv2_tiny/grid] epoch 500: loss=0.3604 AUROC=0.6007 AP=0.7786
+[07:51:02]   [  57/210] s42 grid        convnextv2_tiny                AUROC=0.6007 (15.9 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/grid] epoch 50: loss=0.3914 AUROC=0.5439 AP=0.7474
+  [convnextv2_base/grid] epoch 100: loss=0.3878 AUROC=0.5556 AP=0.7511
+  [convnextv2_base/grid] epoch 150: loss=0.3794 AUROC=0.5430 AP=0.7457
+  [convnextv2_base/grid] epoch 200: loss=0.3716 AUROC=0.5581 AP=0.7500
+  [convnextv2_base/grid] epoch 250: loss=0.3827 AUROC=0.5480 AP=0.7453
+  [convnextv2_base/grid] epoch 300: loss=0.3804 AUROC=0.5430 AP=0.7382
+  [convnextv2_base/grid] epoch 350: loss=0.3799 AUROC=0.5539 AP=0.7493
+  [convnextv2_base/grid] epoch 400: loss=0.3753 AUROC=0.5505 AP=0.7483
+  [convnextv2_base/grid] epoch 450: loss=0.3792 AUROC=0.5547 AP=0.7427
+  [convnextv2_base/grid] epoch 500: loss=0.3812 AUROC=0.5547 AP=0.7475
+[08:26:13]   [  58/210] s42 grid        convnextv2_base                AUROC=0.5547 (35.2 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/grid] epoch 50: loss=0.3553 AUROC=0.4820 AP=0.7116
+  [mobileone_s0/grid] epoch 100: loss=0.3496 AUROC=0.5497 AP=0.7448
+  [mobileone_s0/grid] epoch 150: loss=0.3340 AUROC=0.5489 AP=0.7448
+  [mobileone_s0/grid] epoch 200: loss=0.1798 AUROC=0.5272 AP=0.7542
+  [mobileone_s0/grid] epoch 250: loss=0.1350 AUROC=0.5505 AP=0.7591
+  [mobileone_s0/grid] epoch 300: loss=0.1623 AUROC=0.5196 AP=0.7440
+  [mobileone_s0/grid] epoch 350: loss=0.1174 AUROC=0.5689 AP=0.7865
+  [mobileone_s0/grid] epoch 400: loss=0.1271 AUROC=0.5831 AP=0.7927
+  [mobileone_s0/grid] epoch 450: loss=0.1214 AUROC=0.5906 AP=0.8080
+  [mobileone_s0/grid] epoch 500: loss=0.1226 AUROC=0.6057 AP=0.8145
+[08:34:16]   [  59/210] s42 grid        mobileone_s0                   AUROC=0.6057 (8.1 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/grid] epoch 50: loss=0.4053 AUROC=0.5455 AP=0.7386
+  [convnext_tiny/grid] epoch 100: loss=0.3494 AUROC=0.5263 AP=0.7346
+  [convnext_tiny/grid] epoch 150: loss=0.3438 AUROC=0.5388 AP=0.7446
+  [convnext_tiny/grid] epoch 200: loss=0.3538 AUROC=0.5798 AP=0.7657
+  [convnext_tiny/grid] epoch 250: loss=0.3141 AUROC=0.4937 AP=0.7016
+  [convnext_tiny/grid] epoch 300: loss=0.1464 AUROC=0.4503 AP=0.6875
+  [convnext_tiny/grid] epoch 350: loss=0.1329 AUROC=0.5046 AP=0.7260
+  [convnext_tiny/grid] epoch 400: loss=0.1172 AUROC=0.4954 AP=0.7091
+  [convnext_tiny/grid] epoch 450: loss=0.1170 AUROC=0.5071 AP=0.7369
+  [convnext_tiny/grid] epoch 500: loss=0.1194 AUROC=0.5104 AP=0.7372
+[08:47:03]   [  60/210] s42 grid        convnext_tiny                  AUROC=0.5104 (12.8 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/grid] epoch 50: loss=0.3873 AUROC=0.5472 AP=0.7363
+  [convnext_small/grid] epoch 100: loss=0.3891 AUROC=0.5781 AP=0.7589
+  [convnext_small/grid] epoch 150: loss=0.3797 AUROC=0.5297 AP=0.7347
+  [convnext_small/grid] epoch 200: loss=0.3796 AUROC=0.5129 AP=0.7259
+  [convnext_small/grid] epoch 250: loss=0.3769 AUROC=0.5706 AP=0.7565
+  [convnext_small/grid] epoch 300: loss=0.3769 AUROC=0.5522 AP=0.7963
+  [convnext_small/grid] epoch 350: loss=0.3518 AUROC=0.5530 AP=0.7621
+  [convnext_small/grid] epoch 400: loss=0.3486 AUROC=0.5497 AP=0.7443
+  [convnext_small/grid] epoch 450: loss=0.3602 AUROC=0.5422 AP=0.7393
+  [convnext_small/grid] epoch 500: loss=0.3400 AUROC=0.5581 AP=0.7611
+[09:06:46]   [  61/210] s42 grid        convnext_small                 AUROC=0.5581 (19.7 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/grid] epoch 50: loss=0.3198 AUROC=0.4461 AP=0.7231
+  [vit_tiny_patch16_224/grid] epoch 100: loss=0.2055 AUROC=0.6257 AP=0.8452
+  [vit_tiny_patch16_224/grid] epoch 150: loss=0.1994 AUROC=0.4745 AP=0.7383
+  [vit_tiny_patch16_224/grid] epoch 200: loss=0.1489 AUROC=0.4862 AP=0.7170
+  [vit_tiny_patch16_224/grid] epoch 250: loss=0.1198 AUROC=0.4787 AP=0.7379
+  [vit_tiny_patch16_224/grid] epoch 300: loss=0.1101 AUROC=0.5238 AP=0.7475
+  [vit_tiny_patch16_224/grid] epoch 350: loss=0.1137 AUROC=0.5990 AP=0.7913
+  [vit_tiny_patch16_224/grid] epoch 400: loss=0.1071 AUROC=0.6207 AP=0.8069
+  [vit_tiny_patch16_224/grid] epoch 450: loss=0.1080 AUROC=0.6136 AP=0.8135
+  [vit_tiny_patch16_224/grid] epoch 500: loss=0.1049 AUROC=0.6040 AP=0.8040
+[09:10:50]   [  62/210] s42 grid        vit_tiny_patch16_224           AUROC=0.6040 (4.1 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/grid] epoch 50: loss=0.1752 AUROC=0.4336 AP=0.6663
+  [deit_tiny_patch16_224/grid] epoch 100: loss=0.1452 AUROC=0.5280 AP=0.7239
+  [deit_tiny_patch16_224/grid] epoch 150: loss=0.1238 AUROC=0.6032 AP=0.8216
+  [deit_tiny_patch16_224/grid] epoch 200: loss=0.1236 AUROC=0.5589 AP=0.7971
+  [deit_tiny_patch16_224/grid] epoch 250: loss=0.0936 AUROC=0.6082 AP=0.8197
+  [deit_tiny_patch16_224/grid] epoch 300: loss=0.0881 AUROC=0.6241 AP=0.8249
+  [deit_tiny_patch16_224/grid] epoch 350: loss=0.0956 AUROC=0.6541 AP=0.8406
+  [deit_tiny_patch16_224/grid] epoch 400: loss=0.0925 AUROC=0.6591 AP=0.8457
+  [deit_tiny_patch16_224/grid] epoch 450: loss=0.0948 AUROC=0.6575 AP=0.8477
+  [deit_tiny_patch16_224/grid] epoch 500: loss=0.0911 AUROC=0.6550 AP=0.8447
+[09:14:56]   [  63/210] s42 grid        deit_tiny_patch16_224          AUROC=0.6550 (4.1 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/grid] epoch 50: loss=0.3845 AUROC=0.5447 AP=0.7490
+  [swin_tiny_patch4_window7_224/grid] epoch 100: loss=0.3826 AUROC=0.5121 AP=0.7274
+  [swin_tiny_patch4_window7_224/grid] epoch 150: loss=0.4054 AUROC=0.5597 AP=0.7494
+  [swin_tiny_patch4_window7_224/grid] epoch 200: loss=0.3796 AUROC=0.5581 AP=0.7564
+  [swin_tiny_patch4_window7_224/grid] epoch 250: loss=0.3808 AUROC=0.5113 AP=0.7264
+  [swin_tiny_patch4_window7_224/grid] epoch 300: loss=0.3810 AUROC=0.5489 AP=0.7417
+  [swin_tiny_patch4_window7_224/grid] epoch 350: loss=0.3821 AUROC=0.5631 AP=0.7562
+  [swin_tiny_patch4_window7_224/grid] epoch 400: loss=0.3864 AUROC=0.5522 AP=0.7395
+  [swin_tiny_patch4_window7_224/grid] epoch 450: loss=0.3869 AUROC=0.5723 AP=0.7558
+  [swin_tiny_patch4_window7_224/grid] epoch 500: loss=0.3879 AUROC=0.5597 AP=0.7494
+[09:24:43]   [  64/210] s42 grid        swin_tiny_patch4_window7_224   AUROC=0.5597 (9.8 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/grid] epoch 50: loss=0.3419 AUROC=0.6124 AP=0.7868
+  [efficientnet_b0/grid] epoch 100: loss=0.3504 AUROC=0.6475 AP=0.8083
+  [efficientnet_b0/grid] epoch 150: loss=0.3353 AUROC=0.6449 AP=0.8065
+  [efficientnet_b0/grid] epoch 200: loss=0.3346 AUROC=0.6383 AP=0.8160
+  [efficientnet_b0/grid] epoch 250: loss=0.3324 AUROC=0.6675 AP=0.8264
+  [efficientnet_b0/grid] epoch 300: loss=0.2985 AUROC=0.5380 AP=0.7855
+  [efficientnet_b0/grid] epoch 350: loss=0.1679 AUROC=0.5606 AP=0.7660
+  [efficientnet_b0/grid] epoch 400: loss=0.1504 AUROC=0.6048 AP=0.7915
+  [efficientnet_b0/grid] epoch 450: loss=0.1354 AUROC=0.6157 AP=0.7998
+  [efficientnet_b0/grid] epoch 500: loss=0.1408 AUROC=0.6366 AP=0.8167
+[09:29:29]   [  65/210] s42 grid        efficientnet_b0                AUROC=0.6366 (4.8 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/grid] epoch 50: loss=0.3834 AUROC=0.4419 AP=0.6667
+  [efficientnet_b1/grid] epoch 100: loss=0.3519 AUROC=0.5723 AP=0.7476
+  [efficientnet_b1/grid] epoch 150: loss=0.3328 AUROC=0.6099 AP=0.7867
+  [efficientnet_b1/grid] epoch 200: loss=0.3392 AUROC=0.6475 AP=0.8181
+  [efficientnet_b1/grid] epoch 250: loss=0.3607 AUROC=0.5205 AP=0.7239
+  [efficientnet_b1/grid] epoch 300: loss=0.2985 AUROC=0.4921 AP=0.7293
+  [efficientnet_b1/grid] epoch 350: loss=0.1682 AUROC=0.5313 AP=0.7404
+  [efficientnet_b1/grid] epoch 400: loss=0.1343 AUROC=0.5322 AP=0.7472
+  [efficientnet_b1/grid] epoch 450: loss=0.1316 AUROC=0.5464 AP=0.7593
+  [efficientnet_b1/grid] epoch 500: loss=0.1378 AUROC=0.5221 AP=0.7424
+[09:35:35]   [  66/210] s42 grid        efficientnet_b1                AUROC=0.5221 (6.1 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/grid] epoch 50: loss=0.3603 AUROC=0.5773 AP=0.7613
+  [mobilenetv3_small_100/grid] epoch 100: loss=0.3386 AUROC=0.6057 AP=0.7742
+  [mobilenetv3_small_100/grid] epoch 150: loss=0.3401 AUROC=0.6216 AP=0.7950
+  [mobilenetv3_small_100/grid] epoch 200: loss=0.2262 AUROC=0.5606 AP=0.7582
+  [mobilenetv3_small_100/grid] epoch 250: loss=0.1424 AUROC=0.5581 AP=0.7655
+  [mobilenetv3_small_100/grid] epoch 300: loss=0.1441 AUROC=0.5589 AP=0.7599
+  [mobilenetv3_small_100/grid] epoch 350: loss=0.1566 AUROC=0.5748 AP=0.7869
+  [mobilenetv3_small_100/grid] epoch 400: loss=0.1221 AUROC=0.6190 AP=0.8129
+  [mobilenetv3_small_100/grid] epoch 450: loss=0.1056 AUROC=0.5714 AP=0.7788
+  [mobilenetv3_small_100/grid] epoch 500: loss=0.1082 AUROC=0.5890 AP=0.7920
+[09:38:04]   [  67/210] s42 grid        mobilenetv3_small_100          AUROC=0.5890 (2.5 min, mb=64 x1, peak=2.2GB)
+  [resnet18/grid] epoch 50: loss=0.3543 AUROC=0.5764 AP=0.7669
+  [resnet18/grid] epoch 100: loss=0.3457 AUROC=0.5906 AP=0.7777
+  [resnet18/grid] epoch 150: loss=0.1967 AUROC=0.4637 AP=0.6807
+  [resnet18/grid] epoch 200: loss=0.1806 AUROC=0.5063 AP=0.7164
+  [resnet18/grid] epoch 250: loss=0.1572 AUROC=0.5572 AP=0.7793
+  [resnet18/grid] epoch 300: loss=0.1329 AUROC=0.6132 AP=0.8110
+  [resnet18/grid] epoch 350: loss=0.1021 AUROC=0.6007 AP=0.8081
+  [resnet18/grid] epoch 400: loss=0.1079 AUROC=0.6132 AP=0.8132
+  [resnet18/grid] epoch 450: loss=0.0989 AUROC=0.6107 AP=0.8174
+  [resnet18/grid] epoch 500: loss=0.1048 AUROC=0.6023 AP=0.8143
+[09:41:31]   [  68/210] s42 grid        resnet18                       AUROC=0.6023 (3.5 min, mb=64 x1, peak=3.0GB)
+  [resnet34/grid] epoch 50: loss=0.3435 AUROC=0.5597 AP=0.7369
+  [resnet34/grid] epoch 100: loss=0.3540 AUROC=0.6174 AP=0.7874
+  [resnet34/grid] epoch 150: loss=0.3413 AUROC=0.5647 AP=0.7592
+  [resnet34/grid] epoch 200: loss=0.1843 AUROC=0.4854 AP=0.7093
+  [resnet34/grid] epoch 250: loss=0.1359 AUROC=0.4971 AP=0.7289
+  [resnet34/grid] epoch 300: loss=0.1314 AUROC=0.5539 AP=0.7808
+  [resnet34/grid] epoch 350: loss=0.1295 AUROC=0.5363 AP=0.7616
+  [resnet34/grid] epoch 400: loss=0.1327 AUROC=0.5631 AP=0.7896
+  [resnet34/grid] epoch 450: loss=0.1370 AUROC=0.5547 AP=0.7812
+  [resnet34/grid] epoch 500: loss=0.1014 AUROC=0.5798 AP=0.7992
+[09:46:21]   [  69/210] s42 grid        resnet34                       AUROC=0.5798 (4.8 min, mb=64 x1, peak=4.1GB)
+  [resnet50/grid] epoch 50: loss=0.3597 AUROC=0.5472 AP=0.7350
+  [resnet50/grid] epoch 100: loss=0.3374 AUROC=0.6274 AP=0.7882
+  [resnet50/grid] epoch 150: loss=0.2940 AUROC=0.5522 AP=0.7488
+  [resnet50/grid] epoch 200: loss=0.1704 AUROC=0.4561 AP=0.6815
+  [resnet50/grid] epoch 250: loss=0.1318 AUROC=0.5230 AP=0.7236
+  [resnet50/grid] epoch 300: loss=0.1445 AUROC=0.4904 AP=0.7078
+  [resnet50/grid] epoch 350: loss=0.1215 AUROC=0.5121 AP=0.7286
+  [resnet50/grid] epoch 400: loss=0.1067 AUROC=0.5614 AP=0.7606
+  [resnet50/grid] epoch 450: loss=0.1160 AUROC=0.5430 AP=0.7431
+  [resnet50/grid] epoch 500: loss=0.1101 AUROC=0.5848 AP=0.7672
+[09:53:01]   [  70/210] s42 grid        resnet50                       AUROC=0.5848 (6.7 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/hazelnut] epoch 50: loss=0.1773 AUROC=0.9025 AP=0.9517
+  [convnextv2_tiny/hazelnut] epoch 100: loss=0.1617 AUROC=0.8929 AP=0.9470
+  [convnextv2_tiny/hazelnut] epoch 150: loss=0.1478 AUROC=0.9029 AP=0.9486
+  [convnextv2_tiny/hazelnut] epoch 200: loss=0.1343 AUROC=0.6700 AP=0.8189
+  [convnextv2_tiny/hazelnut] epoch 250: loss=0.1309 AUROC=0.8118 AP=0.8973
+  [convnextv2_tiny/hazelnut] epoch 300: loss=0.1245 AUROC=0.8271 AP=0.9049
+  [convnextv2_tiny/hazelnut] epoch 350: loss=0.1216 AUROC=0.8407 AP=0.9139
+  [convnextv2_tiny/hazelnut] epoch 400: loss=0.1216 AUROC=0.8693 AP=0.9274
+  [convnextv2_tiny/hazelnut] epoch 450: loss=0.1275 AUROC=0.9264 AP=0.9597
+  [convnextv2_tiny/hazelnut] epoch 500: loss=0.1205 AUROC=0.9471 AP=0.9708
+[10:16:54]   [  71/210] s42 hazelnut    convnextv2_tiny                AUROC=0.9471 (23.9 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/hazelnut] epoch 50: loss=0.1750 AUROC=0.9364 AP=0.9661
+  [convnextv2_base/hazelnut] epoch 100: loss=0.1728 AUROC=0.8711 AP=0.9380
+  [convnextv2_base/hazelnut] epoch 150: loss=0.1660 AUROC=0.9439 AP=0.9705
+  [convnextv2_base/hazelnut] epoch 200: loss=0.1460 AUROC=0.9225 AP=0.9598
+  [convnextv2_base/hazelnut] epoch 250: loss=0.1263 AUROC=0.9482 AP=0.9719
+  [convnextv2_base/hazelnut] epoch 300: loss=0.1262 AUROC=0.9568 AP=0.9765
+  [convnextv2_base/hazelnut] epoch 350: loss=0.1158 AUROC=0.9593 AP=0.9778
+  [convnextv2_base/hazelnut] epoch 400: loss=0.1240 AUROC=0.9600 AP=0.9782
+  [convnextv2_base/hazelnut] epoch 450: loss=0.1209 AUROC=0.9625 AP=0.9797
+  [convnextv2_base/hazelnut] epoch 500: loss=0.1193 AUROC=0.9618 AP=0.9793
+[11:10:05]   [  72/210] s42 hazelnut    convnextv2_base                AUROC=0.9618 (53.2 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/hazelnut] epoch 50: loss=0.1466 AUROC=0.9275 AP=0.9574
+  [mobileone_s0/hazelnut] epoch 100: loss=0.1343 AUROC=0.9225 AP=0.9556
+  [mobileone_s0/hazelnut] epoch 150: loss=0.1262 AUROC=0.9293 AP=0.9597
+  [mobileone_s0/hazelnut] epoch 200: loss=0.1197 AUROC=0.9429 AP=0.9660
+  [mobileone_s0/hazelnut] epoch 250: loss=0.1222 AUROC=0.9614 AP=0.9784
+  [mobileone_s0/hazelnut] epoch 300: loss=0.1183 AUROC=0.9604 AP=0.9784
+  [mobileone_s0/hazelnut] epoch 350: loss=0.1092 AUROC=0.9643 AP=0.9803
+  [mobileone_s0/hazelnut] epoch 400: loss=0.1219 AUROC=0.9671 AP=0.9819
+  [mobileone_s0/hazelnut] epoch 450: loss=0.1159 AUROC=0.9671 AP=0.9818
+  [mobileone_s0/hazelnut] epoch 500: loss=0.1135 AUROC=0.9682 AP=0.9824
+[11:22:04]   [  73/210] s42 hazelnut    mobileone_s0                   AUROC=0.9682 (12.0 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/hazelnut] epoch 50: loss=0.1598 AUROC=0.9146 AP=0.9569
+  [convnext_tiny/hazelnut] epoch 100: loss=0.1422 AUROC=0.9329 AP=0.9643
+  [convnext_tiny/hazelnut] epoch 150: loss=0.1325 AUROC=0.9457 AP=0.9704
+  [convnext_tiny/hazelnut] epoch 200: loss=0.1277 AUROC=0.9654 AP=0.9808
+  [convnext_tiny/hazelnut] epoch 250: loss=0.1213 AUROC=0.9629 AP=0.9798
+  [convnext_tiny/hazelnut] epoch 300: loss=0.1146 AUROC=0.9671 AP=0.9824
+  [convnext_tiny/hazelnut] epoch 350: loss=0.1099 AUROC=0.9664 AP=0.9820
+  [convnext_tiny/hazelnut] epoch 400: loss=0.1083 AUROC=0.9650 AP=0.9813
+  [convnext_tiny/hazelnut] epoch 450: loss=0.1115 AUROC=0.9639 AP=0.9806
+  [convnext_tiny/hazelnut] epoch 500: loss=0.1043 AUROC=0.9636 AP=0.9805
+[11:41:24]   [  74/210] s42 hazelnut    convnext_tiny                  AUROC=0.9636 (19.3 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/hazelnut] epoch 50: loss=0.1595 AUROC=0.9246 AP=0.9615
+  [convnext_small/hazelnut] epoch 100: loss=0.1327 AUROC=0.9439 AP=0.9695
+  [convnext_small/hazelnut] epoch 150: loss=0.1268 AUROC=0.9539 AP=0.9742
+  [convnext_small/hazelnut] epoch 200: loss=0.1147 AUROC=0.9614 AP=0.9788
+  [convnext_small/hazelnut] epoch 250: loss=0.1197 AUROC=0.9643 AP=0.9806
+  [convnext_small/hazelnut] epoch 300: loss=0.1054 AUROC=0.9639 AP=0.9806
+  [convnext_small/hazelnut] epoch 350: loss=0.1066 AUROC=0.9689 AP=0.9829
+  [convnext_small/hazelnut] epoch 400: loss=0.1048 AUROC=0.9657 AP=0.9811
+  [convnext_small/hazelnut] epoch 450: loss=0.1018 AUROC=0.9657 AP=0.9811
+  [convnext_small/hazelnut] epoch 500: loss=0.1044 AUROC=0.9661 AP=0.9814
+[12:11:48]   [  75/210] s42 hazelnut    convnext_small                 AUROC=0.9661 (30.4 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/hazelnut] epoch 50: loss=0.1504 AUROC=0.9475 AP=0.9718
+  [vit_tiny_patch16_224/hazelnut] epoch 100: loss=0.1295 AUROC=0.9532 AP=0.9754
+  [vit_tiny_patch16_224/hazelnut] epoch 150: loss=0.1210 AUROC=0.9539 AP=0.9746
+  [vit_tiny_patch16_224/hazelnut] epoch 200: loss=0.1138 AUROC=0.9611 AP=0.9785
+  [vit_tiny_patch16_224/hazelnut] epoch 250: loss=0.1103 AUROC=0.9593 AP=0.9775
+  [vit_tiny_patch16_224/hazelnut] epoch 300: loss=0.1080 AUROC=0.9611 AP=0.9786
+  [vit_tiny_patch16_224/hazelnut] epoch 350: loss=0.1097 AUROC=0.9664 AP=0.9814
+  [vit_tiny_patch16_224/hazelnut] epoch 400: loss=0.1034 AUROC=0.9632 AP=0.9799
+  [vit_tiny_patch16_224/hazelnut] epoch 450: loss=0.1029 AUROC=0.9618 AP=0.9790
+  [vit_tiny_patch16_224/hazelnut] epoch 500: loss=0.1004 AUROC=0.9621 AP=0.9792
+[12:17:56]   [  76/210] s42 hazelnut    vit_tiny_patch16_224           AUROC=0.9621 (6.1 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/hazelnut] epoch 50: loss=0.1450 AUROC=0.9461 AP=0.9712
+  [deit_tiny_patch16_224/hazelnut] epoch 100: loss=0.1288 AUROC=0.9493 AP=0.9726
+  [deit_tiny_patch16_224/hazelnut] epoch 150: loss=0.1197 AUROC=0.9600 AP=0.9781
+  [deit_tiny_patch16_224/hazelnut] epoch 200: loss=0.1117 AUROC=0.9639 AP=0.9801
+  [deit_tiny_patch16_224/hazelnut] epoch 250: loss=0.1043 AUROC=0.9604 AP=0.9780
+  [deit_tiny_patch16_224/hazelnut] epoch 300: loss=0.1043 AUROC=0.9600 AP=0.9777
+  [deit_tiny_patch16_224/hazelnut] epoch 350: loss=0.1073 AUROC=0.9668 AP=0.9816
+  [deit_tiny_patch16_224/hazelnut] epoch 400: loss=0.1005 AUROC=0.9639 AP=0.9803
+  [deit_tiny_patch16_224/hazelnut] epoch 450: loss=0.0996 AUROC=0.9639 AP=0.9803
+  [deit_tiny_patch16_224/hazelnut] epoch 500: loss=0.0979 AUROC=0.9636 AP=0.9801
+[12:24:03]   [  77/210] s42 hazelnut    deit_tiny_patch16_224          AUROC=0.9636 (6.1 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 50: loss=0.1654 AUROC=0.9232 AP=0.9600
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 100: loss=0.1469 AUROC=0.9232 AP=0.9601
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 150: loss=0.1382 AUROC=0.9289 AP=0.9618
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 200: loss=0.1301 AUROC=0.9389 AP=0.9665
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 250: loss=0.1335 AUROC=0.9482 AP=0.9713
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 300: loss=0.1331 AUROC=0.9504 AP=0.9725
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 350: loss=0.1174 AUROC=0.9511 AP=0.9728
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 400: loss=0.1257 AUROC=0.9550 AP=0.9750
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 450: loss=0.1206 AUROC=0.9546 AP=0.9748
+  [swin_tiny_patch4_window7_224/hazelnut] epoch 500: loss=0.1188 AUROC=0.9554 AP=0.9752
+[12:38:45]   [  78/210] s42 hazelnut    swin_tiny_patch4_window7_224   AUROC=0.9554 (14.7 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/hazelnut] epoch 50: loss=0.1471 AUROC=0.9218 AP=0.9547
+  [efficientnet_b0/hazelnut] epoch 100: loss=0.1359 AUROC=0.9546 AP=0.9747
+  [efficientnet_b0/hazelnut] epoch 150: loss=0.1243 AUROC=0.9457 AP=0.9645
+  [efficientnet_b0/hazelnut] epoch 200: loss=0.1247 AUROC=0.9639 AP=0.9799
+  [efficientnet_b0/hazelnut] epoch 250: loss=0.1182 AUROC=0.9632 AP=0.9800
+  [efficientnet_b0/hazelnut] epoch 300: loss=0.1183 AUROC=0.9654 AP=0.9809
+  [efficientnet_b0/hazelnut] epoch 350: loss=0.1141 AUROC=0.9661 AP=0.9814
+  [efficientnet_b0/hazelnut] epoch 400: loss=0.1145 AUROC=0.9668 AP=0.9815
+  [efficientnet_b0/hazelnut] epoch 450: loss=0.1178 AUROC=0.9679 AP=0.9822
+  [efficientnet_b0/hazelnut] epoch 500: loss=0.1158 AUROC=0.9682 AP=0.9824
+[12:45:51]   [  79/210] s42 hazelnut    efficientnet_b0                AUROC=0.9682 (7.1 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/hazelnut] epoch 50: loss=0.1551 AUROC=0.9414 AP=0.9689
+  [efficientnet_b1/hazelnut] epoch 100: loss=0.1381 AUROC=0.9496 AP=0.9727
+  [efficientnet_b1/hazelnut] epoch 150: loss=0.1336 AUROC=0.9604 AP=0.9781
+  [efficientnet_b1/hazelnut] epoch 200: loss=0.1245 AUROC=0.9675 AP=0.9823
+  [efficientnet_b1/hazelnut] epoch 250: loss=0.1174 AUROC=0.9686 AP=0.9829
+  [efficientnet_b1/hazelnut] epoch 300: loss=0.1146 AUROC=0.9429 AP=0.9597
+  [efficientnet_b1/hazelnut] epoch 350: loss=0.1188 AUROC=0.9732 AP=0.9857
+  [efficientnet_b1/hazelnut] epoch 400: loss=0.1169 AUROC=0.9750 AP=0.9867
+  [efficientnet_b1/hazelnut] epoch 450: loss=0.1106 AUROC=0.9714 AP=0.9848
+  [efficientnet_b1/hazelnut] epoch 500: loss=0.1132 AUROC=0.9736 AP=0.9860
+[12:54:57]   [  80/210] s42 hazelnut    efficientnet_b1                AUROC=0.9736 (9.1 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/hazelnut] epoch 50: loss=0.1539 AUROC=0.9300 AP=0.9615
+  [mobilenetv3_small_100/hazelnut] epoch 100: loss=0.1334 AUROC=0.9396 AP=0.9661
+  [mobilenetv3_small_100/hazelnut] epoch 150: loss=0.1359 AUROC=0.4668 AP=0.6547
+  [mobilenetv3_small_100/hazelnut] epoch 200: loss=0.1308 AUROC=0.9579 AP=0.9762
+  [mobilenetv3_small_100/hazelnut] epoch 250: loss=0.1210 AUROC=0.9650 AP=0.9807
+  [mobilenetv3_small_100/hazelnut] epoch 300: loss=0.1199 AUROC=0.9650 AP=0.9807
+  [mobilenetv3_small_100/hazelnut] epoch 350: loss=0.1169 AUROC=0.9639 AP=0.9799
+  [mobilenetv3_small_100/hazelnut] epoch 400: loss=0.1189 AUROC=0.9654 AP=0.9808
+  [mobilenetv3_small_100/hazelnut] epoch 450: loss=0.1178 AUROC=0.9661 AP=0.9812
+  [mobilenetv3_small_100/hazelnut] epoch 500: loss=0.1153 AUROC=0.9661 AP=0.9813
+[12:58:38]   [  81/210] s42 hazelnut    mobilenetv3_small_100          AUROC=0.9661 (3.7 min, mb=64 x1, peak=2.2GB)
+  [resnet18/hazelnut] epoch 50: loss=0.1511 AUROC=0.9371 AP=0.9641
+  [resnet18/hazelnut] epoch 100: loss=0.1322 AUROC=0.9525 AP=0.9734
+  [resnet18/hazelnut] epoch 150: loss=0.1288 AUROC=0.9596 AP=0.9777
+  [resnet18/hazelnut] epoch 200: loss=0.1236 AUROC=0.9629 AP=0.9796
+  [resnet18/hazelnut] epoch 250: loss=0.1203 AUROC=0.9686 AP=0.9824
+  [resnet18/hazelnut] epoch 300: loss=0.1175 AUROC=0.9646 AP=0.9806
+  [resnet18/hazelnut] epoch 350: loss=0.1172 AUROC=0.9654 AP=0.9809
+  [resnet18/hazelnut] epoch 400: loss=0.1208 AUROC=0.9696 AP=0.9832
+  [resnet18/hazelnut] epoch 450: loss=0.1169 AUROC=0.9671 AP=0.9819
+  [resnet18/hazelnut] epoch 500: loss=0.1141 AUROC=0.9693 AP=0.9830
+[13:03:50]   [  82/210] s42 hazelnut    resnet18                       AUROC=0.9693 (5.2 min, mb=64 x1, peak=3.0GB)
+  [resnet34/hazelnut] epoch 50: loss=0.1466 AUROC=0.9375 AP=0.9665
+  [resnet34/hazelnut] epoch 100: loss=0.1322 AUROC=0.9629 AP=0.9795
+  [resnet34/hazelnut] epoch 150: loss=0.1226 AUROC=0.9629 AP=0.9796
+  [resnet34/hazelnut] epoch 200: loss=0.1215 AUROC=0.9629 AP=0.9796
+  [resnet34/hazelnut] epoch 250: loss=0.1183 AUROC=0.9639 AP=0.9802
+  [resnet34/hazelnut] epoch 300: loss=0.1219 AUROC=0.9643 AP=0.9806
+  [resnet34/hazelnut] epoch 350: loss=0.1087 AUROC=0.9671 AP=0.9821
+  [resnet34/hazelnut] epoch 400: loss=0.1126 AUROC=0.9664 AP=0.9818
+  [resnet34/hazelnut] epoch 450: loss=0.1131 AUROC=0.9671 AP=0.9822
+  [resnet34/hazelnut] epoch 500: loss=0.1167 AUROC=0.9679 AP=0.9826
+[13:11:04]   [  83/210] s42 hazelnut    resnet34                       AUROC=0.9679 (7.2 min, mb=64 x1, peak=4.1GB)
+  [resnet50/hazelnut] epoch 50: loss=0.1520 AUROC=0.9382 AP=0.9672
+  [resnet50/hazelnut] epoch 100: loss=0.1300 AUROC=0.9496 AP=0.9726
+  [resnet50/hazelnut] epoch 150: loss=0.1281 AUROC=0.9575 AP=0.9766
+  [resnet50/hazelnut] epoch 200: loss=0.1202 AUROC=0.9636 AP=0.9798
+  [resnet50/hazelnut] epoch 250: loss=0.1129 AUROC=0.9639 AP=0.9803
+  [resnet50/hazelnut] epoch 300: loss=0.1148 AUROC=0.9664 AP=0.9816
+  [resnet50/hazelnut] epoch 350: loss=0.1145 AUROC=0.9668 AP=0.9819
+  [resnet50/hazelnut] epoch 400: loss=0.1175 AUROC=0.9661 AP=0.9813
+  [resnet50/hazelnut] epoch 450: loss=0.1175 AUROC=0.9682 AP=0.9826
+  [resnet50/hazelnut] epoch 500: loss=0.1170 AUROC=0.9664 AP=0.9816
+[13:21:29]   [  84/210] s42 hazelnut    resnet50                       AUROC=0.9664 (10.4 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/leather] epoch 50: loss=0.3261 AUROC=0.8964 AP=0.9648
+  [convnextv2_tiny/leather] epoch 100: loss=0.3151 AUROC=0.8882 AP=0.9625
+  [convnextv2_tiny/leather] epoch 150: loss=0.3185 AUROC=0.8743 AP=0.9578
+  [convnextv2_tiny/leather] epoch 200: loss=0.3131 AUROC=0.8597 AP=0.9543
+  [convnextv2_tiny/leather] epoch 250: loss=0.3178 AUROC=0.9538 AP=0.9849
+  [convnextv2_tiny/leather] epoch 300: loss=0.3019 AUROC=0.9562 AP=0.9857
+  [convnextv2_tiny/leather] epoch 350: loss=0.3007 AUROC=0.9688 AP=0.9899
+  [convnextv2_tiny/leather] epoch 400: loss=0.2983 AUROC=0.9575 AP=0.9862
+  [convnextv2_tiny/leather] epoch 450: loss=0.3024 AUROC=0.9569 AP=0.9861
+  [convnextv2_tiny/leather] epoch 500: loss=0.2982 AUROC=0.9640 AP=0.9883
+[13:37:10]   [  85/210] s42 leather     convnextv2_tiny                AUROC=0.9640 (15.7 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/leather] epoch 50: loss=0.3224 AUROC=0.8791 AP=0.9589
+  [convnextv2_base/leather] epoch 100: loss=0.3357 AUROC=0.8573 AP=0.9531
+  [convnextv2_base/leather] epoch 150: loss=0.3158 AUROC=0.8628 AP=0.9540
+  [convnextv2_base/leather] epoch 200: loss=0.3166 AUROC=0.8584 AP=0.9524
+  [convnextv2_base/leather] epoch 250: loss=0.3128 AUROC=0.8747 AP=0.9576
+  [convnextv2_base/leather] epoch 300: loss=0.3158 AUROC=0.8533 AP=0.9517
+  [convnextv2_base/leather] epoch 350: loss=0.3122 AUROC=0.8753 AP=0.9576
+  [convnextv2_base/leather] epoch 400: loss=0.3122 AUROC=0.8570 AP=0.9524
+  [convnextv2_base/leather] epoch 450: loss=0.3130 AUROC=0.8502 AP=0.9509
+  [convnextv2_base/leather] epoch 500: loss=0.3125 AUROC=0.8702 AP=0.9561
+[14:10:17]   [  86/210] s42 leather     convnextv2_base                AUROC=0.8702 (33.1 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/leather] epoch 50: loss=0.3176 AUROC=0.9620 AP=0.9874
+  [mobileone_s0/leather] epoch 100: loss=0.3026 AUROC=0.9745 AP=0.9917
+  [mobileone_s0/leather] epoch 150: loss=0.3000 AUROC=0.9745 AP=0.9917
+  [mobileone_s0/leather] epoch 200: loss=0.2930 AUROC=0.9626 AP=0.9878
+  [mobileone_s0/leather] epoch 250: loss=0.2895 AUROC=0.9888 AP=0.9962
+  [mobileone_s0/leather] epoch 300: loss=0.2837 AUROC=0.9844 AP=0.9948
+  [mobileone_s0/leather] epoch 350: loss=0.2814 AUROC=0.9874 AP=0.9959
+  [mobileone_s0/leather] epoch 400: loss=0.2805 AUROC=0.9837 AP=0.9947
+  [mobileone_s0/leather] epoch 450: loss=0.2814 AUROC=0.9827 AP=0.9944
+  [mobileone_s0/leather] epoch 500: loss=0.2782 AUROC=0.9871 AP=0.9958
+[14:17:13]   [  87/210] s42 leather     mobileone_s0                   AUROC=0.9871 (6.9 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/leather] epoch 50: loss=0.3239 AUROC=0.8679 AP=0.9553
+  [convnext_tiny/leather] epoch 100: loss=0.3162 AUROC=0.8852 AP=0.9613
+  [convnext_tiny/leather] epoch 150: loss=0.3197 AUROC=0.8716 AP=0.9567
+  [convnext_tiny/leather] epoch 200: loss=0.3200 AUROC=0.8903 AP=0.9652
+  [convnext_tiny/leather] epoch 250: loss=0.3227 AUROC=0.8852 AP=0.9609
+  [convnext_tiny/leather] epoch 300: loss=0.3158 AUROC=0.8709 AP=0.9570
+  [convnext_tiny/leather] epoch 350: loss=0.3141 AUROC=0.8770 AP=0.9587
+  [convnext_tiny/leather] epoch 400: loss=0.3137 AUROC=0.8730 AP=0.9575
+  [convnext_tiny/leather] epoch 450: loss=0.3158 AUROC=0.8709 AP=0.9571
+  [convnext_tiny/leather] epoch 500: loss=0.3128 AUROC=0.8743 AP=0.9575
+[14:28:18]   [  88/210] s42 leather     convnext_tiny                  AUROC=0.8743 (11.1 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/leather] epoch 50: loss=0.3247 AUROC=0.9032 AP=0.9673
+  [convnext_small/leather] epoch 100: loss=0.3122 AUROC=0.9480 AP=0.9829
+  [convnext_small/leather] epoch 150: loss=0.3223 AUROC=0.8781 AP=0.9590
+  [convnext_small/leather] epoch 200: loss=0.3152 AUROC=0.8658 AP=0.9564
+  [convnext_small/leather] epoch 250: loss=0.3224 AUROC=0.8849 AP=0.9610
+  [convnext_small/leather] epoch 300: loss=0.3153 AUROC=0.8675 AP=0.9560
+  [convnext_small/leather] epoch 350: loss=0.3135 AUROC=0.8760 AP=0.9583
+  [convnext_small/leather] epoch 400: loss=0.3127 AUROC=0.8689 AP=0.9561
+  [convnext_small/leather] epoch 450: loss=0.3150 AUROC=0.8641 AP=0.9547
+  [convnext_small/leather] epoch 500: loss=0.3125 AUROC=0.8730 AP=0.9571
+[14:45:25]   [  89/210] s42 leather     convnext_small                 AUROC=0.8730 (17.1 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/leather] epoch 50: loss=0.3175 AUROC=0.9175 AP=0.9716
+  [vit_tiny_patch16_224/leather] epoch 100: loss=0.3039 AUROC=0.9521 AP=0.9848
+  [vit_tiny_patch16_224/leather] epoch 150: loss=0.2944 AUROC=0.9626 AP=0.9874
+  [vit_tiny_patch16_224/leather] epoch 200: loss=0.2589 AUROC=0.9440 AP=0.9819
+  [vit_tiny_patch16_224/leather] epoch 250: loss=0.2309 AUROC=0.9643 AP=0.9880
+  [vit_tiny_patch16_224/leather] epoch 300: loss=0.2143 AUROC=0.9609 AP=0.9872
+  [vit_tiny_patch16_224/leather] epoch 350: loss=0.2018 AUROC=0.9684 AP=0.9893
+  [vit_tiny_patch16_224/leather] epoch 400: loss=0.1974 AUROC=0.9582 AP=0.9863
+  [vit_tiny_patch16_224/leather] epoch 450: loss=0.1961 AUROC=0.9569 AP=0.9859
+  [vit_tiny_patch16_224/leather] epoch 500: loss=0.1952 AUROC=0.9616 AP=0.9872
+[14:49:14]   [  90/210] s42 leather     vit_tiny_patch16_224           AUROC=0.9616 (3.8 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/leather] epoch 50: loss=0.3189 AUROC=0.9137 AP=0.9714
+  [deit_tiny_patch16_224/leather] epoch 100: loss=0.3062 AUROC=0.9528 AP=0.9845
+  [deit_tiny_patch16_224/leather] epoch 150: loss=0.3117 AUROC=0.9042 AP=0.9679
+  [deit_tiny_patch16_224/leather] epoch 200: loss=0.2990 AUROC=0.9480 AP=0.9832
+  [deit_tiny_patch16_224/leather] epoch 250: loss=0.2826 AUROC=0.9837 AP=0.9945
+  [deit_tiny_patch16_224/leather] epoch 300: loss=0.2562 AUROC=0.9582 AP=0.9864
+  [deit_tiny_patch16_224/leather] epoch 350: loss=0.2333 AUROC=0.9776 AP=0.9926
+  [deit_tiny_patch16_224/leather] epoch 400: loss=0.2210 AUROC=0.9721 AP=0.9911
+  [deit_tiny_patch16_224/leather] epoch 450: loss=0.2201 AUROC=0.9701 AP=0.9906
+  [deit_tiny_patch16_224/leather] epoch 500: loss=0.2152 AUROC=0.9766 AP=0.9923
+[14:53:04]   [  91/210] s42 leather     deit_tiny_patch16_224          AUROC=0.9766 (3.8 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/leather] epoch 50: loss=0.3264 AUROC=0.8702 AP=0.9564
+  [swin_tiny_patch4_window7_224/leather] epoch 100: loss=0.3179 AUROC=0.8815 AP=0.9602
+  [swin_tiny_patch4_window7_224/leather] epoch 150: loss=0.3185 AUROC=0.8702 AP=0.9562
+  [swin_tiny_patch4_window7_224/leather] epoch 200: loss=0.3154 AUROC=0.8533 AP=0.9519
+  [swin_tiny_patch4_window7_224/leather] epoch 250: loss=0.3221 AUROC=0.8679 AP=0.9550
+  [swin_tiny_patch4_window7_224/leather] epoch 300: loss=0.3152 AUROC=0.8641 AP=0.9549
+  [swin_tiny_patch4_window7_224/leather] epoch 350: loss=0.3123 AUROC=0.8699 AP=0.9560
+  [swin_tiny_patch4_window7_224/leather] epoch 400: loss=0.3145 AUROC=0.8665 AP=0.9553
+  [swin_tiny_patch4_window7_224/leather] epoch 450: loss=0.3174 AUROC=0.8621 AP=0.9540
+  [swin_tiny_patch4_window7_224/leather] epoch 500: loss=0.3151 AUROC=0.8709 AP=0.9563
+[15:02:28]   [  92/210] s42 leather     swin_tiny_patch4_window7_224   AUROC=0.8709 (9.4 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/leather] epoch 50: loss=0.3104 AUROC=0.9521 AP=0.9842
+  [efficientnet_b0/leather] epoch 100: loss=0.2961 AUROC=0.9684 AP=0.9895
+  [efficientnet_b0/leather] epoch 150: loss=0.2920 AUROC=0.9759 AP=0.9922
+  [efficientnet_b0/leather] epoch 200: loss=0.2850 AUROC=0.9558 AP=0.9860
+  [efficientnet_b0/leather] epoch 250: loss=0.2817 AUROC=0.9749 AP=0.9917
+  [efficientnet_b0/leather] epoch 300: loss=0.2749 AUROC=0.9718 AP=0.9908
+  [efficientnet_b0/leather] epoch 350: loss=0.2700 AUROC=0.9776 AP=0.9926
+  [efficientnet_b0/leather] epoch 400: loss=0.2654 AUROC=0.9783 AP=0.9929
+  [efficientnet_b0/leather] epoch 450: loss=0.2661 AUROC=0.9718 AP=0.9908
+  [efficientnet_b0/leather] epoch 500: loss=0.2647 AUROC=0.9769 AP=0.9925
+[15:06:51]   [  93/210] s42 leather     efficientnet_b0                AUROC=0.9769 (4.4 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/leather] epoch 50: loss=0.3181 AUROC=0.4901 AP=0.7091
+  [efficientnet_b1/leather] epoch 100: loss=0.3126 AUROC=0.5486 AP=0.7423
+  [efficientnet_b1/leather] epoch 150: loss=0.3025 AUROC=0.6206 AP=0.7699
+  [efficientnet_b1/leather] epoch 200: loss=0.2999 AUROC=0.6189 AP=0.7628
+  [efficientnet_b1/leather] epoch 250: loss=0.2955 AUROC=0.6522 AP=0.7780
+  [efficientnet_b1/leather] epoch 300: loss=0.2897 AUROC=0.6508 AP=0.7876
+  [efficientnet_b1/leather] epoch 350: loss=0.2866 AUROC=0.6522 AP=0.7921
+  [efficientnet_b1/leather] epoch 400: loss=0.2838 AUROC=0.6423 AP=0.7783
+  [efficientnet_b1/leather] epoch 450: loss=0.2877 AUROC=0.6369 AP=0.7702
+  [efficientnet_b1/leather] epoch 500: loss=0.2822 AUROC=0.6505 AP=0.7879
+[15:12:43]   [  94/210] s42 leather     efficientnet_b1                AUROC=0.6505 (5.9 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/leather] epoch 50: loss=0.3173 AUROC=0.9066 AP=0.9690
+  [mobilenetv3_small_100/leather] epoch 100: loss=0.3005 AUROC=0.9385 AP=0.9794
+  [mobilenetv3_small_100/leather] epoch 150: loss=0.2973 AUROC=0.9470 AP=0.9824
+  [mobilenetv3_small_100/leather] epoch 200: loss=0.2907 AUROC=0.9195 AP=0.9745
+  [mobilenetv3_small_100/leather] epoch 250: loss=0.2865 AUROC=0.9569 AP=0.9856
+  [mobilenetv3_small_100/leather] epoch 300: loss=0.2801 AUROC=0.9484 AP=0.9829
+  [mobilenetv3_small_100/leather] epoch 350: loss=0.2754 AUROC=0.9688 AP=0.9896
+  [mobilenetv3_small_100/leather] epoch 400: loss=0.2765 AUROC=0.9609 AP=0.9870
+  [mobilenetv3_small_100/leather] epoch 450: loss=0.2777 AUROC=0.9620 AP=0.9873
+  [mobilenetv3_small_100/leather] epoch 500: loss=0.2732 AUROC=0.9732 AP=0.9911
+[15:15:00]   [  95/210] s42 leather     mobilenetv3_small_100          AUROC=0.9732 (2.3 min, mb=64 x1, peak=2.2GB)
+  [resnet18/leather] epoch 50: loss=0.3124 AUROC=0.9630 AP=0.9876
+  [resnet18/leather] epoch 100: loss=0.2982 AUROC=0.9783 AP=0.9927
+  [resnet18/leather] epoch 150: loss=0.2931 AUROC=0.9837 AP=0.9946
+  [resnet18/leather] epoch 200: loss=0.2880 AUROC=0.9626 AP=0.9878
+  [resnet18/leather] epoch 250: loss=0.2856 AUROC=0.9851 AP=0.9950
+  [resnet18/leather] epoch 300: loss=0.2791 AUROC=0.9796 AP=0.9932
+  [resnet18/leather] epoch 350: loss=0.2741 AUROC=0.9844 AP=0.9948
+  [resnet18/leather] epoch 400: loss=0.2711 AUROC=0.9800 AP=0.9933
+  [resnet18/leather] epoch 450: loss=0.2730 AUROC=0.9813 AP=0.9937
+  [resnet18/leather] epoch 500: loss=0.2721 AUROC=0.9857 AP=0.9953
+[15:18:18]   [  96/210] s42 leather     resnet18                       AUROC=0.9857 (3.3 min, mb=64 x1, peak=3.0GB)
+  [resnet34/leather] epoch 50: loss=0.3139 AUROC=0.9654 AP=0.9886
+  [resnet34/leather] epoch 100: loss=0.3016 AUROC=0.9840 AP=0.9947
+  [resnet34/leather] epoch 150: loss=0.2981 AUROC=0.9918 AP=0.9973
+  [resnet34/leather] epoch 200: loss=0.2902 AUROC=0.9772 AP=0.9924
+  [resnet34/leather] epoch 250: loss=0.2887 AUROC=0.9949 AP=0.9984
+  [resnet34/leather] epoch 300: loss=0.2850 AUROC=0.9874 AP=0.9958
+  [resnet34/leather] epoch 350: loss=0.2812 AUROC=0.9932 AP=0.9978
+  [resnet34/leather] epoch 400: loss=0.2805 AUROC=0.9901 AP=0.9967
+  [resnet34/leather] epoch 450: loss=0.2834 AUROC=0.9891 AP=0.9963
+  [resnet34/leather] epoch 500: loss=0.2788 AUROC=0.9942 AP=0.9981
+[15:22:56]   [  97/210] s42 leather     resnet34                       AUROC=0.9942 (4.6 min, mb=64 x1, peak=4.1GB)
+  [resnet50/leather] epoch 50: loss=0.3168 AUROC=0.9457 AP=0.9827
+  [resnet50/leather] epoch 100: loss=0.3005 AUROC=0.9718 AP=0.9906
+  [resnet50/leather] epoch 150: loss=0.2980 AUROC=0.9711 AP=0.9903
+  [resnet50/leather] epoch 200: loss=0.2920 AUROC=0.9538 AP=0.9852
+  [resnet50/leather] epoch 250: loss=0.2887 AUROC=0.9803 AP=0.9934
+  [resnet50/leather] epoch 300: loss=0.2838 AUROC=0.9732 AP=0.9909
+  [resnet50/leather] epoch 350: loss=0.2825 AUROC=0.9796 AP=0.9931
+  [resnet50/leather] epoch 400: loss=0.2788 AUROC=0.9752 AP=0.9915
+  [resnet50/leather] epoch 450: loss=0.2795 AUROC=0.9742 AP=0.9911
+  [resnet50/leather] epoch 500: loss=0.2775 AUROC=0.9796 AP=0.9930
+[15:29:36]   [  98/210] s42 leather     resnet50                       AUROC=0.9796 (6.7 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/metal_nut] epoch 50: loss=0.2022 AUROC=0.5367 AP=0.8442
+  [convnextv2_tiny/metal_nut] epoch 100: loss=0.1897 AUROC=0.5718 AP=0.8594
+  [convnextv2_tiny/metal_nut] epoch 150: loss=0.1820 AUROC=0.4457 AP=0.7766
+  [convnextv2_tiny/metal_nut] epoch 200: loss=0.1501 AUROC=0.3128 AP=0.7094
+  [convnextv2_tiny/metal_nut] epoch 250: loss=0.1301 AUROC=0.3162 AP=0.7416
+  [convnextv2_tiny/metal_nut] epoch 300: loss=0.1234 AUROC=0.2889 AP=0.7068
+  [convnextv2_tiny/metal_nut] epoch 350: loss=0.1183 AUROC=0.2708 AP=0.6968
+  [convnextv2_tiny/metal_nut] epoch 400: loss=0.1166 AUROC=0.4101 AP=0.8011
+  [convnextv2_tiny/metal_nut] epoch 450: loss=0.1159 AUROC=0.3500 AP=0.7196
+  [convnextv2_tiny/metal_nut] epoch 500: loss=0.1151 AUROC=0.7224 AP=0.9205
+[15:43:45]   [  99/210] s42 metal_nut   convnextv2_tiny                AUROC=0.7224 (14.1 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/metal_nut] epoch 50: loss=0.2095 AUROC=0.5459 AP=0.8456
+  [convnextv2_base/metal_nut] epoch 100: loss=0.1873 AUROC=0.5890 AP=0.8695
+  [convnextv2_base/metal_nut] epoch 150: loss=0.1816 AUROC=0.6026 AP=0.8771
+  [convnextv2_base/metal_nut] epoch 200: loss=0.1608 AUROC=0.6227 AP=0.8822
+  [convnextv2_base/metal_nut] epoch 250: loss=0.1378 AUROC=0.6784 AP=0.9037
+  [convnextv2_base/metal_nut] epoch 300: loss=0.1248 AUROC=0.6955 AP=0.9105
+  [convnextv2_base/metal_nut] epoch 350: loss=0.1194 AUROC=0.7155 AP=0.9175
+  [convnextv2_base/metal_nut] epoch 400: loss=0.1162 AUROC=0.7253 AP=0.9224
+  [convnextv2_base/metal_nut] epoch 450: loss=0.1137 AUROC=0.7292 AP=0.9235
+  [convnextv2_base/metal_nut] epoch 500: loss=0.1147 AUROC=0.7292 AP=0.9236
+[16:11:13]   [ 100/210] s42 metal_nut   convnextv2_base                AUROC=0.7292 (27.5 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/metal_nut] epoch 50: loss=0.1649 AUROC=0.5288 AP=0.8235
+  [mobileone_s0/metal_nut] epoch 100: loss=0.1327 AUROC=0.6183 AP=0.8819
+  [mobileone_s0/metal_nut] epoch 150: loss=0.1277 AUROC=0.6950 AP=0.9093
+  [mobileone_s0/metal_nut] epoch 200: loss=0.1112 AUROC=0.7141 AP=0.9165
+  [mobileone_s0/metal_nut] epoch 250: loss=0.1054 AUROC=0.7248 AP=0.9212
+  [mobileone_s0/metal_nut] epoch 300: loss=0.1016 AUROC=0.7463 AP=0.9289
+  [mobileone_s0/metal_nut] epoch 350: loss=0.1036 AUROC=0.7473 AP=0.9298
+  [mobileone_s0/metal_nut] epoch 400: loss=0.1001 AUROC=0.7483 AP=0.9305
+  [mobileone_s0/metal_nut] epoch 450: loss=0.0964 AUROC=0.7488 AP=0.9304
+  [mobileone_s0/metal_nut] epoch 500: loss=0.0985 AUROC=0.7478 AP=0.9305
+[16:17:02]   [ 101/210] s42 metal_nut   mobileone_s0                   AUROC=0.7478 (5.8 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/metal_nut] epoch 50: loss=0.1982 AUROC=0.4917 AP=0.7970
+  [convnext_tiny/metal_nut] epoch 100: loss=0.1456 AUROC=0.6554 AP=0.8929
+  [convnext_tiny/metal_nut] epoch 150: loss=0.1289 AUROC=0.6955 AP=0.9094
+  [convnext_tiny/metal_nut] epoch 200: loss=0.1189 AUROC=0.7151 AP=0.9167
+  [convnext_tiny/metal_nut] epoch 250: loss=0.1103 AUROC=0.7253 AP=0.9221
+  [convnext_tiny/metal_nut] epoch 300: loss=0.1068 AUROC=0.7326 AP=0.9254
+  [convnext_tiny/metal_nut] epoch 350: loss=0.1023 AUROC=0.7395 AP=0.9276
+  [convnext_tiny/metal_nut] epoch 400: loss=0.1005 AUROC=0.7395 AP=0.9275
+  [convnext_tiny/metal_nut] epoch 450: loss=0.0994 AUROC=0.7405 AP=0.9277
+  [convnext_tiny/metal_nut] epoch 500: loss=0.0992 AUROC=0.7390 AP=0.9275
+[16:26:38]   [ 102/210] s42 metal_nut   convnext_tiny                  AUROC=0.7390 (9.6 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/metal_nut] epoch 50: loss=0.1763 AUROC=0.6056 AP=0.8734
+  [convnext_small/metal_nut] epoch 100: loss=0.1379 AUROC=0.6882 AP=0.9067
+  [convnext_small/metal_nut] epoch 150: loss=0.1239 AUROC=0.7014 AP=0.9115
+  [convnext_small/metal_nut] epoch 200: loss=0.1137 AUROC=0.7317 AP=0.9239
+  [convnext_small/metal_nut] epoch 250: loss=0.1078 AUROC=0.7375 AP=0.9264
+  [convnext_small/metal_nut] epoch 300: loss=0.1015 AUROC=0.7458 AP=0.9294
+  [convnext_small/metal_nut] epoch 350: loss=0.0942 AUROC=0.7380 AP=0.9278
+  [convnext_small/metal_nut] epoch 400: loss=0.0922 AUROC=0.7410 AP=0.9286
+  [convnext_small/metal_nut] epoch 450: loss=0.0898 AUROC=0.7395 AP=0.9282
+  [convnext_small/metal_nut] epoch 500: loss=0.0907 AUROC=0.7385 AP=0.9278
+[16:41:29]   [ 103/210] s42 metal_nut   convnext_small                 AUROC=0.7385 (14.9 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/metal_nut] epoch 50: loss=0.1543 AUROC=0.6329 AP=0.8876
+  [vit_tiny_patch16_224/metal_nut] epoch 100: loss=0.1264 AUROC=0.6652 AP=0.8968
+  [vit_tiny_patch16_224/metal_nut] epoch 150: loss=0.1105 AUROC=0.7009 AP=0.9120
+  [vit_tiny_patch16_224/metal_nut] epoch 200: loss=0.0995 AUROC=0.7067 AP=0.9134
+  [vit_tiny_patch16_224/metal_nut] epoch 250: loss=0.0951 AUROC=0.7273 AP=0.9219
+  [vit_tiny_patch16_224/metal_nut] epoch 300: loss=0.0915 AUROC=0.7312 AP=0.9235
+  [vit_tiny_patch16_224/metal_nut] epoch 350: loss=0.0912 AUROC=0.7302 AP=0.9235
+  [vit_tiny_patch16_224/metal_nut] epoch 400: loss=0.0876 AUROC=0.7380 AP=0.9263
+  [vit_tiny_patch16_224/metal_nut] epoch 450: loss=0.0872 AUROC=0.7380 AP=0.9259
+  [vit_tiny_patch16_224/metal_nut] epoch 500: loss=0.0882 AUROC=0.7370 AP=0.9256
+[16:44:30]   [ 104/210] s42 metal_nut   vit_tiny_patch16_224           AUROC=0.7370 (3.0 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/metal_nut] epoch 50: loss=0.1500 AUROC=0.6383 AP=0.8838
+  [deit_tiny_patch16_224/metal_nut] epoch 100: loss=0.1327 AUROC=0.6887 AP=0.9070
+  [deit_tiny_patch16_224/metal_nut] epoch 150: loss=0.1088 AUROC=0.7302 AP=0.9211
+  [deit_tiny_patch16_224/metal_nut] epoch 200: loss=0.0987 AUROC=0.7385 AP=0.9248
+  [deit_tiny_patch16_224/metal_nut] epoch 250: loss=0.0939 AUROC=0.7429 AP=0.9271
+  [deit_tiny_patch16_224/metal_nut] epoch 300: loss=0.0896 AUROC=0.7454 AP=0.9285
+  [deit_tiny_patch16_224/metal_nut] epoch 350: loss=0.0875 AUROC=0.7424 AP=0.9272
+  [deit_tiny_patch16_224/metal_nut] epoch 400: loss=0.0850 AUROC=0.7463 AP=0.9288
+  [deit_tiny_patch16_224/metal_nut] epoch 450: loss=0.0847 AUROC=0.7454 AP=0.9286
+  [deit_tiny_patch16_224/metal_nut] epoch 500: loss=0.0857 AUROC=0.7454 AP=0.9283
+[16:47:32]   [ 105/210] s42 metal_nut   deit_tiny_patch16_224          AUROC=0.7454 (3.0 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 50: loss=0.2086 AUROC=0.4707 AP=0.7892
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 100: loss=0.1587 AUROC=0.6564 AP=0.8934
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 150: loss=0.1341 AUROC=0.6921 AP=0.9076
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 200: loss=0.1213 AUROC=0.7131 AP=0.9169
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 250: loss=0.1193 AUROC=0.7219 AP=0.9207
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 300: loss=0.1131 AUROC=0.7258 AP=0.9220
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 350: loss=0.1080 AUROC=0.7331 AP=0.9251
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 400: loss=0.1067 AUROC=0.7366 AP=0.9267
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 450: loss=0.1061 AUROC=0.7400 AP=0.9275
+  [swin_tiny_patch4_window7_224/metal_nut] epoch 500: loss=0.1054 AUROC=0.7375 AP=0.9269
+[16:54:53]   [ 106/210] s42 metal_nut   swin_tiny_patch4_window7_224   AUROC=0.7375 (7.4 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/metal_nut] epoch 50: loss=0.1649 AUROC=0.6662 AP=0.9015
+  [efficientnet_b0/metal_nut] epoch 100: loss=0.1333 AUROC=0.7111 AP=0.9186
+  [efficientnet_b0/metal_nut] epoch 150: loss=0.1234 AUROC=0.7209 AP=0.9194
+  [efficientnet_b0/metal_nut] epoch 200: loss=0.1119 AUROC=0.7390 AP=0.9266
+  [efficientnet_b0/metal_nut] epoch 250: loss=0.1079 AUROC=0.7498 AP=0.9308
+  [efficientnet_b0/metal_nut] epoch 300: loss=0.1031 AUROC=0.7556 AP=0.9326
+  [efficientnet_b0/metal_nut] epoch 350: loss=0.0987 AUROC=0.7566 AP=0.9335
+  [efficientnet_b0/metal_nut] epoch 400: loss=0.0987 AUROC=0.7566 AP=0.9337
+  [efficientnet_b0/metal_nut] epoch 450: loss=0.0981 AUROC=0.7581 AP=0.9340
+  [efficientnet_b0/metal_nut] epoch 500: loss=0.0971 AUROC=0.7590 AP=0.9342
+[16:58:21]   [ 107/210] s42 metal_nut   efficientnet_b0                AUROC=0.7590 (3.5 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/metal_nut] epoch 50: loss=0.1787 AUROC=0.5523 AP=0.8404
+  [efficientnet_b1/metal_nut] epoch 100: loss=0.1401 AUROC=0.6872 AP=0.9068
+  [efficientnet_b1/metal_nut] epoch 150: loss=0.1230 AUROC=0.7097 AP=0.9145
+  [efficientnet_b1/metal_nut] epoch 200: loss=0.1125 AUROC=0.7209 AP=0.9201
+  [efficientnet_b1/metal_nut] epoch 250: loss=0.1086 AUROC=0.7370 AP=0.9258
+  [efficientnet_b1/metal_nut] epoch 300: loss=0.1068 AUROC=0.7434 AP=0.9286
+  [efficientnet_b1/metal_nut] epoch 350: loss=0.1044 AUROC=0.7542 AP=0.9324
+  [efficientnet_b1/metal_nut] epoch 400: loss=0.1008 AUROC=0.7537 AP=0.9324
+  [efficientnet_b1/metal_nut] epoch 450: loss=0.1005 AUROC=0.7542 AP=0.9326
+  [efficientnet_b1/metal_nut] epoch 500: loss=0.1007 AUROC=0.7576 AP=0.9336
+[17:02:48]   [ 108/210] s42 metal_nut   efficientnet_b1                AUROC=0.7576 (4.5 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/metal_nut] epoch 50: loss=0.1548 AUROC=0.6422 AP=0.8871
+  [mobilenetv3_small_100/metal_nut] epoch 100: loss=0.1285 AUROC=0.6945 AP=0.9077
+  [mobilenetv3_small_100/metal_nut] epoch 150: loss=0.1155 AUROC=0.7136 AP=0.9166
+  [mobilenetv3_small_100/metal_nut] epoch 200: loss=0.1092 AUROC=0.7243 AP=0.9216
+  [mobilenetv3_small_100/metal_nut] epoch 250: loss=0.1017 AUROC=0.7322 AP=0.9250
+  [mobilenetv3_small_100/metal_nut] epoch 300: loss=0.0992 AUROC=0.7395 AP=0.9279
+  [mobilenetv3_small_100/metal_nut] epoch 350: loss=0.0966 AUROC=0.7454 AP=0.9299
+  [mobilenetv3_small_100/metal_nut] epoch 400: loss=0.0954 AUROC=0.7458 AP=0.9304
+  [mobilenetv3_small_100/metal_nut] epoch 450: loss=0.0947 AUROC=0.7463 AP=0.9302
+  [mobilenetv3_small_100/metal_nut] epoch 500: loss=0.0942 AUROC=0.7458 AP=0.9301
+[17:04:35]   [ 109/210] s42 metal_nut   mobilenetv3_small_100          AUROC=0.7458 (1.8 min, mb=64 x1, peak=2.2GB)
+  [resnet18/metal_nut] epoch 50: loss=0.1606 AUROC=0.6413 AP=0.8893
+  [resnet18/metal_nut] epoch 100: loss=0.1327 AUROC=0.6877 AP=0.9069
+  [resnet18/metal_nut] epoch 150: loss=0.1166 AUROC=0.7107 AP=0.9161
+  [resnet18/metal_nut] epoch 200: loss=0.1058 AUROC=0.7248 AP=0.9215
+  [resnet18/metal_nut] epoch 250: loss=0.1029 AUROC=0.7370 AP=0.9257
+  [resnet18/metal_nut] epoch 300: loss=0.1012 AUROC=0.7410 AP=0.9275
+  [resnet18/metal_nut] epoch 350: loss=0.0959 AUROC=0.7449 AP=0.9282
+  [resnet18/metal_nut] epoch 400: loss=0.0942 AUROC=0.7458 AP=0.9287
+  [resnet18/metal_nut] epoch 450: loss=0.0932 AUROC=0.7478 AP=0.9290
+  [resnet18/metal_nut] epoch 500: loss=0.0923 AUROC=0.7488 AP=0.9294
+[17:07:10]   [ 110/210] s42 metal_nut   resnet18                       AUROC=0.7488 (2.6 min, mb=64 x1, peak=3.0GB)
+  [resnet34/metal_nut] epoch 50: loss=0.1547 AUROC=0.6535 AP=0.8912
+  [resnet34/metal_nut] epoch 100: loss=0.1275 AUROC=0.7087 AP=0.9151
+  [resnet34/metal_nut] epoch 150: loss=0.1141 AUROC=0.7209 AP=0.9191
+  [resnet34/metal_nut] epoch 200: loss=0.1054 AUROC=0.7273 AP=0.9224
+  [resnet34/metal_nut] epoch 250: loss=0.1014 AUROC=0.7478 AP=0.9304
+  [resnet34/metal_nut] epoch 300: loss=0.0981 AUROC=0.7502 AP=0.9313
+  [resnet34/metal_nut] epoch 350: loss=0.0947 AUROC=0.7527 AP=0.9324
+  [resnet34/metal_nut] epoch 400: loss=0.0926 AUROC=0.7595 AP=0.9342
+  [resnet34/metal_nut] epoch 450: loss=0.0925 AUROC=0.7571 AP=0.9334
+  [resnet34/metal_nut] epoch 500: loss=0.0923 AUROC=0.7586 AP=0.9339
+[17:10:48]   [ 111/210] s42 metal_nut   resnet34                       AUROC=0.7586 (3.6 min, mb=64 x1, peak=4.1GB)
+  [resnet50/metal_nut] epoch 50: loss=0.1672 AUROC=0.6427 AP=0.8894
+  [resnet50/metal_nut] epoch 100: loss=0.1308 AUROC=0.6901 AP=0.9080
+  [resnet50/metal_nut] epoch 150: loss=0.1164 AUROC=0.7258 AP=0.9218
+  [resnet50/metal_nut] epoch 200: loss=0.1065 AUROC=0.7234 AP=0.9218
+  [resnet50/metal_nut] epoch 250: loss=0.1035 AUROC=0.7361 AP=0.9265
+  [resnet50/metal_nut] epoch 300: loss=0.0996 AUROC=0.7400 AP=0.9278
+  [resnet50/metal_nut] epoch 350: loss=0.0955 AUROC=0.7385 AP=0.9270
+  [resnet50/metal_nut] epoch 400: loss=0.0927 AUROC=0.7390 AP=0.9272
+  [resnet50/metal_nut] epoch 450: loss=0.0933 AUROC=0.7434 AP=0.9288
+  [resnet50/metal_nut] epoch 500: loss=0.0927 AUROC=0.7434 AP=0.9288
+[17:15:59]   [ 112/210] s42 metal_nut   resnet50                       AUROC=0.7434 (5.2 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/pill] epoch 50: loss=0.1434 AUROC=0.7559 AP=0.9226
+  [convnextv2_tiny/pill] epoch 100: loss=0.1285 AUROC=0.7670 AP=0.9264
+  [convnextv2_tiny/pill] epoch 150: loss=0.1218 AUROC=0.7660 AP=0.9270
+  [convnextv2_tiny/pill] epoch 200: loss=0.1237 AUROC=0.7638 AP=0.9280
+  [convnextv2_tiny/pill] epoch 250: loss=0.1235 AUROC=0.7381 AP=0.9303
+  [convnextv2_tiny/pill] epoch 300: loss=0.1186 AUROC=0.7270 AP=0.9341
+  [convnextv2_tiny/pill] epoch 350: loss=0.1206 AUROC=0.5539 AP=0.8737
+  [convnextv2_tiny/pill] epoch 400: loss=0.1166 AUROC=0.7395 AP=0.9340
+  [convnextv2_tiny/pill] epoch 450: loss=0.1099 AUROC=0.7400 AP=0.9239
+  [convnextv2_tiny/pill] epoch 500: loss=0.1216 AUROC=0.7679 AP=0.9300
+[17:30:38]   [ 113/210] s42 pill        convnextv2_tiny                AUROC=0.7679 (14.7 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/pill] epoch 50: loss=0.1365 AUROC=0.7720 AP=0.9271
+  [convnextv2_base/pill] epoch 100: loss=0.1242 AUROC=0.7739 AP=0.9290
+  [convnextv2_base/pill] epoch 150: loss=0.1179 AUROC=0.7681 AP=0.9304
+  [convnextv2_base/pill] epoch 200: loss=0.1192 AUROC=0.7717 AP=0.9287
+  [convnextv2_base/pill] epoch 250: loss=0.1169 AUROC=0.7744 AP=0.9317
+  [convnextv2_base/pill] epoch 300: loss=0.1220 AUROC=0.7706 AP=0.9308
+  [convnextv2_base/pill] epoch 350: loss=0.1203 AUROC=0.7695 AP=0.9287
+  [convnextv2_base/pill] epoch 400: loss=0.1128 AUROC=0.7668 AP=0.9282
+  [convnextv2_base/pill] epoch 450: loss=0.1123 AUROC=0.7676 AP=0.9281
+  [convnextv2_base/pill] epoch 500: loss=0.1153 AUROC=0.7684 AP=0.9285
+[18:02:46]   [ 114/210] s42 pill        convnextv2_base                AUROC=0.7684 (32.1 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/pill] epoch 50: loss=0.1301 AUROC=0.7804 AP=0.9360
+  [mobileone_s0/pill] epoch 100: loss=0.1035 AUROC=0.8031 AP=0.9477
+  [mobileone_s0/pill] epoch 150: loss=0.0911 AUROC=0.8202 AP=0.9571
+  [mobileone_s0/pill] epoch 200: loss=0.0833 AUROC=0.8197 AP=0.9553
+  [mobileone_s0/pill] epoch 250: loss=0.0776 AUROC=0.8200 AP=0.9556
+  [mobileone_s0/pill] epoch 300: loss=0.0742 AUROC=0.8287 AP=0.9586
+  [mobileone_s0/pill] epoch 350: loss=0.0703 AUROC=0.8282 AP=0.9587
+  [mobileone_s0/pill] epoch 400: loss=0.0721 AUROC=0.8254 AP=0.9579
+  [mobileone_s0/pill] epoch 450: loss=0.0656 AUROC=0.8279 AP=0.9590
+  [mobileone_s0/pill] epoch 500: loss=0.0666 AUROC=0.8282 AP=0.9585
+[18:10:10]   [ 115/210] s42 pill        mobileone_s0                   AUROC=0.8282 (7.4 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/pill] epoch 50: loss=0.1381 AUROC=0.7692 AP=0.9276
+  [convnext_tiny/pill] epoch 100: loss=0.1251 AUROC=0.7741 AP=0.9290
+  [convnext_tiny/pill] epoch 150: loss=0.1203 AUROC=0.7714 AP=0.9292
+  [convnext_tiny/pill] epoch 200: loss=0.1221 AUROC=0.7684 AP=0.9287
+  [convnext_tiny/pill] epoch 250: loss=0.1175 AUROC=0.7670 AP=0.9294
+  [convnext_tiny/pill] epoch 300: loss=0.0959 AUROC=0.7769 AP=0.9303
+  [convnext_tiny/pill] epoch 350: loss=0.0855 AUROC=0.7796 AP=0.9320
+  [convnext_tiny/pill] epoch 400: loss=0.0796 AUROC=0.7889 AP=0.9362
+  [convnext_tiny/pill] epoch 450: loss=0.0726 AUROC=0.7911 AP=0.9371
+  [convnext_tiny/pill] epoch 500: loss=0.0810 AUROC=0.7921 AP=0.9387
+[18:21:50]   [ 116/210] s42 pill        convnext_tiny                  AUROC=0.7921 (11.7 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/pill] epoch 50: loss=0.1406 AUROC=0.7692 AP=0.9263
+  [convnext_small/pill] epoch 100: loss=0.1240 AUROC=0.7720 AP=0.9298
+  [convnext_small/pill] epoch 150: loss=0.1123 AUROC=0.7695 AP=0.9304
+  [convnext_small/pill] epoch 200: loss=0.0879 AUROC=0.7870 AP=0.9356
+  [convnext_small/pill] epoch 250: loss=0.0775 AUROC=0.7995 AP=0.9428
+  [convnext_small/pill] epoch 300: loss=0.0721 AUROC=0.8058 AP=0.9467
+  [convnext_small/pill] epoch 350: loss=0.0679 AUROC=0.8088 AP=0.9492
+  [convnext_small/pill] epoch 400: loss=0.0667 AUROC=0.8134 AP=0.9509
+  [convnext_small/pill] epoch 450: loss=0.0680 AUROC=0.8161 AP=0.9526
+  [convnext_small/pill] epoch 500: loss=0.0695 AUROC=0.8151 AP=0.9519
+[18:39:49]   [ 117/210] s42 pill        convnext_small                 AUROC=0.8151 (18.0 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/pill] epoch 50: loss=0.1297 AUROC=0.7826 AP=0.9378
+  [vit_tiny_patch16_224/pill] epoch 100: loss=0.0900 AUROC=0.7951 AP=0.9431
+  [vit_tiny_patch16_224/pill] epoch 150: loss=0.0827 AUROC=0.8003 AP=0.9446
+  [vit_tiny_patch16_224/pill] epoch 200: loss=0.0787 AUROC=0.8112 AP=0.9491
+  [vit_tiny_patch16_224/pill] epoch 250: loss=0.0726 AUROC=0.8088 AP=0.9492
+  [vit_tiny_patch16_224/pill] epoch 300: loss=0.0706 AUROC=0.8140 AP=0.9513
+  [vit_tiny_patch16_224/pill] epoch 350: loss=0.0695 AUROC=0.8164 AP=0.9525
+  [vit_tiny_patch16_224/pill] epoch 400: loss=0.0661 AUROC=0.8175 AP=0.9527
+  [vit_tiny_patch16_224/pill] epoch 450: loss=0.0662 AUROC=0.8202 AP=0.9540
+  [vit_tiny_patch16_224/pill] epoch 500: loss=0.0669 AUROC=0.8197 AP=0.9537
+[18:43:31]   [ 118/210] s42 pill        vit_tiny_patch16_224           AUROC=0.8197 (3.7 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/pill] epoch 50: loss=0.1395 AUROC=0.7777 AP=0.9346
+  [deit_tiny_patch16_224/pill] epoch 100: loss=0.0977 AUROC=0.7924 AP=0.9408
+  [deit_tiny_patch16_224/pill] epoch 150: loss=0.0832 AUROC=0.7984 AP=0.9450
+  [deit_tiny_patch16_224/pill] epoch 200: loss=0.0792 AUROC=0.8080 AP=0.9488
+  [deit_tiny_patch16_224/pill] epoch 250: loss=0.0732 AUROC=0.8123 AP=0.9522
+  [deit_tiny_patch16_224/pill] epoch 300: loss=0.0714 AUROC=0.8131 AP=0.9501
+  [deit_tiny_patch16_224/pill] epoch 350: loss=0.0707 AUROC=0.8156 AP=0.9527
+  [deit_tiny_patch16_224/pill] epoch 400: loss=0.0674 AUROC=0.8142 AP=0.9516
+  [deit_tiny_patch16_224/pill] epoch 450: loss=0.0677 AUROC=0.8161 AP=0.9526
+  [deit_tiny_patch16_224/pill] epoch 500: loss=0.0681 AUROC=0.8164 AP=0.9525
+[18:47:14]   [ 119/210] s42 pill        deit_tiny_patch16_224          AUROC=0.8164 (3.7 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/pill] epoch 50: loss=0.1997 AUROC=0.7518 AP=0.9236
+  [swin_tiny_patch4_window7_224/pill] epoch 100: loss=0.1253 AUROC=0.7703 AP=0.9296
+  [swin_tiny_patch4_window7_224/pill] epoch 150: loss=0.1214 AUROC=0.7692 AP=0.9287
+  [swin_tiny_patch4_window7_224/pill] epoch 200: loss=0.1194 AUROC=0.7714 AP=0.9291
+  [swin_tiny_patch4_window7_224/pill] epoch 250: loss=0.1171 AUROC=0.7769 AP=0.9323
+  [swin_tiny_patch4_window7_224/pill] epoch 300: loss=0.1123 AUROC=0.7774 AP=0.9312
+  [swin_tiny_patch4_window7_224/pill] epoch 350: loss=0.1131 AUROC=0.7717 AP=0.9313
+  [swin_tiny_patch4_window7_224/pill] epoch 400: loss=0.1103 AUROC=0.7769 AP=0.9320
+  [swin_tiny_patch4_window7_224/pill] epoch 450: loss=0.1154 AUROC=0.7785 AP=0.9325
+  [swin_tiny_patch4_window7_224/pill] epoch 500: loss=0.1110 AUROC=0.7741 AP=0.9320
+[18:56:04]   [ 120/210] s42 pill        swin_tiny_patch4_window7_224   AUROC=0.7741 (8.8 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/pill] epoch 50: loss=0.1307 AUROC=0.7881 AP=0.9263
+  [efficientnet_b0/pill] epoch 100: loss=0.1127 AUROC=0.8025 AP=0.9480
+  [efficientnet_b0/pill] epoch 150: loss=0.0963 AUROC=0.8151 AP=0.9534
+  [efficientnet_b0/pill] epoch 200: loss=0.0850 AUROC=0.8145 AP=0.9558
+  [efficientnet_b0/pill] epoch 250: loss=0.0773 AUROC=0.8183 AP=0.9571
+  [efficientnet_b0/pill] epoch 300: loss=0.0756 AUROC=0.8254 AP=0.9596
+  [efficientnet_b0/pill] epoch 350: loss=0.0723 AUROC=0.8290 AP=0.9604
+  [efficientnet_b0/pill] epoch 400: loss=0.0727 AUROC=0.8292 AP=0.9602
+  [efficientnet_b0/pill] epoch 450: loss=0.0707 AUROC=0.8312 AP=0.9609
+  [efficientnet_b0/pill] epoch 500: loss=0.0691 AUROC=0.8298 AP=0.9603
+[19:00:22]   [ 121/210] s42 pill        efficientnet_b0                AUROC=0.8298 (4.3 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/pill] epoch 50: loss=0.1383 AUROC=0.7750 AP=0.9304
+  [efficientnet_b1/pill] epoch 100: loss=0.1177 AUROC=0.7785 AP=0.9454
+  [efficientnet_b1/pill] epoch 150: loss=0.1139 AUROC=0.7008 AP=0.9120
+  [efficientnet_b1/pill] epoch 200: loss=0.1156 AUROC=0.7733 AP=0.9406
+  [efficientnet_b1/pill] epoch 250: loss=0.1078 AUROC=0.8091 AP=0.9537
+  [efficientnet_b1/pill] epoch 300: loss=0.1047 AUROC=0.8148 AP=0.9559
+  [efficientnet_b1/pill] epoch 350: loss=0.0942 AUROC=0.7932 AP=0.9435
+  [efficientnet_b1/pill] epoch 400: loss=0.0892 AUROC=0.8153 AP=0.9571
+  [efficientnet_b1/pill] epoch 450: loss=0.0866 AUROC=0.8197 AP=0.9582
+  [efficientnet_b1/pill] epoch 500: loss=0.0827 AUROC=0.8186 AP=0.9579
+[19:05:51]   [ 122/210] s42 pill        efficientnet_b1                AUROC=0.8186 (5.5 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/pill] epoch 50: loss=0.1338 AUROC=0.7755 AP=0.9261
+  [mobilenetv3_small_100/pill] epoch 100: loss=0.1178 AUROC=0.7856 AP=0.9343
+  [mobilenetv3_small_100/pill] epoch 150: loss=0.1002 AUROC=0.8148 AP=0.9406
+  [mobilenetv3_small_100/pill] epoch 200: loss=0.0879 AUROC=0.8099 AP=0.9504
+  [mobilenetv3_small_100/pill] epoch 250: loss=0.0824 AUROC=0.8172 AP=0.9531
+  [mobilenetv3_small_100/pill] epoch 300: loss=0.0778 AUROC=0.8333 AP=0.9586
+  [mobilenetv3_small_100/pill] epoch 350: loss=0.0711 AUROC=0.8243 AP=0.9560
+  [mobilenetv3_small_100/pill] epoch 400: loss=0.0744 AUROC=0.8252 AP=0.9573
+  [mobilenetv3_small_100/pill] epoch 450: loss=0.0713 AUROC=0.8282 AP=0.9583
+  [mobilenetv3_small_100/pill] epoch 500: loss=0.0710 AUROC=0.8276 AP=0.9574
+[19:08:08]   [ 123/210] s42 pill        mobilenetv3_small_100          AUROC=0.8276 (2.3 min, mb=64 x1, peak=2.2GB)
+  [resnet18/pill] epoch 50: loss=0.1311 AUROC=0.7856 AP=0.9383
+  [resnet18/pill] epoch 100: loss=0.1079 AUROC=0.8055 AP=0.9492
+  [resnet18/pill] epoch 150: loss=0.0960 AUROC=0.8153 AP=0.9537
+  [resnet18/pill] epoch 200: loss=0.0838 AUROC=0.8194 AP=0.9565
+  [resnet18/pill] epoch 250: loss=0.0778 AUROC=0.8219 AP=0.9575
+  [resnet18/pill] epoch 300: loss=0.0727 AUROC=0.8284 AP=0.9595
+  [resnet18/pill] epoch 350: loss=0.0711 AUROC=0.8298 AP=0.9603
+  [resnet18/pill] epoch 400: loss=0.0712 AUROC=0.8284 AP=0.9601
+  [resnet18/pill] epoch 450: loss=0.0675 AUROC=0.8303 AP=0.9604
+  [resnet18/pill] epoch 500: loss=0.0713 AUROC=0.8309 AP=0.9606
+[19:11:16]   [ 124/210] s42 pill        resnet18                       AUROC=0.8309 (3.1 min, mb=64 x1, peak=3.0GB)
+  [resnet34/pill] epoch 50: loss=0.1227 AUROC=0.7829 AP=0.9357
+  [resnet34/pill] epoch 100: loss=0.1058 AUROC=0.8096 AP=0.9493
+  [resnet34/pill] epoch 150: loss=0.0906 AUROC=0.8216 AP=0.9545
+  [resnet34/pill] epoch 200: loss=0.0762 AUROC=0.8219 AP=0.9556
+  [resnet34/pill] epoch 250: loss=0.0737 AUROC=0.8279 AP=0.9571
+  [resnet34/pill] epoch 300: loss=0.0720 AUROC=0.8279 AP=0.9571
+  [resnet34/pill] epoch 350: loss=0.0702 AUROC=0.8303 AP=0.9581
+  [resnet34/pill] epoch 400: loss=0.0681 AUROC=0.8303 AP=0.9586
+  [resnet34/pill] epoch 450: loss=0.0649 AUROC=0.8312 AP=0.9587
+  [resnet34/pill] epoch 500: loss=0.0700 AUROC=0.8314 AP=0.9589
+[19:15:39]   [ 125/210] s42 pill        resnet34                       AUROC=0.8314 (4.4 min, mb=64 x1, peak=4.1GB)
+  [resnet50/pill] epoch 50: loss=0.1323 AUROC=0.7725 AP=0.9311
+  [resnet50/pill] epoch 100: loss=0.1086 AUROC=0.7943 AP=0.9408
+  [resnet50/pill] epoch 150: loss=0.0944 AUROC=0.8066 AP=0.9485
+  [resnet50/pill] epoch 200: loss=0.0832 AUROC=0.8156 AP=0.9536
+  [resnet50/pill] epoch 250: loss=0.0789 AUROC=0.8164 AP=0.9534
+  [resnet50/pill] epoch 300: loss=0.0751 AUROC=0.8202 AP=0.9557
+  [resnet50/pill] epoch 350: loss=0.0729 AUROC=0.8183 AP=0.9554
+  [resnet50/pill] epoch 400: loss=0.0693 AUROC=0.8194 AP=0.9557
+  [resnet50/pill] epoch 450: loss=0.0684 AUROC=0.8189 AP=0.9557
+  [resnet50/pill] epoch 500: loss=0.0678 AUROC=0.8202 AP=0.9558
+[19:21:54]   [ 126/210] s42 pill        resnet50                       AUROC=0.8202 (6.3 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/screw] epoch 50: loss=0.1398 AUROC=0.2355 AP=0.6379
+  [convnextv2_tiny/screw] epoch 100: loss=0.1138 AUROC=0.3134 AP=0.6811
+  [convnextv2_tiny/screw] epoch 150: loss=0.1033 AUROC=0.3314 AP=0.6922
+  [convnextv2_tiny/screw] epoch 200: loss=0.0965 AUROC=0.3677 AP=0.7228
+  [convnextv2_tiny/screw] epoch 250: loss=0.0915 AUROC=0.3880 AP=0.7338
+  [convnextv2_tiny/screw] epoch 300: loss=0.0872 AUROC=0.4066 AP=0.7443
+  [convnextv2_tiny/screw] epoch 350: loss=0.0833 AUROC=0.4245 AP=0.7599
+  [convnextv2_tiny/screw] epoch 400: loss=0.0810 AUROC=0.4278 AP=0.7609
+  [convnextv2_tiny/screw] epoch 450: loss=0.0792 AUROC=0.4343 AP=0.7663
+  [convnextv2_tiny/screw] epoch 500: loss=0.0783 AUROC=0.4271 AP=0.7621
+[19:39:03]   [ 127/210] s42 screw       convnextv2_tiny                AUROC=0.4271 (17.1 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/screw] epoch 50: loss=0.2019 AUROC=0.2701 AP=0.6506
+  [convnextv2_base/screw] epoch 100: loss=0.1224 AUROC=0.3728 AP=0.7286
+  [convnextv2_base/screw] epoch 150: loss=0.1057 AUROC=0.3511 AP=0.7125
+  [convnextv2_base/screw] epoch 200: loss=0.0970 AUROC=0.3847 AP=0.7343
+  [convnextv2_base/screw] epoch 250: loss=0.0923 AUROC=0.3974 AP=0.7482
+  [convnextv2_base/screw] epoch 300: loss=0.0884 AUROC=0.4019 AP=0.7488
+  [convnextv2_base/screw] epoch 350: loss=0.0854 AUROC=0.4280 AP=0.7622
+  [convnextv2_base/screw] epoch 400: loss=0.0801 AUROC=0.4325 AP=0.7645
+  [convnextv2_base/screw] epoch 450: loss=0.0800 AUROC=0.4327 AP=0.7634
+  [convnextv2_base/screw] epoch 500: loss=0.0794 AUROC=0.4339 AP=0.7635
+[20:19:46]   [ 128/210] s42 screw       convnextv2_base                AUROC=0.4339 (40.7 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/screw] epoch 50: loss=0.1247 AUROC=0.3066 AP=0.6600
+  [mobileone_s0/screw] epoch 100: loss=0.1048 AUROC=0.3380 AP=0.6912
+  [mobileone_s0/screw] epoch 150: loss=0.0969 AUROC=0.3695 AP=0.7185
+  [mobileone_s0/screw] epoch 200: loss=0.0898 AUROC=0.4066 AP=0.7457
+  [mobileone_s0/screw] epoch 250: loss=0.0858 AUROC=0.4140 AP=0.7576
+  [mobileone_s0/screw] epoch 300: loss=0.0809 AUROC=0.4267 AP=0.7622
+  [mobileone_s0/screw] epoch 350: loss=0.0779 AUROC=0.4325 AP=0.7669
+  [mobileone_s0/screw] epoch 400: loss=0.0749 AUROC=0.4417 AP=0.7720
+  [mobileone_s0/screw] epoch 450: loss=0.0740 AUROC=0.4448 AP=0.7731
+  [mobileone_s0/screw] epoch 500: loss=0.0738 AUROC=0.4417 AP=0.7733
+[20:29:02]   [ 129/210] s42 screw       mobileone_s0                   AUROC=0.4417 (9.3 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/screw] epoch 50: loss=0.1379 AUROC=0.1750 AP=0.5940
+  [convnext_tiny/screw] epoch 100: loss=0.1127 AUROC=0.2849 AP=0.6622
+  [convnext_tiny/screw] epoch 150: loss=0.1026 AUROC=0.3909 AP=0.7411
+  [convnext_tiny/screw] epoch 200: loss=0.0936 AUROC=0.3767 AP=0.7250
+  [convnext_tiny/screw] epoch 250: loss=0.0861 AUROC=0.3890 AP=0.7379
+  [convnext_tiny/screw] epoch 300: loss=0.0811 AUROC=0.3650 AP=0.7190
+  [convnext_tiny/screw] epoch 350: loss=0.0776 AUROC=0.4161 AP=0.7562
+  [convnext_tiny/screw] epoch 400: loss=0.0759 AUROC=0.4271 AP=0.7644
+  [convnext_tiny/screw] epoch 450: loss=0.0743 AUROC=0.4349 AP=0.7649
+  [convnext_tiny/screw] epoch 500: loss=0.0735 AUROC=0.4253 AP=0.7590
+[20:44:30]   [ 130/210] s42 screw       convnext_tiny                  AUROC=0.4253 (15.5 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/screw] epoch 50: loss=0.1281 AUROC=0.2316 AP=0.6296
+  [convnext_small/screw] epoch 100: loss=0.1090 AUROC=0.3337 AP=0.7010
+  [convnext_small/screw] epoch 150: loss=0.1010 AUROC=0.4448 AP=0.7749
+  [convnext_small/screw] epoch 200: loss=0.0941 AUROC=0.3722 AP=0.7259
+  [convnext_small/screw] epoch 250: loss=0.0885 AUROC=0.4171 AP=0.7604
+  [convnext_small/screw] epoch 300: loss=0.0818 AUROC=0.4118 AP=0.7608
+  [convnext_small/screw] epoch 350: loss=0.0773 AUROC=0.4300 AP=0.7703
+  [convnext_small/screw] epoch 400: loss=0.0766 AUROC=0.4323 AP=0.7729
+  [convnext_small/screw] epoch 450: loss=0.0751 AUROC=0.4333 AP=0.7718
+  [convnext_small/screw] epoch 500: loss=0.0735 AUROC=0.4288 AP=0.7694
+[21:08:20]   [ 131/210] s42 screw       convnext_small                 AUROC=0.4288 (23.8 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/screw] epoch 50: loss=0.1294 AUROC=0.0283 AP=0.5378
+  [vit_tiny_patch16_224/screw] epoch 100: loss=0.1097 AUROC=0.2441 AP=0.6295
+  [vit_tiny_patch16_224/screw] epoch 150: loss=0.0947 AUROC=0.3884 AP=0.7266
+  [vit_tiny_patch16_224/screw] epoch 200: loss=0.0844 AUROC=0.3823 AP=0.7313
+  [vit_tiny_patch16_224/screw] epoch 250: loss=0.0789 AUROC=0.3892 AP=0.7365
+  [vit_tiny_patch16_224/screw] epoch 300: loss=0.0762 AUROC=0.3927 AP=0.7402
+  [vit_tiny_patch16_224/screw] epoch 350: loss=0.0742 AUROC=0.4191 AP=0.7579
+  [vit_tiny_patch16_224/screw] epoch 400: loss=0.0720 AUROC=0.4226 AP=0.7617
+  [vit_tiny_patch16_224/screw] epoch 450: loss=0.0722 AUROC=0.4232 AP=0.7569
+  [vit_tiny_patch16_224/screw] epoch 500: loss=0.0715 AUROC=0.4206 AP=0.7562
+[21:13:08]   [ 132/210] s42 screw       vit_tiny_patch16_224           AUROC=0.4206 (4.8 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/screw] epoch 50: loss=0.1227 AUROC=0.1545 AP=0.5823
+  [deit_tiny_patch16_224/screw] epoch 100: loss=0.1046 AUROC=0.3454 AP=0.6953
+  [deit_tiny_patch16_224/screw] epoch 150: loss=0.0912 AUROC=0.3566 AP=0.7047
+  [deit_tiny_patch16_224/screw] epoch 200: loss=0.0807 AUROC=0.4034 AP=0.7512
+  [deit_tiny_patch16_224/screw] epoch 250: loss=0.0755 AUROC=0.4329 AP=0.7632
+  [deit_tiny_patch16_224/screw] epoch 300: loss=0.0728 AUROC=0.4384 AP=0.7648
+  [deit_tiny_patch16_224/screw] epoch 350: loss=0.0706 AUROC=0.4437 AP=0.7657
+  [deit_tiny_patch16_224/screw] epoch 400: loss=0.0686 AUROC=0.4390 AP=0.7659
+  [deit_tiny_patch16_224/screw] epoch 450: loss=0.0685 AUROC=0.4386 AP=0.7653
+  [deit_tiny_patch16_224/screw] epoch 500: loss=0.0680 AUROC=0.4351 AP=0.7632
+[21:17:56]   [ 133/210] s42 screw       deit_tiny_patch16_224          AUROC=0.4351 (4.8 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/screw] epoch 50: loss=0.1488 AUROC=0.1902 AP=0.6057
+  [swin_tiny_patch4_window7_224/screw] epoch 100: loss=0.1206 AUROC=0.1961 AP=0.6039
+  [swin_tiny_patch4_window7_224/screw] epoch 150: loss=0.1083 AUROC=0.3138 AP=0.6814
+  [swin_tiny_patch4_window7_224/screw] epoch 200: loss=0.1008 AUROC=0.3749 AP=0.7291
+  [swin_tiny_patch4_window7_224/screw] epoch 250: loss=0.0952 AUROC=0.3773 AP=0.7333
+  [swin_tiny_patch4_window7_224/screw] epoch 300: loss=0.0898 AUROC=0.4116 AP=0.7536
+  [swin_tiny_patch4_window7_224/screw] epoch 350: loss=0.0851 AUROC=0.4275 AP=0.7551
+  [swin_tiny_patch4_window7_224/screw] epoch 400: loss=0.0839 AUROC=0.4323 AP=0.7654
+  [swin_tiny_patch4_window7_224/screw] epoch 450: loss=0.0820 AUROC=0.4362 AP=0.7637
+  [swin_tiny_patch4_window7_224/screw] epoch 500: loss=0.0812 AUROC=0.4331 AP=0.7650
+[21:29:48]   [ 134/210] s42 screw       swin_tiny_patch4_window7_224   AUROC=0.4331 (11.9 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/screw] epoch 50: loss=0.1252 AUROC=0.3015 AP=0.6610
+  [efficientnet_b0/screw] epoch 100: loss=0.1083 AUROC=0.2671 AP=0.6368
+  [efficientnet_b0/screw] epoch 150: loss=0.0988 AUROC=0.3478 AP=0.6903
+  [efficientnet_b0/screw] epoch 200: loss=0.0931 AUROC=0.3622 AP=0.6967
+  [efficientnet_b0/screw] epoch 250: loss=0.0873 AUROC=0.3823 AP=0.7131
+  [efficientnet_b0/screw] epoch 300: loss=0.0821 AUROC=0.4021 AP=0.7342
+  [efficientnet_b0/screw] epoch 350: loss=0.0791 AUROC=0.3878 AP=0.7048
+  [efficientnet_b0/screw] epoch 400: loss=0.0774 AUROC=0.4130 AP=0.7332
+  [efficientnet_b0/screw] epoch 450: loss=0.0759 AUROC=0.4247 AP=0.7557
+  [efficientnet_b0/screw] epoch 500: loss=0.0750 AUROC=0.4142 AP=0.7326
+[21:35:23]   [ 135/210] s42 screw       efficientnet_b0                AUROC=0.4142 (5.6 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/screw] epoch 50: loss=0.1354 AUROC=0.2640 AP=0.6574
+  [efficientnet_b1/screw] epoch 100: loss=0.1111 AUROC=0.2345 AP=0.6409
+  [efficientnet_b1/screw] epoch 150: loss=0.1000 AUROC=0.3597 AP=0.7167
+  [efficientnet_b1/screw] epoch 200: loss=0.0951 AUROC=0.3497 AP=0.6836
+  [efficientnet_b1/screw] epoch 250: loss=0.0905 AUROC=0.1990 AP=0.5899
+  [efficientnet_b1/screw] epoch 300: loss=0.0871 AUROC=0.1773 AP=0.5814
+  [efficientnet_b1/screw] epoch 350: loss=0.0827 AUROC=0.4068 AP=0.7541
+  [efficientnet_b1/screw] epoch 400: loss=0.0812 AUROC=0.4603 AP=0.7862
+  [efficientnet_b1/screw] epoch 450: loss=0.0796 AUROC=0.4521 AP=0.7803
+  [efficientnet_b1/screw] epoch 500: loss=0.0802 AUROC=0.4728 AP=0.7958
+[21:42:30]   [ 136/210] s42 screw       efficientnet_b1                AUROC=0.4728 (7.1 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/screw] epoch 50: loss=0.1283 AUROC=0.2714 AP=0.6424
+  [mobilenetv3_small_100/screw] epoch 100: loss=0.1061 AUROC=0.3054 AP=0.6673
+  [mobilenetv3_small_100/screw] epoch 150: loss=0.0978 AUROC=0.3519 AP=0.7112
+  [mobilenetv3_small_100/screw] epoch 200: loss=0.0906 AUROC=0.3991 AP=0.7375
+  [mobilenetv3_small_100/screw] epoch 250: loss=0.0827 AUROC=0.3927 AP=0.7147
+  [mobilenetv3_small_100/screw] epoch 300: loss=0.0782 AUROC=0.4200 AP=0.7521
+  [mobilenetv3_small_100/screw] epoch 350: loss=0.0759 AUROC=0.4093 AP=0.7389
+  [mobilenetv3_small_100/screw] epoch 400: loss=0.0748 AUROC=0.4298 AP=0.7576
+  [mobilenetv3_small_100/screw] epoch 450: loss=0.0738 AUROC=0.4343 AP=0.7603
+  [mobilenetv3_small_100/screw] epoch 500: loss=0.0725 AUROC=0.4280 AP=0.7559
+[21:45:18]   [ 137/210] s42 screw       mobilenetv3_small_100          AUROC=0.4280 (2.8 min, mb=64 x1, peak=2.2GB)
+  [resnet18/screw] epoch 50: loss=0.1228 AUROC=0.3478 AP=0.7060
+  [resnet18/screw] epoch 100: loss=0.1031 AUROC=0.3642 AP=0.7157
+  [resnet18/screw] epoch 150: loss=0.0943 AUROC=0.3874 AP=0.7351
+  [resnet18/screw] epoch 200: loss=0.0875 AUROC=0.4152 AP=0.7486
+  [resnet18/screw] epoch 250: loss=0.0803 AUROC=0.4226 AP=0.7563
+  [resnet18/screw] epoch 300: loss=0.0762 AUROC=0.4304 AP=0.7616
+  [resnet18/screw] epoch 350: loss=0.0743 AUROC=0.4302 AP=0.7618
+  [resnet18/screw] epoch 400: loss=0.0722 AUROC=0.4380 AP=0.7655
+  [resnet18/screw] epoch 450: loss=0.0724 AUROC=0.4448 AP=0.7694
+  [resnet18/screw] epoch 500: loss=0.0715 AUROC=0.4398 AP=0.7659
+[21:49:26]   [ 138/210] s42 screw       resnet18                       AUROC=0.4398 (4.1 min, mb=64 x1, peak=3.0GB)
+  [resnet34/screw] epoch 50: loss=0.1262 AUROC=0.2531 AP=0.6404
+  [resnet34/screw] epoch 100: loss=0.1061 AUROC=0.3255 AP=0.6988
+  [resnet34/screw] epoch 150: loss=0.0960 AUROC=0.3486 AP=0.7116
+  [resnet34/screw] epoch 200: loss=0.0898 AUROC=0.3802 AP=0.7288
+  [resnet34/screw] epoch 250: loss=0.0823 AUROC=0.3989 AP=0.7442
+  [resnet34/screw] epoch 300: loss=0.0792 AUROC=0.4159 AP=0.7525
+  [resnet34/screw] epoch 350: loss=0.0755 AUROC=0.4226 AP=0.7580
+  [resnet34/screw] epoch 400: loss=0.0751 AUROC=0.4286 AP=0.7598
+  [resnet34/screw] epoch 450: loss=0.0731 AUROC=0.4333 AP=0.7641
+  [resnet34/screw] epoch 500: loss=0.0736 AUROC=0.4290 AP=0.7615
+[21:55:11]   [ 139/210] s42 screw       resnet34                       AUROC=0.4290 (5.7 min, mb=64 x1, peak=4.1GB)
+  [resnet50/screw] epoch 50: loss=0.1288 AUROC=0.2671 AP=0.6520
+  [resnet50/screw] epoch 100: loss=0.1094 AUROC=0.3195 AP=0.6877
+  [resnet50/screw] epoch 150: loss=0.0988 AUROC=0.3663 AP=0.7160
+  [resnet50/screw] epoch 200: loss=0.0889 AUROC=0.3884 AP=0.7279
+  [resnet50/screw] epoch 250: loss=0.0835 AUROC=0.4066 AP=0.7364
+  [resnet50/screw] epoch 300: loss=0.0773 AUROC=0.4140 AP=0.7406
+  [resnet50/screw] epoch 350: loss=0.0754 AUROC=0.4273 AP=0.7509
+  [resnet50/screw] epoch 400: loss=0.0738 AUROC=0.4275 AP=0.7542
+  [resnet50/screw] epoch 450: loss=0.0732 AUROC=0.4304 AP=0.7585
+  [resnet50/screw] epoch 500: loss=0.0734 AUROC=0.4275 AP=0.7556
+[22:03:32]   [ 140/210] s42 screw       resnet50                       AUROC=0.4275 (8.4 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/tile] epoch 50: loss=0.3755 AUROC=0.9297 AP=0.9738
+  [convnextv2_tiny/tile] epoch 100: loss=0.3678 AUROC=0.9275 AP=0.9731
+  [convnextv2_tiny/tile] epoch 150: loss=0.3660 AUROC=0.9286 AP=0.9734
+  [convnextv2_tiny/tile] epoch 200: loss=0.3679 AUROC=0.9268 AP=0.9728
+  [convnextv2_tiny/tile] epoch 250: loss=0.3633 AUROC=0.9253 AP=0.9723
+  [convnextv2_tiny/tile] epoch 300: loss=0.3632 AUROC=0.9257 AP=0.9725
+  [convnextv2_tiny/tile] epoch 350: loss=0.3620 AUROC=0.9278 AP=0.9733
+  [convnextv2_tiny/tile] epoch 400: loss=0.3624 AUROC=0.9293 AP=0.9739
+  [convnextv2_tiny/tile] epoch 450: loss=0.3604 AUROC=0.9307 AP=0.9745
+  [convnextv2_tiny/tile] epoch 500: loss=0.3614 AUROC=0.9307 AP=0.9745
+[22:17:57]   [ 141/210] s42 tile        convnextv2_tiny                AUROC=0.9307 (14.4 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/tile] epoch 50: loss=0.3784 AUROC=0.8932 AP=0.9253
+  [convnextv2_base/tile] epoch 100: loss=0.4047 AUROC=0.7049 AP=0.8331
+  [convnextv2_base/tile] epoch 150: loss=0.3721 AUROC=0.8918 AP=0.9496
+  [convnextv2_base/tile] epoch 200: loss=0.3749 AUROC=0.8586 AP=0.8991
+  [convnextv2_base/tile] epoch 250: loss=0.3670 AUROC=0.9174 AP=0.9680
+  [convnextv2_base/tile] epoch 300: loss=0.3653 AUROC=0.9271 AP=0.9729
+  [convnextv2_base/tile] epoch 350: loss=0.3629 AUROC=0.9311 AP=0.9743
+  [convnextv2_base/tile] epoch 400: loss=0.3665 AUROC=0.9307 AP=0.9742
+  [convnextv2_base/tile] epoch 450: loss=0.3608 AUROC=0.9311 AP=0.9741
+  [convnextv2_base/tile] epoch 500: loss=0.3646 AUROC=0.9322 AP=0.9747
+[22:48:45]   [ 142/210] s42 tile        convnextv2_base                AUROC=0.9322 (30.8 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/tile] epoch 50: loss=0.3747 AUROC=0.9239 AP=0.9716
+  [mobileone_s0/tile] epoch 100: loss=0.3653 AUROC=0.9232 AP=0.9716
+  [mobileone_s0/tile] epoch 150: loss=0.6455 AUROC=0.8240 AP=0.9188
+  [mobileone_s0/tile] epoch 200: loss=0.3738 AUROC=0.9253 AP=0.9719
+  [mobileone_s0/tile] epoch 250: loss=0.3678 AUROC=0.9268 AP=0.9727
+  [mobileone_s0/tile] epoch 300: loss=0.3658 AUROC=0.9235 AP=0.9715
+  [mobileone_s0/tile] epoch 350: loss=0.3649 AUROC=0.9246 AP=0.9720
+  [mobileone_s0/tile] epoch 400: loss=0.3647 AUROC=0.9242 AP=0.9720
+  [mobileone_s0/tile] epoch 450: loss=0.3631 AUROC=0.9239 AP=0.9718
+  [mobileone_s0/tile] epoch 500: loss=0.3623 AUROC=0.9239 AP=0.9719
+[22:55:28]   [ 143/210] s42 tile        mobileone_s0                   AUROC=0.9239 (6.7 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/tile] epoch 50: loss=0.3779 AUROC=0.9246 AP=0.9720
+  [convnext_tiny/tile] epoch 100: loss=0.3668 AUROC=0.9264 AP=0.9727
+  [convnext_tiny/tile] epoch 150: loss=0.3661 AUROC=0.9275 AP=0.9730
+  [convnext_tiny/tile] epoch 200: loss=0.3654 AUROC=0.9250 AP=0.9720
+  [convnext_tiny/tile] epoch 250: loss=0.3645 AUROC=0.9246 AP=0.9721
+  [convnext_tiny/tile] epoch 300: loss=0.3639 AUROC=0.9257 AP=0.9724
+  [convnext_tiny/tile] epoch 350: loss=0.3589 AUROC=0.9239 AP=0.9719
+  [convnext_tiny/tile] epoch 400: loss=0.3445 AUROC=0.9253 AP=0.9725
+  [convnext_tiny/tile] epoch 450: loss=0.3300 AUROC=0.9286 AP=0.9739
+  [convnext_tiny/tile] epoch 500: loss=0.3300 AUROC=0.9297 AP=0.9742
+[23:06:57]   [ 144/210] s42 tile        convnext_tiny                  AUROC=0.9297 (11.5 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/tile] epoch 50: loss=0.3707 AUROC=0.9275 AP=0.9730
+  [convnext_small/tile] epoch 100: loss=0.3667 AUROC=0.9286 AP=0.9734
+  [convnext_small/tile] epoch 150: loss=0.3657 AUROC=0.9282 AP=0.9734
+  [convnext_small/tile] epoch 200: loss=0.3650 AUROC=0.9282 AP=0.9733
+  [convnext_small/tile] epoch 250: loss=0.3638 AUROC=0.9271 AP=0.9731
+  [convnext_small/tile] epoch 300: loss=0.3629 AUROC=0.9271 AP=0.9729
+  [convnext_small/tile] epoch 350: loss=0.3635 AUROC=0.9260 AP=0.9725
+  [convnext_small/tile] epoch 400: loss=0.3636 AUROC=0.9257 AP=0.9724
+  [convnext_small/tile] epoch 450: loss=0.3639 AUROC=0.9260 AP=0.9726
+  [convnext_small/tile] epoch 500: loss=0.3631 AUROC=0.9260 AP=0.9725
+[23:24:30]   [ 145/210] s42 tile        convnext_small                 AUROC=0.9260 (17.6 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/tile] epoch 50: loss=0.3810 AUROC=0.7489 AP=0.8972
+  [vit_tiny_patch16_224/tile] epoch 100: loss=0.3373 AUROC=0.9127 AP=0.9577
+  [vit_tiny_patch16_224/tile] epoch 150: loss=0.2809 AUROC=0.9343 AP=0.9724
+  [vit_tiny_patch16_224/tile] epoch 200: loss=0.2583 AUROC=0.9448 AP=0.9785
+  [vit_tiny_patch16_224/tile] epoch 250: loss=0.2409 AUROC=0.9563 AP=0.9836
+  [vit_tiny_patch16_224/tile] epoch 300: loss=0.2328 AUROC=0.9398 AP=0.9778
+  [vit_tiny_patch16_224/tile] epoch 350: loss=0.2289 AUROC=0.9610 AP=0.9856
+  [vit_tiny_patch16_224/tile] epoch 400: loss=0.2253 AUROC=0.9762 AP=0.9914
+  [vit_tiny_patch16_224/tile] epoch 450: loss=0.2205 AUROC=0.9704 AP=0.9892
+  [vit_tiny_patch16_224/tile] epoch 500: loss=0.2204 AUROC=0.9668 AP=0.9879
+[23:28:02]   [ 146/210] s42 tile        vit_tiny_patch16_224           AUROC=0.9668 (3.5 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/tile] epoch 50: loss=0.3686 AUROC=0.9304 AP=0.9731
+  [deit_tiny_patch16_224/tile] epoch 100: loss=0.3266 AUROC=0.9159 AP=0.9677
+  [deit_tiny_patch16_224/tile] epoch 150: loss=0.2823 AUROC=0.9517 AP=0.9820
+  [deit_tiny_patch16_224/tile] epoch 200: loss=0.2641 AUROC=0.9481 AP=0.9806
+  [deit_tiny_patch16_224/tile] epoch 250: loss=0.2459 AUROC=0.9668 AP=0.9875
+  [deit_tiny_patch16_224/tile] epoch 300: loss=0.2361 AUROC=0.9524 AP=0.9814
+  [deit_tiny_patch16_224/tile] epoch 350: loss=0.2361 AUROC=0.9517 AP=0.9817
+  [deit_tiny_patch16_224/tile] epoch 400: loss=0.2305 AUROC=0.9784 AP=0.9925
+  [deit_tiny_patch16_224/tile] epoch 450: loss=0.2259 AUROC=0.9715 AP=0.9894
+  [deit_tiny_patch16_224/tile] epoch 500: loss=0.2263 AUROC=0.9632 AP=0.9859
+[23:31:33]   [ 147/210] s42 tile        deit_tiny_patch16_224          AUROC=0.9632 (3.5 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/tile] epoch 50: loss=0.3696 AUROC=0.9246 AP=0.9721
+  [swin_tiny_patch4_window7_224/tile] epoch 100: loss=0.4527 AUROC=0.9073 AP=0.9656
+  [swin_tiny_patch4_window7_224/tile] epoch 150: loss=0.3659 AUROC=0.9260 AP=0.9724
+  [swin_tiny_patch4_window7_224/tile] epoch 200: loss=0.3652 AUROC=0.9286 AP=0.9732
+  [swin_tiny_patch4_window7_224/tile] epoch 250: loss=0.3657 AUROC=0.9235 AP=0.9716
+  [swin_tiny_patch4_window7_224/tile] epoch 300: loss=0.3636 AUROC=0.9271 AP=0.9729
+  [swin_tiny_patch4_window7_224/tile] epoch 350: loss=0.3638 AUROC=0.9257 AP=0.9724
+  [swin_tiny_patch4_window7_224/tile] epoch 400: loss=0.3631 AUROC=0.9257 AP=0.9723
+  [swin_tiny_patch4_window7_224/tile] epoch 450: loss=0.3642 AUROC=0.9246 AP=0.9720
+  [swin_tiny_patch4_window7_224/tile] epoch 500: loss=0.3635 AUROC=0.9264 AP=0.9727
+[23:40:10]   [ 148/210] s42 tile        swin_tiny_patch4_window7_224   AUROC=0.9264 (8.6 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/tile] epoch 50: loss=0.3784 AUROC=0.8741 AP=0.9106
+  [efficientnet_b0/tile] epoch 100: loss=0.3645 AUROC=0.9441 AP=0.9802
+  [efficientnet_b0/tile] epoch 150: loss=0.3582 AUROC=0.9318 AP=0.9665
+  [efficientnet_b0/tile] epoch 200: loss=0.3521 AUROC=0.9329 AP=0.9672
+  [efficientnet_b0/tile] epoch 250: loss=0.3478 AUROC=0.9188 AP=0.9543
+  [efficientnet_b0/tile] epoch 300: loss=0.3376 AUROC=0.9358 AP=0.9586
+  [efficientnet_b0/tile] epoch 350: loss=0.3276 AUROC=0.9260 AP=0.9566
+  [efficientnet_b0/tile] epoch 400: loss=0.3175 AUROC=0.9260 AP=0.9568
+  [efficientnet_b0/tile] epoch 450: loss=0.3102 AUROC=0.9260 AP=0.9580
+  [efficientnet_b0/tile] epoch 500: loss=0.3124 AUROC=0.9246 AP=0.9575
+[23:44:14]   [ 149/210] s42 tile        efficientnet_b0                AUROC=0.9246 (4.1 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/tile] epoch 50: loss=0.3732 AUROC=0.9095 AP=0.9484
+  [efficientnet_b1/tile] epoch 100: loss=0.3694 AUROC=0.9246 AP=0.9719
+  [efficientnet_b1/tile] epoch 150: loss=0.3645 AUROC=0.9264 AP=0.9728
+  [efficientnet_b1/tile] epoch 200: loss=0.3857 AUROC=0.9318 AP=0.9742
+  [efficientnet_b1/tile] epoch 250: loss=0.3741 AUROC=0.8914 AP=0.9331
+  [efficientnet_b1/tile] epoch 300: loss=0.3713 AUROC=0.8828 AP=0.9049
+  [efficientnet_b1/tile] epoch 350: loss=0.3689 AUROC=0.8907 AP=0.9264
+  [efficientnet_b1/tile] epoch 400: loss=0.3691 AUROC=0.8456 AP=0.8702
+  [efficientnet_b1/tile] epoch 450: loss=0.3686 AUROC=0.9246 AP=0.9717
+  [efficientnet_b1/tile] epoch 500: loss=0.3698 AUROC=0.9246 AP=0.9718
+[23:49:25]   [ 150/210] s42 tile        efficientnet_b1                AUROC=0.9246 (5.2 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/tile] epoch 50: loss=0.3753 AUROC=0.9167 AP=0.9686
+  [mobilenetv3_small_100/tile] epoch 100: loss=0.3669 AUROC=0.9260 AP=0.9724
+  [mobilenetv3_small_100/tile] epoch 150: loss=0.3645 AUROC=0.9304 AP=0.9742
+  [mobilenetv3_small_100/tile] epoch 200: loss=0.3600 AUROC=0.9282 AP=0.9734
+  [mobilenetv3_small_100/tile] epoch 250: loss=0.3554 AUROC=0.9318 AP=0.9748
+  [mobilenetv3_small_100/tile] epoch 300: loss=0.3446 AUROC=0.9376 AP=0.9769
+  [mobilenetv3_small_100/tile] epoch 350: loss=0.3408 AUROC=0.9387 AP=0.9773
+  [mobilenetv3_small_100/tile] epoch 400: loss=0.3365 AUROC=0.9426 AP=0.9788
+  [mobilenetv3_small_100/tile] epoch 450: loss=0.3345 AUROC=0.9376 AP=0.9771
+  [mobilenetv3_small_100/tile] epoch 500: loss=0.3357 AUROC=0.9383 AP=0.9774
+[23:51:29]   [ 151/210] s42 tile        mobilenetv3_small_100          AUROC=0.9383 (2.1 min, mb=64 x1, peak=2.2GB)
+  [resnet18/tile] epoch 50: loss=0.3713 AUROC=0.9315 AP=0.9746
+  [resnet18/tile] epoch 100: loss=0.3665 AUROC=0.9380 AP=0.9769
+  [resnet18/tile] epoch 150: loss=0.3604 AUROC=0.9369 AP=0.9766
+  [resnet18/tile] epoch 200: loss=0.3727 AUROC=0.9325 AP=0.9744
+  [resnet18/tile] epoch 250: loss=0.3682 AUROC=0.9289 AP=0.9736
+  [resnet18/tile] epoch 300: loss=0.3647 AUROC=0.9271 AP=0.9728
+  [resnet18/tile] epoch 350: loss=0.3623 AUROC=0.9325 AP=0.9751
+  [resnet18/tile] epoch 400: loss=0.3623 AUROC=0.9340 AP=0.9756
+  [resnet18/tile] epoch 450: loss=0.3626 AUROC=0.9347 AP=0.9759
+  [resnet18/tile] epoch 500: loss=0.3625 AUROC=0.9325 AP=0.9751
+[23:54:31]   [ 152/210] s42 tile        resnet18                       AUROC=0.9325 (3.0 min, mb=64 x1, peak=3.0GB)
+  [resnet34/tile] epoch 50: loss=0.3766 AUROC=0.9217 AP=0.9708
+  [resnet34/tile] epoch 100: loss=0.3659 AUROC=0.9304 AP=0.9740
+  [resnet34/tile] epoch 150: loss=0.3635 AUROC=0.9354 AP=0.9763
+  [resnet34/tile] epoch 200: loss=0.3587 AUROC=0.9426 AP=0.9786
+  [resnet34/tile] epoch 250: loss=0.3560 AUROC=0.9423 AP=0.9787
+  [resnet34/tile] epoch 300: loss=0.3518 AUROC=0.9448 AP=0.9795
+  [resnet34/tile] epoch 350: loss=0.3454 AUROC=0.9434 AP=0.9789
+  [resnet34/tile] epoch 400: loss=0.3360 AUROC=0.9437 AP=0.9791
+  [resnet34/tile] epoch 450: loss=0.3306 AUROC=0.9441 AP=0.9793
+  [resnet34/tile] epoch 500: loss=0.3298 AUROC=0.9441 AP=0.9792
+[23:58:43]   [ 153/210] s42 tile        resnet34                       AUROC=0.9441 (4.2 min, mb=64 x1, peak=4.1GB)
+  [resnet50/tile] epoch 50: loss=0.3699 AUROC=0.9333 AP=0.9758
+  [resnet50/tile] epoch 100: loss=0.3620 AUROC=0.9419 AP=0.9785
+  [resnet50/tile] epoch 150: loss=0.5973 AUROC=0.5162 AP=0.7438
+  [resnet50/tile] epoch 200: loss=0.3668 AUROC=0.9217 AP=0.9707
+  [resnet50/tile] epoch 250: loss=0.3645 AUROC=0.9304 AP=0.9748
+  [resnet50/tile] epoch 300: loss=0.3628 AUROC=0.9343 AP=0.9763
+  [resnet50/tile] epoch 350: loss=0.3619 AUROC=0.9354 AP=0.9767
+  [resnet50/tile] epoch 400: loss=0.3602 AUROC=0.9376 AP=0.9776
+  [resnet50/tile] epoch 450: loss=0.3599 AUROC=0.9394 AP=0.9782
+  [resnet50/tile] epoch 500: loss=0.3593 AUROC=0.9394 AP=0.9782
+[00:04:48]   [ 154/210] s42 tile        resnet50                       AUROC=0.9394 (6.1 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/toothbrush] epoch 50: loss=0.1859 AUROC=0.6667 AP=0.8719
+  [convnextv2_tiny/toothbrush] epoch 100: loss=0.1546 AUROC=0.7194 AP=0.8924
+  [convnextv2_tiny/toothbrush] epoch 150: loss=0.1356 AUROC=0.7083 AP=0.8892
+  [convnextv2_tiny/toothbrush] epoch 200: loss=0.1264 AUROC=0.7417 AP=0.9058
+  [convnextv2_tiny/toothbrush] epoch 250: loss=0.1172 AUROC=0.7472 AP=0.9095
+  [convnextv2_tiny/toothbrush] epoch 300: loss=0.1147 AUROC=0.7778 AP=0.9211
+  [convnextv2_tiny/toothbrush] epoch 350: loss=0.1102 AUROC=0.7889 AP=0.9249
+  [convnextv2_tiny/toothbrush] epoch 400: loss=0.1084 AUROC=0.7889 AP=0.9237
+  [convnextv2_tiny/toothbrush] epoch 450: loss=0.1077 AUROC=0.7806 AP=0.9205
+  [convnextv2_tiny/toothbrush] epoch 500: loss=0.1075 AUROC=0.7972 AP=0.9279
+[00:08:31]   [ 155/210] s42 toothbrush  convnextv2_tiny                AUROC=0.7972 (3.7 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/toothbrush] epoch 50: loss=0.1822 AUROC=0.6639 AP=0.8687
+  [convnextv2_base/toothbrush] epoch 100: loss=0.1523 AUROC=0.7028 AP=0.8877
+  [convnextv2_base/toothbrush] epoch 150: loss=0.1328 AUROC=0.7167 AP=0.8949
+  [convnextv2_base/toothbrush] epoch 200: loss=0.1206 AUROC=0.7556 AP=0.9136
+  [convnextv2_base/toothbrush] epoch 250: loss=0.1149 AUROC=0.7833 AP=0.9235
+  [convnextv2_base/toothbrush] epoch 300: loss=0.1107 AUROC=0.7778 AP=0.9204
+  [convnextv2_base/toothbrush] epoch 350: loss=0.1072 AUROC=0.7833 AP=0.9212
+  [convnextv2_base/toothbrush] epoch 400: loss=0.1052 AUROC=0.7778 AP=0.9200
+  [convnextv2_base/toothbrush] epoch 450: loss=0.1061 AUROC=0.7889 AP=0.9241
+  [convnextv2_base/toothbrush] epoch 500: loss=0.1064 AUROC=0.7917 AP=0.9258
+[00:16:39]   [ 156/210] s42 toothbrush  convnextv2_base                AUROC=0.7917 (8.1 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/toothbrush] epoch 50: loss=0.1950 AUROC=0.6139 AP=0.8530
+  [mobileone_s0/toothbrush] epoch 100: loss=0.1584 AUROC=0.6750 AP=0.8743
+  [mobileone_s0/toothbrush] epoch 150: loss=0.1316 AUROC=0.7333 AP=0.8986
+  [mobileone_s0/toothbrush] epoch 200: loss=0.1169 AUROC=0.7444 AP=0.9065
+  [mobileone_s0/toothbrush] epoch 250: loss=0.1061 AUROC=0.7611 AP=0.9133
+  [mobileone_s0/toothbrush] epoch 300: loss=0.1018 AUROC=0.7833 AP=0.9229
+  [mobileone_s0/toothbrush] epoch 350: loss=0.0962 AUROC=0.7917 AP=0.9254
+  [mobileone_s0/toothbrush] epoch 400: loss=0.0939 AUROC=0.7972 AP=0.9278
+  [mobileone_s0/toothbrush] epoch 450: loss=0.0934 AUROC=0.7833 AP=0.9223
+  [mobileone_s0/toothbrush] epoch 500: loss=0.0930 AUROC=0.8083 AP=0.9313
+[00:18:25]   [ 157/210] s42 toothbrush  mobileone_s0                   AUROC=0.8083 (1.8 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/toothbrush] epoch 50: loss=0.1821 AUROC=0.6833 AP=0.8765
+  [convnext_tiny/toothbrush] epoch 100: loss=0.1500 AUROC=0.7083 AP=0.8879
+  [convnext_tiny/toothbrush] epoch 150: loss=0.1332 AUROC=0.7264 AP=0.8961
+  [convnext_tiny/toothbrush] epoch 200: loss=0.1226 AUROC=0.7694 AP=0.9157
+  [convnext_tiny/toothbrush] epoch 250: loss=0.1135 AUROC=0.7806 AP=0.9210
+  [convnext_tiny/toothbrush] epoch 300: loss=0.1100 AUROC=0.7861 AP=0.9235
+  [convnext_tiny/toothbrush] epoch 350: loss=0.1048 AUROC=0.8028 AP=0.9296
+  [convnext_tiny/toothbrush] epoch 400: loss=0.1024 AUROC=0.8000 AP=0.9276
+  [convnext_tiny/toothbrush] epoch 450: loss=0.1014 AUROC=0.7889 AP=0.9224
+  [convnext_tiny/toothbrush] epoch 500: loss=0.1012 AUROC=0.8056 AP=0.9295
+[00:21:24]   [ 158/210] s42 toothbrush  convnext_tiny                  AUROC=0.8056 (3.0 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/toothbrush] epoch 50: loss=0.2023 AUROC=0.6056 AP=0.8432
+  [convnext_small/toothbrush] epoch 100: loss=0.1739 AUROC=0.6056 AP=0.8427
+  [convnext_small/toothbrush] epoch 150: loss=0.1494 AUROC=0.6667 AP=0.8723
+  [convnext_small/toothbrush] epoch 200: loss=0.1312 AUROC=0.7111 AP=0.8904
+  [convnext_small/toothbrush] epoch 250: loss=0.1195 AUROC=0.7444 AP=0.9056
+  [convnext_small/toothbrush] epoch 300: loss=0.1153 AUROC=0.7694 AP=0.9164
+  [convnext_small/toothbrush] epoch 350: loss=0.1098 AUROC=0.7806 AP=0.9203
+  [convnext_small/toothbrush] epoch 400: loss=0.1075 AUROC=0.7889 AP=0.9228
+  [convnext_small/toothbrush] epoch 450: loss=0.1064 AUROC=0.7722 AP=0.9184
+  [convnext_small/toothbrush] epoch 500: loss=0.1064 AUROC=0.8000 AP=0.9276
+[00:25:59]   [ 159/210] s42 toothbrush  convnext_small                 AUROC=0.8000 (4.6 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/toothbrush] epoch 50: loss=0.1784 AUROC=0.7278 AP=0.8964
+  [vit_tiny_patch16_224/toothbrush] epoch 100: loss=0.1461 AUROC=0.7167 AP=0.8946
+  [vit_tiny_patch16_224/toothbrush] epoch 150: loss=0.1260 AUROC=0.7528 AP=0.9078
+  [vit_tiny_patch16_224/toothbrush] epoch 200: loss=0.1138 AUROC=0.8111 AP=0.9307
+  [vit_tiny_patch16_224/toothbrush] epoch 250: loss=0.1045 AUROC=0.8222 AP=0.9367
+  [vit_tiny_patch16_224/toothbrush] epoch 300: loss=0.0998 AUROC=0.8333 AP=0.9412
+  [vit_tiny_patch16_224/toothbrush] epoch 350: loss=0.0957 AUROC=0.8417 AP=0.9439
+  [vit_tiny_patch16_224/toothbrush] epoch 400: loss=0.0938 AUROC=0.8444 AP=0.9445
+  [vit_tiny_patch16_224/toothbrush] epoch 450: loss=0.0937 AUROC=0.8389 AP=0.9422
+  [vit_tiny_patch16_224/toothbrush] epoch 500: loss=0.0931 AUROC=0.8444 AP=0.9445
+[00:26:55]   [ 160/210] s42 toothbrush  vit_tiny_patch16_224           AUROC=0.8444 (0.9 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/toothbrush] epoch 50: loss=0.1707 AUROC=0.6833 AP=0.8740
+  [deit_tiny_patch16_224/toothbrush] epoch 100: loss=0.1415 AUROC=0.7167 AP=0.8925
+  [deit_tiny_patch16_224/toothbrush] epoch 150: loss=0.1192 AUROC=0.7500 AP=0.9061
+  [deit_tiny_patch16_224/toothbrush] epoch 200: loss=0.1092 AUROC=0.7694 AP=0.9172
+  [deit_tiny_patch16_224/toothbrush] epoch 250: loss=0.1013 AUROC=0.7833 AP=0.9234
+  [deit_tiny_patch16_224/toothbrush] epoch 300: loss=0.0961 AUROC=0.8194 AP=0.9371
+  [deit_tiny_patch16_224/toothbrush] epoch 350: loss=0.0923 AUROC=0.8250 AP=0.9386
+  [deit_tiny_patch16_224/toothbrush] epoch 400: loss=0.0906 AUROC=0.8222 AP=0.9364
+  [deit_tiny_patch16_224/toothbrush] epoch 450: loss=0.0905 AUROC=0.8139 AP=0.9327
+  [deit_tiny_patch16_224/toothbrush] epoch 500: loss=0.0899 AUROC=0.8278 AP=0.9378
+[00:27:52]   [ 161/210] s42 toothbrush  deit_tiny_patch16_224          AUROC=0.8278 (0.9 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 50: loss=0.2026 AUROC=0.6000 AP=0.8409
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 100: loss=0.1804 AUROC=0.6111 AP=0.8484
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 150: loss=0.1619 AUROC=0.6444 AP=0.8635
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 200: loss=0.1442 AUROC=0.6806 AP=0.8799
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 250: loss=0.1310 AUROC=0.7056 AP=0.8899
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 300: loss=0.1252 AUROC=0.7139 AP=0.8927
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 350: loss=0.1178 AUROC=0.7306 AP=0.9002
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 400: loss=0.1143 AUROC=0.7417 AP=0.9058
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 450: loss=0.1129 AUROC=0.7361 AP=0.9027
+  [swin_tiny_patch4_window7_224/toothbrush] epoch 500: loss=0.1126 AUROC=0.7556 AP=0.9116
+[00:30:08]   [ 162/210] s42 toothbrush  swin_tiny_patch4_window7_224   AUROC=0.7556 (2.3 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/toothbrush] epoch 50: loss=0.1861 AUROC=0.6028 AP=0.8362
+  [efficientnet_b0/toothbrush] epoch 100: loss=0.1458 AUROC=0.7083 AP=0.8871
+  [efficientnet_b0/toothbrush] epoch 150: loss=0.1225 AUROC=0.7417 AP=0.9044
+  [efficientnet_b0/toothbrush] epoch 200: loss=0.1105 AUROC=0.7750 AP=0.9179
+  [efficientnet_b0/toothbrush] epoch 250: loss=0.1010 AUROC=0.7861 AP=0.9218
+  [efficientnet_b0/toothbrush] epoch 300: loss=0.0965 AUROC=0.8028 AP=0.9271
+  [efficientnet_b0/toothbrush] epoch 350: loss=0.0919 AUROC=0.8028 AP=0.9272
+  [efficientnet_b0/toothbrush] epoch 400: loss=0.0899 AUROC=0.8083 AP=0.9287
+  [efficientnet_b0/toothbrush] epoch 450: loss=0.0894 AUROC=0.8000 AP=0.9264
+  [efficientnet_b0/toothbrush] epoch 500: loss=0.0891 AUROC=0.8167 AP=0.9321
+[00:31:14]   [ 163/210] s42 toothbrush  efficientnet_b0                AUROC=0.8167 (1.1 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/toothbrush] epoch 50: loss=0.1927 AUROC=0.6861 AP=0.8881
+  [efficientnet_b1/toothbrush] epoch 100: loss=0.1571 AUROC=0.6944 AP=0.8847
+  [efficientnet_b1/toothbrush] epoch 150: loss=0.1355 AUROC=0.7194 AP=0.8948
+  [efficientnet_b1/toothbrush] epoch 200: loss=0.1206 AUROC=0.7472 AP=0.9073
+  [efficientnet_b1/toothbrush] epoch 250: loss=0.1090 AUROC=0.7611 AP=0.9137
+  [efficientnet_b1/toothbrush] epoch 300: loss=0.1039 AUROC=0.7833 AP=0.9217
+  [efficientnet_b1/toothbrush] epoch 350: loss=0.0984 AUROC=0.7861 AP=0.9223
+  [efficientnet_b1/toothbrush] epoch 400: loss=0.0961 AUROC=0.7944 AP=0.9249
+  [efficientnet_b1/toothbrush] epoch 450: loss=0.0955 AUROC=0.7833 AP=0.9211
+  [efficientnet_b1/toothbrush] epoch 500: loss=0.0951 AUROC=0.8000 AP=0.9264
+[00:32:37]   [ 164/210] s42 toothbrush  efficientnet_b1                AUROC=0.8000 (1.4 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/toothbrush] epoch 50: loss=0.2022 AUROC=0.5861 AP=0.7543
+  [mobilenetv3_small_100/toothbrush] epoch 100: loss=0.1569 AUROC=0.6806 AP=0.8747
+  [mobilenetv3_small_100/toothbrush] epoch 150: loss=0.1312 AUROC=0.7222 AP=0.8951
+  [mobilenetv3_small_100/toothbrush] epoch 200: loss=0.1160 AUROC=0.7500 AP=0.9084
+  [mobilenetv3_small_100/toothbrush] epoch 250: loss=0.1045 AUROC=0.7750 AP=0.9173
+  [mobilenetv3_small_100/toothbrush] epoch 300: loss=0.1000 AUROC=0.7917 AP=0.9242
+  [mobilenetv3_small_100/toothbrush] epoch 350: loss=0.0950 AUROC=0.8000 AP=0.9278
+  [mobilenetv3_small_100/toothbrush] epoch 400: loss=0.0927 AUROC=0.8111 AP=0.9313
+  [mobilenetv3_small_100/toothbrush] epoch 450: loss=0.0921 AUROC=0.8028 AP=0.9282
+  [mobilenetv3_small_100/toothbrush] epoch 500: loss=0.0918 AUROC=0.8139 AP=0.9322
+[00:33:11]   [ 165/210] s42 toothbrush  mobilenetv3_small_100          AUROC=0.8139 (0.6 min, mb=64 x1, peak=2.2GB)
+  [resnet18/toothbrush] epoch 50: loss=0.1880 AUROC=0.6278 AP=0.8573
+  [resnet18/toothbrush] epoch 100: loss=0.1485 AUROC=0.7083 AP=0.8896
+  [resnet18/toothbrush] epoch 150: loss=0.1235 AUROC=0.7361 AP=0.9011
+  [resnet18/toothbrush] epoch 200: loss=0.1109 AUROC=0.7778 AP=0.9190
+  [resnet18/toothbrush] epoch 250: loss=0.1009 AUROC=0.7750 AP=0.9185
+  [resnet18/toothbrush] epoch 300: loss=0.0971 AUROC=0.8028 AP=0.9271
+  [resnet18/toothbrush] epoch 350: loss=0.0925 AUROC=0.8111 AP=0.9298
+  [resnet18/toothbrush] epoch 400: loss=0.0904 AUROC=0.8194 AP=0.9329
+  [resnet18/toothbrush] epoch 450: loss=0.0901 AUROC=0.8083 AP=0.9291
+  [resnet18/toothbrush] epoch 500: loss=0.0897 AUROC=0.8250 AP=0.9353
+[00:34:01]   [ 166/210] s42 toothbrush  resnet18                       AUROC=0.8250 (0.8 min, mb=64 x1, peak=3.0GB)
+  [resnet34/toothbrush] epoch 50: loss=0.1840 AUROC=0.6444 AP=0.8619
+  [resnet34/toothbrush] epoch 100: loss=0.1431 AUROC=0.7139 AP=0.8916
+  [resnet34/toothbrush] epoch 150: loss=0.1207 AUROC=0.7583 AP=0.9111
+  [resnet34/toothbrush] epoch 200: loss=0.1070 AUROC=0.7833 AP=0.9216
+  [resnet34/toothbrush] epoch 250: loss=0.0981 AUROC=0.8000 AP=0.9280
+  [resnet34/toothbrush] epoch 300: loss=0.0933 AUROC=0.8083 AP=0.9303
+  [resnet34/toothbrush] epoch 350: loss=0.0891 AUROC=0.8139 AP=0.9319
+  [resnet34/toothbrush] epoch 400: loss=0.0873 AUROC=0.8222 AP=0.9351
+  [resnet34/toothbrush] epoch 450: loss=0.0868 AUROC=0.8167 AP=0.9332
+  [resnet34/toothbrush] epoch 500: loss=0.0865 AUROC=0.8278 AP=0.9377
+[00:35:10]   [ 167/210] s42 toothbrush  resnet34                       AUROC=0.8278 (1.2 min, mb=64 x1, peak=4.1GB)
+  [resnet50/toothbrush] epoch 50: loss=0.1964 AUROC=0.5639 AP=0.8261
+  [resnet50/toothbrush] epoch 100: loss=0.1583 AUROC=0.7000 AP=0.8884
+  [resnet50/toothbrush] epoch 150: loss=0.1314 AUROC=0.7167 AP=0.8949
+  [resnet50/toothbrush] epoch 200: loss=0.1177 AUROC=0.7722 AP=0.9185
+  [resnet50/toothbrush] epoch 250: loss=0.1056 AUROC=0.7917 AP=0.9262
+  [resnet50/toothbrush] epoch 300: loss=0.1008 AUROC=0.8111 AP=0.9317
+  [resnet50/toothbrush] epoch 350: loss=0.0958 AUROC=0.8250 AP=0.9373
+  [resnet50/toothbrush] epoch 400: loss=0.0937 AUROC=0.8361 AP=0.9403
+  [resnet50/toothbrush] epoch 450: loss=0.0933 AUROC=0.8222 AP=0.9358
+  [resnet50/toothbrush] epoch 500: loss=0.0928 AUROC=0.8444 AP=0.9444
+[00:36:47]   [ 168/210] s42 toothbrush  resnet50                       AUROC=0.8444 (1.6 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/transistor] epoch 50: loss=0.1970 AUROC=0.6350 AP=0.6062
+  [convnextv2_tiny/transistor] epoch 100: loss=0.1409 AUROC=0.7650 AP=0.7430
+  [convnextv2_tiny/transistor] epoch 150: loss=0.1183 AUROC=0.8067 AP=0.7934
+  [convnextv2_tiny/transistor] epoch 200: loss=0.1036 AUROC=0.8183 AP=0.8054
+  [convnextv2_tiny/transistor] epoch 250: loss=0.0997 AUROC=0.8321 AP=0.8244
+  [convnextv2_tiny/transistor] epoch 300: loss=0.0967 AUROC=0.8433 AP=0.8350
+  [convnextv2_tiny/transistor] epoch 350: loss=0.0914 AUROC=0.8412 AP=0.8348
+  [convnextv2_tiny/transistor] epoch 400: loss=0.0888 AUROC=0.8438 AP=0.8376
+  [convnextv2_tiny/transistor] epoch 450: loss=0.0856 AUROC=0.8454 AP=0.8383
+  [convnextv2_tiny/transistor] epoch 500: loss=0.0893 AUROC=0.8458 AP=0.8394
+[00:49:59]   [ 169/210] s42 transistor  convnextv2_tiny                AUROC=0.8458 (13.2 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/transistor] epoch 50: loss=0.2246 AUROC=0.6496 AP=0.6258
+  [convnextv2_base/transistor] epoch 100: loss=0.1764 AUROC=0.6742 AP=0.6293
+  [convnextv2_base/transistor] epoch 150: loss=0.1280 AUROC=0.7429 AP=0.7282
+  [convnextv2_base/transistor] epoch 200: loss=0.1127 AUROC=0.7513 AP=0.7212
+  [convnextv2_base/transistor] epoch 250: loss=0.1029 AUROC=0.8183 AP=0.8042
+  [convnextv2_base/transistor] epoch 300: loss=0.0968 AUROC=0.8383 AP=0.8268
+  [convnextv2_base/transistor] epoch 350: loss=0.0949 AUROC=0.8408 AP=0.8307
+  [convnextv2_base/transistor] epoch 400: loss=0.0899 AUROC=0.8412 AP=0.8305
+  [convnextv2_base/transistor] epoch 450: loss=0.0899 AUROC=0.8425 AP=0.8307
+  [convnextv2_base/transistor] epoch 500: loss=0.0873 AUROC=0.8425 AP=0.8298
+[01:18:37]   [ 170/210] s42 transistor  convnextv2_base                AUROC=0.8425 (28.6 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/transistor] epoch 50: loss=0.1698 AUROC=0.6671 AP=0.6517
+  [mobileone_s0/transistor] epoch 100: loss=0.1253 AUROC=0.7821 AP=0.7524
+  [mobileone_s0/transistor] epoch 150: loss=0.1055 AUROC=0.8046 AP=0.7789
+  [mobileone_s0/transistor] epoch 200: loss=0.0964 AUROC=0.8225 AP=0.8043
+  [mobileone_s0/transistor] epoch 250: loss=0.0951 AUROC=0.8271 AP=0.8126
+  [mobileone_s0/transistor] epoch 300: loss=0.0895 AUROC=0.8383 AP=0.8241
+  [mobileone_s0/transistor] epoch 350: loss=0.0824 AUROC=0.8438 AP=0.8306
+  [mobileone_s0/transistor] epoch 400: loss=0.0846 AUROC=0.8475 AP=0.8329
+  [mobileone_s0/transistor] epoch 450: loss=0.0826 AUROC=0.8483 AP=0.8341
+  [mobileone_s0/transistor] epoch 500: loss=0.0834 AUROC=0.8500 AP=0.8353
+[01:25:00]   [ 171/210] s42 transistor  mobileone_s0                   AUROC=0.8500 (6.4 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/transistor] epoch 50: loss=0.2182 AUROC=0.6463 AP=0.6115
+  [convnext_tiny/transistor] epoch 100: loss=0.1364 AUROC=0.7433 AP=0.7194
+  [convnext_tiny/transistor] epoch 150: loss=0.1115 AUROC=0.8013 AP=0.7789
+  [convnext_tiny/transistor] epoch 200: loss=0.0980 AUROC=0.8254 AP=0.8137
+  [convnext_tiny/transistor] epoch 250: loss=0.0936 AUROC=0.8304 AP=0.8207
+  [convnext_tiny/transistor] epoch 300: loss=0.0902 AUROC=0.8350 AP=0.8265
+  [convnext_tiny/transistor] epoch 350: loss=0.0854 AUROC=0.8400 AP=0.8315
+  [convnext_tiny/transistor] epoch 400: loss=0.0828 AUROC=0.8446 AP=0.8390
+  [convnext_tiny/transistor] epoch 450: loss=0.0801 AUROC=0.8475 AP=0.8427
+  [convnext_tiny/transistor] epoch 500: loss=0.0836 AUROC=0.8496 AP=0.8439
+[01:35:29]   [ 172/210] s42 transistor  convnext_tiny                  AUROC=0.8496 (10.5 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/transistor] epoch 50: loss=0.2088 AUROC=0.6913 AP=0.6542
+  [convnext_small/transistor] epoch 100: loss=0.1438 AUROC=0.7367 AP=0.7132
+  [convnext_small/transistor] epoch 150: loss=0.1141 AUROC=0.8125 AP=0.7903
+  [convnext_small/transistor] epoch 200: loss=0.0978 AUROC=0.8233 AP=0.8031
+  [convnext_small/transistor] epoch 250: loss=0.0935 AUROC=0.8321 AP=0.8198
+  [convnext_small/transistor] epoch 300: loss=0.0931 AUROC=0.8404 AP=0.8272
+  [convnext_small/transistor] epoch 350: loss=0.0842 AUROC=0.8437 AP=0.8316
+  [convnext_small/transistor] epoch 400: loss=0.0832 AUROC=0.8471 AP=0.8347
+  [convnext_small/transistor] epoch 450: loss=0.0809 AUROC=0.8488 AP=0.8369
+  [convnext_small/transistor] epoch 500: loss=0.0816 AUROC=0.8512 AP=0.8382
+[01:51:35]   [ 173/210] s42 transistor  convnext_small                 AUROC=0.8512 (16.1 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/transistor] epoch 50: loss=0.1574 AUROC=0.6804 AP=0.6637
+  [vit_tiny_patch16_224/transistor] epoch 100: loss=0.1071 AUROC=0.7675 AP=0.7425
+  [vit_tiny_patch16_224/transistor] epoch 150: loss=0.0987 AUROC=0.7808 AP=0.7527
+  [vit_tiny_patch16_224/transistor] epoch 200: loss=0.0876 AUROC=0.8004 AP=0.7748
+  [vit_tiny_patch16_224/transistor] epoch 250: loss=0.0869 AUROC=0.8033 AP=0.7804
+  [vit_tiny_patch16_224/transistor] epoch 300: loss=0.0807 AUROC=0.8133 AP=0.7957
+  [vit_tiny_patch16_224/transistor] epoch 350: loss=0.0762 AUROC=0.8154 AP=0.7988
+  [vit_tiny_patch16_224/transistor] epoch 400: loss=0.0778 AUROC=0.8187 AP=0.8028
+  [vit_tiny_patch16_224/transistor] epoch 450: loss=0.0759 AUROC=0.8204 AP=0.8073
+  [vit_tiny_patch16_224/transistor] epoch 500: loss=0.0770 AUROC=0.8221 AP=0.8096
+[01:54:56]   [ 174/210] s42 transistor  vit_tiny_patch16_224           AUROC=0.8221 (3.3 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/transistor] epoch 50: loss=0.1299 AUROC=0.6942 AP=0.6817
+  [deit_tiny_patch16_224/transistor] epoch 100: loss=0.0976 AUROC=0.7454 AP=0.7285
+  [deit_tiny_patch16_224/transistor] epoch 150: loss=0.0899 AUROC=0.7767 AP=0.7515
+  [deit_tiny_patch16_224/transistor] epoch 200: loss=0.0814 AUROC=0.7908 AP=0.7630
+  [deit_tiny_patch16_224/transistor] epoch 250: loss=0.0813 AUROC=0.7950 AP=0.7740
+  [deit_tiny_patch16_224/transistor] epoch 300: loss=0.0754 AUROC=0.8050 AP=0.7825
+  [deit_tiny_patch16_224/transistor] epoch 350: loss=0.0710 AUROC=0.8108 AP=0.7927
+  [deit_tiny_patch16_224/transistor] epoch 400: loss=0.0727 AUROC=0.8113 AP=0.7899
+  [deit_tiny_patch16_224/transistor] epoch 450: loss=0.0708 AUROC=0.8150 AP=0.7958
+  [deit_tiny_patch16_224/transistor] epoch 500: loss=0.0718 AUROC=0.8171 AP=0.7994
+[01:58:16]   [ 175/210] s42 transistor  deit_tiny_patch16_224          AUROC=0.8171 (3.3 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/transistor] epoch 50: loss=0.1783 AUROC=0.6529 AP=0.6473
+  [swin_tiny_patch4_window7_224/transistor] epoch 100: loss=0.1343 AUROC=0.7863 AP=0.7717
+  [swin_tiny_patch4_window7_224/transistor] epoch 150: loss=0.1138 AUROC=0.8121 AP=0.8087
+  [swin_tiny_patch4_window7_224/transistor] epoch 200: loss=0.1008 AUROC=0.8250 AP=0.8185
+  [swin_tiny_patch4_window7_224/transistor] epoch 250: loss=0.0999 AUROC=0.8417 AP=0.8351
+  [swin_tiny_patch4_window7_224/transistor] epoch 300: loss=0.0918 AUROC=0.8463 AP=0.8385
+  [swin_tiny_patch4_window7_224/transistor] epoch 350: loss=0.0897 AUROC=0.8554 AP=0.8486
+  [swin_tiny_patch4_window7_224/transistor] epoch 400: loss=0.0873 AUROC=0.8558 AP=0.8493
+  [swin_tiny_patch4_window7_224/transistor] epoch 450: loss=0.0870 AUROC=0.8579 AP=0.8508
+  [swin_tiny_patch4_window7_224/transistor] epoch 500: loss=0.0872 AUROC=0.8575 AP=0.8505
+[02:06:19]   [ 176/210] s42 transistor  swin_tiny_patch4_window7_224   AUROC=0.8575 (8.0 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/transistor] epoch 50: loss=0.1643 AUROC=0.6550 AP=0.6529
+  [efficientnet_b0/transistor] epoch 100: loss=0.1287 AUROC=0.7575 AP=0.7256
+  [efficientnet_b0/transistor] epoch 150: loss=0.1096 AUROC=0.7771 AP=0.7342
+  [efficientnet_b0/transistor] epoch 200: loss=0.0927 AUROC=0.8221 AP=0.8060
+  [efficientnet_b0/transistor] epoch 250: loss=0.0911 AUROC=0.8204 AP=0.7997
+  [efficientnet_b0/transistor] epoch 300: loss=0.0900 AUROC=0.8396 AP=0.8256
+  [efficientnet_b0/transistor] epoch 350: loss=0.0842 AUROC=0.8467 AP=0.8319
+  [efficientnet_b0/transistor] epoch 400: loss=0.0831 AUROC=0.8442 AP=0.8260
+  [efficientnet_b0/transistor] epoch 450: loss=0.0827 AUROC=0.8488 AP=0.8329
+  [efficientnet_b0/transistor] epoch 500: loss=0.0852 AUROC=0.8483 AP=0.8340
+[02:10:10]   [ 177/210] s42 transistor  efficientnet_b0                AUROC=0.8483 (3.9 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/transistor] epoch 50: loss=0.2570 AUROC=0.5217 AP=0.5150
+  [efficientnet_b1/transistor] epoch 100: loss=0.1632 AUROC=0.6592 AP=0.6586
+  [efficientnet_b1/transistor] epoch 150: loss=0.1286 AUROC=0.7404 AP=0.6733
+  [efficientnet_b1/transistor] epoch 200: loss=0.1099 AUROC=0.8125 AP=0.7987
+  [efficientnet_b1/transistor] epoch 250: loss=0.1050 AUROC=0.8158 AP=0.8025
+  [efficientnet_b1/transistor] epoch 300: loss=0.1013 AUROC=0.8367 AP=0.8355
+  [efficientnet_b1/transistor] epoch 350: loss=0.0925 AUROC=0.8438 AP=0.8425
+  [efficientnet_b1/transistor] epoch 400: loss=0.0949 AUROC=0.8438 AP=0.8372
+  [efficientnet_b1/transistor] epoch 450: loss=0.0892 AUROC=0.8512 AP=0.8475
+  [efficientnet_b1/transistor] epoch 500: loss=0.0911 AUROC=0.8500 AP=0.8467
+[02:15:04]   [ 178/210] s42 transistor  efficientnet_b1                AUROC=0.8500 (4.9 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/transistor] epoch 50: loss=0.1719 AUROC=0.6167 AP=0.6181
+  [mobilenetv3_small_100/transistor] epoch 100: loss=0.1414 AUROC=0.6617 AP=0.6796
+  [mobilenetv3_small_100/transistor] epoch 150: loss=0.1101 AUROC=0.7800 AP=0.7406
+  [mobilenetv3_small_100/transistor] epoch 200: loss=0.0979 AUROC=0.8171 AP=0.7876
+  [mobilenetv3_small_100/transistor] epoch 250: loss=0.0963 AUROC=0.8325 AP=0.8142
+  [mobilenetv3_small_100/transistor] epoch 300: loss=0.0937 AUROC=0.8408 AP=0.8202
+  [mobilenetv3_small_100/transistor] epoch 350: loss=0.0879 AUROC=0.8496 AP=0.8309
+  [mobilenetv3_small_100/transistor] epoch 400: loss=0.0834 AUROC=0.8512 AP=0.8376
+  [mobilenetv3_small_100/transistor] epoch 450: loss=0.0856 AUROC=0.8521 AP=0.8380
+  [mobilenetv3_small_100/transistor] epoch 500: loss=0.0842 AUROC=0.8533 AP=0.8399
+[02:17:07]   [ 179/210] s42 transistor  mobilenetv3_small_100          AUROC=0.8533 (2.0 min, mb=64 x1, peak=2.2GB)
+  [resnet18/transistor] epoch 50: loss=0.1548 AUROC=0.7200 AP=0.6908
+  [resnet18/transistor] epoch 100: loss=0.1175 AUROC=0.8021 AP=0.7730
+  [resnet18/transistor] epoch 150: loss=0.1019 AUROC=0.8242 AP=0.7947
+  [resnet18/transistor] epoch 200: loss=0.0898 AUROC=0.8350 AP=0.8127
+  [resnet18/transistor] epoch 250: loss=0.0873 AUROC=0.8400 AP=0.8207
+  [resnet18/transistor] epoch 300: loss=0.0849 AUROC=0.8546 AP=0.8352
+  [resnet18/transistor] epoch 350: loss=0.0808 AUROC=0.8546 AP=0.8361
+  [resnet18/transistor] epoch 400: loss=0.0813 AUROC=0.8558 AP=0.8379
+  [resnet18/transistor] epoch 450: loss=0.0798 AUROC=0.8575 AP=0.8391
+  [resnet18/transistor] epoch 500: loss=0.0810 AUROC=0.8563 AP=0.8381
+[02:20:00]   [ 180/210] s42 transistor  resnet18                       AUROC=0.8563 (2.9 min, mb=64 x1, peak=3.0GB)
+  [resnet34/transistor] epoch 50: loss=0.1623 AUROC=0.6908 AP=0.6484
+  [resnet34/transistor] epoch 100: loss=0.1219 AUROC=0.7833 AP=0.7452
+  [resnet34/transistor] epoch 150: loss=0.1025 AUROC=0.8067 AP=0.7729
+  [resnet34/transistor] epoch 200: loss=0.0953 AUROC=0.8292 AP=0.8108
+  [resnet34/transistor] epoch 250: loss=0.0882 AUROC=0.8321 AP=0.8174
+  [resnet34/transistor] epoch 300: loss=0.0865 AUROC=0.8421 AP=0.8260
+  [resnet34/transistor] epoch 350: loss=0.0838 AUROC=0.8479 AP=0.8353
+  [resnet34/transistor] epoch 400: loss=0.0808 AUROC=0.8479 AP=0.8362
+  [resnet34/transistor] epoch 450: loss=0.0814 AUROC=0.8500 AP=0.8380
+  [resnet34/transistor] epoch 500: loss=0.0809 AUROC=0.8500 AP=0.8390
+[02:23:58]   [ 181/210] s42 transistor  resnet34                       AUROC=0.8500 (4.0 min, mb=64 x1, peak=4.1GB)
+  [resnet50/transistor] epoch 50: loss=0.1679 AUROC=0.6450 AP=0.6201
+  [resnet50/transistor] epoch 100: loss=0.1214 AUROC=0.7804 AP=0.7476
+  [resnet50/transistor] epoch 150: loss=0.1021 AUROC=0.8146 AP=0.7784
+  [resnet50/transistor] epoch 200: loss=0.0933 AUROC=0.8213 AP=0.7846
+  [resnet50/transistor] epoch 250: loss=0.0869 AUROC=0.8296 AP=0.8010
+  [resnet50/transistor] epoch 300: loss=0.0827 AUROC=0.8379 AP=0.8090
+  [resnet50/transistor] epoch 350: loss=0.0814 AUROC=0.8438 AP=0.8168
+  [resnet50/transistor] epoch 400: loss=0.0806 AUROC=0.8458 AP=0.8214
+  [resnet50/transistor] epoch 450: loss=0.0791 AUROC=0.8471 AP=0.8218
+  [resnet50/transistor] epoch 500: loss=0.0831 AUROC=0.8454 AP=0.8211
+[02:29:41]   [ 182/210] s42 transistor  resnet50                       AUROC=0.8454 (5.7 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/wood] epoch 50: loss=0.3360 AUROC=0.9482 AP=0.9830
+  [convnextv2_tiny/wood] epoch 100: loss=0.3346 AUROC=0.9518 AP=0.9842
+  [convnextv2_tiny/wood] epoch 150: loss=0.3289 AUROC=0.9526 AP=0.9844
+  [convnextv2_tiny/wood] epoch 200: loss=0.3270 AUROC=0.9518 AP=0.9841
+  [convnextv2_tiny/wood] epoch 250: loss=0.3306 AUROC=0.9447 AP=0.9819
+  [convnextv2_tiny/wood] epoch 300: loss=0.3286 AUROC=0.9447 AP=0.9819
+  [convnextv2_tiny/wood] epoch 350: loss=0.3320 AUROC=0.9456 AP=0.9822
+  [convnextv2_tiny/wood] epoch 400: loss=0.3304 AUROC=0.9447 AP=0.9819
+  [convnextv2_tiny/wood] epoch 450: loss=0.3308 AUROC=0.9465 AP=0.9826
+  [convnextv2_tiny/wood] epoch 500: loss=0.3291 AUROC=0.9456 AP=0.9822
+[02:45:27]   [ 183/210] s42 wood        convnextv2_tiny                AUROC=0.9456 (15.8 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/wood] epoch 50: loss=0.4292 AUROC=0.9421 AP=0.9807
+  [convnextv2_base/wood] epoch 100: loss=0.3370 AUROC=0.9482 AP=0.9831
+  [convnextv2_base/wood] epoch 150: loss=0.3333 AUROC=0.9465 AP=0.9826
+  [convnextv2_base/wood] epoch 200: loss=0.3331 AUROC=0.9491 AP=0.9833
+  [convnextv2_base/wood] epoch 250: loss=0.3329 AUROC=0.9518 AP=0.9842
+  [convnextv2_base/wood] epoch 300: loss=0.3258 AUROC=0.9465 AP=0.9826
+  [convnextv2_base/wood] epoch 350: loss=0.3320 AUROC=0.9509 AP=0.9839
+  [convnextv2_base/wood] epoch 400: loss=0.3297 AUROC=0.9465 AP=0.9826
+  [convnextv2_base/wood] epoch 450: loss=0.3263 AUROC=0.9456 AP=0.9823
+  [convnextv2_base/wood] epoch 500: loss=0.3299 AUROC=0.9474 AP=0.9828
+[03:18:27]   [ 184/210] s42 wood        convnextv2_base                AUROC=0.9474 (33.0 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/wood] epoch 50: loss=0.3359 AUROC=0.9649 AP=0.9889
+  [mobileone_s0/wood] epoch 100: loss=0.3174 AUROC=0.9649 AP=0.9889
+  [mobileone_s0/wood] epoch 150: loss=0.2953 AUROC=0.9544 AP=0.9848
+  [mobileone_s0/wood] epoch 200: loss=0.2713 AUROC=0.9491 AP=0.9830
+  [mobileone_s0/wood] epoch 250: loss=0.2558 AUROC=0.9482 AP=0.9826
+  [mobileone_s0/wood] epoch 300: loss=0.2462 AUROC=0.9456 AP=0.9816
+  [mobileone_s0/wood] epoch 350: loss=0.2359 AUROC=0.9430 AP=0.9808
+  [mobileone_s0/wood] epoch 400: loss=0.2345 AUROC=0.9421 AP=0.9804
+  [mobileone_s0/wood] epoch 450: loss=0.2334 AUROC=0.9412 AP=0.9801
+  [mobileone_s0/wood] epoch 500: loss=0.2305 AUROC=0.9404 AP=0.9798
+[03:25:40]   [ 185/210] s42 wood        mobileone_s0                   AUROC=0.9404 (7.2 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/wood] epoch 50: loss=0.3368 AUROC=0.9491 AP=0.9833
+  [convnext_tiny/wood] epoch 100: loss=0.3353 AUROC=0.9439 AP=0.9815
+  [convnext_tiny/wood] epoch 150: loss=0.3235 AUROC=0.9518 AP=0.9842
+  [convnext_tiny/wood] epoch 200: loss=0.2757 AUROC=0.9360 AP=0.9787
+  [convnext_tiny/wood] epoch 250: loss=0.2472 AUROC=0.9395 AP=0.9800
+  [convnext_tiny/wood] epoch 300: loss=0.2340 AUROC=0.9368 AP=0.9791
+  [convnext_tiny/wood] epoch 350: loss=0.2266 AUROC=0.9377 AP=0.9795
+  [convnext_tiny/wood] epoch 400: loss=0.2200 AUROC=0.9360 AP=0.9789
+  [convnext_tiny/wood] epoch 450: loss=0.2173 AUROC=0.9368 AP=0.9792
+  [convnext_tiny/wood] epoch 500: loss=0.2163 AUROC=0.9360 AP=0.9789
+[03:38:03]   [ 186/210] s42 wood        convnext_tiny                  AUROC=0.9360 (12.4 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/wood] epoch 50: loss=0.3338 AUROC=0.9465 AP=0.9825
+  [convnext_small/wood] epoch 100: loss=0.3256 AUROC=0.9518 AP=0.9842
+  [convnext_small/wood] epoch 150: loss=0.2914 AUROC=0.9368 AP=0.9791
+  [convnext_small/wood] epoch 200: loss=0.2661 AUROC=0.9325 AP=0.9774
+  [convnext_small/wood] epoch 250: loss=0.2492 AUROC=0.9316 AP=0.9771
+  [convnext_small/wood] epoch 300: loss=0.2399 AUROC=0.9368 AP=0.9790
+  [convnext_small/wood] epoch 350: loss=0.2300 AUROC=0.9360 AP=0.9787
+  [convnext_small/wood] epoch 400: loss=0.2264 AUROC=0.9404 AP=0.9804
+  [convnext_small/wood] epoch 450: loss=0.2224 AUROC=0.9404 AP=0.9804
+  [convnext_small/wood] epoch 500: loss=0.2220 AUROC=0.9412 AP=0.9807
+[03:56:53]   [ 187/210] s42 wood        convnext_small                 AUROC=0.9412 (18.8 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/wood] epoch 50: loss=0.2941 AUROC=0.9263 AP=0.9756
+  [vit_tiny_patch16_224/wood] epoch 100: loss=0.2499 AUROC=0.9316 AP=0.9772
+  [vit_tiny_patch16_224/wood] epoch 150: loss=0.2281 AUROC=0.9474 AP=0.9830
+  [vit_tiny_patch16_224/wood] epoch 200: loss=0.2510 AUROC=0.9632 AP=0.9877
+  [vit_tiny_patch16_224/wood] epoch 250: loss=0.2289 AUROC=0.9404 AP=0.9804
+  [vit_tiny_patch16_224/wood] epoch 300: loss=0.2226 AUROC=0.9281 AP=0.9762
+  [vit_tiny_patch16_224/wood] epoch 350: loss=0.2155 AUROC=0.9333 AP=0.9780
+  [vit_tiny_patch16_224/wood] epoch 400: loss=0.2174 AUROC=0.9430 AP=0.9812
+  [vit_tiny_patch16_224/wood] epoch 450: loss=0.2098 AUROC=0.9439 AP=0.9815
+  [vit_tiny_patch16_224/wood] epoch 500: loss=0.2108 AUROC=0.9430 AP=0.9813
+[04:00:38]   [ 188/210] s42 wood        vit_tiny_patch16_224           AUROC=0.9430 (3.7 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/wood] epoch 50: loss=0.2810 AUROC=0.9491 AP=0.9832
+  [deit_tiny_patch16_224/wood] epoch 100: loss=0.2892 AUROC=0.9360 AP=0.9793
+  [deit_tiny_patch16_224/wood] epoch 150: loss=0.2610 AUROC=0.8605 AP=0.9581
+  [deit_tiny_patch16_224/wood] epoch 200: loss=0.2413 AUROC=0.8491 AP=0.9564
+  [deit_tiny_patch16_224/wood] epoch 250: loss=0.2319 AUROC=0.8781 AP=0.9625
+  [deit_tiny_patch16_224/wood] epoch 300: loss=0.2254 AUROC=0.9193 AP=0.9733
+  [deit_tiny_patch16_224/wood] epoch 350: loss=0.2203 AUROC=0.9298 AP=0.9767
+  [deit_tiny_patch16_224/wood] epoch 400: loss=0.2236 AUROC=0.9404 AP=0.9801
+  [deit_tiny_patch16_224/wood] epoch 450: loss=0.2142 AUROC=0.9395 AP=0.9798
+  [deit_tiny_patch16_224/wood] epoch 500: loss=0.2145 AUROC=0.9404 AP=0.9801
+[04:04:26]   [ 189/210] s42 wood        deit_tiny_patch16_224          AUROC=0.9404 (3.8 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/wood] epoch 50: loss=0.3348 AUROC=0.9482 AP=0.9830
+  [swin_tiny_patch4_window7_224/wood] epoch 100: loss=0.3361 AUROC=0.9553 AP=0.9852
+  [swin_tiny_patch4_window7_224/wood] epoch 150: loss=0.3322 AUROC=0.9439 AP=0.9815
+  [swin_tiny_patch4_window7_224/wood] epoch 200: loss=0.3298 AUROC=0.9430 AP=0.9813
+  [swin_tiny_patch4_window7_224/wood] epoch 250: loss=0.3309 AUROC=0.9456 AP=0.9822
+  [swin_tiny_patch4_window7_224/wood] epoch 300: loss=0.3296 AUROC=0.9465 AP=0.9826
+  [swin_tiny_patch4_window7_224/wood] epoch 350: loss=0.3309 AUROC=0.9482 AP=0.9831
+  [swin_tiny_patch4_window7_224/wood] epoch 400: loss=0.3306 AUROC=0.9465 AP=0.9826
+  [swin_tiny_patch4_window7_224/wood] epoch 450: loss=0.3328 AUROC=0.9465 AP=0.9826
+  [swin_tiny_patch4_window7_224/wood] epoch 500: loss=0.3305 AUROC=0.9465 AP=0.9824
+[04:13:39]   [ 190/210] s42 wood        swin_tiny_patch4_window7_224   AUROC=0.9465 (9.2 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/wood] epoch 50: loss=0.3235 AUROC=0.8833 AP=0.9520
+  [efficientnet_b0/wood] epoch 100: loss=0.3388 AUROC=0.9798 AP=0.9934
+  [efficientnet_b0/wood] epoch 150: loss=0.3096 AUROC=0.9456 AP=0.9819
+  [efficientnet_b0/wood] epoch 200: loss=0.2896 AUROC=0.9395 AP=0.9797
+  [efficientnet_b0/wood] epoch 250: loss=0.2737 AUROC=0.9395 AP=0.9798
+  [efficientnet_b0/wood] epoch 300: loss=0.2638 AUROC=0.9386 AP=0.9797
+  [efficientnet_b0/wood] epoch 350: loss=0.2599 AUROC=0.9368 AP=0.9791
+  [efficientnet_b0/wood] epoch 400: loss=0.2501 AUROC=0.9395 AP=0.9800
+  [efficientnet_b0/wood] epoch 450: loss=0.2459 AUROC=0.9404 AP=0.9802
+  [efficientnet_b0/wood] epoch 500: loss=0.2452 AUROC=0.9404 AP=0.9802
+[04:18:03]   [ 191/210] s42 wood        efficientnet_b0                AUROC=0.9404 (4.4 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/wood] epoch 50: loss=0.3403 AUROC=0.9684 AP=0.9899
+  [efficientnet_b1/wood] epoch 100: loss=0.3340 AUROC=0.9526 AP=0.9844
+  [efficientnet_b1/wood] epoch 150: loss=0.3277 AUROC=0.9456 AP=0.9820
+  [efficientnet_b1/wood] epoch 200: loss=0.3235 AUROC=0.9535 AP=0.9846
+  [efficientnet_b1/wood] epoch 250: loss=0.3115 AUROC=0.9491 AP=0.9830
+  [efficientnet_b1/wood] epoch 300: loss=0.2965 AUROC=0.9404 AP=0.9804
+  [efficientnet_b1/wood] epoch 350: loss=0.2849 AUROC=0.9412 AP=0.9808
+  [efficientnet_b1/wood] epoch 400: loss=0.2764 AUROC=0.9333 AP=0.9780
+  [efficientnet_b1/wood] epoch 450: loss=0.2739 AUROC=0.9333 AP=0.9780
+  [efficientnet_b1/wood] epoch 500: loss=0.2749 AUROC=0.9351 AP=0.9786
+[04:23:40]   [ 192/210] s42 wood        efficientnet_b1                AUROC=0.9351 (5.6 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/wood] epoch 50: loss=0.3312 AUROC=0.9482 AP=0.9831
+  [mobilenetv3_small_100/wood] epoch 100: loss=0.3273 AUROC=0.9518 AP=0.9842
+  [mobilenetv3_small_100/wood] epoch 150: loss=0.3133 AUROC=0.9474 AP=0.9827
+  [mobilenetv3_small_100/wood] epoch 200: loss=0.2950 AUROC=0.9360 AP=0.9786
+  [mobilenetv3_small_100/wood] epoch 250: loss=0.2775 AUROC=0.9325 AP=0.9775
+  [mobilenetv3_small_100/wood] epoch 300: loss=0.2639 AUROC=0.9360 AP=0.9789
+  [mobilenetv3_small_100/wood] epoch 350: loss=0.2618 AUROC=0.9395 AP=0.9802
+  [mobilenetv3_small_100/wood] epoch 400: loss=0.2596 AUROC=0.9000 AP=0.9618
+  [mobilenetv3_small_100/wood] epoch 450: loss=0.2537 AUROC=0.9184 AP=0.9715
+  [mobilenetv3_small_100/wood] epoch 500: loss=0.2582 AUROC=0.9184 AP=0.9715
+[04:25:56]   [ 193/210] s42 wood        mobilenetv3_small_100          AUROC=0.9184 (2.3 min, mb=64 x1, peak=2.2GB)
+  [resnet18/wood] epoch 50: loss=0.3267 AUROC=0.9061 AP=0.9675
+  [resnet18/wood] epoch 100: loss=0.3145 AUROC=0.9404 AP=0.9801
+  [resnet18/wood] epoch 150: loss=0.2942 AUROC=0.9430 AP=0.9810
+  [resnet18/wood] epoch 200: loss=0.2666 AUROC=0.9430 AP=0.9810
+  [resnet18/wood] epoch 250: loss=0.2476 AUROC=0.9439 AP=0.9811
+  [resnet18/wood] epoch 300: loss=0.2462 AUROC=0.9482 AP=0.9826
+  [resnet18/wood] epoch 350: loss=0.2436 AUROC=0.9474 AP=0.9823
+  [resnet18/wood] epoch 400: loss=0.2352 AUROC=0.9474 AP=0.9824
+  [resnet18/wood] epoch 450: loss=0.2281 AUROC=0.9456 AP=0.9817
+  [resnet18/wood] epoch 500: loss=0.2284 AUROC=0.9465 AP=0.9821
+[04:29:14]   [ 194/210] s42 wood        resnet18                       AUROC=0.9465 (3.3 min, mb=64 x1, peak=3.0GB)
+  [resnet34/wood] epoch 50: loss=0.3326 AUROC=0.9184 AP=0.9717
+  [resnet34/wood] epoch 100: loss=0.3193 AUROC=0.9377 AP=0.9795
+  [resnet34/wood] epoch 150: loss=0.3042 AUROC=0.9421 AP=0.9812
+  [resnet34/wood] epoch 200: loss=0.2773 AUROC=0.9342 AP=0.9789
+  [resnet34/wood] epoch 250: loss=0.2581 AUROC=0.9325 AP=0.9792
+  [resnet34/wood] epoch 300: loss=0.2512 AUROC=0.9360 AP=0.9800
+  [resnet34/wood] epoch 350: loss=0.2414 AUROC=0.9342 AP=0.9795
+  [resnet34/wood] epoch 400: loss=0.2349 AUROC=0.9342 AP=0.9792
+  [resnet34/wood] epoch 450: loss=0.2345 AUROC=0.9368 AP=0.9802
+  [resnet34/wood] epoch 500: loss=0.2350 AUROC=0.9368 AP=0.9803
+[04:33:46]   [ 195/210] s42 wood        resnet34                       AUROC=0.9368 (4.5 min, mb=64 x1, peak=4.1GB)
+  [resnet50/wood] epoch 50: loss=0.3320 AUROC=0.9561 AP=0.9855
+  [resnet50/wood] epoch 100: loss=0.3204 AUROC=0.9439 AP=0.9813
+  [resnet50/wood] epoch 150: loss=0.3033 AUROC=0.9447 AP=0.9817
+  [resnet50/wood] epoch 200: loss=0.2763 AUROC=0.9404 AP=0.9799
+  [resnet50/wood] epoch 250: loss=0.2608 AUROC=0.9386 AP=0.9794
+  [resnet50/wood] epoch 300: loss=0.2518 AUROC=0.9482 AP=0.9831
+  [resnet50/wood] epoch 350: loss=0.2385 AUROC=0.9447 AP=0.9817
+  [resnet50/wood] epoch 400: loss=0.2397 AUROC=0.9421 AP=0.9810
+  [resnet50/wood] epoch 450: loss=0.2325 AUROC=0.9447 AP=0.9819
+  [resnet50/wood] epoch 500: loss=0.2337 AUROC=0.9430 AP=0.9815
+[04:40:19]   [ 196/210] s42 wood        resnet50                       AUROC=0.9430 (6.5 min, mb=64 x1, peak=7.9GB)
+  [convnextv2_tiny/zipper] epoch 50: loss=0.1397 AUROC=0.8233 AP=0.9312
+  [convnextv2_tiny/zipper] epoch 100: loss=0.1371 AUROC=0.8317 AP=0.9320
+  [convnextv2_tiny/zipper] epoch 150: loss=0.1205 AUROC=0.9036 AP=0.9679
+  [convnextv2_tiny/zipper] epoch 200: loss=0.1141 AUROC=0.9270 AP=0.9767
+  [convnextv2_tiny/zipper] epoch 250: loss=0.1139 AUROC=0.9294 AP=0.9789
+  [convnextv2_tiny/zipper] epoch 300: loss=0.1137 AUROC=0.9459 AP=0.9838
+  [convnextv2_tiny/zipper] epoch 350: loss=0.1119 AUROC=0.9468 AP=0.9842
+  [convnextv2_tiny/zipper] epoch 400: loss=0.1117 AUROC=0.9535 AP=0.9865
+  [convnextv2_tiny/zipper] epoch 450: loss=0.1105 AUROC=0.9517 AP=0.9857
+  [convnextv2_tiny/zipper] epoch 500: loss=0.1105 AUROC=0.9527 AP=0.9861
+[04:54:58]   [ 197/210] s42 zipper      convnextv2_tiny                AUROC=0.9527 (14.6 min, mb=64 x1, peak=11.4GB)
+  [convnextv2_base/zipper] epoch 50: loss=0.1418 AUROC=0.8256 AP=0.9321
+  [convnextv2_base/zipper] epoch 100: loss=0.1280 AUROC=0.8112 AP=0.9240
+  [convnextv2_base/zipper] epoch 150: loss=0.1248 AUROC=0.8456 AP=0.9421
+  [convnextv2_base/zipper] epoch 200: loss=0.1207 AUROC=0.9102 AP=0.9704
+  [convnextv2_base/zipper] epoch 250: loss=0.1127 AUROC=0.9249 AP=0.9766
+  [convnextv2_base/zipper] epoch 300: loss=0.1141 AUROC=0.9443 AP=0.9836
+  [convnextv2_base/zipper] epoch 350: loss=0.1088 AUROC=0.9470 AP=0.9845
+  [convnextv2_base/zipper] epoch 400: loss=0.1132 AUROC=0.9470 AP=0.9846
+  [convnextv2_base/zipper] epoch 450: loss=0.1089 AUROC=0.9543 AP=0.9867
+  [convnextv2_base/zipper] epoch 500: loss=0.1102 AUROC=0.9559 AP=0.9872
+[05:27:03]   [ 198/210] s42 zipper      convnextv2_base                AUROC=0.9559 (32.1 min, mb=32 x2, peak=12.0GB)
+  [mobileone_s0/zipper] epoch 50: loss=0.1336 AUROC=0.8642 AP=0.9495
+  [mobileone_s0/zipper] epoch 100: loss=0.1199 AUROC=0.9317 AP=0.9769
+  [mobileone_s0/zipper] epoch 150: loss=0.1142 AUROC=0.9491 AP=0.9845
+  [mobileone_s0/zipper] epoch 200: loss=0.1089 AUROC=0.9577 AP=0.9877
+  [mobileone_s0/zipper] epoch 250: loss=0.1078 AUROC=0.9635 AP=0.9895
+  [mobileone_s0/zipper] epoch 300: loss=0.0980 AUROC=0.9614 AP=0.9889
+  [mobileone_s0/zipper] epoch 350: loss=0.0951 AUROC=0.9651 AP=0.9898
+  [mobileone_s0/zipper] epoch 400: loss=0.0934 AUROC=0.9669 AP=0.9904
+  [mobileone_s0/zipper] epoch 450: loss=0.0923 AUROC=0.9661 AP=0.9902
+  [mobileone_s0/zipper] epoch 500: loss=0.0928 AUROC=0.9656 AP=0.9901
+[05:34:01]   [ 199/210] s42 zipper      mobileone_s0                   AUROC=0.9656 (7.0 min, mb=64 x1, peak=5.7GB)
+  [convnext_tiny/zipper] epoch 50: loss=0.1410 AUROC=0.8269 AP=0.9336
+  [convnext_tiny/zipper] epoch 100: loss=0.1242 AUROC=0.9049 AP=0.9669
+  [convnext_tiny/zipper] epoch 150: loss=0.1185 AUROC=0.9165 AP=0.9736
+  [convnext_tiny/zipper] epoch 200: loss=0.1128 AUROC=0.9367 AP=0.9808
+  [convnext_tiny/zipper] epoch 250: loss=0.1122 AUROC=0.9504 AP=0.9853
+  [convnext_tiny/zipper] epoch 300: loss=0.1118 AUROC=0.9551 AP=0.9863
+  [convnext_tiny/zipper] epoch 350: loss=0.1091 AUROC=0.9577 AP=0.9874
+  [convnext_tiny/zipper] epoch 400: loss=0.1089 AUROC=0.9611 AP=0.9885
+  [convnext_tiny/zipper] epoch 450: loss=0.1072 AUROC=0.9609 AP=0.9881
+  [convnext_tiny/zipper] epoch 500: loss=0.1078 AUROC=0.9603 AP=0.9880
+[05:45:39]   [ 200/210] s42 zipper      convnext_tiny                  AUROC=0.9603 (11.6 min, mb=64 x1, peak=7.9GB)
+  [convnext_small/zipper] epoch 50: loss=0.1326 AUROC=0.8716 AP=0.9526
+  [convnext_small/zipper] epoch 100: loss=0.1210 AUROC=0.9136 AP=0.9712
+  [convnext_small/zipper] epoch 150: loss=0.1144 AUROC=0.9422 AP=0.9826
+  [convnext_small/zipper] epoch 200: loss=0.1125 AUROC=0.9446 AP=0.9836
+  [convnext_small/zipper] epoch 250: loss=0.1119 AUROC=0.9506 AP=0.9856
+  [convnext_small/zipper] epoch 300: loss=0.1101 AUROC=0.9677 AP=0.9909
+  [convnext_small/zipper] epoch 350: loss=0.1064 AUROC=0.9640 AP=0.9898
+  [convnext_small/zipper] epoch 400: loss=0.1064 AUROC=0.9656 AP=0.9902
+  [convnext_small/zipper] epoch 450: loss=0.1059 AUROC=0.9661 AP=0.9904
+  [convnext_small/zipper] epoch 500: loss=0.1060 AUROC=0.9659 AP=0.9903
+[06:03:34]   [ 201/210] s42 zipper      convnext_small                 AUROC=0.9659 (17.9 min, mb=64 x1, peak=11.8GB)
+  [vit_tiny_patch16_224/zipper] epoch 50: loss=0.1346 AUROC=0.8774 AP=0.9542
+  [vit_tiny_patch16_224/zipper] epoch 100: loss=0.1134 AUROC=0.9225 AP=0.9730
+  [vit_tiny_patch16_224/zipper] epoch 150: loss=0.1034 AUROC=0.9378 AP=0.9794
+  [vit_tiny_patch16_224/zipper] epoch 200: loss=0.0957 AUROC=0.9485 AP=0.9836
+  [vit_tiny_patch16_224/zipper] epoch 250: loss=0.0932 AUROC=0.9556 AP=0.9865
+  [vit_tiny_patch16_224/zipper] epoch 300: loss=0.0922 AUROC=0.9540 AP=0.9862
+  [vit_tiny_patch16_224/zipper] epoch 350: loss=0.0897 AUROC=0.9580 AP=0.9874
+  [vit_tiny_patch16_224/zipper] epoch 400: loss=0.0878 AUROC=0.9590 AP=0.9877
+  [vit_tiny_patch16_224/zipper] epoch 450: loss=0.0863 AUROC=0.9593 AP=0.9878
+  [vit_tiny_patch16_224/zipper] epoch 500: loss=0.0870 AUROC=0.9590 AP=0.9877
+[06:07:11]   [ 202/210] s42 zipper      vit_tiny_patch16_224           AUROC=0.9590 (3.6 min, mb=64 x1, peak=2.9GB)
+  [deit_tiny_patch16_224/zipper] epoch 50: loss=0.1273 AUROC=0.9015 AP=0.9658
+  [deit_tiny_patch16_224/zipper] epoch 100: loss=0.1151 AUROC=0.9446 AP=0.9816
+  [deit_tiny_patch16_224/zipper] epoch 150: loss=0.1011 AUROC=0.9517 AP=0.9847
+  [deit_tiny_patch16_224/zipper] epoch 200: loss=0.0944 AUROC=0.9548 AP=0.9864
+  [deit_tiny_patch16_224/zipper] epoch 250: loss=0.0917 AUROC=0.9588 AP=0.9878
+  [deit_tiny_patch16_224/zipper] epoch 300: loss=0.0909 AUROC=0.9632 AP=0.9891
+  [deit_tiny_patch16_224/zipper] epoch 350: loss=0.0883 AUROC=0.9643 AP=0.9894
+  [deit_tiny_patch16_224/zipper] epoch 400: loss=0.0863 AUROC=0.9632 AP=0.9892
+  [deit_tiny_patch16_224/zipper] epoch 450: loss=0.0849 AUROC=0.9632 AP=0.9892
+  [deit_tiny_patch16_224/zipper] epoch 500: loss=0.0856 AUROC=0.9643 AP=0.9894
+[06:10:49]   [ 203/210] s42 zipper      deit_tiny_patch16_224          AUROC=0.9643 (3.6 min, mb=64 x1, peak=3.6GB)
+  [swin_tiny_patch4_window7_224/zipper] epoch 50: loss=0.1426 AUROC=0.7983 AP=0.9061
+  [swin_tiny_patch4_window7_224/zipper] epoch 100: loss=0.1357 AUROC=0.8138 AP=0.9120
+  [swin_tiny_patch4_window7_224/zipper] epoch 150: loss=0.1280 AUROC=0.8629 AP=0.9309
+  [swin_tiny_patch4_window7_224/zipper] epoch 200: loss=0.1188 AUROC=0.9005 AP=0.9654
+  [swin_tiny_patch4_window7_224/zipper] epoch 250: loss=0.1282 AUROC=0.8277 AP=0.9146
+  [swin_tiny_patch4_window7_224/zipper] epoch 300: loss=0.1169 AUROC=0.9181 AP=0.9725
+  [swin_tiny_patch4_window7_224/zipper] epoch 350: loss=0.1154 AUROC=0.9270 AP=0.9766
+  [swin_tiny_patch4_window7_224/zipper] epoch 400: loss=0.1141 AUROC=0.9304 AP=0.9780
+  [swin_tiny_patch4_window7_224/zipper] epoch 450: loss=0.1133 AUROC=0.9317 AP=0.9788
+  [swin_tiny_patch4_window7_224/zipper] epoch 500: loss=0.1142 AUROC=0.9325 AP=0.9788
+[06:19:44]   [ 204/210] s42 zipper      swin_tiny_patch4_window7_224   AUROC=0.9325 (8.9 min, mb=64 x1, peak=8.8GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b0/zipper] epoch 50: loss=0.1313 AUROC=0.8711 AP=0.9485
+  [efficientnet_b0/zipper] epoch 100: loss=0.1164 AUROC=0.9441 AP=0.9821
+  [efficientnet_b0/zipper] epoch 150: loss=0.1113 AUROC=0.9575 AP=0.9873
+  [efficientnet_b0/zipper] epoch 200: loss=0.1075 AUROC=0.9614 AP=0.9888
+  [efficientnet_b0/zipper] epoch 250: loss=0.1071 AUROC=0.6318 AP=0.8506
+  [efficientnet_b0/zipper] epoch 300: loss=0.0946 AUROC=0.9614 AP=0.9890
+  [efficientnet_b0/zipper] epoch 350: loss=0.0918 AUROC=0.9643 AP=0.9900
+  [efficientnet_b0/zipper] epoch 400: loss=0.0916 AUROC=0.9661 AP=0.9905
+  [efficientnet_b0/zipper] epoch 450: loss=0.0904 AUROC=0.9653 AP=0.9903
+  [efficientnet_b0/zipper] epoch 500: loss=0.0906 AUROC=0.9661 AP=0.9905
+[06:23:56]   [ 205/210] s42 zipper      efficientnet_b0                AUROC=0.9661 (4.2 min, mb=64 x1, peak=6.5GB)
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [efficientnet_b1/zipper] epoch 50: loss=0.1532 AUROC=0.4267 AP=0.7375
+  [efficientnet_b1/zipper] epoch 100: loss=0.1226 AUROC=0.9028 AP=0.9663
+  [efficientnet_b1/zipper] epoch 150: loss=0.1160 AUROC=0.8852 AP=0.9234
+  [efficientnet_b1/zipper] epoch 200: loss=0.1120 AUROC=0.9262 AP=0.9658
+  [efficientnet_b1/zipper] epoch 250: loss=0.1108 AUROC=0.9585 AP=0.9880
+  [efficientnet_b1/zipper] epoch 300: loss=0.1107 AUROC=0.9422 AP=0.9797
+  [efficientnet_b1/zipper] epoch 350: loss=0.1084 AUROC=0.9674 AP=0.9909
+  [efficientnet_b1/zipper] epoch 400: loss=0.1075 AUROC=0.9661 AP=0.9904
+  [efficientnet_b1/zipper] epoch 450: loss=0.1065 AUROC=0.9688 AP=0.9911
+  [efficientnet_b1/zipper] epoch 500: loss=0.1063 AUROC=0.9688 AP=0.9911
+[06:29:19]   [ 206/210] s42 zipper      efficientnet_b1                AUROC=0.9688 (5.4 min, mb=64 x1, peak=9.4GB)
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [mobilenetv3_small_100/zipper] epoch 50: loss=0.1303 AUROC=0.8768 AP=0.9547
+  [mobilenetv3_small_100/zipper] epoch 100: loss=0.1171 AUROC=0.9396 AP=0.9810
+  [mobilenetv3_small_100/zipper] epoch 150: loss=0.1109 AUROC=0.9554 AP=0.9866
+  [mobilenetv3_small_100/zipper] epoch 200: loss=0.1066 AUROC=0.9622 AP=0.9891
+  [mobilenetv3_small_100/zipper] epoch 250: loss=0.1041 AUROC=0.9645 AP=0.9899
+  [mobilenetv3_small_100/zipper] epoch 300: loss=0.0966 AUROC=0.9674 AP=0.9909
+  [mobilenetv3_small_100/zipper] epoch 350: loss=0.0937 AUROC=0.9701 AP=0.9916
+  [mobilenetv3_small_100/zipper] epoch 400: loss=0.0930 AUROC=0.9693 AP=0.9914
+  [mobilenetv3_small_100/zipper] epoch 450: loss=0.0914 AUROC=0.9698 AP=0.9915
+  [mobilenetv3_small_100/zipper] epoch 500: loss=0.0915 AUROC=0.9706 AP=0.9917
+[06:31:27]   [ 207/210] s42 zipper      mobilenetv3_small_100          AUROC=0.9706 (2.1 min, mb=64 x1, peak=2.2GB)
+  [resnet18/zipper] epoch 50: loss=0.1260 AUROC=0.9081 AP=0.9684
+  [resnet18/zipper] epoch 100: loss=0.1144 AUROC=0.9202 AP=0.9688
+  [resnet18/zipper] epoch 150: loss=0.1109 AUROC=0.9231 AP=0.9716
+  [resnet18/zipper] epoch 200: loss=0.1059 AUROC=0.9409 AP=0.9802
+  [resnet18/zipper] epoch 250: loss=0.0986 AUROC=0.9501 AP=0.9835
+  [resnet18/zipper] epoch 300: loss=0.0936 AUROC=0.9543 AP=0.9857
+  [resnet18/zipper] epoch 350: loss=0.0916 AUROC=0.9548 AP=0.9861
+  [resnet18/zipper] epoch 400: loss=0.0921 AUROC=0.9593 AP=0.9881
+  [resnet18/zipper] epoch 450: loss=0.0890 AUROC=0.9611 AP=0.9886
+  [resnet18/zipper] epoch 500: loss=0.0898 AUROC=0.9624 AP=0.9890
+[06:34:33]   [ 208/210] s42 zipper      resnet18                       AUROC=0.9624 (3.1 min, mb=64 x1, peak=3.0GB)
+  [resnet34/zipper] epoch 50: loss=0.1291 AUROC=0.8931 AP=0.9660
+  [resnet34/zipper] epoch 100: loss=0.1155 AUROC=0.9393 AP=0.9819
+  [resnet34/zipper] epoch 150: loss=0.1115 AUROC=0.9564 AP=0.9875
+  [resnet34/zipper] epoch 200: loss=0.1024 AUROC=0.9567 AP=0.9878
+  [resnet34/zipper] epoch 250: loss=0.0966 AUROC=0.9622 AP=0.9891
+  [resnet34/zipper] epoch 300: loss=0.0944 AUROC=0.9638 AP=0.9897
+  [resnet34/zipper] epoch 350: loss=0.0924 AUROC=0.9656 AP=0.9902
+  [resnet34/zipper] epoch 400: loss=0.0922 AUROC=0.9666 AP=0.9906
+  [resnet34/zipper] epoch 450: loss=0.0907 AUROC=0.9659 AP=0.9903
+  [resnet34/zipper] epoch 500: loss=0.0900 AUROC=0.9664 AP=0.9905
+[06:38:52]   [ 209/210] s42 zipper      resnet34                       AUROC=0.9664 (4.3 min, mb=64 x1, peak=4.1GB)
+  [resnet50/zipper] epoch 50: loss=0.1315 AUROC=0.8845 AP=0.9590
+  [resnet50/zipper] epoch 100: loss=0.1166 AUROC=0.9399 AP=0.9806
+  [resnet50/zipper] epoch 150: loss=0.1122 AUROC=0.9493 AP=0.9846
+  [resnet50/zipper] epoch 200: loss=0.1069 AUROC=0.9577 AP=0.9874
+  [resnet50/zipper] epoch 250: loss=0.0991 AUROC=0.9596 AP=0.9880
+  [resnet50/zipper] epoch 300: loss=0.0948 AUROC=0.9603 AP=0.9883
+  [resnet50/zipper] epoch 350: loss=0.0933 AUROC=0.9635 AP=0.9894
+  [resnet50/zipper] epoch 400: loss=0.0909 AUROC=0.9622 AP=0.9889
+  [resnet50/zipper] epoch 450: loss=0.0911 AUROC=0.9635 AP=0.9893
+  [resnet50/zipper] epoch 500: loss=0.0903 AUROC=0.9638 AP=0.9894
+[06:45:10]   [ 210/210] s42 zipper      resnet50                       AUROC=0.9638 (6.3 min, mb=64 x1, peak=7.9GB)
+[06:45:10] phase B done -> D:/autopaper/proxy_diag\phaseB_truth.json

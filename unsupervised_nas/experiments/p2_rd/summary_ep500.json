@@ -1,0 +1,122 @@
+[
+  {
+    "category": "bottle",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.9626984126984127,
+    "ap": 0.9892583741073626,
+    "minutes": 3.3518336613972983
+  },
+  {
+    "category": "cable",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.87143928035982,
+    "ap": 0.9061110024554069,
+    "minutes": 3.6623384515444437
+  },
+  {
+    "category": "capsule",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.7483047467092142,
+    "ap": 0.9302764977778919,
+    "minutes": 3.569219477971395
+  },
+  {
+    "category": "carpet",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.7764847512038523,
+    "ap": 0.9141564561458545,
+    "minutes": 4.500859610239664
+  },
+  {
+    "category": "grid",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.6775271512113618,
+    "ap": 0.8485344545022313,
+    "minutes": 4.283931525548299
+  },
+  {
+    "category": "hazelnut",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.9628571428571429,
+    "ap": 0.9790578327339193,
+    "minutes": 6.392504958311717
+  },
+  {
+    "category": "leather",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.8186141304347827,
+    "ap": 0.9055990959655473,
+    "minutes": 3.9201857924461363
+  },
+  {
+    "category": "metal_nut",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.7609970674486803,
+    "ap": 0.9353604968248005,
+    "minutes": 3.472768195470174
+  },
+  {
+    "category": "pill",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.8278777959629025,
+    "ap": 0.9586735139479645,
+    "minutes": 4.371902592976888
+  },
+  {
+    "category": "screw",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.43963927034228323,
+    "ap": 0.7466401367160372,
+    "minutes": 4.984735830624898
+  },
+  {
+    "category": "tile",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.9325396825396826,
+    "ap": 0.9752655423125902,
+    "minutes": 3.6669734199841817
+  },
+  {
+    "category": "toothbrush",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.8194444444444444,
+    "ap": 0.9327890656522794,
+    "minutes": 0.9862921277681986
+  },
+  {
+    "category": "transistor",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.8470833333333333,
+    "ap": 0.8239993268570516,
+    "minutes": 3.4711452881495157
+  },
+  {
+    "category": "wood",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.9456140350877194,
+    "ap": 0.9820024976923275,
+    "minutes": 3.9539731701215106
+  },
+  {
+    "category": "zipper",
+    "backbone": "efficientnet_b0",
+    "label": "nas_effb0",
+    "auroc": 0.9690126050420168,
+    "ap": 0.9912199418983814,
+    "minutes": 3.773644721508026
+  }
+]

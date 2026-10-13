@@ -1,0 +1,146 @@
+[
+  {
+    "name": "F1_abstract_winner_direction",
+    "must_appear": [
+      "ResNet-18 still leads on 8 of 15"
+    ],
+    "must_absent": [
+      "closes the gap and wins 12 of 15"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F2a_abstract_exceeds",
+    "must_appear": [
+      "matching 98.2% of the average AUROC of a 12.9M ResNet-18 student under an identical protocol"
+    ],
+    "must_absent": [
+      "exceeding a 12.9M ResNet-18 student under an identical protocol"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F2b_intro_exceeds",
+    "must_appear": [
+      "matching 98.2% of the average AUROC of a 12.9M ResNet-18 student trained under an identical protocol"
+    ],
+    "must_absent": [
+      "exceeding a 12.9M ResNet-18 student trained under an identical protocol"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F6a_caption_padim",
+    "must_appear": [
+      "exceeds PaDiM (77.9%)"
+    ],
+    "must_absent": [
+      "exceeds PaDiM (78.0%)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F6b_table_average_row",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "& 58.0 & 47.6 & 77.9 & 50.6 &"
+    ],
+    "must_absent": [
+      "& 58.0 & 47.6 & 78.0 & 50.6 &"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F6c_prose_padim",
+    "must_appear": [
+      "above PaDiM (77.9%) and Reverse Distillation (80.5%)"
+    ],
+    "must_absent": [
+      "above PaDiM (78.0%) and Reverse Distillation (80.5%)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F9_tie_wording_body",
+    "must_appear": [
+      "sharing the ninth with Reverse Distillation on bottle and holding leather by 0.03"
+    ],
+    "must_absent": [
+      "two ties within 0.02"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F10_cnn_type_count",
+    "must_appear": [
+      "CNNs (10 types, 65 trials)"
+    ],
+    "must_absent": [
+      "CNNs (13 types, 65 trials)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F11_trials_per_config",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "NAS trials per config & $\\sim$2.2 (100 total)"
+    ],
+    "must_absent": [
+      "NAS trials per config & $\\sim$2.1 (100 total)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F13a_btad_range_table",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "& 200--500 & 399--1000"
+    ],
+    "must_absent": [
+      "& 200--500 & 400--1000"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F13b_btad_range_prose",
+    "must_appear": [
+      "399--1000 (BTAD) training samples"
+    ],
+    "must_absent": [
+      "400--1000 (BTAD) training samples"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F4_best_trial_scope",
+    "must_appear": [
+      "0.0023, against 0.0032 for 128-dim and 0.0166 for 512-dim"
+    ],
+    "must_absent": [
+      "attained the single best trial score (0.0023)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "F5_sota_params",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "KG-NAS (Ours)} & 82.4 & - & \\textbf{5.3} &"
+    ],
+    "must_absent": [
+      "KG-NAS (Ours)} & 82.4 & - & \\textbf{6} &"
+    ],
+    "sources": true
+  },
+  {
+    "name": "M1_107fps_removed",
+    "must_appear": [
+      "142 FPS student throughput"
+    ],
+    "must_absent": [
+      "107 FPS"
+    ],
+    "sources": true
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "auroc": 0.5747282608695652,
+  "ap": 0.8444092375399725,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_leather\\best_model.pth",
+  "per_defect_type": {
+    "color": {
+      "auroc": 0.0,
+      "count": 19
+    },
+    "cut": {
+      "auroc": 0.0,
+      "count": 19
+    },
+    "fold": {
+      "auroc": 0.0,
+      "count": 17
+    },
+    "glue": {
+      "auroc": 0.0,
+      "count": 19
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 32
+    },
+    "poke": {
+      "auroc": 0.0,
+      "count": 18
+    }
+  }
+}

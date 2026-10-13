@@ -1,0 +1,8 @@
+{
+  "method": "SPADE",
+  "backbone": "resnet18",
+  "layer": "layer3",
+  "k": 5,
+  "auroc": 0.6271929824561404,
+  "ap": 0.822581854857178
+}

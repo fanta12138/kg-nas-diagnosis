@@ -1,0 +1,26 @@
+  [tier4/carpet] epoch 20: loss=0.3690 AUROC=0.8479 AP=0.9464
+  [tier4/carpet] epoch 40: loss=0.3638 AUROC=0.4177 AP=0.7720
+  [tier4/carpet] epoch 60: loss=0.3648 AUROC=0.8475 AP=0.9465
+  [tier4/carpet] epoch 80: loss=0.3578 AUROC=0.8539 AP=0.9493
+  [tier4/carpet] epoch 100: loss=0.3555 AUROC=0.8327 AP=0.9395
+  [tier4/carpet] epoch 120: loss=0.3514 AUROC=0.8274 AP=0.9372
+  [tier4/carpet] epoch 140: loss=0.3500 AUROC=0.8154 AP=0.9318
+  [tier4/carpet] epoch 160: loss=0.3469 AUROC=0.8118 AP=0.9286
+  [tier4/carpet] epoch 180: loss=0.3464 AUROC=0.8098 AP=0.9278
+  [tier4/carpet] epoch 200: loss=0.3408 AUROC=0.7921 AP=0.9203
+  [tier4/carpet] epoch 220: loss=0.3427 AUROC=0.8006 AP=0.9235
+  [tier4/carpet] epoch 240: loss=0.3339 AUROC=0.7949 AP=0.9208
+  [tier4/carpet] epoch 260: loss=0.3330 AUROC=0.7949 AP=0.9216
+  [tier4/carpet] epoch 280: loss=0.3255 AUROC=0.7877 AP=0.9176
+  [tier4/carpet] epoch 300: loss=0.3211 AUROC=0.7821 AP=0.9151
+  [tier4/carpet] epoch 320: loss=0.3193 AUROC=0.7825 AP=0.9150
+  [tier4/carpet] epoch 340: loss=0.3099 AUROC=0.7817 AP=0.9133
+  [tier4/carpet] epoch 360: loss=0.3193 AUROC=0.7745 AP=0.9115
+  [tier4/carpet] epoch 380: loss=0.3166 AUROC=0.7793 AP=0.9127
+  [tier4/carpet] epoch 400: loss=0.2995 AUROC=0.7781 AP=0.9116
+  [tier4/carpet] epoch 420: loss=0.3290 AUROC=0.7789 AP=0.9117
+  [tier4/carpet] epoch 440: loss=0.3038 AUROC=0.7853 AP=0.9149
+  [tier4/carpet] epoch 460: loss=0.3042 AUROC=0.7805 AP=0.9119
+  [tier4/carpet] epoch 480: loss=0.2988 AUROC=0.7817 AP=0.9132
+  [tier4/carpet] epoch 500: loss=0.3096 AUROC=0.7821 AP=0.9133
+DONE tier=4 cat=carpet resnet18 AUROC=0.7821 AP=0.9133 (3.8 min wall)

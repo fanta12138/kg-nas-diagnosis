@@ -1,0 +1,26 @@
+  [cap8/tile] epoch 20: loss=0.4497 AUROC=0.9177 AP=0.9692
+  [cap8/tile] epoch 40: loss=0.3500 AUROC=0.9376 AP=0.9772
+  [cap8/tile] epoch 60: loss=0.3158 AUROC=0.9459 AP=0.9799
+  [cap8/tile] epoch 80: loss=0.3257 AUROC=0.9037 AP=0.9593
+  [cap8/tile] epoch 100: loss=0.3956 AUROC=0.8979 AP=0.9565
+  [cap8/tile] epoch 120: loss=0.3413 AUROC=0.9336 AP=0.9750
+  [cap8/tile] epoch 140: loss=0.3745 AUROC=0.6858 AP=0.8610
+  [cap8/tile] epoch 160: loss=0.3069 AUROC=0.9455 AP=0.9795
+  [cap8/tile] epoch 180: loss=0.2916 AUROC=0.9481 AP=0.9807
+  [cap8/tile] epoch 200: loss=0.2815 AUROC=0.9473 AP=0.9804
+  [cap8/tile] epoch 220: loss=0.2766 AUROC=0.9455 AP=0.9800
+  [cap8/tile] epoch 240: loss=0.2684 AUROC=0.9517 AP=0.9821
+  [cap8/tile] epoch 260: loss=0.2663 AUROC=0.9520 AP=0.9825
+  [cap8/tile] epoch 280: loss=0.2622 AUROC=0.9535 AP=0.9828
+  [cap8/tile] epoch 300: loss=0.2578 AUROC=0.9589 AP=0.9848
+  [cap8/tile] epoch 320: loss=0.2556 AUROC=0.9553 AP=0.9836
+  [cap8/tile] epoch 340: loss=0.2525 AUROC=0.9603 AP=0.9853
+  [cap8/tile] epoch 360: loss=0.2512 AUROC=0.9603 AP=0.9852
+  [cap8/tile] epoch 380: loss=0.2480 AUROC=0.9600 AP=0.9852
+  [cap8/tile] epoch 400: loss=0.2499 AUROC=0.9589 AP=0.9848
+  [cap8/tile] epoch 420: loss=0.2472 AUROC=0.9585 AP=0.9846
+  [cap8/tile] epoch 440: loss=0.2457 AUROC=0.9571 AP=0.9842
+  [cap8/tile] epoch 460: loss=0.2451 AUROC=0.9582 AP=0.9846
+  [cap8/tile] epoch 480: loss=0.2452 AUROC=0.9578 AP=0.9844
+  [cap8/tile] epoch 500: loss=0.2457 AUROC=0.9582 AP=0.9846
+DONE budget=8 cat=tile deit_tiny_patch16_224 AUROC=0.9582 AP=0.9846 (3.2 min wall)

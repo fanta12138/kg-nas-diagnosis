@@ -1,0 +1,42 @@
+[22:34:28] pipeline start — waiting for searches
+[22:54:28] search  3M finished (1/5)
+[23:15:58] search  6M finished (2/5)
+[23:55:59] search  8M finished (3/5)
+[23:55:59] search 13M finished (4/5)
+[23:55:59] search 30M finished (5/5)
+[23:55:59] budget  3M -> mobilenetv3_small_100 + 128d (2.52M, score 0) from 12/20 in-budget trials
+[23:55:59] budget  6M -> mobilenetv3_small_100 + 256d (2.81M, score 0) from 26/40 in-budget trials
+[23:55:59] budget  8M -> efficientnet_b1 + 256d (7.92M, score 0) from 77/80 in-budget trials
+[23:55:59] budget 13M -> mobilenetv3_small_100 + 256d (2.81M, score 0) from 73/80 in-budget trials
+[23:55:59] budget 30M -> efficientnet_b1 + 256d (7.92M, score 0) from 76/80 in-budget trials
+[23:55:59] training jobs pending: 75 (parallel=6)
+[23:55:59]   start 3M/bottle      mobilenetv3_small_100
+[23:55:59]   start 3M/cable       mobilenetv3_small_100
+[23:55:59]   start 3M/capsule     mobilenetv3_small_100
+[23:55:59]   start 3M/carpet      mobilenetv3_small_100
+[23:55:59]   start 3M/grid        mobilenetv3_small_100
+[23:55:59]   start 3M/hazelnut    mobilenetv3_small_100
+[23:56:14]   FAIL  3M/bottle      rc=1
+[23:56:14]   FAIL  3M/cable       rc=1
+[23:56:14]   FAIL  3M/capsule     rc=1
+[23:56:14]   FAIL  3M/carpet      rc=1
+[23:56:14]   FAIL  3M/grid        rc=1
+[23:56:14]   FAIL  3M/hazelnut    rc=1
+[23:56:14]   start 3M/leather     mobilenetv3_small_100
+[23:56:14]   start 3M/metal_nut   mobilenetv3_small_100
+[23:56:14]   start 3M/pill        mobilenetv3_small_100
+[23:56:14]   start 3M/screw       mobilenetv3_small_100
+[23:56:14]   start 3M/tile        mobilenetv3_small_100
+[23:56:14]   start 3M/toothbrush  mobilenetv3_small_100
+[23:56:29]   FAIL  3M/leather     rc=1
+[23:56:29]   FAIL  3M/metal_nut   rc=1
+[23:56:29]   FAIL  3M/pill        rc=1
+[23:56:29]   FAIL  3M/screw       rc=1
+[23:56:29]   FAIL  3M/tile        rc=1
+[23:56:29]   FAIL  3M/toothbrush  rc=1
+[23:56:29]   start 3M/transistor  mobilenetv3_small_100
+[23:56:29]   start 3M/wood        mobilenetv3_small_100
+[23:56:29]   start 3M/zipper      mobilenetv3_small_100
+[23:56:29]   start 6M/bottle      mobilenetv3_small_100
+[23:56:29]   start 6M/cable       mobilenetv3_small_100
+[23:56:29]   start 6M/capsule     mobilenetv3_small_100

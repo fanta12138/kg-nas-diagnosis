@@ -1,0 +1,53 @@
+======================================================================
+F4 — best trial score 0.0097 vs 0.0023
+======================================================================
+  nas_search_trials.csv: rows=93  global min score = 0.009731 (efficientnet_b0, 256 dim)
+  rows with score < 0.005: 0
+
+  ablation_3_feature_dim.csv:
+      {'': '128', 'mean': '7.577136893166296', 'std': '24.573805010124776', 'min': '0.0032154759392142296', 'max': '96.09519958496094', 'count': '14.0'}
+      {'': '256', 'mean': '16.95292853092542', 'std': '66.53075033520334', 'min': '0.0022611599415540695', 'max': '291.19866943359375', 'count': '18.0'}
+      {'': '512', 'mean': '2.249628289336605', 'std': '4.9098508231215945', 'min': '0.016581564210355282', 'max': '14.256595611572266', 'count': '7.0'}
+
+======================================================================
+F6/F7/F8 — rounding of PaDiM / carpet / CFA
+======================================================================
+  baselines_full_results.csv columns: ['Category', 'Method', 'AUROC', 'AP', 'Inference_Time']
+
+  carpet final_evaluation.json raw:
+      {   "auroc": 0.7764847512038523,   "ap": 0.9141564561458545,   "student_backbone": "efficientnet_b0",   "epochs": 500,   "seed": 42,   "minutes": 4.5 }
+
+======================================================================
+F9 — CFA best-count ties and the leather margin
+======================================================================
+      {'Method': 'CFA', 'Best_Category_Count': '9'}
+      {'Method': 'RevDist', 'Best_Category_Count': '2'}
+      {'Method': 'AE', 'Best_Category_Count': '2'}
+      {'Method': 'STPM', 'Best_Category_Count': '1'}
+      {'Method': 'PaDiM', 'Best_Category_Count': '1'}
+      {'Method': 'SPADE', 'Best_Category_Count': '1'}
+
+======================================================================
+F10/F11 — backbone type count and trials-per-config
+======================================================================
+  backbone_distribution.csv rows=13
+  families: {'?': 13}
+
+======================================================================
+M1 — is 107 FPS recorded anywhere?
+======================================================================
+  -- inference_efficiency.csv
+      {'Model': 'ResNet-50', 'Params_M': '25.6', 'FLOPs_G': '4.1', 'FPS': '200'}
+      {'Model': 'EfficientNet-B0', 'Params_M': '5.3', 'FLOPs_G': '0.4', 'FPS': '152'}
+      {'Model': 'ViT-Tiny', 'Params_M': '5.7', 'FLOPs_G': '1.3', 'FPS': '266'}
+      {'Model': 'Ours (RD student)', 'Params_M': '6.0', 'FLOPs_G': '0.5', 'FPS': '142'}
+  -- efficiency_2_inference.csv
+      {'model': 'ResNet-50', 'params_m': '25.6', 'flops_g': '4.1', 'fps_estimated': '120'}
+      {'model': 'EfficientNet-B0', 'params_m': '5.3', 'flops_g': '0.4', 'fps_estimated': '350'}
+      {'model': 'ViT-Tiny', 'params_m': '5.7', 'flops_g': '1.3', 'fps_estimated': '200'}
+      {'model': 'Ours (Eff-B0+256d)', 'params_m': '6.0', 'flops_g': '0.5', 'fps_estimated': '320'}
+  -- efficiency_metrics.csv
+      {'Method': 'KG-NAS (Ours)', 'Params_M': '6.0', 'FPS': '320', 'Training_Time_min': '78'}
+      {'Method': 'CFA', 'Params_M': '12', 'FPS': '150', 'Training_Time_min': '120'}
+      {'Method': 'Reverse Distillation', 'Params_M': '15', 'FPS': '120', 'Training_Time_min': '180'}
+      {'Method': 'PaDiM', 'Params_M': '12', 'FPS': '80', 'Training_Time_min': '0'}

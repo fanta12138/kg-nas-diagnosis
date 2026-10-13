@@ -1,0 +1,28 @@
+=== exact means and correct 1-dp / 2-dp rounding (half-up) ===
+  cfa                    mean=89.746524   1dp=89.7  2dp=89.75  <<< paper says 89.8
+  reverse_distillation   mean=80.492697   1dp=80.5  2dp=80.49  OK
+  spade                  mean=78.680080   1dp=78.7  2dp=78.68  OK
+  padim                  mean=77.918223   1dp=77.9  2dp=77.92  <<< paper says 78.0
+  fastflow               mean=71.313359   1dp=71.3  2dp=71.31  OK
+  efficientad            mean=60.073446   1dp=60.1  2dp=60.07  OK
+  autoencoder            mean=57.968712   1dp=58.0  2dp=57.97  OK
+  stpm                   mean=51.103082   1dp=51.1  2dp=51.10  OK
+  patchcore              mean=50.588808   1dp=50.6  2dp=50.59  OK
+  simplenet              mean=50.518565   1dp=50.5  2dp=50.52  OK
+  vae                    mean=47.566556   1dp=47.6  2dp=47.57  OK
+
+=== CFA best-category accounting ===
+  CFA strict wins : 8
+  CFA tied wins   : 1
+  CFA total best  : 9
+  all best counts : {'cfa': 9, 'reverse_distillation': 2, 'autoencoder': 2, 'stpm': 1, 'padim': 1, 'spade': 1}
+
+  ties / near-ties (margin < 0.1 pp):
+     bottle      winners=cfa,reverse_distillation     margin vs runner-up = 0.0000 pp
+     hazelnut    winners=padim                        margin vs runner-up = 0.0714 pp
+     leather     winners=cfa                          margin vs runner-up = 0.0340 pp
+     screw       winners=autoencoder                  margin vs runner-up = 0.0615 pp
+
+=== manuscript main-table Average row vs recomputation ===
+  paper row:  | 58.0 | 47.6 | 78.0 | 50.6 | 51.1 | 80.5 | \textbf{89.8} | 78.7 | 71.3 | 60.1 | 50.5 | \underline{82.4}
+  recomputed: {'AE': '58.0', 'VAE': '47.6', 'PaDiM': '77.9', 'PatchCore': '50.6', 'STPM': '51.1', 'RevDist': '80.5', 'CFA': '89.7', 'SPADE': '78.7', 'FastFlow': '71.3', 'EffAD': '60.1', 'SimpleNet': '50.5'}

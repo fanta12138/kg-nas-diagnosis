@@ -1,0 +1,3 @@
+best_architecture:
+  backbone: resnet18
+  feature_dim: 512

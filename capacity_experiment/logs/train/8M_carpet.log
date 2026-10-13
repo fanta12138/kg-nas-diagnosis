@@ -1,0 +1,26 @@
+  [cap8/carpet] epoch 20: loss=0.5163 AUROC=0.5718 AP=0.8102
+  [cap8/carpet] epoch 40: loss=0.3869 AUROC=0.7685 AP=0.9099
+  [cap8/carpet] epoch 60: loss=0.3653 AUROC=0.7749 AP=0.9187
+  [cap8/carpet] epoch 80: loss=0.3748 AUROC=0.6665 AP=0.8760
+  [cap8/carpet] epoch 100: loss=0.3715 AUROC=0.6910 AP=0.8768
+  [cap8/carpet] epoch 120: loss=0.3536 AUROC=0.8287 AP=0.9303
+  [cap8/carpet] epoch 140: loss=0.3541 AUROC=0.8515 AP=0.9470
+  [cap8/carpet] epoch 160: loss=0.3353 AUROC=0.9494 AP=0.9842
+  [cap8/carpet] epoch 180: loss=0.3336 AUROC=0.9318 AP=0.9781
+  [cap8/carpet] epoch 200: loss=0.3071 AUROC=0.7508 AP=0.9019
+  [cap8/carpet] epoch 220: loss=0.3060 AUROC=0.6886 AP=0.8707
+  [cap8/carpet] epoch 240: loss=0.3321 AUROC=0.7139 AP=0.8784
+  [cap8/carpet] epoch 260: loss=0.2793 AUROC=0.6601 AP=0.8589
+  [cap8/carpet] epoch 280: loss=0.2740 AUROC=0.6738 AP=0.8628
+  [cap8/carpet] epoch 300: loss=0.2770 AUROC=0.7376 AP=0.8901
+  [cap8/carpet] epoch 320: loss=0.2618 AUROC=0.6545 AP=0.8503
+  [cap8/carpet] epoch 340: loss=0.2577 AUROC=0.6376 AP=0.8390
+  [cap8/carpet] epoch 360: loss=0.2540 AUROC=0.6525 AP=0.8468
+  [cap8/carpet] epoch 380: loss=0.2515 AUROC=0.6513 AP=0.8460
+  [cap8/carpet] epoch 400: loss=0.2485 AUROC=0.6465 AP=0.8418
+  [cap8/carpet] epoch 420: loss=0.2468 AUROC=0.6364 AP=0.8367
+  [cap8/carpet] epoch 440: loss=0.2444 AUROC=0.6284 AP=0.8339
+  [cap8/carpet] epoch 460: loss=0.2466 AUROC=0.6344 AP=0.8342
+  [cap8/carpet] epoch 480: loss=0.2464 AUROC=0.6364 AP=0.8353
+  [cap8/carpet] epoch 500: loss=0.2442 AUROC=0.6376 AP=0.8349
+DONE budget=8 cat=carpet deit_tiny_patch16_224 AUROC=0.6376 AP=0.8349 (3.9 min wall)

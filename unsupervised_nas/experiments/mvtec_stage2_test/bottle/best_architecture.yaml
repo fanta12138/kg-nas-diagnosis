@@ -1,0 +1,39 @@
+best_architecture:
+  backbone: efficientnet_b1
+  feature_dim: 512
+search_config:
+  data:
+    data_dir: D:/autopaper/datasets/mvtec_anomaly_detection/bottle
+    img_size: 224
+    num_workers: 4
+  nas:
+    alpha: 0.5
+    batch_size: 32
+    beta: 0.3
+    gamma: 0.2
+    num_trials: 100
+    quick_train_epochs: 3
+    search_space:
+      backbones:
+      - convnextv2_tiny
+      - convnextv2_base
+      - mobileone_s0
+      - convnext_tiny
+      - convnext_small
+      - vit_tiny_patch16_224
+      - deit_tiny_patch16_224
+      - swin_tiny_patch4_window7_224
+      - efficientnet_b0
+      - efficientnet_b1
+      - mobilenetv3_small_100
+      - resnet18
+      - resnet34
+      - resnet50
+      feature_dims:
+      - 128
+      - 256
+      - 512
+  output:
+    dir: experiments/mvtec_stage2_test/bottle
+  teacher:
+    model_path: experiments/stage1/best_teacher.pth

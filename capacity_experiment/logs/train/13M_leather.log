@@ -1,0 +1,26 @@
+  [cap13/leather] epoch 20: loss=0.3256 AUROC=0.8594 AP=0.9479
+  [cap13/leather] epoch 40: loss=0.3118 AUROC=0.8961 AP=0.9629
+  [cap13/leather] epoch 60: loss=0.3129 AUROC=0.9022 AP=0.9667
+  [cap13/leather] epoch 80: loss=0.3117 AUROC=0.9090 AP=0.9692
+  [cap13/leather] epoch 100: loss=0.3041 AUROC=0.9467 AP=0.9826
+  [cap13/leather] epoch 120: loss=0.3014 AUROC=0.9331 AP=0.9781
+  [cap13/leather] epoch 140: loss=0.2973 AUROC=0.9514 AP=0.9840
+  [cap13/leather] epoch 160: loss=0.2900 AUROC=0.9684 AP=0.9897
+  [cap13/leather] epoch 180: loss=0.2761 AUROC=0.9654 AP=0.9884
+  [cap13/leather] epoch 200: loss=0.2596 AUROC=0.9406 AP=0.9810
+  [cap13/leather] epoch 220: loss=0.2477 AUROC=0.9694 AP=0.9898
+  [cap13/leather] epoch 240: loss=0.2321 AUROC=0.9470 AP=0.9829
+  [cap13/leather] epoch 260: loss=0.2231 AUROC=0.9823 AP=0.9940
+  [cap13/leather] epoch 280: loss=0.2175 AUROC=0.9528 AP=0.9846
+  [cap13/leather] epoch 300: loss=0.2139 AUROC=0.9575 AP=0.9861
+  [cap13/leather] epoch 320: loss=0.2099 AUROC=0.9643 AP=0.9879
+  [cap13/leather] epoch 340: loss=0.2059 AUROC=0.9531 AP=0.9847
+  [cap13/leather] epoch 360: loss=0.2023 AUROC=0.9555 AP=0.9858
+  [cap13/leather] epoch 380: loss=0.1994 AUROC=0.9535 AP=0.9852
+  [cap13/leather] epoch 400: loss=0.1974 AUROC=0.9623 AP=0.9878
+  [cap13/leather] epoch 420: loss=0.1957 AUROC=0.9674 AP=0.9892
+  [cap13/leather] epoch 440: loss=0.1944 AUROC=0.9660 AP=0.9889
+  [cap13/leather] epoch 460: loss=0.1941 AUROC=0.9552 AP=0.9858
+  [cap13/leather] epoch 480: loss=0.1953 AUROC=0.9660 AP=0.9888
+  [cap13/leather] epoch 500: loss=0.1950 AUROC=0.9688 AP=0.9896
+DONE budget=13 cat=leather vit_tiny_patch16_224 AUROC=0.9688 AP=0.9896 (3.4 min wall)

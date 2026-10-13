@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "D:\autopaper\capacity_experiment\code\train_worker.py", line 72, in <module>
+    main()
+  File "D:\autopaper\capacity_experiment\code\train_worker.py", line 63, in main
+    auroc, ap, minutes = train_category(
+  File "D:/autopaper/unsupervised_nas\scripts\p2_rd_train.py", line 115, in train_category
+    loss = model.training_loss(images)
+  File "D:\autopaper/unsupervised_nas\methods\rd_detector.py", line 162, in training_loss
+    s1, s2, s3 = self.forward_student(x)
+  File "D:\autopaper/unsupervised_nas\methods\rd_detector.py", line 156, in forward_student
+    return self.decoder(z)
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\autopaper/unsupervised_nas\methods\rd_detector.py", line 138, in forward
+    s3 = self.dec3(z)                                   # 14x14
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\conv.py", line 549, in _conv_forward
+    return F.conv2d(
+RuntimeError: Given groups=1, weight of size [256, 128, 3, 3], expected input[60, 256, 14, 14] to have 128 channels, but got 256 channels instead

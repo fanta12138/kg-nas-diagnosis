@@ -1,0 +1,8 @@
+{
+  "best_architecture": {
+    "backbone": "efficientnet_b1",
+    "feature_dim": 256
+  },
+  "num_trials": 30,
+  "best_score": 0.0
+}

@@ -1,0 +1,8 @@
+{
+  "auroc": 0.9690126050420168,
+  "ap": 0.9912199418983814,
+  "student_backbone": "efficientnet_b0",
+  "epochs": 500,
+  "seed": 42,
+  "minutes": 3.8
+}

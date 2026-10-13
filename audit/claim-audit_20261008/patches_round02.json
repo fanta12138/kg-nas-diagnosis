@@ -1,0 +1,20 @@
+{
+  "tag": "round02_elsevier_abstract",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "main.tex",
+      "id": "F2c",
+      "find": "exceeding a 12.9M ResNet-18 student trained under an identical protocol while using 2.4$\\times$ fewer parameters.",
+      "replace": "matching 98.2\\% of the average AUROC of a 12.9M ResNet-18 student trained under an identical protocol while using 2.4$\\times$ fewer parameters.",
+      "note": "F2 in the Elsevier fallback abstract (shares sections/ but has its own abstract)."
+    },
+    {
+      "file": "main.tex",
+      "id": "F1b",
+      "find": "whereas at 500 epochs the discovered architecture closes the gap and wins 12 of 15.",
+      "replace": "whereas at 500 epochs ResNet-18 still leads on 8 of 15 and the discovered architecture wins 3.",
+      "note": "F1 in the Elsevier fallback abstract."
+    }
+  ]
+}

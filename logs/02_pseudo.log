@@ -1,0 +1,74 @@
+[19:15:27] === bottle ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\module.py:1326: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  return t.to(
+[19:17:50]   trained; fit=146 holdout=63 test=83  pseudo variants=15
+[19:20:48]   default=0.9500 oracle=0.9913  pseudo-pick=0.0_0.2_0.8_mean->0.9659  ens_top5=0.9651  rho=0.04 (5.3 min)
+[19:20:48] === cable ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[19:23:25]   trained; fit=156 holdout=68 test=150  pseudo variants=15
+[19:26:56]   default=0.8564 oracle=0.8619  pseudo-pick=0.0_0.4_0.6_mean->0.8549  ens_top5=0.8546  rho=0.92 (6.1 min)
+[19:26:56] === capsule ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[19:29:29]   trained; fit=153 holdout=66 test=132  pseudo variants=15
+[19:32:48]   default=0.7072 oracle=0.8313  pseudo-pick=sum_mean->0.7072  ens_top5=0.7098  rho=0.02 (5.9 min)
+[19:32:48] === carpet ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[19:36:37]   trained; fit=196 holdout=84 test=117  pseudo variants=15
+[19:40:54]   default=0.7267 oracle=0.9960  pseudo-pick=0.7_0.2_0.1_topk->0.9912  ens_top5=0.9912  rho=0.93 (8.1 min)
+[19:40:54] === grid ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[19:44:10]   trained; fit=184 holdout=80 test=78  pseudo variants=15
+[19:48:08]   default=0.7093 oracle=0.9432  pseudo-pick=0.8_0.1_0.1_topk->0.9373  ens_top5=0.9382  rho=0.92 (7.2 min)
+[19:48:08] === hazelnut ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[19:53:09]   trained; fit=273 holdout=118 test=110  pseudo variants=15
+[19:58:46]   default=0.9464 oracle=1.0000  pseudo-pick=0.0_0.3_0.7_topk->1.0000  ens_top5=1.0000  rho=0.97 (10.6 min)
+[19:58:46] === leather ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:01:54]   trained; fit=171 holdout=74 test=124  pseudo variants=15
+[20:05:37]   default=0.9888 oracle=1.0000  pseudo-pick=0.0_0.2_0.8_topk->0.9942  ens_top5=0.9969  rho=0.29 (6.8 min)
+[20:05:37] === metal_nut ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:08:22]   trained; fit=154 holdout=66 test=115  pseudo variants=15
+[20:11:41]   default=0.7449 oracle=0.9555  pseudo-pick=0.1_0.7_0.2_topk->0.9531  ens_top5=0.9531  rho=0.92 (6.1 min)
+[20:11:41] === pill ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:15:03]   trained; fit=186 holdout=81 test=167  pseudo variants=15
+[20:19:09]   default=0.8148 oracle=0.8317  pseudo-pick=0.1_0.0_0.9_topk->0.8178  ens_top5=0.8208  rho=0.76 (7.5 min)
+[20:19:09] === screw ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:23:10]   trained; fit=224 holdout=96 test=160  pseudo variants=15
+[20:27:59]   default=0.3812 oracle=0.8723  pseudo-pick=0.1_0.5_0.4_topk->0.8297  ens_top5=0.8256  rho=0.37 (8.8 min)
+[20:27:59] === tile ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:30:56]   trained; fit=161 holdout=69 test=117  pseudo variants=15
+[20:34:34]   default=0.9430 oracle=0.9665  pseudo-pick=0.0_0.2_0.8_mean->0.9650  ens_top5=0.9563  rho=0.75 (6.6 min)
+[20:34:34] === toothbrush ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:35:22]   trained; fit=42 holdout=18 test=42  pseudo variants=15
+[20:36:18]   default=0.7250 oracle=0.9194  pseudo-pick=0.6_0.0_0.4_mean->0.7306  ens_top5=0.7319  rho=-0.15 (1.7 min)
+[20:36:18] === transistor ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:39:03]   trained; fit=149 holdout=64 test=100  pseudo variants=15
+[20:42:19]   default=0.8312 oracle=0.8413  pseudo-pick=0.1_0.0_0.9_topk->0.8267  ens_top5=0.8277  rho=0.22 (6.0 min)
+[20:42:19] === wood ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:45:26]   trained; fit=172 holdout=75 test=79  pseudo variants=15
+[20:49:11]   default=0.9500 oracle=0.9904  pseudo-pick=0.3_0.6_0.1_topk->0.9868  ens_top5=0.9886  rho=0.69 (6.9 min)
+[20:49:11] === zipper ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[20:52:11]   trained; fit=168 holdout=72 test=151  pseudo variants=15
+[20:55:58]   default=0.9680 oracle=0.9774  pseudo-pick=0.5_0.0_0.5_topk->0.9388  ens_top5=0.9349  rho=0.38 (6.8 min)
+[20:55:58] 
+[20:55:58] ==========================================================================
+[20:55:58] strategy                         mean AUROC  vs default
+[20:55:58] --------------------------------------------------------------------------
+[20:55:58] default (sum/mean, paper)          81.6198%         --
+[20:55:58] oracle policy                      93.1870%     11.57 pp  <== per-category upper bound
+[20:55:58] pseudo-anomaly selection           89.9947%      8.37 pp  (top-1 hit 0/15)
+[20:55:58] pseudo top-5 ensemble              89.9645%      8.34 pp  (label-free ensemble)
+[20:55:58] pseudo top-10 ensemble             89.6981%      8.08 pp  (label-free ensemble)
+[20:55:58] pseudo top-20 ensemble             89.3422%      7.72 pp  (label-free ensemble)
+[20:55:58] oracle top-5 ensemble              93.8100%     12.19 pp  (oracle ensemble, upper bound)
+[20:55:58] ==========================================================================

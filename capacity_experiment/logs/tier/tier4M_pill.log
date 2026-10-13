@@ -1,0 +1,26 @@
+  [tier4/pill] epoch 20: loss=0.1514 AUROC=0.7720 AP=0.9322
+  [tier4/pill] epoch 40: loss=0.2312 AUROC=0.6274 AP=0.8888
+  [tier4/pill] epoch 60: loss=0.1308 AUROC=0.7815 AP=0.9357
+  [tier4/pill] epoch 80: loss=0.1255 AUROC=0.7900 AP=0.9390
+  [tier4/pill] epoch 100: loss=0.1166 AUROC=0.7960 AP=0.9436
+  [tier4/pill] epoch 120: loss=0.1135 AUROC=0.8006 AP=0.9478
+  [tier4/pill] epoch 140: loss=0.1156 AUROC=0.8044 AP=0.9494
+  [tier4/pill] epoch 160: loss=0.1047 AUROC=0.8107 AP=0.9524
+  [tier4/pill] epoch 180: loss=0.1031 AUROC=0.8129 AP=0.9531
+  [tier4/pill] epoch 200: loss=0.0967 AUROC=0.8159 AP=0.9540
+  [tier4/pill] epoch 220: loss=0.0941 AUROC=0.8208 AP=0.9559
+  [tier4/pill] epoch 240: loss=0.0891 AUROC=0.8211 AP=0.9560
+  [tier4/pill] epoch 260: loss=0.0872 AUROC=0.8249 AP=0.9575
+  [tier4/pill] epoch 280: loss=0.0827 AUROC=0.8252 AP=0.9577
+  [tier4/pill] epoch 300: loss=0.0792 AUROC=0.8235 AP=0.9572
+  [tier4/pill] epoch 320: loss=0.0778 AUROC=0.8257 AP=0.9581
+  [tier4/pill] epoch 340: loss=0.0783 AUROC=0.8276 AP=0.9587
+  [tier4/pill] epoch 360: loss=0.0749 AUROC=0.8273 AP=0.9590
+  [tier4/pill] epoch 380: loss=0.0761 AUROC=0.8279 AP=0.9590
+  [tier4/pill] epoch 400: loss=0.0763 AUROC=0.8276 AP=0.9589
+  [tier4/pill] epoch 420: loss=0.0732 AUROC=0.8273 AP=0.9590
+  [tier4/pill] epoch 440: loss=0.0730 AUROC=0.8279 AP=0.9590
+  [tier4/pill] epoch 460: loss=0.0743 AUROC=0.8271 AP=0.9586
+  [tier4/pill] epoch 480: loss=0.0734 AUROC=0.8268 AP=0.9588
+  [tier4/pill] epoch 500: loss=0.0765 AUROC=0.8276 AP=0.9590
+DONE tier=4 cat=pill resnet18 AUROC=0.8276 AP=0.9590 (3.6 min wall)

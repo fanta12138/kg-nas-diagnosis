@@ -1,0 +1,182 @@
+% ============================================================================
+% DRAFT v2 -- Section 1: Introduction
+% Genre: benchmark / evaluation study (not a new-detector paper).
+% Genre precedents cited: Bouthillier (variance in ML benchmarks), IM-IAD
+% (AD evaluation protocol), Yu et al. 2020 (NAS vs random), Cao et al.
+% (streaming AD benchmark), Yu et al. 2026 (event-level evaluation).
+%
+% Numbers trace to proxy_diag/samplesize_analysis.json, phaseB_truth.json and
+% docs/03_实验记录.md. Checked with adbench/numsnap.py after each edit.
+% ============================================================================
+
+\section{Introduction}
+\label{sec:introduction}
+
+Visual inspection on a production line has to work without defect samples.
+Collecting and annotating the failures of a manufacturing process is expensive,
+and the failure modes that matter are by definition the ones not yet seen, so the
+established approach is to model normality and flag deviations. Reverse
+distillation~\cite{deng2022reverse} is a representative and widely deployed member
+of this family: a frozen teacher extracts features at several scales, a student is
+trained to reproduce them on normal images, and at test time the discrepancy
+between the two is taken as the anomaly signal.
+
+Two engineering decisions have to be made before such a system can be deployed.
+The first is the \emph{architecture}: what network the student should be. The
+second is the \emph{scoring policy}: how the per-pixel discrepancy maps are
+combined into the single number that decides whether a part is rejected. The
+second decision is usually made implicitly --- the published pipeline averages the
+discrepancy map over all pixels, a choice that is rarely stated and, to our
+knowledge, never justified. The literature has overwhelmingly invested in the
+first, applying neural architecture search (NAS) to anomaly
+detection~\cite{liu2023simplenet,wang2021stpm} on the argument that the optimal
+architecture is dataset-dependent and should be discovered rather than chosen.
+
+\runinhead{The margins the field argues about, and the resolution of its
+benchmark.} Progress on the standard benchmark is reported in tenths of a
+percentage point. PatchCore reached $99.1\%$ image-level AUROC on MVTec-AD in
+2022~\cite{roth2022patchcore}; the strongest methods reported since reach
+$99.6\%$~\cite{liu2023simplenet,guo2025dinomaly}. The contested margin is
+therefore $0.5$ points, on a benchmark whose test sets hold roughly a hundred
+images per category. Before asking which design decisions produce such margins,
+it is worth asking whether the standard evaluation design can resolve them at all.
+We measure that first, because the answer determines how every subsequent
+comparison in this literature should be read.
+
+This paper is accordingly a \emph{benchmark-and-evaluation study}, not a new
+detector. Work of this kind measures the evaluation practice of a field rather
+than adding a method, and it has clear precedents in this area. Yu et
+al.~\cite{yu2020evaluating} compared architectures returned by several NAS
+algorithms against architectures drawn uniformly at random from the same search
+space, and found the search phase uninformative. IM-IAD~\cite{xie2024imiad}
+consolidated competing evaluation protocols for industrial anomaly detection onto
+one footing. Bouthillier et al.~\cite{bouthillier2021accounting} showed that
+unacknowledged run-to-run variance invalidates comparisons in machine-learning
+benchmarks and derived how many runs such comparisons require; the same
+re-examination has since been carried out for
+streaming~\cite{cao2024revisiting} and industrial time-series~\cite{yu2026eventlevel}
+anomaly detection. We continue that line into a deployed unsupervised
+image-anomaly-detection pipeline: we instrument it, we re-run its search, and we
+train the complete comparison it never ran.
+
+\runinhead{What we instrument.}
+Our own earlier pipeline, KG-NAS, is a three-stage system of this family: a search
+ranks 42 configurations (14 backbones $\times$ 3 feature dimensions) on normal
+data alone using a knowledge-distillation signal, and the winning configuration is
+then trained as a reverse-distillation detector. We ask a question this literature
+has largely assumed rather than measured: \emph{how much accuracy does the
+architecture choice actually buy, is the search that selects it doing its job, and
+what can the benchmark that judges both actually resolve?} We answer by
+measurement: we instrument the search, we train all 14 backbones of its search
+space on all 15 MVTec-AD categories under one protocol --- 210 detectors --- and
+we sweep the scoring policy on frozen models.
+
+\runinhead{The benchmark resolves $3$ points; the field argues about $0.5$.}
+Two-way decomposition of the 210-detector matrix leaves a residual standard
+deviation of $3.30$ points, and the run-to-run standard deviation of a single
+detector at a fixed (backbone, category) is $1.96$ points over three seeds.
+Comparing two backbones across the fifteen categories is therefore a paired test
+whose minimum detectable difference is \textbf{$2.98$ points} --- larger than the
+entire $3.98$-point spread of the fourteen backbones, and six times the margin
+that separates the 2022 and 2026 state of the art. To resolve $0.5$ points on a
+single category would take $240$ independent training runs per backbone. This is
+the paper's measurement about the field as a whole rather than about this
+pipeline.
+
+\runinhead{Two thirds of the search space cannot reach the deployed model.}
+The searched feature dimension enters the search through the student projector, so
+the search signal depends on it, but it does not reach the detector: in the
+deployment path the student encoder builds its bottleneck with a hard-coded width
+while the decoder is constructed with the requested one, and the final training
+entry point never passes the argument at all. The three values of the searched
+dimension therefore produce the identical deployed model for a given backbone. The
+42-configuration space contains 14 distinct models; the other 28 cells are
+deployment-equivalent duplicates. The recorded searches behave as this predicts:
+across four independent runs the selected backbone is the same every time, while
+the selected dimension differs (Section~\ref{subsec:inert}).
+
+\runinhead{The search signal does not distinguish architectures, and collapses
+for some of them.} Calling the search's own evaluation method ten times per
+configuration gives two results. Across the twelve well-behaved backbones the
+median score spans only $5.7\%$ --- the same order as the within-configuration
+noise of a single backbone --- so the signal carries essentially no
+architecture-level information. And two backbones fail in a specific way:
+\texttt{efficientnet\_b1} returns exactly $0.0$ in $73\%$ of evaluations and
+\texttt{mobilenetv3\_small\_100} in $13\%$, because the student diverges, every
+validation batch trips a hard threshold, and the score is then silently computed
+as an average over zero samples. Since the search minimises, $0.0$ is the best
+score attainable anywhere in the space
+(Section~\ref{subsec:proxy_stability}); over the project's own record of 834
+search trials the collapse occurs in $8.0\%$ of them.
+
+\runinhead{Architecture is detectable, negligible, and does not transfer.}
+Training 210 detectors under an identical protocol and decomposing the resulting
+AUROC matrix attributes $0.54\%$ of the variance to the backbone and $95.32\%$ to
+the category, with the backbone effect statistically significant ($p = 0.039$) and
+practically irrelevant. The manuscript's selected architecture ranks fifth of
+fourteen and is statistically indistinguishable from twelve of the thirteen
+alternatives. More consequentially, the ranking does not transfer: the mean
+correlation between two categories' orderings of the 14 backbones is
+$\rho = 0.215$, and in $31\%$ of category pairs the categories disagree. Yet the
+protocol searches on a single category and applies the winner to all fifteen
+(Section~\ref{subsec:capacity_null}).
+
+\runinhead{The consequence is measurable, and it is worse than chance.}
+Running the search itself with independent seeds, the two backbones that collapse
+to zero are selected every time, and the architecture the search returns is worse
+than picking a backbone uniformly at random. A design axis that cannot reach the
+model, ranked by a signal that does not discriminate, on a quantity that does not
+transfer, is selected --- reliably --- by a failure mode
+(Section~\ref{subsec:search_vs_random}).
+
+\runinhead{The leverage is in the decision nobody documents.} On frozen models,
+changing only the reduction that turns discrepancy maps into an image score moves
+mean AUROC from $82.36\%$ to $90.28\%$ --- $+7.92$ points, reproduced across three
+training seeds --- and choosing the policy per category reaches $93.72\%$. The
+policy can further be chosen without any anomaly label, by perturbing held-out
+normal images with synthetic defects and selecting the policy that best separates
+perturbed from clean: across three training seeds this recovers $7.09$ of the
+$11.65$ points available from an oracle, on the same trained models
+(Sections~\ref{subsec:policy_results} and~\ref{subsec:pseudo_results}).
+
+\subsection*{Contributions}
+
+\begin{enumerate}
+  \item \textbf{The resolvability of the standard benchmark design.} We anchor the
+  noise floor of this task to the margin the field actually contests, and show
+  that a single-category, single-run comparison resolves $2.98$ points against a
+  contested margin of $0.5$ --- so most published backbone comparisons on this
+  benchmark are not measurements. This is a measurement about the evaluation
+  practice of the field, and it is our primary contribution.
+  \item \textbf{A diagnosis of the architecture axis.} Two thirds of a standard
+  search space is deployment-inert; its search signal does not discriminate
+  between architectures and degenerates to a score of exactly zero for a subset of
+  them; the axis contributes $0.54\%$ of the variance in detection accuracy
+  against $95.32\%$ for the category.
+  \item \textbf{A controlled comparison of a full search space.} 14 backbones
+  $\times$ 15 categories under one protocol (210 detectors), which makes the
+  negative result measurable rather than anecdotal.
+  \item \textbf{Evidence that a single-category search cannot work.} The backbone
+  ranking does not transfer across categories ($\bar\rho = 0.215$; $31\%$ of
+  category pairs reverse), so a search run on one category estimates a quantity
+  that does not exist independently of the category.
+  \item \textbf{A label-free method for the axis that does matter.} Selecting the
+  scoring policy by separation of synthetic pseudo-anomalies recovers $61\%$ of the
+  oracle gap --- $7.09$ of $11.65$ points, averaged over three training seeds ---
+  without any anomaly label and without retraining.
+\end{enumerate}
+
+\subsection*{Scope and honesty}
+
+We do not claim state of the art: the pipeline reaches $82.47\%$ mean AUROC on
+MVTec-AD, against published values of $95.6\%$--$99.6\%$ for the established
+methods, and Section~\ref{sec:positioning} reports that gap rather than obscuring
+it. The contribution is not a better number but a quantitative account of which
+design choices produce the number, of how much of the number the benchmark can
+measure at all, and of the finding that the axis the field searches is not the
+axis that matters. Section~\ref{sec:related_work} positions the work,
+Section~\ref{sec:method} describes the pipeline under study,
+Section~\ref{sec:diagnosis} reports the diagnosis and the resolvability analysis,
+Section~\ref{sec:leverage} the scoring-policy analysis,
+Section~\ref{sec:positioning} states where the pipeline stands, and
+Section~\ref{sec:conclusion} concludes.

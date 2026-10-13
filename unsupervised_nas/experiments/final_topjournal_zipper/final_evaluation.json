@@ -1,0 +1,41 @@
+{
+  "auroc": 0.6720063025210085,
+  "ap": 0.8799788675020894,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_zipper\\best_model.pth",
+  "per_defect_type": {
+    "broken_teeth": {
+      "auroc": 0.0,
+      "count": 19
+    },
+    "combined": {
+      "auroc": 0.0,
+      "count": 16
+    },
+    "fabric_border": {
+      "auroc": 0.0,
+      "count": 17
+    },
+    "fabric_interior": {
+      "auroc": 0.0,
+      "count": 16
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 32
+    },
+    "rough": {
+      "auroc": 0.0,
+      "count": 17
+    },
+    "split_teeth": {
+      "auroc": 0.0,
+      "count": 18
+    },
+    "squeezed_teeth": {
+      "auroc": 0.0,
+      "count": 16
+    }
+  }
+}

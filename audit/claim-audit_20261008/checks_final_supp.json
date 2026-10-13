@@ -1,0 +1,13 @@
+[
+  {
+    "name": "U1_supp_42_config",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "the compact 42-configuration space"
+    ],
+    "must_absent": [
+      "the compact 45-configuration space"
+    ],
+    "sources": true
+  }
+]

@@ -1,0 +1,142 @@
+[13:50:18] === bottle ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[13:53:38]   trained (83 test imgs), maps ready
+[13:53:51]   sum_mean(current)=0.9627 | best=s3_topk=0.9960 | best_w=w0.0_0.0_1.0_topk=0.9960 (3.5 min)
+[13:53:51] === cable ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[13:57:28]   trained (150 test imgs), maps ready
+[13:57:53]   sum_mean(current)=0.8778 | best=w0.1_0.1_0.8_topk=0.8782 | best_w=w0.1_0.1_0.8_topk=0.8782 (4.0 min)
+[13:57:53] === capsule ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:01:25]   trained (132 test imgs), maps ready
+[14:01:47]   sum_mean(current)=0.7515 | best=w0.8_0.0_0.2_topk=0.8759 | best_w=w0.8_0.0_0.2_topk=0.8759 (3.9 min)
+[14:01:47] === carpet ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:06:15]   trained (117 test imgs), maps ready
+[14:06:35]   sum_mean(current)=0.7729 | best=w0.9_0.1_-0.0_topk=0.9884 | best_w=w0.9_0.1_-0.0_topk=0.9884 (4.8 min)
+[14:06:35] === grid ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:10:50]   trained (78 test imgs), maps ready
+[14:11:03]   sum_mean(current)=0.6124 | best=s1_max=0.8914 | best_w=w1.0_0.0_0.0_topk=0.8805 (4.5 min)
+[14:11:03] === hazelnut ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:17:23]   trained (110 test imgs), maps ready
+[14:17:41]   sum_mean(current)=0.9711 | best=w0.0_0.4_0.6_topk=1.0000 | best_w=w0.0_0.4_0.6_topk=1.0000 (6.6 min)
+[14:17:42] === leather ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:21:34]   trained (124 test imgs), maps ready
+[14:21:55]   sum_mean(current)=0.9844 | best=w0.4_0.2_0.4_topk=1.0000 | best_w=w0.4_0.2_0.4_topk=1.0000 (4.2 min)
+[14:21:55] === metal_nut ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:25:21]   trained (115 test imgs), maps ready
+[14:25:40]   sum_mean(current)=0.7615 | best=w0.2_0.2_0.6_topk=0.9756 | best_w=w0.2_0.2_0.6_topk=0.9756 (3.8 min)
+[14:25:41] === pill ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:29:59]   trained (167 test imgs), maps ready
+[14:30:27]   sum_mean(current)=0.8317 | best=w0.0_0.1_0.9_topk=0.8478 | best_w=w0.0_0.1_0.9_topk=0.8478 (4.8 min)
+[14:30:27] === screw ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:35:23]   trained (160 test imgs), maps ready
+[14:35:50]   sum_mean(current)=0.4222 | best=w0.2_0.7_0.1_topk=0.8776 | best_w=w0.2_0.7_0.1_topk=0.8776 (5.4 min)
+[14:35:50] === tile ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:39:28]   trained (117 test imgs), maps ready
+[14:39:49]   sum_mean(current)=0.9040 | best=s3_mean=0.9358 | best_w=w0.1_0.9_0.0_topk=0.8828 (4.0 min)
+[14:39:49] === toothbrush ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:40:47]   trained (42 test imgs), maps ready
+[14:40:54]   sum_mean(current)=0.8250 | best=w0.6_0.0_0.4_topk=0.9722 | best_w=w0.6_0.0_0.4_topk=0.9722 (1.1 min)
+[14:40:54] === transistor ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:44:30]   trained (100 test imgs), maps ready
+[14:44:47]   sum_mean(current)=0.8283 | best=s3_mean=0.8467 | best_w=w0.1_0.2_0.7_topk=0.8442 (3.9 min)
+[14:44:47] === wood ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:49:05]   trained (79 test imgs), maps ready
+[14:49:19]   sum_mean(current)=0.9430 | best=w0.5_0.4_0.1_topk=0.9939 | best_w=w0.5_0.4_0.1_topk=0.9939 (4.5 min)
+[14:49:19] === zipper ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:53:03]   trained (151 test imgs), maps ready
+[14:53:30]   sum_mean(current)=0.9709 | best=s1_mean=0.9779 | best_w=w0.5_0.0_0.5_topk=0.9475 (4.2 min)
+[14:53:30] 
+[14:53:30] ==============================================================================
+[14:53:30] policy                     mean AUROC        min        max
+[14:53:30] ------------------------------------------------------------------------------
+[14:53:30] s1_max                       84.3339%   64.6364%   98.8451%
+[14:53:30] s1_topk                      87.6551%   66.6229%   99.9321%
+[14:53:30] s2_topk                      89.3224%   75.6137%   99.8214%
+[14:53:30] s3_mean                      82.9495%   32.0762%   98.8451%
+[14:53:30] s3_topk                      83.5839%   55.8897%   99.6786%
+[14:53:30] sum_max                      86.8424%   69.7218%   98.8791%
+[14:53:30] sum_mean                     82.7953%   42.2218%   98.4375%   <== current default
+[14:53:30] sum_topk                     90.2142%   78.3688%   99.9660%
+[14:53:30] w0.0_0.0_1.0_topk            83.5839%   55.8897%   99.6786%
+[14:53:30] w0.0_0.1_0.9_topk            84.3944%   57.3099%   99.7500%
+[14:53:30] w0.0_0.2_0.8_topk            85.2641%   59.2314%   99.8929%
+[14:53:30] w0.0_0.3_0.7_topk            86.1077%   60.4845%   99.9643%
+[14:53:30] w0.0_0.4_0.6_topk            86.8749%   63.6591%  100.0000%
+[14:53:30] w0.0_0.5_0.5_topk            87.6503%   67.8363%  100.0000%
+[14:53:30] w0.0_0.6_0.4_topk            88.1344%   70.0919%  100.0000%
+[14:53:30] w0.0_0.7_0.3_topk            88.6377%   72.1805%  100.0000%
+[14:53:30] w0.0_0.8_0.2_topk            89.1097%   75.6892%   99.9286%
+[14:53:30] w0.0_0.9_0.1_topk            89.3718%   76.7321%   99.9286%
+[14:53:30] w0.0_1.0_0.0_topk            89.3224%   75.6137%   99.8214%
+[14:53:30] w0.1_0.0_0.9_topk            85.1115%   58.7302%   99.9286%
+[14:53:30] w0.1_0.1_0.8_topk            86.0052%   60.5681%  100.0000%
+[14:53:30] w0.1_0.2_0.7_topk            86.9063%   62.4896%  100.0000%
+[14:53:30] w0.1_0.3_0.6_topk            87.6935%   66.0819%  100.0000%
+[14:53:30] w0.1_0.4_0.5_topk            88.4002%   70.2590%  100.0000%
+[14:53:30] w0.1_0.5_0.4_topk            88.9695%   71.5121%  100.0000%
+[14:53:30] w0.1_0.6_0.3_topk            89.6059%   75.1880%   99.9643%
+[14:53:30] w0.1_0.7_0.2_topk            89.9528%   77.1140%   99.8929%
+[14:53:30] w0.1_0.8_0.1_topk            90.0972%   75.9411%   99.8641%
+[14:53:30] w0.1_0.9_0.0_topk            89.9460%   75.1227%   99.8302%
+[14:53:30] w0.2_0.0_0.8_topk            86.5578%   61.9883%  100.0000%
+[14:53:30] w0.2_0.1_0.7_topk            87.3863%   64.9958%  100.0000%
+[14:53:30] w0.2_0.2_0.6_topk            88.3060%   68.3375%  100.0000%
+[14:53:30] w0.2_0.3_0.5_topk            88.9337%   71.1779%  100.0000%
+[14:53:30] w0.2_0.4_0.4_topk            89.6597%   73.7678%   99.9286%
+[14:53:30] w0.2_0.5_0.3_topk            90.2533%   77.8613%   99.8981%
+[14:53:30] w0.2_0.6_0.2_topk            90.5873%   77.1140%   99.8981%
+[14:53:30] w0.2_0.7_0.1_topk            90.5386%   75.8592%   99.8641%
+[14:53:30] w0.2_0.8_0.0_topk            90.3333%   74.5772%   99.8641%
+[14:53:30] w0.3_0.0_0.7_topk            87.7387%   66.4160%   99.8929%
+[14:53:30] w0.3_0.1_0.6_topk            88.5150%   69.4236%   99.8571%
+[14:53:30] w0.3_0.2_0.5_topk            89.2564%   72.9323%   99.9321%
+[14:53:30] w0.3_0.3_0.4_topk            89.8405%   76.4411%   99.9660%
+[14:53:30] w0.3_0.4_0.3_topk            90.3329%   77.9324%   99.8981%
+[14:53:30] w0.3_0.5_0.2_topk            90.5650%   76.8958%   99.8981%
+[14:53:30] w0.3_0.6_0.1_topk            90.6020%   75.3955%   99.8641%
+[14:53:30] w0.3_0.7_-0.0_topk           90.4340%   74.2771%   99.8641%
+[14:53:30] w0.4_0.0_0.6_topk            88.6707%   71.5957%   99.9321%
+[14:53:30] w0.4_0.1_0.5_topk            89.2848%   75.5221%   99.9660%
+[14:53:30] w0.4_0.2_0.4_topk            89.8321%   78.6132%  100.0000%
+[14:53:30] w0.4_0.3_0.3_topk            90.2089%   77.7414%   99.9660%
+[14:53:30] w0.4_0.4_0.2_topk            90.4511%   76.8140%   99.8981%
+[14:53:30] w0.4_0.5_0.1_topk            90.4389%   75.6137%   99.8981%
+[14:53:30] w0.4_0.6_-0.0_topk           90.2705%   74.4681%   99.8641%
+[14:53:30] w0.5_0.0_0.5_topk            89.2993%   77.7778%  100.0000%
+[14:53:30] w0.5_0.1_0.4_topk            89.7191%   78.4506%  100.0000%
+[14:53:30] w0.5_0.2_0.3_topk            90.0756%   77.7687%  100.0000%
+[14:53:30] w0.5_0.3_0.2_topk            90.2182%   76.6503%   99.9660%
+[14:53:30] w0.5_0.4_0.1_topk            90.0886%   75.5865%   99.9321%
+[14:53:30] w0.5_0.5_0.0_topk            89.9030%   74.9045%   99.8641%
+[14:53:30] w0.6_0.0_0.4_topk            89.6122%   76.7241%  100.0000%
+[14:53:30] w0.6_0.1_0.3_topk            89.7884%   75.8433%  100.0000%
+[14:53:30] w0.6_0.2_0.2_topk            89.8207%   74.8126%  100.0000%
+[14:53:30] w0.6_0.3_0.1_topk            89.5988%   73.4633%   99.9660%
+[14:53:30] w0.6_0.4_-0.0_topk           89.4498%   72.8261%   99.9321%
+[14:53:30] w0.7_0.0_0.3_topk            89.4430%   73.4070%  100.0000%
+[14:53:30] w0.7_0.1_0.2_topk            89.3189%   72.2451%  100.0000%
+[14:53:30] w0.7_0.2_0.1_topk            89.1278%   71.4018%   99.9660%
+[14:53:30] w0.7_0.3_-0.0_topk           88.9840%   71.1207%   99.8981%
+[14:53:30] w0.8_0.0_0.2_topk            88.8949%   70.1837%   99.9660%
+[14:53:30] w0.8_0.1_0.1_topk            88.7308%   69.8088%   99.9321%
+[14:53:30] w0.8_0.2_-0.0_topk           88.5943%   69.9213%   99.9321%
+[14:53:30] w0.9_0.0_0.1_topk            88.3339%   68.4033%   99.9321%
+[14:53:30] w0.9_0.1_-0.0_topk           88.1356%   68.0660%   99.9321%
+[14:53:30] w1.0_0.0_0.0_topk            87.6551%   66.6229%   99.9321%
+[14:53:30] ------------------------------------------------------------------------------
+[14:53:30] CURRENT default (sum/mean)   82.7953%
+[14:53:30] per-category oracle          93.7159%  (+10.92 pp)
+[14:53:30] best single policy           90.6020%  (+0.00 pp)

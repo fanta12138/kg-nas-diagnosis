@@ -1,0 +1,21 @@
+[07:26:04] pipeline start — waiting for searches
+[07:26:04] search  3M finished (1/5)
+[07:26:04] search  6M finished (2/5)
+[07:26:04] search  8M finished (3/5)
+[07:26:04] search 13M finished (4/5)
+[07:26:04] search 30M finished (5/5)
+[07:26:04] budget  3M -> mobilenetv3_small_100 + 256d (2.81M, mean score 9.8482, n=7) | dropped 1 degenerate | 2 configs ranked
+[07:26:04] budget  6M -> efficientnet_b0 + 256d (5.41M, mean score 7.8278, n=2) | dropped 4 degenerate | 6 configs ranked
+[07:26:04] budget  8M -> deit_tiny_patch16_224 + 128d (7.01M, mean score 7.0126, n=4) | dropped 11 degenerate | 16 configs ranked
+[07:26:04] budget 13M -> vit_tiny_patch16_224 + 128d (7.01M, mean score 7.0511, n=3) | dropped 13 degenerate | 18 configs ranked
+[07:26:04] budget 30M -> deit_tiny_patch16_224 + 512d (7.90M, mean score 7.2738, n=3) | dropped 6 degenerate | 31 configs ranked
+[07:26:04] training jobs pending: 23 (parallel=1)
+[07:26:04]   start 13M/metal_nut   vit_tiny_patch16_224
+[07:26:19]   FAIL  13M/metal_nut   rc=1
+[07:26:19]   start 13M/pill        vit_tiny_patch16_224
+[07:26:49]   FAIL  13M/pill        rc=1
+[07:26:49]   start 13M/screw       vit_tiny_patch16_224
+[07:27:19]   FAIL  13M/screw       rc=1
+[07:27:19]   start 13M/tile        vit_tiny_patch16_224
+[07:27:49]   FAIL  13M/tile        rc=1
+[07:27:49]   start 13M/toothbrush  vit_tiny_patch16_224

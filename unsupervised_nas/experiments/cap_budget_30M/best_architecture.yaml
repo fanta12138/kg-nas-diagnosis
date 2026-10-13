@@ -1,0 +1,37 @@
+best_architecture:
+  backbone: efficientnet_b1
+  feature_dim: 256
+search_config:
+  data:
+    data_dir: ../datasets/mvtec_anomaly_detection/wood
+    img_size: 224
+    num_workers: 4
+  nas:
+    alpha: 0.5
+    batch_size: 16
+    beta: 0.3
+    gamma: 0.2
+    num_trials: 80
+    quick_train_epochs: 3
+    search_space:
+      backbones:
+      - convnext_tiny
+      - convnextv2_tiny
+      - deit_tiny_patch16_224
+      - efficientnet_b0
+      - efficientnet_b1
+      - mobilenetv3_small_100
+      - mobileone_s0
+      - resnet18
+      - resnet34
+      - resnet50
+      - swin_tiny_patch4_window7_224
+      - vit_tiny_patch16_224
+      feature_dims:
+      - 128
+      - 256
+      - 512
+  output:
+    dir: experiments/cap_budget_30M
+  teacher:
+    model_path: experiments/stage1/best_teacher.pth

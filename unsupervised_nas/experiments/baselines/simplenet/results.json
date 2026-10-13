@@ -1,0 +1,9 @@
+{
+  "method": "SimpleNet",
+  "year": 2023,
+  "conference": "CVPR",
+  "backbone": "resnet18",
+  "finetune_epochs": 10,
+  "auroc": 0.22894736842105265,
+  "ap": 0.6207245971084536
+}

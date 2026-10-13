@@ -1,0 +1,13 @@
+{
+  "tag": "round05_data_availability",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "main_springer.tex",
+      "id": "U5",
+      "find": "The complete architecture search logs (100 NAS trials per category on each of the three datasets) will be provided as Supplementary Information to support full reproducibility of the reported numbers.",
+      "replace": "The complete architecture search logs will be provided as Supplementary Information to support full reproducibility of the reported numbers: 100 NAS trials per category for VisA (12 categories) and per product for BTAD (3 products), and a single 100-trial search for MVTec-AD run on one category and then applied across all 15.",
+      "note": "U5: MVTec search was a single 100/93-trial run on the wood category (config data_dir), not per category; VisA and BTAD are per category/product."
+    }
+  ]
+}

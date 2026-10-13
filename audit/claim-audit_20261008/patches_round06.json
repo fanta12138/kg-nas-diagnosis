@@ -1,0 +1,20 @@
+{
+  "tag": "round06_hyphen_45",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "U1-r",
+      "find": "random search is a strong baseline for our compact 45-configuration search space",
+      "replace": "random search is a strong baseline for our compact 42-configuration search space",
+      "note": "U1: seventh occurrence, hyphenated form missed in round 03."
+    },
+    {
+      "file": "sections/5_conclusion.tex",
+      "id": "U1-s",
+      "find": "random search is a strong baseline on the compact 45-configuration space",
+      "replace": "random search is a strong baseline on the compact 42-configuration space",
+      "note": "U1: eighth occurrence, hyphenated form."
+    }
+  ]
+}

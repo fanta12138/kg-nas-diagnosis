@@ -1,0 +1,27 @@
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [cap3/transistor] epoch 20: loss=0.2873 AUROC=0.4004 AP=0.4163
+  [cap3/transistor] epoch 40: loss=0.1944 AUROC=0.5450 AP=0.5401
+  [cap3/transistor] epoch 60: loss=0.1528 AUROC=0.6321 AP=0.6215
+  [cap3/transistor] epoch 80: loss=0.1404 AUROC=0.7075 AP=0.6822
+  [cap3/transistor] epoch 100: loss=0.1251 AUROC=0.7442 AP=0.7100
+  [cap3/transistor] epoch 120: loss=0.1155 AUROC=0.7500 AP=0.7233
+  [cap3/transistor] epoch 140: loss=0.1106 AUROC=0.7800 AP=0.7402
+  [cap3/transistor] epoch 160: loss=0.1044 AUROC=0.7904 AP=0.7482
+  [cap3/transistor] epoch 180: loss=0.1002 AUROC=0.7950 AP=0.7540
+  [cap3/transistor] epoch 200: loss=0.0957 AUROC=0.7946 AP=0.7586
+  [cap3/transistor] epoch 220: loss=0.0949 AUROC=0.8079 AP=0.7730
+  [cap3/transistor] epoch 240: loss=0.0890 AUROC=0.8096 AP=0.7784
+  [cap3/transistor] epoch 260: loss=0.0900 AUROC=0.8158 AP=0.7857
+  [cap3/transistor] epoch 280: loss=0.0908 AUROC=0.8133 AP=0.7804
+  [cap3/transistor] epoch 300: loss=0.0913 AUROC=0.8213 AP=0.7976
+  [cap3/transistor] epoch 320: loss=0.0871 AUROC=0.8250 AP=0.7997
+  [cap3/transistor] epoch 340: loss=0.0829 AUROC=0.8258 AP=0.8041
+  [cap3/transistor] epoch 360: loss=0.0884 AUROC=0.8275 AP=0.8061
+  [cap3/transistor] epoch 380: loss=0.0846 AUROC=0.8271 AP=0.8031
+  [cap3/transistor] epoch 400: loss=0.0821 AUROC=0.8317 AP=0.8119
+  [cap3/transistor] epoch 420: loss=0.0814 AUROC=0.8346 AP=0.8094
+  [cap3/transistor] epoch 440: loss=0.0824 AUROC=0.8329 AP=0.8123
+  [cap3/transistor] epoch 460: loss=0.0796 AUROC=0.8333 AP=0.8121
+  [cap3/transistor] epoch 480: loss=0.0823 AUROC=0.8329 AP=0.8129
+  [cap3/transistor] epoch 500: loss=0.0831 AUROC=0.8337 AP=0.8148
+DONE budget=3 cat=transistor mobilenetv3_small_100 AUROC=0.8337 AP=0.8148 (7.4 min wall)

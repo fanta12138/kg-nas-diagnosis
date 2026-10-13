@@ -1,0 +1,26 @@
+  [tier4/zipper] epoch 20: loss=0.1530 AUROC=0.7981 AP=0.9296
+  [tier4/zipper] epoch 40: loss=0.1274 AUROC=0.8624 AP=0.9501
+  [tier4/zipper] epoch 60: loss=0.1200 AUROC=0.8957 AP=0.9633
+  [tier4/zipper] epoch 80: loss=0.1161 AUROC=0.9165 AP=0.9728
+  [tier4/zipper] epoch 100: loss=0.1132 AUROC=0.9325 AP=0.9783
+  [tier4/zipper] epoch 120: loss=0.1123 AUROC=0.9330 AP=0.9789
+  [tier4/zipper] epoch 140: loss=0.1116 AUROC=0.9417 AP=0.9820
+  [tier4/zipper] epoch 160: loss=0.1096 AUROC=0.9546 AP=0.9864
+  [tier4/zipper] epoch 180: loss=0.1064 AUROC=0.9491 AP=0.9848
+  [tier4/zipper] epoch 200: loss=0.0998 AUROC=0.9475 AP=0.9844
+  [tier4/zipper] epoch 220: loss=0.0994 AUROC=0.9488 AP=0.9849
+  [tier4/zipper] epoch 240: loss=0.0964 AUROC=0.9493 AP=0.9850
+  [tier4/zipper] epoch 260: loss=0.0960 AUROC=0.9551 AP=0.9868
+  [tier4/zipper] epoch 280: loss=0.0929 AUROC=0.9546 AP=0.9868
+  [tier4/zipper] epoch 300: loss=0.0930 AUROC=0.9548 AP=0.9869
+  [tier4/zipper] epoch 320: loss=0.0922 AUROC=0.9564 AP=0.9873
+  [tier4/zipper] epoch 340: loss=0.0912 AUROC=0.9556 AP=0.9871
+  [tier4/zipper] epoch 360: loss=0.0911 AUROC=0.9554 AP=0.9871
+  [tier4/zipper] epoch 380: loss=0.0892 AUROC=0.9556 AP=0.9871
+  [tier4/zipper] epoch 400: loss=0.0898 AUROC=0.9561 AP=0.9873
+  [tier4/zipper] epoch 420: loss=0.0894 AUROC=0.9588 AP=0.9881
+  [tier4/zipper] epoch 440: loss=0.0881 AUROC=0.9585 AP=0.9881
+  [tier4/zipper] epoch 460: loss=0.0898 AUROC=0.9590 AP=0.9881
+  [tier4/zipper] epoch 480: loss=0.0881 AUROC=0.9590 AP=0.9882
+  [tier4/zipper] epoch 500: loss=0.0892 AUROC=0.9588 AP=0.9881
+DONE tier=4 cat=zipper resnet18 AUROC=0.9588 AP=0.9881 (3.1 min wall)

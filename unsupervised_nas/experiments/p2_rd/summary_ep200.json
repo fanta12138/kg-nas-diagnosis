@@ -1,0 +1,362 @@
+[
+  {
+    "category": "bottle",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.9595238095238094,
+    "ap": 0.9883519576967081,
+    "minutes": 1.055910098552704
+  },
+  {
+    "category": "cable",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.8581334332833583,
+    "ap": 0.887400299785328,
+    "minutes": 1.2249791264533996
+  },
+  {
+    "category": "capsule",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.680893498205026,
+    "ap": 0.9032798724523283,
+    "minutes": 1.1901464104652404
+  },
+  {
+    "category": "carpet",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.8274478330658106,
+    "ap": 0.9368926810164742,
+    "minutes": 1.4888211290041606
+  },
+  {
+    "category": "grid",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.5296574770258982,
+    "ap": 0.7451060389233299,
+    "minutes": 1.2987933198610941
+  },
+  {
+    "category": "hazelnut",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.9564285714285715,
+    "ap": 0.9759523392370419,
+    "minutes": 2.036313005288442
+  },
+  {
+    "category": "leather",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.9578804347826086,
+    "ap": 0.9861610439346669,
+    "minutes": 1.2812314589818319
+  },
+  {
+    "category": "metal_nut",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.712121212121212,
+    "ap": 0.9171177723754365,
+    "minutes": 1.0860716263453165
+  },
+  {
+    "category": "pill",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.8120567375886525,
+    "ap": 0.9515128318614468,
+    "minutes": 1.3636581818262736
+  },
+  {
+    "category": "screw",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.35581061692969873,
+    "ap": 0.7128180293888557,
+    "minutes": 1.5549053827921548
+  },
+  {
+    "category": "tile",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.9379509379509381,
+    "ap": 0.9771409948215827,
+    "minutes": 1.1787751992543538
+  },
+  {
+    "category": "toothbrush",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.7388888888888889,
+    "ap": 0.9014354915781603,
+    "minutes": 0.33621288537979127
+  },
+  {
+    "category": "transistor",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.81125,
+    "ap": 0.7892953389614396,
+    "minutes": 1.1458000540733337
+  },
+  {
+    "category": "wood",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.9429824561403509,
+    "ap": 0.9812227643391974,
+    "minutes": 1.302988314628601
+  },
+  {
+    "category": "zipper",
+    "backbone": "resnet18",
+    "label": "fixed_resnet18",
+    "auroc": 0.9419642857142858,
+    "ap": 0.9822319571434119,
+    "minutes": 1.1804389675458273
+  },
+  {
+    "category": "bottle",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.9523809523809524,
+    "ap": 0.9865362805646978,
+    "minutes": 2.8478291352589924
+  },
+  {
+    "category": "cable",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.8273988005997001,
+    "ap": 0.857321657248119,
+    "minutes": 3.1598169684410093
+  },
+  {
+    "category": "capsule",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.6134822497008376,
+    "ap": 0.8902390133405969,
+    "minutes": 3.0836652239163715
+  },
+  {
+    "category": "carpet",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.800561797752809,
+    "ap": 0.9257889857651307,
+    "minutes": 3.8792453447977704
+  },
+  {
+    "category": "grid",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.5463659147869674,
+    "ap": 0.748999019729847,
+    "minutes": 3.5381508310635885
+  },
+  {
+    "category": "hazelnut",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.9317857142857142,
+    "ap": 0.9636672557040483,
+    "minutes": 5.370760742823283
+  },
+  {
+    "category": "leather",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.8563179347826086,
+    "ap": 0.953171522474219,
+    "minutes": 3.3767025192578632
+  },
+  {
+    "category": "metal_nut",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.6808406647116324,
+    "ap": 0.9044427194406661,
+    "minutes": 2.9842039227485655
+  },
+  {
+    "category": "pill",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.7727768685215494,
+    "ap": 0.9305694532654789,
+    "minutes": 3.6584931373596192
+  },
+  {
+    "category": "screw",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.2662430825988932,
+    "ap": 0.656493786041627,
+    "minutes": 4.307594919204712
+  },
+  {
+    "category": "tile",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.9267676767676768,
+    "ap": 0.9727133001721866,
+    "minutes": 3.1490274310112
+  },
+  {
+    "category": "toothbrush",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.6388888888888888,
+    "ap": 0.862458206423952,
+    "minutes": 0.8491515517234802
+  },
+  {
+    "category": "transistor",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.80375,
+    "ap": 0.7892671944540162,
+    "minutes": 2.9808815995852154
+  },
+  {
+    "category": "wood",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.9456140350877194,
+    "ap": 0.9823034795820696,
+    "minutes": 3.418809755643209
+  },
+  {
+    "category": "zipper",
+    "backbone": "swin_tiny_patch4_window7_224",
+    "label": "fixed_swin",
+    "auroc": 0.8101365546218487,
+    "ap": 0.9219915252170626,
+    "minutes": 3.2471524556477864
+  },
+  {
+    "category": "bottle",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.9555555555555555,
+    "ap": 0.987375702366664,
+    "minutes": 0.7746667345364888
+  },
+  {
+    "category": "cable",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.825712143928036,
+    "ap": 0.8547518427924923,
+    "minutes": 0.9035408536593119
+  },
+  {
+    "category": "capsule",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.6661348224970084,
+    "ap": 0.8986422966314882,
+    "minutes": 0.8754942615826925
+  },
+  {
+    "category": "carpet",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.786115569823435,
+    "ap": 0.9206901046614426,
+    "minutes": 1.0976547042528788
+  },
+  {
+    "category": "grid",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.6315789473684211,
+    "ap": 0.7882569083716275,
+    "minutes": 0.9557106971740723
+  },
+  {
+    "category": "hazelnut",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.9521428571428572,
+    "ap": 0.9736504642151425,
+    "minutes": 1.5101518750190734
+  },
+  {
+    "category": "leather",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.9341032608695652,
+    "ap": 0.9789526768785946,
+    "minutes": 0.9228786547978719
+  },
+  {
+    "category": "metal_nut",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.7043010752688171,
+    "ap": 0.9131647820924801,
+    "minutes": 0.7665798187255859
+  },
+  {
+    "category": "pill",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.7997817785051827,
+    "ap": 0.9448288551807129,
+    "minutes": 1.0199316660563151
+  },
+  {
+    "category": "screw",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.3435130149620824,
+    "ap": 0.7087012644658518,
+    "minutes": 1.0892592271169026
+  },
+  {
+    "category": "tile",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.9195526695526696,
+    "ap": 0.9685709981328076,
+    "minutes": 0.841876502831777
+  },
+  {
+    "category": "toothbrush",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.7,
+    "ap": 0.8851729678803305,
+    "minutes": 0.24596922794977824
+  },
+  {
+    "category": "transistor",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.7716666666666666,
+    "ap": 0.7449147669270008,
+    "minutes": 0.8624704241752624
+  },
+  {
+    "category": "wood",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.9394736842105263,
+    "ap": 0.9796993288531265,
+    "minutes": 0.9431767582893371
+  },
+  {
+    "category": "zipper",
+    "backbone": "mobilenetv3_small_100",
+    "label": "fixed_mbv3",
+    "auroc": 0.9519432773109243,
+    "ap": 0.9852396211331647,
+    "minutes": 0.8544160048166911
+  }
+]

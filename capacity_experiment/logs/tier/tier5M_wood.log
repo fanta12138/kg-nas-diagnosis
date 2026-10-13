@@ -1,0 +1,26 @@
+  [tier5/wood] epoch 20: loss=0.3452 AUROC=0.9579 AP=0.9864
+  [tier5/wood] epoch 40: loss=0.3597 AUROC=0.9395 AP=0.9799
+  [tier5/wood] epoch 60: loss=0.3308 AUROC=0.9439 AP=0.9815
+  [tier5/wood] epoch 80: loss=0.3282 AUROC=0.9535 AP=0.9846
+  [tier5/wood] epoch 100: loss=0.3231 AUROC=0.9447 AP=0.9818
+  [tier5/wood] epoch 120: loss=0.3176 AUROC=0.9447 AP=0.9818
+  [tier5/wood] epoch 140: loss=0.3166 AUROC=0.9465 AP=0.9824
+  [tier5/wood] epoch 160: loss=0.3113 AUROC=0.9421 AP=0.9809
+  [tier5/wood] epoch 180: loss=0.3103 AUROC=0.9421 AP=0.9811
+  [tier5/wood] epoch 200: loss=0.3013 AUROC=0.9412 AP=0.9807
+  [tier5/wood] epoch 220: loss=0.2984 AUROC=0.9439 AP=0.9816
+  [tier5/wood] epoch 240: loss=0.2908 AUROC=0.9421 AP=0.9809
+  [tier5/wood] epoch 260: loss=0.2842 AUROC=0.9439 AP=0.9815
+  [tier5/wood] epoch 280: loss=0.2746 AUROC=0.9456 AP=0.9820
+  [tier5/wood] epoch 300: loss=0.2733 AUROC=0.9439 AP=0.9815
+  [tier5/wood] epoch 320: loss=0.2673 AUROC=0.9430 AP=0.9813
+  [tier5/wood] epoch 340: loss=0.2617 AUROC=0.9439 AP=0.9818
+  [tier5/wood] epoch 360: loss=0.2611 AUROC=0.9439 AP=0.9817
+  [tier5/wood] epoch 380: loss=0.2575 AUROC=0.9439 AP=0.9819
+  [tier5/wood] epoch 400: loss=0.2616 AUROC=0.9430 AP=0.9815
+  [tier5/wood] epoch 420: loss=0.2557 AUROC=0.9395 AP=0.9803
+  [tier5/wood] epoch 440: loss=0.2501 AUROC=0.9421 AP=0.9813
+  [tier5/wood] epoch 460: loss=0.2505 AUROC=0.9412 AP=0.9810
+  [tier5/wood] epoch 480: loss=0.2544 AUROC=0.9421 AP=0.9813
+  [tier5/wood] epoch 500: loss=0.2529 AUROC=0.9421 AP=0.9813
+DONE tier=5 cat=wood resnet50 AUROC=0.9421 AP=0.9813 (6.6 min wall)

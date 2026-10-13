@@ -1,0 +1,9 @@
+{
+  "auroc": 0.9644642857142858,
+  "ap": 0.9797667237095677,
+  "student_backbone": "resnet50",
+  "teacher": "resnet18",
+  "epochs": 500,
+  "seed": 42,
+  "minutes": 10.4
+}

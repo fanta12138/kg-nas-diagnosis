@@ -1,0 +1,173 @@
+[
+  {
+    "id": "F1",
+    "severity": "material",
+    "location": "main_springer.tex:79 (abstract) vs sections/4_experiments.tex:112 (body)",
+    "quote": "at 500 epochs the discovered architecture closes the gap and wins 12 of 15",
+    "evidence_path": "D:/autopaper/unsupervised_nas/experiments/p2_rd/nas/ep500/<cat>/final_evaluation.json and p2_rd/teacher_resnet18/fixed/{resnet18,swin_tiny,mbv3_small}/ep500/<cat>/final_evaluation.json",
+    "value_found": "argmax winners over 15 categories: NAS=3, ResNet-18=8, MobileNetV3=2, Swin-Tiny=2",
+    "why_it_differs": "Abstract says the discovered architecture wins 12/15 and closed the gap; body and raw files say 3/15, and ResNet-18 still leads 84.0% vs 82.4%. Direction is flipped."
+  },
+  {
+    "id": "F2",
+    "severity": "material",
+    "location": "main_springer.tex:79 (abstract); sections/1_introduction.tex:32,38",
+    "quote": "the discovered 5.3M-parameter student attains 82.4% ... exceeding a 12.9M ResNet-18 student under an identical protocol",
+    "evidence_path": "D:/autopaper/unsupervised_nas/experiments/p2_rd/teacher_resnet18/fixed/resnet18/ep500/<cat>/final_evaluation.json; Table tab:fixed_kd (4_experiments.tex:101)",
+    "value_found": "ResNet-18 (fixed, 500 ep) mean = 83.95% > discovered 82.40%",
+    "why_it_differs": "Abstract and intro claim the searched student exceeds ResNet-18, but the table, conclusion ('98.2% of ResNet-18') and raw files show ResNet-18 leads. Direction flip."
+  },
+  {
+    "id": "F3",
+    "severity": "material",
+    "location": "sections/4_experiments.tex:46,93,101-104",
+    "quote": "using only 5.3M parameters (student encoder+decoder); Fixed ResNet-18 12.9 / NAS-Eff-B0 5.3 / MobileNetV3-Small 2.7 / Swin-Tiny 29.3",
+    "evidence_path": "D:/autopaper/fig/arch_efficiency.csv; D:/autopaper/unsupervised_nas/paper_results/efficiency_2_inference.csv; D:/autopaper/unsupervised_nas/scripts/collect_all_results.py ('params_m': 6.0)",
+    "value_found": "encoder+decoder params = ResNet-18 14.9M, discovered Eff-B0+256d 6.0M, MobileNetV3 2.5M, Swin-Tiny 28.0M; 5.3M is EfficientNet-B0 backbone-only (search-space table)",
+    "why_it_differs": "5.3M is a backbone-only count mislabelled as encoder+decoder, and all four fixed-student counts disagree with the only measured counts (12.9!=14.9, 5.3!=6.0, 2.7!=2.5, 29.3!=28.0)."
+  },
+  {
+    "id": "F4",
+    "severity": "material",
+    "location": "sections/4_experiments.tex:370 vs :365",
+    "quote": "the NAS-discovered configuration (EfficientNet-B0+256d) attained the single best trial score (0.0023)",
+    "evidence_path": "D:/autopaper/fig/nas_search_trials.csv (efficientnet_b0,256 -> 0.009731); D:/autopaper/unsupervised_nas/paper_results/ablation_phase1/ablation_3_feature_dim.csv (256-dim min=0.0022611)",
+    "value_found": "main-search single best trial = 0.009731; 0.0023 is the minimum of the 256-dim subset in a different ablation",
+    "why_it_differs": "Same claimed quantity printed as 0.0097 (line 365) and 0.0023 (line 370); evidence supports 0.0097."
+  },
+  {
+    "id": "F5",
+    "severity": "material",
+    "location": "sections/4_experiments.tex:217 vs :190",
+    "quote": "KG-NAS (Ours) ... Params (M) 6 (tab:sota_comparison) vs KG-NAS (Ours) Params 5.3 (tab:efficiency_comparison)",
+    "evidence_path": "D:/autopaper/unsupervised_nas/paper_results/efficiency_2_inference.csv; D:/autopaper/fig/inference_efficiency.csv",
+    "value_found": "6.0M (evidence) vs two printed values 5.3 and 6 for the same model",
+    "why_it_differs": "Internally inconsistent duplicate of the student parameter count (see F3)."
+  },
+  {
+    "id": "F6",
+    "severity": "minor",
+    "location": "sections/4_experiments.tex:71,46",
+    "quote": "PaDiM average 78.0% (main table) / 'exceeds PaDiM (78.0%)'",
+    "evidence_path": "D:/autopaper/fig/baselines_full_results.csv; D:/autopaper/fig/baseline_ranking.csv (77.92); tables/BASELINE_ANALYSIS_TABLE.tex (77.92)",
+    "value_found": "PaDiM mean = 77.9182 -> 77.9 (half-up)",
+    "why_it_differs": "78.0 is not reachable by half-up rounding of 77.92; all other tables print 77.92/77.9. Magnitude 0.08 pp."
+  },
+  {
+    "id": "F7",
+    "severity": "minor",
+    "location": "sections/4_experiments.tex:58,71",
+    "quote": "KG-NAS carpet AUROC 77.7",
+    "evidence_path": "D:/autopaper/unsupervised_nas/experiments/p2_rd/nas/ep500/carpet/final_evaluation.json (0.7764847512038523)",
+    "value_found": "77.648 -> 77.6 (half-up)",
+    "why_it_differs": "Double rounding via category_paradigms.csv (0.7765); 0.05 pp rounding drift."
+  },
+  {
+    "id": "F8",
+    "severity": "minor",
+    "location": "sections/4_experiments.tex:71",
+    "quote": "CFA average 89.8 (main table Average row)",
+    "evidence_path": "D:/autopaper/fig/baselines_full_results.csv",
+    "value_found": "CFA mean = 89.7465 -> 89.7 (half-up)",
+    "why_it_differs": "Two-step rounding 89.7465->89.75->89.8; direct half-up is 89.7. 0.05 pp."
+  },
+  {
+    "id": "F9",
+    "severity": "minor",
+    "location": "sections/4_experiments.tex:78,165; supplementary/supplementary.tex:131",
+    "quote": "CFA ... strictly 8, with two ties within 0.02 pp ... tying on bottle and leather within 0.02 pp",
+    "evidence_path": "D:/autopaper/fig/baselines_full_results.csv",
+    "value_found": "bottle CFA=RevDist=99.6825 (exact tie); leather CFA 96.603 vs PaDiM 96.569 => 0.0340 pp",
+    "why_it_differs": "The stated 0.02 pp bound is exceeded by the leather pair (0.034 pp)."
+  },
+  {
+    "id": "F10",
+    "severity": "minor",
+    "location": "sections/4_experiments.tex:422",
+    "quote": "CNNs (13 types, 65 trials) ... Transformers (3 types, 20 trials)",
+    "evidence_path": "sections/3_method.tex:91-105 (15 backbones = 12 CNN + 3 TR); D:/autopaper/fig/nas_search_trials.csv (10 CNN families)",
+    "value_found": "12 CNN backbone types, not 13",
+    "why_it_differs": "Off-by-one; '13' matches a 16-backbone space (see U1). Trials/medians/std/p all reproduce."
+  },
+  {
+    "id": "F11",
+    "severity": "minor",
+    "location": "sections/3_method.tex:265 vs :202 and sections/5_conclusion.tex:19",
+    "quote": "NAS trials per config ~2.1 (100 total) vs '~2.2 trials per architecture'",
+    "evidence_path": "derived: 100 trials / 45 configurations",
+    "value_found": "100/45 = 2.22",
+    "why_it_differs": "2.1 is inconsistent with 100/45 and with the body's own 2.2 (2.1 fits 100/48, a 16-backbone space)."
+  },
+  {
+    "id": "F12",
+    "severity": "minor",
+    "location": "sections/4_experiments.tex:370",
+    "quote": "256-dim ... at ~5.3M parameters",
+    "evidence_path": "D:/autopaper/fig/feature_dim_ablation.csv (256,16.9529,66.5308,6,Unstable)",
+    "value_found": "6M",
+    "why_it_differs": "5.3 vs 6 (same 5.3-as-6.0 conflation as F3). Means/stds match exactly."
+  },
+  {
+    "id": "F13",
+    "severity": "minor",
+    "location": "sections/4_experiments.tex:609 vs :565,591,625",
+    "quote": "BTAD Train samples 400--1000 (cross-dataset table) vs 'training sets of 399 to 1000'",
+    "evidence_path": "internal inconsistency; sections/4_experiments.tex:565 gives Product 02 = 399 training samples",
+    "value_found": "399 < printed lower bound 400",
+    "why_it_differs": "The table's range lower bound excludes the smallest BTAD training set."
+  },
+  {
+    "id": "M1",
+    "severity": "material",
+    "location": "sections/4_experiments.tex:192,219; sections/5_conclusion.tex:23",
+    "quote": "the full teacher--student detector runs at ~107 FPS",
+    "evidence_path": "searched D:/autopaper/fig/inference_efficiency.csv; D:/autopaper/fps_remeasure2.py; D:/autopaper/unsupervised_nas/paper_results/efficiency_2_inference.csv",
+    "value_found": "no file records a 107 FPS measurement (grep '107' returns only 'epoch: 107' entries)",
+    "why_it_differs": "Untraceable measured control; student 142 FPS is present but the pipeline 107 FPS has no evidence."
+  },
+  {
+    "id": "U1",
+    "severity": "minor",
+    "location": "sections/3_method.tex:80,111; main_springer.tex:116",
+    "quote": "search space of 15 backbone architectures x 3 feature dimensions (45 configurations)",
+    "evidence_path": "D:/autopaper/unsupervised_nas/paper_results/efficiency_1_training_time.csv ('16 backbones x 3 dims'); paper_results/ablation_phase1/ablation_1_search_space.csv ('Full (16, Ours)'); results_for_paper/origin_plot_data/backbone_performance_detail.csv (13 distinct backbones)",
+    "value_found": "evidence says 16 backbones; the 100-trial run covers 13 distinct backbones",
+    "why_it_differs": "Ambiguous: cannot confirm 15; also underlies F10/F11."
+  },
+  {
+    "id": "U2",
+    "severity": "minor",
+    "location": "sections/4_experiments.tex:567",
+    "quote": "NAS search over 10 backbones x 3 feature dimensions (Stage 2, 100 trials)",
+    "evidence_path": "D:/autopaper/experiments/btad_stage2/*/*/nas_results.json (only num_trials:100; no backbone pool)",
+    "value_found": "no evidence file lists the BTAD backbone pool",
+    "why_it_differs": "Cannot verify 10 backbones / 30 configurations."
+  },
+  {
+    "id": "U3",
+    "severity": "minor",
+    "location": "sections/5_conclusion.tex:19",
+    "quote": "the same architecture re-evaluated under identical settings can vary by up to 81x within a category",
+    "evidence_path": "D:/autopaper/fig/nas_search_trials.csv; D:/autopaper/unsupervised_nas/experiments/p1_search_strategies/*/*/results.json",
+    "value_found": "max within-config ratio: 105.9 (main search, MobileOne-S0/128); 211.5 (capsule Eff-B0/512 across strategies); 1.5 (wood)",
+    "why_it_differs": "81x not reproduced under any subset tried; ambiguous source."
+  },
+  {
+    "id": "U4",
+    "severity": "minor",
+    "location": "sections/3_method.tex:286",
+    "quote": "the NAS stage requires only ~6x the computation of training a single architecture",
+    "evidence_path": "derived from |A|=45, K=2.2, E_S=3 vs Stage-3 500 epochs",
+    "value_found": "300 epoch-equivalents vs 500 = ~0.6x; vs one 3-epoch trial = ~100x",
+    "why_it_differs": "No interpretation yields ~6x; ambiguous reference quantity."
+  },
+  {
+    "id": "U5",
+    "severity": "minor",
+    "location": "main_springer.tex:116; sections/4_experiments.tex:25",
+    "quote": "100 NAS trials per category on each of the three datasets",
+    "evidence_path": "D:/autopaper/unsupervised_nas/experiments/stage2_topjournal_15backbones_fixed/search_results.json (single 93-trial aggregate, no category field)",
+    "value_found": "MVTec search = one 93-trial aggregate over 13 backbones; VisA/BTAD are 100 per category",
+    "why_it_differs": "The per-category claim holds for VisA/BTAD but not clearly for MVTec."
+  }
+]

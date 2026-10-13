@@ -1,0 +1,14 @@
+{
+  "auroc": 0.7521994134897361,
+  "ap": 0.9304243056008241,
+  "student_backbone": "resnet18",
+  "teacher": "resnet18",
+  "epochs": 500,
+  "seed": 44,
+  "minutes": 2.8,
+  "micro_batch": 64,
+  "accum_steps": 1,
+  "effective_batch": 64,
+  "probe_peak_gb": 3.02,
+  "cached": false
+}

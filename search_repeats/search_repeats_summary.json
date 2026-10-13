@@ -1,0 +1,66 @@
+{
+  "n_runs": 12,
+  "trials_per_run": 100,
+  "selected_backbones": [
+    "efficientnet_b1",
+    "efficientnet_b1",
+    "efficientnet_b1",
+    "efficientnet_b1",
+    "mobilenetv3_small_100",
+    "mobilenetv3_small_100",
+    "efficientnet_b1",
+    "efficientnet_b1",
+    "efficientnet_b1",
+    "efficientnet_b1",
+    "mobilenetv3_small_100",
+    "mobilenetv3_small_100"
+  ],
+  "selected_dims": [
+    256,
+    512,
+    128,
+    256,
+    256,
+    128,
+    256,
+    128,
+    128,
+    256,
+    128,
+    512
+  ],
+  "backbone_counts": {
+    "efficientnet_b1": 8,
+    "mobilenetv3_small_100": 4
+  },
+  "dim_counts": {
+    "256": 5,
+    "512": 2,
+    "128": 5
+  },
+  "unique_backbones_selected": 2,
+  "unique_configs_selected": 6,
+  "search_mean_true_auroc": 0.8093986799281806,
+  "random_mean_true_auroc": 0.8165053248495547,
+  "random_bootstrap_sd": 0.003452665579663307,
+  "random_bootstrap_p95": 0.822136547809727,
+  "oracle_backbone": "resnet18",
+  "oracle_true_auroc": 0.8380627556253571,
+  "p_search_leq_random_mean": 0.02015,
+  "truth_per_backbone": {
+    "convnextv2_tiny": 0.807205226407187,
+    "convnextv2_base": 0.7936141102608527,
+    "mobileone_s0": 0.8257792665686909,
+    "convnext_tiny": 0.8090704674948939,
+    "convnext_small": 0.8143227009688273,
+    "vit_tiny_patch16_224": 0.8146629369801375,
+    "deit_tiny_patch16_224": 0.820310878212138,
+    "swin_tiny_patch4_window7_224": 0.8015954128074934,
+    "efficientnet_b0": 0.8251637114585824,
+    "efficientnet_b1": 0.804324340203582,
+    "mobilenetv3_small_100": 0.8195473593773781,
+    "resnet18": 0.8380627556253571,
+    "resnet34": 0.8298971227159154,
+    "resnet50": 0.8275182588127332
+  }
+}

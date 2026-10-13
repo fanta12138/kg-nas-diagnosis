@@ -1,0 +1,329 @@
+{
+  "total_trials": 93,
+  "success_rate": 0.93,
+  "best_architecture": {
+    "backbone": "efficientnet_b0",
+    "feature_dim": 256
+  },
+  "backbone_statistics": {
+    "convnextv2_tiny": {
+      "num_trials": 6,
+      "avg_score": 2.9707952961325645,
+      "std_score": 3.2463748160468713,
+      "min_score": 0.2557309716939926,
+      "max_score": 9.603018283843994,
+      "by_dimension": {
+        "128": {
+          "num_trials": 2,
+          "avg_score": 0.4993264153599739,
+          "std_score": 0.2435954436659813
+        },
+        "256": {
+          "num_trials": 1,
+          "avg_score": 0.41804397106170654,
+          "std_score": 0.0
+        },
+        "512": {
+          "num_trials": 3,
+          "avg_score": 5.469358325004578,
+          "std_score": 2.924249840248866
+        }
+      }
+    },
+    "convnextv2_base": {
+      "num_trials": 7,
+      "avg_score": 5.785653005753245,
+      "std_score": 8.45842389148051,
+      "min_score": 0.2977815568447113,
+      "max_score": 23.662779808044434,
+      "by_dimension": {
+        "128": {
+          "num_trials": 1,
+          "avg_score": 1.9305695295333862,
+          "std_score": 0.0
+        },
+        "256": {
+          "num_trials": 5,
+          "avg_score": 7.654243990778923,
+          "std_score": 9.363524764754061
+        },
+        "512": {
+          "num_trials": 1,
+          "avg_score": 0.2977815568447113,
+          "std_score": 0.0
+        }
+      }
+    },
+    "mobileone_s0": {
+      "num_trials": 7,
+      "avg_score": 0.6127309696083623,
+      "std_score": 1.3916013530875246,
+      "min_score": 0.017328313551843166,
+      "max_score": 4.021115362644196,
+      "by_dimension": {
+        "128": {
+          "num_trials": 4,
+          "avg_score": 1.0478917127475142,
+          "std_score": 1.7166863967029173
+        },
+        "256": {
+          "num_trials": 2,
+          "avg_score": 0.02555650775320828,
+          "std_score": 0.008228194201365113
+        },
+        "512": {
+          "num_trials": 1,
+          "avg_score": 0.04643692076206207,
+          "std_score": 0.0
+        }
+      }
+    },
+    "convnext_tiny": {
+      "num_trials": 4,
+      "avg_score": 1.1197344604879618,
+      "std_score": 1.4281396783719182,
+      "min_score": 0.12851832062005997,
+      "max_score": 3.5861908197402954,
+      "by_dimension": {
+        "128": {
+          "num_trials": 2,
+          "avg_score": 0.23227153345942497,
+          "std_score": 0.103753212839365
+        },
+        "256": {
+          "num_trials": 1,
+          "avg_score": 0.4282039552927017,
+          "std_score": 0.0
+        },
+        "512": {
+          "num_trials": 1,
+          "avg_score": 3.5861908197402954,
+          "std_score": 0.0
+        }
+      }
+    },
+    "convnext_small": {
+      "num_trials": 6,
+      "avg_score": 4.865898271401723,
+      "std_score": 3.396176930704132,
+      "min_score": 0.519499659538269,
+      "max_score": 9.701124668121338,
+      "by_dimension": {
+        "128": {
+          "num_trials": 1,
+          "avg_score": 1.8115196228027344,
+          "std_score": 0.0
+        },
+        "256": {
+          "num_trials": 3,
+          "avg_score": 3.214347799619039,
+          "std_score": 2.4657369845333603
+        },
+        "512": {
+          "num_trials": 2,
+          "avg_score": 8.870413303375244,
+          "std_score": 0.8307113647460938
+        }
+      }
+    },
+    "efficientnet_b0": {
+      "num_trials": 7,
+      "avg_score": 0.05103713914286345,
+      "std_score": 0.055819762303899845,
+      "min_score": 0.009730992838740349,
+      "max_score": 0.1741974651813507,
+      "by_dimension": {
+        "128": {
+          "num_trials": 4,
+          "avg_score": 0.0774316132592503,
+          "std_score": 0.061633588906642695
+        },
+        "256": {
+          "num_trials": 2,
+          "avg_score": 0.017004627268761396,
+          "std_score": 0.007273634430021048
+        },
+        "512": {
+          "num_trials": 1,
+          "avg_score": 0.013524266425520182,
+          "std_score": 0.0
+        }
+      }
+    },
+    "efficientnet_b1": {
+      "num_trials": 9,
+      "avg_score": 6.373067165579789e+19,
+      "std_score": 1.802247098450029e+20,
+      "min_score": 0.0405674334615469,
+      "max_score": 5.734831229453625e+20,
+      "by_dimension": {
+        "128": {
+          "num_trials": 3,
+          "avg_score": 1.9116104442415556e+20,
+          "std_score": 2.7034253431968114e+20
+        },
+        "256": {
+          "num_trials": 2,
+          "avg_score": 4.6455800923932664e+16,
+          "std_score": 4.645580092133991e+16
+        },
+        "512": {
+          "num_trials": 4,
+          "avg_score": 6966631534.169837,
+          "std_score": 11916515952.074068
+        }
+      }
+    },
+    "resnet18": {
+      "num_trials": 12,
+      "avg_score": 0.04955881158821285,
+      "std_score": 0.035096722843095035,
+      "min_score": 0.026934543624520302,
+      "max_score": 0.16020426526665688,
+      "by_dimension": {
+        "128": {
+          "num_trials": 2,
+          "avg_score": 0.03202039794996381,
+          "std_score": 0.0027015688829123974
+        },
+        "256": {
+          "num_trials": 3,
+          "avg_score": 0.0382705849284927,
+          "std_score": 0.008069166209943834
+        },
+        "512": {
+          "num_trials": 7,
+          "avg_score": 0.059407598339021206,
+          "std_score": 0.042920148249934405
+        }
+      }
+    },
+    "resnet34": {
+      "num_trials": 8,
+      "avg_score": 0.0584447281435132,
+      "std_score": 0.03834580679959626,
+      "min_score": 0.020335485227406025,
+      "max_score": 0.15087087452411652,
+      "by_dimension": {
+        "128": {
+          "num_trials": 2,
+          "avg_score": 0.03617012873291969,
+          "std_score": 0.010824106633663177
+        },
+        "256": {
+          "num_trials": 6,
+          "avg_score": 0.06586959461371104,
+          "std_score": 0.04124277151545357
+        }
+      }
+    },
+    "resnet50": {
+      "num_trials": 7,
+      "avg_score": 0.06526985950767994,
+      "std_score": 0.07069493642348487,
+      "min_score": 0.015281762927770615,
+      "max_score": 0.23616191931068897,
+      "by_dimension": {
+        "128": {
+          "num_trials": 3,
+          "avg_score": 0.035561087230841316,
+          "std_score": 0.003455269456494932
+        },
+        "256": {
+          "num_trials": 3,
+          "avg_score": 0.09800245240330696,
+          "std_score": 0.09832634236150863
+        },
+        "512": {
+          "num_trials": 1,
+          "avg_score": 0.056198397651314735,
+          "std_score": 0.0
+        }
+      }
+    },
+    "vit_tiny_patch16_224": {
+      "num_trials": 5,
+      "avg_score": 0.11445840932428837,
+      "std_score": 0.07094457682380013,
+      "min_score": 0.014795800670981407,
+      "max_score": 0.22787680476903915,
+      "by_dimension": {
+        "128": {
+          "num_trials": 1,
+          "avg_score": 0.10153532028198242,
+          "std_score": 0.0
+        },
+        "256": {
+          "num_trials": 1,
+          "avg_score": 0.14722295850515366,
+          "std_score": 0.0
+        },
+        "512": {
+          "num_trials": 3,
+          "avg_score": 0.10784458927810192,
+          "std_score": 0.08905787470948255
+        }
+      }
+    },
+    "deit_tiny_patch16_224": {
+      "num_trials": 4,
+      "avg_score": 0.03590177674777806,
+      "std_score": 0.012297186298453855,
+      "min_score": 0.021695422008633614,
+      "max_score": 0.048334866762161255,
+      "by_dimension": {
+        "128": {
+          "num_trials": 1,
+          "avg_score": 0.048334866762161255,
+          "std_score": 0.0
+        },
+        "256": {
+          "num_trials": 2,
+          "avg_score": 0.03678840911015868,
+          "std_score": 0.011111001018434763
+        },
+        "512": {
+          "num_trials": 1,
+          "avg_score": 0.021695422008633614,
+          "std_score": 0.0
+        }
+      }
+    },
+    "swin_tiny_patch4_window7_224": {
+      "num_trials": 11,
+      "avg_score": 0.11293714586645365,
+      "std_score": 0.1124154591317439,
+      "min_score": 0.021731197834014893,
+      "max_score": 0.4377662092447281,
+      "by_dimension": {
+        "128": {
+          "num_trials": 5,
+          "avg_score": 0.10727080591022968,
+          "std_score": 0.049988988511891666
+        },
+        "256": {
+          "num_trials": 4,
+          "avg_score": 0.04998877109028399,
+          "std_score": 0.027350551189545505
+        },
+        "512": {
+          "num_trials": 2,
+          "avg_score": 0.2529997453093529,
+          "std_score": 0.1847664639353752
+        }
+      }
+    }
+  },
+  "architecture_type_comparison": {
+    "CNN": {
+      "total_trials": 73,
+      "avg_score": 7.857206094550426e+18,
+      "std_score": 6.665965444468982e+19
+    },
+    "Transformer": {
+      "total_trials": 20,
+      "avg_score": 0.09791038790717721,
+      "std_score": 0.09592013149881366
+    }
+  }
+}

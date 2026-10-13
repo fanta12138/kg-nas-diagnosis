@@ -1,0 +1,55 @@
+baselines_full_results.csv: 165 rows
+
+--- method averages (half-up to 1dp) ---
+  cfa                    n=15  mean=0.8975   ->1dp 0.9  ->2dp 0.90
+  reverse_distillation   n=15  mean=0.8049   ->1dp 0.8  ->2dp 0.80
+  spade                  n=15  mean=0.7868   ->1dp 0.8  ->2dp 0.79
+  padim                  n=15  mean=0.7792   ->1dp 0.8  ->2dp 0.78
+  fastflow               n=15  mean=0.7131   ->1dp 0.7  ->2dp 0.71
+  efficientad            n=15  mean=0.6007   ->1dp 0.6  ->2dp 0.60
+  autoencoder            n=15  mean=0.5797   ->1dp 0.6  ->2dp 0.58
+  stpm                   n=15  mean=0.5110   ->1dp 0.5  ->2dp 0.51
+  patchcore              n=15  mean=0.5059   ->1dp 0.5  ->2dp 0.51
+  simplenet              n=15  mean=0.5052   ->1dp 0.5  ->2dp 0.51
+  vae                    n=15  mean=0.4757   ->1dp 0.5  ->2dp 0.48
+
+--- F9: CFA vs runner-up, category by category ---
+  bottle      top=cfa,reverse_distillation (0.9968)  2nd=0.9968  margin=0.0000 pp  ties=True
+  hazelnut    top=padim (0.9871)  2nd=0.9864  margin=0.0714 pp  ties=False
+  leather     top=cfa (0.9660)  2nd=0.9657  margin=0.0340 pp  ties=False
+  screw       top=autoencoder (1.0000)  2nd=0.9994  margin=0.0615 pp  ties=False
+  categories where the top is a tie or margin < 0.1pp: 4
+  CFA best-count: 0
+  CFA strict wins (no tie): 0
+  CFA tied wins: 0
+
+--- F10: backbone_distribution.csv ---
+  columns: ['Backbone', 'N_Valid', 'Median', 'Mean', 'Std', 'Min', 'Max']
+  rows: 13
+     {'Backbone': 'EfficientNet-B0', 'N_Valid': '7', 'Median': '0.0243', 'Mean': '0.051', 'Std': '0.0603', 'Min': '0.0097', 'Max': '0.1742'}
+     {'Backbone': 'ResNet-18', 'N_Valid': '12', 'Median': '0.0364', 'Mean': '0.0496', 'Std': '0.0367', 'Min': '0.0269', 'Max': '0.1602'}
+     {'Backbone': 'DeiT-Tiny', 'N_Valid': '4', 'Median': '0.0368', 'Mean': '0.0359', 'Std': '0.0142', 'Min': '0.0217', 'Max': '0.0483'}
+     {'Backbone': 'ResNet-50', 'N_Valid': '7', 'Median': '0.0402', 'Mean': '0.0653', 'Std': '0.0764', 'Min': '0.0153', 'Max': '0.2362'}
+     {'Backbone': 'EfficientNet-B1', 'N_Valid': '1', 'Median': '0.0406', 'Mean': '0.0406', 'Std': 'nan', 'Min': '0.0406', 'Max': '0.0406'}
+     {'Backbone': 'MobileOne-S0', 'N_Valid': '7', 'Median': '0.0464', 'Mean': '0.6127', 'Std': '1.5031', 'Min': '0.0173', 'Max': '4.0211'}
+     {'Backbone': 'ResNet-34', 'N_Valid': '8', 'Median': '0.0531', 'Mean': '0.0584', 'Std': '0.041', 'Min': '0.0203', 'Max': '0.1509'}
+     {'Backbone': 'Swin-Tiny', 'N_Valid': '11', 'Median': '0.0696', 'Mean': '0.1129', 'Std': '0.1179', 'Min': '0.0217', 'Max': '0.4378'}
+     {'Backbone': 'ViT-Tiny', 'N_Valid': '5', 'Median': '0.1015', 'Mean': '0.1145', 'Std': '0.0793', 'Min': '0.0148', 'Max': '0.2279'}
+     {'Backbone': 'ConvNeXt-Tiny', 'N_Valid': '4', 'Median': '0.3821', 'Mean': '1.1197', 'Std': '1.6491', 'Min': '0.1285', 'Max': '3.5862'}
+     {'Backbone': 'ConvNeXtV2-Base', 'N_Valid': '7', 'Median': '0.7204', 'Mean': '5.7857', 'Std': '9.1361', 'Min': '0.2978', 'Max': '23.6628'}
+     {'Backbone': 'ConvNeXtV2-Tiny', 'N_Valid': '6', 'Median': '2.0191', 'Mean': '2.9708', 'Std': '3.5562', 'Min': '0.2557', 'Max': '9.603'}
+     {'Backbone': 'ConvNeXt-Small', 'N_Valid': '6', 'Median': '4.5618', 'Mean': '4.8659', 'Std': '3.7203', 'Min': '0.5195', 'Max': '9.7011'}
+
+--- search-space table (from the manuscript) ---
+  rows=16  CNN rows=12  Transformer rows=3
+
+--- M1: any "107" in evidence? ---
+  hits: 0
+
+--- F13: BTAD training sample counts (manuscript + any artefact) ---
+   D:/autopaper/experiments/btad_stage2\01\01\best_architecture.yaml
+      best_architecture: |   backbone: mobilenetv3_small_100 |   feature_dim: 256 | search_config: |   batch_size: 64 |   epochs_per_trial: 3 |   img_size: 224 |   num_trials: 100 | 
+   D:/autopaper/experiments/btad_stage2\02\02\best_architecture.yaml
+      best_architecture: |   backbone: mobilenetv3_small_100 |   feature_dim: 512 | search_config: |   batch_size: 64 |   epochs_per_trial: 3 |   img_size: 224 |   num_trials: 100 | 
+   D:/autopaper/experiments/btad_stage2\03\03\best_architecture.yaml
+      best_architecture: |   backbone: mobilenetv3_small_100 |   feature_dim: 128 | search_config: |   batch_size: 32 |   epochs_per_trial: 3 |   img_size: 224 |   num_trials: 100 | 

@@ -1,0 +1,59 @@
+[00:01:57] pipeline start — waiting for searches
+[00:01:57] search  3M finished (1/5)
+[00:01:57] search  6M finished (2/5)
+[00:01:57] search  8M finished (3/5)
+[00:01:57] search 13M finished (4/5)
+[00:01:57] search 30M finished (5/5)
+[00:01:57] budget  3M -> mobilenetv3_small_100 + 256d (2.81M, mean score 9.8482, n=7) | dropped 1 degenerate | 2 configs ranked
+[00:01:57] budget  6M -> efficientnet_b0 + 256d (5.41M, mean score 7.8278, n=2) | dropped 4 degenerate | 6 configs ranked
+[00:01:57] budget  8M -> deit_tiny_patch16_224 + 128d (7.01M, mean score 7.0126, n=4) | dropped 11 degenerate | 16 configs ranked
+[00:01:57] budget 13M -> vit_tiny_patch16_224 + 128d (7.01M, mean score 7.0511, n=3) | dropped 13 degenerate | 18 configs ranked
+[00:01:57] budget 30M -> deit_tiny_patch16_224 + 512d (7.90M, mean score 7.2738, n=3) | dropped 6 degenerate | 31 configs ranked
+[00:01:57] training jobs pending: 75 (parallel=5)
+[00:01:57]   start 3M/bottle      mobilenetv3_small_100
+[00:01:57]   start 3M/cable       mobilenetv3_small_100
+[00:01:57]   start 3M/capsule     mobilenetv3_small_100
+[00:01:57]   start 3M/carpet      mobilenetv3_small_100
+[00:01:57]   start 3M/grid        mobilenetv3_small_100
+[00:09:42]   ok    3M/bottle      7.8 min  (done=1 left=70)
+[00:09:42]   start 3M/hazelnut    mobilenetv3_small_100
+[00:10:27]   ok    3M/cable       8.5 min  (done=2 left=69)
+[00:10:27]   ok    3M/capsule     8.5 min  (done=3 left=69)
+[00:10:27]   start 3M/leather     mobilenetv3_small_100
+[00:10:27]   start 3M/metal_nut   mobilenetv3_small_100
+[00:10:57]   ok    3M/grid        9.0 min  (done=4 left=68)
+[00:10:57]   start 3M/pill        mobilenetv3_small_100
+[00:11:42]   ok    3M/carpet      9.8 min  (done=5 left=66)
+[00:11:42]   start 3M/screw       mobilenetv3_small_100
+[00:18:27]   ok    3M/metal_nut   8.0 min  (done=6 left=67)
+[00:18:27]   start 3M/tile        mobilenetv3_small_100
+[00:19:27]   ok    3M/leather     9.0 min  (done=7 left=65)
+[00:19:27]   start 3M/toothbrush  mobilenetv3_small_100
+[00:20:42]   ok    3M/pill        9.8 min  (done=8 left=64)
+[00:20:42]   start 3M/transistor  mobilenetv3_small_100
+[00:21:57]   ok    3M/toothbrush  2.5 min  (done=9 left=65)
+[00:21:57]   start 3M/wood        mobilenetv3_small_100
+[00:22:42]   ok    3M/hazelnut    13.0 min  (done=10 left=61)
+[00:22:42]   ok    3M/screw       11.0 min  (done=11 left=61)
+[00:22:42]   start 3M/zipper      mobilenetv3_small_100
+[00:22:42]   start 6M/bottle      efficientnet_b0
+[00:26:27]   ok    3M/tile        8.0 min  (done=12 left=59)
+[00:26:27]   start 6M/cable       efficientnet_b0
+[00:28:28]   ok    3M/transistor  7.8 min  (done=13 left=58)
+[00:28:28]   start 6M/capsule     efficientnet_b0
+[00:31:13]   ok    3M/wood        9.3 min  (done=14 left=57)
+[00:31:13]   start 6M/carpet      efficientnet_b0
+[00:31:58]   ok    3M/zipper      9.3 min  (done=15 left=56)
+[00:31:58]   start 6M/grid        efficientnet_b0
+[00:46:28]   ok    6M/bottle      23.8 min  (done=16 left=55)
+[00:46:28]   start 6M/hazelnut    efficientnet_b0
+[01:23:14]   ok    6M/cable       56.8 min  (done=17 left=54)
+[01:23:14]   start 6M/leather     efficientnet_b0
+[02:13:16]   ok    6M/capsule     104.8 min  (done=18 left=53)
+[02:13:16]   start 6M/metal_nut   efficientnet_b0
+[03:39:49]   ok    6M/leather     136.6 min  (done=19 left=55)
+[03:39:49]   start 6M/pill        efficientnet_b0
+[04:26:50]   ok    6M/grid        234.9 min  (done=20 left=52)
+[04:26:50]   start 6M/screw       efficientnet_b0
+[04:29:05]   ok    6M/carpet      237.9 min  (done=21 left=50)
+[04:29:05]   start 6M/tile        efficientnet_b0

@@ -1,0 +1,27 @@
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [cap6/bottle] epoch 20: loss=0.1551 AUROC=0.9437 AP=0.9810
+  [cap6/bottle] epoch 40: loss=0.1113 AUROC=0.9508 AP=0.9839
+  [cap6/bottle] epoch 60: loss=0.0870 AUROC=0.9540 AP=0.9864
+  [cap6/bottle] epoch 80: loss=0.0767 AUROC=0.9571 AP=0.9872
+  [cap6/bottle] epoch 100: loss=0.0715 AUROC=0.9627 AP=0.9893
+  [cap6/bottle] epoch 120: loss=0.0658 AUROC=0.9389 AP=0.9805
+  [cap6/bottle] epoch 140: loss=0.0665 AUROC=0.9603 AP=0.9884
+  [cap6/bottle] epoch 160: loss=0.0588 AUROC=0.9587 AP=0.9878
+  [cap6/bottle] epoch 180: loss=0.0571 AUROC=0.9484 AP=0.9843
+  [cap6/bottle] epoch 200: loss=0.0528 AUROC=0.9452 AP=0.9832
+  [cap6/bottle] epoch 220: loss=0.0533 AUROC=0.9675 AP=0.9908
+  [cap6/bottle] epoch 240: loss=0.0508 AUROC=0.9603 AP=0.9886
+  [cap6/bottle] epoch 260: loss=0.0506 AUROC=0.9627 AP=0.9892
+  [cap6/bottle] epoch 280: loss=0.0509 AUROC=0.9595 AP=0.9881
+  [cap6/bottle] epoch 300: loss=0.0512 AUROC=0.9571 AP=0.9875
+  [cap6/bottle] epoch 320: loss=0.0500 AUROC=0.9603 AP=0.9885
+  [cap6/bottle] epoch 340: loss=0.0478 AUROC=0.9556 AP=0.9871
+  [cap6/bottle] epoch 360: loss=0.0470 AUROC=0.9579 AP=0.9878
+  [cap6/bottle] epoch 380: loss=0.0459 AUROC=0.9540 AP=0.9867
+  [cap6/bottle] epoch 400: loss=0.0488 AUROC=0.9563 AP=0.9874
+  [cap6/bottle] epoch 420: loss=0.0478 AUROC=0.9556 AP=0.9871
+  [cap6/bottle] epoch 440: loss=0.0466 AUROC=0.9595 AP=0.9885
+  [cap6/bottle] epoch 460: loss=0.0459 AUROC=0.9587 AP=0.9882
+  [cap6/bottle] epoch 480: loss=0.0480 AUROC=0.9579 AP=0.9880
+  [cap6/bottle] epoch 500: loss=0.0468 AUROC=0.9579 AP=0.9880
+DONE budget=6 cat=bottle efficientnet_b0 AUROC=0.9579 AP=0.9880 (23.3 min wall)

@@ -1,0 +1,9 @@
+{
+  "method": "Reverse Distillation",
+  "year": 2022,
+  "conference": "CVPR",
+  "backbone": "resnet18",
+  "epochs": 50,
+  "auroc": 0.9956140350877194,
+  "ap": 0.9987179487179487
+}

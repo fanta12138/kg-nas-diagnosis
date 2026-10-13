@@ -1,0 +1,25 @@
+{
+  "auroc": 0.7690476190476191,
+  "ap": 0.9103955446838721,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_bottle\\best_model.pth",
+  "per_defect_type": {
+    "broken_large": {
+      "auroc": 0.0,
+      "count": 20
+    },
+    "broken_small": {
+      "auroc": 0.0,
+      "count": 22
+    },
+    "contamination": {
+      "auroc": 0.0,
+      "count": 21
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 20
+    }
+  }
+}

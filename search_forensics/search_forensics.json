@@ -1,0 +1,3617 @@
+{
+  "n_runs": 19,
+  "n_trials": 834,
+  "runs": [
+    {
+      "file": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+      "category": "capsule",
+      "strategy": "bayesian",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "resnet18",
+        "feature_dim": 512
+      }
+    },
+    {
+      "file": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+      "category": "capsule",
+      "strategy": "evolutionary",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 512
+      }
+    },
+    {
+      "file": "experiments/p1_search_strategies/capsule/random/results.json",
+      "category": "capsule",
+      "strategy": "random",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 512
+      }
+    },
+    {
+      "file": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+      "category": "hazelnut",
+      "strategy": "bayesian",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 256
+      }
+    },
+    {
+      "file": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+      "category": "hazelnut",
+      "strategy": "evolutionary",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 128
+      }
+    },
+    {
+      "file": "experiments/p1_search_strategies/hazelnut/random/results.json",
+      "category": "hazelnut",
+      "strategy": "random",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "mobilenetv3_small_100",
+        "feature_dim": 512
+      }
+    },
+    {
+      "file": "experiments/p1_search_strategies/wood/bayesian/results.json",
+      "category": "wood",
+      "strategy": "bayesian",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 256
+      }
+    },
+    {
+      "file": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+      "category": "wood",
+      "strategy": "evolutionary",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 128
+      }
+    },
+    {
+      "file": "experiments/p1_search_strategies/wood/random/results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 30,
+      "declared": 30,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 512
+      }
+    },
+    {
+      "file": "experiments/cap_budget_13M/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 80,
+      "declared": 80,
+      "best": {
+        "backbone": "mobilenetv3_small_100",
+        "feature_dim": 256
+      }
+    },
+    {
+      "file": "experiments/cap_budget_30M/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 80,
+      "declared": 80,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 256
+      }
+    },
+    {
+      "file": "experiments/cap_budget_3M/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 20,
+      "declared": 20,
+      "best": {
+        "backbone": "mobilenetv3_small_100",
+        "feature_dim": 128
+      }
+    },
+    {
+      "file": "experiments/cap_budget_6M/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 40,
+      "declared": 40,
+      "best": {
+        "backbone": "mobilenetv3_small_100",
+        "feature_dim": 256
+      }
+    },
+    {
+      "file": "experiments/cap_budget_8M/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 80,
+      "declared": 80,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 256
+      }
+    },
+    {
+      "file": "experiments/stage2/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 17,
+      "declared": 17,
+      "best": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 128
+      }
+    },
+    {
+      "file": "experiments/stage2_rtx3090/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 15,
+      "declared": 15,
+      "best": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 512
+      }
+    },
+    {
+      "file": "experiments/stage2_rtx3090_100trials/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 39,
+      "declared": 39,
+      "best": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 256
+      }
+    },
+    {
+      "file": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 93,
+      "declared": 93,
+      "best": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 256
+      }
+    },
+    {
+      "file": "experiments/mvtec_stage2_test/bottle/search_results.json",
+      "category": "wood",
+      "strategy": "random",
+      "recorded": 100,
+      "declared": 100,
+      "best": {
+        "backbone": "efficientnet_b1",
+        "feature_dim": 512
+      }
+    }
+  ],
+  "degenerate": {
+    "exact_zero_trials": 67,
+    "total_trials": 834,
+    "share_pct": 8.03357314148681,
+    "per_run": {
+      "experiments/p1_search_strategies/capsule/bayesian/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/p1_search_strategies/capsule/evolutionary/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/p1_search_strategies/capsule/random/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/p1_search_strategies/hazelnut/bayesian/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/p1_search_strategies/hazelnut/evolutionary/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/p1_search_strategies/hazelnut/random/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/p1_search_strategies/wood/bayesian/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/p1_search_strategies/wood/evolutionary/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/p1_search_strategies/wood/random/results.json": {
+        "recorded": 30,
+        "declared": 30
+      },
+      "experiments/cap_budget_13M/search_results.json": {
+        "recorded": 80,
+        "declared": 80
+      },
+      "experiments/cap_budget_30M/search_results.json": {
+        "recorded": 80,
+        "declared": 80
+      },
+      "experiments/cap_budget_3M/search_results.json": {
+        "recorded": 20,
+        "declared": 20
+      },
+      "experiments/cap_budget_6M/search_results.json": {
+        "recorded": 40,
+        "declared": 40
+      },
+      "experiments/cap_budget_8M/search_results.json": {
+        "recorded": 80,
+        "declared": 80
+      },
+      "experiments/stage2/search_results.json": {
+        "recorded": 17,
+        "declared": 17
+      },
+      "experiments/stage2_rtx3090/search_results.json": {
+        "recorded": 15,
+        "declared": 15
+      },
+      "experiments/stage2_rtx3090_100trials/search_results.json": {
+        "recorded": 39,
+        "declared": 39
+      },
+      "experiments/stage2_topjournal_15backbones_fixed/search_results.json": {
+        "recorded": 93,
+        "declared": 93
+      },
+      "experiments/mvtec_stage2_test/bottle/search_results.json": {
+        "recorded": 100,
+        "declared": 100
+      }
+    }
+  },
+  "argmin_degeneracy": {
+    "runs": [
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "n_trials": 80,
+        "zeros": 13,
+        "argmin_backbone": "mobilenetv3_small_100",
+        "argmin_dim": 256,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "resnet18",
+        "best_nonzero_dim": 128,
+        "best_nonzero_score": 5.5522754192352295
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "n_trials": 80,
+        "zeros": 6,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 256,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "vit_tiny_patch16_224",
+        "best_nonzero_dim": 128,
+        "best_nonzero_score": 6.663017749786377
+      },
+      {
+        "run": "experiments/cap_budget_3M/search_results.json",
+        "n_trials": 20,
+        "zeros": 1,
+        "argmin_backbone": "mobilenetv3_small_100",
+        "argmin_dim": 128,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "mobilenetv3_small_100",
+        "best_nonzero_dim": 128,
+        "best_nonzero_score": 7.619150638580322
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "n_trials": 40,
+        "zeros": 4,
+        "argmin_backbone": "mobilenetv3_small_100",
+        "argmin_dim": 256,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "mobileone_s0",
+        "best_nonzero_dim": 256,
+        "best_nonzero_score": 7.35496711730957
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "n_trials": 80,
+        "zeros": 11,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 256,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "vit_tiny_patch16_224",
+        "best_nonzero_dim": 256,
+        "best_nonzero_score": 5.221273899078369
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "n_trials": 100,
+        "zeros": 9,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 512,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "resnet18",
+        "best_nonzero_dim": 256,
+        "best_nonzero_score": 0.0030063334852457047
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "n_trials": 30,
+        "zeros": 0,
+        "argmin_backbone": "resnet18",
+        "argmin_dim": 512,
+        "argmin_score": 0.07220487296581268,
+        "argmin_is_degenerate": false,
+        "best_nonzero_backbone": "resnet18",
+        "best_nonzero_dim": 512,
+        "best_nonzero_score": 0.07220487296581268
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "n_trials": 30,
+        "zeros": 3,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 512,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "deit_tiny_patch16_224",
+        "best_nonzero_dim": 512,
+        "best_nonzero_score": 0.09214028343558311
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "n_trials": 30,
+        "zeros": 4,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 512,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "convnextv2_base",
+        "best_nonzero_dim": 128,
+        "best_nonzero_score": 0.09475644677877426
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "n_trials": 30,
+        "zeros": 3,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 256,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "mobileone_s0",
+        "best_nonzero_dim": 128,
+        "best_nonzero_score": 0.33570510149002075
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "n_trials": 30,
+        "zeros": 3,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 128,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "resnet18",
+        "best_nonzero_dim": 256,
+        "best_nonzero_score": 0.32676249742507935
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "n_trials": 30,
+        "zeros": 2,
+        "argmin_backbone": "mobilenetv3_small_100",
+        "argmin_dim": 512,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "resnet18",
+        "best_nonzero_dim": 256,
+        "best_nonzero_score": 0.32275815804799396
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "n_trials": 30,
+        "zeros": 4,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 256,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "vit_tiny_patch16_224",
+        "best_nonzero_dim": 512,
+        "best_nonzero_score": 6.935445785522461
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "n_trials": 30,
+        "zeros": 3,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 128,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "deit_tiny_patch16_224",
+        "best_nonzero_dim": 512,
+        "best_nonzero_score": 6.16759181022644
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "n_trials": 30,
+        "zeros": 1,
+        "argmin_backbone": "efficientnet_b1",
+        "argmin_dim": 512,
+        "argmin_score": 0.0,
+        "argmin_is_degenerate": true,
+        "best_nonzero_backbone": "deit_tiny_patch16_224",
+        "best_nonzero_dim": 512,
+        "best_nonzero_score": 6.287563323974609
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "n_trials": 17,
+        "zeros": 0,
+        "argmin_backbone": "efficientnet_b0",
+        "argmin_dim": 128,
+        "argmin_score": 3.7990111112594604,
+        "argmin_is_degenerate": false,
+        "best_nonzero_backbone": "efficientnet_b0",
+        "best_nonzero_dim": 128,
+        "best_nonzero_score": 3.7990111112594604
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "n_trials": 15,
+        "zeros": 0,
+        "argmin_backbone": "efficientnet_b0",
+        "argmin_dim": 512,
+        "argmin_score": 1.542107567191124,
+        "argmin_is_degenerate": false,
+        "best_nonzero_backbone": "efficientnet_b0",
+        "best_nonzero_dim": 512,
+        "best_nonzero_score": 1.542107567191124
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "n_trials": 39,
+        "zeros": 0,
+        "argmin_backbone": "efficientnet_b0",
+        "argmin_dim": 256,
+        "argmin_score": 0.0022611599415540695,
+        "argmin_is_degenerate": false,
+        "best_nonzero_backbone": "efficientnet_b0",
+        "best_nonzero_dim": 256,
+        "best_nonzero_score": 0.0022611599415540695
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "n_trials": 93,
+        "zeros": 0,
+        "argmin_backbone": "efficientnet_b0",
+        "argmin_dim": 256,
+        "argmin_score": 0.009730992838740349,
+        "argmin_is_degenerate": false,
+        "best_nonzero_backbone": "efficientnet_b0",
+        "best_nonzero_dim": 256,
+        "best_nonzero_score": 0.009730992838740349
+      }
+    ],
+    "runs_with_degenerate_argmin": 14,
+    "runs_total": 19
+  },
+  "category_scale": {
+    "median_proxy_per_category": {
+      "capsule": 0.11022467166185379,
+      "hazelnut": 0.38470228016376495,
+      "wood": 7.562878608703613
+    },
+    "max_over_min": 68.61330131156971
+  },
+  "within_config": {
+    "cells_with_repeats": 171,
+    "cells_total": 426,
+    "cv_median": 0.17778102575642613,
+    "cv_p90": 1.27195280370193,
+    "cv_max": 2.5452555009365803,
+    "cells_containing_a_zero": 23,
+    "rows": [
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 128,
+        "n": 9,
+        "min": 0.15682586282491684,
+        "max": 96.09519958496094,
+        "cv": 2.5452555009365803,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 256,
+        "n": 6,
+        "min": 0.0,
+        "max": 10.570250511169434,
+        "cv": 2.23606797749979,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 512,
+        "n": 5,
+        "min": 0.0,
+        "max": 8.202763557434082,
+        "cv": 2.0,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 5,
+        "min": 7.4523537158966064,
+        "max": 749.5398254394531,
+        "cv": 1.900161571237274,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 128,
+        "n": 4,
+        "min": 0.0,
+        "max": 16.10289192199707,
+        "cv": 1.7320508075688774,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 512,
+        "n": 4,
+        "min": 4481177.5,
+        "max": 27605938176.00136,
+        "cv": 1.7105133081355182,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 256,
+        "n": 4,
+        "min": 0.5332162380218506,
+        "max": 291.19866943359375,
+        "cv": 1.6934810813421146,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 128,
+        "n": 4,
+        "min": 0.03795793280005455,
+        "max": 4.021115362644196,
+        "cv": 1.638228812977116,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_3M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 128,
+        "n": 5,
+        "min": 0.0,
+        "max": 98.84762191772461,
+        "cv": 1.512775478966297,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 512,
+        "n": 4,
+        "min": 0.0,
+        "max": 117.22903823852539,
+        "cv": 1.451266175381516,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 128,
+        "n": 3,
+        "min": 0.0,
+        "max": 11.243761539459229,
+        "cv": 1.4142135623730951,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 128,
+        "n": 3,
+        "min": 0.0,
+        "max": 10.411425590515137,
+        "cv": 1.4142135623730951,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 512,
+        "n": 3,
+        "min": 0.0,
+        "max": 10.7401704788208,
+        "cv": 1.4142135623730951,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 256,
+        "n": 3,
+        "min": 0.0,
+        "max": 7.832960367202759,
+        "cv": 1.4142135623730947,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 128,
+        "n": 3,
+        "min": 0.0405674334615469,
+        "max": 5.734831229453625e+20,
+        "cv": 1.4142135241730245,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 512,
+        "n": 3,
+        "min": 0.0,
+        "max": 454.5205078125,
+        "cv": 1.4043785606007004,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 256,
+        "n": 6,
+        "min": 0.0,
+        "max": 53.0201530456543,
+        "cv": 1.3149724182246936,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 256,
+        "n": 3,
+        "min": 26.35143280029297,
+        "max": 1007.8237609863281,
+        "cv": 1.2289331891791664,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 256,
+        "n": 5,
+        "min": 0.07774745300412178,
+        "max": 5.732685327529907,
+        "cv": 1.2278804094777545,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnextv2_base",
+        "dim": 256,
+        "n": 5,
+        "min": 0.3114238828420639,
+        "max": 23.662779808044434,
+        "cv": 1.2233115087570126,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 256,
+        "n": 4,
+        "min": 0.0,
+        "max": 13.054051399230957,
+        "cv": 1.1270072673082236,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 3,
+        "min": 0.06790928542613983,
+        "max": 3.2563557624816895,
+        "cv": 1.0429148465141533,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 512,
+        "n": 3,
+        "min": 7.468402624130249,
+        "max": 68.93789434432983,
+        "cv": 1.0337228956232394,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet50",
+        "dim": 256,
+        "n": 3,
+        "min": 0.015281762927770615,
+        "max": 0.23616191931068897,
+        "cv": 1.0033049168695163,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 2,
+        "min": 0.0,
+        "max": 6.585008382797241,
+        "cv": 1.0,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 512,
+        "n": 2,
+        "min": 0.0,
+        "max": 14.372432708740234,
+        "cv": 1.0,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 128,
+        "n": 2,
+        "min": 0.0,
+        "max": 9.700693130493164,
+        "cv": 1.0,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 512,
+        "n": 2,
+        "min": 0.0,
+        "max": 7.99882435798645,
+        "cv": 1.0,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 256,
+        "n": 2,
+        "min": 2592757.5019967314,
+        "max": 9.291160184527258e+16,
+        "cv": 0.9999999999441889,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 256,
+        "n": 3,
+        "min": 0.10482895001769066,
+        "max": 7.897435903549194,
+        "cv": 0.9450956691596147,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 512,
+        "n": 4,
+        "min": 0.0991055965423584,
+        "max": 0.9006068408489227,
+        "cv": 0.9204868469762647,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 512,
+        "n": 6,
+        "min": 0.0,
+        "max": 19.225643634796143,
+        "cv": 0.8675784338744589,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 128,
+        "n": 2,
+        "min": 11.044712543487549,
+        "max": 153.60923767089844,
+        "cv": 0.8658433334990518,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 512,
+        "n": 3,
+        "min": 0.014795800670981407,
+        "max": 0.22787680476903915,
+        "cv": 0.8257982649442567,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 128,
+        "n": 5,
+        "min": 0.0,
+        "max": 7.945809602737427,
+        "cv": 0.8167616167727519,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 128,
+        "n": 2,
+        "min": 4.277244329452515,
+        "max": 38.56326675415039,
+        "cv": 0.8003177730020303,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 256,
+        "n": 9,
+        "min": 0.0022611599415540695,
+        "max": 0.026251569855958223,
+        "cv": 0.7989545343775113,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 128,
+        "n": 4,
+        "min": 0.013980767806060612,
+        "max": 0.1741974651813507,
+        "cv": 0.7959744904227434,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnext_small",
+        "dim": 256,
+        "n": 3,
+        "min": 0.519499659538269,
+        "max": 6.47831392288208,
+        "cv": 0.7671033560293621,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 128,
+        "n": 2,
+        "min": 0.0032154759392142296,
+        "max": 0.024284409475512803,
+        "cv": 0.7661462300135808,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim": 512,
+        "n": 2,
+        "min": 0.06823328137397766,
+        "max": 0.4377662092447281,
+        "cv": 0.7303029641767184,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet18",
+        "dim": 512,
+        "n": 7,
+        "min": 0.03391796350479126,
+        "max": 0.16020426526665688,
+        "cv": 0.7224690014398847,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 128,
+        "n": 3,
+        "min": 7.9196813106536865,
+        "max": 32.19994354248047,
+        "cv": 0.7141388727751516,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 256,
+        "n": 2,
+        "min": 0.01783091016113758,
+        "max": 0.09864458441734314,
+        "cv": 0.6938255514489671,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 128,
+        "n": 2,
+        "min": 8.200893878936768,
+        "max": 43.426198959350586,
+        "cv": 0.6823027047203838,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnext_small",
+        "dim": 512,
+        "n": 2,
+        "min": 0.017313873395323753,
+        "max": 0.08730656653642654,
+        "cv": 0.6690154733316253,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet34",
+        "dim": 256,
+        "n": 6,
+        "min": 0.020335485227406025,
+        "max": 0.15087087452411652,
+        "cv": 0.6261276049643201,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 256,
+        "n": 3,
+        "min": 8.185802578926086,
+        "max": 57.01493453979492,
+        "cv": 0.6236544992584839,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 2,
+        "min": 0.016581564210355282,
+        "max": 0.06493038684129715,
+        "cv": 0.5931501087528162,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 256,
+        "n": 3,
+        "min": 8.024088144302368,
+        "max": 25.009079933166504,
+        "cv": 0.583448736315386,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim": 256,
+        "n": 4,
+        "min": 0.021731197834014893,
+        "max": 0.08404400199651718,
+        "cv": 0.5471338981338043,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 512,
+        "n": 3,
+        "min": 3.2953033447265625,
+        "max": 9.603018283843994,
+        "cv": 0.5346604969873534,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnextv2_base",
+        "dim": 256,
+        "n": 2,
+        "min": 0.011406781151890755,
+        "max": 0.0348520465195179,
+        "cv": 0.5068279190766877,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 128,
+        "n": 2,
+        "min": 0.2557309716939926,
+        "max": 0.7429218590259552,
+        "cv": 0.48784810130737566,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim": 128,
+        "n": 5,
+        "min": 0.05576357990503311,
+        "max": 0.18997003883123398,
+        "cv": 0.46600739211118913,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet50",
+        "dim": 512,
+        "n": 3,
+        "min": 0.009944588877260685,
+        "max": 0.03723389282822609,
+        "cv": 0.4613440788258304,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 128,
+        "n": 2,
+        "min": 0.07263011485338211,
+        "max": 0.19543574750423431,
+        "cv": 0.45811738790902773,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 128,
+        "n": 2,
+        "min": 0.12851832062005997,
+        "max": 0.33602474629879,
+        "cv": 0.4466893178603371,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 256,
+        "n": 2,
+        "min": 0.009730992838740349,
+        "max": 0.024278261698782444,
+        "cv": 0.42774442009576924,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_3M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 256,
+        "n": 7,
+        "min": 7.771470785140991,
+        "max": 19.495081901550293,
+        "cv": 0.40263695684372564,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet34",
+        "dim": 256,
+        "n": 5,
+        "min": 0.00489938585087657,
+        "max": 0.013923237100243568,
+        "cv": 0.4011389489607853,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnextv2_base",
+        "dim": 512,
+        "n": 4,
+        "min": 0.01934916153550148,
+        "max": 0.047197937965393066,
+        "cv": 0.3800649247911956,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 128,
+        "n": 3,
+        "min": 0.08329826965928078,
+        "max": 0.216297946870327,
+        "cv": 0.3551377082107638,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 256,
+        "n": 3,
+        "min": 0.00586520042270422,
+        "max": 0.014431023970246315,
+        "cv": 0.3478940179945873,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet18",
+        "dim": 256,
+        "n": 2,
+        "min": 0.0030063334852457047,
+        "max": 0.006152148824185133,
+        "cv": 0.3434865333200527,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 256,
+        "n": 2,
+        "min": 0.017328313551843166,
+        "max": 0.03378470195457339,
+        "cv": 0.32196082034456264,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet18",
+        "dim": 512,
+        "n": 6,
+        "min": 0.008376467041671276,
+        "max": 0.027236415073275566,
+        "cv": 0.3063509679457048,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 256,
+        "n": 2,
+        "min": 0.02567740809172392,
+        "max": 0.047899410128593445,
+        "cv": 0.3020245041084582,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet34",
+        "dim": 128,
+        "n": 2,
+        "min": 0.025346022099256516,
+        "max": 0.04699423536658287,
+        "cv": 0.2992554080630568,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 256,
+        "n": 3,
+        "min": 0.003346495097503066,
+        "max": 0.006337685510516167,
+        "cv": 0.29769694709442546,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_3M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 512,
+        "n": 8,
+        "min": 7.8579466342926025,
+        "max": 15.762203216552734,
+        "cv": 0.28224231449267506,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 256,
+        "n": 2,
+        "min": 8.967780590057373,
+        "max": 15.558140754699707,
+        "cv": 0.2687099934800679,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnextv2_base",
+        "dim": 128,
+        "n": 4,
+        "min": 0.022426601499319077,
+        "max": 0.044728171080350876,
+        "cv": 0.2582978684510504,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 256,
+        "n": 2,
+        "min": 0.007677017245441675,
+        "max": 0.0125534413382411,
+        "cv": 0.24104367543761904,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 128,
+        "n": 4,
+        "min": 21.194016456604004,
+        "max": 41.06538772583008,
+        "cv": 0.23876105185890212,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 512,
+        "n": 2,
+        "min": 0.006504002492874861,
+        "max": 0.010474051348865032,
+        "cv": 0.23383415396115417,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 128,
+        "n": 4,
+        "min": 0.024241363629698753,
+        "max": 0.04199732467532158,
+        "cv": 0.23240728878597816,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 128,
+        "n": 5,
+        "min": 0.01579553447663784,
+        "max": 0.029141008853912354,
+        "cv": 0.21742221996986866,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet18",
+        "dim": 256,
+        "n": 3,
+        "min": 0.026934543624520302,
+        "max": 0.04507341422140598,
+        "cv": 0.21084512361179739,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 512,
+        "n": 2,
+        "min": 0.012938305735588074,
+        "max": 0.0192531980574131,
+        "cv": 0.19616642833560208,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 128,
+        "n": 2,
+        "min": 3.252564400434494,
+        "max": 4.7703375816345215,
+        "cv": 0.1891800728205595,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 2,
+        "min": 1.542107567191124,
+        "max": 2.2481939792633057,
+        "cv": 0.18628766165918323,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 128,
+        "n": 2,
+        "min": 8.03684401512146,
+        "max": 11.520470142364502,
+        "cv": 0.17812395399445036,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "resnet18",
+        "dim": 512,
+        "n": 3,
+        "min": 6.600129842758179,
+        "max": 9.886407375335693,
+        "cv": 0.17743809751840187,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "convnextv2_base",
+        "dim": 512,
+        "n": 2,
+        "min": 0.10703127831220627,
+        "max": 0.14518141746520996,
+        "cv": 0.1512617714798628,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 512,
+        "n": 2,
+        "min": 6.301114559173584,
+        "max": 8.44883942604065,
+        "cv": 0.14560891979866547,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "resnet18",
+        "dim": 128,
+        "n": 7,
+        "min": 5.5522754192352295,
+        "max": 9.301085472106934,
+        "cv": 0.14409069716228048,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim": 128,
+        "n": 2,
+        "min": 0.36768124500910443,
+        "max": 0.48598599433898926,
+        "cv": 0.1385841506817442,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 256,
+        "n": 7,
+        "min": 5.221273899078369,
+        "max": 8.087223052978516,
+        "cv": 0.1358163378783828,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 128,
+        "n": 4,
+        "min": 7.376349449157715,
+        "max": 10.148222923278809,
+        "cv": 0.13544829273140804,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet34",
+        "dim": 128,
+        "n": 6,
+        "min": 0.02627650834619999,
+        "max": 0.03789295256137848,
+        "cv": 0.12932800705438305,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 2,
+        "min": 7.827976226806641,
+        "max": 10.072707653045654,
+        "cv": 0.12539919934374796,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 512,
+        "n": 2,
+        "min": 6.287563323974609,
+        "max": 7.890142440795898,
+        "cv": 0.11303515134327728,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "resnet18",
+        "dim": 256,
+        "n": 4,
+        "min": 6.828354597091675,
+        "max": 9.31780457496643,
+        "cv": 0.1128938788915783,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 256,
+        "n": 2,
+        "min": 17.40882968902588,
+        "max": 21.571282386779785,
+        "cv": 0.10678401051436368,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 256,
+        "n": 6,
+        "min": 6.575481653213501,
+        "max": 9.436121702194214,
+        "cv": 0.10557834494207813,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 256,
+        "n": 8,
+        "min": 6.129727840423584,
+        "max": 8.995670318603516,
+        "cv": 0.0989489239174926,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet50",
+        "dim": 128,
+        "n": 3,
+        "min": 0.031940508633852005,
+        "max": 0.040213363245129585,
+        "cv": 0.09716433679503073,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnext_small",
+        "dim": 512,
+        "n": 2,
+        "min": 8.03970193862915,
+        "max": 9.701124668121338,
+        "cv": 0.09364967970883648,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 256,
+        "n": 5,
+        "min": 6.740189552307129,
+        "max": 9.045200109481812,
+        "cv": 0.09354050833239407,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet18",
+        "dim": 128,
+        "n": 2,
+        "min": 0.02931882906705141,
+        "max": 0.034721966832876205,
+        "cv": 0.08437024696363747,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "resnet18",
+        "dim": 256,
+        "n": 3,
+        "min": 6.701273441314697,
+        "max": 8.028274536132812,
+        "cv": 0.07597120701664499,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "resnet34",
+        "dim": 128,
+        "n": 2,
+        "min": 0.36203355590502423,
+        "max": 0.4188473622004191,
+        "cv": 0.07275604381937689,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 4,
+        "min": 4.396833658218384,
+        "max": 5.171760201454163,
+        "cv": 0.07267286902735831,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 128,
+        "n": 3,
+        "min": 6.663017749786377,
+        "max": 7.805515289306641,
+        "cv": 0.07238128220166627,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 128,
+        "n": 2,
+        "min": 7.791159152984619,
+        "max": 8.995505571365356,
+        "cv": 0.071744234972047,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet50",
+        "dim": 128,
+        "n": 4,
+        "min": 0.038021981716156006,
+        "max": 0.0463937446475029,
+        "cv": 0.07077328323580513,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 512,
+        "n": 5,
+        "min": 6.350597620010376,
+        "max": 7.678765535354614,
+        "cv": 0.06804328073514977,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 128,
+        "n": 4,
+        "min": 6.328077554702759,
+        "max": 7.460186958312988,
+        "cv": 0.06197421090573273,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "convnext_small",
+        "dim": 512,
+        "n": 3,
+        "min": 0.11239780113101006,
+        "max": 0.13012056797742844,
+        "cv": 0.0596158007760702,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 512,
+        "n": 2,
+        "min": 0.05089912563562393,
+        "max": 0.057338908314704895,
+        "cv": 0.05949648606917808,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 128,
+        "n": 3,
+        "min": 6.683642864227295,
+        "max": 7.598286390304565,
+        "cv": 0.055936264858827876,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 512,
+        "n": 2,
+        "min": 7.513517141342163,
+        "max": 8.400954246520996,
+        "cv": 0.05576290179864966,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 512,
+        "n": 3,
+        "min": 6.7775654792785645,
+        "max": 7.653043031692505,
+        "cv": 0.050435217396264526,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 128,
+        "n": 3,
+        "min": 7.049586057662964,
+        "max": 7.819723606109619,
+        "cv": 0.046188793475314995,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 256,
+        "n": 5,
+        "min": 6.984142541885376,
+        "max": 7.846033573150635,
+        "cv": 0.04325276035283739,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 128,
+        "n": 6,
+        "min": 6.7478790283203125,
+        "max": 7.68662428855896,
+        "cv": 0.04190651649230879,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 512,
+        "n": 5,
+        "min": 7.194990634918213,
+        "max": 7.960342884063721,
+        "cv": 0.03778716085539513,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "resnet18",
+        "dim": 512,
+        "n": 3,
+        "min": 7.806825637817383,
+        "max": 8.485257625579834,
+        "cv": 0.03568972983347693,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 10,
+        "min": 7.217816591262817,
+        "max": 8.16781997680664,
+        "cv": 0.035589101226022365,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "mobileone_s0",
+        "dim": 128,
+        "n": 2,
+        "min": 0.13668296113610268,
+        "max": 0.14650240540504456,
+        "cv": 0.03467497063452642,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 512,
+        "n": 4,
+        "min": 7.1067633628845215,
+        "max": 7.77036190032959,
+        "cv": 0.0346042673598562,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 512,
+        "n": 8,
+        "min": 7.031037330627441,
+        "max": 7.912332057952881,
+        "cv": 0.03423734915925505,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 512,
+        "n": 2,
+        "min": 0.03374243900179863,
+        "max": 0.03608260303735733,
+        "cv": 0.033514681369563676,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 512,
+        "n": 4,
+        "min": 7.64769434928894,
+        "max": 8.278318643569946,
+        "cv": 0.032148393666903446,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 128,
+        "n": 2,
+        "min": 7.360611200332642,
+        "max": 7.842727184295654,
+        "cv": 0.03171119209255171,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "resnet50",
+        "dim": 256,
+        "n": 3,
+        "min": 7.282848358154297,
+        "max": 7.84624457359314,
+        "cv": 0.0308330006653648,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "convnextv2_base",
+        "dim": 512,
+        "n": 3,
+        "min": 7.495601654052734,
+        "max": 8.07092571258545,
+        "cv": 0.03070061086626458,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim": 512,
+        "n": 2,
+        "min": 7.573431491851807,
+        "max": 8.035608291625977,
+        "cv": 0.029609559984809925,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "mobileone_s0",
+        "dim": 512,
+        "n": 2,
+        "min": 0.3781135578950246,
+        "max": 0.4005298614501953,
+        "cv": 0.0287889205742227,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim": 256,
+        "n": 3,
+        "min": 7.578765392303467,
+        "max": 8.033411026000977,
+        "cv": 0.0238732592920165,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 128,
+        "n": 5,
+        "min": 7.686607122421265,
+        "max": 8.104051113128662,
+        "cv": 0.02361164628479628,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 256,
+        "n": 7,
+        "min": 7.35496711730957,
+        "max": 7.9580347537994385,
+        "cv": 0.023545670602251007,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 256,
+        "n": 4,
+        "min": 7.539125919342041,
+        "max": 8.037715196609497,
+        "cv": 0.023385293563642384,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 256,
+        "n": 2,
+        "min": 7.536318302154541,
+        "max": 7.885580539703369,
+        "cv": 0.02264716174903607,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnext_small",
+        "dim": 128,
+        "n": 2,
+        "min": 0.03456031158566475,
+        "max": 0.0361337848007679,
+        "cv": 0.022257491014555562,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 256,
+        "n": 3,
+        "min": 7.692117214202881,
+        "max": 8.078666687011719,
+        "cv": 0.02048302655416008,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "resnet50",
+        "dim": 256,
+        "n": 2,
+        "min": 0.33990536133448285,
+        "max": 0.3541111350059509,
+        "cv": 0.02046892796695104,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet18",
+        "dim": 128,
+        "n": 2,
+        "min": 0.027350587770342827,
+        "max": 0.028493652120232582,
+        "cv": 0.02046879592469241,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "resnet50",
+        "dim": 512,
+        "n": 3,
+        "min": 7.628358364105225,
+        "max": 7.993250370025635,
+        "cv": 0.01956312566398743,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 128,
+        "n": 4,
+        "min": 7.432711601257324,
+        "max": 7.787744760513306,
+        "cv": 0.019311437661835046,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "resnet34",
+        "dim": 256,
+        "n": 3,
+        "min": 0.3352372348308563,
+        "max": 0.3500700692335765,
+        "cv": 0.01903070759690149,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim": 512,
+        "n": 2,
+        "min": 7.702239036560059,
+        "max": 7.966731071472168,
+        "cv": 0.016879988479684794,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 128,
+        "n": 5,
+        "min": 7.585127592086792,
+        "max": 7.945476531982422,
+        "cv": 0.016336727781408406,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim": 128,
+        "n": 3,
+        "min": 7.514477014541626,
+        "max": 7.774203777313232,
+        "cv": 0.015174972318237622,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "convnext_tiny",
+        "dim": 512,
+        "n": 2,
+        "min": 7.44614839553833,
+        "max": 7.66977071762085,
+        "cv": 0.014793828969873548,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 512,
+        "n": 3,
+        "min": 7.550654411315918,
+        "max": 7.785733938217163,
+        "cv": 0.014437833655875055,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 128,
+        "n": 3,
+        "min": 7.7798707485198975,
+        "max": 8.024295568466187,
+        "cv": 0.013803182105995074,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "convnext_small",
+        "dim": 512,
+        "n": 3,
+        "min": 7.759235382080078,
+        "max": 7.991799831390381,
+        "cv": 0.01207478727424237,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 256,
+        "n": 2,
+        "min": 7.739176988601685,
+        "max": 7.9163477420806885,
+        "cv": 0.011316819878402225,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 256,
+        "n": 2,
+        "min": 7.984181880950928,
+        "max": 8.161978483200073,
+        "cv": 0.011011695551092368,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 512,
+        "n": 3,
+        "min": 7.640652418136597,
+        "max": 7.824681282043457,
+        "cv": 0.010859296623488406,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 512,
+        "n": 2,
+        "min": 7.382269859313965,
+        "max": 7.537774562835693,
+        "cv": 0.010422536228569998,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 512,
+        "n": 4,
+        "min": 7.804408311843872,
+        "max": 7.997280597686768,
+        "cv": 0.009462928687843295,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim": 128,
+        "n": 2,
+        "min": 0.030443299561738968,
+        "max": 0.031014245003461838,
+        "cv": 0.0092900789603976,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "convnext_tiny",
+        "dim": 256,
+        "n": 3,
+        "min": 7.689567565917969,
+        "max": 7.846904993057251,
+        "cv": 0.00911915504047213,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 256,
+        "n": 2,
+        "min": 7.74477219581604,
+        "max": 7.880040407180786,
+        "cv": 0.008657269357509078,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "convnext_tiny",
+        "dim": 128,
+        "n": 2,
+        "min": 0.36207449436187744,
+        "max": 0.36829232176144916,
+        "cv": 0.008513293953543753,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 512,
+        "n": 2,
+        "min": 7.49123477935791,
+        "max": 7.61100435256958,
+        "cv": 0.007930583813791314,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim": 256,
+        "n": 2,
+        "min": 7.9827799797058105,
+        "max": 8.087623596191406,
+        "cv": 0.0065240188891611105,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 128,
+        "n": 4,
+        "min": 7.766833305358887,
+        "max": 7.882843494415283,
+        "cv": 0.005726079772568875,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim": 256,
+        "n": 2,
+        "min": 7.827225208282471,
+        "max": 7.912726163864136,
+        "cv": 0.005432097822930216,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "resnet34",
+        "dim": 128,
+        "n": 3,
+        "min": 7.583815336227417,
+        "max": 7.6742634773254395,
+        "cv": 0.0051847242709289944,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 512,
+        "n": 2,
+        "min": 7.893632888793945,
+        "max": 7.956104278564453,
+        "cv": 0.003941477963379984,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim": 128,
+        "n": 2,
+        "min": 7.753401279449463,
+        "max": 7.767282724380493,
+        "cv": 0.0008943835804919953,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "convnext_small",
+        "dim": 128,
+        "n": 2,
+        "min": 0.3612672984600067,
+        "max": 0.3612803518772125,
+        "cv": 1.8065821956127606e-05,
+        "collapsed": false
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 256,
+        "n": 2,
+        "min": 0.0,
+        "max": 0.0,
+        "cv": null,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 256,
+        "n": 4,
+        "min": 0.0,
+        "max": 0.0,
+        "cv": null,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 512,
+        "n": 2,
+        "min": 0.0,
+        "max": 0.0,
+        "cv": null,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 256,
+        "n": 3,
+        "min": 0.0,
+        "max": 0.0,
+        "cv": null,
+        "collapsed": true
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim": 128,
+        "n": 2,
+        "min": 0.0,
+        "max": 0.0,
+        "cv": null,
+        "collapsed": true
+      }
+    ]
+  },
+  "inert_axis": {
+    "n_backbone_comparisons": 140,
+    "median_ratio": 1.1555344514626573,
+    "p90_ratio": 10.941254959713174,
+    "max_ratio": 27439522743.0289,
+    "rows": [
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim_means": {
+          "256": 4.6455800923932664e+16,
+          "512": 6966631534.169837,
+          "128": 1.9116104442415556e+20
+        },
+        "max_over_min": 27439522743.0289
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "512": 22.14755916595459,
+          "256": 0.5346933901309967,
+          "128": 0.10741566121578217
+        },
+        "max_over_min": 206.1855684290154
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "256": 76.1337890625,
+          "128": 0.4237460096677144
+        },
+        "max_over_min": 179.66845073585762
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "256": 4.666351862251759,
+          "512": 152.2133629322052,
+          "128": 0.9401454329490662
+        },
+        "max_over_min": 161.90406036940414
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "512": 1.432488739490509,
+          "128": 117.45913314819336
+        },
+        "max_over_min": 81.99654901997336
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "128": 1.0478917127475142,
+          "512": 0.04643692076206207,
+          "256": 0.02555650775320828
+        },
+        "max_over_min": 41.002930559476205
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "512": 11.77017593383789,
+          "256": 55.48805618286133,
+          "128": 1.4966516494750977
+        },
+        "max_over_min": 37.074797066052064
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnextv2_base",
+        "dim_means": {
+          "256": 7.654243990778923,
+          "128": 1.9305695295333862,
+          "512": 0.2977815568447113
+        },
+        "max_over_min": 25.704224505651634
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "512": 156.1436439037323,
+          "256": 7.961336469650268,
+          "128": 7.851114940643311
+        },
+        "max_over_min": 19.88808533364028
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "256": 0.373731791973114,
+          "512": 7.186216354370117
+        },
+        "max_over_min": 19.22827147358951
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "512": 1.3278708805640538,
+          "256": 0.06990107148885727,
+          "128": 0.1340329311788082
+        },
+        "max_over_min": 18.996430988553957
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "128": 0.23227153345942497,
+          "512": 3.5861908197402954,
+          "256": 0.4282039552927017
+        },
+        "max_over_min": 15.43964844218312
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "128": 0.4993264153599739,
+          "512": 5.469358325004578,
+          "256": 0.41804397106170654
+        },
+        "max_over_min": 13.0832130197071
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "256": 2.6109867890675864,
+          "128": 4.6713762283325195,
+          "512": 33.42256611585617
+        },
+        "max_over_min": 12.800741181762836
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "256": 1.7830119244754314,
+          "512": 0.35232261568307877,
+          "128": 0.1660988194247087
+        },
+        "max_over_min": 10.734645379485414
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "128": 1.6095833778381348,
+          "512": 17.207672119140625
+        },
+        "max_over_min": 10.690761569775038
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "128": 0.4073954125245412,
+          "512": 4.0872970422108965
+        },
+        "max_over_min": 10.032751760464855
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet50",
+        "dim_means": {
+          "256": 0.00518034165725112,
+          "128": 0.042839775793254375,
+          "512": 0.02422780015816291
+        },
+        "max_over_min": 8.26968154374334
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "128": 11.728235573404366,
+          "256": 74.03732998669147,
+          "512": 14.256595611572266
+        },
+        "max_over_min": 6.312742400449635
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "512": 0.019964035755644243,
+          "128": 0.027922119945287704,
+          "256": 0.004579241154715419
+        },
+        "max_over_min": 6.097543021191456
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnext_small",
+        "dim_means": {
+          "256": 0.008686728775501251,
+          "512": 0.05231021996587515,
+          "128": 0.035347048193216324
+        },
+        "max_over_min": 6.021854868244886
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "256": 0.017004627268761396,
+          "512": 0.013524266425520182,
+          "128": 0.0774316132592503
+        },
+        "max_over_min": 5.725383604772638
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "256": 0.04998877109028399,
+          "512": 0.2529997453093529,
+          "128": 0.10727080591022968
+        },
+        "max_over_min": 5.061131525966376
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "convnext_small",
+        "dim_means": {
+          "512": 8.870413303375244,
+          "256": 3.214347799619039,
+          "128": 1.8115196228027344
+        },
+        "max_over_min": 4.896669730605059
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "128": 0.020771010592579842,
+          "256": 0.004468829991916816,
+          "512": 0.008489026920869946
+        },
+        "max_over_min": 4.647975114325289
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "256": 368.27783966064453,
+          "128": 82.326975107193
+        },
+        "max_over_min": 4.473355655070919
+      },
+      {
+        "run": "experiments/stage2_rtx3090_100trials/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "256": 0.009814887501609823,
+          "512": 0.040755975525826216,
+          "128": 0.013749942707363516
+        },
+        "max_over_min": 4.152464867186861
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "resnet34",
+        "dim_means": {
+          "128": 0.03235112130641937,
+          "256": 0.007924743928015232,
+          "512": 0.01248700637370348
+        },
+        "max_over_min": 4.082292323926456
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "128": 0.04587986692786217,
+          "256": 0.011351354420185089
+        },
+        "max_over_min": 4.041796708089578
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "resnet50",
+        "dim_means": {
+          "512": 0.39640432596206665,
+          "128": 0.10250125825405121
+        },
+        "max_over_min": 3.8673118039153374
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "128": 13.336075782775879,
+          "512": 28.0018789768219,
+          "256": 8.104080438613892
+        },
+        "max_over_min": 3.4552814707267756
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "128": 0.03171677002683282,
+          "512": 0.03491252101957798,
+          "256": 0.010115229291841388
+        },
+        "max_over_min": 3.4514809316025366
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "256": 13.702716986338297,
+          "128": 4.025722980499268,
+          "512": 7.834485054016113
+        },
+        "max_over_min": 3.403790338459626
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "256": 19.490056037902832,
+          "512": 7.374976992607117,
+          "128": 21.420255541801453
+        },
+        "max_over_min": 2.9044504902555923
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet50",
+        "dim_means": {
+          "256": 0.09800245240330696,
+          "128": 0.035561087230841316,
+          "512": 0.056198397651314735
+        },
+        "max_over_min": 2.7558902169422894
+      },
+      {
+        "run": "experiments/cap_budget_3M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "512": 9.041503340005875,
+          "256": 9.848201581409999,
+          "128": 24.621016836166383
+        },
+        "max_over_min": 2.7231109595708434
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "256": 0.011545100870231787,
+          "128": 0.030728772282600403,
+          "512": 0.016095751896500587
+        },
+        "max_over_min": 2.661628740016671
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "256": 0.03678840911015868,
+          "512": 0.021695422008633614,
+          "128": 0.048334866762161255
+        },
+        "max_over_min": 2.2278832254531196
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "512": 7.810230135917664,
+          "128": 16.02031413714091,
+          "256": 7.564613771438599
+        },
+        "max_over_min": 2.117796707298944
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "512": 1.8951507732272148,
+          "128": 4.011450991034508
+        },
+        "max_over_min": 2.1166922693984325
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim_means": {
+          "512": 1.6405527114868164,
+          "128": 3.470475196838379,
+          "256": 0.0
+        },
+        "max_over_min": 2.1154304720225188
+      },
+      {
+        "run": "experiments/stage2_rtx3090/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "256": 12.26296067237854,
+          "512": 19.62549114227295,
+          "128": 25.813546419143677
+        },
+        "max_over_min": 2.105001158267341
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim_means": {
+          "512": 3.5800568262736,
+          "256": 1.761708418528239,
+          "128": 0.0
+        },
+        "max_over_min": 2.0321506037102552
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "512": 0.05411901697516441,
+          "256": 0.05823774728924036,
+          "128": 0.1031314879655838
+        },
+        "max_over_min": 1.9056422996912812
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "512": 0.059407598339021206,
+          "128": 0.03202039794996381,
+          "256": 0.0382705849284927
+        },
+        "max_over_min": 1.855304810135514
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "mobilenetv3_small_100",
+        "dim_means": {
+          "256": 13.871447920799255,
+          "512": 7.585645993550618,
+          "128": 8.232085347175598
+        },
+        "max_over_min": 1.8286442489661237
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "resnet34",
+        "dim_means": {
+          "128": 0.03617012873291969,
+          "256": 0.06586959461371104
+        },
+        "max_over_min": 1.8211047878787567
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "128": 0.15282801538705826,
+          "256": 0.1698630005121231,
+          "512": 0.1075218953192234
+        },
+        "max_over_min": 1.5797991656286772
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnextv2_base",
+        "dim_means": {
+          "128": 0.03478179592639208,
+          "512": 0.029361281543970108,
+          "256": 0.023129413835704327
+        },
+        "max_over_min": 1.5037906353121775
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "256": 0.1716582030057907,
+          "128": 0.1170443594455719,
+          "512": 0.12421784549951553
+        },
+        "max_over_min": 1.4666080776461117
+      },
+      {
+        "run": "experiments/stage2_topjournal_15backbones_fixed/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "256": 0.14722295850515366,
+          "128": 0.10153532028198242,
+          "512": 0.10784458927810192
+        },
+        "max_over_min": 1.4499679332895015
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "128": 8.229567050933838,
+          "512": 6.16759181022644,
+          "256": 7.594195604324341
+        },
+        "max_over_min": 1.3343242069438594
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "convnextv2_base",
+        "dim_means": {
+          "512": 0.12610634788870811,
+          "128": 0.09475644677877426
+        },
+        "max_over_min": 1.3308471579049999
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "128": 0.4393574893474579,
+          "256": 0.3325577676296234
+        },
+        "max_over_min": 1.3211463754976236
+      },
+      {
+        "run": "experiments/mvtec_stage2_test/bottle/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "512": 0.022768376395106316,
+          "128": 0.0297163724899292
+        },
+        "max_over_min": 1.3051599277107981
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "512": 0.4366973439852397,
+          "128": 0.33570510149002075,
+          "256": 0.3847537736097972
+        },
+        "max_over_min": 1.3008361864236402
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "256": 0.33584747711817425,
+          "128": 0.4243723253409068
+        },
+        "max_over_min": 1.263586461873535
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "512": 4.796319544315338,
+          "128": 3.7990111112594604
+        },
+        "max_over_min": 1.2625179036986935
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "convnext_small",
+        "dim_means": {
+          "512": 0.3890718420346578,
+          "256": 0.43073326349258423,
+          "128": 0.3416581451892853
+        },
+        "max_over_min": 1.2607141657751189
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "256": 0.14294221252202988,
+          "512": 0.18008337914943695
+        },
+        "max_over_min": 1.2598334387869012
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "resnet50",
+        "dim_means": {
+          "128": 6.734785556793213,
+          "256": 7.572287559509277,
+          "512": 8.33526349067688
+        },
+        "max_over_min": 1.2376434884803873
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "resnet34",
+        "dim_means": {
+          "256": 0.1004098542034626,
+          "128": 0.0893777459859848,
+          "512": 0.11022467166185379
+        },
+        "max_over_min": 1.2332451489561838
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "256": 0.32676249742507935,
+          "512": 0.3800303637981415,
+          "128": 0.40058059493700665
+        },
+        "max_over_min": 1.2259074957916565
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "128": 0.08836901560425758,
+          "256": 0.08710576593875885,
+          "512": 0.07220487296581268
+        },
+        "max_over_min": 1.2238649827152004
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "convnextv2_base",
+        "dim_means": {
+          "512": 0.12556691840291023,
+          "256": 0.11844080314040184,
+          "128": 0.10268687084317207
+        },
+        "max_over_min": 1.2228137577069769
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "efficientnet_b1",
+        "dim_means": {
+          "256": 0.0,
+          "128": 4.850346565246582,
+          "512": 3.999412178993225
+        },
+        "max_over_min": 1.212764863477403
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "convnext_small",
+        "dim_means": {
+          "128": 0.4146538972854614,
+          "256": 0.5011814832687378
+        },
+        "max_over_min": 1.2086742378396311
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "128": 0.09632658958435059,
+          "256": 0.11354650557041168,
+          "512": 0.1101054921746254
+        },
+        "max_over_min": 1.1787659675315514
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "512": 0.36821478605270386,
+          "256": 0.40546172857284546,
+          "128": 0.3445590337117513
+        },
+        "max_over_min": 1.1767554726544878
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "256": 7.643072843551636,
+          "512": 8.836938858032227
+        },
+        "max_over_min": 1.1562023598254516
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "convnextv2_base",
+        "dim_means": {
+          "512": 0.44422032435735065,
+          "128": 0.38465078671773273,
+          "256": 0.4286956489086151
+        },
+        "max_over_min": 1.1548665430998628
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "256": 0.09291904792189598,
+          "128": 0.10636650398373604,
+          "512": 0.09214028343558311
+        },
+        "max_over_min": 1.1543974038032858
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "512": 0.35780973235766095,
+          "128": 0.41212446490923565
+        },
+        "max_over_min": 1.1517978065987389
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "256": 0.3719457189242045,
+          "128": 0.40968164801597595,
+          "512": 0.42717936635017395
+        },
+        "max_over_min": 1.1484992153847724
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "resnet34",
+        "dim_means": {
+          "256": 0.3410036067167918,
+          "128": 0.3904404590527217
+        },
+        "max_over_min": 1.144974573178013
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "512": 0.3811893065770467,
+          "256": 0.4363107581933339,
+          "128": 0.3858208457628886
+        },
+        "max_over_min": 1.1446038770375264
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "512": 0.4179684619108836,
+          "128": 0.3651834080616633
+        },
+        "max_over_min": 1.144543954308864
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "convnext_small",
+        "dim_means": {
+          "128": 0.09719566255807877,
+          "512": 0.11077351868152618
+        },
+        "max_over_min": 1.139696111596894
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "512": 8.950341939926147,
+          "256": 7.869975686073303,
+          "128": 8.393332362174988
+        },
+        "max_over_min": 1.1372769493766872
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "512": 0.11245256289839745,
+          "128": 0.0993921160697937,
+          "256": 0.10448304936289787
+        },
+        "max_over_min": 1.1314032475114286
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "512": 7.348729133605957,
+          "128": 7.012586295604706,
+          "256": 7.914881785710652
+        },
+        "max_over_min": 1.1286680052224785
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "512": 8.312585830688477,
+          "256": 7.369563341140747
+        },
+        "max_over_min": 1.127961786322303
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "resnet50",
+        "dim_means": {
+          "256": 0.39745404322942096,
+          "512": 0.42467910051345825,
+          "128": 0.3777122398217519
+        },
+        "max_over_min": 1.124345614835968
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "resnet50",
+        "dim_means": {
+          "256": 0.10425886511802673,
+          "128": 0.11699513345956802,
+          "512": 0.10951052606105804
+        },
+        "max_over_min": 1.1221600515900796
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "256": 7.862654368082683,
+          "128": 7.051147381464641,
+          "512": 7.460022211074829
+        },
+        "max_over_min": 1.1150886434101848
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "512": 0.09923888370394707,
+          "256": 0.11009437963366508
+        },
+        "max_over_min": 1.1093875255802204
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "256": 7.038591146469116,
+          "512": 7.6415815353393555,
+          "128": 7.6827311515808105
+        },
+        "max_over_min": 1.0915154740071562
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "128": 0.44959700107574463,
+          "256": 0.4902932643890381
+        },
+        "max_over_min": 1.0905172036644375
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "256": 7.971482038497925,
+          "512": 7.331544876098633
+        },
+        "max_over_min": 1.0872854457299352
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "128": 0.10719344019889832,
+          "512": 0.09893295541405678
+        },
+        "max_over_min": 1.0834957851028462
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "convnextv2_base",
+        "dim_means": {
+          "512": 0.3388653000195821,
+          "128": 0.3481555183728536,
+          "256": 0.36671756704648334
+        },
+        "max_over_min": 1.0821927386052563
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "512": 8.088498751322428,
+          "256": 7.487402518590291,
+          "128": 7.507669687271118
+        },
+        "max_over_min": 1.080281009500917
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "resnet34",
+        "dim_means": {
+          "128": 7.639169454574585,
+          "512": 8.252097129821777
+        },
+        "max_over_min": 1.0802348578457244
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "512": 7.629952669143677,
+          "256": 7.065278053283691
+        },
+        "max_over_min": 1.0799224901838853
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "128": 7.469261646270752,
+          "512": 6.935445785522461
+        },
+        "max_over_min": 1.0769692211944928
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "128": 7.344572305679321,
+          "512": 7.273780186971028,
+          "256": 7.820321321487427
+        },
+        "max_over_min": 1.075138527762411
+      },
+      {
+        "run": "experiments/stage2/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "128": 29.884110689163208,
+          "256": 31.99347945054372
+        },
+        "max_over_min": 1.0705849601254966
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "convnextv2_base",
+        "dim_means": {
+          "256": 7.92920446395874,
+          "128": 7.425334453582764
+        },
+        "max_over_min": 1.067858224235658
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/evolutionary/results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "128": 0.10330360010266304,
+          "512": 0.09694954380393028
+        },
+        "max_over_min": 1.0655398266915328
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "128": 7.627737402915955,
+          "256": 8.035201787948608,
+          "512": 7.551119565963745
+        },
+        "max_over_min": 1.0641073443157802
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "512": 7.088852882385254,
+          "256": 7.526548385620117
+        },
+        "max_over_min": 1.0617441933831737
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "512": 8.10608720779419,
+          "256": 7.651673316955566,
+          "128": 7.744072437286377
+        },
+        "max_over_min": 1.0593875185224746
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "512": 0.09432441741228104,
+          "128": 0.09973577782511711
+        },
+        "max_over_min": 1.057369666956793
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "resnet50",
+        "dim_means": {
+          "512": 7.83640996615092,
+          "128": 7.418546438217163,
+          "256": 7.540540854136149
+        },
+        "max_over_min": 1.056326873655613
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "128": 7.413508812586467,
+          "256": 7.019815376826695,
+          "512": 7.310223531723023
+        },
+        "max_over_min": 1.0560831609702164
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "256": 0.34663092096646625,
+          "128": 0.36583290497461957,
+          "512": 0.3540128568808238
+        },
+        "max_over_min": 1.055396050515675
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "512": 7.804519891738892,
+          "128": 7.601669192314148,
+          "256": 7.996417999267578
+        },
+        "max_over_min": 1.0519292272482141
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "256": 3.461597957958778,
+          "512": 3.2925041913986206
+        },
+        "max_over_min": 1.0513571909800146
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/bayesian/results.json",
+        "backbone": "resnet50",
+        "dim_means": {
+          "128": 0.4056932330131531,
+          "512": 0.41788187623023987,
+          "256": 0.39747511347134906
+        },
+        "max_over_min": 1.0513409822835658
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "resnet34",
+        "dim_means": {
+          "256": 7.391144037246704,
+          "128": 7.48323655128479,
+          "512": 7.753058195114136
+        },
+        "max_over_min": 1.0489659186783011
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/evolutionary/results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "256": 0.4182042082150777,
+          "128": 0.39922918876012164
+        },
+        "max_over_min": 1.0475291386230712
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "512": 7.610271692276001,
+          "128": 7.9378392696380615,
+          "256": 7.732062816619873
+        },
+        "max_over_min": 1.043042822990738
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "512": 0.11740636453032494,
+          "256": 0.11283683404326439
+        },
+        "max_over_min": 1.0404967981050273
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "256": 7.636901617050171,
+          "512": 7.934952259063721
+        },
+        "max_over_min": 1.039027691720962
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "512": 7.9431023597717285,
+          "128": 7.678502957026164,
+          "256": 7.961214065551758
+        },
+        "max_over_min": 1.0368185191967532
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "256": 0.3911262055238088,
+          "512": 0.38932170967260993,
+          "128": 0.4031399687131246
+        },
+        "max_over_min": 1.0354931633587419
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "deit_tiny_patch16_224",
+        "dim_means": {
+          "512": 7.95723569393158,
+          "256": 7.707406103610992,
+          "128": 7.6928040981292725
+        },
+        "max_over_min": 1.034373889212467
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "256": 0.32275815804799396,
+          "512": 0.3327561914920807
+        },
+        "max_over_min": 1.030976857423384
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "128": 7.836878955364227,
+          "256": 8.0730801820755,
+          "512": 7.924868583679199
+        },
+        "max_over_min": 1.0301397058773758
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "256": 7.833523750305176,
+          "512": 8.044247150421143
+        },
+        "max_over_min": 1.0269002056842884
+      },
+      {
+        "run": "experiments/cap_budget_8M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "512": 7.624834448099136,
+          "256": 7.817562401294708,
+          "128": 7.760342001914978
+        },
+        "max_over_min": 1.0252763459334673
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "256": 7.747432629267375,
+          "512": 7.55795955657959,
+          "128": 7.6618382930755615
+        },
+        "max_over_min": 1.0250693419658272
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "512": 7.924652993679047,
+          "256": 7.812406301498413,
+          "128": 7.757390022277832
+        },
+        "max_over_min": 1.0215617586483168
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "512": 7.878979206085205,
+          "128": 8.011768817901611
+        },
+        "max_over_min": 1.0168536568434967
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "256": 7.748598575592041,
+          "512": 7.706596930821736,
+          "128": 7.828742790222168
+        },
+        "max_over_min": 1.015849519638418
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "256": 7.8211565017700195,
+          "128": 7.9394683837890625,
+          "512": 7.861537218093872
+        },
+        "max_over_min": 1.015127159518195
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "convnext_small",
+        "dim_means": {
+          "256": 0.11339947953820229,
+          "128": 0.11505712568759918
+        },
+        "max_over_min": 1.0146177580016005
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "512": 7.790091514587402,
+          "256": 7.698234558105469,
+          "128": 7.732059001922607
+        },
+        "max_over_min": 1.011932210663186
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "convnext_small",
+        "dim_means": {
+          "128": 7.897170066833496,
+          "256": 7.817040920257568
+        },
+        "max_over_min": 1.010250572741442
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/evolutionary/results.json",
+        "backbone": "resnet34",
+        "dim_means": {
+          "128": 7.8636534214019775,
+          "512": 7.8624022006988525,
+          "256": 7.942610263824463
+        },
+        "max_over_min": 1.0102014703748532
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "convnext_tiny",
+        "dim_means": {
+          "256": 0.10871140658855438,
+          "512": 0.10948623344302177
+        },
+        "max_over_min": 1.007127374015129
+      },
+      {
+        "run": "experiments/cap_budget_30M/search_results.json",
+        "backbone": "vit_tiny_patch16_224",
+        "dim_means": {
+          "128": 7.422831217447917,
+          "512": 7.474510574340821
+        },
+        "max_over_min": 1.0069622163537044
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/random/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "128": 0.10157319158315659,
+          "256": 0.10090702027082443
+        },
+        "max_over_min": 1.0066018331583295
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "convnextv2_base",
+        "dim_means": {
+          "128": 0.3534587224324544,
+          "512": 0.3554668029149373
+        },
+        "max_over_min": 1.0056812305229408
+      },
+      {
+        "run": "experiments/cap_budget_6M/search_results.json",
+        "backbone": "efficientnet_b0",
+        "dim_means": {
+          "128": 7.8716816902160645,
+          "256": 7.8277623653411865,
+          "512": 7.861525356769562
+        },
+        "max_over_min": 1.0056107125925715
+      },
+      {
+        "run": "experiments/p1_search_strategies/hazelnut/random/results.json",
+        "backbone": "convnext_small",
+        "dim_means": {
+          "128": 0.3612738251686096,
+          "256": 0.36250080664952594
+        },
+        "max_over_min": 1.0033962645379684
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/bayesian/results.json",
+        "backbone": "swin_tiny_patch4_window7_224",
+        "dim_means": {
+          "128": 7.824948310852051,
+          "256": 7.800136566162109
+        },
+        "max_over_min": 1.0031809372155838
+      },
+      {
+        "run": "experiments/cap_budget_13M/search_results.json",
+        "backbone": "resnet18",
+        "dim_means": {
+          "128": 7.9526572568075995,
+          "512": 7.939415534337361,
+          "256": 7.933404922485352
+        },
+        "max_over_min": 1.002426742931989
+      },
+      {
+        "run": "experiments/p1_search_strategies/wood/random/results.json",
+        "backbone": "convnextv2_tiny",
+        "dim_means": {
+          "256": 7.710949420928955,
+          "512": 7.7031776905059814
+        },
+        "max_over_min": 1.0010088992796509
+      },
+      {
+        "run": "experiments/p1_search_strategies/capsule/bayesian/results.json",
+        "backbone": "mobileone_s0",
+        "dim_means": {
+          "512": 0.09901995956897736,
+          "128": 0.09904466196894646
+        },
+        "max_over_min": 1.000249468895732
+      }
+    ],
+    "note": "feature_dim cannot reach the deployed detector (StudentEncoder hard-codes a 256-d bottleneck), so any spread here is pure artefact."
+  }
+}

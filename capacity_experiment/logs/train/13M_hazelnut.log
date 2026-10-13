@@ -1,0 +1,26 @@
+  [cap13/hazelnut] epoch 20: loss=0.1797 AUROC=0.9246 AP=0.9606
+  [cap13/hazelnut] epoch 40: loss=0.1623 AUROC=0.9539 AP=0.9744
+  [cap13/hazelnut] epoch 60: loss=0.1467 AUROC=0.9511 AP=0.9733
+  [cap13/hazelnut] epoch 80: loss=0.1408 AUROC=0.9482 AP=0.9729
+  [cap13/hazelnut] epoch 100: loss=0.1332 AUROC=0.9400 AP=0.9678
+  [cap13/hazelnut] epoch 120: loss=0.1277 AUROC=0.9446 AP=0.9718
+  [cap13/hazelnut] epoch 140: loss=0.1243 AUROC=0.9693 AP=0.9840
+  [cap13/hazelnut] epoch 160: loss=0.1230 AUROC=0.9618 AP=0.9788
+  [cap13/hazelnut] epoch 180: loss=0.1199 AUROC=0.9539 AP=0.9753
+  [cap13/hazelnut] epoch 200: loss=0.1168 AUROC=0.9586 AP=0.9776
+  [cap13/hazelnut] epoch 220: loss=0.1181 AUROC=0.9579 AP=0.9765
+  [cap13/hazelnut] epoch 240: loss=0.1131 AUROC=0.9632 AP=0.9799
+  [cap13/hazelnut] epoch 260: loss=0.1159 AUROC=0.9604 AP=0.9781
+  [cap13/hazelnut] epoch 280: loss=0.1105 AUROC=0.9636 AP=0.9799
+  [cap13/hazelnut] epoch 300: loss=0.1103 AUROC=0.9643 AP=0.9800
+  [cap13/hazelnut] epoch 320: loss=0.1108 AUROC=0.9625 AP=0.9794
+  [cap13/hazelnut] epoch 340: loss=0.1056 AUROC=0.9704 AP=0.9834
+  [cap13/hazelnut] epoch 360: loss=0.1044 AUROC=0.9639 AP=0.9803
+  [cap13/hazelnut] epoch 380: loss=0.1165 AUROC=0.9575 AP=0.9791
+  [cap13/hazelnut] epoch 400: loss=0.1090 AUROC=0.9607 AP=0.9785
+  [cap13/hazelnut] epoch 420: loss=0.1044 AUROC=0.9596 AP=0.9778
+  [cap13/hazelnut] epoch 440: loss=0.1089 AUROC=0.9607 AP=0.9785
+  [cap13/hazelnut] epoch 460: loss=0.1022 AUROC=0.9600 AP=0.9780
+  [cap13/hazelnut] epoch 480: loss=0.1036 AUROC=0.9607 AP=0.9784
+  [cap13/hazelnut] epoch 500: loss=0.1049 AUROC=0.9611 AP=0.9786
+DONE budget=13 cat=hazelnut vit_tiny_patch16_224 AUROC=0.9611 AP=0.9786 (5.5 min wall)

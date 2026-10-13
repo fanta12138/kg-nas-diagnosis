@@ -1,0 +1,27 @@
+Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [cap3/wood] epoch 20: loss=0.3559 AUROC=0.9702 AP=0.9906
+  [cap3/wood] epoch 40: loss=0.3359 AUROC=0.9553 AP=0.9851
+  [cap3/wood] epoch 60: loss=0.3285 AUROC=0.9482 AP=0.9828
+  [cap3/wood] epoch 80: loss=0.3464 AUROC=0.8789 AP=0.9627
+  [cap3/wood] epoch 100: loss=0.3416 AUROC=0.7930 AP=0.8378
+  [cap3/wood] epoch 120: loss=0.3320 AUROC=0.9518 AP=0.9842
+  [cap3/wood] epoch 140: loss=0.3284 AUROC=0.7842 AP=0.8225
+  [cap3/wood] epoch 160: loss=0.3236 AUROC=0.9474 AP=0.9826
+  [cap3/wood] epoch 180: loss=0.3207 AUROC=0.9509 AP=0.9840
+  [cap3/wood] epoch 200: loss=0.3121 AUROC=0.9421 AP=0.9808
+  [cap3/wood] epoch 220: loss=0.3084 AUROC=0.9404 AP=0.9802
+  [cap3/wood] epoch 240: loss=0.3065 AUROC=0.9254 AP=0.9746
+  [cap3/wood] epoch 260: loss=0.2958 AUROC=0.9465 AP=0.9822
+  [cap3/wood] epoch 280: loss=0.2841 AUROC=0.9351 AP=0.9784
+  [cap3/wood] epoch 300: loss=0.2795 AUROC=0.9439 AP=0.9815
+  [cap3/wood] epoch 320: loss=0.2785 AUROC=0.9325 AP=0.9774
+  [cap3/wood] epoch 340: loss=0.2754 AUROC=0.9368 AP=0.9790
+  [cap3/wood] epoch 360: loss=0.2696 AUROC=0.9368 AP=0.9790
+  [cap3/wood] epoch 380: loss=0.2699 AUROC=0.9342 AP=0.9780
+  [cap3/wood] epoch 400: loss=0.2676 AUROC=0.9333 AP=0.9777
+  [cap3/wood] epoch 420: loss=0.2665 AUROC=0.9342 AP=0.9781
+  [cap3/wood] epoch 440: loss=0.2656 AUROC=0.9342 AP=0.9781
+  [cap3/wood] epoch 460: loss=0.2619 AUROC=0.9342 AP=0.9780
+  [cap3/wood] epoch 480: loss=0.2654 AUROC=0.9342 AP=0.9781
+  [cap3/wood] epoch 500: loss=0.2679 AUROC=0.9342 AP=0.9781
+DONE budget=3 cat=wood mobilenetv3_small_100 AUROC=0.9342 AP=0.9781 (8.8 min wall)

@@ -1,0 +1,91 @@
+% ============================================================================
+% DRAFT v2 -- Section 6: Honest positioning
+% Published values are as reported by the original authors (not re-run); the
+% controlled comparison is our own (proxy_diag/phaseB_truth.json, 210 detectors).
+% ============================================================================
+
+\section{Where This Pipeline Stands}
+\label{sec:positioning}
+
+This paper reports a diagnostic study, not a new state-of-the-art detector, and it
+is therefore necessary to state plainly where the pipeline of
+Section~\ref{sec:method} stands. Two comparisons are relevant. As \emph{reported by
+the original authors}, image-level AUROC on MVTec-AD runs from $78.0\%$
+(AutoEncoder) and $85.0\%$ (VAE)~\cite{bergmann2018improving} through $95.6\%$
+(STPM)~\cite{wang2021stpm}, $96.0\%$ (SPADE)~\cite{cohen2020spade}, $97.9\%$
+(PaDiM)~\cite{defard2021padim}, $98.5\%$
+(reverse distillation)~\cite{deng2022reverse}, $99.1\%$
+(PatchCore~\cite{roth2022patchcore}, EfficientAD~\cite{batzner2024efficientad}) and
+$99.3$--$99.6\%$
+(CFA~\cite{lee2022cfa}, FastFlow~\cite{yu2021fastflow},
+SimpleNet~\cite{liu2023simplenet}, Dinomaly~\cite{guo2025dinomaly}). FastFlow
+reports $99.4\%$. These numbers were not re-run here and their protocols are not
+identical to ours, so they are for orientation only. Two of them, SPADE and
+FastFlow, are preprints that were never published at a venue; they are included
+because they are standard baselines in this literature, and their preprint status
+is declared here rather than left implicit. The second comparison,
+Table~\ref{tab:controlled}, is our own, in which all 14 backbones of the search
+space were trained under one protocol on all 15 categories.
+
+\begin{table}[t]
+\centering
+\caption{Controlled comparison: every backbone of the search space trained on
+every MVTec-AD category under an identical protocol (500 epochs, batch size 64,
+seed 42, ResNet-18 teacher, reverse distillation; 210 detectors). Deployed size is
+the student encoder plus decoder. The manuscript's selected architecture is marked
+with~$\dagger$.}
+\label{tab:controlled}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrr}
+\toprule
+Backbone & Student (M) & Mean AUROC (\%) & Rank \\
+\midrule
+ResNet-18        & 13.04 & \textbf{83.34} & 1 \\
+ResNet-34        & 23.15 & 82.99 & 2 \\
+ResNet-50        & 25.77 & 82.75 & 3 \\
+MobileOne-S0     &  6.27 & 82.58 & 4 \\
+EfficientNet-B0$^\dagger$ & 5.41 & 82.47 & 5 \\
+DeiT-Tiny        &  7.31 & 82.03 & 6 \\
+MobileNetV3-Small & 2.81 & 81.85 & 7 \\
+ViT-Tiny         &  7.31 & 81.51 & 8 \\
+ConvNeXt-Small   & 51.39 & 81.43 & 9 \\
+ConvNeXtV2-Tiny  & 29.80 & 81.35 & 10 \\
+ConvNeXt-Tiny    & 29.75 & 80.91 & 11 \\
+EfficientNet-B1  &  7.92 & 80.43 & 12 \\
+Swin-Tiny        & 29.26 & 80.11 & 13 \\
+ConvNeXtV2-Base  & 89.69 & 79.36 & 14 \\
+\bottomrule
+\end{tabular}}
+
+\end{table}
+
+The pipeline described in this paper reaches $82.47\%$ mean AUROC on MVTec-AD with
+the architecture the search selected, \texttt{efficientnet\_b0} (5.41M parameters),
+against reported values of $95.6\%$--$99.6\%$ for the established detectors. We
+therefore do not claim a competitive operating point: the gap to the strongest
+published single-class detectors is on the order of $15$ points, and we report it
+rather than obscure it. Nor is the gap explained by the parameter budget:
+Section~\ref{subsec:capacity_null} varies the deployed size over a $9.2\times$
+range across five capacity bands and finds no statistically resolvable effect, and
+across the full space of Table~\ref{tab:controlled} the deployed size spans
+$32\times$ while the backbone accounts for $0.54\%$ of the variance. One caveat
+applies to the reported values: they come from implementations, augmentation
+policies and training schedules that differ from ours, so the comparison is
+indicative rather than exact. Table~\ref{tab:controlled} is the within-study
+comparison on which the analysis in Section~\ref{sec:diagnosis} rests; it was
+produced by the same code path, on the same data split, with one variable, the
+backbone, changed at a time.
+
+Two things are worth taking from Table~\ref{tab:controlled} in their own right.
+It is, to our knowledge, the first comparison of a full anomaly-detection search
+space under a single protocol, and as such it is a reusable resource: the ordering
+it establishes is what makes the negative result in Section~\ref{sec:diagnosis}
+measurable rather than anecdotal. And it shows that the search's output, at rank 5
+of 14, is a reasonable but unremarkable choice from a space whose top eleven
+candidates span $2.43$ points. The truth matrix also reproduces the manuscript's
+headline number: \texttt{efficientnet\_b0} attains $82.47\%$ here against the
+$82.40\%$ reported previously, a difference of $0.07$ points. Since the earlier
+figure came from an independent training run, this confirms that the protocol is
+stable and that the differences discussed here are not artefacts of a drifting
+pipeline. The search itself does \emph{not} reproduce as closely;
+Section~\ref{subsec:proxy_stability} documents why.

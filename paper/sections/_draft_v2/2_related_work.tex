@@ -1,0 +1,165 @@
+% ============================================================================
+% DRAFT v2 -- Section 2: Related work
+% Genre: benchmark / evaluation study. Subsection 2.3 places the paper in that
+% genre explicitly. All \cite keys verified to exist in references.bib.
+% ============================================================================
+
+\section{Related Work}
+\label{sec:related_work}
+
+\subsection{Unsupervised Anomaly Detection}
+\label{subsec:related_ad}
+
+Unsupervised anomaly detection models normality and flags deviations, because
+defect samples are scarce and the failures that matter are the ones not yet seen.
+Four families dominate. Reconstruction methods learn to reproduce normal images
+and score by reconstruction error, from autoencoders scored with a structural
+similarity measure~\cite{bergmann2018improving} to generative
+adversarial~\cite{akcay2019ganomaly,schlegl2019f} and memory-augmented
+formulations~\cite{gong2019memorizing}. Feature-embedding methods characterise
+the distribution of pre-trained deep features, either parametrically as in
+PaDiM~\cite{defard2021padim}, by nearest-neighbour matching as in
+SPADE~\cite{cohen2020spade} and PatchCore~\cite{roth2022patchcore}, or by density
+estimation with normalizing flows~\cite{yu2021fastflow}. Teacher--student methods
+distill a frozen teacher into a student that reproduces it on normal data, using
+multi-scale feature matching~\cite{wang2021stpm,bergmann2020uninformed} or, in
+reverse distillation, a decoder that reconstructs the teacher's features from a
+bottleneck embedding~\cite{deng2022reverse}; the present paper studies a pipeline
+of this last kind. Discriminatively trained methods inject synthetic
+defects~\cite{zavrtanik2021draem} and have produced the strongest recent
+results~\cite{liu2023simplenet,batzner2024efficientad,guo2025dinomaly,lee2022cfa};
+surveys of the area are available~\cite{liu2024deep}.
+
+Two properties of this literature matter here. The architecture is treated as a
+given --- either the backbone of a pre-trained feature
+extractor~\cite{defard2021padim,roth2022patchcore} or a fixed encoder--decoder
+pair~\cite{deng2022reverse} --- and the step that turns a per-pixel anomaly map
+into the single number on which a part is accepted or rejected is usually left
+implicit. The pipeline we study reduces the multi-scale discrepancy map by an
+unweighted mean over all pixels; Section~\ref{sec:leverage} shows that this one
+undocumented choice is worth several times more accuracy than the architecture,
+and that it can be revisited without retraining.
+
+\subsection{Neural Architecture Search and the Evaluation of Its Search Phase}
+\label{subsec:related_nas}
+
+Neural architecture search automates the choice of network topology, from
+early evolutionary~\cite{xie2017genetic} and reinforcement-learning
+formulations~\cite{zoph2018learning,liu2018progressive} through differentiable
+relaxation~\cite{liu2019darts}, platform-aware multi-objective
+search~\cite{tan2019mnasnet} and regularised
+evolution~\cite{real2019regularized}; see~\cite{ren2021comprehensive} for a survey.
+Two lines of work are directly relevant.
+
+The first applies NAS to anomaly detection. For image anomaly localisation,
+Qian et al.~\cite{qian2024knowledgeguided} generate anomalous samples with a
+knowledge-guided generator and use them as a reinforcement-learning reward, so
+that architectures can be compared on a validation set that would otherwise be
+unavailable. Work in this line takes for granted that a better architecture will
+produce a better detector, and measures success by the downstream result alone.
+
+The second line asks whether the search phase itself deserves that trust, and it
+is the immediate predecessor of this paper. Yu et al.~\cite{yu2020evaluating}
+compared the architectures returned by several NAS algorithms against
+architectures sampled uniformly at random from the same search space, and found
+that, on average, the NAS algorithms perform \emph{similarly to the random
+policy}; they attribute this to weight sharing degrading the ranking of
+candidates so that it no longer reflects true performance. Our findings agree in
+direction and go further in three respects. First, from ``similar to random'' to
+``worse than random'': in Section~\ref{subsec:search_vs_random} twelve independent
+runs of the search all return one of the two configurations prone to a degenerate
+evaluation, and the mean accuracy of the architectures they return sits at the
+$1.2$th percentile of the distribution obtained by uniform sampling ($80.91\%$
+against $81.65\%$, with the best backbone at $83.34\%$). Second, a mechanism
+rather than a symptom: the cause is not weight sharing but an interaction between
+the objective and the selection rule, as the evaluation can silently return
+exactly $0.0$ when every validation batch is rejected, and since the search
+minimises, that value is the optimum of the search's own range
+(Section~\ref{subsec:proxy_stability}). Third, structure rather than signal
+alone: two thirds of the search space cannot reach the deployed model at all
+(Section~\ref{subsec:inert}), and the quantity being ranked contributes $0.54\%$
+of the variance in accuracy against $95.32\%$ for the category
+(Section~\ref{subsec:capacity_null}). Where Yu et al.\ study image classification
+and language modelling with weight-sharing supernets, we study single-class
+unsupervised anomaly detection with an independent quick-training proxy, and we
+additionally show that the backbone ordering does not transfer between categories
+($\bar\rho = 0.215$; $31\%$ of category pairs reverse), which makes a
+single-category search unsound regardless of the size of the architecture effect.
+
+\subsection{Benchmark and Evaluation Studies}
+\label{subsec:related_benchmark}
+
+The present paper belongs to a class of work whose contribution is a measurement
+about how a field evaluates itself, rather than a new method. The class is
+established, and we adopt three of its methods.
+
+Bouthillier et al.~\cite{bouthillier2021accounting} showed that machine-learning
+benchmarks routinely compare algorithms on a single run, that the unacknowledged
+run-to-run variance is then large enough to reverse conclusions, and that the
+number of runs a comparison requires can be derived from the variance. Their
+analysis is the methodological template for
+Section~\ref{subsec:resolvability}: we estimate the residual variance of the task,
+fold in the externally reported effect size, and report the smallest difference
+the standard design can resolve. IM-IAD~\cite{xie2024imiad} performed the
+corresponding consolidation for industrial image anomaly detection, reproducing
+published methods under one protocol and showing how much of the reported spread
+survives standardisation. For anomaly detection outside the image domain the same
+re-examination has been carried out on streaming
+data~\cite{cao2024revisiting} and, most recently, on industrial multivariate time
+series, where unified reproduction was combined with an event-level
+evaluation~\cite{yu2026eventlevel}.
+
+Our paper extends this line in two ways that we have not seen for unsupervised
+image anomaly detection. It supplies the fully crossed configuration $\times$
+category comparison that a variance decomposition requires --- 210 detectors,
+every backbone of a search space on every category of the benchmark, one protocol
+--- which is what turns a diagnosis of the architecture axis into a measurement
+rather than an anecdote. And it anchors the resulting noise floor to the margin
+the field actually contests, so that the resolvability of the standard benchmark
+design can be stated in the same units as the claims it is used to support.
+Neither IM-IAD nor the time-series reproductions reports that quantity; for this
+task it turns out to be decisive.
+
+\subsection{Knowledge Distillation}
+\label{subsec:related_kd}
+
+Knowledge distillation transfers the behaviour of a strong model to a smaller one
+by matching outputs or intermediate representations~\cite{gou2021knowledge},
+including similarity-preserving~\cite{tung2019similarity}, structured~\cite{liu2019structured}
+and self-distilled~\cite{zhang2022self} variants and applications to
+detection~\cite{wang2022distilling,yang2023attention}. In anomaly detection,
+distillation is predominantly a \emph{detection} device: the teacher--student
+discrepancy is the anomaly
+signal~\cite{wang2021stpm,deng2022reverse,bergmann2020uninformed}. Using it as the
+\emph{search metric} --- ranking candidates by how well a student distils from a
+teacher, rather than by the accuracy of the detector it will eventually become ---
+has been explored for NAS generally~\cite{kang2020towards} and, for anomaly
+localisation, by Qian et al.~\cite{qian2024knowledgeguided}.
+
+That reuse is the premise our results call into question.
+Section~\ref{subsec:proxy_stability} evaluates the distillation proxy directly, by
+repeating the search's own evaluation ten times per configuration, and finds that
+it separates the twelve well-behaved backbones by only $5.7\%$ of its median ---
+the same order as its own run-to-run noise --- while collapsing to an exact zero
+for two of them. Its ordering is uncorrelated with the true ordering of the same
+backbones: Spearman $\rho = -0.12$ over all fifteen categories and $\rho = 0.02$
+on the very category the search is run on. The proxy is measuring something, but
+not the thing it is used to select for.
+
+\subsection{Positioning}
+\label{subsec:related_summary}
+
+This paper is a benchmark-and-evaluation study of a deployed design, not a new
+detector, and we claim no priority for combining knowledge distillation with
+architecture search. It differs from the NAS-for-anomaly-detection literature in
+asking whether the search phase works rather than assuming it; it extends the
+evaluation framework of Yu et al.~\cite{yu2020evaluating} to unsupervised anomaly
+detection, quantifying the failure rather than merely detecting it; it adopts the
+variance discipline of Bouthillier et al.~\cite{bouthillier2021accounting} and the
+protocol consolidation of IM-IAD~\cite{xie2024imiad}, and reports the
+resolvability of the benchmark that both leave unstated; and it contributes a
+controlled comparison of a complete search space under one protocol
+(Section~\ref{sec:positioning}) which makes the diagnosis measurable. On the
+constructive side, it identifies the inference-time scoring policy as the axis
+that actually moves accuracy and gives a label-free procedure for selecting it
+(Section~\ref{subsec:pseudo_results}).

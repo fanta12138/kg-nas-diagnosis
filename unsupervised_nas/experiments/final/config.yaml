@@ -1,0 +1,20 @@
+anomaly_detection:
+  method: reconstruction
+  threshold_method: percentile
+  threshold_percentile: 95
+data:
+  data_dir: ../datasets/MVTec-AD/wood
+  img_size: 224
+  num_workers: 4
+model:
+  backbone: mobilenet_v2
+  feature_dim: 128
+  pretrained: true
+output:
+  dir: experiments/final
+training:
+  batch_size: 32
+  epochs: 100
+  lr: 0.001
+  save_freq: 10
+  weight_decay: 0.0001

@@ -1,0 +1,28 @@
+best_architecture:
+  backbone: mobilenetv3_small_100
+  feature_dim: 256
+search_config:
+  data:
+    data_dir: ../datasets/mvtec_anomaly_detection/wood
+    img_size: 224
+    num_workers: 4
+  nas:
+    alpha: 0.5
+    batch_size: 16
+    beta: 0.3
+    gamma: 0.2
+    num_trials: 40
+    quick_train_epochs: 3
+    search_space:
+      backbones:
+      - efficientnet_b0
+      - mobilenetv3_small_100
+      - mobileone_s0
+      feature_dims:
+      - 128
+      - 256
+      - 512
+  output:
+    dir: experiments/cap_budget_6M
+  teacher:
+    model_path: experiments/stage1/best_teacher.pth

@@ -1,0 +1,9 @@
+{
+  "auroc": 0.7301587301587301,
+  "ap": 0.8750987332868077,
+  "backbone": "mobilenetv3_small_100",
+  "feature_dim": 512,
+  "seed": 42,
+  "epochs": 200,
+  "minutes": 0.5
+}

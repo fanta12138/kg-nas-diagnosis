@@ -1,0 +1,27 @@
+{
+  "tag": "round04_restore_fps",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "M1-restore-a",
+      "find": "\\textbf{KG-NAS (Ours)} & 82.40 & \\textbf{5.3} & 142$^{\\dagger}$ & 102 & \\textbf{Resource-constrained} \\\\\n\\bottomrule\n\\multicolumn{6}{l}{\\footnotesize $^{\\dagger}$Student throughput, measured on an idle RTX 3090 (batch size 1, 224$\\times$224, fp32).} \\\\",
+      "replace": "\\textbf{KG-NAS (Ours)} & 82.40 & \\textbf{5.3} & 142$^{\\dagger}$ & 102 & \\textbf{Resource-constrained} \\\\\n\\bottomrule\n\\multicolumn{6}{l}{\\footnotesize $^{\\dagger}$Student throughput measured on an idle RTX 3090 (batch size 1, 224$\\times$224, fp32); the full teacher--student detector measures 111 FPS under the same protocol.} \\\\",
+      "note": "M1 reversal: benchmarked full-pipeline throughput = 110.8 FPS."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "M1-restore-b",
+      "find": "\\textbf{KG-NAS (Ours)} & 82.4 & - & \\textbf{5.3} & 142$^{\\dagger}$ & Single-class + NAS \\\\\n\\bottomrule\n\\multicolumn{6}{l}{\\footnotesize $^{\\dagger}$Student throughput, measured on an idle RTX 3090 (batch size 1, 224$\\times$224, fp32).} \\\\",
+      "replace": "\\textbf{KG-NAS (Ours)} & 82.4 & - & \\textbf{5.3} & 142$^{\\dagger}$ & Single-class + NAS \\\\\n\\bottomrule\n\\multicolumn{6}{l}{\\footnotesize $^{\\dagger}$Student throughput measured on an idle RTX 3090 (batch size 1, 224$\\times$224, fp32); the full teacher--student detector measures 111 FPS under the same protocol.} \\\\",
+      "note": "M1 reversal, second footnote."
+    },
+    {
+      "file": "sections/5_conclusion.tex",
+      "id": "M1-restore-c",
+      "find": "$\\sim$142 FPS student throughput",
+      "replace": "$\\sim$142 FPS student throughput and $\\sim$111 FPS end-to-end",
+      "note": "M1 reversal: conclusion."
+    }
+  ]
+}

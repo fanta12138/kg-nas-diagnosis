@@ -1,0 +1,27 @@
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [cap6/leather] epoch 20: loss=0.3322 AUROC=0.9429 AP=0.9812
+  [cap6/leather] epoch 40: loss=0.3151 AUROC=0.9694 AP=0.9897
+  [cap6/leather] epoch 60: loss=0.3102 AUROC=0.9582 AP=0.9866
+  [cap6/leather] epoch 80: loss=0.3098 AUROC=0.9701 AP=0.9902
+  [cap6/leather] epoch 100: loss=0.2977 AUROC=0.9796 AP=0.9931
+  [cap6/leather] epoch 120: loss=0.2986 AUROC=0.9738 AP=0.9913
+  [cap6/leather] epoch 140: loss=0.2991 AUROC=0.9718 AP=0.9906
+  [cap6/leather] epoch 160: loss=0.2905 AUROC=0.9881 AP=0.9962
+  [cap6/leather] epoch 180: loss=0.2884 AUROC=0.9901 AP=0.9968
+  [cap6/leather] epoch 200: loss=0.2899 AUROC=0.9718 AP=0.9908
+  [cap6/leather] epoch 220: loss=0.2863 AUROC=0.9881 AP=0.9962
+  [cap6/leather] epoch 240: loss=0.2868 AUROC=0.9823 AP=0.9942
+  [cap6/leather] epoch 260: loss=0.2825 AUROC=0.9868 AP=0.9958
+  [cap6/leather] epoch 280: loss=0.2838 AUROC=0.9823 AP=0.9942
+  [cap6/leather] epoch 300: loss=0.2819 AUROC=0.9864 AP=0.9956
+  [cap6/leather] epoch 320: loss=0.2818 AUROC=0.9895 AP=0.9966
+  [cap6/leather] epoch 340: loss=0.2805 AUROC=0.9864 AP=0.9955
+  [cap6/leather] epoch 360: loss=0.2800 AUROC=0.9861 AP=0.9954
+  [cap6/leather] epoch 380: loss=0.2807 AUROC=0.9834 AP=0.9946
+  [cap6/leather] epoch 400: loss=0.2753 AUROC=0.9891 AP=0.9964
+  [cap6/leather] epoch 420: loss=0.2750 AUROC=0.9895 AP=0.9966
+  [cap6/leather] epoch 440: loss=0.2765 AUROC=0.9888 AP=0.9964
+  [cap6/leather] epoch 460: loss=0.2771 AUROC=0.9857 AP=0.9953
+  [cap6/leather] epoch 480: loss=0.2787 AUROC=0.9898 AP=0.9967
+  [cap6/leather] epoch 500: loss=0.2757 AUROC=0.9891 AP=0.9965
+DONE budget=6 cat=leather efficientnet_b0 AUROC=0.9891 AP=0.9965 (136.2 min wall)

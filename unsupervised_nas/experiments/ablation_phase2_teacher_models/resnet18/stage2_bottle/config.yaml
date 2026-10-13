@@ -1,0 +1,35 @@
+data:
+  data_dir: ..\datasets\mvtec_anomaly_detection\bottle
+  img_size: 224
+  num_workers: 4
+nas:
+  alpha: 0.5
+  batch_size: 16
+  beta: 0.3
+  gamma: 0.2
+  num_trials: 50
+  quick_train_epochs: 3
+  search_space:
+    backbones:
+    - convnextv2_tiny
+    - convnextv2_base
+    - mobileone_s0
+    - convnext_tiny
+    - convnext_small
+    - vit_tiny_patch16_224
+    - deit_tiny_patch16_224
+    - swin_tiny_patch4_window7_224
+    - efficientnet_b0
+    - efficientnet_b1
+    - mobilenetv3_small_100
+    - resnet18
+    - resnet34
+    - resnet50
+    feature_dims:
+    - 128
+    - 256
+    - 512
+output:
+  dir: experiments\ablation_phase2_teacher_models\resnet18\stage2_bottle
+teacher:
+  model_path: experiments/stage1/best_teacher.pth

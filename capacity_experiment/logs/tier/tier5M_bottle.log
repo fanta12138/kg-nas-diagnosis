@@ -1,0 +1,26 @@
+  [tier5/bottle] epoch 20: loss=0.1673 AUROC=0.8746 AP=0.9217
+  [tier5/bottle] epoch 40: loss=0.1121 AUROC=0.9587 AP=0.9861
+  [tier5/bottle] epoch 60: loss=0.0843 AUROC=0.9603 AP=0.9883
+  [tier5/bottle] epoch 80: loss=0.0743 AUROC=0.9659 AP=0.9900
+  [tier5/bottle] epoch 100: loss=0.0679 AUROC=0.9643 AP=0.9897
+  [tier5/bottle] epoch 120: loss=0.0625 AUROC=0.9619 AP=0.9890
+  [tier5/bottle] epoch 140: loss=0.0612 AUROC=0.9595 AP=0.9882
+  [tier5/bottle] epoch 160: loss=0.0577 AUROC=0.9619 AP=0.9890
+  [tier5/bottle] epoch 180: loss=0.0572 AUROC=0.9595 AP=0.9883
+  [tier5/bottle] epoch 200: loss=0.0541 AUROC=0.9611 AP=0.9887
+  [tier5/bottle] epoch 220: loss=0.0514 AUROC=0.9619 AP=0.9889
+  [tier5/bottle] epoch 240: loss=0.0505 AUROC=0.9595 AP=0.9883
+  [tier5/bottle] epoch 260: loss=0.0490 AUROC=0.9619 AP=0.9890
+  [tier5/bottle] epoch 280: loss=0.0484 AUROC=0.9611 AP=0.9887
+  [tier5/bottle] epoch 300: loss=0.0482 AUROC=0.9603 AP=0.9886
+  [tier5/bottle] epoch 320: loss=0.0466 AUROC=0.9619 AP=0.9889
+  [tier5/bottle] epoch 340: loss=0.0459 AUROC=0.9611 AP=0.9887
+  [tier5/bottle] epoch 360: loss=0.0450 AUROC=0.9619 AP=0.9890
+  [tier5/bottle] epoch 380: loss=0.0451 AUROC=0.9619 AP=0.9890
+  [tier5/bottle] epoch 400: loss=0.0459 AUROC=0.9635 AP=0.9894
+  [tier5/bottle] epoch 420: loss=0.0442 AUROC=0.9611 AP=0.9887
+  [tier5/bottle] epoch 440: loss=0.0455 AUROC=0.9627 AP=0.9891
+  [tier5/bottle] epoch 460: loss=0.0449 AUROC=0.9611 AP=0.9888
+  [tier5/bottle] epoch 480: loss=0.0453 AUROC=0.9611 AP=0.9887
+  [tier5/bottle] epoch 500: loss=0.0461 AUROC=0.9627 AP=0.9891
+DONE tier=5 cat=bottle resnet50 AUROC=0.9627 AP=0.9891 (5.6 min wall)

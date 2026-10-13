@@ -1,0 +1,145 @@
+{
+  "total_categories": 15,
+  "successful": 15,
+  "average_auroc": 0.6603524909498348,
+  "median_auroc": 0.6720063025210085,
+  "average_ap": 0.8268252895248372,
+  "results": [
+    {
+      "category": "bottle",
+      "status": "success",
+      "auroc": 0.7690476190476191,
+      "ap": 0.9103955446838721,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.594645"
+    },
+    {
+      "category": "cable",
+      "status": "success",
+      "auroc": 0.6088830584707646,
+      "ap": 0.6933574201190191,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.594645"
+    },
+    {
+      "category": "capsule",
+      "status": "success",
+      "auroc": 0.7453131232548864,
+      "ap": 0.9326722155143283,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.594645"
+    },
+    {
+      "category": "carpet",
+      "status": "success",
+      "auroc": 0.5678170144462278,
+      "ap": 0.8493756631024287,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.595646"
+    },
+    {
+      "category": "grid",
+      "status": "success",
+      "auroc": 0.6925647451963242,
+      "ap": 0.8548137927137269,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.595646"
+    },
+    {
+      "category": "hazelnut",
+      "status": "success",
+      "auroc": 0.8171428571428572,
+      "ap": 0.8790732614960939,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.595646"
+    },
+    {
+      "category": "leather",
+      "status": "success",
+      "auroc": 0.5747282608695652,
+      "ap": 0.8444092375399725,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.596647"
+    },
+    {
+      "category": "metal_nut",
+      "status": "success",
+      "auroc": 0.5571847507331378,
+      "ap": 0.8553076833372956,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.596647"
+    },
+    {
+      "category": "pill",
+      "status": "success",
+      "auroc": 0.6136115657392253,
+      "ap": 0.9090211758431413,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.596647"
+    },
+    {
+      "category": "screw",
+      "status": "success",
+      "auroc": 0.6739085878253741,
+      "ap": 0.8174989895311682,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.596647"
+    },
+    {
+      "category": "tile",
+      "status": "success",
+      "auroc": 0.6654040404040403,
+      "ap": 0.8211611971705184,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.597648"
+    },
+    {
+      "category": "toothbrush",
+      "status": "success",
+      "auroc": 0.4666666666666667,
+      "ap": 0.6763067792564251,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.597648"
+    },
+    {
+      "category": "transistor",
+      "status": "success",
+      "auroc": 0.7275,
+      "ap": 0.5595774380934726,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.597648"
+    },
+    {
+      "category": "wood",
+      "status": "success",
+      "auroc": 0.7535087719298246,
+      "ap": 0.9194300769690052,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.598649"
+    },
+    {
+      "category": "zipper",
+      "status": "success",
+      "auroc": 0.6720063025210085,
+      "ap": 0.8799788675020894,
+      "f1_max": null,
+      "params_m": 6.0,
+      "timestamp": "2026-04-19T15:29:08.598649"
+    }
+  ],
+  "timestamp": "2026-04-19T15:29:08.601652"
+}

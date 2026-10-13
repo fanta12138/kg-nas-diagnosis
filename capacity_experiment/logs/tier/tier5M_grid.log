@@ -1,0 +1,26 @@
+  [tier5/grid] epoch 20: loss=0.3708 AUROC=0.5455 AP=0.7518
+  [tier5/grid] epoch 40: loss=0.3703 AUROC=0.5990 AP=0.7677
+  [tier5/grid] epoch 60: loss=0.3506 AUROC=0.5681 AP=0.7420
+  [tier5/grid] epoch 80: loss=0.3397 AUROC=0.5873 AP=0.7623
+  [tier5/grid] epoch 100: loss=0.3391 AUROC=0.5906 AP=0.7831
+  [tier5/grid] epoch 120: loss=0.3613 AUROC=0.6007 AP=0.7858
+  [tier5/grid] epoch 140: loss=0.3090 AUROC=0.5146 AP=0.7418
+  [tier5/grid] epoch 160: loss=0.2806 AUROC=0.5731 AP=0.7440
+  [tier5/grid] epoch 180: loss=0.2079 AUROC=0.4553 AP=0.6721
+  [tier5/grid] epoch 200: loss=0.1650 AUROC=0.4520 AP=0.7060
+  [tier5/grid] epoch 220: loss=0.1617 AUROC=0.4854 AP=0.7485
+  [tier5/grid] epoch 240: loss=0.1433 AUROC=0.5272 AP=0.7719
+  [tier5/grid] epoch 260: loss=0.1493 AUROC=0.4904 AP=0.7462
+  [tier5/grid] epoch 280: loss=0.1367 AUROC=0.5447 AP=0.7784
+  [tier5/grid] epoch 300: loss=0.1432 AUROC=0.5021 AP=0.7526
+  [tier5/grid] epoch 320: loss=0.1129 AUROC=0.5071 AP=0.7564
+  [tier5/grid] epoch 340: loss=0.1151 AUROC=0.5322 AP=0.7753
+  [tier5/grid] epoch 360: loss=0.1168 AUROC=0.5739 AP=0.8007
+  [tier5/grid] epoch 380: loss=0.1047 AUROC=0.5539 AP=0.7813
+  [tier5/grid] epoch 400: loss=0.1023 AUROC=0.5723 AP=0.7944
+  [tier5/grid] epoch 420: loss=0.1360 AUROC=0.5798 AP=0.8116
+  [tier5/grid] epoch 440: loss=0.1204 AUROC=0.5806 AP=0.8083
+  [tier5/grid] epoch 460: loss=0.1096 AUROC=0.5714 AP=0.7951
+  [tier5/grid] epoch 480: loss=0.1081 AUROC=0.5881 AP=0.8082
+  [tier5/grid] epoch 500: loss=0.1104 AUROC=0.5840 AP=0.8079
+DONE tier=5 cat=grid resnet50 AUROC=0.5840 AP=0.8079 (7.0 min wall)

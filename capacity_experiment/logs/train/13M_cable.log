@@ -1,0 +1,26 @@
+  [cap13/cable] epoch 20: loss=0.2541 AUROC=0.7790 AP=0.8471
+  [cap13/cable] epoch 40: loss=0.2113 AUROC=0.7746 AP=0.8117
+  [cap13/cable] epoch 60: loss=0.1868 AUROC=0.7841 AP=0.8186
+  [cap13/cable] epoch 80: loss=0.3168 AUROC=0.6079 AP=0.6865
+  [cap13/cable] epoch 100: loss=0.2110 AUROC=0.7472 AP=0.8270
+  [cap13/cable] epoch 120: loss=0.1654 AUROC=0.7972 AP=0.8244
+  [cap13/cable] epoch 140: loss=0.1626 AUROC=0.8073 AP=0.8408
+  [cap13/cable] epoch 160: loss=0.1523 AUROC=0.8167 AP=0.8491
+  [cap13/cable] epoch 180: loss=0.1474 AUROC=0.8184 AP=0.8499
+  [cap13/cable] epoch 200: loss=0.1447 AUROC=0.8225 AP=0.8566
+  [cap13/cable] epoch 220: loss=0.1437 AUROC=0.8291 AP=0.8612
+  [cap13/cable] epoch 240: loss=0.1370 AUROC=0.8304 AP=0.8620
+  [cap13/cable] epoch 260: loss=0.1366 AUROC=0.8345 AP=0.8643
+  [cap13/cable] epoch 280: loss=0.1327 AUROC=0.8334 AP=0.8642
+  [cap13/cable] epoch 300: loss=0.1330 AUROC=0.8401 AP=0.8705
+  [cap13/cable] epoch 320: loss=0.1316 AUROC=0.8446 AP=0.8732
+  [cap13/cable] epoch 340: loss=0.1288 AUROC=0.8409 AP=0.8709
+  [cap13/cable] epoch 360: loss=0.1281 AUROC=0.8439 AP=0.8721
+  [cap13/cable] epoch 380: loss=0.1276 AUROC=0.8460 AP=0.8740
+  [cap13/cable] epoch 400: loss=0.1278 AUROC=0.8452 AP=0.8735
+  [cap13/cable] epoch 420: loss=0.1270 AUROC=0.8454 AP=0.8733
+  [cap13/cable] epoch 440: loss=0.1278 AUROC=0.8443 AP=0.8723
+  [cap13/cable] epoch 460: loss=0.1264 AUROC=0.8445 AP=0.8727
+  [cap13/cable] epoch 480: loss=0.1255 AUROC=0.8450 AP=0.8732
+  [cap13/cable] epoch 500: loss=0.1264 AUROC=0.8446 AP=0.8731
+DONE budget=13 cat=cable vit_tiny_patch16_224 AUROC=0.8446 AP=0.8731 (3.2 min wall)

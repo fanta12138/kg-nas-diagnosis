@@ -1,0 +1,19 @@
+data:
+  data_dir: ../datasets/MVTec-AD/wood
+  img_size: 224
+  num_workers: 4
+loss:
+  temperature: 0.5
+model:
+  backbone: convnextv2_tiny
+  pretrained: true
+  projection_dim: 256
+output:
+  dir: experiments/stage1
+  experiment_name: contrastive_pretraining
+training:
+  batch_size: 32
+  epochs: 100
+  lr: 0.0005
+  save_freq: 10
+  weight_decay: 0.0001

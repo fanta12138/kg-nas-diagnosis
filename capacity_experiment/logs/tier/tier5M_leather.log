@@ -1,0 +1,26 @@
+  [tier5/leather] epoch 20: loss=0.3291 AUROC=0.9524 AP=0.9846
+  [tier5/leather] epoch 40: loss=0.3185 AUROC=0.9620 AP=0.9873
+  [tier5/leather] epoch 60: loss=0.3153 AUROC=0.9300 AP=0.9772
+  [tier5/leather] epoch 80: loss=0.3090 AUROC=0.9603 AP=0.9870
+  [tier5/leather] epoch 100: loss=0.3023 AUROC=0.9786 AP=0.9929
+  [tier5/leather] epoch 120: loss=0.3022 AUROC=0.9654 AP=0.9889
+  [tier5/leather] epoch 140: loss=0.2958 AUROC=0.9789 AP=0.9930
+  [tier5/leather] epoch 160: loss=0.2933 AUROC=0.9888 AP=0.9964
+  [tier5/leather] epoch 180: loss=0.2926 AUROC=0.9912 AP=0.9971
+  [tier5/leather] epoch 200: loss=0.2922 AUROC=0.9677 AP=0.9895
+  [tier5/leather] epoch 220: loss=0.2892 AUROC=0.9881 AP=0.9961
+  [tier5/leather] epoch 240: loss=0.2899 AUROC=0.9783 AP=0.9929
+  [tier5/leather] epoch 260: loss=0.2849 AUROC=0.9898 AP=0.9968
+  [tier5/leather] epoch 280: loss=0.2897 AUROC=0.9789 AP=0.9932
+  [tier5/leather] epoch 300: loss=0.2841 AUROC=0.9847 AP=0.9950
+  [tier5/leather] epoch 320: loss=0.2847 AUROC=0.9915 AP=0.9972
+  [tier5/leather] epoch 340: loss=0.2853 AUROC=0.9820 AP=0.9941
+  [tier5/leather] epoch 360: loss=0.2840 AUROC=0.9813 AP=0.9939
+  [tier5/leather] epoch 380: loss=0.2851 AUROC=0.9793 AP=0.9933
+  [tier5/leather] epoch 400: loss=0.2801 AUROC=0.9868 AP=0.9957
+  [tier5/leather] epoch 420: loss=0.2791 AUROC=0.9891 AP=0.9964
+  [tier5/leather] epoch 440: loss=0.2797 AUROC=0.9874 AP=0.9959
+  [tier5/leather] epoch 460: loss=0.2812 AUROC=0.9806 AP=0.9937
+  [tier5/leather] epoch 480: loss=0.2818 AUROC=0.9878 AP=0.9960
+  [tier5/leather] epoch 500: loss=0.2786 AUROC=0.9918 AP=0.9973
+DONE tier=5 cat=leather resnet50 AUROC=0.9918 AP=0.9973 (6.5 min wall)

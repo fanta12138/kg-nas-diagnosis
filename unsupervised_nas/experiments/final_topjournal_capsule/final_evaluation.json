@@ -1,0 +1,33 @@
+{
+  "auroc": 0.7453131232548864,
+  "ap": 0.9326722155143283,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_capsule\\best_model.pth",
+  "per_defect_type": {
+    "crack": {
+      "auroc": 0.0,
+      "count": 23
+    },
+    "faulty_imprint": {
+      "auroc": 0.0,
+      "count": 22
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 23
+    },
+    "poke": {
+      "auroc": 0.0,
+      "count": 21
+    },
+    "scratch": {
+      "auroc": 0.0,
+      "count": 23
+    },
+    "squeeze": {
+      "auroc": 0.0,
+      "count": 20
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[12:11:37] 
+[12:11:37] ======================================================================
+[12:11:37] search runs                 : 12  (100 trials each)
+[12:11:37] distinct backbones selected : 2 / 14
+[12:11:37] dimension counts            : {256: 5, 512: 2, 128: 5}
+[12:11:37] TRUE mean AUROC of the search output : 80.9399%
+[12:11:37] TRUE mean AUROC of uniform random    : 81.6505%  (bootstrap sd 0.3453 pp)
+[12:11:37] oracle backbone in the space         : resnet18  83.8063%
+[12:11:37] P(random mean <= search mean)        : 0.020
+[12:11:37] ======================================================================
+[12:11:37] saved -> D:/autopaper/search_repeats\search_repeats_summary.json

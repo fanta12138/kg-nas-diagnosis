@@ -1,0 +1,27 @@
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  [cap6/transistor] epoch 20: loss=0.2628 AUROC=0.4588 AP=0.4534
+  [cap6/transistor] epoch 40: loss=0.1788 AUROC=0.6325 AP=0.5701
+  [cap6/transistor] epoch 60: loss=0.1554 AUROC=0.6992 AP=0.6946
+  [cap6/transistor] epoch 80: loss=0.1361 AUROC=0.7333 AP=0.7192
+  [cap6/transistor] epoch 100: loss=0.1217 AUROC=0.7658 AP=0.7506
+  [cap6/transistor] epoch 120: loss=0.1178 AUROC=0.7946 AP=0.7677
+  [cap6/transistor] epoch 140: loss=0.1081 AUROC=0.7879 AP=0.7574
+  [cap6/transistor] epoch 160: loss=0.1081 AUROC=0.7983 AP=0.7743
+  [cap6/transistor] epoch 180: loss=0.0994 AUROC=0.8096 AP=0.7874
+  [cap6/transistor] epoch 200: loss=0.0934 AUROC=0.8108 AP=0.7873
+  [cap6/transistor] epoch 220: loss=0.0941 AUROC=0.8175 AP=0.7959
+  [cap6/transistor] epoch 240: loss=0.0902 AUROC=0.8183 AP=0.7986
+  [cap6/transistor] epoch 260: loss=0.0918 AUROC=0.8358 AP=0.8183
+  [cap6/transistor] epoch 280: loss=0.0883 AUROC=0.8333 AP=0.8153
+  [cap6/transistor] epoch 300: loss=0.0889 AUROC=0.8375 AP=0.8199
+  [cap6/transistor] epoch 320: loss=0.0876 AUROC=0.8412 AP=0.8213
+  [cap6/transistor] epoch 340: loss=0.0855 AUROC=0.8379 AP=0.8176
+  [cap6/transistor] epoch 360: loss=0.0837 AUROC=0.8421 AP=0.8218
+  [cap6/transistor] epoch 380: loss=0.0831 AUROC=0.8450 AP=0.8272
+  [cap6/transistor] epoch 400: loss=0.0833 AUROC=0.8467 AP=0.8277
+  [cap6/transistor] epoch 420: loss=0.0851 AUROC=0.8475 AP=0.8262
+  [cap6/transistor] epoch 440: loss=0.0819 AUROC=0.8471 AP=0.8280
+  [cap6/transistor] epoch 460: loss=0.0833 AUROC=0.8454 AP=0.8247
+  [cap6/transistor] epoch 480: loss=0.0809 AUROC=0.8467 AP=0.8257
+  [cap6/transistor] epoch 500: loss=0.0852 AUROC=0.8471 AP=0.8283
+DONE budget=6 cat=transistor efficientnet_b0 AUROC=0.8471 AP=0.8283 (3.5 min wall)

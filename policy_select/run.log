@@ -1,0 +1,71 @@
+[14:56:01] === bottle ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[14:58:39]   trained; holdout=42 test=83
+[14:58:59]   default=0.9587 oracle=w0.1_0.0_0.9_topk=0.9921 (3.0 min)
+[14:58:59] === cable ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:01:54]   trained; holdout=45 test=150
+[15:02:27]   default=0.8527 oracle=sum_mean=0.8527 (3.5 min)
+[15:02:27] === capsule ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:05:17]   trained; holdout=44 test=132
+[15:05:46]   default=0.7228 oracle=s1_topk=0.8528 (3.3 min)
+[15:05:46] === carpet ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:09:25]   trained; holdout=56 test=117
+[15:09:55]   default=0.7416 oracle=w0.5_0.5_0.0_topk=0.9799 (4.1 min)
+[15:09:55] === grid ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:13:15]   trained; holdout=53 test=78
+[15:13:37]   default=0.7703 oracle=w0.9_0.1_-0.0_topk=0.9724 (3.7 min)
+[15:13:38] === hazelnut ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:18:37]   trained; holdout=79 test=110
+[15:19:08]   default=0.9582 oracle=w0.0_0.3_0.7_topk=1.0000 (5.5 min)
+[15:19:08] === leather ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:22:32]   trained; holdout=49 test=124
+[15:23:02]   default=0.9905 oracle=w0.2_0.0_0.8_topk=1.0000 (3.9 min)
+[15:23:02] === metal_nut ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:25:47]   trained; holdout=44 test=115
+[15:26:13]   default=0.7283 oracle=w0.0_0.8_0.2_topk=0.9457 (3.2 min)
+[15:26:13] === pill ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:29:37]   trained; holdout=54 test=167
+[15:30:14]   default=0.8377 oracle=s3_mean=0.8502 (4.0 min)
+[15:30:14] === screw ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:34:13]   trained; holdout=64 test=160
+[15:34:50]   default=0.4023 oracle=w0.1_0.9_0.0_topk=0.8313 (4.6 min)
+[15:34:50] === tile ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:37:45]   trained; holdout=46 test=117
+[15:38:13]   default=0.9343 oracle=s3_mean=0.9654 (3.4 min)
+[15:38:13] === toothbrush ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:39:01]   trained; holdout=12 test=42
+[15:39:10]   default=0.7889 oracle=w0.8_0.0_0.2_topk=0.9556 (0.9 min)
+[15:39:10] === transistor ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:41:55]   trained; holdout=43 test=100
+[15:42:19]   default=0.8346 oracle=s3_mean=0.8433 (3.2 min)
+[15:42:19] === wood ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:45:43]   trained; holdout=50 test=79
+[15:46:06]   default=0.8702 oracle=w0.6_0.3_0.1_topk=0.9930 (3.8 min)
+[15:46:06] === zipper ===
+Unexpected keys (bn2.num_batches_tracked, bn2.bias, bn2.running_mean, bn2.running_var, bn2.weight, classifier.bias, classifier.weight, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[15:49:05]   trained; holdout=48 test=151
+[15:49:38]   default=0.9680 oracle=s1_mean=0.9740 (3.5 min)
+[15:49:38] 
+[15:49:38] ========================================================================
+[15:49:38] selection rule   mean AUROC vs default
+[15:49:38] ------------------------------------------------------------------------
+[15:49:38] default            82.3932%      0.00 pp   (命中 oracle 1/15)
+[15:49:38] oracle             93.3900%     11.00 pp   (命中 oracle 15/15)
+[15:49:38] h_p95              81.1152%     -1.28 pp   (命中 oracle 1/15)
+[15:49:38] h_p90              81.5813%     -0.81 pp   (命中 oracle 1/15)
+[15:49:38] h_max              82.1901%     -0.20 pp   (命中 oracle 1/15)
+[15:49:38] h_cv               81.3149%     -1.08 pp   (命中 oracle 2/15)
+[15:49:38] h_mean             82.2768%     -0.12 pp   (命中 oracle 1/15)

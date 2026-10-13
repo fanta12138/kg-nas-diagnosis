@@ -1,0 +1,136 @@
+% ============================================================================
+% main_v2.tex -- parallel build of the rewritten manuscript.
+%
+% Purpose: compile the new narrative (sections/_draft_v2/) side by side with the
+% existing main_springer.tex, so page count and cross-references can be checked
+% before switching over. The original main_springer.tex and sections/ are left
+% untouched as the fallback.
+%
+% Same class, same preamble, same bibliography. Only the \input paths differ.
+% ============================================================================
+
+\documentclass[pdflatex,iicol,sn-mathphys-num]{sn-jnl}
+
+%%%% Standard Packages
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[title]{appendix}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,calc}
+
+%%%% Fix: sn-jnl v3.1 (Dec 2024) + TeX Live 2026 xcolor/hyperref hook conflict.
+\usepackage{hyperref}
+
+%%%% Custom commands (shared with the Elsevier build)
+\input{math_commands}
+
+%%%% Restore the standard `table` environment (see main_springer.tex for why).
+\let\table\tableorg
+\let\endtable\endtableorg
+
+% Float placement
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.80}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{8}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+
+\raggedbottom
+\emergencystretch=2em
+
+\begin{document}
+
+\title[Diagnosing the Architecture Axis]{The Architecture Axis Is Not the Axis:
+A Diagnostic Study of Neural Architecture Search and Score Fusion in
+Unsupervised Industrial Anomaly Detection}
+
+%%=============================================================%% Author block
+\author*[1]{\fnm{Peng} \sur{Deng}}\email{dengpeng@gxust.edu.cn}
+
+\author[1]{\fnm{Hong} \sur{Li}}\email{lihong@gxust.edu.cn}
+
+\author[1]{\fnm{Yuanwu} \sur{Zhou}}\email{zhouyuanwu@gxust.edu.cn}
+
+\affil*[1]{\orgdiv{School of Civil and Architectural Engineering}, \orgname{Guangxi University of Science and Technology}, \orgaddress{\street{No. 2 Wenchang Road}, \city{Liuzhou}, \postcode{545006}, \state{Guangxi}, \country{China}}}
+
+%%==================================%% Abstract
+\abstract{Unsupervised anomaly detection models normality so that inspection can
+run on conforming parts alone. Two design decisions determine whether such a
+system works: the network architecture, and the reduction of per-pixel
+discrepancies to the image-level score that accepts or rejects a part. The
+literature invests in the first; the second is rarely documented. We measure both,
+and first what the benchmark can measure at all. On MVTec-AD the contested margin
+between successive state-of-the-art generations is $0.5$ points, while the
+standard single-category comparison resolves $2.98$ --- larger than the entire
+spread of the architectures it ranks. Two thirds of the search space is
+deployment-inert: the searched feature dimension never reaches the deployed
+detector, and the distillation signal that ranks candidates separates the twelve
+well-behaved backbones by only $5.7\%$ of its median, the same order as its own
+noise, while returning exactly zero for two of them --- which the minimising rule
+then prefers. Training 210 detectors, every backbone on every category under one
+protocol, attributes $0.54\%$ of the variance in accuracy to the architecture and
+$95.32\%$ to the category, and the backbone ordering does not transfer between
+categories. Twelve independent searches consequently all returned a
+collapse-prone backbone, performing worse than uniform random selection. The
+leverage lies instead in the reduction step: replacing the unweighted mean over
+the discrepancy map with top-$k$ pooling raises mean AUROC from $82.36\%$ to
+$90.28\%$ across three seeds without retraining, and the policy can be chosen
+without any anomaly label. The pipeline reaches $82.47\%$ against published values
+of $95.6$--$99.6\%$; we report that gap rather than obscure it.}
+
+\keywords{Industrial visual inspection, Unsupervised anomaly detection, Neural
+architecture search, Knowledge distillation, Score fusion, Proxy reliability}
+
+\maketitle
+
+%%=============================================================================%% Body
+\input{sections/_draft_v2/1_introduction}
+\input{sections/_draft_v2/2_related_work}
+\input{sections/_draft_v2/3_method}
+\input{sections/_draft_v2/4_diagnosis}
+\input{sections/_draft_v2/5_leverage}
+\input{sections/_draft_v2/6_positioning}
+\input{sections/_draft_v2/7_conclusion}
+
+%%=============================================================================%% Back matter
+\backmatter
+
+\bmhead{Acknowledgements}
+
+This work was supported by the Guangxi Natural Science Foundation (Grant No. 2025GXNSFHA069076) and the Guangxi University of Science and Technology Doctoral Fund (Grant Nos. 26Z15, 26Z25).
+
+\section*{Statements and Declarations}
+
+\begin{itemize}
+\item \textbf{Funding}: This research was supported by the Guangxi Natural Science Foundation under Grant No. 2025GXNSFHA069076 and the Guangxi University of Science and Technology Doctoral Fund under Grant Nos. 26Z15 and 26Z25.
+
+\item \textbf{Competing interests}: The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\item \textbf{Ethics approval and consent to participate; consent for publication; materials availability}: Not applicable. This study did not involve human participants or animals, and no new materials were generated.
+
+\item \textbf{Data availability}: This work uses only the publicly available MVTec-AD benchmark~\cite{bergmann2021mvtec}; no new image data were generated. Every derived artefact is released together with the code (see below): the architecture-search logs, the per-configuration proxy evaluations, the 210-detector AUROC matrix, the per-run search records, the auxiliary benchmark harness, the synthetic-mechanism study, and the scripts that regenerate every table and figure. Each number reported in this paper can therefore be traced to the run that produced it.
+
+\item \textbf{Code availability}: The complete source code and the raw experimental logs are publicly released. They comprise the pipeline under study, the diagnostic experiments (proxy repeatability, the truth matrix, the repeated searches), the synthetic reproduction of the degeneracy mechanism, the resolvability analysis, the benchmark harness, and the analysis scripts that produce every table and figure in this paper. The repository is listed under the corresponding author's public profile and the permanent link is supplied with the final version; until that link is assigned, the same material is available directly from the corresponding author (dengpeng@gxust.edu.cn).
+
+\item \textbf{Author contribution}: P.D. conceived the study, specified the research questions, directed the experimental design and the analysis, verified every reported result against the recorded data, and wrote the manuscript. H.L. and Y.Z. contributed to the experimental design, the interpretation of results, and the revision of the manuscript. All authors read and approved the final manuscript.
+
+\item \textbf{Use of large language models}: An AI assistant (a large language model) was used substantially in this work. It wrote the code for the diagnostic experiments, the synthetic reproduction and the benchmark harness, executed those experiments, and produced the numerical results reported here; it also produced drafts of the manuscript text. The authors specified the research questions, directed the work, verified the reported results against the recorded experimental outputs, and take full responsibility for the content, the claims and their accuracy.
+\end{itemize}
+
+%%=============================================================================%% References
+\bibliography{references}
+
+\end{document}

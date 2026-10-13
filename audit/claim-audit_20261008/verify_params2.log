@@ -1,0 +1,18 @@
+backbone                           dim    encoder    decoder      TOTAL  paper fig
+------------------------------------------------------------------------------------
+efficientnet_b0                    128       3.68       1.44       5.12
+efficientnet_b0                    256       3.68       1.73       5.41
+efficientnet_b0                    512       3.68       2.32       6.00
+resnet18                           256      11.31       1.73      13.04
+resnet34                           256      21.42       1.73      23.15
+resnet50                           256      24.03       1.73      25.77
+mobilenetv3_small_100              128       1.08       1.44       2.51
+swin_tiny_patch4_window7_224       256      27.52       1.73      29.25
+convnext_tiny                      256      28.02       1.73      29.75
+convnextv2_tiny                    256      28.06       1.73      29.80
+
+  discovered/256d = 5.41 M   (manuscript 5.3 ; figure csv 6.0)
+  resnet18/256d   = 13.04 M   (manuscript 12.9 ; figure csv 14.9)
+  ratio           = 2.410      (manuscript 2.4x)
+  mobilenetv3     = 2.51 M   (manuscript 2.7 ; figure csv 2.5)
+  swin_tiny       = 29.25 M   (manuscript 29.3 ; figure csv 28.0)

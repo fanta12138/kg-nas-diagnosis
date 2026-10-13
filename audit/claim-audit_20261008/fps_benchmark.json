@@ -1,0 +1,103 @@
+{
+  "protocol": {
+    "batch_size": 1,
+    "input": "3x224x224",
+    "dtype": "fp32",
+    "device": "NVIDIA GeForce RTX 3090",
+    "warmup": 100,
+    "iters": 500,
+    "rounds": 3,
+    "metric": "median FPS",
+    "cudnn_benchmark": true
+  },
+  "models": {
+    "discovered (efficientnet_b0 + 256d)": {
+      "backbone": "efficientnet_b0",
+      "feature_dim": 256,
+      "student_fps": {
+        "median": 146.2,
+        "min": 145.08,
+        "max": 147.15
+      },
+      "teacher_fps": {
+        "median": 501.58,
+        "min": 497.26,
+        "max": 502.12
+      },
+      "full_pipeline_fps": {
+        "median": 110.85,
+        "min": 110.55,
+        "max": 111.02
+      },
+      "student_params_m": 5.412476,
+      "decoder_params_m": 1.7344,
+      "teacher_params_m": 11.689512
+    },
+    "fixed resnet18 + 256d": {
+      "backbone": "resnet18",
+      "feature_dim": 256,
+      "student_fps": {
+        "median": 389.46,
+        "min": 388.38,
+        "max": 389.85
+      },
+      "teacher_fps": {
+        "median": 504.17,
+        "min": 502.24,
+        "max": 505.45
+      },
+      "full_pipeline_fps": {
+        "median": 210.43,
+        "min": 210.13,
+        "max": 210.5
+      },
+      "student_params_m": 13.042752,
+      "decoder_params_m": 1.7344,
+      "teacher_params_m": 11.689512
+    },
+    "fixed mobilenetv3_small + 256d": {
+      "backbone": "mobilenetv3_small_100",
+      "feature_dim": 256,
+      "student_fps": {
+        "median": 214.56,
+        "min": 214.51,
+        "max": 214.79
+      },
+      "teacher_fps": {
+        "median": 501.95,
+        "min": 499.83,
+        "max": 502.18
+      },
+      "full_pipeline_fps": {
+        "median": 145.41,
+        "min": 145.23,
+        "max": 146.13
+      },
+      "student_params_m": 2.809632,
+      "decoder_params_m": 1.7344,
+      "teacher_params_m": 11.689512
+    },
+    "fixed swin_tiny + 256d": {
+      "backbone": "swin_tiny_patch4_window7_224",
+      "feature_dim": 256,
+      "student_fps": {
+        "median": 119.6,
+        "min": 119.31,
+        "max": 120.48
+      },
+      "teacher_fps": {
+        "median": 495.11,
+        "min": 493.6,
+        "max": 495.77
+      },
+      "full_pipeline_fps": {
+        "median": 90.95,
+        "min": 90.18,
+        "max": 93.04
+      },
+      "student_params_m": 29.254778,
+      "decoder_params_m": 1.7344,
+      "teacher_params_m": 11.689512
+    }
+  }
+}

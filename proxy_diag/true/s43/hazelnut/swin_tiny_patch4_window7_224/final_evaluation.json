@@ -1,0 +1,14 @@
+{
+  "auroc": 0.9535714285714285,
+  "ap": 0.974580416397144,
+  "student_backbone": "swin_tiny_patch4_window7_224",
+  "teacher": "resnet18",
+  "epochs": 500,
+  "seed": 43,
+  "minutes": 14.6,
+  "micro_batch": 64,
+  "accum_steps": 1,
+  "effective_batch": 64,
+  "probe_peak_gb": 9.14,
+  "cached": false
+}

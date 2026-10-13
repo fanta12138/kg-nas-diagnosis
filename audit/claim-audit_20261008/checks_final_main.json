@@ -1,0 +1,221 @@
+[
+  {
+    "name": "R1_F1_abstract_winner",
+    "must_appear": [
+      "ResNet-18 still leads on 8 of 15"
+    ],
+    "must_absent": [
+      "closes the gap and wins 12 of 15"
+    ],
+    "sources": true
+  },
+  {
+    "name": "R1_F2_abstract_exceeds",
+    "must_appear": [
+      "matching 98.2% of the average AUROC of a 12.9M ResNet-18 student under an identical protocol"
+    ],
+    "must_absent": [
+      "exceeding a 12.9M ResNet-18 student under an identical protocol"
+    ],
+    "sources": true
+  },
+  {
+    "name": "R1_F6_padim",
+    "must_appear": [
+      "above PaDiM (77.9%)"
+    ],
+    "must_absent": [
+      "above PaDiM (78.0%)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "R1_F10_cnn_types",
+    "must_appear": [
+      "CNNs (10 types, 65 trials)"
+    ],
+    "must_absent": [
+      "CNNs (13 types, 65 trials)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "R1_F13_btad_range",
+    "must_appear": [
+      "399--1000 (BTAD) training samples"
+    ],
+    "must_absent": [
+      "400--1000 (BTAD) training samples"
+    ],
+    "sources": true
+  },
+  {
+    "name": "R1_F4_best_trial",
+    "must_appear": [
+      "0.0023, against 0.0032 for 128-dim"
+    ],
+    "must_absent": [
+      "attained the single best trial score (0.0023)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U1_no_45_config",
+    "must_appear": [],
+    "must_absent": [
+      "45 configurations",
+      "45 candidate architectures",
+      "45 candidates",
+      "45 discrete configurations",
+      "45-configuration"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U1_no_15_backbones",
+    "must_appear": [],
+    "must_absent": [
+      "15 backbones",
+      "15 diverse backbone",
+      "15 CNN and Transformer",
+      "15-backbone"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U1_42_present",
+    "must_appear": [
+      "14 backbones",
+      "14 backbone architectures"
+    ],
+    "must_absent": [],
+    "sources": true
+  },
+  {
+    "name": "U1_effv2s_row_gone",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "MobileOne-S0 & CNN & 2022 & 5.3 & 1.1"
+    ],
+    "must_absent": [
+      "EfficientNetV2-S & CNN & 2021 & 21.5 & 8.4"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U1_trials_per_config_2_4",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "NAS trials per config & $\\sim$2.4 (100 total)"
+    ],
+    "must_absent": [
+      "NAS trials per config & $\\sim$2.2 (100 total)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U3_spread_106",
+    "must_appear": [
+      "vary by up to 106"
+    ],
+    "must_absent": [
+      "vary by up to 81"
+    ],
+    "sources": true
+  },
+  {
+    "name": "M1_pipeline_fps_measured",
+    "must_appear": [
+      "the full teacher--student detector measures 111 FPS"
+    ],
+    "must_absent": [
+      "detector runs at $\\sim$107 FPS"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U5_data_availability",
+    "must_appear": [
+      "a single 100-trial search for MVTec-AD run on one category"
+    ],
+    "must_absent": [
+      "100 NAS trials per category on each of the three datasets"
+    ],
+    "sources": true
+  },
+  {
+    "name": "U4_multiplier_removed",
+    "must_appear": [
+      "the NAS stage consists of 100 trials of three epochs each"
+    ],
+    "must_absent": [
+      "the computation of training a single architecture"
+    ],
+    "sources": true
+  },
+  {
+    "name": "N1_capacity_section",
+    "must_appear": [
+      "Parameter-Capacity Analysis",
+      "9.2",
+      "1.7 points",
+      "smallest p = 0.058"
+    ],
+    "must_absent": [],
+    "sources": true
+  },
+  {
+    "name": "N2_abstract_honest",
+    "must_appear": [
+      "trail recent high-capacity detectors (CFA 89.8%, EfficientAD 97.5%)",
+      "no statistically significant change in accuracy"
+    ],
+    "must_absent": [],
+    "sources": true
+  },
+  {
+    "name": "N3_intro_reframed",
+    "must_appear": [
+      "Deployment-Oriented Discovery with a Measured Capacity Envelope"
+    ],
+    "must_absent": [
+      "Efficiency-Focused Design"
+    ],
+    "sources": true
+  },
+  {
+    "name": "N5_efficiency_table",
+    "must_appear": [],
+    "must_appear_in_sources": [
+      "EfficientAD~\\cite{batzner2024efficientad} & 97.50 & 8 & 1000+"
+    ],
+    "must_absent": [],
+    "sources": true
+  },
+  {
+    "name": "H1_no_nearsota",
+    "must_appear": [],
+    "must_absent": [
+      "near-SOTA"
+    ],
+    "sources": true
+  },
+  {
+    "name": "H1b_conclusion_padim",
+    "must_appear": [
+      "exceeding PaDiM (77.9%) and Reverse Distillation (80.5%) while remaining 7.4 points below"
+    ],
+    "must_absent": [
+      "exceeding PaDiM (78.0%)"
+    ],
+    "sources": true
+  },
+  {
+    "name": "H3_capacity_limitation",
+    "must_appear": [
+      "Capacity is not the constraint"
+    ],
+    "must_absent": [],
+    "sources": true
+  }
+]

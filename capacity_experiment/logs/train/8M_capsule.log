@@ -1,0 +1,26 @@
+  [cap8/capsule] epoch 20: loss=0.1470 AUROC=0.4850 AP=0.8268
+  [cap8/capsule] epoch 40: loss=0.1160 AUROC=0.5548 AP=0.8532
+  [cap8/capsule] epoch 60: loss=0.0986 AUROC=0.5975 AP=0.8699
+  [cap8/capsule] epoch 80: loss=0.0889 AUROC=0.6282 AP=0.8826
+  [cap8/capsule] epoch 100: loss=0.0838 AUROC=0.6326 AP=0.8855
+  [cap8/capsule] epoch 120: loss=0.0785 AUROC=0.6590 AP=0.8945
+  [cap8/capsule] epoch 140: loss=0.0737 AUROC=0.6681 AP=0.8993
+  [cap8/capsule] epoch 160: loss=0.0718 AUROC=0.6917 AP=0.9069
+  [cap8/capsule] epoch 180: loss=0.0692 AUROC=0.6980 AP=0.9101
+  [cap8/capsule] epoch 200: loss=0.0662 AUROC=0.7016 AP=0.9123
+  [cap8/capsule] epoch 220: loss=0.0671 AUROC=0.6988 AP=0.9118
+  [cap8/capsule] epoch 240: loss=0.0613 AUROC=0.7112 AP=0.9160
+  [cap8/capsule] epoch 260: loss=0.0633 AUROC=0.7180 AP=0.9174
+  [cap8/capsule] epoch 280: loss=0.0606 AUROC=0.7176 AP=0.9189
+  [cap8/capsule] epoch 300: loss=0.0611 AUROC=0.7236 AP=0.9209
+  [cap8/capsule] epoch 320: loss=0.0604 AUROC=0.7260 AP=0.9218
+  [cap8/capsule] epoch 340: loss=0.0586 AUROC=0.7292 AP=0.9226
+  [cap8/capsule] epoch 360: loss=0.0590 AUROC=0.7296 AP=0.9233
+  [cap8/capsule] epoch 380: loss=0.0593 AUROC=0.7331 AP=0.9245
+  [cap8/capsule] epoch 400: loss=0.0584 AUROC=0.7296 AP=0.9238
+  [cap8/capsule] epoch 420: loss=0.0590 AUROC=0.7316 AP=0.9242
+  [cap8/capsule] epoch 440: loss=0.0572 AUROC=0.7331 AP=0.9248
+  [cap8/capsule] epoch 460: loss=0.0570 AUROC=0.7363 AP=0.9256
+  [cap8/capsule] epoch 480: loss=0.0569 AUROC=0.7327 AP=0.9244
+  [cap8/capsule] epoch 500: loss=0.0586 AUROC=0.7331 AP=0.9249
+DONE budget=8 cat=capsule deit_tiny_patch16_224 AUROC=0.7331 AP=0.9249 (3.1 min wall)

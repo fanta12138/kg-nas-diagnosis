@@ -1,0 +1,44 @@
+{
+  "convnextv2_tiny": {
+    "student_M": 29.797
+  },
+  "convnextv2_base": {
+    "student_M": 89.688
+  },
+  "mobileone_s0": {
+    "student_M": 6.266
+  },
+  "convnext_tiny": {
+    "student_M": 29.75
+  },
+  "convnext_small": {
+    "student_M": 51.385
+  },
+  "vit_tiny_patch16_224": {
+    "student_M": 7.308
+  },
+  "deit_tiny_patch16_224": {
+    "student_M": 7.308
+  },
+  "swin_tiny_patch4_window7_224": {
+    "student_M": 29.255
+  },
+  "efficientnet_b0": {
+    "student_M": 5.412
+  },
+  "efficientnet_b1": {
+    "student_M": 7.918
+  },
+  "mobilenetv3_small_100": {
+    "student_M": 2.81
+  },
+  "resnet18": {
+    "student_M": 13.043
+  },
+  "resnet34": {
+    "student_M": 23.151
+  },
+  "resnet50": {
+    "student_M": 25.767
+  }
+}

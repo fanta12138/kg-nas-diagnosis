@@ -1,0 +1,9 @@
+{
+  "method": "PatchCore",
+  "year": 2022,
+  "conference": "CVPR",
+  "backbone": "wide_resnet50",
+  "coreset_ratio": 0.1,
+  "auroc": 0.5710526315789475,
+  "ap": 0.8396696521860859
+}

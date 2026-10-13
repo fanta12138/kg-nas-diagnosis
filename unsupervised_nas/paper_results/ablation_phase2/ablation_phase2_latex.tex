@@ -1,0 +1,41 @@
+
+\subsubsection{Ablation 2: Teacher Model Impact}
+\label{subsubsec:ablation_teacher}
+
+We investigate how teacher model quality affects the NAS search process and final performance. Table~\ref{tab:ablation_teacher} compares three teacher architectures spanning different years and capacities.
+
+\begin{table}[t]
+\centering
+\caption{Ablation study on teacher model impact. Different teachers guide students to discover different optimal architectures. ConvNeXt-Tiny achieves the best NAS search performance with highest stability.}
+\label{tab:ablation_teacher}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lcccccc}
+\toprule
+Teacher & Year & Params (M) & Best Score & Mean Score & Std & Best Student \\
+\midrule
+ResNet-18 & 2015 & 12 & 0.3040 & 0.3662 & 0.1804 & swin_tiny_patch4_window7_224+512d \\
+ConvNeXt-Tiny & 2022 & 29 & 0.2114 & 0.2146 & 0.0024 & convnextv2_base+512d \\
+ConvNeXtV2-Tiny & 2023 & 30 & 0.3443 & 0.3468 & 0.0032 & swin_tiny_patch4_window7_224+128d \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\textbf{Key Insights}:
+\begin{itemize}
+    \item \textbf{Teacher Architecture Matters}: Different teacher models guide students toward different optimal architectures, demonstrating that teacher characteristics significantly influence NAS outcomes.
+    \item \textbf{ConvNeXt-Tiny Superiority}: Despite being from 2022 (older than ConvNeXtV2), ConvNeXt-Tiny achieves the best search performance (0.2114) with remarkable stability (Std=0.0024), suggesting it provides more consistent knowledge guidance.
+    \item \textbf{Architecture Diversity}: Teachers from different eras prefer different student configurations: ResNet-18 and ConvNeXtV2-Tiny both select Swin Transformer, while ConvNeXt-Tiny prefers ConvNeXtV2-Base, indicating complementary strengths.
+    \item \textbf{Stability vs. Performance Trade-off}: While ConvNeXt-Tiny shows superior mean performance, ResNet-18 exhibits higher variance (Std=0.1804), suggesting less reliable guidance during search.
+\end{itemize}
+
+Figure~\ref{fig:ablation_teacher} visualizes the relationship between teacher capacity and student performance.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/figure_ablation_2_teacher_comparison.png}
+\caption{Teacher model comparison. Left: Best architecture scores achieved with different teachers. Right: Mean scores with standard deviation showing consistency across trials.}
+\label{fig:ablation_teacher}
+\end{figure}
+
+\textbf{Conclusion}: ConvNeXt-Tiny emerges as the most effective teacher for knowledge-guided NAS, achieving both superior performance and exceptional stability. This finding challenges the assumption that newer architectures always provide better guidance, highlighting the importance of empirical validation in teacher selection.

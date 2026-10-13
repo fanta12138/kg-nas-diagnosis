@@ -1,0 +1,15 @@
+dim=128 seed= 7000 score=8.14175940 rejected=0/2 degenerate=False
+dim=128 seed= 7017 score=8.17761898 rejected=0/2 degenerate=False
+dim=128 seed= 7034 score=7.58550072 rejected=0/2 degenerate=False
+dim=128 seed= 7051 score=7.84771729 rejected=0/2 degenerate=False
+dim=256 seed= 7000 score=7.92006755 rejected=0/2 degenerate=False
+dim=256 seed= 7017 score=8.10129309 rejected=0/2 degenerate=False
+dim=256 seed= 7034 score=13.69681597 rejected=0/2 degenerate=False
+dim=256 seed= 7051 score=7.95444679 rejected=0/2 degenerate=False
+dim=512 seed= 7000 score=8.65396214 rejected=0/2 degenerate=False
+dim=512 seed= 7017 score=8.11572170 rejected=0/2 degenerate=False
+dim=512 seed= 7034 score=10.48488951 rejected=0/2 degenerate=False
+dim=512 seed= 7051 score=8.58211422 rejected=0/2 degenerate=False
+
+0 / 12 evaluations hit the degenerate mode (returned 0.0 because every validation batch was rejected).
+saved -> D:/autopaper/proxy_diag/probe_degenerate.json

@@ -1,0 +1,228 @@
+# 消融实验配置
+# Ablation Study Configuration
+
+ablation_studies:
+  
+  # ===== 完整方法（基线）=====
+  full_method:
+    name: "Full Method (Ours)"
+    description: "完整的知识引导NAS框架"
+    config:
+      use_contrastive_pretrain: true
+      teacher_model: "resnet18"
+      pretrained_teacher: true
+      
+      use_kd_loss: true
+      alpha: 0.5  # KD loss weight
+      
+      use_consistency_loss: true
+      beta: 0.3   # Consistency loss weight
+      
+      use_reconstruction_loss: true
+      gamma: 0.2  # Reconstruction loss weight
+      
+      use_nas: true
+      nas_search_space:
+        backbones: 
+          - 'convnextv2_tiny'
+          - 'efficientnetv2_s'
+          - 'mobileone_s4'
+          - 'convnext_tiny'
+          - 'efficientnet_b0'
+        feature_dims: [128, 256, 512]
+      num_trials: 30
+  
+  # ===== 消融1: 无对比学习预训练 =====
+  w/o_contrastive_pretrain:
+    name: "w/o Contrastive Pre-training"
+    description: "教师模型随机初始化，验证预训练的重要性"
+    config:
+      use_contrastive_pretrain: false
+      teacher_model: "resnet18"
+      pretrained_teacher: false  # 关键改变
+      
+      use_kd_loss: true
+      alpha: 0.5
+      
+      use_consistency_loss: true
+      beta: 0.3
+      
+      use_reconstruction_loss: true
+      gamma: 0.2
+      
+      use_nas: true
+  
+  # ===== 消融2: 无知识蒸馏损失 =====
+  w/o_kd_loss:
+    name: "w/o Knowledge Distillation Loss"
+    description: "设置α=0，验证KD损失的贡献"
+    config:
+      use_contrastive_pretrain: true
+      teacher_model: "resnet18"
+      pretrained_teacher: true
+      
+      use_kd_loss: false
+      alpha: 0.0  # 关键改变
+      
+      use_consistency_loss: true
+      beta: 0.3
+      
+      use_reconstruction_loss: true
+      gamma: 0.2
+      
+      use_nas: true
+  
+  # ===== 消融3: 无一致性正则化 =====
+  w/o_consistency:
+    name: "w/o Consistency Regularization"
+    description: "设置β=0，验证一致性损失的贡献"
+    config:
+      use_contrastive_pretrain: true
+      teacher_model: "resnet18"
+      pretrained_teacher: true
+      
+      use_kd_loss: true
+      alpha: 0.5
+      
+      use_consistency_loss: false
+      beta: 0.0  # 关键改变
+      
+      use_reconstruction_loss: true
+      gamma: 0.2
+      
+      use_nas: true
+  
+  # ===== 消融4: 无重构损失 =====
+  w/o_reconstruction:
+    name: "w/o Reconstruction Loss"
+    description: "设置γ=0，验证重构损失的贡献"
+    config:
+      use_contrastive_pretrain: true
+      teacher_model: "resnet18"
+      pretrained_teacher: true
+      
+      use_kd_loss: true
+      alpha: 0.5
+      
+      use_consistency_loss: true
+      beta: 0.3
+      
+      use_reconstruction_loss: false
+      gamma: 0.0  # 关键改变
+      
+      use_nas: true
+  
+  # ===== 消融5: 随机初始化骨干网络 =====
+  random_init_backbone:
+    name: "Random Init Backbone"
+    description: "学生模型不使用预训练权重，验证预训练的重要性"
+    config:
+      use_contrastive_pretrain: true
+      teacher_model: "resnet18"
+      pretrained_teacher: true
+      
+      use_kd_loss: true
+      alpha: 0.5
+      
+      use_consistency_loss: true
+      beta: 0.3
+      
+      use_reconstruction_loss: true
+      gamma: 0.2
+      
+      use_nas: true
+      student_pretrained: false  # 关键改变
+  
+  # ===== 消融6: 固定架构ResNet18 =====
+  fixed_resnet18:
+    name: "Fixed Architecture (ResNet-18)"
+    description: "不使用NAS，手动选择ResNet18，验证NAS的价值"
+    config:
+      use_contrastive_pretrain: true
+      teacher_model: "resnet18"
+      pretrained_teacher: true
+      
+      use_kd_loss: true
+      alpha: 0.5
+      
+      use_consistency_loss: true
+      beta: 0.3
+      
+      use_reconstruction_loss: true
+      gamma: 0.2
+      
+      use_nas: false  # 关键改变
+      fixed_backbone: "resnet18"
+      fixed_feature_dim: 128
+  
+  # ===== 消融7: 固定架构ConvNeXt V2 =====
+  fixed_convnextv2:
+    name: "Fixed Architecture (ConvNeXt V2-Tiny)"
+    description: "手动选择2023年最新模型，对比NAS的智能选择"
+    config:
+      use_contrastive_pretrain: true
+      teacher_model: "resnet18"
+      pretrained_teacher: true
+      
+      use_kd_loss: true
+      alpha: 0.5
+      
+      use_consistency_loss: true
+      beta: 0.3
+      
+      use_reconstruction_loss: true
+      gamma: 0.2
+      
+      use_nas: false  # 关键改变
+      fixed_backbone: "convnextv2_tiny"
+      fixed_feature_dim: 128
+  
+  # ===== 消融8: 不同损失权重组合 =====
+  loss_weight_variants:
+    - name: "High KD Weight (α=0.7)"
+      config:
+        alpha: 0.7
+        beta: 0.2
+        gamma: 0.1
+    
+    - name: "High Consistency Weight (β=0.5)"
+      config:
+        alpha: 0.3
+        beta: 0.5
+        gamma: 0.2
+    
+    - name: "High Reconstruction Weight (γ=0.5)"
+      config:
+        alpha: 0.2
+        beta: 0.3
+        gamma: 0.5
+    
+    - name: "Equal Weights"
+      config:
+        alpha: 0.33
+        beta: 0.33
+        gamma: 0.34
+
+---
+
+# 运行说明
+# 
+# 1. 完整方法（必须先运行）:
+#    python scripts/stage3_final_training.py \
+#        --config configs/ablation_study.yaml \
+#        --ablation full_method
+#
+# 2. 单个消融实验:
+#    python scripts/stage3_final_training.py \
+#        --config configs/ablation_study.yaml \
+#        --ablation w/o_kd_loss
+#
+# 3. 批量运行所有消融:
+#    python scripts/run_ablation_studies.py \
+#        --config configs/ablation_study.yaml
+#
+# 预期结果:
+# - Full Method应该表现最好
+# - 移除任何组件都会导致性能下降
+# - NAS选择的架构应该优于固定架构
+# - 预训练的重要性应该显著

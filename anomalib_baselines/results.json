@@ -1,0 +1,9 @@
+{
+  "patchcore|bottle": {
+    "method": "patchcore",
+    "category": "bottle",
+    "image_auroc": null,
+    "error": "vstack expects a non-empty TensorList |   File \"D:\\autopaper\\.venv_anomalib\\lib\\site-packages\\pytorch_lightning\\trainer\\trainer.py\", line 1356, in _call_lightning_module_hook\n    output = fn(*args, **kwargs)\n  File \"D:\\autopaper\\.venv_anomalib\\lib\\site-packages\\anomalib\\models\\patchcore\\lightning_model.py\", line 92, in on_validation_start\n    embeddings = torch.vstack(self.embeddings)\nRuntimeError: vstack expects a non-empty TensorList\n",
+    "minutes": 0.13
+  }
+}

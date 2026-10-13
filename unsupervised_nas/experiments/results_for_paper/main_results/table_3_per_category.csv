@@ -1,0 +1,16 @@
+Category,AUROC,AP,F1_Max,Params_M,Status
+bottle,0.7690,0.9104,,6.0,success
+cable,0.6089,0.6934,,6.0,success
+capsule,0.7453,0.9327,,6.0,success
+carpet,0.5678,0.8494,,6.0,success
+grid,0.6926,0.8548,,6.0,success
+hazelnut,0.8171,0.8791,,6.0,success
+leather,0.5747,0.8444,,6.0,success
+metal_nut,0.5572,0.8553,,6.0,success
+pill,0.6136,0.9090,,6.0,success
+screw,0.6739,0.8175,,6.0,success
+tile,0.6654,0.8212,,6.0,success
+toothbrush,0.4667,0.6763,,6.0,success
+transistor,0.7275,0.5596,,6.0,success
+wood,0.7535,0.9194,,6.0,success
+zipper,0.6720,0.8800,,6.0,success

@@ -1,0 +1,35 @@
+C:\Users\dengpeng\anaconda3\lib\site-packages\torch\nn\modules\module.py:1326: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  return t.to(
+  [convnextv2_tiny/bottle] epoch 20: loss=0.1855 AUROC=0.8905 AP=0.9641
+  [convnextv2_tiny/bottle] epoch 40: loss=0.1439 AUROC=0.9468 AP=0.9819
+  [convnextv2_tiny/bottle] epoch 60: loss=0.1214 AUROC=0.9484 AP=0.9842
+  [convnextv2_tiny/bottle] epoch 80: loss=0.1048 AUROC=0.9500 AP=0.9851
+  [convnextv2_tiny/bottle] epoch 100: loss=0.0943 AUROC=0.9397 AP=0.9829
+  [convnextv2_tiny/bottle] epoch 120: loss=0.0854 AUROC=0.9563 AP=0.9873
+  [convnextv2_tiny/bottle] epoch 140: loss=0.0791 AUROC=0.9468 AP=0.9848
+  [convnextv2_tiny/bottle] epoch 160: loss=0.0704 AUROC=0.9540 AP=0.9870
+  [convnextv2_tiny/bottle] epoch 180: loss=0.0681 AUROC=0.9532 AP=0.9867
+  [convnextv2_tiny/bottle] epoch 200: loss=0.0646 AUROC=0.9500 AP=0.9859
+  [convnextv2_tiny/bottle] epoch 220: loss=0.0653 AUROC=0.9492 AP=0.9855
+  [convnextv2_tiny/bottle] epoch 240: loss=0.0629 AUROC=0.9460 AP=0.9848
+  [convnextv2_tiny/bottle] epoch 260: loss=0.0599 AUROC=0.9492 AP=0.9856
+  [convnextv2_tiny/bottle] epoch 280: loss=0.0578 AUROC=0.9484 AP=0.9854
+  [convnextv2_tiny/bottle] epoch 300: loss=0.0599 AUROC=0.9484 AP=0.9855
+  [convnextv2_tiny/bottle] epoch 320: loss=0.0578 AUROC=0.9516 AP=0.9862
+  [convnextv2_tiny/bottle] epoch 340: loss=0.0557 AUROC=0.9468 AP=0.9851
+  [convnextv2_tiny/bottle] epoch 360: loss=0.0553 AUROC=0.9492 AP=0.9856
+  [convnextv2_tiny/bottle] epoch 380: loss=0.0539 AUROC=0.9492 AP=0.9857
+  [convnextv2_tiny/bottle] epoch 400: loss=0.0562 AUROC=0.9508 AP=0.9860
+  [convnextv2_tiny/bottle] epoch 420: loss=0.0558 AUROC=0.9492 AP=0.9856
+  [convnextv2_tiny/bottle] epoch 440: loss=0.0551 AUROC=0.9508 AP=0.9861
+  [convnextv2_tiny/bottle] epoch 460: loss=0.0532 AUROC=0.9476 AP=0.9851
+  [convnextv2_tiny/bottle] epoch 480: loss=0.0536 AUROC=0.9484 AP=0.9854
+  [convnextv2_tiny/bottle] epoch 500: loss=0.0548 AUROC=0.9492 AP=0.9856
+[21:08:59]   [   1/210] s42 bottle      convnextv2_tiny                AUROC=0.9492 (12.9 min)
+  [convnextv2_base/bottle] epoch 20: loss=0.1630 AUROC=0.9643 AP=0.9883
+  [convnextv2_base/bottle] epoch 40: loss=0.1251 AUROC=0.9611 AP=0.9881
+  [convnextv2_base/bottle] epoch 60: loss=0.1015 AUROC=0.9556 AP=0.9874
+  [convnextv2_base/bottle] epoch 80: loss=0.0945 AUROC=0.9500 AP=0.9855
+  [convnextv2_base/bottle] epoch 100: loss=0.0902 AUROC=0.9413 AP=0.9831
+  [convnextv2_base/bottle] epoch 120: loss=0.0783 AUROC=0.9452 AP=0.9838
+  [convnextv2_base/bottle] epoch 140: loss=0.0820 AUROC=0.9302 AP=0.9798

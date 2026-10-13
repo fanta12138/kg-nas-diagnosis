@@ -1,0 +1,76 @@
+% math_commands.tex - Shared notation for WoodFormer-Edge paper
+
+% Sets
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+% Operators
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\KL}{KL}
+\DeclareMathOperator{\MSE}{MSE}
+
+% Norms and distances
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+
+% Distributions
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+
+% Vectors and matrices
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+
+% Paper-specific notation
+\newcommand{\latency}{\mathcal{L}}
+\newcommand{\memory}{\mathcal{M}}
+\newcommand{\flops}{\mathcal{F}}
+\newcommand{\hardware}{\vect{h}}
+
+% Loss functions
+\newcommand{\Loss}{\mathcal{L}}
+\newcommand{\Ltask}{\Loss_{\text{task}}}
+\newcommand{\Ldistill}{\Loss_{\text{distill}}}
+\newcommand{\Lfeat}{\Loss_{\text{feat}}}
+\newcommand{\Llogit}{\Loss_{\text{logit}}}
+\newcommand{\Lattn}{\Loss_{\text{attn}}}
+\newcommand{\Ltex}{\Loss_{\text{tex}}}
+\newcommand{\Lhw}{\Loss_{\text{hw}}}
+
+% Architecture notation
+\newcommand{\arch}{\alpha}
+\newcommand{\weights}{\theta}
+\newcommand{\supernet}{\mathcal{S}}
+\newcommand{\searchspace}{\mathcal{A}}
+
+% NAS-specific
+\newcommand{\darts}{DARTS}
+\newcommand{\nas}{NAS}
+
+% Model notation
+\newcommand{\teacher}{f_T}
+\newcommand{\student}{f_S}
+\newcommand{\predict}{\hat{y}}
+
+% ---------------------------------------------------------------------------
+% Run-in paragraph heading (un-numbered, not part of the sectioning hierarchy).
+%
+% Journals such as Machine Vision and Applications cap the heading depth at
+% three numbered levels (section/subsection/subsubsection). A LaTeX
+% \paragraph is sectioning level 4, so it would exceed that cap even though it
+% is never numbered. \runinhead reproduces the visual appearance of a \paragraph
+% (bold italic run-in head followed by the body text on the same line) without
+% touching the sectioning hierarchy at all.
+%
+% Usage:  \runinhead{Key Observations.} Body text follows here...
+% ---------------------------------------------------------------------------
+\makeatletter
+\newcommand{\runinhead}[1]{%
+  \par\addvspace{6pt plus 2pt minus 1pt}%
+  \noindent\begingroup\bfseries\itshape #1\endgroup\enspace\ignorespaces}
+\makeatother

@@ -1,0 +1,113 @@
+{
+  "val_batches": 2,
+  "rows": [
+    {
+      "dim": 128,
+      "seed": 7000,
+      "score": 8.141759395599365,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": false,
+      "degenerate": false
+    },
+    {
+      "dim": 128,
+      "seed": 7017,
+      "score": 8.177618980407715,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": false,
+      "degenerate": false
+    },
+    {
+      "dim": 128,
+      "seed": 7034,
+      "score": 7.585500717163086,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": false,
+      "degenerate": false
+    },
+    {
+      "dim": 128,
+      "seed": 7051,
+      "score": 7.84771728515625,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": false,
+      "degenerate": false
+    },
+    {
+      "dim": 256,
+      "seed": 7000,
+      "score": 7.920067548751831,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": true,
+      "degenerate": false
+    },
+    {
+      "dim": 256,
+      "seed": 7017,
+      "score": 8.101293087005615,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": true,
+      "degenerate": false
+    },
+    {
+      "dim": 256,
+      "seed": 7034,
+      "score": 13.696815967559814,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": true,
+      "degenerate": false
+    },
+    {
+      "dim": 256,
+      "seed": 7051,
+      "score": 7.954446792602539,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": true,
+      "degenerate": false
+    },
+    {
+      "dim": 512,
+      "seed": 7000,
+      "score": 8.653962135314941,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": true,
+      "degenerate": false
+    },
+    {
+      "dim": 512,
+      "seed": 7017,
+      "score": 8.115721702575684,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": true,
+      "degenerate": false
+    },
+    {
+      "dim": 512,
+      "seed": 7034,
+      "score": 10.484889507293701,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": true,
+      "degenerate": false
+    },
+    {
+      "dim": 512,
+      "seed": 7051,
+      "score": 8.582114219665527,
+      "rejected_batches": 0,
+      "n_val_batches": 2,
+      "align_layer": true,
+      "degenerate": false
+    }
+  ]
+}

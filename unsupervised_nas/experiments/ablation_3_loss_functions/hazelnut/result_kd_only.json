@@ -1,0 +1,12 @@
+{
+  "loss_type": "kd_only",
+  "result": {
+    "auroc": 0.8089285714285714,
+    "ap": 0.9071058311407755
+  },
+  "config": {
+    "backbone": "efficientnet_b0",
+    "feature_dim": 256,
+    "epochs": 100
+  }
+}

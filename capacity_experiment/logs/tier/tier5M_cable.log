@@ -1,0 +1,26 @@
+  [tier5/cable] epoch 20: loss=0.2842 AUROC=0.6406 AP=0.7172
+  [tier5/cable] epoch 40: loss=0.2326 AUROC=0.7663 AP=0.8044
+  [tier5/cable] epoch 60: loss=0.2102 AUROC=0.7869 AP=0.8213
+  [tier5/cable] epoch 80: loss=0.1954 AUROC=0.7999 AP=0.8284
+  [tier5/cable] epoch 100: loss=0.1848 AUROC=0.8163 AP=0.8443
+  [tier5/cable] epoch 120: loss=0.1794 AUROC=0.8240 AP=0.8548
+  [tier5/cable] epoch 140: loss=0.1732 AUROC=0.8317 AP=0.8634
+  [tier5/cable] epoch 160: loss=0.1668 AUROC=0.8413 AP=0.8738
+  [tier5/cable] epoch 180: loss=0.1670 AUROC=0.8452 AP=0.8779
+  [tier5/cable] epoch 200: loss=0.1582 AUROC=0.8484 AP=0.8819
+  [tier5/cable] epoch 220: loss=0.1579 AUROC=0.8563 AP=0.8836
+  [tier5/cable] epoch 240: loss=0.1532 AUROC=0.8529 AP=0.8834
+  [tier5/cable] epoch 260: loss=0.1540 AUROC=0.8585 AP=0.8918
+  [tier5/cable] epoch 280: loss=0.1494 AUROC=0.8608 AP=0.8936
+  [tier5/cable] epoch 300: loss=0.1499 AUROC=0.8624 AP=0.8946
+  [tier5/cable] epoch 320: loss=0.1472 AUROC=0.8613 AP=0.8933
+  [tier5/cable] epoch 340: loss=0.1459 AUROC=0.8638 AP=0.8969
+  [tier5/cable] epoch 360: loss=0.1446 AUROC=0.8623 AP=0.8923
+  [tier5/cable] epoch 380: loss=0.1438 AUROC=0.8645 AP=0.8962
+  [tier5/cable] epoch 400: loss=0.1448 AUROC=0.8666 AP=0.8975
+  [tier5/cable] epoch 420: loss=0.1426 AUROC=0.8651 AP=0.8965
+  [tier5/cable] epoch 440: loss=0.1430 AUROC=0.8668 AP=0.8977
+  [tier5/cable] epoch 460: loss=0.1430 AUROC=0.8660 AP=0.8967
+  [tier5/cable] epoch 480: loss=0.1422 AUROC=0.8668 AP=0.8980
+  [tier5/cable] epoch 500: loss=0.1426 AUROC=0.8673 AP=0.8980
+DONE tier=5 cat=cable resnet50 AUROC=0.8673 AP=0.8980 (6.1 min wall)

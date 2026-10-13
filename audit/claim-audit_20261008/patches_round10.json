@@ -1,0 +1,27 @@
+{
+  "tag": "round10_honesty",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "sections/5_conclusion.tex",
+      "id": "H1-conc-padim-nearsota",
+      "find": "On MVTec-AD, KG-NAS attains 82.4\\% average AUROC across 15 categories with a 5.3M-parameter student, exceeding PaDiM (78.0\\%) and Reverse Distillation (80.5\\%) and reaching near-SOTA accuracy on several categories (zipper 96.9\\%, bottle 96.3\\%, hazelnut 96.3\\%).",
+      "replace": "On MVTec-AD, KG-NAS attains 82.4\\% average AUROC across 15 categories with a 5.3M-parameter student, exceeding PaDiM (77.9\\%) and Reverse Distillation (80.5\\%) while remaining 7.4 points below the strongest baseline (CFA, 89.8\\%); its strongest categories are zipper (96.9\\%), bottle (96.3\\%) and hazelnut (96.3\\%).",
+      "note": "Conclusion: PaDiM 78.0 -> 77.9 (missed in round 01, inconsistent with the body) and drop the near-SOTA claim."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "H2-nearsota",
+      "find": "Performance is near-SOTA on several categories (zipper 96.9\\%, bottle 96.3\\%, hazelnut 96.3\\%, wood 94.6\\%, tile 93.3\\%) and weaker on the challenging ones (screw 44.0\\%, grid 67.8\\%, capsule 74.8\\%);",
+      "replace": "Performance is strongest on zipper (96.9\\%), bottle (96.3\\%), hazelnut (96.3\\%), wood (94.6\\%) and tile (93.3\\%), and weakest on screw (44.0\\%), grid (67.8\\%) and capsule (74.8\\%);",
+      "note": "Main-results observations: 'near-SOTA' is cherry-picked; KG-NAS only beats CFA on 3 of 15 categories."
+    },
+    {
+      "file": "sections/5_conclusion.tex",
+      "id": "H3-capacity-limitation",
+      "find": "larger budgets could find better architectures at the cost of search time. \\emph{The proxy metric is the binding constraint.}",
+      "replace": "larger budgets could find better architectures at the cost of search time. \\emph{Capacity is not the constraint.} Across five mutually exclusive parameter bands the average AUROC moves by only 1.7 points and not one pairwise comparison is significant (Section~\\ref{subsec:capacity}), so the framework has a fixed accuracy envelope near 83\\% on MVTec-AD. The gap to CFA (89.8\\%) and EfficientAD (97.5\\%) therefore cannot be closed by allocating more parameters; it requires a different detection or search objective, which we regard as the central open problem for this line of work. \\emph{The proxy metric is the binding constraint.}",
+      "note": "Limitations: add the measured capacity envelope and name the accuracy gap as the open problem."
+    }
+  ]
+}

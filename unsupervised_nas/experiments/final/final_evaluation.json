@@ -1,0 +1,33 @@
+{
+  "auroc": 0.6342105263157894,
+  "ap": 0.4378224103398629,
+  "best_f1": 0.46153846153846156,
+  "threshold": 0.23981661558151243,
+  "model_path": "experiments/final/best_model.pth",
+  "per_defect_type": {
+    "color": {
+      "auroc": 0.0,
+      "count": 8
+    },
+    "combined": {
+      "auroc": 0.0,
+      "count": 11
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 19
+    },
+    "hole": {
+      "auroc": 0.0,
+      "count": 10
+    },
+    "liquid": {
+      "auroc": 0.0,
+      "count": 10
+    },
+    "scratch": {
+      "auroc": 0.0,
+      "count": 21
+    }
+  }
+}

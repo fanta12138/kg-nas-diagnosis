@@ -1,0 +1,240 @@
+{
+  "convnextv2_tiny": {
+    "128": {
+      "encoder_m": 28.062,
+      "decoder_m": 1.439,
+      "total_m": 29.502
+    },
+    "256": {
+      "encoder_m": 28.062,
+      "decoder_m": 1.734,
+      "total_m": 29.797
+    },
+    "512": {
+      "encoder_m": 28.062,
+      "decoder_m": 2.324,
+      "total_m": 30.387
+    }
+  },
+  "convnextv2_base": {
+    "128": {
+      "encoder_m": 87.954,
+      "decoder_m": 1.439,
+      "total_m": 89.393
+    },
+    "256": {
+      "encoder_m": 87.954,
+      "decoder_m": 1.734,
+      "total_m": 89.688
+    },
+    "512": {
+      "encoder_m": 87.954,
+      "decoder_m": 2.324,
+      "total_m": 90.278
+    }
+  },
+  "mobileone_s0": {
+    "128": {
+      "encoder_m": 4.531,
+      "decoder_m": 1.439,
+      "total_m": 5.971
+    },
+    "256": {
+      "encoder_m": 4.531,
+      "decoder_m": 1.734,
+      "total_m": 6.266
+    },
+    "512": {
+      "encoder_m": 4.531,
+      "decoder_m": 2.324,
+      "total_m": 6.855
+    }
+  },
+  "convnext_tiny": {
+    "128": {
+      "encoder_m": 28.016,
+      "decoder_m": 1.439,
+      "total_m": 29.455
+    },
+    "256": {
+      "encoder_m": 28.016,
+      "decoder_m": 1.734,
+      "total_m": 29.75
+    },
+    "512": {
+      "encoder_m": 28.016,
+      "decoder_m": 2.324,
+      "total_m": 30.34
+    }
+  },
+  "convnext_small": {
+    "128": {
+      "encoder_m": 49.651,
+      "decoder_m": 1.439,
+      "total_m": 51.09
+    },
+    "256": {
+      "encoder_m": 49.651,
+      "decoder_m": 1.734,
+      "total_m": 51.385
+    },
+    "512": {
+      "encoder_m": 49.651,
+      "decoder_m": 2.324,
+      "total_m": 51.975
+    }
+  },
+  "vit_tiny_patch16_224": {
+    "128": {
+      "encoder_m": 5.574,
+      "decoder_m": 1.439,
+      "total_m": 7.013
+    },
+    "256": {
+      "encoder_m": 5.574,
+      "decoder_m": 1.734,
+      "total_m": 7.308
+    },
+    "512": {
+      "encoder_m": 5.574,
+      "decoder_m": 2.324,
+      "total_m": 7.898
+    }
+  },
+  "deit_tiny_patch16_224": {
+    "128": {
+      "encoder_m": 5.574,
+      "decoder_m": 1.439,
+      "total_m": 7.013
+    },
+    "256": {
+      "encoder_m": 5.574,
+      "decoder_m": 1.734,
+      "total_m": 7.308
+    },
+    "512": {
+      "encoder_m": 5.574,
+      "decoder_m": 2.324,
+      "total_m": 7.898
+    }
+  },
+  "swin_tiny_patch4_window7_224": {
+    "128": {
+      "encoder_m": 27.52,
+      "decoder_m": 1.439,
+      "total_m": 28.96
+    },
+    "256": {
+      "encoder_m": 27.52,
+      "decoder_m": 1.734,
+      "total_m": 29.255
+    },
+    "512": {
+      "encoder_m": 27.52,
+      "decoder_m": 2.324,
+      "total_m": 29.845
+    }
+  },
+  "efficientnet_b0": {
+    "128": {
+      "encoder_m": 3.678,
+      "decoder_m": 1.439,
+      "total_m": 5.118
+    },
+    "256": {
+      "encoder_m": 3.678,
+      "decoder_m": 1.734,
+      "total_m": 5.412
+    },
+    "512": {
+      "encoder_m": 3.678,
+      "decoder_m": 2.324,
+      "total_m": 6.002
+    }
+  },
+  "efficientnet_b1": {
+    "128": {
+      "encoder_m": 6.184,
+      "decoder_m": 1.439,
+      "total_m": 7.623
+    },
+    "256": {
+      "encoder_m": 6.184,
+      "decoder_m": 1.734,
+      "total_m": 7.918
+    },
+    "512": {
+      "encoder_m": 6.184,
+      "decoder_m": 2.324,
+      "total_m": 8.508
+    }
+  },
+  "mobilenetv3_small_100": {
+    "128": {
+      "encoder_m": 1.075,
+      "decoder_m": 1.439,
+      "total_m": 2.515
+    },
+    "256": {
+      "encoder_m": 1.075,
+      "decoder_m": 1.734,
+      "total_m": 2.81
+    },
+    "512": {
+      "encoder_m": 1.075,
+      "decoder_m": 2.324,
+      "total_m": 3.399
+    }
+  },
+  "resnet18": {
+    "128": {
+      "encoder_m": 11.308,
+      "decoder_m": 1.439,
+      "total_m": 12.748
+    },
+    "256": {
+      "encoder_m": 11.308,
+      "decoder_m": 1.734,
+      "total_m": 13.043
+    },
+    "512": {
+      "encoder_m": 11.308,
+      "decoder_m": 2.324,
+      "total_m": 13.633
+    }
+  },
+  "resnet34": {
+    "128": {
+      "encoder_m": 21.417,
+      "decoder_m": 1.439,
+      "total_m": 22.856
+    },
+    "256": {
+      "encoder_m": 21.417,
+      "decoder_m": 1.734,
+      "total_m": 23.151
+    },
+    "512": {
+      "encoder_m": 21.417,
+      "decoder_m": 2.324,
+      "total_m": 23.741
+    }
+  },
+  "resnet50": {
+    "128": {
+      "encoder_m": 24.033,
+      "decoder_m": 1.439,
+      "total_m": 25.473
+    },
+    "256": {
+      "encoder_m": 24.033,
+      "decoder_m": 1.734,
+      "total_m": 25.767
+    },
+    "512": {
+      "encoder_m": 24.033,
+      "decoder_m": 2.324,
+      "total_m": 26.357
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "auroc": 0.6198412698412699,
+  "ap": 0.8570977857764202,
+  "backbone": "efficientnet_b0",
+  "feature_dim": 512,
+  "seed": 2024,
+  "epochs": 200,
+  "minutes": 1.2
+}

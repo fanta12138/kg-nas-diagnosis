@@ -1,0 +1,249 @@
+{
+  "best_architecture": {
+    "backbone": "resnet18",
+    "feature_dim": 512
+  },
+  "all_results": [
+    {
+      "trial": 1,
+      "architecture": {
+        "backbone": "convnextv2_tiny",
+        "feature_dim": 512
+      },
+      "score": 0.11245256289839745
+    },
+    {
+      "trial": 2,
+      "architecture": {
+        "backbone": "swin_tiny_patch4_window7_224",
+        "feature_dim": 256
+      },
+      "score": 0.1716582030057907
+    },
+    {
+      "trial": 3,
+      "architecture": {
+        "backbone": "convnext_small",
+        "feature_dim": 256
+      },
+      "score": 0.11339947953820229
+    },
+    {
+      "trial": 4,
+      "architecture": {
+        "backbone": "convnextv2_tiny",
+        "feature_dim": 128
+      },
+      "score": 0.0993921160697937
+    },
+    {
+      "trial": 5,
+      "architecture": {
+        "backbone": "convnextv2_tiny",
+        "feature_dim": 256
+      },
+      "score": 0.10448304936289787
+    },
+    {
+      "trial": 6,
+      "architecture": {
+        "backbone": "convnext_small",
+        "feature_dim": 128
+      },
+      "score": 0.11505712568759918
+    },
+    {
+      "trial": 7,
+      "architecture": {
+        "backbone": "resnet18",
+        "feature_dim": 128
+      },
+      "score": 0.08836901560425758
+    },
+    {
+      "trial": 8,
+      "architecture": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 512
+      },
+      "score": 22.14755916595459
+    },
+    {
+      "trial": 9,
+      "architecture": {
+        "backbone": "resnet50",
+        "feature_dim": 256
+      },
+      "score": 0.10425886511802673
+    },
+    {
+      "trial": 10,
+      "architecture": {
+        "backbone": "swin_tiny_patch4_window7_224",
+        "feature_dim": 128
+      },
+      "score": 0.1170443594455719
+    },
+    {
+      "trial": 11,
+      "architecture": {
+        "backbone": "resnet18",
+        "feature_dim": 256
+      },
+      "score": 0.08710576593875885
+    },
+    {
+      "trial": 12,
+      "architecture": {
+        "backbone": "resnet34",
+        "feature_dim": 256
+      },
+      "score": 0.1004098542034626
+    },
+    {
+      "trial": 13,
+      "architecture": {
+        "backbone": "resnet50",
+        "feature_dim": 128
+      },
+      "score": 0.11699513345956802
+    },
+    {
+      "trial": 14,
+      "architecture": {
+        "backbone": "resnet50",
+        "feature_dim": 512
+      },
+      "score": 0.10951052606105804
+    },
+    {
+      "trial": 15,
+      "architecture": {
+        "backbone": "resnet18",
+        "feature_dim": 512
+      },
+      "score": 0.07220487296581268
+    },
+    {
+      "trial": 16,
+      "architecture": {
+        "backbone": "resnet34",
+        "feature_dim": 128
+      },
+      "score": 0.0893777459859848
+    },
+    {
+      "trial": 17,
+      "architecture": {
+        "backbone": "swin_tiny_patch4_window7_224",
+        "feature_dim": 512
+      },
+      "score": 0.12421784549951553
+    },
+    {
+      "trial": 18,
+      "architecture": {
+        "backbone": "convnextv2_base",
+        "feature_dim": 256
+      },
+      "score": 0.1074422262609005
+    },
+    {
+      "trial": 19,
+      "architecture": {
+        "backbone": "vit_tiny_patch16_224",
+        "feature_dim": 128
+      },
+      "score": 0.12208514288067818
+    },
+    {
+      "trial": 20,
+      "architecture": {
+        "backbone": "mobileone_s0",
+        "feature_dim": 512
+      },
+      "score": 0.09901995956897736
+    },
+    {
+      "trial": 21,
+      "architecture": {
+        "backbone": "convnext_tiny",
+        "feature_dim": 256
+      },
+      "score": 0.10871140658855438
+    },
+    {
+      "trial": 22,
+      "architecture": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 256
+      },
+      "score": 0.5346933901309967
+    },
+    {
+      "trial": 23,
+      "architecture": {
+        "backbone": "mobileone_s0",
+        "feature_dim": 128
+      },
+      "score": 0.09904466196894646
+    },
+    {
+      "trial": 24,
+      "architecture": {
+        "backbone": "convnext_tiny",
+        "feature_dim": 512
+      },
+      "score": 0.10948623344302177
+    },
+    {
+      "trial": 25,
+      "architecture": {
+        "backbone": "resnet34",
+        "feature_dim": 512
+      },
+      "score": 0.11022467166185379
+    },
+    {
+      "trial": 26,
+      "architecture": {
+        "backbone": "mobilenetv3_small_100",
+        "feature_dim": 512
+      },
+      "score": 1.432488739490509
+    },
+    {
+      "trial": 27,
+      "architecture": {
+        "backbone": "mobilenetv3_small_100",
+        "feature_dim": 128
+      },
+      "score": 117.45913314819336
+    },
+    {
+      "trial": 28,
+      "architecture": {
+        "backbone": "efficientnet_b0",
+        "feature_dim": 128
+      },
+      "score": 0.10741566121578217
+    },
+    {
+      "trial": 29,
+      "architecture": {
+        "backbone": "deit_tiny_patch16_224",
+        "feature_dim": 512
+      },
+      "score": 0.09432441741228104
+    },
+    {
+      "trial": 30,
+      "architecture": {
+        "backbone": "deit_tiny_patch16_224",
+        "feature_dim": 128
+      },
+      "score": 0.09973577782511711
+    }
+  ],
+  "num_trials": 30
+}

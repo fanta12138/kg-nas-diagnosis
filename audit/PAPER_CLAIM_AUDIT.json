@@ -1,0 +1,258 @@
+{
+  "paper": "KG-NAS: Knowledge-Guided Neural Architecture Search for Unsupervised Anomaly Detection",
+  "target_journal": "Machine Vision and Applications (Springer)",
+  "round": "2026-10-08_run01",
+  "generated": "2026-10-09T12:00:19",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "independence_note": "The zero-context reviewer was a fresh sub-agent of the same model family (no cross-family channel available in this environment). Its verdict is an input, not an acceptance: the executor re-derived every finding from raw evidence before acting.",
+  "verdict": "PASS_AFTER_FIX_AND_REPOSITIONING",
+  "reason_code": "claim_mismatch_remediated",
+  "rounds": [
+    {
+      "round": "reviewer",
+      "verdict": "FAIL",
+      "reason_code": "claim_mismatch",
+      "total_claims": 178,
+      "exact": 152,
+      "rounding": 9,
+      "ambiguous": 5,
+      "missing": 1,
+      "mismatch": 11,
+      "artefacts": [
+        "reviewer_report.md",
+        "findings.json"
+      ]
+    },
+    {
+      "round": "executor_verification",
+      "confirmed": 11,
+      "false_positives": 4,
+      "open_items": 7,
+      "artefacts": [
+        "executor_verification.json",
+        "verify_F1F2.log",
+        "verify_rest.log",
+        "verify_focus.log",
+        "verify_round.log",
+        "verify_params2.log"
+      ]
+    },
+    {
+      "round": "post_fix_reread",
+      "main_checks": 14,
+      "main_failed": 0,
+      "supplement_checks": 1,
+      "supplement_failed": 0,
+      "extra_fix_from_reread": "the re-read caught that main.tex (Elsevier fallback) carries its own copy of the abstract and still had both direction errors; patched in round 02",
+      "artefacts": [
+        "checks_main.json",
+        "checks_supp.json",
+        "threeway.py"
+      ]
+    },
+    {
+      "round": "open_item_resolution",
+      "note": "User directive: search the experiment tree, run the experiment if genuinely missing, drop multiplier wording.",
+      "resolved": [
+        "U1 (14 backbones / 42 configs)",
+        "U2 (BTAD 10 confirmed)",
+        "U3 (106x)",
+        "U4 (multiplier removed)",
+        "U5 (single-category MVTec search)",
+        "U7 (estimates, compliant)",
+        "U8 (bs=64 confirmed)",
+        "N2 (figure params realigned)"
+      ],
+      "experiment_run": "M1 full-pipeline FPS benchmark on an idle RTX 3090 -> student 146.2 FPS, full pipeline 110.8 FPS",
+      "still_open": []
+    },
+    {
+      "round": "narrative_revision",
+      "note": "Capacity experiment forced a repositioning.",
+      "new_experiment": "5-band parameter-capacity study (2.81-25.77M, 15 categories each): 1.70 pp spread, all 10 pairwise p>0.05",
+      "changed": [
+        "new section 4 Parameter-Capacity Analysis",
+        "abstract: honest benchmark positioning",
+        "contribution 4 retitled",
+        "efficiency table + EfficientAD/SimpleNet",
+        "near-SOTA claims removed",
+        "conclusion PaDiM 78.0->77.9",
+        "capacity limitation added",
+        "Discussion limitations de-duplicated"
+      ],
+      "artefacts": [
+        "patches_round09/10/11.json",
+        "docs/叙事调整记录.md",
+        "docs/参数量扫描实验报告.md"
+      ]
+    }
+  ],
+  "fixes_applied": [
+    {
+      "id": "F1",
+      "file": "main_springer.tex",
+      "what": "abstract: 500-epoch winner direction 12/15 -> 3/15 (ResNet-18 leads 8)"
+    },
+    {
+      "id": "F1b",
+      "file": "main.tex",
+      "what": "same fix in the Elsevier fallback abstract"
+    },
+    {
+      "id": "F2a",
+      "file": "main_springer.tex",
+      "what": "abstract: 'exceeding a 12.9M ResNet-18' -> 'matching 98.2% of the average AUROC of'"
+    },
+    {
+      "id": "F2b",
+      "file": "sections/1_introduction.tex",
+      "what": "same fix in the introduction"
+    },
+    {
+      "id": "F2c",
+      "file": "main.tex",
+      "what": "same fix in the Elsevier fallback abstract"
+    },
+    {
+      "id": "F4",
+      "file": "sections/4_experiments.tex",
+      "what": "Ablation 4: scope the 0.0023 figure to the 39-trial feature-dimension subset instead of calling it the NAS best trial (0.0097)"
+    },
+    {
+      "id": "F5",
+      "file": "sections/4_experiments.tex",
+      "what": "tab:sota_comparison params 6 -> 5.3"
+    },
+    {
+      "id": "F6",
+      "file": "sections/4_experiments.tex",
+      "what": "PaDiM average 78.0 -> 77.9 (caption, table row, prose, conclusion)"
+    },
+    {
+      "id": "F6d",
+      "file": "sections/5_conclusion.tex",
+      "what": "PaDiM 78.0 -> 77.9"
+    },
+    {
+      "id": "F9",
+      "file": "sections/4_experiments.tex + supplementary/supplementary.tex",
+      "what": "'two ties within 0.02 pp' -> accurate wording (one shared best on bottle; 0.034 pp leather margin)"
+    },
+    {
+      "id": "F10",
+      "file": "sections/4_experiments.tex",
+      "what": "CNN type count 13 -> 10"
+    },
+    {
+      "id": "F11",
+      "file": "sections/3_method.tex",
+      "what": "trials per config 2.1 -> 2.2"
+    },
+    {
+      "id": "F13",
+      "file": "sections/4_experiments.tex",
+      "what": "BTAD train-sample lower bound 400 -> 399"
+    },
+    {
+      "id": "M1",
+      "file": "sections/4_experiments.tex + sections/5_conclusion.tex",
+      "what": "removed the untraceable '~107 FPS full pipeline' claim (no artefact exists)"
+    },
+    {
+      "id": "N1",
+      "file": "D:/autopaper/fig/generate_figures.py",
+      "what": "figure data params corrected 6.0/14.9/2.5/28.0 -> 5.3/12.9/2.7/29.3 to match the (independently verified) manuscript and the figure's own caption; 19 PNGs regenerated at 1200 dpi and resynced"
+    }
+  ],
+  "rejected_as_false_positive": [
+    {
+      "id": "F3",
+      "why": "RDDetector (the authors' own model) measures encoder+decoder at 5.41/13.04/2.66/29.25 M = the printed 5.3/12.9/2.7/29.3; ratio 2.41 = 2.4x. The reviewer trusted arch_efficiency.csv, which was itself the wrong artefact."
+    },
+    {
+      "id": "F7",
+      "why": "carpet 77.7 follows the paper's consistent two-step rounding (77.6485 -> 77.65 -> 77.7); applying it to all 11 baseline means reproduces 10 exactly."
+    },
+    {
+      "id": "F8",
+      "why": "CFA 89.8 is the same two-step convention (89.7465 -> 89.75 -> 89.8); the detailed table prints 89.75."
+    },
+    {
+      "id": "F12",
+      "why": "same root as F3; 5.3M for EfficientNet-B0+256d is correct."
+    }
+  ],
+  "open_for_user_decision": [],
+  "build": {
+    "main_springer.pdf": {
+      "pages": 30,
+      "errors": 0,
+      "undefined_refs": 0
+    },
+    "main.pdf": {
+      "pages": 22,
+      "errors": 0,
+      "undefined_refs": 0
+    },
+    "supplementary/supplementary.pdf": {
+      "pages": 14,
+      "errors": 0,
+      "undefined_refs": 0
+    }
+  },
+  "audited_input_hashes": {
+    "main_springer.tex": "sha256:5257d4f54fac24068518794b91621cad88440f635ca6ec5c6e4f6de24269fed4",
+    "main.tex": "sha256:d1fa36fcb2ad38c290a10f59b02772eb4fec9183fb63a44d56a6a26d2a1cf05e",
+    "math_commands.tex": "sha256:2ef13b0e38e6a468cd07f05378d6f4137f2567151c205975394cffdb8ab18d95",
+    "references.bib": "sha256:0584f40ef4588a03287a1940f0cddd2ee8e844a3aa04b079af962822e31e8239",
+    "sections/1_introduction.tex": "sha256:f0c1b21ca92dfed2137764294f0036ce0029624f329af3f3ffa3d7bcbbaa8c19",
+    "sections/2_related_work.tex": "sha256:53924fb8425d6b5364d930aff74c9fc25108e50f259f7b8c47f061c5410272ee",
+    "sections/3_method.tex": "sha256:c599e5a2d04c0c08307ef7720c8704eb4f8f948706b1f39e1def6b0c7046f174",
+    "sections/4_experiments.tex": "sha256:6562ff09a5bf29c2bf4c7c5b345560f36e428a845c074a3a71da493bd6495501",
+    "sections/5_conclusion.tex": "sha256:b938099fbcba56510e19eedf8e0cd443270da27a1282259f86a5b74dd82ac215",
+    "tables/BASELINE_ANALYSIS_TABLE.tex": "sha256:46a5d6941b2fd4c953f28ed9acf3a52a2cdd70987fbbbe68bc8ab9baaf5e65a3",
+    "supplementary/supplementary.tex": "sha256:b7fe0e48cc536d6be6063d8363106cf5129bc09f35b94afd750beb3f75d64dec",
+    "main_springer.pdf": "sha256:11eeb489abb7e082a4b38a1211ee590982127b0052e22ee0532890ef2b1317e5",
+    "main.pdf": "sha256:df465b5640d0fadabdf87bb4b8ca72d23622bca1e9c439ca0e4c776b834d8d7e",
+    "supplementary/supplementary.pdf": "sha256:b95e0ac130b2a5d7a98c970f878c5c82c08ea3752c38c4774c3c3b2da970710a",
+    "D:/autopaper/fig/arch_efficiency.csv": "sha256:abe1e4a2a328992a89c0b95c3a637ecf3e87ff99be2a9f83068141995345a2bc",
+    "D:/autopaper/fig/architecture_comparison.csv": "sha256:6db1915bb5397afd8ebc46766add6f76d345cbc6844bd55aadf89e1073fc7469",
+    "D:/autopaper/fig/backbone_distribution.csv": "sha256:6aa35398873d5fdfb43e0ae970615430240fcb9c967340820bda9c45898fb5ba",
+    "D:/autopaper/fig/baseline_best_counts.csv": "sha256:0978c4983e3a26a3d07c04bec91eada54183b194b2a494eec020304c78f05633",
+    "D:/autopaper/fig/baseline_efficiency.csv": "sha256:305d73dc7b0f988446aa66f467b51388cc2a480e423399fa53125fc08d4db451",
+    "D:/autopaper/fig/baseline_ranking.csv": "sha256:d4dfdaf474d68e274e06bd352d62359003cad9ca903436e82ac02e19cbf44348",
+    "D:/autopaper/fig/baseline_stability.csv": "sha256:52422213a45c73c7cf3dbcd11a83680541bc1e5949f5b511235ee303cc9621ce",
+    "D:/autopaper/fig/baselines_full_results.csv": "sha256:0ddb805574b43fc0b12eded72f470359a8693c761231f0af6382e050be46c9a4",
+    "D:/autopaper/fig/btad_per_category.csv": "sha256:27bb46c89dd8e0f7243fb40eb7d234494315b7f9bfc0f647bf0471906701e5b0",
+    "D:/autopaper/fig/category_paradigms.csv": "sha256:378bc30af61b0e5a4f973a6c3dfa4c764dd4195eaa835c7e24e2971974f97745",
+    "D:/autopaper/fig/cnn_vs_transformer_stats.csv": "sha256:64365ca6539553012c8240c8e77617339ac6b2d8d6431426e03d38982968e4c1",
+    "D:/autopaper/fig/cross_dataset.csv": "sha256:ae54db8e97a83f586e412e7329a192fae97a98ff70826444c2d37516f2a800a7",
+    "D:/autopaper/fig/efficiency_metrics.csv": "sha256:01ab8653bc05f9e0a570e4b4b3f875787f5027e0e93e459edacece750482fc99",
+    "D:/autopaper/fig/feature_dim_ablation.csv": "sha256:1e6c25a8b24a423849ea0bfadc4a55503bc33b218055f3ee8162a564d72e254c",
+    "D:/autopaper/fig/inference_efficiency.csv": "sha256:cd080a1d77ec18f0b5805953fe483ca1d3bd0db08d96294f571bdc91a2dac186",
+    "D:/autopaper/fig/main_results_comparison.csv": "sha256:f95566bb85ff6b03c1809822c0664a30415fdb7c87b5f09adf16e5439904e77b",
+    "D:/autopaper/fig/nas_search_trials.csv": "sha256:ca6a70837b8f30dc6b9b755a53189c9247393bba76073da674dc97d593b760de",
+    "D:/autopaper/fig/search_strategies.csv": "sha256:4c79d0a930ac71885263a02f6f1c04c366fcd0c4cd445fb6188d905c50ed0353",
+    "D:/autopaper/fig/teacher_ablation.csv": "sha256:a0f623536238cdb3e2f700dde0d7cc0e68e071de0ab89ba27e02eaad4ac04dde",
+    "D:/autopaper/fig/training_budget.csv": "sha256:4728ebd152a711cd6268d95aea404f0183327de49dc1461eee0561ab79a9789a",
+    "D:/autopaper/fig/training_time_breakdown.csv": "sha256:27d5e4d34d05376434025107a99c37af82ee96983df4c4605c95b992a1fae45c",
+    "D:/autopaper/fig/training_time_optimization.csv": "sha256:12c48808d79f6669c38d89e79c16152ea9d655ae1dd80cc3bb3d20c2b21302b1",
+    "D:/autopaper/fig/visa_backbone_distribution.csv": "sha256:c5527d34f37d454c6be9dee571acc8168dd01a5dbf00e96b13dd220bb243f190",
+    "D:/autopaper/fig/visa_per_category.csv": "sha256:8dec51b7bec907c3ba9f52abeb5f54d62f67b6fe2913c7d5e61ab15469f3a67b",
+    "D:/autopaper/fig/year_trend.csv": "sha256:8d46a772c163f6a731e7a99932115d551b9151d4100a7ec6659fe9fdafd43c14",
+    "D:/autopaper/unsupervised_nas/paper_results/analysis_1_backbone_stats.csv": "sha256:54f4b985a898c27f6f88e6f6ebdb77c57e16d6006645dd1efa479cda86c01e0c",
+    "D:/autopaper/unsupervised_nas/paper_results/analysis_3_year_trend.csv": "sha256:452eeef274db0524b3bcac42e0cfb499b922507c1a47a08c47f2bbfb4c7bff86",
+    "D:/autopaper/unsupervised_nas/paper_results/efficiency_1_training_time.csv": "sha256:f90d364095b11f2557a5bbf118318b7d3215a136f508e4abd442eec34510bfdb",
+    "D:/autopaper/unsupervised_nas/paper_results/efficiency_2_inference.csv": "sha256:30c7f657386711cf35f431e6bda9e23fcb3d874f55438b26afcf9624d865eab8",
+    "D:/autopaper/unsupervised_nas/paper_results/table_ablation_3_loss_functions.csv": "sha256:81d3f11182fdc636c00684c780ee4b18bbe4bea1734a42e2e5511d7ae2080171",
+    "D:/autopaper/unsupervised_nas/paper_results/table_ablation_4_dimension_alignment.csv": "sha256:574539e3789465acf3c4645485cdc2ad99dc7fbaea1bbb0ab0def29bb16470d3",
+    "D:/autopaper/unsupervised_nas/paper_results/ablation_phase1/ablation_1_search_space.csv": "sha256:485aa90734dd3a7ef4e00abdf7ad467f7441550938485999a0ce17f76a5d1bac",
+    "D:/autopaper/unsupervised_nas/paper_results/ablation_phase1/ablation_3_feature_dim.csv": "sha256:7189eecf38655b3daabcef5adfe597fdc7589cac371e5516f834036464fb6801",
+    "D:/autopaper/unsupervised_nas/paper_results/ablation_phase1/ablation_3_feature_dim_per_backbone.csv": "sha256:3097c37d08cc511efa402f6a372869327248e1c01617ed299ab16ab8536fc391",
+    "D:/autopaper/unsupervised_nas/experiments/P0_ablation_4_results.csv": "sha256:2b5e0b58c70f2b9c164b84205b534a2b98cb26dd4d123424f997ebe4886b31ff",
+    "D:/autopaper/unsupervised_nas/experiments/P0_ablation_results.csv": "sha256:0e7186ece16b917ca7e1a8f0f7c43a9bddc81886b089fd4d0ca86581f3f58fb6",
+    "D:/autopaper/unsupervised_nas/experiments/all_categories_results.json": "sha256:53103b29cbe4868f56a93dae37f5d50154d37d7e5f21576bd6b9505c362025b1",
+    "D:/autopaper/experiments/backbone_stability_analysis.json": "sha256:dd34915f0af466ba49c1922606193c971648729c40d252a45637c5a1a4cde691"
+  }
+}

@@ -1,0 +1,26 @@
+  [cap8/transistor] epoch 20: loss=0.1829 AUROC=0.5583 AP=0.5509
+  [cap8/transistor] epoch 40: loss=0.1371 AUROC=0.6792 AP=0.6699
+  [cap8/transistor] epoch 60: loss=0.1244 AUROC=0.6758 AP=0.6694
+  [cap8/transistor] epoch 80: loss=0.1114 AUROC=0.7238 AP=0.7098
+  [cap8/transistor] epoch 100: loss=0.1024 AUROC=0.7413 AP=0.7242
+  [cap8/transistor] epoch 120: loss=0.0968 AUROC=0.7612 AP=0.7390
+  [cap8/transistor] epoch 140: loss=0.0955 AUROC=0.7688 AP=0.7492
+  [cap8/transistor] epoch 160: loss=0.0885 AUROC=0.7829 AP=0.7663
+  [cap8/transistor] epoch 180: loss=0.0922 AUROC=0.7983 AP=0.7763
+  [cap8/transistor] epoch 200: loss=0.0848 AUROC=0.7971 AP=0.7751
+  [cap8/transistor] epoch 220: loss=0.0866 AUROC=0.8004 AP=0.7791
+  [cap8/transistor] epoch 240: loss=0.0804 AUROC=0.7975 AP=0.7807
+  [cap8/transistor] epoch 260: loss=0.0780 AUROC=0.8096 AP=0.7900
+  [cap8/transistor] epoch 280: loss=0.0789 AUROC=0.8125 AP=0.7913
+  [cap8/transistor] epoch 300: loss=0.0823 AUROC=0.8117 AP=0.7892
+  [cap8/transistor] epoch 320: loss=0.0756 AUROC=0.8158 AP=0.7933
+  [cap8/transistor] epoch 340: loss=0.0741 AUROC=0.8204 AP=0.7995
+  [cap8/transistor] epoch 360: loss=0.0764 AUROC=0.8154 AP=0.7944
+  [cap8/transistor] epoch 380: loss=0.0732 AUROC=0.8179 AP=0.7963
+  [cap8/transistor] epoch 400: loss=0.0764 AUROC=0.8192 AP=0.7978
+  [cap8/transistor] epoch 420: loss=0.0779 AUROC=0.8204 AP=0.8016
+  [cap8/transistor] epoch 440: loss=0.0743 AUROC=0.8200 AP=0.7997
+  [cap8/transistor] epoch 460: loss=0.0742 AUROC=0.8204 AP=0.7991
+  [cap8/transistor] epoch 480: loss=0.0731 AUROC=0.8213 AP=0.8019
+  [cap8/transistor] epoch 500: loss=0.0758 AUROC=0.8200 AP=0.8015
+DONE budget=8 cat=transistor deit_tiny_patch16_224 AUROC=0.8200 AP=0.8015 (3.0 min wall)

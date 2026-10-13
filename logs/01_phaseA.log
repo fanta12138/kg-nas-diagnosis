@@ -1,0 +1,441 @@
+[16:05:38] phase A: loading teacher + wood loaders
+D:\autopaper\proxy_diag\proxy_diag_v2.py:118: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ck = torch.load('experiments/stage1/best_teacher.pth', map_location=device)
+C:\Users\dengpeng\anaconda3\lib\site-packages\torch\_utils.py:88: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  untyped_storage = torch.UntypedStorage(self.size(), device=device)
+[16:10:15]   [ 1/42] convnextv2_tiny                d=128  mean=7.5902  std=0.325447  CV=4.3%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[16:14:49]   [ 2/42] convnextv2_tiny                d=256  mean=7.74401  std=0.193119  CV=2.5%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[16:19:26]   [ 3/42] convnextv2_tiny                d=512  mean=7.79981  std=0.169714  CV=2.2%  (n=10)
+[16:24:16]   [ 4/42] convnextv2_base                d=128  mean=7.6089  std=0.173042  CV=2.3%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[16:29:06]   [ 5/42] convnextv2_base                d=256  mean=7.71885  std=0.118503  CV=1.5%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[16:33:56]   [ 6/42] convnextv2_base                d=512  mean=7.78327  std=0.217307  CV=2.8%  (n=10)
+[16:38:42]   [ 7/42] mobileone_s0                   d=128  mean=7.62365  std=0.329549  CV=4.3%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[16:43:28]   [ 8/42] mobileone_s0                   d=256  mean=7.78737  std=0.234389  CV=3.0%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[16:48:14]   [ 9/42] mobileone_s0                   d=512  mean=7.73084  std=0.190374  CV=2.5%  (n=10)
+[16:52:42]   [10/42] convnext_tiny                  d=128  mean=7.59257  std=0.323151  CV=4.3%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[16:57:09]   [11/42] convnext_tiny                  d=256  mean=7.79005  std=0.206315  CV=2.6%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[17:01:37]   [12/42] convnext_tiny                  d=512  mean=7.76255  std=0.147352  CV=1.9%  (n=10)
+[17:06:16]   [13/42] convnext_small                 d=128  mean=7.7079  std=0.233091  CV=3.0%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[17:10:54]   [14/42] convnext_small                 d=256  mean=7.87957  std=0.147371  CV=1.9%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[17:15:37]   [15/42] convnext_small                 d=512  mean=7.72981  std=0.279774  CV=3.6%  (n=10)
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[17:20:12]   [16/42] vit_tiny_patch16_224           d=128  mean=7.22782  std=0.86704  CV=12.0%  (n=10)
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[17:24:38]   [17/42] vit_tiny_patch16_224           d=256  mean=7.72448  std=0.329485  CV=4.3%  (n=10)
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[17:29:03]   [18/42] vit_tiny_patch16_224           d=512  mean=7.33717  std=0.740331  CV=10.1%  (n=10)
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+[17:33:27]   [19/42] deit_tiny_patch16_224          d=128  mean=7.42001  std=0.594724  CV=8.0%  (n=10)
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[17:37:52]   [20/42] deit_tiny_patch16_224          d=256  mean=7.61113  std=0.59348  CV=7.8%  (n=10)
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+Unexpected keys (norm.bias, norm.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[17:42:16]   [21/42] deit_tiny_patch16_224          d=512  mean=7.59867  std=0.436173  CV=5.7%  (n=10)
+[17:46:49]   [22/42] swin_tiny_patch4_window7_224   d=128  mean=7.60673  std=0.157849  CV=2.1%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[17:51:22]   [23/42] swin_tiny_patch4_window7_224   d=256  mean=7.67711  std=0.0636039  CV=0.8%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[17:55:55]   [24/42] swin_tiny_patch4_window7_224   d=512  mean=8.795  std=2.93383  CV=33.4%  (n=10)
+[18:00:23]   [25/42] efficientnet_b0                d=128  mean=16.0852  std=20.7543  CV=129.0%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[18:04:58]   [26/42] efficientnet_b0                d=256  mean=8.64249  std=1.60902  CV=18.6%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[18:09:27]   [27/42] efficientnet_b0                d=512  mean=11.6464  std=8.66107  CV=74.4%  (n=10)
+    ⚠️  Warning: Invalid score detected (score=4.19e+28, kd=21858224122232929145180913664.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=2.24e+18, kd=2258405473386496.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=5.38e+31, kd=42486266562185718624105703407616.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.92e+30, kd=1561681306834530858166627860480.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=4.41e+30, kd=2977462192203050579754666164224.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=8.29e+29, kd=11027414022415499824770056192.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=3.55e+23, kd=355080511983706703921152.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.15e+20, kd=10.1041), skipping
+    ⚠️  Warning: Invalid score detected (score=5.28e+18, kd=5283842765254295552.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=3.35e+17, kd=9.8274), skipping
+    ⚠️  Warning: Invalid score detected (score=1.99e+19, kd=92575065127780352.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=3.03e+13, kd=675138944.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.18e+25, kd=8507777870296902633783296.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=9.31e+24, kd=9.7107), skipping
+[18:14:00]   [28/42] efficientnet_b1                d=128  mean=2.38897  std=3.65068  CV=152.8%  (n=10)
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=3.44e+23, kd=277623065963764524253184.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.61e+21, kd=1542721140942180450304.0000), skipping
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=1.40e+13, kd=10.6392), skipping
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=9.38e+21, kd=5558265535957047443456.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=6.21e+21, kd=76984743136503791616.0000), skipping
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=1.11e+30, kd=1109629337379034540983862689792.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.44e+29, kd=143825678085961255171823501312.0000), skipping
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=1.59e+29, kd=121973814991380751438745436160.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.28e+22, kd=414561482617779126272.0000), skipping
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=7.85e+28, kd=78479757151692673350432194560.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.57e+31, kd=8254121767828913077368035213312.0000), skipping
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=1.15e+30, kd=1153753769753421439402816569344.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.79e+29, kd=132099503759216878966661971968.0000), skipping
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=1.74e+26, kd=173861540572148430587035648.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=2.82e+26, kd=281846622110587521729560576.0000), skipping
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[18:18:33]   [29/42] efficientnet_b1                d=256  mean=2.15137  std=3.35152  CV=155.8%  (n=10)
+  添加维度对齐层: 512 -> 128
+    ⚠️  Warning: Invalid score detected (score=2.56e+26, kd=240041633013311029251145728.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=2.98e+26, kd=298237181409376964465131520.0000), skipping
+  添加维度对齐层: 512 -> 128
+    ⚠️  Warning: Invalid score detected (score=3.26e+31, kd=20743551939692031493380572708864.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.89e+27, kd=905769076028234609920573440.0000), skipping
+  添加维度对齐层: 512 -> 128
+    ⚠️  Warning: Invalid score detected (score=8.15e+24, kd=92024357029070558461952.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.88e+26, kd=297052441432970789650432.0000), skipping
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+    ⚠️  Warning: Invalid score detected (score=3.00e+29, kd=281056816941652160024271650816.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=3.69e+29, kd=365377163902792630487486562304.0000), skipping
+  添加维度对齐层: 512 -> 128
+    ⚠️  Warning: Invalid score detected (score=2.90e+15, kd=2897813092433920.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=2.79e+16, kd=10.8070), skipping
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+    ⚠️  Warning: Invalid score detected (score=3.48e+21, kd=3479854307925563539456.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=2.17e+17, kd=217369806679048192.0000), skipping
+  添加维度对齐层: 512 -> 128
+    ⚠️  Warning: Invalid score detected (score=1.55e+30, kd=1435151654891932376683002200064.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=3.00e+29, kd=249219887708362421058450489344.0000), skipping
+  添加维度对齐层: 512 -> 128
+    ⚠️  Warning: Invalid score detected (score=6.99e+27, kd=382856713013595925762801664.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=1.14e+29, kd=113803119834321896854266052608.0000), skipping
+[18:23:05]   [30/42] efficientnet_b1                d=512  mean=1.60626  std=3.21259  CV=200.0%  (n=10)
+    ⚠️  Warning: Invalid score detected (score=1.78e+04, kd=17831.8203), skipping
+    ⚠️  Warning: Invalid score detected (score=1.80e+04, kd=17976.1484), skipping
+    ⚠️  Warning: Invalid score detected (score=7.01e+10, kd=70089424896.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=7.49e+10, kd=74888347648.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=7.68e+03, kd=7684.2529), skipping
+    ⚠️  Warning: Invalid score detected (score=7.37e+03, kd=7374.5146), skipping
+[18:27:29]   [31/42] mobilenetv3_small_100          d=128  mean=8.11303  std=7.66244  CV=94.4%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+    ⚠️  Warning: Invalid score detected (score=4.01e+09, kd=4008705024.0000), skipping
+    ⚠️  Warning: Invalid score detected (score=4.04e+09, kd=4036641536.0000), skipping
+  添加维度对齐层: 256 -> 128
+[18:31:52]   [32/42] mobilenetv3_small_100          d=256  mean=36.1411  std=68.2983  CV=189.0%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[18:36:15]   [33/42] mobilenetv3_small_100          d=512  mean=74.4979  std=193.265  CV=259.4%  (n=10)
+[18:40:35]   [34/42] resnet18                       d=128  mean=6.91025  std=1.05014  CV=15.2%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[18:45:02]   [35/42] resnet18                       d=256  mean=8.09257  std=0.750702  CV=9.3%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[18:49:18]   [36/42] resnet18                       d=512  mean=7.95922  std=0.807991  CV=10.2%  (n=10)
+[18:53:36]   [37/42] resnet34                       d=128  mean=7.56902  std=0.660616  CV=8.7%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[18:57:52]   [38/42] resnet34                       d=256  mean=7.74677  std=0.233438  CV=3.0%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[19:02:10]   [39/42] resnet34                       d=512  mean=7.66537  std=0.255367  CV=3.3%  (n=10)
+[19:06:31]   [40/42] resnet50                       d=128  mean=7.57336  std=0.612897  CV=8.1%  (n=10)
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+  添加维度对齐层: 256 -> 128
+[19:10:54]   [41/42] resnet50                       d=256  mean=7.64208  std=0.33735  CV=4.4%  (n=10)
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+  添加维度对齐层: 512 -> 128
+[19:15:18]   [42/42] resnet50                       d=512  mean=7.73737  std=0.255809  CV=3.3%  (n=10)
+[19:15:18] phase A done -> D:/autopaper/proxy_diag\phaseA_proxy.json

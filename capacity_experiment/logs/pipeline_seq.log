@@ -1,0 +1,73 @@
+[05:26:26] pipeline start — waiting for searches
+[05:26:26] search  3M finished (1/5)
+[05:26:26] search  6M finished (2/5)
+[05:26:26] search  8M finished (3/5)
+[05:26:26] search 13M finished (4/5)
+[05:26:26] search 30M finished (5/5)
+[05:26:26] budget  3M -> mobilenetv3_small_100 + 256d (2.81M, mean score 9.8482, n=7) | dropped 1 degenerate | 2 configs ranked
+[05:26:26] budget  6M -> efficientnet_b0 + 256d (5.41M, mean score 7.8278, n=2) | dropped 4 degenerate | 6 configs ranked
+[05:26:26] budget  8M -> deit_tiny_patch16_224 + 128d (7.01M, mean score 7.0126, n=4) | dropped 11 degenerate | 16 configs ranked
+[05:26:26] budget 13M -> vit_tiny_patch16_224 + 128d (7.01M, mean score 7.0511, n=3) | dropped 13 degenerate | 18 configs ranked
+[05:26:26] budget 30M -> deit_tiny_patch16_224 + 512d (7.90M, mean score 7.2738, n=3) | dropped 6 degenerate | 31 configs ranked
+[05:26:26] training jobs pending: 53 (parallel=1)
+[05:26:26]   start 6M/hazelnut    efficientnet_b0
+[05:33:11]   ok    6M/hazelnut    6.8 min  (done=1 left=52)
+[05:33:11]   start 6M/metal_nut   efficientnet_b0
+[05:36:56]   ok    6M/metal_nut   3.8 min  (done=2 left=51)
+[05:36:56]   start 6M/pill        efficientnet_b0
+[05:41:26]   ok    6M/pill        4.5 min  (done=3 left=50)
+[05:41:26]   start 6M/screw       efficientnet_b0
+[05:46:41]   ok    6M/screw       5.3 min  (done=4 left=49)
+[05:46:41]   start 6M/tile        efficientnet_b0
+[05:50:42]   ok    6M/tile        4.0 min  (done=5 left=48)
+[05:50:42]   start 6M/toothbrush  efficientnet_b0
+[05:51:57]   ok    6M/toothbrush  1.3 min  (done=6 left=47)
+[05:51:57]   start 6M/transistor  efficientnet_b0
+[05:55:42]   ok    6M/transistor  3.8 min  (done=7 left=46)
+[05:55:42]   start 6M/zipper      efficientnet_b0
+[05:59:42]   ok    6M/zipper      4.0 min  (done=8 left=45)
+[05:59:42]   start 8M/bottle      deit_tiny_patch16_224
+[06:02:57]   ok    8M/bottle      3.3 min  (done=9 left=44)
+[06:02:57]   start 8M/cable       deit_tiny_patch16_224
+[06:06:27]   ok    8M/cable       3.5 min  (done=10 left=43)
+[06:06:27]   start 8M/capsule     deit_tiny_patch16_224
+[06:09:42]   ok    8M/capsule     3.3 min  (done=11 left=42)
+[06:09:42]   start 8M/carpet      deit_tiny_patch16_224
+[06:13:57]   ok    8M/carpet      4.3 min  (done=12 left=41)
+[06:13:57]   start 8M/grid        deit_tiny_patch16_224
+[06:17:58]   ok    8M/grid        4.0 min  (done=13 left=40)
+[06:17:58]   start 8M/hazelnut    deit_tiny_patch16_224
+[06:23:43]   ok    8M/hazelnut    5.8 min  (done=14 left=39)
+[06:23:43]   start 8M/leather     deit_tiny_patch16_224
+[06:27:28]   ok    8M/leather     3.8 min  (done=15 left=38)
+[06:27:28]   start 8M/metal_nut   deit_tiny_patch16_224
+[06:30:43]   ok    8M/metal_nut   3.3 min  (done=16 left=37)
+[06:30:43]   start 8M/pill        deit_tiny_patch16_224
+[06:34:43]   ok    8M/pill        4.0 min  (done=17 left=36)
+[06:34:43]   start 8M/screw       deit_tiny_patch16_224
+[06:39:13]   ok    8M/screw       4.5 min  (done=18 left=35)
+[06:39:13]   start 8M/tile        deit_tiny_patch16_224
+[06:42:43]   ok    8M/tile        3.5 min  (done=19 left=34)
+[06:42:43]   start 8M/toothbrush  deit_tiny_patch16_224
+[06:43:43]   ok    8M/toothbrush  1.0 min  (done=20 left=33)
+[06:43:43]   start 8M/transistor  deit_tiny_patch16_224
+[06:46:59]   ok    8M/transistor  3.3 min  (done=21 left=32)
+[06:46:59]   start 8M/wood        deit_tiny_patch16_224
+[06:50:44]   ok    8M/wood        3.8 min  (done=22 left=31)
+[06:50:44]   start 8M/zipper      deit_tiny_patch16_224
+[06:54:14]   ok    8M/zipper      3.5 min  (done=23 left=30)
+[06:54:14]   start 13M/bottle      vit_tiny_patch16_224
+[06:57:29]   ok    13M/bottle      3.3 min  (done=24 left=29)
+[06:57:29]   start 13M/cable       vit_tiny_patch16_224
+[07:00:59]   ok    13M/cable       3.5 min  (done=25 left=28)
+[07:00:59]   start 13M/capsule     vit_tiny_patch16_224
+[07:04:14]   ok    13M/capsule     3.3 min  (done=26 left=27)
+[07:04:14]   start 13M/carpet      vit_tiny_patch16_224
+[07:08:29]   ok    13M/carpet      4.3 min  (done=27 left=26)
+[07:08:29]   start 13M/grid        vit_tiny_patch16_224
+[07:12:29]   ok    13M/grid        4.0 min  (done=28 left=25)
+[07:12:29]   start 13M/hazelnut    vit_tiny_patch16_224
+[07:18:15]   ok    13M/hazelnut    5.8 min  (done=29 left=24)
+[07:18:15]   start 13M/leather     vit_tiny_patch16_224
+[07:22:00]   ok    13M/leather     3.8 min  (done=30 left=23)
+[07:22:00]   start 13M/metal_nut   vit_tiny_patch16_224

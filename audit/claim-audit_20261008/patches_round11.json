@@ -1,0 +1,20 @@
+{
+  "tag": "round11_dedup",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "D1-dedup-limitations",
+      "find": "\\runinhead{Limitations and Future Work.} Despite promising results, KG-NAS has several limitations:\n\\begin{itemize}\n    \\item \\textbf{Category-Specific Optimization}: Current framework uses uniform search strategy across all categories. Category-adaptive search could further improve performance.\n    \\item \\textbf{Alignment Failures}: Dynamic alignment occasionally degrades performance (e.g., metal\\_nut). Investigating failure cases could lead to more robust alignment strategies.\n    \\item \\textbf{Cross-Dataset Detection Paradigm}: The reverse-distillation paradigm is evaluated on MVTec-AD; extending it to VisA and BTAD (currently using the prototype paradigm) would unify the framework across benchmarks.\n    \\item \\textbf{Paradigm Selection}: Automatic per-category selection between the reverse-distillation and prototype paradigms (Section~\\ref{subsec:paradigm_complementarity}) remains an open direction for further accuracy gains.\n\\end{itemize}\n",
+      "replace": "\\runinhead{Limitations.} Two further failure modes are worth recording: dynamic alignment occasionally degrades a category (e.g.\\ metal\\_nut), and the reverse-distillation paradigm is validated only on MVTec-AD while VisA and BTAD currently use the prototype paradigm. The consolidated list of limitations, including the measured capacity envelope, is given in Section~\\ref{sec:conclusion}.\n",
+      "note": "Discussion: its Limitations list duplicates the Conclusion; keep only the two unique failure modes."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "D2-search-space",
+      "find": "    \\item \\textbf{Diverse Search Space}: Including 14 backbones spanning 2015-2023 ensures exploration of both proven and emerging architectures.",
+      "replace": "    \\item \\textbf{Diverse Search Space}: Including 14 backbones spanning 2015--2023 ensures exploration of both proven and emerging architectures, and the capacity study (Section~\\ref{subsec:capacity}) shows that the search's preference for compact models is justified on this data.",
+      "note": "Link the search-space claim to the capacity evidence."
+    }
+  ]
+}

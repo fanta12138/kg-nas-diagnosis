@@ -1,0 +1,62 @@
+{
+  "tag": "round09_narrative",
+  "paper_dir": "G:/submission_KBS",
+  "patches": [
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "N1-capacity-section",
+      "find": "\\subsection{Discussion}\n\\label{subsec:discussion}",
+      "replace": "\\subsection{Parameter-Capacity Analysis}\n\\label{subsec:capacity}\n\nThe discovered student is deliberately small. A natural question is whether the remaining gap to recent detectors (Table~\\ref{tab:sota_comparison}) is a consequence of that budget: would KG-NAS close it if it were allowed more parameters? We answer this by running the complete pipeline under five mutually exclusive parameter bands, each trained with the identical protocol (500 epochs, batch size 64, seed 42, ResNet-18 teacher, reverse distillation). For each band the search is restricted to backbones whose deployed size (encoder$+$decoder) falls inside the band, and the best-scoring backbone is trained on all 15 MVTec-AD categories.\n\n\\begin{table}[t]\n\\centering\n\\caption{Parameter-capacity study. Each band constrains the search to backbones of a given deployed size; the selected backbone is then trained on all 15 MVTec-AD categories under the standard protocol. Std is the per-category standard deviation.}\n\\label{tab:capacity}\n\\footnotesize\n\\begin{tabular}{llccc}\n\\toprule\nBand & Backbone & Params (M) & Ave AUROC (\\%) & Std \\\\\n\\midrule\n0--3M   & MobileNetV3-Small & 2.81  & 82.01 & 15.97 \\\\\n3--6M   & EfficientNet-B0   & 5.41  & 83.14 & 14.49 \\\\\n6--9M   & DeiT-Tiny         & 7.31  & 81.55 & 15.40 \\\\\n9--15M  & ResNet-18         & 13.04 & \\textbf{83.25} & 14.71 \\\\\n15--31M & ResNet-50         & 25.77 & 83.08 & 15.05 \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\nTwo observations follow. First, \\emph{capacity is not the binding constraint.} Across a $9.2\\times$ range in parameter count the average AUROC varies by only 1.7 points (81.55--83.25\\%), and none of the ten pairwise comparisons is significant (paired $t$-test over the 15 categories, smallest $p=0.058$); the trend is not even monotone, as the 25.77M ResNet-50 is no better than the 2.81M MobileNetV3-Small. Second, the gap to modern detectors is therefore \\emph{methodological} rather than budgetary: EfficientAD reaches 97.5\\% with 8.0M parameters while the comparably sized DeiT-Tiny band attains 81.55\\%, and CFA reaches 89.75\\% at 12M against 83.25\\% for the 13.04M band.\n\nThis result retroactively justifies the search's preference for small models (Section~\\ref{subsubsec:ablation_search_space}): on MVTec-AD's limited training data, additional capacity buys no measurable accuracy, so preferring EfficientNet-B0 to a 28M Swin-Tiny is not a failure of the search but a correct response to the data. It also bounds what the present framework can claim---improving on the models above will require a different detection or search objective, not a larger budget.\n\n\\subsection{Discussion}\n\\label{subsec:discussion}",
+      "note": "New capacity study, placed between Efficiency Analysis and Discussion."
+    },
+    {
+      "file": "main_springer.tex",
+      "id": "N2-abstract",
+      "find": "A paradigm study shows reverse distillation and prototype-based scoring are complementary; combining them per category raises the average to 86.1\\% AUROC, within four points of the strongest baseline. Code and search logs will be released to support deployment on new production lines.",
+      "replace": "A paradigm study shows reverse distillation and prototype-based scoring are complementary; combining them per category raises the average to 86.1\\% AUROC, within four points of the strongest baseline. The discovered architectures exceed the classical embedding-based and teacher--student baselines on both accuracy and size (PaDiM 77.9\\%, Reverse Distillation 80.5\\%, PatchCore 50.6\\%, STPM 51.1\\%), but trail recent high-capacity detectors (CFA 89.8\\%, EfficientAD 97.5\\%). A capacity study spanning 2.8M to 25.8M parameters finds no statistically significant change in accuracy, indicating that this remaining gap is methodological rather than an effect of the parameter budget. Code and search logs will be released to support deployment on new production lines.",
+      "note": "Abstract: honest benchmark positioning + capacity finding."
+    },
+    {
+      "file": "main.tex",
+      "id": "N2b-abstract-elsevier",
+      "find": "Finally, a paradigm study shows that reverse distillation and prototype-based scoring are complementary; combining them per category raises the average to 86.1\\% AUROC, within four points of the strongest baseline. Code will be made publicly available.",
+      "replace": "Finally, a paradigm study shows that reverse distillation and prototype-based scoring are complementary; combining them per category raises the average to 86.1\\% AUROC, within four points of the strongest baseline. The discovered architectures exceed the classical embedding-based and teacher--student baselines on both accuracy and size (PaDiM 77.9\\%, Reverse Distillation 80.5\\%, PatchCore 50.6\\%, STPM 51.1\\%), but trail recent high-capacity detectors (CFA 89.8\\%, EfficientAD 97.5\\%). A capacity study spanning 2.8M to 25.8M parameters finds no statistically significant change in accuracy, indicating that this remaining gap is methodological rather than an effect of the parameter budget. Code will be made publicly available.",
+      "note": "Same abstract change in the Elsevier fallback."
+    },
+    {
+      "file": "sections/1_introduction.tex",
+      "id": "N3-intro-bullet",
+      "find": "    \\item \\textbf{Efficiency-Focused Design}: Unlike existing methods that prioritize absolute accuracy at the cost of computational resources, KG-NAS adopts an efficiency-first design philosophy targeting resource-constrained deployment scenarios. The discovered 5.3M-parameter student attains 82.4\\% AUROC on MVTec-AD, matching 98.2\\% of the average AUROC of a 12.9M ResNet-18 student trained under an identical protocol at less than half the parameter count. We further characterize how this comparison depends on the training budget (Section~\\ref{subsec:main_results}). Cross-dataset evaluation across three datasets (MVTec-AD, VisA, BTAD) reveals dataset-dependent architectural preferences: CNNs dominate for texture-based defects (MVTec-AD, BTAD), while Transformers excel for complex structures (VisA 75\\%). This automatic adaptation eliminates manual architecture selection, enabling rapid deployment across diverse industrial scenarios without requiring domain expertise.",
+      "replace": "    \\item \\textbf{Deployment-Oriented Discovery with a Measured Capacity Envelope}: KG-NAS targets deployment scenarios in which architecture engineering is the bottleneck rather than absolute accuracy. Without any manual architecture design the discovered 5.3M-parameter student attains 82.4\\% AUROC on MVTec-AD, exceeding the classical embedding-based and teacher--student baselines (PaDiM 77.9\\%, Reverse Distillation 80.5\\%, PatchCore 50.6\\%, STPM 51.1\\%) on both accuracy and size. We also delimit the framework honestly: a five-band capacity study (Section~\\ref{subsec:capacity}) shows that varying the parameter budget over a $9.2\\times$ range leaves accuracy statistically unchanged, so the remaining gap to recent high-capacity detectors (CFA 89.8\\%, EfficientAD 97.5\\%) is methodological rather than budgetary. Cross-dataset evaluation across three datasets (MVTec-AD, VisA, BTAD) reveals dataset-dependent architectural preferences: CNNs dominate for texture-based defects (MVTec-AD, BTAD), while Transformers excel for complex structures (VisA 75\\%). This automatic adaptation eliminates manual architecture selection, enabling rapid deployment across diverse industrial scenarios without requiring domain expertise.",
+      "note": "Contribution 4: efficiency-first -> deployment-oriented discovery with a measured capacity envelope."
+    },
+    {
+      "file": "sections/1_introduction.tex",
+      "id": "N4-intro-close",
+      "find": "Extensive ablations validate each component: dynamic alignment contributes +5.2\\% AUROC, the searched student attains 82.4\\% AUROC on MVTec-AD (above PaDiM and Reverse Distillation), and no fixed architecture dominates all categories. Cross-dataset evaluation confirms KG-NAS's adaptability to diverse data characteristics. These findings establish KG-NAS as a practical solution for automated architecture discovery in resource-constrained industrial anomaly detection.",
+      "replace": "Extensive ablations validate each component: dynamic alignment contributes +5.2\\% AUROC, the searched student attains 82.4\\% AUROC on MVTec-AD (above PaDiM and Reverse Distillation), and no fixed architecture dominates all categories. Cross-dataset evaluation confirms KG-NAS's adaptability to diverse data characteristics, and a capacity study bounds what the framework can currently deliver. These findings establish KG-NAS as a practical solution for automated architecture discovery in industrial anomaly detection, while identifying the accuracy gap to high-capacity detectors as the open problem that motivates future work.",
+      "note": "Closing paragraph: name the accuracy gap as the open problem."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "N5-eff-row",
+      "find": "STPM & 51.10 & $\\sim$15 & $\\sim$100 & $\\sim$150 & Teacher-student \\\\\n\\midrule",
+      "replace": "STPM & 51.10 & $\\sim$15 & $\\sim$100 & $\\sim$150 & Teacher-student \\\\\nEfficientAD~\\cite{batzner2024efficientad} & 97.50 & 8 & 1000+ & $\\sim$60 & Real-time edge \\\\\nSimpleNet~\\cite{liu2023simplenet} & 98.00 & 12 & - & $\\sim$120 & High-accuracy \\\\\n\\midrule",
+      "note": "Efficiency table: add EfficientAD and SimpleNet so the comparison is not selective."
+    },
+    {
+      "file": "sections/4_experiments.tex",
+      "id": "N6-eff-caption",
+      "find": "\\caption{Efficiency comparison across methods. FPS: baseline values are literature-based estimates; KG-NAS is measured on a single RTX 3090 (batch size 1, 224$\\times$224 input). KG-NAS targets resource-constrained scenarios with minimal parameters.}",
+      "replace": "\\caption{Efficiency comparison across methods. FPS: baseline values are literature-based estimates; KG-NAS is measured on a single RTX 3090 (batch size 1, 224$\\times$224 input). KG-NAS has the smallest deployed model of the methods compared, but EfficientAD reaches a far higher AUROC at 8M parameters, so parameter count alone does not separate the methods---see the capacity study in Section~\\ref{subsec:capacity}.}",
+      "note": "Efficiency caption: state explicitly that parameter count does not separate the methods."
+    },
+    {
+      "file": "sections/5_conclusion.tex",
+      "id": "N7-conclusion",
+      "find": "Beyond accuracy, KG-NAS offers clear practical advantages for resource-constrained deployment: the complete search and training process takes roughly 102 minutes on MVTec-AD on a single GPU, making the framework suitable for rapid prototyping and deployment in industrial settings where computational resources are limited and quick iteration is essential.",
+      "replace": "Beyond accuracy, KG-NAS keeps the full search-and-train cycle within roughly 102 minutes on MVTec-AD on a single GPU, which suits rapid prototyping where architecture engineering, not compute, is the bottleneck. We also report the limits of the approach. A five-band capacity study shows that varying the parameter budget over a $9.2\\times$ range leaves accuracy statistically unchanged (1.7 points spread; all pairwise $p>0.05$), so the gap to recent high-capacity detectors such as CFA and EfficientAD is a property of the search and detection objective rather than of model size; closing it is the central open problem this work leaves.",
+      "note": "Conclusion: replace the deployment-friendly framing with the measured capacity bound."
+    }
+  ]
+}

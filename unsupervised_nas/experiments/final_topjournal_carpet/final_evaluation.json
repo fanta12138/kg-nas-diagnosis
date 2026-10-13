@@ -1,0 +1,33 @@
+{
+  "auroc": 0.5678170144462278,
+  "ap": 0.8493756631024287,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_carpet\\best_model.pth",
+  "per_defect_type": {
+    "color": {
+      "auroc": 0.0,
+      "count": 19
+    },
+    "cut": {
+      "auroc": 0.0,
+      "count": 17
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 28
+    },
+    "hole": {
+      "auroc": 0.0,
+      "count": 17
+    },
+    "metal_contamination": {
+      "auroc": 0.0,
+      "count": 17
+    },
+    "thread": {
+      "auroc": 0.0,
+      "count": 19
+    }
+  }
+}

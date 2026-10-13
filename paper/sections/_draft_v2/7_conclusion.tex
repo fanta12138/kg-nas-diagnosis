@@ -1,0 +1,88 @@
+% ============================================================================
+% DRAFT v2 -- Section 7: Conclusion
+% Genre: benchmark / evaluation study.
+% ============================================================================
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+This paper belongs to the class of studies that measure how a field evaluates
+itself. Such studies do not add a detector; they establish what the field's
+existing measurements are worth, and they are useful to the extent that the
+answer changes how the next comparison is read. Our answer is that the standard
+evaluation design for unsupervised anomaly detection cannot resolve the
+differences the field reports, and that in the pipeline we instrumented the
+design axis those comparisons are usually about contributes almost nothing.
+
+The binding constraint is resolution. A two-way decomposition of the 210-detector
+matrix we trained leaves a residual standard deviation of $3.30$ points, and the
+run-to-run standard deviation of a single detector at a fixed (backbone,
+category) is $1.96$ points over three seeds. Comparing two backbones across the
+fifteen categories the benchmark provides is therefore a paired test whose minimum
+detectable difference is $2.98$ points --- larger than the entire $3.98$-point
+spread of the fourteen backbones, and six times the $0.5$-point margin that
+separates PatchCore from the strongest results reported since. Resolving that
+margin on a single category would take $240$ independent training runs per
+backbone, or $532$ categories. This is a statement about the benchmark rather than
+about our pipeline, and it bounds every architecture comparison made on it.
+
+Within that constraint, the diagnosis of the architecture axis is unambiguous.
+Two thirds of the search space is spent on a feature dimension that cannot reach
+the deployed model, because the encoder that consumes it hard-codes a width while
+the decoder honours the requested one. The search signal does not distinguish
+architectures: it separates the twelve well-behaved backbones by $5.7\%$ of its
+median, which is the same order as its own run-to-run noise, and it returns
+exactly $0.0$ for two of them whenever their student diverges and every validation
+batch is rejected. And the quantity it is used to predict is dominated by
+something else entirely: architecture accounts for $0.54\%$ of the variance in
+detection accuracy and the category for $95.32\%$
+(Section~\ref{subsec:capacity_null}).
+
+The interaction between the first two facts produces the result we did not
+anticipate. Because the objective can silently return the optimum of its own
+range, and the search minimises a single sample per candidate, the rule does not
+select the best architecture but the one with the heaviest left tail --- which is
+the one that failed. Twelve independent runs selected a configuration prone to
+this collapse every single time, and the architectures they returned perform
+\emph{worse} than uniform random selection, at the $1.2$th percentile of the
+random distribution (Section~\ref{subsec:search_vs_random}). The four runs whose
+results the manuscript originally reported chose a backbone that does not
+collapse, which on this account was luck.
+
+The constructive finding is where the accuracy actually is. The reduction that
+turns a multi-scale discrepancy map into an image-level score is worth $+7.92$
+points of mean AUROC across three training seeds --- an order of magnitude more
+than the architecture --- and it is worth those points without retraining
+anything. The default choice, an unweighted mean over all pixels, is not merely
+suboptimal: it fails below chance on \texttt{screw}, and top-$k$ pooling repairs
+that failure to $84\%$. The gain is robust across two orders of magnitude in $k$
+(Section~\ref{sec:leverage}). And the reduction can be chosen without any anomaly
+label, by perturbing held-out normal images with synthetic defects and selecting
+the policy that best separates them from the clean ones: averaged over three
+training seeds this recovers $61\%$ of the oracle gap, though the seeds range from
+$41\%$ to $72\%$, so it is a direction rather than a settled number.
+
+Three limitations bound these claims. The diagnosis is established on MVTec-AD,
+with one teacher, one detector family and one training protocol; whether the same
+collapse appears in other pipelines is a question our evidence cannot settle,
+though the mechanism --- a thresholded objective that can return its own optimum,
+combined with a minimising selection rule --- is not specific to this codebase.
+Our recommendation for the architecture axis is deliberately narrow: the backbone
+effect is statistically detectable ($p = 0.039$) and merely two orders of
+magnitude smaller than the category effect, so we do not conclude that
+architecture does not matter, nor that NAS for anomaly detection is worthless in
+principle. And the resolvability figure is conditional on this benchmark's fifteen
+categories and this task's residual variance; it should be recomputed rather than
+assumed for another benchmark or detector family --- which is exactly the
+calculation a benchmark paper ought to publish, and which here decides the
+question.
+
+Two things follow for practice. A search whose objective can silently return the
+optimum of its own range must filter degenerate evaluations before minimising, and
+should report the distribution of its per-configuration scores rather than a
+single minimum. And any deployed reverse-distillation detector currently scoring
+images by the mean over its discrepancy map can be re-scored, on the models it
+already has, with a $k$ of two percent, and expect to gain several points of
+accuracy and to stop failing below chance on the categories that currently defeat
+it. Neither of those requires convincing anyone that a new architecture is better,
+which is convenient, because on this benchmark that cannot be shown.

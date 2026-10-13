@@ -1,0 +1,9 @@
+{
+  "method": "FastFlow",
+  "year": 2021,
+  "conference": "NeurIPS",
+  "backbone": "resnet18",
+  "epochs": 50,
+  "auroc": 0.7289473684210526,
+  "ap": 0.9102775290538708
+}

@@ -1,0 +1,33 @@
+{
+  "auroc": 0.6654040404040403,
+  "ap": 0.8211611971705184,
+  "best_f1": 0.0,
+  "threshold": 0.0,
+  "model_path": "D:\\autopaper\\unsupervised_nas\\experiments\\final_topjournal_tile\\best_model.pth",
+  "per_defect_type": {
+    "crack": {
+      "auroc": 0.0,
+      "count": 17
+    },
+    "glue_strip": {
+      "auroc": 0.0,
+      "count": 18
+    },
+    "good": {
+      "auroc": 0.0,
+      "count": 33
+    },
+    "gray_stroke": {
+      "auroc": 0.0,
+      "count": 16
+    },
+    "oil": {
+      "auroc": 0.0,
+      "count": 18
+    },
+    "rough": {
+      "auroc": 0.0,
+      "count": 15
+    }
+  }
+}
