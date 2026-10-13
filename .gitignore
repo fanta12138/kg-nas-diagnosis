@@ -1,9 +1,11 @@
 # --- datasets (download separately; see docs/DATA.md)
-datasets/
-datasets-2/
-datasets-3/
-mvtec_loco_anomaly_detection/
-data/
+# NOTE: anchored with a leading slash on purpose. An unanchored `datasets/`
+# would also match the source package `unsupervised_nas/datasets/`.
+/datasets/
+/datasets-2/
+/datasets-3/
+/mvtec_loco_anomaly_detection/
+/data/
 *.tar
 *.zip
 
@@ -17,10 +19,10 @@ data/
 *.npy
 *.onnx
 *.h5
-runs/
-outputs/
-checkpoints/
-lightning_logs/
+/runs/
+/outputs/
+/checkpoints/
+/lightning_logs/
 
 # --- LaTeX build products (paper/main_v2.pdf IS tracked)
 paper/*.aux
