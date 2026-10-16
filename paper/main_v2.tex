@@ -68,23 +68,23 @@ Unsupervised Industrial Anomaly Detection}
 
 %%==================================%% Abstract
 \abstract{Unsupervised anomaly detection models normality so that inspection can
-run on conforming parts alone. Two decisions determine whether such a system
-works: the architecture, and how per-pixel discrepancies are reduced to an
-image-level score --- the axis the literature documents least. We measure both, and
-what the benchmark resolves. On MVTec-AD the margin contested between
+run on conforming parts alone. Two decisions determine whether it works: the
+architecture, and how per-pixel discrepancies are reduced to an
+image-level score --- the axis the literature documents least. On MVTec-AD the
+margin contested between
 state-of-the-art generations is $0.5$ AUROC points, while the most favourable
 comparison the benchmark allows --- pairing over all fifteen categories ---
-resolves only $2.98$ --- more than the whole spread of the
-architectures it ranks. Instrumenting a reverse-distillation pipeline, the
+resolves only $2.98$, more than the whole spread of the
+architectures it ranks. In a reverse-distillation pipeline the
 searched feature dimension never reaches the detector, so its three values
-collapse to one deployed model and two thirds of the space is a duplicate
+collapse to one model and two thirds of the space is a duplicate
 grid. The distillation signal that ranks candidates separates the
 twelve degenerate-free backbones by $5.7\%$ of its median and returns exactly zero
 for two, which the minimising rule prefers. Training 210 detectors attributes
 $0.54\%$ of AUROC variance to the architecture and $95.32\%$ to the category;
-twelve searches each returned a collapse-prone backbone, below random. The
-leverage is in the reduction step: top-$k$ pooling raises mean AUROC by $7.5$
-points without retraining, yet a label-free criterion adds little. The
+twelve searches each returned a collapse-prone backbone, never one of the four
+best. The leverage is the reduction step: top-$k$ pooling raises mean AUROC by
+$7.5$ points without retraining, yet a label-free criterion adds little. Our
 pipeline reaches $82.47\%$ against published values near $99\%$, a gap we report
 rather than hide.}
 
