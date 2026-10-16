@@ -90,7 +90,7 @@ rather than obscured, and the code that produces it is here.
 ## Install
 
 ```bash
-git clone <this-repo> && cd kg-nas-diagnosis
+git clone https://github.com/fanta12138/kg-nas-diagnosis.git && cd kg-nas-diagnosis
 
 # Python 3.9+ (developed on 3.9.13 / torch 2.5.1+cu121)
 python -m venv .venv && . .venv/bin/activate      # Windows: .venv\Scripts\activate

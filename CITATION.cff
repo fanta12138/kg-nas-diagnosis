@@ -1,6 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this code or the released results, please cite the paper below."
 title: "The Architecture Axis Is Not the Axis: A Diagnostic Study of Neural Architecture Search and Score Fusion in Unsupervised Industrial Anomaly Detection"
+version: "1.0.0"
+repository-code: "https://github.com/fanta12138/kg-nas-diagnosis"
+url: "https://github.com/fanta12138/kg-nas-diagnosis"
 type: software
 authors:
   - family-names: Li
