@@ -1,0 +1,16 @@
+--- rerun: S1 abstract / introduction / related work (paper 30688 chars, 3 evidence files)
+  [S1 abstract / introduction / related work] returned 12404 chars, usage=33333
+    verdict=WARN claims=31 (257s)
+--- rerun: S3 results — proxy repeatability + variance decomposition (paper 19445 chars, 4 evidence files)
+  [S3 results — proxy repeatability + variance decomposition] returned 14333 chars, usage=83990
+    verdict=WARN claims=35 (504s)
+--- rerun: S4 results — resolvability + repeated searches (paper 8335 chars, 6 evidence files)
+  [S4 results — resolvability + repeated searches] returned 13708 chars, usage=96606
+    verdict=FAIL claims=34 (279s)
+--- rerun: S5 results — inference-time scoring policy (paper 17906 chars, 4 evidence files)
+  [S5 results — inference-time scoring policy] returned 17765 chars, usage=252442
+    verdict=WARN claims=45 (153s)
+--- rerun: S6 discussion + conclusions (paper 11031 chars, 2 evidence files)
+  [S6 discussion + conclusions] returned 12880 chars, usage=16438
+    verdict=FAIL claims=36 (138s)
+DONE -> G:/submission_KBS/audit/claim-audit_20261016/_rerun.json

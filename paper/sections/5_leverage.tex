@@ -90,9 +90,14 @@ default, and again without retraining anything.
 
 The pooling effect is not an artefact of one training run. Repeating the
 comparison with two further seeds (43 and 44) gives $+8.07$ and $+7.78$ points,
-against $+7.42$ for the seed reported here; the three independent estimates agree
-to within $0.7$ points, and the aggregated policy means over the three seeds are
-$82.36\%$ for the default and $90.28\%$ for top-$k$.
+against $+7.42$ for the seed reported here; the three per-seed estimates agree to
+within $0.7$ points. Aggregating the two later seeds gives policy means of
+$82.36\%$ for the default and $90.28\%$ for top-$k$ ($+7.92$ points); combining
+them with the seed reported here gives $82.51\%$ and $90.26\%$ ($+7.75$ points).
+We quote both rather than one, because the seed-42 model enters the first
+comparison through a different evaluation script than it does the second
+(Table~\ref{tab:ksweep}) and we do not average two implementations of the same
+statistic.
 
 \runinhead{The effect is not a hyper-parameter artefact.}
 The comparison fixes $k = 1\%$ of the map, so it is fair to ask whether the gain

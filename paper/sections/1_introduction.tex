@@ -76,7 +76,7 @@ Two-way decomposition of the 210-detector matrix leaves a residual standard
 deviation of $3.30$ points, and the run-to-run standard deviation of a single
 detector at a fixed (backbone, category) is $1.96$ points over three seeds.
 Comparing two backbones across the fifteen categories is therefore a paired test
-whose minimum detectable difference is \textbf{$2.98$ points} --- larger than the
+whose minimum detectable difference is \textbf{$2.98$ points} --- $75\%$ of the
 entire $3.98$-point spread of the fourteen backbones, and six times the margin
 that separates the 2022 and 2026 state of the art. To resolve $0.5$ points on a
 single category would take $240$ independent training runs per backbone. This is
@@ -131,7 +131,7 @@ transfer, is selected --- reliably --- by a failure mode
 
 \runinhead{The leverage is in the decision nobody documents.} On frozen models,
 changing only the reduction that turns discrepancy maps into an image score moves
-mean AUROC from $82.36\%$ to $90.28\%$ --- $+7.92$ points, reproduced across three
+mean AUROC from $82.5\%$ to $90.3\%$ --- $+7.8$ points, consistent across three
 training seeds --- and choosing the policy per category reaches $93.72\%$. The
 policy can further be chosen without any anomaly label, by perturbing held-out
 normal images with synthetic defects and selecting the policy that best separates

@@ -19,7 +19,7 @@ matrix we trained leaves a residual standard deviation of $3.30$ points, and the
 run-to-run standard deviation of a single detector at a fixed (backbone,
 category) is $1.96$ points over three seeds. Comparing two backbones across the
 fifteen categories the benchmark provides is therefore a paired test whose minimum
-detectable difference is $2.98$ points --- larger than the entire $3.98$-point
+detectable difference is $2.98$ points --- $75\%$ of the entire $3.98$-point
 spread of the fourteen backbones, and six times the $0.5$-point margin that
 separates PatchCore from the strongest results reported since. Resolving that
 margin on a single category would take $240$ independent training runs per
@@ -30,10 +30,10 @@ Within that constraint, the diagnosis of the architecture axis is unambiguous.
 Two thirds of the search space is spent on a feature dimension that cannot reach
 the deployed model, because the encoder that consumes it hard-codes a width while
 the decoder honours the requested one. The search signal does not distinguish
-architectures: it separates the twelve well-behaved backbones by $5.7\%$ of its
-median, which is the same order as its own run-to-run noise, and it returns
-exactly $0.0$ for two of them whenever their student diverges and every validation
-batch is rejected. And the quantity it is used to predict is dominated by
+architectures: it separates the eleven tight well-behaved backbones by $5.7\%$ of
+its median, which is the same order as its own run-to-run noise, and it returns
+exactly $0.0$ when a student diverges --- for two backbones in most trials, and
+occasionally for any of them. And the quantity it is used to predict is dominated
 something else entirely: architecture accounts for $0.54\%$ of the variance in
 detection accuracy and the category for $95.32\%$
 (Section~\ref{subsec:capacity_null}).

@@ -107,9 +107,11 @@ called ten times for each of the 42 configurations on MVTec wood (420
 evaluations). ``Zero'' is the fraction of repeats returning exactly $0.0$; ``CV''
 is the within-configuration coefficient of variation, pooled over each backbone's
 three dimensions. The two collapse-prone backbones are shown individually; of the
-remaining twelve not one degenerate trial occurred in any repeat, and their pooled
-medians span $7.538$--$7.971$ with CV between $2.2\%$ and $12.1\%$. Their
-per-backbone values are released with the code.}
+remaining twelve not one degenerate trial occurred in any repeat. Eleven of those
+twelve --- all but \texttt{efficientnet\_b0}, whose repeats are degenerate-free
+but wide --- have pooled medians spanning $7.540$--$7.971$ with CV between
+$2.2\%$ and $12.1\%$; \texttt{efficientnet\_b0} itself has a pooled CV of $74\%$.
+Their per-backbone values are released with the code.}
 \label{tab:proxy_repeats}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrrr}
@@ -119,7 +121,7 @@ Backbone & Repeats & Zero (\%) & Median proxy & CV (\%) \\
 \texttt{efficientnet\_b1}        & 30 & \textbf{73} & \textbf{0.000} & 169.5 \\
 \texttt{mobilenetv3\_small\_100} & 30 & \textbf{13} & 7.979 & 180.9 \\
 \midrule
-twelve well-behaved backbones (each) & 30 & 0 & 7.538--7.971 & 2.2--12.1 \\
+twelve well-behaved backbones (each) & 30 & 0 & 7.540--7.971 & 2.2--74.0 \\
 \midrule
 \textbf{all 42 configurations}   & \textbf{420} & \textbf{6.2} & --- & --- \\
 \bottomrule
@@ -128,12 +130,16 @@ twelve well-behaved backbones (each) & 30 & 0 & 7.538--7.971 & 2.2--12.1 \\
 \end{table}
 
 Two regimes appear, and both matter. Twelve of the fourteen backbones are well
-behaved: not a single degenerate trial in any repeat, with within-configuration
-coefficients of variation between $2.2\%$ and $12.1\%$. Two backbones are broken,
-and severely so: \texttt{efficientnet\_b1} returns exactly $0.0$ in $73\%$ of
-evaluations at every dimension, and \texttt{mobilenetv3\_small\_100} in $13\%$.
-Across all 420 evaluations, 26 ($6.2\%$) returned exactly zero. The cause is
-visible in the engine's own diagnostics --- the student diverges, and every
+behaved in the sense that matters for the search: not a single degenerate trial
+occurred in any repeat, so $\argmin$ never returns the spurious optimum. Within
+those twelve, eleven have within-configuration coefficients of variation between
+$2.2\%$ and $12.1\%$; the twelfth, \texttt{efficientnet\_b0}, is degenerate-free
+but noisy, with a pooled CV of $74\%$. Its median proxy ($12.1$) is also the
+outlier of the group, which is why we report the span of the eleven. Two backbones
+are broken, and severely so: \texttt{efficientnet\_b1} returns exactly $0.0$ in
+$73\%$ of evaluations at every dimension, and \texttt{mobilenetv3\_small\_100} in
+$13\%$. Across all 420 evaluations, 26 ($6.2\%$) returned exactly zero. The cause
+is visible in the engine's own diagnostics --- the student diverges, and every
 validation batch then trips the hard threshold:
 
 \begin{quote}
@@ -145,18 +151,20 @@ validation batch then trips the hard threshold:
 \centering
 \includegraphics[width=\linewidth]{figures_v2/fig2_proxy_repeatability.png}
 \caption{Proxy repeatability. (a) Ten independent evaluations of each of the 42
-configurations, on a logarithmic axis. Twelve backbones form a tight band near
-$7.6$; \texttt{efficientnet\_b1} and \texttt{mobilenetv3\_small\_100} intermittently
+configurations, on a logarithmic axis. Eleven backbones form a tight band near
+$7.6$ (\texttt{efficientnet\_b0} is degenerate-free but sits higher and wider);
+\texttt{efficientnet\_b1} and \texttt{mobilenetv3\_small\_100} intermittently
 return exactly $0.0$ (marked red, plotted on the axis floor) when their student
-diverges. (b) The pooled median of the twelve non-collapsing backbones spans only
-$5.7\%$, the same order as the within-configuration noise of a single backbone.}
+diverges. (b) The pooled median of the eleven tight non-collapsing backbones spans
+only $5.7\%$, the same order as the within-configuration noise of a single
+backbone.}
 \label{fig:proxy_repeatability}
 \end{figure}
 
 The more consequential number in Table~\ref{tab:proxy_repeats} is the median
-column. Across the twelve well-behaved backbones --- CNN and Transformer families,
-2015-era through 2023-era, from ResNets~\cite{he2016deep} to ConvNeXt
-V2~\cite{woo2023convnextv2} --- the median proxy spans only $7.538$ to $7.971$, a
+column. Across the eleven tight non-collapsing backbones --- CNN and Transformer
+families, 2015-era through 2023-era, from ResNets~\cite{he2016deep} to ConvNeXt
+V2~\cite{woo2023convnextv2} --- the median proxy spans only $7.54$ to $7.97$, a
 range of $5.7\%$, while a single backbone's within-configuration noise is of the
 same order ($2$--$12\%$ CV). The proxy contains essentially no
 architecture-level signal. Any ranking it produces is not a ranking of
@@ -290,7 +298,7 @@ The backbone term is statistically significant: with 210 detectors the test has
 the power to detect it. That, precisely, is the point. The effect is detectable
 \emph{and} negligible. Architecture accounts for $0.54\%$ of the variance in
 detection accuracy, against $95.32\%$ for which category is being inspected --- a
-factor of $176$. A practitioner choosing between two backbones is moving an
+factor of $175$. A practitioner choosing between two backbones is moving an
 AUROC whose variation is overwhelmingly determined by the object under
 inspection rather than by the network.
 
@@ -301,7 +309,7 @@ The ranking says the same thing. Over the 15 categories the 14 backbones span
 \caption{Two-way decomposition of the true AUROC over 14 backbones and 15
 categories (210 detectors). The backbone effect is statistically detectable and
 practically negligible: it accounts for $0.54\%$ of the variance against $95.32\%$
-for the category, a factor of $176$.}
+for the category, a factor of $175$.}
 \label{fig:variance}
 \end{figure}
 
@@ -390,7 +398,7 @@ has resolution $\sigma_{\text{seed}} = 1.96$ per arm; detecting the $0.5$-point
 contested margin at $80\%$ power with a two-sided test at $\alpha = 0.05$ requires
 \textbf{$240$ independent training runs per backbone}. Paired instead across the
 fifteen categories the benchmark provides, the minimum detectable difference is
-\textbf{$2.98$ points} --- larger than the entire $3.98$-point spread of the
+\textbf{$2.98$ points} --- $75\%$ of the entire $3.98$-point spread of the
 fourteen backbones, and six times the margin the field argues about. Adding two
 more training seeds per cell, as we do here, moves this only to $2.95$ points. To
 resolve $0.5$ points by pairing over categories would take $532$ categories; the
@@ -454,17 +462,22 @@ would have improved the deployed detector; replacing it with the constant
 \texttt{resnet18} would have improved it by $2.4$ points.
 
 The mechanism is the one established in Section~\ref{subsec:proxy_stability}: a
-well-behaved configuration is bounded below by roughly $7.5$, while the two
+well-behaved configuration is bounded below by roughly $7$--$8$, while the two
 collapse-prone backbones return exactly $0.0$ whenever their student diverges, so
 minimising a single sample per configuration selects the heaviest left tail in the
 space --- and the heaviest left tails belong to the configurations that failed.
 More trials make this more certain rather than less, because every additional
 sample of a collapse-prone backbone is another chance to return the minimum of the
-space. Our recommendation therefore follows from the mechanism rather than from
-any single run: \textbf{a search whose objective can silently return the optimum
-of its own range must filter degenerate evaluations before minimising, and should
-report the distribution of its per-configuration scores rather than a single
-minimum.}
+space. The exclusion is not perfectly clean: in the twelve recorded runs
+\texttt{efficientnet\_b0} also returned exactly $0.0$ twice, in $2.5\%$ of its 79
+trials, against $82\%$ of 72 for \texttt{efficientnet\_b1} and $22\%$ of 87 for
+\texttt{mobilenetv3\_small\_100} in the same runs. The two extremes dominate the
+minimum, but no backbone is immune, which is why the fix has to be a filter rather
+than a blacklist. Our recommendation therefore follows from the mechanism rather
+than from any single run: \textbf{a search whose objective can silently return the
+optimum of its own range must filter degenerate evaluations before minimising, and
+should report the distribution of its per-configuration scores rather than a
+single minimum.}
 
 \runinhead{Why the earlier searches looked successful.}
 \begin{figure}[t]
@@ -479,7 +492,7 @@ runs: the four strongest backbones were never selected.}
 \end{figure}
 
 The four search runs whose results the manuscript reports selected
-\texttt{efficientnet\_b0} (Section~\ref{subsec:inert}), which does not collapse.
-That this is luck rather than method is the point of
-Section~\ref{subsec:search_vs_random}, and it is the reason we report both lines
-of evidence rather than either alone.
+\texttt{efficientnet\_b0} (Section~\ref{subsec:inert}), a backbone that collapses
+only rarely and never in those four runs. That this is luck rather than method is
+the point of Section~\ref{subsec:search_vs_random}, and it is the reason we report
+both lines of evidence rather than either alone.

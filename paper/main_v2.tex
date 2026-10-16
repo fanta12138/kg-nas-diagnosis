@@ -1,12 +1,13 @@
 % ============================================================================
-% main_v2.tex -- parallel build of the rewritten manuscript.
+% main_v2.tex -- the submitted manuscript (Applied Sciences, MDPI).
 %
-% Purpose: compile the new narrative (sections/_draft_v2/) side by side with the
-% existing main_springer.tex, so page count and cross-references can be checked
-% before switching over. The original main_springer.tex and sections/ are left
-% untouched as the fallback.
+% Self-contained: sections/ and figures_v2/ sit beside this file, so the paper
+% builds from this directory with `latexmk -pdf main_v2.tex'.
 %
-% Same class, same preamble, same bibliography. Only the \input paths differ.
+% The identical file lives in the submission package as `manuscript.tex', where
+% the same content is laid out with `figures/' instead of `figures_v2/' and the
+% section inputs at their flattened paths. The two builds are hash-checked to
+% produce the same page count.
 % ============================================================================
 
 \documentclass[pdflatex,iicol,sn-mathphys-num]{sn-jnl}
@@ -92,13 +93,13 @@ architecture search, Knowledge distillation, Score fusion, Proxy reliability}
 \maketitle
 
 %%=============================================================================%% Body
-\input{sections/_draft_v2/1_introduction}
-\input{sections/_draft_v2/2_related_work}
-\input{sections/_draft_v2/3_method}
-\input{sections/_draft_v2/4_diagnosis}
-\input{sections/_draft_v2/5_leverage}
-\input{sections/_draft_v2/6_positioning}
-\input{sections/_draft_v2/7_conclusion}
+\input{sections/1_introduction}
+\input{sections/2_related_work}
+\input{sections/3_method}
+\input{sections/4_diagnosis}
+\input{sections/5_leverage}
+\input{sections/6_positioning}
+\input{sections/7_conclusion}
 
 %%=============================================================================%% Back matter
 \backmatter

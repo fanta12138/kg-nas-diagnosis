@@ -1,0 +1,243 @@
+{
+  "audit_skill": "paper-claim-audit",
+  "audit_version": "1.0",
+  "audit_round": "claim-audit_20261016",
+  "audit_date": "2026-10-16",
+  "paper": "main_v2 (Applied Sciences submission)",
+  "paper_dir": "G:/submission_KBS",
+  "manuscript": "main_v2.tex",
+  "sections_dir": "sections/_draft_v2",
+  "target_journal": "Applied Sciences (MDPI)",
+  "auditor": "glm-5.3-flash (zero-context, segmented) + executor re-verification",
+  "review_independence": "same-family",
+  "independence_note": "The zero-context auditor was a fresh sub-agent of the same model family. Its verdict is an input, not an acceptance: the executor re-derived every finding from the paper's own declared source JSON before acting. 6 of 11 flagged anomalies were false positives traced to the auditor reading the wrong evidence file.",
+  "verdict": "WARN",
+  "reason_code": "corrected_and_reverified",
+  "acceptance_status": "provisional",
+  "summary": {
+    "segments_audited": 6,
+    "claims_total": 206,
+    "exact_match": 56,
+    "rounding_ok": 4,
+    "missing_evidence": 106,
+    "ambiguous_mapping": 15,
+    "number_mismatch": 9,
+    "aggregation_mismatch": 2,
+    "scope_overclaim": 4,
+    "config_mismatch": 1,
+    "unsupported_claim": 4,
+    "confirmed_real_defects": 5,
+    "false_positives_dismissed": 6,
+    "out_of_scope_categories": 3,
+    "false_positive_rate": 0.24
+  },
+  "segments": {
+    "S1_abstract_introduction_related_work": "WARN",
+    "S2_materials_and_methods": "WARN",
+    "S3_results_proxy_variance": "WARN",
+    "S4_results_resolvability_searches": "FAIL",
+    "S5_results_inference_policy": "WARN",
+    "S6_discussion_conclusions": "FAIL"
+  },
+  "audited_input_hashes": {
+    "main_v2.tex": "sha256:352947f958a5b96e847da1dec7237597b7d6c594967233884b450818e7295b9d",
+    "sections/_draft_v2/1_introduction.tex": "sha256:06ef3781fe2d54acb5f85d7207ba5a6ea0e805e5b33d5c97ed182d976c1a74e8",
+    "sections/_draft_v2/2_related_work.tex": "sha256:bd322612b77ffc9736f6ba2cf35ed5f1a301955135293d90b50d24c2675eb4f5",
+    "sections/_draft_v2/3_method.tex": "sha256:b9ebbac7c0765e7108821033101e0c81b645e8badcc878219d5a2d5f9afc77cb",
+    "sections/_draft_v2/4_diagnosis.tex": "sha256:177d60b6cc69e905e1ca2d1509490a9340f548dcf6defdf6a023f8b299c7ce6f",
+    "sections/_draft_v2/5_leverage.tex": "sha256:ad89c004adb08b03f8dc766da96f265414d7748630d424a1d8855c898de025e2",
+    "sections/_draft_v2/6_positioning.tex": "sha256:f647676482cb1e171a2c7045121bad6c304ddafead3e7e447b0d9ab39973bfed",
+    "sections/_draft_v2/7_conclusion.tex": "sha256:1f767fea09ff7fe6ffd172feb96197a95e3dbcb2d89ffda992e8b6259f8a4ab1"
+  },
+  "evidence_root": "G:/kg-nas-diagnosis",
+  "confirmed_defects": [
+    {
+      "id": "D1",
+      "severity": "high",
+      "kind": "arithmetic_claim_false",
+      "locations": [
+        "sections/_draft_v2/1_introduction.tex:79",
+        "sections/_draft_v2/4_diagnosis.tex:393",
+        "sections/_draft_v2/7_conclusion.tex:22"
+      ],
+      "paper_text": "minimum detectable difference is 2.98 points --- larger than the entire 3.98-point spread of the fourteen backbones",
+      "evidence_file": "proxy_diag/samplesize_analysis.json",
+      "evidence_value": "resolvability.delta_0.5pp.mdd_with_15_categories_paired = 2.978296; headline.backbone_spread_pp = 3.979539776",
+      "problem": "2.98 is smaller than 3.98; 'larger than' is arithmetically false. The true relation is 2.98/3.98 = 74.8%.",
+      "fix_applied": "'larger than the entire' -> '75% of the entire' in all three locations",
+      "verified": true
+    },
+    {
+      "id": "D2",
+      "severity": "medium",
+      "kind": "rounding_error",
+      "locations": [
+        "sections/_draft_v2/4_diagnosis.tex:293",
+        "sections/_draft_v2/4_diagnosis.tex:304"
+      ],
+      "paper_text": "architecture accounts for 0.54% of the variance ... against 95.32% for the category --- a factor of 176",
+      "evidence_file": "proxy_diag/final_truth_analysis.json",
+      "evidence_value": "variance.category = 95.3211761723001; variance.backbone = 0.544545515007935; ratio = 175.05",
+      "problem": "175.05 rounds to 175, not 176.",
+      "fix_applied": "176 -> 175 in body and Fig.3 caption",
+      "verified": true
+    },
+    {
+      "id": "D3",
+      "severity": "high",
+      "kind": "scope_overclaim",
+      "locations": [
+        "sections/_draft_v2/4_diagnosis.tex:110-112",
+        "sections/_draft_v2/4_diagnosis.tex:122",
+        "sections/_draft_v2/4_diagnosis.tex:130-133",
+        "sections/_draft_v2/4_diagnosis.tex:151-156",
+        "sections/_draft_v2/4_diagnosis.tex:164-171",
+        "sections/_draft_v2/7_conclusion.tex:32-33"
+      ],
+      "paper_text": "twelve well-behaved backbones ... pooled medians span 7.538-7.971 with CV between 2.2% and 12.1%",
+      "evidence_file": "proxy_diag/phaseC_analysis.json",
+      "evidence_value": "per-config cv grouped by backbone, per-backbone CV = mean of 3 dim CVs: 11 backbones span 2.20%-12.09% (vit_tiny 8.78, resnet18 11.54, swin_tiny 12.09); efficientnet_b0 = 74.00% with median proxy 11.646; eff_b1 = 169.5%, mobilenetv3 = 180.9%",
+      "problem": "The 2.2-12.1% range and the 7.538-7.971 span describe ELEVEN backbones. The set called 'twelve well-behaved' includes efficientnet_b0, whose CV is 74% and whose median proxy (11.65) lies far outside the quoted band.",
+      "fix_applied": "restated as 'eleven tight non-collapsing backbones' (2.2-12.1%, span 7.54-7.97) with efficientnet_b0 reported separately at CV 74%; Table 2 row changed to 2.2--74.0; Fig.2 caption and conclusion 5.7% figure re-scoped to the eleven",
+      "verified": true
+    },
+    {
+      "id": "D4",
+      "severity": "high",
+      "kind": "aggregation_mismatch",
+      "locations": [
+        "sections/_draft_v2/5_leverage.tex:92-95",
+        "sections/_draft_v2/1_introduction.tex:134"
+      ],
+      "paper_text": "the aggregated policy means over the three seeds are 82.36% for the default and 90.28% for top-k",
+      "evidence_file": "fusion_multiseed/fusion_multiseed_summary.json",
+      "evidence_value": "seeds = [43, 44]; n_cells = 30; mean_auroc_by_policy.sum_mean = 0.8235983654987252; sum_topk = 0.9028476703746848; by_seed 43 -> gain 8.07pp, 44 -> gain 7.78pp",
+      "problem": "The file aggregates two seeds (43, 44), not three. Combining with the seed-42 model (82.80/90.21) gives a true three-seed figure of 82.51/90.26 (+7.75).",
+      "fix_applied": "5.2 now states the 2-seed aggregate 82.36/90.28 and the 3-seed figure 82.51/90.26 side by side, explaining that the seed-42 model enters via a different evaluation script; introduction changed to 'from 82.5% to 90.3% --- +7.8 points'",
+      "verified": true
+    },
+    {
+      "id": "D5",
+      "severity": "medium",
+      "kind": "scope_overclaim",
+      "locations": [
+        "sections/_draft_v2/4_diagnosis.tex:459-461",
+        "sections/_draft_v2/4_diagnosis.tex:494-495",
+        "sections/_draft_v2/7_conclusion.tex:34-35"
+      ],
+      "paper_text": "the two collapse-prone backbones return exactly 0.0 whenever their student diverges (implying collapse is exclusive to efficientnet_b1 and mobilenetv3_small_100); 'efficientnet_b0 ... which does not collapse'",
+      "evidence_file": "search_repeats/search_repeats.json",
+      "evidence_value": "exact-0.0 counts over 1190 trials: efficientnet_b1 59/72 (81.9%), mobilenetv3_small_100 19/87 (21.8%), efficientnet_b0 2/79 (2.5%; run08 trial 63, run10 trial 32)",
+      "problem": "efficientnet_b0 is not collapse-free. Asserting exclusivity supports a blacklist, whereas the paper's recommendation is a filter.",
+      "fix_applied": "added the b0 counts (2/79) and the b1/mnv3 rates, reframed the recommendation as a filter that cannot be a blacklist; 'which does not collapse' softened to 'collapses only rarely and never in those four runs'",
+      "verified": true
+    }
+  ],
+  "rejected_as_false_positive": [
+    {
+      "id": "F1",
+      "segment": "S5",
+      "auditor_claim": "Table tab:fusion top-k worst category 78.37 conflicts with fusion_ksweep 76.46",
+      "why": "fusion_policy/fusion_policy.json (the paper's declared source, 82 policies) gives uniform sum_topk worst = pill 78.37 exactly. fusion_ksweep is a second script over a 22-policy grid, whose 76.46 belongs to a different pooling set."
+    },
+    {
+      "id": "F2",
+      "segment": "S5",
+      "auditor_claim": "'We evaluate 82 policies' - own enumeration sums to 108+, contradicts the 111 in another caption",
+      "why": "fusion_policy/fusion_policy.json contains exactly 82 policy keys and reproduces 82.80/42.22/90.21/78.37/90.60/93.72 exactly. The 111 figure belongs to pseudo_select and is stated in that table's own caption."
+    },
+    {
+      "id": "F3",
+      "segment": "S5",
+      "auditor_claim": "70/30 split contradicted by policy_select.json's 80/20",
+      "why": "pseudo_select.json, _s43.json and _s44.json all give n_fit=146, n_holdout=63 (69.9%/30.1%) for bottle. policy_select.json is a different experiment."
+    },
+    {
+      "id": "F4",
+      "segment": "S4",
+      "auditor_claim": "mobilenetv3 rank 7 / 81.85% conflicts with 81.95%",
+      "why": "final_truth_analysis.json gives mobilenetv3_small_100 = 0.8185265904073151 at rank 7 of 14. The 0.819547 the auditor used comes from search_repeats_summary.json, a separate computation over the recorded search runs."
+    },
+    {
+      "id": "F5",
+      "segment": "S3",
+      "auditor_claim": "'210 detectors' should be 390",
+      "why": "phaseB_truth.json holds 390 entries = seed 42 (210 = 14x15) + seeds 43/44 (90 each). final_truth_analysis.json decomposes the seed-42 matrix with df=[13,182], matching the paper. The 210-detector matrix and the 180-residual-df noise estimate refer to different objects and are both correct."
+    },
+    {
+      "id": "F6",
+      "segment": "S3",
+      "auditor_claim": "'+1.06 percentage points' should be +1.07",
+      "why": "Table means are rounded to 2 dp; on unrounded values the difference is 1.06. A 0.01 pp gap is display rounding, not an error."
+    }
+  ],
+  "out_of_scope": [
+    {
+      "id": "O1",
+      "items": ["S1 id 1", "S1 id 12", "S6 id 6", "S6 id 16"],
+      "reason": "External-literature values (PatchCore 99.1%, SimpleNet/DINomaly 99.6%), the publication status of SPADE/FastFlow, and the 'first comparison' novelty claim are statements about the published record, not the paper's own experiments. Not verifiable against internal evidence; citation entries were checked separately."
+    },
+    {
+      "id": "O2",
+      "items": ["S2 all missing_evidence"],
+      "reason": "Method protocol constants (epochs, batch size, lr, seeds, k=1%, B=256) cannot be traced because unsupervised_nas/configs/*.yaml were not supplied to the auditor. Recommended follow-up: add the config files to the evidence set and re-run S2. No contradiction found."
+    },
+    {
+      "id": "O3",
+      "items": ["S3 id 5/6/15/16/19/20/21/23/24", "S6 all missing_evidence"],
+      "reason": "Artefacts that exist in the release repository G:/kg-nas-diagnosis/ but were outside the compacted evidence bundle supplied in this run. Where the paper cites them, values were confirmed by direct computation in the verification pass."
+    }
+  ],
+  "independently_reproduced_table_fusion": {
+    "source": "fusion_policy/fusion_policy.json",
+    "n_policies_in_file": 82,
+    "n_categories": 15,
+    "values": {
+      "default_uniform_mean": 82.80,
+      "worst_category_default_screw": 42.22,
+      "uniform_topk_mean": 90.21,
+      "worst_category_topk_pill": 78.37,
+      "best_single_policy_w0.3_0.6_0.1_topk": 90.60,
+      "per_category_oracle": 93.72,
+      "screw_topk": 84.01,
+      "screw_best_policy_w0.2_0.7_0.1_topk": 87.76
+    },
+    "status": "all exact"
+  },
+  "post_fix_verification": {
+    "method": "every corrected number recomputed from the raw JSON under G:/kg-nas-diagnosis/",
+    "residual_bad_strings_after_fix": {
+      "2.98 larger than": 0,
+      "factor of 176": 0,
+      "three seeds are 82.36": 0
+    },
+    "recompiled": true
+  },
+  "build": {
+    "main_v2.pdf": {
+      "pages": 23,
+      "errors": 0,
+      "undefined_refs": 0,
+      "overfull_hbox": 0,
+      "note": "compiled with latexmk after applying all five fixes"
+    }
+  },
+  "trace_path": "audit/claim-audit_20261016/",
+  "trace_files": [
+    "run_claim_audit.py",
+    "rerun_failed.py",
+    "seg_S1_abstract_introduction_related_work.md",
+    "seg_S2_materials_and_methods.md",
+    "seg_S3_results_proxy_repeatability_variance_decomposition.md",
+    "seg_S4_results_resolvability_repeated_searches.md",
+    "seg_S5_results_inference_time_scoring_policy.md",
+    "seg_S6_discussion_conclusions.md",
+    "_merged.json",
+    "_partial.json",
+    "_rerun.json",
+    "run.log",
+    "rerun.log",
+    "backup_20261016_132524/",
+    "prev_springer_round/"
+  ]
+}

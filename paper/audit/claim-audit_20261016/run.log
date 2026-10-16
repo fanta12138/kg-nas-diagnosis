@@ -1,0 +1,12 @@
+--- segment: S1 abstract / introduction / related work (paper 30688 chars, 3 evidence files)
+  [S1 abstract / introduction / related work] returned 18879 chars, usage=41539
+--- segment: S2 materials and methods (paper 9540 chars, 3 evidence files)
+  [S2 materials and methods] returned 16538 chars, usage=22971
+--- segment: S3 results — proxy repeatability + variance decomposition (paper 19445 chars, 4 evidence files)
+--- segment: S4 results — resolvability + repeated searches (paper 8335 chars, 6 evidence files)
+  [S4 results — resolvability + repeated searches] returned 5689 chars, usage=140650
+--- segment: S5 results — inference-time scoring policy (paper 17906 chars, 4 evidence files)
+--- segment: S6 discussion + conclusions (paper 11031 chars, 2 evidence files)
+  [S6 discussion + conclusions] returned 14235 chars, usage=36048
+
+DONE. partial -> G:/submission_KBS/audit/claim-audit_20261016/_partial.json

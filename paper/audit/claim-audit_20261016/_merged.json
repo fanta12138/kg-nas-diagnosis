@@ -1,0 +1,2110 @@
+[
+ {
+  "claims": [
+   {
+    "id": 1,
+    "location": "abstract",
+    "paper_text": "the margin contested between successive state-of-the-art generations is 0.5 AUROC points",
+    "paper_value": "0.5 points",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Literature SOTA values 99.1/99.6 not present in provided files."
+   },
+   {
+    "id": 2,
+    "location": "abstract; intro contributions",
+    "paper_text": "the standard single-category comparison resolves 2.98",
+    "paper_value": "2.98 points",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Resolvability/minimum-detectable-difference analysis file not provided."
+   },
+   {
+    "id": 3,
+    "location": "abstract; intro resolvability paragraph",
+    "paper_text": "larger than the whole spread of the architectures it ranks; entire 3.98-point spread of the fourteen backbones",
+    "paper_value": "3.98-point spread",
+    "evidence_file": "search_repeats/search_vs_random_final.json + search_repeats_summary.json",
+    "evidence_value": "best 0.83341 (final file); min 0.79361 (summary file only)",
+    "status": "ambiguous_mapping",
+    "details": "3.98 = 0.83341−0.79361 mixes two files; final matrix's own per-backbone values absent."
+   },
+   {
+    "id": 4,
+    "location": "abstract; intro inert paragraph",
+    "paper_text": "two thirds of its space proves deployment-inert; 42-configuration space contains 14 distinct models; other 28 cells duplicates",
+    "paper_value": "28/42 = 2/3",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Code-level claim; arithmetic 42−14=28, 28/42=2/3 internally consistent only."
+   },
+   {
+    "id": 5,
+    "location": "abstract; intro; related work 2.4",
+    "paper_text": "separates the twelve stable backbones by 5.7% of its median",
+    "paper_value": "5.7%",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Proxy repeatability statistics absent from provided files."
+   },
+   {
+    "id": 6,
+    "location": "abstract; intro; related work",
+    "paper_text": "returns exactly zero for two; efficientnet_b1 0.0 in 73% of evaluations, mobilenetv3_small_100 in 13%",
+    "paper_value": "73%; 13%",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Zero-collapse evaluation rates not in provided files."
+   },
+   {
+    "id": 7,
+    "location": "abstract; intro; related work 2.2",
+    "paper_text": "attributes 0.54% of the variance to the backbone and 95.32% to the category (p = 0.039)",
+    "paper_value": "0.54%; 95.32%; p=0.039",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Truth-matrix variance decomposition file not provided."
+   },
+   {
+    "id": 8,
+    "location": "abstract",
+    "paper_text": "twelve searches all returned a collapse-prone backbone, worse than random",
+    "paper_value": "12/12 collapse-prone; worse than random",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "n_runs 12; n_collapse_prone_selected 12; 0.8091<0.8165; p=0.0123",
+    "status": "exact_match",
+    "details": "Fully supported: 12 runs, all selecting collapse-prone backbones, mean below random."
+   },
+   {
+    "id": 9,
+    "location": "abstract; intro leverage paragraph",
+    "paper_text": "top-k pooling raises mean AUROC from 82.36% to 90.28% without retraining",
+    "paper_value": "82.36% → 90.28%",
+    "evidence_file": "adbench/results/analysis_p1_p3.json",
+    "evidence_value": "row means 85.13/89.58/89.37/88.47/83.69/47.82",
+    "status": "missing_evidence",
+    "details": "Neither value appears; provided locality-table means do not match either number."
+   },
+   {
+    "id": 10,
+    "location": "abstract; contributions",
+    "paper_text": "recovering 61% of the oracle gap — 7.09 of 11.65 points",
+    "paper_value": "61%; 7.09/11.65",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Oracle-gap values absent; 7.09/11.65=60.9%≈61% arithmetic internally consistent."
+   },
+   {
+    "id": 11,
+    "location": "abstract; intro scope",
+    "paper_text": "pipeline reaches 82.47% against published values of 95.6–99.6%",
+    "paper_value": "82.47%; 95.6–99.6%",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Headline AUROC and published-range endpoints not in provided files."
+   },
+   {
+    "id": 12,
+    "location": "intro",
+    "paper_text": "PatchCore reached 99.1% image-level AUROC in 2022; strongest methods since reach 99.6%",
+    "paper_value": "99.1%; 99.6%",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Literature citation values; not verifiable from given files."
+   },
+   {
+    "id": 13,
+    "location": "intro what-we-instrument",
+    "paper_text": "search ranks 42 configurations (14 backbones × 3 feature dimensions)",
+    "paper_value": "42 = 14×3",
+    "evidence_file": "search_repeats/search_repeats_summary.json",
+    "evidence_value": "14 backbones listed; dims {128,256,512}",
+    "status": "ambiguous_mapping",
+    "details": "14 backbones exact; three dims inferable from selected_dims; 42 itself not stated."
+   },
+   {
+    "id": 14,
+    "location": "intro",
+    "paper_text": "train all 14 backbones on all 15 MVTec-AD categories — 210 detectors",
+    "paper_value": "14×15 = 210",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "source: 'seed 42, 15 categories, 14 backbones'",
+    "status": "exact_match",
+    "details": "Design statement matches cited truth-matrix scope."
+   },
+   {
+    "id": 15,
+    "location": "intro",
+    "paper_text": "residual standard deviation of 3.30 points",
+    "paper_value": "3.30 points",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Residual SD absent from provided files."
+   },
+   {
+    "id": 16,
+    "location": "intro",
+    "paper_text": "run-to-run standard deviation of a single detector is 1.96 points over three seeds",
+    "paper_value": "1.96 points; 3 seeds",
+    "evidence_file": "adbench/results/analysis_p1_p3.json",
+    "evidence_value": "seed_sd I-AUROC 0.00355 (0.36 pts, different model)",
+    "status": "missing_evidence",
+    "details": "1.96 absent; file's seed_sd belongs to a different locality study."
+   },
+   {
+    "id": 17,
+    "location": "intro",
+    "paper_text": "minimum detectable difference is 2.98 points",
+    "paper_value": "2.98 points",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Same unprovided resolvability analysis as claim 2."
+   },
+   {
+    "id": 18,
+    "location": "intro",
+    "paper_text": "six times the margin that separates the 2022 and 2026 state of the art",
+    "paper_value": "6× (2.98/0.5 = 5.96)",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Ratio arithmetic consistent; depends on unverified 2.98 and 0.5."
+   },
+   {
+    "id": 19,
+    "location": "intro",
+    "paper_text": "To resolve 0.5 points on a single category would take 240 independent training runs per backbone",
+    "paper_value": "240 runs",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Sample-size calculation file not provided."
+   },
+   {
+    "id": 20,
+    "location": "intro inert paragraph",
+    "paper_text": "across four independent runs the selected backbone is the same every time, while the selected dimension differs",
+    "paper_value": "4 runs; constant backbone",
+    "evidence_file": "search_repeats/search_repeats_summary.json",
+    "evidence_value": "n_runs 12; two backbones (8/4); dims vary",
+    "status": "missing_evidence",
+    "details": "Four-run record absent; provided 12-run files show two distinct backbones, uncorroborating."
+   },
+   {
+    "id": 21,
+    "location": "intro; related work 2.4",
+    "paper_text": "Calling the search's own evaluation method ten times per configuration",
+    "paper_value": "10 evaluations/config",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Proxy protocol constant; supporting file not provided."
+   },
+   {
+    "id": 22,
+    "location": "intro",
+    "paper_text": "over the project's own record of 834 search trials the collapse occurs in 8.0% of them",
+    "paper_value": "834 trials; 8.0%",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Trial-log aggregate absent; summary file covers a different 12×100=1200 trials."
+   },
+   {
+    "id": 23,
+    "location": "intro capacity-null paragraph",
+    "paper_text": "selected architecture ranks fifth of fourteen and is statistically indistinguishable from twelve of the thirteen alternatives",
+    "paper_value": "5th of 14; 12 of 13",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Ranking and post-hoc comparison results absent from provided files."
+   },
+   {
+    "id": 24,
+    "location": "intro; contributions; related work",
+    "paper_text": "mean correlation between two categories' orderings of the 14 backbones is ρ = 0.215; 31% of category pairs disagree",
+    "paper_value": "ρ=0.215; 31%",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Transfer-correlation analysis file not provided."
+   },
+   {
+    "id": 25,
+    "location": "intro consequence paragraph",
+    "paper_text": "the two backbones that collapse to zero are selected every time",
+    "paper_value": "selected in 12/12 runs",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "only efficientnet_b1 / mobilenetv3_small_100; 12 runs",
+    "status": "exact_match",
+    "details": "Selection set and run count match exactly."
+   },
+   {
+    "id": 26,
+    "location": "intro consequence paragraph",
+    "paper_text": "the architecture the search returns is worse than picking a backbone uniformly at random",
+    "paper_value": "worse than random",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "0.80906 vs 0.81651; 1.23rd pct; p=0.0123",
+    "status": "exact_match",
+    "details": "Direction and significance both supported."
+   },
+   {
+    "id": 27,
+    "location": "intro leverage paragraph",
+    "paper_text": "+7.92 points, reproduced across three training seeds",
+    "paper_value": "+7.92; 3 seeds",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Delta arithmetic 90.28−82.36=7.92 correct; base values and seed count unverified."
+   },
+   {
+    "id": 28,
+    "location": "intro leverage paragraph",
+    "paper_text": "choosing the policy per category reaches 93.72%",
+    "paper_value": "93.72%",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Per-category oracle value absent from provided files."
+   },
+   {
+    "id": 29,
+    "location": "related work 2.2",
+    "paper_text": "Yu et al. found the NAS algorithms perform similarly to the random policy",
+    "paper_value": "qualitative literature claim",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "External-literature characterization; not auditable here."
+   },
+   {
+    "id": 30,
+    "location": "related work 2.2",
+    "paper_text": "sits at the 1.2th percentile of the distribution obtained by uniform sampling (80.91% against 81.65%, with the best backbone at 83.34%)",
+    "paper_value": "1.2; 80.91%; 81.65%; 83.34%",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "1.2285; 0.8090584; 0.8165089; 0.8334095",
+    "status": "exact_match",
+    "details": "All four values match to displayed precision."
+   },
+   {
+    "id": 31,
+    "location": "related work 2.4",
+    "paper_text": "Spearman ρ = −0.12 over all fifteen categories and ρ = 0.02 on the very category the search is run on",
+    "paper_value": "−0.12; 0.02",
+    "evidence_file": "none",
+    "evidence_value": "—",
+    "status": "missing_evidence",
+    "details": "Proxy-vs-truth correlation file not provided."
+   }
+  ],
+  "segment_verdict": "WARN",
+  "notes": "Search-repetition claims (12 runs, collapse-prone selection, worse-than-random, percentile, means) verify exactly. Resolvability (2.98/3.30/1.96/240), variance shares (0.54/95.32/p=0.039), proxy stats (5.7%, 73%/13%, 834, ρ=−0.12/0.02), policy sweep (82.36→90.28, 93.72, 7.09/11.65) and headline 82.47% belong to analyses whose files are absent in this segment. The 3.98-point spread is only reconstructable by mixing values from two different truth matrices; the 'four runs, same backbone' claim is uncorroborated and in tension with the provided 12-run record (two distinct backbones). Grant/ORCID numbers are administrative and not audited.",
+  "_segment": "S1 abstract / introduction / related work",
+  "_raw": "Audit of S1: 31 quantitative claims extracted. Five match the search-repetition evidence exactly, two are ambiguous mappings, and the remainder trace to analyses (resolvability, variance decomposition, proxy repeatability, policy sweep) whose files were not supplied. No arithmetic errors found.\n\n```json\n{\n  \"claims\": [\n    {\"id\": 1, \"location\": \"abstract\", \"paper_text\": \"the margin contested between successive state-of-the-art generations is 0.5 AUROC points\", \"paper_value\": \"0.5 points\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Literature SOTA values 99.1/99.6 not present in provided files.\"},\n    {\"id\": 2, \"location\": \"abstract; intro contributions\", \"paper_text\": \"the standard single-category comparison resolves 2.98\", \"paper_value\": \"2.98 points\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Resolvability/minimum-detectable-difference analysis file not provided.\"},\n    {\"id\": 3, \"location\": \"abstract; intro resolvability paragraph\", \"paper_text\": \"larger than the whole spread of the architectures it ranks; entire 3.98-point spread of the fourteen backbones\", \"paper_value\": \"3.98-point spread\", \"evidence_file\": \"search_repeats/search_vs_random_final.json + search_repeats_summary.json\", \"evidence_value\": \"best 0.83341 (final file); min 0.79361 (summary file only)\", \"status\": \"ambiguous_mapping\", \"details\": \"3.98 = 0.83341−0.79361 mixes two files; final matrix's own per-backbone values absent.\"},\n    {\"id\": 4, \"location\": \"abstract; intro inert paragraph\", \"paper_text\": \"two thirds of its space proves deployment-inert; 42-configuration space contains 14 distinct models; other 28 cells duplicates\", \"paper_value\": \"28/42 = 2/3\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Code-level claim; arithmetic 42−14=28, 28/42=2/3 internally consistent only.\"},\n    {\"id\": 5, \"location\": \"abstract; intro; related work 2.4\", \"paper_text\": \"separates the twelve stable backbones by 5.7% of its median\", \"paper_value\": \"5.7%\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Proxy repeatability statistics absent from provided files.\"},\n    {\"id\": 6, \"location\": \"abstract; intro; related work\", \"paper_text\": \"returns exactly zero for two; efficientnet_b1 0.0 in 73% of evaluations, mobilenetv3_small_100 in 13%\", \"paper_value\": \"73%; 13%\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Zero-collapse evaluation rates not in provided files.\"},\n    {\"id\": 7, \"location\": \"abstract; intro; related work 2.2\", \"paper_text\": \"attributes 0.54% of the variance to the backbone and 95.32% to the category (p = 0.039)\", \"paper_value\": \"0.54%; 95.32%; p=0.039\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Truth-matrix variance decomposition file not provided.\"},\n    {\"id\": 8, \"location\": \"abstract\", \"paper_text\": \"twelve searches all returned a collapse-prone backbone, worse than random\", \"paper_value\": \"12/12 collapse-prone; worse than random\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"n_runs 12; n_collapse_prone_selected 12; 0.8091<0.8165; p=0.0123\", \"status\": \"exact_match\", \"details\": \"Fully supported: 12 runs, all selecting collapse-prone backbones, mean below random.\"},\n    {\"id\": 9, \"location\": \"abstract; intro leverage paragraph\", \"paper_text\": \"top-k pooling raises mean AUROC from 82.36% to 90.28% without retraining\", \"paper_value\": \"82.36% → 90.28%\", \"evidence_file\": \"adbench/results/analysis_p1_p3.json\", \"evidence_value\": \"row means 85.13/89.58/89.37/88.47/83.69/47.82\", \"status\": \"missing_evidence\", \"details\": \"Neither value appears; provided locality-table means do not match either number.\"},\n    {\"id\": 10, \"location\": \"abstract; contributions\", \"paper_text\": \"recovering 61% of the oracle gap — 7.09 of 11.65 points\", \"paper_value\": \"61%; 7.09/11.65\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Oracle-gap values absent; 7.09/11.65=60.9%≈61% arithmetic internally consistent.\"},\n    {\"id\": 11, \"location\": \"abstract; intro scope\", \"paper_text\": \"pipeline reaches 82.47% against published values of 95.6–99.6%\", \"paper_value\": \"82.47%; 95.6–99.6%\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Headline AUROC and published-range endpoints not in provided files.\"},\n    {\"id\": 12, \"location\": \"intro\", \"paper_text\": \"PatchCore reached 99.1% image-level AUROC in 2022; strongest methods since reach 99.6%\", \"paper_value\": \"99.1%; 99.6%\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Literature citation values; not verifiable from given files.\"},\n    {\"id\": 13, \"location\": \"intro what-we-instrument\", \"paper_text\": \"search ranks 42 configurations (14 backbones × 3 feature dimensions)\", \"paper_value\": \"42 = 14×3\", \"evidence_file\": \"search_repeats/search_repeats_summary.json\", \"evidence_value\": \"14 backbones listed; dims {128,256,512}\", \"status\": \"ambiguous_mapping\", \"details\": \"14 backbones exact; three dims inferable from selected_dims; 42 itself not stated.\"},\n    {\"id\": 14, \"location\": \"intro\", \"paper_text\": \"train all 14 backbones on all 15 MVTec-AD categories — 210 detectors\", \"paper_value\": \"14×15 = 210\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"source: 'seed 42, 15 categories, 14 backbones'\", \"status\": \"exact_match\", \"details\": \"Design statement matches cited truth-matrix scope.\"},\n    {\"id\": 15, \"location\": \"intro\", \"paper_text\": \"residual standard deviation of 3.30 points\", \"paper_value\": \"3.30 points\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Residual SD absent from provided files.\"},\n    {\"id\": 16, \"location\": \"intro\", \"paper_text\": \"run-to-run standard deviation of a single detector is 1.96 points over three seeds\", \"paper_value\": \"1.96 points; 3 seeds\", \"evidence_file\": \"adbench/results/analysis_p1_p3.json\", \"evidence_value\": \"seed_sd I-AUROC 0.00355 (0.36 pts, different model)\", \"status\": \"missing_evidence\", \"details\": \"1.96 absent; file's seed_sd belongs to a different locality study.\"},\n    {\"id\": 17, \"location\": \"intro\", \"paper_text\": \"minimum detectable difference is 2.98 points\", \"paper_value\": \"2.98 points\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Same unprovided resolvability analysis as claim 2.\"},\n    {\"id\": 18, \"location\": \"intro\", \"paper_text\": \"six times the margin that separates the 2022 and 2026 state of the art\", \"paper_value\": \"6× (2.98/0.5 = 5.96)\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Ratio arithmetic consistent; depends on unverified 2.98 and 0.5.\"},\n    {\"id\": 19, \"location\": \"intro\", \"paper_text\": \"To resolve 0.5 points on a single category would take 240 independent training runs per backbone\", \"paper_value\": \"240 runs\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Sample-size calculation file not provided.\"},\n    {\"id\": 20, \"location\": \"intro inert paragraph\", \"paper_text\": \"across four independent runs the selected backbone is the same every time, while the selected dimension differs\", \"paper_value\": \"4 runs; constant backbone\", \"evidence_file\": \"search_repeats/search_repeats_summary.json\", \"evidence_value\": \"n_runs 12; two backbones (8/4); dims vary\", \"status\": \"missing_evidence\", \"details\": \"Four-run record absent; provided 12-run files show two distinct backbones, uncorroborating.\"},\n    {\"id\": 21, \"location\": \"intro; related work 2.4\", \"paper_text\": \"Calling the search's own evaluation method ten times per configuration\", \"paper_value\": \"10 evaluations/config\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Proxy protocol constant; supporting file not provided.\"},\n    {\"id\": 22, \"location\": \"intro\", \"paper_text\": \"over the project's own record of 834 search trials the collapse occurs in 8.0% of them\", \"paper_value\": \"834 trials; 8.0%\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Trial-log aggregate absent; summary file covers a different 12×100=1200 trials.\"},\n    {\"id\": 23, \"location\": \"intro capacity-null paragraph\", \"paper_text\": \"selected architecture ranks fifth of fourteen and is statistically indistinguishable from twelve of the thirteen alternatives\", \"paper_value\": \"5th of 14; 12 of 13\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Ranking and post-hoc comparison results absent from provided files.\"},\n    {\"id\": 24, \"location\": \"intro; contributions; related work\", \"paper_text\": \"mean correlation between two categories' orderings of the 14 backbones is ρ = 0.215; 31% of category pairs disagree\", \"paper_value\": \"ρ=0.215; 31%\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Transfer-correlation analysis file not provided.\"},\n    {\"id\": 25, \"location\": \"intro consequence paragraph\", \"paper_text\": \"the two backbones that collapse to zero are selected every time\", \"paper_value\": \"selected in 12/12 runs\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"only efficientnet_b1 / mobilenetv3_small_100; 12 runs\", \"status\": \"exact_match\", \"details\": \"Selection set and run count match exactly.\"},\n    {\"id\": 26, \"location\": \"intro consequence paragraph\", \"paper_text\": \"the architecture the search returns is worse than picking a backbone uniformly at random\", \"paper_value\": \"worse than random\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"0.80906 vs 0.81651; 1.23rd pct; p=0.0123\", \"status\": \"exact_match\", \"details\": \"Direction and significance both supported.\"},\n    {\"id\": 27, \"location\": \"intro leverage paragraph\", \"paper_text\": \"+7.92 points, reproduced across three training seeds\", \"paper_value\": \"+7.92; 3 seeds\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Delta arithmetic 90.28−82.36=7.92 correct; base values and seed count unverified.\"},\n    {\"id\": 28, \"location\": \"intro leverage paragraph\", \"paper_text\": \"choosing the policy per category reaches 93.72%\", \"paper_value\": \"93.72%\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Per-category oracle value absent from provided files.\"},\n    {\"id\": 29, \"location\": \"related work 2.2\", \"paper_text\": \"Yu et al. found the NAS algorithms perform similarly to the random policy\", \"paper_value\": \"qualitative literature claim\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"External-literature characterization; not auditable here.\"},\n    {\"id\": 30, \"location\": \"related work 2.2\", \"paper_text\": \"sits at the 1.2th percentile of the distribution obtained by uniform sampling (80.91% against 81.65%, with the best backbone at 83.34%)\", \"paper_value\": \"1.2; 80.91%; 81.65%; 83.34%\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"1.2285; 0.8090584; 0.8165089; 0.8334095\", \"status\": \"exact_match\", \"details\": \"All four values match to displayed precision.\"},\n    {\"id\": 31, \"location\": \"related work 2.4\", \"paper_text\": \"Spearman ρ = −0.12 over all fifteen categories and ρ = 0.02 on the very category the search is run on\", \"paper_value\": \"−0.12; 0.02\", \"evidence_file\": \"none\", \"evidence_value\": \"—\", \"status\": \"missing_evidence\", \"details\": \"Proxy-vs-truth correlation file not provided.\"}\n  ],\n  \"segment_verdict\": \"WARN\",\n  \"notes\": \"Search-repetition claims (12 runs, collapse-prone selection, worse-than-random, percentile, means) verify exactly. Resolvability (2.98/3.30/1.96/240), variance shares (0.54/95.32/p=0.039), proxy stats (5.7%, 73%/13%, 834, ρ=−0.12/0.02), policy sweep (82.36→90.28, 93.72, 7.09/11.65) and headline 82.47% belong to analyses whose files are absent in this segment. The 3.98-point spread is only reconstructable by mixing values from two different truth matrices; the 'four runs, same backbone' claim is uncorroborated and in tension with the provided 12-run record (two distinct backbones). Grant/ORCID numbers are administrative and not audited.\"\n}\n```"
+ },
+ {
+  "claims": [
+   {
+    "id": 1,
+    "location": "sec:method, intro + subsec:teacher",
+    "paper_text": "a teacher is pre-trained on normal images ... The teacher is a ResNet-18 with a 128-dimensional projection head",
+    "paper_value": "teacher = ResNet-18, projection dim 128",
+    "evidence_file": "proxy_diag/probe_degenerate.json",
+    "evidence_value": "align_layer=false for all dim=128 rows (4/4); align_layer=true for dim=256 and dim=512 rows (8/8)",
+    "status": "ambiguous_mapping",
+    "details": "The 128-d teacher space is indirectly confirmed (no alignment layer needed exactly at dim 128). The teacher being ResNet-18 is not directly evidenced: resnet18 appears in backbone_params.json only as a student candidate (student_M=13.043); no teacher checkpoint/log provided."
+   },
+   {
+    "id": 2,
+    "location": "subsec:teacher",
+    "paper_text": "trained for 100 epochs on the normal training images of the search category with a contrastive objective, and frozen thereafter",
+    "paper_value": "100 epochs teacher pre-training",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "No teacher-training log in evidence set."
+   },
+   {
+    "id": 3,
+    "location": "subsec:teacher",
+    "paper_text": "outputs of layer1, layer2 and layer3, of shape 64x56x56, 128x28x28 and 256x14x14 for an input resized to 224x224",
+    "paper_value": "feature shapes 64x56x56 / 128x28x28 / 256x14x14",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "Shapes are standard ResNet-18 shapes but no raw feature-dump file is provided to trace them."
+   },
+   {
+    "id": 4,
+    "location": "subsec:nas",
+    "paper_text": "The search space is the Cartesian product of 14 backbones and three feature dimensions, giving 42 configurations.",
+    "paper_value": "14 backbones x 3 dims = 42",
+    "evidence_file": "proxy_diag/backbone_params.json",
+    "evidence_value": "exactly 14 backbone keys (convnextv2_tiny, convnextv2_base, mobileone_s0, convnext_tiny, convnext_small, vit_tiny_patch16_224, deit_tiny_patch16_224, swin_tiny_patch4_window7_224, efficientnet_b0, efficientnet_b1, mobilenetv3_small_100, resnet18, resnet34, resnet50); probe_degenerate.json shows exactly 3 dims {128,256,512}; 14x3=42",
+    "status": "exact_match",
+    "details": "Count, dim set, and arithmetic all verified."
+   },
+   {
+    "id": 5,
+    "location": "subsec:nas",
+    "paper_text": "including ResNets, EfficientNet variants, MobileNetV3 and MobileOne, ViT and DeiT variants, Swin-Tiny, and the ConvNeXt and ConvNeXt V2 families",
+    "paper_value": "listed backbone families",
+    "evidence_file": "proxy_diag/backbone_params.json",
+    "evidence_value": "all named families present: resnet18/34/50, efficientnet_b0/b1, mobilenetv3_small_100, mobileone_s0, vit_tiny, deit_tiny, swin_tiny, convnext_tiny/small, convnextv2_tiny/base",
+    "status": "ambiguous_mapping",
+    "details": "All named families match JSON keys. Minor scope looseness: 'ViT and DeiT variants' is plural but only one variant of each (tiny) exists in the space; 'EfficientNet variants' (2) and ConvNeXt families (2 each) are accurate."
+   },
+   {
+    "id": 6,
+    "location": "subsec:nas",
+    "paper_text": "The backbones span convolutional and attention-based families from 2015 to 2023",
+    "paper_value": "year range 2015-2023",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "Only the 2023 upper bound is indirectly supported by the woo2023convnextv2 citation key; no per-backbone release dates in evidence. Attention-based (ViT/DeiT/Swin) and convolutional families are both present among the 14 keys."
+   },
+   {
+    "id": 7,
+    "location": "subsec:nas",
+    "paper_text": "The three feature dimensions are 128, 256 and 512.",
+    "paper_value": "{128, 256, 512}",
+    "evidence_file": "proxy_diag/probe_degenerate.json",
+    "evidence_value": "rows contain dim=128, dim=256, dim=512 only",
+    "status": "exact_match",
+    "details": "Exactly these three dimensions appear in the probe evidence."
+   },
+   {
+    "id": 8,
+    "location": "subsec:nas, eq:proxy",
+    "paper_text": "L_kd(x) + 0.3 L_cons(x)",
+    "paper_value": "consistency-loss weight = 0.3",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "Loss composition and weight not recoverable from probe scores alone."
+   },
+   {
+    "id": 9,
+    "location": "subsec:nas",
+    "paper_text": "Every candidate is scored once; there is no repetition and therefore no estimate of the signal's own variance.",
+    "paper_value": "single evaluation per candidate in search",
+    "evidence_file": "none",
+    "evidence_value": "no search-run logs supplied",
+    "status": "missing_evidence",
+    "details": "probe_degenerate.json uses 4 seeds (7000/7017/7034/7051) but that is the separate stability probe, not the search; does not contradict, but does not confirm either."
+   },
+   {
+    "id": 10,
+    "location": "subsec:nas",
+    "paper_text": "A validation batch contributes to the sum only if its loss is finite and below a fixed threshold; otherwise it is skipped.",
+    "paper_value": "finite+threshold batch-rejection rule",
+    "evidence_file": "proxy_diag/probe_degenerate.json",
+    "evidence_value": "schema exposes 'rejected_batches' per row (all 0 in probe; val_batches=2)",
+    "status": "ambiguous_mapping",
+    "details": "The existence of a batch-rejection counter is consistent with the described mechanism, but the 'finite and below a fixed threshold' rule itself is not shown in any supplied artefact."
+   },
+   {
+    "id": 11,
+    "location": "subsec:nas",
+    "paper_text": "the average is formed as total / max(count, 1), so if every batch of a trial is skipped the signal returns exactly zero",
+    "paper_value": "max(count,1) normalizer; zero on all-skip",
+    "evidence_file": "proxy_diag/probe_degenerate.json",
+    "evidence_value": "schema exposes boolean 'degenerate' field (false in all 12 probe rows)",
+    "status": "missing_evidence",
+    "details": "A degenerate-flag mechanism exists in the code schema, but the exact normalizer and zero-return behaviour are not verifiable from supplied outputs."
+   },
+   {
+    "id": 12,
+    "location": "subsec:nas",
+    "paper_text": "a candidate whose projection dimension differs from 128 is additionally given a learned linear layer ... this alignment layer exists only during search",
+    "paper_value": "alignment layer iff dim != 128",
+    "evidence_file": "proxy_diag/probe_degenerate.json",
+    "evidence_value": "align_layer: false for all 4 dim=128 rows; true for all 4 dim=256 rows and all 4 dim=512 rows",
+    "status": "exact_match",
+    "details": "Flag pattern matches the claim exactly (12/12 rows)."
+   },
+   {
+    "id": 13,
+    "location": "subsec:nas, eq:argmin",
+    "paper_text": "The search draws candidates uniformly at random from the 42 cells and returns the one with the smallest score",
+    "paper_value": "uniform random sampling + argmin selection",
+    "evidence_file": "none",
+    "evidence_value": "no recorded search log supplied",
+    "status": "missing_evidence",
+    "details": "Synthetic simulation models this behaviour but does not evidence the real search's sampling."
+   },
+   {
+    "id": 14,
+    "location": "subsec:nas",
+    "paper_text": "the number of draws is a protocol parameter (the recorded runs used 100, of which a variable number complete successfully)",
+    "paper_value": "K = 100 draws per recorded search run",
+    "evidence_file": "synthetic_mechanism/synthetic_mechanism.json",
+    "evidence_value": "keys 'no_collapse__K100' and 'more_trials.K100' exist (alongside K10/K30/K300/K1000/K5000); n_broken_draws varies 1-200 across synthetic conditions",
+    "status": "ambiguous_mapping",
+    "details": "K=100 is confirmed as an experimental parameter in the synthetic mechanism, but this is a simulation parameter; no raw log of the actual recorded search runs is supplied. 'Variable number complete successfully' is consistent in spirit with varying broken-draw counts, but only within simulation."
+   },
+   {
+    "id": 15,
+    "location": "subsec:nas + subsec:implementation",
+    "paper_text": "Stage 2 searches ... The search uses three quick training epochs per candidate with batch size 16 on the wood category, and is repeated 100 times per run.",
+    "paper_value": "3 proxy epochs, batch 16, search category = wood, 100 repetitions",
+    "evidence_file": "synthetic_mechanism/synthetic_mechanism.json",
+    "evidence_value": "K100 key present; epochs/batch-size/category not in any supplied file",
+    "status": "missing_evidence",
+    "details": "'Repeated 100 times' maps ambiguously to K100; '3 epochs', 'batch size 16' and 'wood' have no artefact in the evidence set."
+   },
+   {
+    "id": 16,
+    "location": "sec:method intro",
+    "paper_text": "The search runs on a single category and its result is applied to all categories of the dataset.",
+    "paper_value": "single-category search, all-category deployment",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "Scope statement; no per-category search logs supplied."
+   },
+   {
+    "id": 17,
+    "location": "subsec:rd_detection",
+    "paper_text": "adaptively pools it to 14x14 ... a first block produces the 14x14 stage at 256 channels ... 28x28 stage at 128 channels ... 56x56 stage at 64 channels",
+    "paper_value": "decoder channel plan 256/128/64 at 14/28/56",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "Architecture description; no model dump or config file supplied."
+   },
+   {
+    "id": 18,
+    "location": "subsec:rd_detection",
+    "paper_text": "the bottleneck width is fixed at B = 256 in the deployment path, independently of the feature dimension that the search may have selected",
+    "paper_value": "B = 256 fixed at deployment",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "Key deployment-path constant; no config/model artefact supplied to confirm."
+   },
+   {
+    "id": 19,
+    "location": "subsec:rd_detection",
+    "paper_text": "trained ... with AdamW at a learning rate of 10^-3 and weight decay 10^-4, a cosine schedule, and random horizontal flipping with probability 0.5",
+    "paper_value": "AdamW, lr 1e-3, wd 1e-4, cosine, flip p=0.5",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "Optimizer/schedule/augmentation config not traceable in evidence set."
+   },
+   {
+    "id": 20,
+    "location": "subsubsec:scoring, eq:policy",
+    "paper_text": "The published pipeline uses w = (1/3, 1/3, 1/3) and rho = mean ... rho in {mean, top-k, max}",
+    "paper_value": "published policy: uniform weights, mean pooling; policy space of 3 pooling operators",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "No scoring-policy sweep or config artefact supplied in this segment."
+   },
+   {
+    "id": 21,
+    "location": "subsec:implementation",
+    "paper_text": "the detector above is trained for 500 epochs with batch size 64 and seed 42, with a ResNet-18 teacher, on the MVTec-AD dataset",
+    "paper_value": "500 epochs, batch 64, seed 42, ResNet-18 teacher, MVTec-AD",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "No detector training logs in evidence set."
+   },
+   {
+    "id": 22,
+    "location": "subsec:implementation",
+    "paper_text": "Inputs are resized to 224x224 and normalised with ImageNet statistics.",
+    "paper_value": "224x224 input, ImageNet normalisation",
+    "evidence_file": "proxy_diag/backbone_params.json",
+    "evidence_value": "backbone keys vit_tiny_patch16_224, deit_tiny_patch16_224, swin_tiny_patch4_window7_224 encode 224 input",
+    "status": "ambiguous_mapping",
+    "details": "224 input indirectly consistent with timm model names and the 56/28/14 feature-grid claims; ImageNet normalisation statistics not verifiable from supplied files."
+   },
+   {
+    "id": 23,
+    "location": "subsec:implementation",
+    "paper_text": "All figures report image-level AUROC averaged over the 15 categories.",
+    "paper_value": "AUROC averaged over 15 categories",
+    "evidence_file": "none",
+    "evidence_value": "no category-level results file supplied in this segment",
+    "status": "missing_evidence",
+    "details": "15 is the MVTec-AD category count (dataset fact) but no results artefact here confirms the aggregation actually used."
+   },
+   {
+    "id": 24,
+    "location": "subsec:implementation",
+    "paper_text": "Where a backbone's memory footprint exceeds the device at batch size 64, training uses gradient accumulation with a smaller micro-batch, keeping the effective batch size at 64; the micro-batch used is recorded per run and this affects only the largest backbones.",
+    "paper_value": "gradient accumulation, effective batch 64, micro-batch recorded per run",
+    "evidence_file": "none",
+    "evidence_value": "not present in supplied files",
+    "status": "missing_evidence",
+    "details": "Claim that micro-batch is 'recorded per run' is unverifiable; no run manifests supplied."
+   },
+   {
+    "id": 25,
+    "location": "subsec:genai",
+    "paper_text": "the figures are direct plots of recorded measurements, produced by the released script make_figures_v2.py. All code, logs and derived artefacts are released so that every number can be traced to the run that produced it",
+    "paper_value": "full traceability of all numbers to runs; figures from make_figures_v2.py",
+    "evidence_file": "none",
+    "evidence_value": "script and logs not in supplied evidence set; multiple protocol numbers in this section (epochs, batch sizes, seeds, lr, B=256, 0.3 weight, policy weights) have no corresponding artefact",
+    "status": "unsupported_claim",
+    "details": "Scope overclaim relative to the supplied evidence: within this very section, numerous quantitative protocol values cannot be traced to any provided file. The 14-backbone, 3-dim, alignment-layer and K=100 items are traceable; the rest are not."
+   }
+  ],
+  "segment_verdict": "WARN",
+  "notes": "Failure-mode scan: (1) number inflation - none detected; (2) best-seed cherry-pick - none in this segment; (3) config mismatch - none detectable, nothing in the text contradicts the supplied files; (4) aggregation mismatch - none; (5) delta arithmetic - 14x3=42 is exact; (6) caption/table mismatch - not applicable here; (7) scope overclaim - one instance: the traceability statement in subsec:genai ('every number can be traced to the run that produced it') exceeds what the supplied artefacts support, since many protocol constants in this methods section (100 teacher epochs, 500 detector epochs, batch sizes 64/16, seed 42, AdamW lr/wd, cosine, flip 0.5, B=256, 0.3 loss weight, scoring weights 1/3, '15 categories' aggregation) have no corresponding file. Verified items: 14 backbones and their family names (backbone_params.json), 3 feature dims {128,256,512} (probe_degenerate.json), the alignment-layer rule align_layer == (dim != 128) with 12/12 rows matching exactly, and K=100 as an experimental parameter (synthetic_mechanism.json, ambiguous: simulation parameter, not a recorded search log). Minor wording note: 'ViT and DeiT variants' is plural but only one variant of each exists in the search space. Verdict WARN rather than FAIL because no checked number conflicts with evidence; WARN rather than PASS because a substantial fraction of the section's quantitative protocol claims are unverifiable from the supplied evidence set.",
+  "_segment": "S2 materials and methods",
+  "_raw": "```json\n{\n  \"claims\": [\n    {\n      \"id\": 1,\n      \"location\": \"sec:method, intro + subsec:teacher\",\n      \"paper_text\": \"a teacher is pre-trained on normal images ... The teacher is a ResNet-18 with a 128-dimensional projection head\",\n      \"paper_value\": \"teacher = ResNet-18, projection dim 128\",\n      \"evidence_file\": \"proxy_diag/probe_degenerate.json\",\n      \"evidence_value\": \"align_layer=false for all dim=128 rows (4/4); align_layer=true for dim=256 and dim=512 rows (8/8)\",\n      \"status\": \"ambiguous_mapping\",\n      \"details\": \"The 128-d teacher space is indirectly confirmed (no alignment layer needed exactly at dim 128). The teacher being ResNet-18 is not directly evidenced: resnet18 appears in backbone_params.json only as a student candidate (student_M=13.043); no teacher checkpoint/log provided.\"\n    },\n    {\n      \"id\": 2,\n      \"location\": \"subsec:teacher\",\n      \"paper_text\": \"trained for 100 epochs on the normal training images of the search category with a contrastive objective, and frozen thereafter\",\n      \"paper_value\": \"100 epochs teacher pre-training\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"No teacher-training log in evidence set.\"\n    },\n    {\n      \"id\": 3,\n      \"location\": \"subsec:teacher\",\n      \"paper_text\": \"outputs of layer1, layer2 and layer3, of shape 64x56x56, 128x28x28 and 256x14x14 for an input resized to 224x224\",\n      \"paper_value\": \"feature shapes 64x56x56 / 128x28x28 / 256x14x14\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Shapes are standard ResNet-18 shapes but no raw feature-dump file is provided to trace them.\"\n    },\n    {\n      \"id\": 4,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"The search space is the Cartesian product of 14 backbones and three feature dimensions, giving 42 configurations.\",\n      \"paper_value\": \"14 backbones x 3 dims = 42\",\n      \"evidence_file\": \"proxy_diag/backbone_params.json\",\n      \"evidence_value\": \"exactly 14 backbone keys (convnextv2_tiny, convnextv2_base, mobileone_s0, convnext_tiny, convnext_small, vit_tiny_patch16_224, deit_tiny_patch16_224, swin_tiny_patch4_window7_224, efficientnet_b0, efficientnet_b1, mobilenetv3_small_100, resnet18, resnet34, resnet50); probe_degenerate.json shows exactly 3 dims {128,256,512}; 14x3=42\",\n      \"status\": \"exact_match\",\n      \"details\": \"Count, dim set, and arithmetic all verified.\"\n    },\n    {\n      \"id\": 5,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"including ResNets, EfficientNet variants, MobileNetV3 and MobileOne, ViT and DeiT variants, Swin-Tiny, and the ConvNeXt and ConvNeXt V2 families\",\n      \"paper_value\": \"listed backbone families\",\n      \"evidence_file\": \"proxy_diag/backbone_params.json\",\n      \"evidence_value\": \"all named families present: resnet18/34/50, efficientnet_b0/b1, mobilenetv3_small_100, mobileone_s0, vit_tiny, deit_tiny, swin_tiny, convnext_tiny/small, convnextv2_tiny/base\",\n      \"status\": \"ambiguous_mapping\",\n      \"details\": \"All named families match JSON keys. Minor scope looseness: 'ViT and DeiT variants' is plural but only one variant of each (tiny) exists in the space; 'EfficientNet variants' (2) and ConvNeXt families (2 each) are accurate.\"\n    },\n    {\n      \"id\": 6,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"The backbones span convolutional and attention-based families from 2015 to 2023\",\n      \"paper_value\": \"year range 2015-2023\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Only the 2023 upper bound is indirectly supported by the woo2023convnextv2 citation key; no per-backbone release dates in evidence. Attention-based (ViT/DeiT/Swin) and convolutional families are both present among the 14 keys.\"\n    },\n    {\n      \"id\": 7,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"The three feature dimensions are 128, 256 and 512.\",\n      \"paper_value\": \"{128, 256, 512}\",\n      \"evidence_file\": \"proxy_diag/probe_degenerate.json\",\n      \"evidence_value\": \"rows contain dim=128, dim=256, dim=512 only\",\n      \"status\": \"exact_match\",\n      \"details\": \"Exactly these three dimensions appear in the probe evidence.\"\n    },\n    {\n      \"id\": 8,\n      \"location\": \"subsec:nas, eq:proxy\",\n      \"paper_text\": \"L_kd(x) + 0.3 L_cons(x)\",\n      \"paper_value\": \"consistency-loss weight = 0.3\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Loss composition and weight not recoverable from probe scores alone.\"\n    },\n    {\n      \"id\": 9,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"Every candidate is scored once; there is no repetition and therefore no estimate of the signal's own variance.\",\n      \"paper_value\": \"single evaluation per candidate in search\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"no search-run logs supplied\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"probe_degenerate.json uses 4 seeds (7000/7017/7034/7051) but that is the separate stability probe, not the search; does not contradict, but does not confirm either.\"\n    },\n    {\n      \"id\": 10,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"A validation batch contributes to the sum only if its loss is finite and below a fixed threshold; otherwise it is skipped.\",\n      \"paper_value\": \"finite+threshold batch-rejection rule\",\n      \"evidence_file\": \"proxy_diag/probe_degenerate.json\",\n      \"evidence_value\": \"schema exposes 'rejected_batches' per row (all 0 in probe; val_batches=2)\",\n      \"status\": \"ambiguous_mapping\",\n      \"details\": \"The existence of a batch-rejection counter is consistent with the described mechanism, but the 'finite and below a fixed threshold' rule itself is not shown in any supplied artefact.\"\n    },\n    {\n      \"id\": 11,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"the average is formed as total / max(count, 1), so if every batch of a trial is skipped the signal returns exactly zero\",\n      \"paper_value\": \"max(count,1) normalizer; zero on all-skip\",\n      \"evidence_file\": \"proxy_diag/probe_degenerate.json\",\n      \"evidence_value\": \"schema exposes boolean 'degenerate' field (false in all 12 probe rows)\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"A degenerate-flag mechanism exists in the code schema, but the exact normalizer and zero-return behaviour are not verifiable from supplied outputs.\"\n    },\n    {\n      \"id\": 12,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"a candidate whose projection dimension differs from 128 is additionally given a learned linear layer ... this alignment layer exists only during search\",\n      \"paper_value\": \"alignment layer iff dim != 128\",\n      \"evidence_file\": \"proxy_diag/probe_degenerate.json\",\n      \"evidence_value\": \"align_layer: false for all 4 dim=128 rows; true for all 4 dim=256 rows and all 4 dim=512 rows\",\n      \"status\": \"exact_match\",\n      \"details\": \"Flag pattern matches the claim exactly (12/12 rows).\"\n    },\n    {\n      \"id\": 13,\n      \"location\": \"subsec:nas, eq:argmin\",\n      \"paper_text\": \"The search draws candidates uniformly at random from the 42 cells and returns the one with the smallest score\",\n      \"paper_value\": \"uniform random sampling + argmin selection\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"no recorded search log supplied\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Synthetic simulation models this behaviour but does not evidence the real search's sampling.\"\n    },\n    {\n      \"id\": 14,\n      \"location\": \"subsec:nas\",\n      \"paper_text\": \"the number of draws is a protocol parameter (the recorded runs used 100, of which a variable number complete successfully)\",\n      \"paper_value\": \"K = 100 draws per recorded search run\",\n      \"evidence_file\": \"synthetic_mechanism/synthetic_mechanism.json\",\n      \"evidence_value\": \"keys 'no_collapse__K100' and 'more_trials.K100' exist (alongside K10/K30/K300/K1000/K5000); n_broken_draws varies 1-200 across synthetic conditions\",\n      \"status\": \"ambiguous_mapping\",\n      \"details\": \"K=100 is confirmed as an experimental parameter in the synthetic mechanism, but this is a simulation parameter; no raw log of the actual recorded search runs is supplied. 'Variable number complete successfully' is consistent in spirit with varying broken-draw counts, but only within simulation.\"\n    },\n    {\n      \"id\": 15,\n      \"location\": \"subsec:nas + subsec:implementation\",\n      \"paper_text\": \"Stage 2 searches ... The search uses three quick training epochs per candidate with batch size 16 on the wood category, and is repeated 100 times per run.\",\n      \"paper_value\": \"3 proxy epochs, batch 16, search category = wood, 100 repetitions\",\n      \"evidence_file\": \"synthetic_mechanism/synthetic_mechanism.json\",\n      \"evidence_value\": \"K100 key present; epochs/batch-size/category not in any supplied file\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"'Repeated 100 times' maps ambiguously to K100; '3 epochs', 'batch size 16' and 'wood' have no artefact in the evidence set.\"\n    },\n    {\n      \"id\": 16,\n      \"location\": \"sec:method intro\",\n      \"paper_text\": \"The search runs on a single category and its result is applied to all categories of the dataset.\",\n      \"paper_value\": \"single-category search, all-category deployment\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Scope statement; no per-category search logs supplied.\"\n    },\n    {\n      \"id\": 17,\n      \"location\": \"subsec:rd_detection\",\n      \"paper_text\": \"adaptively pools it to 14x14 ... a first block produces the 14x14 stage at 256 channels ... 28x28 stage at 128 channels ... 56x56 stage at 64 channels\",\n      \"paper_value\": \"decoder channel plan 256/128/64 at 14/28/56\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Architecture description; no model dump or config file supplied.\"\n    },\n    {\n      \"id\": 18,\n      \"location\": \"subsec:rd_detection\",\n      \"paper_text\": \"the bottleneck width is fixed at B = 256 in the deployment path, independently of the feature dimension that the search may have selected\",\n      \"paper_value\": \"B = 256 fixed at deployment\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Key deployment-path constant; no config/model artefact supplied to confirm.\"\n    },\n    {\n      \"id\": 19,\n      \"location\": \"subsec:rd_detection\",\n      \"paper_text\": \"trained ... with AdamW at a learning rate of 10^-3 and weight decay 10^-4, a cosine schedule, and random horizontal flipping with probability 0.5\",\n      \"paper_value\": \"AdamW, lr 1e-3, wd 1e-4, cosine, flip p=0.5\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Optimizer/schedule/augmentation config not traceable in evidence set.\"\n    },\n    {\n      \"id\": 20,\n      \"location\": \"subsubsec:scoring, eq:policy\",\n      \"paper_text\": \"The published pipeline uses w = (1/3, 1/3, 1/3) and rho = mean ... rho in {mean, top-k, max}\",\n      \"paper_value\": \"published policy: uniform weights, mean pooling; policy space of 3 pooling operators\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"No scoring-policy sweep or config artefact supplied in this segment.\"\n    },\n    {\n      \"id\": 21,\n      \"location\": \"subsec:implementation\",\n      \"paper_text\": \"the detector above is trained for 500 epochs with batch size 64 and seed 42, with a ResNet-18 teacher, on the MVTec-AD dataset\",\n      \"paper_value\": \"500 epochs, batch 64, seed 42, ResNet-18 teacher, MVTec-AD\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"No detector training logs in evidence set.\"\n    },\n    {\n      \"id\": 22,\n      \"location\": \"subsec:implementation\",\n      \"paper_text\": \"Inputs are resized to 224x224 and normalised with ImageNet statistics.\",\n      \"paper_value\": \"224x224 input, ImageNet normalisation\",\n      \"evidence_file\": \"proxy_diag/backbone_params.json\",\n      \"evidence_value\": \"backbone keys vit_tiny_patch16_224, deit_tiny_patch16_224, swin_tiny_patch4_window7_224 encode 224 input\",\n      \"status\": \"ambiguous_mapping\",\n      \"details\": \"224 input indirectly consistent with timm model names and the 56/28/14 feature-grid claims; ImageNet normalisation statistics not verifiable from supplied files.\"\n    },\n    {\n      \"id\": 23,\n      \"location\": \"subsec:implementation\",\n      \"paper_text\": \"All figures report image-level AUROC averaged over the 15 categories.\",\n      \"paper_value\": \"AUROC averaged over 15 categories\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"no category-level results file supplied in this segment\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"15 is the MVTec-AD category count (dataset fact) but no results artefact here confirms the aggregation actually used.\"\n    },\n    {\n      \"id\": 24,\n      \"location\": \"subsec:implementation\",\n      \"paper_text\": \"Where a backbone's memory footprint exceeds the device at batch size 64, training uses gradient accumulation with a smaller micro-batch, keeping the effective batch size at 64; the micro-batch used is recorded per run and this affects only the largest backbones.\",\n      \"paper_value\": \"gradient accumulation, effective batch 64, micro-batch recorded per run\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"not present in supplied files\",\n      \"status\": \"missing_evidence\",\n      \"details\": \"Claim that micro-batch is 'recorded per run' is unverifiable; no run manifests supplied.\"\n    },\n    {\n      \"id\": 25,\n      \"location\": \"subsec:genai\",\n      \"paper_text\": \"the figures are direct plots of recorded measurements, produced by the released script make_figures_v2.py. All code, logs and derived artefacts are released so that every number can be traced to the run that produced it\",\n      \"paper_value\": \"full traceability of all numbers to runs; figures from make_figures_v2.py\",\n      \"evidence_file\": \"none\",\n      \"evidence_value\": \"script and logs not in supplied evidence set; multiple protocol numbers in this section (epochs, batch sizes, seeds, lr, B=256, 0.3 weight, policy weights) have no corresponding artefact\",\n      \"status\": \"unsupported_claim\",\n      \"details\": \"Scope overclaim relative to the supplied evidence: within this very section, numerous quantitative protocol values cannot be traced to any provided file. The 14-backbone, 3-dim, alignment-layer and K=100 items are traceable; the rest are not.\"\n    }\n  ],\n  \"segment_verdict\": \"WARN\",\n  \"notes\": \"Failure-mode scan: (1) number inflation - none detected; (2) best-seed cherry-pick - none in this segment; (3) config mismatch - none detectable, nothing in the text contradicts the supplied files; (4) aggregation mismatch - none; (5) delta arithmetic - 14x3=42 is exact; (6) caption/table mismatch - not applicable here; (7) scope overclaim - one instance: the traceability statement in subsec:genai ('every number can be traced to the run that produced it') exceeds what the supplied artefacts support, since many protocol constants in this methods section (100 teacher epochs, 500 detector epochs, batch sizes 64/16, seed 42, AdamW lr/wd, cosine, flip 0.5, B=256, 0.3 loss weight, scoring weights 1/3, '15 categories' aggregation) have no corresponding file. Verified items: 14 backbones and their family names (backbone_params.json), 3 feature dims {128,256,512} (probe_degenerate.json), the alignment-layer rule align_layer == (dim != 128) with 12/12 rows matching exactly, and K=100 as an experimental parameter (synthetic_mechanism.json, ambiguous: simulation parameter, not a recorded search log). Minor wording note: 'ViT and DeiT variants' is plural but only one variant of each exists in the search space. Verdict WARN rather than FAIL because no checked number conflicts with evidence; WARN rather than PASS because a substantial fraction of the section's quantitative protocol claims are unverifiable from the supplied evidence set.\"\n}\n```"
+ },
+ {
+  "claims": [
+   {
+    "id": 1,
+    "location": "§4.1",
+    "paper_text": "|B|=14 backbones and D={128,256,512}, giving 42 configurations",
+    "paper_value": "14x3=42",
+    "evidence_file": "proxy_diag/phaseA_proxy.json",
+    "evidence_value": "42 config keys, 14 backbones x 3 dims",
+    "status": "exact_match",
+    "details": "Config inventory matches exactly."
+   },
+   {
+    "id": 2,
+    "location": "§4.1",
+    "paper_text": "encoder builds bottleneck with hard-coded width 256; decoder constructed with requested width; RDDetector never passes bottleneck_dim",
+    "paper_value": "structural claim",
+    "evidence_file": "proxy_diag/phaseC_analysis.json",
+    "evidence_value": "structural_probe: encoder 256, dim128_decoder_in 128, signature has bottleneck_dim, verdict identical",
+    "status": "exact_match",
+    "details": "Structural probe corroborates all three code claims."
+   },
+   {
+    "id": 3,
+    "location": "§4.1",
+    "paper_text": "42-configuration space contains only 14 distinct models; remaining 28 are duplicates (two thirds)",
+    "paper_value": "14 distinct / 28 duplicate",
+    "evidence_file": "proxy_diag/phaseC_analysis.json",
+    "evidence_value": "verdict: all three searched dims map to identical deployed detector",
+    "status": "exact_match",
+    "details": "Logical consequence of probe; 28/42=2/3 arithmetic holds."
+   },
+   {
+    "id": 4,
+    "location": "§4.1 table",
+    "paper_text": "stage2 30/17; rtx3090 30/15; 100trials 100/39; topjournal 100/93; backbones/dims as listed",
+    "paper_value": "declared/recorded trials, selected backbone+dim per run",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "All four recorded-run rows unverifiable; trial counts 17/15/39/93 internally consistent with Table 2."
+   },
+   {
+    "id": 5,
+    "location": "§4.1",
+    "paper_text": "the selected backbone is efficientnet_b0 every time, whereas the selected feature dimension differs between runs",
+    "paper_value": "eff_b0 in all 4 runs; dims 128/512/256/256",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "Central §4.1 claim rests entirely on absent file."
+   },
+   {
+    "id": 6,
+    "location": "§4.1",
+    "paper_text": "number of trials recorded is systematically below the number declared",
+    "paper_value": "17<30, 15<30, 39<100, 93<100",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "Consistent with paper's own table only."
+   },
+   {
+    "id": 7,
+    "location": "§4.2",
+    "paper_text": "repeat every one of the 42 configurations ten times (420 evaluations)",
+    "paper_value": "420 evaluations",
+    "evidence_file": "proxy_diag/phaseA_proxy.json",
+    "evidence_value": "42 entries x 10 scores = 420",
+    "status": "exact_match",
+    "details": "Confirmed."
+   },
+   {
+    "id": 8,
+    "location": "§4.2/Table 1",
+    "paper_text": "efficientnet_b1 returns exactly 0.0 in 73% of evaluations",
+    "paper_value": "73%",
+    "evidence_file": "proxy_diag/phaseA_proxy.json",
+    "evidence_value": "22/30 zeros (7+7+8) = 73.3%",
+    "status": "exact_match",
+    "details": "Zero counts hand-verified per dimension."
+   },
+   {
+    "id": 9,
+    "location": "Table 1",
+    "paper_text": "efficientnet_b1: median 0.000, CV 169.5%",
+    "paper_value": "0.000 / 169.5%",
+    "evidence_file": "proxy_diag/phaseC_analysis.json",
+    "evidence_value": "median 0 (22 zeros); CVs 1.5281/1.5579/2.0000, mean 1.6953",
+    "status": "exact_match",
+    "details": "'Pooled' is the arithmetic mean of the three per-config CVs."
+   },
+   {
+    "id": 10,
+    "location": "Table 1",
+    "paper_text": "mobilenetv3_small_100: Zero 13%, median 7.979, CV 180.9%",
+    "paper_value": "13% / 7.979 / 180.9%",
+    "evidence_file": "proxy_diag/phaseA_proxy.json + phaseC",
+    "evidence_value": "4/30=13.3%; median (7.9775+7.9804)/2=7.979; mean CV 1.8095",
+    "status": "exact_match",
+    "details": "All three values reproduce exactly."
+   },
+   {
+    "id": 11,
+    "location": "§4.2/Table 1",
+    "paper_text": "twelve well-behaved: not one degenerate trial; pooled medians span 7.538-7.971, a range of 5.7%",
+    "paper_value": "0 zeros; 7.538-7.971; 5.7%",
+    "evidence_file": "proxy_diag/phaseA_proxy.json",
+    "evidence_value": "no zeros in 12 backbones; medians vit_tiny 7.538 ... eff_b0 7.971; range 5.75%",
+    "status": "exact_match",
+    "details": "Medians recomputed from raw scores; endpoints confirmed."
+   },
+   {
+    "id": 12,
+    "location": "§4.2/Table 1",
+    "paper_text": "twelve well-behaved backbones ... CV between 2.2% and 12.1%",
+    "paper_value": "CV range 2.2-12.1%",
+    "evidence_file": "proxy_diag/phaseC_analysis.json",
+    "evidence_value": "efficientnet_b0 CVs 129.0/18.6/74.4% -> pooled 74.0%",
+    "status": "number_mismatch",
+    "details": "Twelve includes eff_b0 whose pooled CV (74%) far exceeds claimed max 12.1% (swin_tiny)."
+   },
+   {
+    "id": 13,
+    "location": "Fig. 2 caption",
+    "paper_text": "Twelve backbones form a tight band near 7.6",
+    "paper_value": "twelve tight band",
+    "evidence_file": "proxy_diag/phaseA_proxy.json",
+    "evidence_value": "eff_b0 means 16.09/8.64/11.65, max 77.89",
+    "status": "scope_overclaim",
+    "details": "efficientnet_b0 is among the twelve and is not tight nor near 7.6."
+   },
+   {
+    "id": 14,
+    "location": "§4.2",
+    "paper_text": "Across all 420 evaluations, 26 (6.2%) returned exactly zero",
+    "paper_value": "26 / 6.2%",
+    "evidence_file": "proxy_diag/phaseA_proxy.json",
+    "evidence_value": "22 (eff_b1) + 4 (mbv3) = 26; 26/420=6.19%",
+    "status": "exact_match",
+    "details": "Confirmed."
+   },
+   {
+    "id": 15,
+    "location": "§4.2",
+    "paper_text": "Warning: Invalid score detected (score=4.19e+28, kd=2.18e+28)",
+    "paper_value": "diagnostic quote",
+    "evidence_file": "none",
+    "evidence_value": "absent from all files",
+    "status": "missing_evidence",
+    "details": "Engine log not supplied."
+   },
+   {
+    "id": 16,
+    "location": "Table 2",
+    "paper_text": "per-run trials/zeros/argmin; totals 834 trials, 67 zeros (8.0%), 14 of 19 runs (74%)",
+    "paper_value": "11 rows + totals",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "Internal arithmetic consistent (sums 834, 67, 8.03%, 73.7%) but source absent."
+   },
+   {
+    "id": 17,
+    "location": "§4.2 caveat",
+    "paper_text": "recorded proxy for efficientnet_b0 spans 0.002-0.065",
+    "paper_value": "0.002-0.065",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "Unverifiable."
+   },
+   {
+    "id": 18,
+    "location": "§4.2 caveat",
+    "paper_text": "current code returns 7.5-12.2 for the same configuration",
+    "paper_value": "7.5-12.2",
+    "evidence_file": "proxy_diag/phaseA_proxy.json",
+    "evidence_value": "eff_b0 dim256 spans 7.550-12.151; dim128 reaches 77.89, dim512 37.40",
+    "status": "ambiguous_mapping",
+    "details": "Matches dim256 only; 'same configuration' singular unclear, other dims exceed range."
+   },
+   {
+    "id": 19,
+    "location": "§4.2",
+    "paper_text": "median is 0.110 on capsule, 0.385 on hazelnut, 7.56 on wood, a span of 68.6x",
+    "paper_value": "0.110/0.385/7.56; 68.6x",
+    "evidence_file": "none",
+    "evidence_value": "no per-category proxy data in files (phaseA is wood only)",
+    "status": "missing_evidence",
+    "details": "Cross-category proxy medians not recorded in supplied files."
+   },
+   {
+    "id": 20,
+    "location": "§4.2",
+    "paper_text": "dimension moves the proxy by a median factor of 1.16x across 140 backbone comparisons, >10x at 90th percentile",
+    "paper_value": "1.16x / 140 / >10x",
+    "evidence_file": "none",
+    "evidence_value": "not recorded; derivation (140 comparisons) undefined",
+    "status": "missing_evidence",
+    "details": "Not derivable unambiguously from phaseA as given."
+   },
+   {
+    "id": 21,
+    "location": "Table 3",
+    "paper_text": "bands: 2.81/82.01; 5.41/83.14; 7.31/81.55; 13.04/83.25; 25.77/83.08",
+    "paper_value": "5 rows params+AUROC",
+    "evidence_file": "capacity_experiment/",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "Entire capacity-band table unverifiable."
+   },
+   {
+    "id": 22,
+    "location": "§4.3",
+    "paper_text": "Multiplying the parameter budget by 9.2x changes mean AUROC by +1.06 percentage points",
+    "paper_value": "9.2x; +1.06pp",
+    "evidence_file": "Table 3 (source missing)",
+    "evidence_value": "25.77/2.81=9.17->9.2 ok; 83.08-82.01=1.07 not 1.06",
+    "status": "number_mismatch",
+    "details": "Displayed table values give +1.07pp; 1.06 needs unrounded values."
+   },
+   {
+    "id": 23,
+    "location": "§4.3",
+    "paper_text": "entire spread across the five bands is 1.70 points; largest model worse than second largest",
+    "paper_value": "1.70pp; 83.08<83.25",
+    "evidence_file": "capacity_experiment/",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "Arithmetic consistent with Table 3 only."
+   },
+   {
+    "id": 24,
+    "location": "§4.3",
+    "paper_text": "All ten pairwise paired t-tests non-significant (smallest p = 0.058)",
+    "paper_value": "10 tests, min p=0.058",
+    "evidence_file": "capacity_experiment/",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "Test statistics absent."
+   },
+   {
+    "id": 25,
+    "location": "§4.3",
+    "paper_text": "all 14 backbones trained on all 15 categories, giving 210 detectors",
+    "paper_value": "210 detectors",
+    "evidence_file": "proxy_diag/phaseB_truth.json",
+    "evidence_value": "390 AUROC values (210 cells; 90 cells x 3 seeds, 120 x 1)",
+    "status": "aggregation_mismatch",
+    "details": "210 counts cells, not trained detectors; paper's own 180 residual df implies 390 runs."
+   },
+   {
+    "id": 26,
+    "location": "§4.3/Fig.3",
+    "paper_text": "0.54% backbone, 95.32% category, 4.13% interaction; F(13,182)=1.844, p=0.039",
+    "paper_value": "0.54/95.32/4.13; F=1.844; p=0.039",
+    "evidence_file": "proxy_diag/final_truth_analysis.json",
+    "evidence_value": "0.5445/95.3212/4.1343; F=1.84401; df[13,182]; p=0.03947",
+    "status": "exact_match",
+    "details": "Matches final_truth; note phaseC variant (0.62/95.41/3.97, F=2.18) conflicts."
+   },
+   {
+    "id": 27,
+    "location": "§4.3/Fig.3 caption",
+    "paper_text": "a factor of 176",
+    "paper_value": "176x",
+    "evidence_file": "proxy_diag/final_truth_analysis.json",
+    "evidence_value": "95.3212/0.54455 = 175.1",
+    "status": "number_mismatch",
+    "details": "Unrounded ratio is 175.1; displayed-value ratio 176.5; neither rounds cleanly to 176."
+   },
+   {
+    "id": 28,
+    "location": "§4.3",
+    "paper_text": "14 backbones span 3.98 points; eleven strongest span 2.43; efficientnet_b0 ranks fifth of fourteen",
+    "paper_value": "3.98 / 2.43 / rank 5",
+    "evidence_file": "proxy_diag/final_truth_analysis.json",
+    "evidence_value": "0.83341-0.79361=3.98pp; 0.83341-0.80907=2.43pp; eff_b0 5th",
+    "status": "exact_match",
+    "details": "Ranking list confirms all three."
+   },
+   {
+    "id": 29,
+    "location": "§4.3",
+    "paper_text": "indistinguishable from twelve of thirteen; only convnextv2_base worse (-3.11 points, p=0.013)",
+    "paper_value": "-3.11pp, p=0.013",
+    "evidence_file": "proxy_diag/final_truth_analysis.json",
+    "evidence_value": "delta 0.82467-0.79361=3.11pp; p=0.013 and pairwise tests absent",
+    "status": "missing_evidence",
+    "details": "Delta arithmetic verified; significance claims unverifiable."
+   },
+   {
+    "id": 30,
+    "location": "§4.3",
+    "paper_text": "Spearman -0.12 (p=0.68) vs 15-category mean; +0.02 (p=0.93) vs wood",
+    "paper_value": "-0.12/0.68; +0.02/0.93",
+    "evidence_file": "proxy_diag/phaseC_analysis.json",
+    "evidence_value": "[-0.12088, 0.68061]; [0.02420, 0.93455]",
+    "status": "exact_match",
+    "details": "Both correlations and p-values match."
+   },
+   {
+    "id": 31,
+    "location": "§4.3",
+    "paper_text": "wood best convnextv2_base 94.74%; worst overall 79.36%; wood-vs-overall rank correlation -0.24",
+    "paper_value": "94.74% / 79.36% / -0.24",
+    "evidence_file": "proxy_diag/phaseC_analysis.json",
+    "evidence_value": "auroc_wood 0.94737; mean 0.79361 (ranked last); spearman -0.23982",
+    "status": "exact_match",
+    "details": "All three confirmed; wood max verified across 14 backbones."
+   },
+   {
+    "id": 32,
+    "location": "§4.3",
+    "paper_text": "105 pairs, mean Spearman 0.215; 31% of pairs disagree (rho<0)",
+    "paper_value": "0.215; 31%",
+    "evidence_file": "proxy_diag/final_truth_analysis.json",
+    "evidence_value": "cross_cat_mean_spearman 0.21512; 33/105=31.4%",
+    "status": "exact_match",
+    "details": "Confirmed."
+   },
+   {
+    "id": 33,
+    "location": "§4.3",
+    "paper_text": "pooled SD across training seeds is 1.96 points over 180 residual df",
+    "paper_value": "1.96pp / 180 df",
+    "evidence_file": "proxy_diag/phaseB_truth.json",
+    "evidence_value": "recomputed: pooled within-cell variance 0.03444/90 -> SD 1.956pp, 180 df",
+    "status": "exact_match",
+    "details": "Derived from raw cells; phaseC's mean per-cell SD (1.04pp) is a different statistic."
+   },
+   {
+    "id": 34,
+    "location": "§4.2",
+    "paper_text": "isfinite and score<1000 gate; total/max(count,1) returns 0.0; min(self.results, key=score); exceptions continue",
+    "paper_value": "code-behaviour claims",
+    "evidence_file": "none",
+    "evidence_value": "no engine code in files",
+    "status": "missing_evidence",
+    "details": "Implementation constants; expected absent, but 0.0-collapse mechanism unverifiable directly."
+   },
+   {
+    "id": 35,
+    "location": "§4.2",
+    "paper_text": "efficientnet_b1 is the argmin of the capacity searches at two of five bands",
+    "paper_value": "2 of 5 bands (8M, 30M)",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "FILE NOT PROVIDED",
+    "status": "missing_evidence",
+    "details": "Consistent with paper's Table 2 only."
+   }
+  ],
+  "segment_verdict": "WARN",
+  "notes": "Headline diagnosis numbers (73%, 13%, 26/420=6.2%, medians 7.538-7.971, decomposition 0.54/95.32/4.13, F/p, Spearman correlations, transfer rho, 1.96pp seed SD) all reproduce exactly from supplied files. Real defects: (1) 'twelve well-behaved CV 2.2-12.1%' omits efficientnet_b0 (pooled CV 74%, dim128 129%), also contradicting Fig.2 'tight band' caption; (2) 'factor of 176' is 175.1 unrounded; (3) '+1.06pp' vs displayed 1.07; (4) '210 detectors' vs 390 recorded runs in phaseB. All search_forensics and capacity_experiment numbers (Tables 2-3, recorded-run table, 8.0%/834, p=0.058, p=0.013) unverifiable - files not supplied. phaseC and final_truth decompositions disagree (F=2.18 vs 1.844); paper silently uses final_truth.",
+  "_segment": "S3 results — proxy repeatability + variance decomposition",
+  "_raw": "Audit complete: core diagnosis numbers (73%, 6.2%, medians, variance decomposition, correlations, 1.96pp seed SD) trace exactly to the provided files; two numeric mismatches found (CV range omits efficientnet_b0's 74% pooled CV; \"176×\" is 175.1×), and all recorded-run/capacity numbers rest on files not supplied.\n\n```json\n{\n  \"claims\": [\n    {\"id\": 1, \"location\": \"§4.1\", \"paper_text\": \"|B|=14 backbones and D={128,256,512}, giving 42 configurations\", \"paper_value\": \"14x3=42\", \"evidence_file\": \"proxy_diag/phaseA_proxy.json\", \"evidence_value\": \"42 config keys, 14 backbones x 3 dims\", \"status\": \"exact_match\", \"details\": \"Config inventory matches exactly.\"},\n    {\"id\": 2, \"location\": \"§4.1\", \"paper_text\": \"encoder builds bottleneck with hard-coded width 256; decoder constructed with requested width; RDDetector never passes bottleneck_dim\", \"paper_value\": \"structural claim\", \"evidence_file\": \"proxy_diag/phaseC_analysis.json\", \"evidence_value\": \"structural_probe: encoder 256, dim128_decoder_in 128, signature has bottleneck_dim, verdict identical\", \"status\": \"exact_match\", \"details\": \"Structural probe corroborates all three code claims.\"},\n    {\"id\": 3, \"location\": \"§4.1\", \"paper_text\": \"42-configuration space contains only 14 distinct models; remaining 28 are duplicates (two thirds)\", \"paper_value\": \"14 distinct / 28 duplicate\", \"evidence_file\": \"proxy_diag/phaseC_analysis.json\", \"evidence_value\": \"verdict: all three searched dims map to identical deployed detector\", \"status\": \"exact_match\", \"details\": \"Logical consequence of probe; 28/42=2/3 arithmetic holds.\"},\n    {\"id\": 4, \"location\": \"§4.1 table\", \"paper_text\": \"stage2 30/17; rtx3090 30/15; 100trials 100/39; topjournal 100/93; backbones/dims as listed\", \"paper_value\": \"declared/recorded trials, selected backbone+dim per run\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"All four recorded-run rows unverifiable; trial counts 17/15/39/93 internally consistent with Table 2.\"},\n    {\"id\": 5, \"location\": \"§4.1\", \"paper_text\": \"the selected backbone is efficientnet_b0 every time, whereas the selected feature dimension differs between runs\", \"paper_value\": \"eff_b0 in all 4 runs; dims 128/512/256/256\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"Central §4.1 claim rests entirely on absent file.\"},\n    {\"id\": 6, \"location\": \"§4.1\", \"paper_text\": \"number of trials recorded is systematically below the number declared\", \"paper_value\": \"17<30, 15<30, 39<100, 93<100\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"Consistent with paper's own table only.\"},\n    {\"id\": 7, \"location\": \"§4.2\", \"paper_text\": \"repeat every one of the 42 configurations ten times (420 evaluations)\", \"paper_value\": \"420 evaluations\", \"evidence_file\": \"proxy_diag/phaseA_proxy.json\", \"evidence_value\": \"42 entries x 10 scores = 420\", \"status\": \"exact_match\", \"details\": \"Confirmed.\"},\n    {\"id\": 8, \"location\": \"§4.2/Table 1\", \"paper_text\": \"efficientnet_b1 returns exactly 0.0 in 73% of evaluations\", \"paper_value\": \"73%\", \"evidence_file\": \"proxy_diag/phaseA_proxy.json\", \"evidence_value\": \"22/30 zeros (7+7+8) = 73.3%\", \"status\": \"exact_match\", \"details\": \"Zero counts hand-verified per dimension.\"},\n    {\"id\": 9, \"location\": \"Table 1\", \"paper_text\": \"efficientnet_b1: median 0.000, CV 169.5%\", \"paper_value\": \"0.000 / 169.5%\", \"evidence_file\": \"proxy_diag/phaseC_analysis.json\", \"evidence_value\": \"median 0 (22 zeros); CVs 1.5281/1.5579/2.0000, mean 1.6953\", \"status\": \"exact_match\", \"details\": \"'Pooled' is the arithmetic mean of the three per-config CVs.\"},\n    {\"id\": 10, \"location\": \"Table 1\", \"paper_text\": \"mobilenetv3_small_100: Zero 13%, median 7.979, CV 180.9%\", \"paper_value\": \"13% / 7.979 / 180.9%\", \"evidence_file\": \"proxy_diag/phaseA_proxy.json + phaseC\", \"evidence_value\": \"4/30=13.3%; median (7.9775+7.9804)/2=7.979; mean CV 1.8095\", \"status\": \"exact_match\", \"details\": \"All three values reproduce exactly.\"},\n    {\"id\": 11, \"location\": \"§4.2/Table 1\", \"paper_text\": \"twelve well-behaved: not one degenerate trial; pooled medians span 7.538-7.971, a range of 5.7%\", \"paper_value\": \"0 zeros; 7.538-7.971; 5.7%\", \"evidence_file\": \"proxy_diag/phaseA_proxy.json\", \"evidence_value\": \"no zeros in 12 backbones; medians vit_tiny 7.538 ... eff_b0 7.971; range 5.75%\", \"status\": \"exact_match\", \"details\": \"Medians recomputed from raw scores; endpoints confirmed.\"},\n    {\"id\": 12, \"location\": \"§4.2/Table 1\", \"paper_text\": \"twelve well-behaved backbones ... CV between 2.2% and 12.1%\", \"paper_value\": \"CV range 2.2-12.1%\", \"evidence_file\": \"proxy_diag/phaseC_analysis.json\", \"evidence_value\": \"efficientnet_b0 CVs 129.0/18.6/74.4% -> pooled 74.0%\", \"status\": \"number_mismatch\", \"details\": \"Twelve includes eff_b0 whose pooled CV (74%) far exceeds claimed max 12.1% (swin_tiny).\"},\n    {\"id\": 13, \"location\": \"Fig. 2 caption\", \"paper_text\": \"Twelve backbones form a tight band near 7.6\", \"paper_value\": \"twelve tight band\", \"evidence_file\": \"proxy_diag/phaseA_proxy.json\", \"evidence_value\": \"eff_b0 means 16.09/8.64/11.65, max 77.89\", \"status\": \"scope_overclaim\", \"details\": \"efficientnet_b0 is among the twelve and is not tight nor near 7.6.\"},\n    {\"id\": 14, \"location\": \"§4.2\", \"paper_text\": \"Across all 420 evaluations, 26 (6.2%) returned exactly zero\", \"paper_value\": \"26 / 6.2%\", \"evidence_file\": \"proxy_diag/phaseA_proxy.json\", \"evidence_value\": \"22 (eff_b1) + 4 (mbv3) = 26; 26/420=6.19%\", \"status\": \"exact_match\", \"details\": \"Confirmed.\"},\n    {\"id\": 15, \"location\": \"§4.2\", \"paper_text\": \"Warning: Invalid score detected (score=4.19e+28, kd=2.18e+28)\", \"paper_value\": \"diagnostic quote\", \"evidence_file\": \"none\", \"evidence_value\": \"absent from all files\", \"status\": \"missing_evidence\", \"details\": \"Engine log not supplied.\"},\n    {\"id\": 16, \"location\": \"Table 2\", \"paper_text\": \"per-run trials/zeros/argmin; totals 834 trials, 67 zeros (8.0%), 14 of 19 runs (74%)\", \"paper_value\": \"11 rows + totals\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"Internal arithmetic consistent (sums 834, 67, 8.03%, 73.7%) but source absent.\"},\n    {\"id\": 17, \"location\": \"§4.2 caveat\", \"paper_text\": \"recorded proxy for efficientnet_b0 spans 0.002-0.065\", \"paper_value\": \"0.002-0.065\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"Unverifiable.\"},\n    {\"id\": 18, \"location\": \"§4.2 caveat\", \"paper_text\": \"current code returns 7.5-12.2 for the same configuration\", \"paper_value\": \"7.5-12.2\", \"evidence_file\": \"proxy_diag/phaseA_proxy.json\", \"evidence_value\": \"eff_b0 dim256 spans 7.550-12.151; dim128 reaches 77.89, dim512 37.40\", \"status\": \"ambiguous_mapping\", \"details\": \"Matches dim256 only; 'same configuration' singular unclear, other dims exceed range.\"},\n    {\"id\": 19, \"location\": \"§4.2\", \"paper_text\": \"median is 0.110 on capsule, 0.385 on hazelnut, 7.56 on wood, a span of 68.6x\", \"paper_value\": \"0.110/0.385/7.56; 68.6x\", \"evidence_file\": \"none\", \"evidence_value\": \"no per-category proxy data in files (phaseA is wood only)\", \"status\": \"missing_evidence\", \"details\": \"Cross-category proxy medians not recorded in supplied files.\"},\n    {\"id\": 20, \"location\": \"§4.2\", \"paper_text\": \"dimension moves the proxy by a median factor of 1.16x across 140 backbone comparisons, >10x at 90th percentile\", \"paper_value\": \"1.16x / 140 / >10x\", \"evidence_file\": \"none\", \"evidence_value\": \"not recorded; derivation (140 comparisons) undefined\", \"status\": \"missing_evidence\", \"details\": \"Not derivable unambiguously from phaseA as given.\"},\n    {\"id\": 21, \"location\": \"Table 3\", \"paper_text\": \"bands: 2.81/82.01; 5.41/83.14; 7.31/81.55; 13.04/83.25; 25.77/83.08\", \"paper_value\": \"5 rows params+AUROC\", \"evidence_file\": \"capacity_experiment/\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"Entire capacity-band table unverifiable.\"},\n    {\"id\": 22, \"location\": \"§4.3\", \"paper_text\": \"Multiplying the parameter budget by 9.2x changes mean AUROC by +1.06 percentage points\", \"paper_value\": \"9.2x; +1.06pp\", \"evidence_file\": \"Table 3 (source missing)\", \"evidence_value\": \"25.77/2.81=9.17->9.2 ok; 83.08-82.01=1.07 not 1.06\", \"status\": \"number_mismatch\", \"details\": \"Displayed table values give +1.07pp; 1.06 needs unrounded values.\"},\n    {\"id\": 23, \"location\": \"§4.3\", \"paper_text\": \"entire spread across the five bands is 1.70 points; largest model worse than second largest\", \"paper_value\": \"1.70pp; 83.08<83.25\", \"evidence_file\": \"capacity_experiment/\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"Arithmetic consistent with Table 3 only.\"},\n    {\"id\": 24, \"location\": \"§4.3\", \"paper_text\": \"All ten pairwise paired t-tests non-significant (smallest p = 0.058)\", \"paper_value\": \"10 tests, min p=0.058\", \"evidence_file\": \"capacity_experiment/\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"Test statistics absent.\"},\n    {\"id\": 25, \"location\": \"§4.3\", \"paper_text\": \"all 14 backbones trained on all 15 categories, giving 210 detectors\", \"paper_value\": \"210 detectors\", \"evidence_file\": \"proxy_diag/phaseB_truth.json\", \"evidence_value\": \"390 AUROC values (210 cells; 90 cells x 3 seeds, 120 x 1)\", \"status\": \"aggregation_mismatch\", \"details\": \"210 counts cells, not trained detectors; paper's own 180 residual df implies 390 runs.\"},\n    {\"id\": 26, \"location\": \"§4.3/Fig.3\", \"paper_text\": \"0.54% backbone, 95.32% category, 4.13% interaction; F(13,182)=1.844, p=0.039\", \"paper_value\": \"0.54/95.32/4.13; F=1.844; p=0.039\", \"evidence_file\": \"proxy_diag/final_truth_analysis.json\", \"evidence_value\": \"0.5445/95.3212/4.1343; F=1.84401; df[13,182]; p=0.03947\", \"status\": \"exact_match\", \"details\": \"Matches final_truth; note phaseC variant (0.62/95.41/3.97, F=2.18) conflicts.\"},\n    {\"id\": 27, \"location\": \"§4.3/Fig.3 caption\", \"paper_text\": \"a factor of 176\", \"paper_value\": \"176x\", \"evidence_file\": \"proxy_diag/final_truth_analysis.json\", \"evidence_value\": \"95.3212/0.54455 = 175.1\", \"status\": \"number_mismatch\", \"details\": \"Unrounded ratio is 175.1; displayed-value ratio 176.5; neither rounds cleanly to 176.\"},\n    {\"id\": 28, \"location\": \"§4.3\", \"paper_text\": \"14 backbones span 3.98 points; eleven strongest span 2.43; efficientnet_b0 ranks fifth of fourteen\", \"paper_value\": \"3.98 / 2.43 / rank 5\", \"evidence_file\": \"proxy_diag/final_truth_analysis.json\", \"evidence_value\": \"0.83341-0.79361=3.98pp; 0.83341-0.80907=2.43pp; eff_b0 5th\", \"status\": \"exact_match\", \"details\": \"Ranking list confirms all three.\"},\n    {\"id\": 29, \"location\": \"§4.3\", \"paper_text\": \"indistinguishable from twelve of thirteen; only convnextv2_base worse (-3.11 points, p=0.013)\", \"paper_value\": \"-3.11pp, p=0.013\", \"evidence_file\": \"proxy_diag/final_truth_analysis.json\", \"evidence_value\": \"delta 0.82467-0.79361=3.11pp; p=0.013 and pairwise tests absent\", \"status\": \"missing_evidence\", \"details\": \"Delta arithmetic verified; significance claims unverifiable.\"},\n    {\"id\": 30, \"location\": \"§4.3\", \"paper_text\": \"Spearman -0.12 (p=0.68) vs 15-category mean; +0.02 (p=0.93) vs wood\", \"paper_value\": \"-0.12/0.68; +0.02/0.93\", \"evidence_file\": \"proxy_diag/phaseC_analysis.json\", \"evidence_value\": \"[-0.12088, 0.68061]; [0.02420, 0.93455]\", \"status\": \"exact_match\", \"details\": \"Both correlations and p-values match.\"},\n    {\"id\": 31, \"location\": \"§4.3\", \"paper_text\": \"wood best convnextv2_base 94.74%; worst overall 79.36%; wood-vs-overall rank correlation -0.24\", \"paper_value\": \"94.74% / 79.36% / -0.24\", \"evidence_file\": \"proxy_diag/phaseC_analysis.json\", \"evidence_value\": \"auroc_wood 0.94737; mean 0.79361 (ranked last); spearman -0.23982\", \"status\": \"exact_match\", \"details\": \"All three confirmed; wood max verified across 14 backbones.\"},\n    {\"id\": 32, \"location\": \"§4.3\", \"paper_text\": \"105 pairs, mean Spearman 0.215; 31% of pairs disagree (rho<0)\", \"paper_value\": \"0.215; 31%\", \"evidence_file\": \"proxy_diag/final_truth_analysis.json\", \"evidence_value\": \"cross_cat_mean_spearman 0.21512; 33/105=31.4%\", \"status\": \"exact_match\", \"details\": \"Confirmed.\"},\n    {\"id\": 33, \"location\": \"§4.3\", \"paper_text\": \"pooled SD across training seeds is 1.96 points over 180 residual df\", \"paper_value\": \"1.96pp / 180 df\", \"evidence_file\": \"proxy_diag/phaseB_truth.json\", \"evidence_value\": \"recomputed: pooled within-cell variance 0.03444/90 -> SD 1.956pp, 180 df\", \"status\": \"exact_match\", \"details\": \"Derived from raw cells; phaseC's mean per-cell SD (1.04pp) is a different statistic.\"},\n    {\"id\": 34, \"location\": \"§4.2\", \"paper_text\": \"isfinite and score<1000 gate; total/max(count,1) returns 0.0; min(self.results, key=score); exceptions continue\", \"paper_value\": \"code-behaviour claims\", \"evidence_file\": \"none\", \"evidence_value\": \"no engine code in files\", \"status\": \"missing_evidence\", \"details\": \"Implementation constants; expected absent, but 0.0-collapse mechanism unverifiable directly.\"},\n    {\"id\": 35, \"location\": \"§4.2\", \"paper_text\": \"efficientnet_b1 is the argmin of the capacity searches at two of five bands\", \"paper_value\": \"2 of 5 bands (8M, 30M)\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"FILE NOT PROVIDED\", \"status\": \"missing_evidence\", \"details\": \"Consistent with paper's Table 2 only.\"}\n  ],\n  \"segment_verdict\": \"WARN\",\n  \"notes\": \"Headline diagnosis numbers (73%, 13%, 26/420=6.2%, medians 7.538-7.971, decomposition 0.54/95.32/4.13, F/p, Spearman correlations, transfer rho, 1.96pp seed SD) all reproduce exactly from supplied files. Real defects: (1) 'twelve well-behaved CV 2.2-12.1%' omits efficientnet_b0 (pooled CV 74%, dim128 129%), also contradicting Fig.2 'tight band' caption; (2) 'factor of 176' is 175.1 unrounded; (3) '+1.06pp' vs displayed 1.07; (4) '210 detectors' vs 390 recorded runs in phaseB. All search_forensics and capacity_experiment numbers (Tables 2-3, recorded-run table, 8.0%/834, p=0.058, p=0.013) unverifiable - files not supplied. phaseC and final_truth decompositions disagree (F=2.18 vs 1.844); paper silently uses final_truth.\"\n}\n```"
+ },
+ {
+  "claims": [
+   {
+    "id": 1,
+    "location": "resolvability item 1",
+    "paper_text": "sigma_seed = 1.96, pooled within-cell SD over training seeds (90 cells replicated three times; 180 residual df)",
+    "paper_value": "1.96 / 90 / 180",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "pooled_sd=1.9559; n_multiseed_cells=90; df=180.0",
+    "status": "exact_match",
+    "details": "All three components match; 1.9559 rounds to 1.96."
+   },
+   {
+    "id": 2,
+    "location": "resolvability item 1",
+    "paper_text": "median 0.58, maximum 7.74",
+    "paper_value": "0.58 / 7.74",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "median_of_cell_sd=0.5755; max_of_cell_sd=7.7409",
+    "status": "exact_match",
+    "details": "Standard rounding to displayed precision."
+   },
+   {
+    "id": 3,
+    "location": "resolvability item 2",
+    "paper_text": "sigma_res = 3.30, two-way ANOVA residual",
+    "paper_value": "3.30",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "sigma_anova_residual=3.29856",
+    "status": "exact_match",
+    "details": "sqrt(ms_res)=3.2986 pp; rounds to 3.30."
+   },
+   {
+    "id": 4,
+    "location": "resolvability item 3",
+    "paper_text": "sigma_delta = 4.12 ... averaged over the 91 backbone pairs",
+    "paper_value": "4.12 / 91",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "paired_diff_sd_pp.mean=4.11727; n_pairs=91",
+    "status": "exact_match",
+    "details": "14x13/2=91 pairs; mean 4.1173 rounds to 4.12."
+   },
+   {
+    "id": 5,
+    "location": "resolvability intro",
+    "paper_text": "The 210-detector matrix",
+    "paper_value": "210",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "n_cells=210",
+    "status": "exact_match",
+    "details": "Matches; 14 backbones x 15 categories."
+   },
+   {
+    "id": 6,
+    "location": "resolvability para 2",
+    "paper_text": "requires 240 independent training runs per backbone",
+    "paper_value": "240",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "n_per_arm_single_category_unpaired=240.208",
+    "status": "exact_match",
+    "details": "Rounds to 240; formula consistent with sigma=1.956, delta=0.5."
+   },
+   {
+    "id": 7,
+    "location": "resolvability para 2",
+    "paper_text": "minimum detectable difference is 2.98 points",
+    "paper_value": "2.98",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "mdd_with_15_categories_paired=2.9783",
+    "status": "exact_match",
+    "details": "Rounds to 2.98."
+   },
+   {
+    "id": 8,
+    "location": "resolvability para 2",
+    "paper_text": "2.98 points --- larger than the entire 3.98-point spread of the fourteen backbones",
+    "paper_value": "2.98 > 3.98",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "backbone_spread_pp=3.9795; mdd=2.9783",
+    "status": "number_mismatch",
+    "details": "Arithmetic/comparison error: 2.98 is SMALLER than 3.98, not larger. Both values exist in file; 'larger than' is false."
+   },
+   {
+    "id": 9,
+    "location": "resolvability para 2",
+    "paper_text": "six times the margin the field argues about",
+    "paper_value": "2.98/0.5 = 6",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "2.9783/0.5=5.96",
+    "status": "rounding_ok",
+    "details": "5.96 rounds to 'six times'."
+   },
+   {
+    "id": 10,
+    "location": "resolvability para 2",
+    "paper_text": "Adding two more training seeds per cell ... moves this only to 2.95 points",
+    "paper_value": "2.95",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "mdd_with_15cat_x3seed_paired=2.95257",
+    "status": "exact_match",
+    "details": "Rounds to 2.95; 3 seeds/cell consistent with df=180."
+   },
+   {
+    "id": 11,
+    "location": "resolvability para 2",
+    "paper_text": "would take 532 categories; the benchmark has fifteen",
+    "paper_value": "532 / 15",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "categories_needed_paired=532.21; anova b=15",
+    "status": "exact_match",
+    "details": "Rounds to 532; 15 categories confirmed."
+   },
+   {
+    "id": 12,
+    "location": "resolvability para 3",
+    "paper_text": "PatchCore-style ... seed standard deviation of 0.51 points and a requirement of only 17 runs ... factor of 14 below",
+    "paper_value": "0.51 / 17 / 14x",
+    "evidence_file": "(none provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "No evidence file contains PatchCore harness numbers. 240/17=14.1 consistent, but inputs unverifiable."
+   },
+   {
+    "id": 13,
+    "location": "resolvability para 4",
+    "paper_text": "statistically detectable at 210 detectors (p = 0.039)",
+    "paper_value": "p=0.039",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "F_rows=1.8440, a=14, df_res=180",
+    "status": "ambiguous_mapping",
+    "details": "p not stored; F(13,180)=1.844 implies p~0.04, consistent with 0.039 but not directly verifiable."
+   },
+   {
+    "id": 14,
+    "location": "resolvability intro",
+    "paper_text": "PatchCore reached 99.1% ... strongest methods reach 99.6% ... roughly a hundred images per category",
+    "paper_value": "99.1 / 99.6 / ~100",
+    "evidence_file": "(none provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "External literature citations; expected absent from these files."
+   },
+   {
+    "id": 15,
+    "location": "search_vs_random para 1",
+    "paper_text": "100 trials ... twelve independent seeds",
+    "paper_value": "100 / 12",
+    "evidence_file": "search_repeats/search_repeats.json",
+    "evidence_value": "trials=100 all runs; seeds 5000-5011 (n_runs=12)",
+    "status": "exact_match",
+    "details": "Note run09 recorded only 90/100 trials; selection claims unaffected."
+   },
+   {
+    "id": 16,
+    "location": "search_vs_random para 1",
+    "paper_text": "three quick training epochs per candidate, uniform sampling from the 42 cells",
+    "paper_value": "3 epochs / 42 cells",
+    "evidence_file": "(none provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Config constants not recorded; 42=14x3 consistent with space but sampling scheme unverified."
+   },
+   {
+    "id": 17,
+    "location": "search_vs_random para 1",
+    "paper_text": "the searched feature dimension cannot reach the detector",
+    "paper_value": "true",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "inert_axis.note: feature_dim cannot reach deployed detector (256-d bottleneck hard-coded)",
+    "status": "exact_match",
+    "details": "Directly supported."
+   },
+   {
+    "id": 18,
+    "location": "search_vs_random para 1",
+    "paper_text": "eight of the twelve returned efficientnet_b1 ... four returned mobilenetv3_small_100",
+    "paper_value": "8 / 4",
+    "evidence_file": "search_repeats/search_repeats_summary.json",
+    "evidence_value": "backbone_counts: efficientnet_b1=8, mobilenetv3_small_100=4",
+    "status": "exact_match",
+    "details": "Matches."
+   },
+   {
+    "id": 19,
+    "location": "search_vs_random para 1",
+    "paper_text": "efficientnet_b1 (true rank 12 of 14, 80.43% mean AUROC)",
+    "paper_value": "rank 12 / 80.43%",
+    "evidence_file": "search_repeats/search_vs_random_final.json + summary",
+    "evidence_value": "true_rank_of_selected=12; truth 0.804324=80.43%",
+    "status": "exact_match",
+    "details": "Both components match."
+   },
+   {
+    "id": 20,
+    "location": "search_vs_random para 1",
+    "paper_text": "mobilenetv3_small_100 (rank 7 of 14, 81.85%)",
+    "paper_value": "rank 7 / 81.85%",
+    "evidence_file": "search_vs_random_final.json + search_repeats_summary.json",
+    "evidence_value": "rank=7 ok; truth_per_backbone=0.819547=81.95%",
+    "status": "number_mismatch",
+    "details": "Rank matches, but only per-backbone truth given says 81.95%, not 81.85%; final_truth_analysis per-backbone values not provided."
+   },
+   {
+    "id": 21,
+    "location": "search_vs_random para 1",
+    "paper_text": "only 2 of the 14 backbones and 6 of the 42 configurations appeared at all",
+    "paper_value": "2 / 6",
+    "evidence_file": "search_repeats/search_repeats_summary.json",
+    "evidence_value": "unique_backbones_selected=2; unique_configs_selected=6",
+    "status": "exact_match",
+    "details": "Matches."
+   },
+   {
+    "id": 22,
+    "location": "search_vs_random para 1",
+    "paper_text": "probability ... 7.2x10^-11",
+    "paper_value": "7.2e-11",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "p_all_in_collapse_subset=7.2248e-11",
+    "status": "exact_match",
+    "details": "(2/14)^12 = 7.22e-11; verified."
+   },
+   {
+    "id": 23,
+    "location": "search_vs_random para 2",
+    "paper_text": "search's output attains 80.91% mean AUROC",
+    "paper_value": "80.91%",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "search_mean_true_auroc=0.8090584",
+    "status": "exact_match",
+    "details": "Rounds to 80.91; matches final file (summary file gives 80.94)."
+   },
+   {
+    "id": 24,
+    "location": "search_vs_random para 2",
+    "paper_text": "random gives 81.65% (bootstrap s.d. 0.32 points)",
+    "paper_value": "81.65% / 0.32",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "random_mean=0.8165089; bootstrap_sd=0.0032187",
+    "status": "exact_match",
+    "details": "0.81651 -> 81.65%; 0.003219 -> 0.32 pp."
+   },
+   {
+    "id": 25,
+    "location": "search_vs_random para 2",
+    "paper_text": "best backbone in the space gives 83.34%",
+    "paper_value": "83.34%",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "oracle_true_auroc=0.8334095 (resnet18)",
+    "status": "exact_match",
+    "details": "Matches final file; summary file's 83.81% is the other truth source."
+   },
+   {
+    "id": 26,
+    "location": "search_vs_random para 2 + caption",
+    "paper_text": "sits at the 1.2th percentile ... worse than 98.8% of uniform draws",
+    "paper_value": "1.2 / 98.8%",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "percentile_of_search_in_random=1.2285",
+    "status": "exact_match",
+    "details": "1.2285 -> 1.2; 100-1.23=98.77 -> 98.8."
+   },
+   {
+    "id": 27,
+    "location": "search_vs_random para 2",
+    "paper_text": "mean true rank of 10.3 of 14 against 7.5 for random",
+    "paper_value": "10.3 / 7.5",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "mean_true_rank_of_selected=10.333; random_expected_rank=7.5",
+    "status": "exact_match",
+    "details": "Matches."
+   },
+   {
+    "id": 28,
+    "location": "search_vs_random para 2 + caption",
+    "paper_text": "never once selected one of the four strongest backbones",
+    "paper_value": "0 runs",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "runs_selecting_top4=0",
+    "status": "exact_match",
+    "details": "Selected ranks 12 and 7 only."
+   },
+   {
+    "id": 29,
+    "location": "search_vs_random para 2",
+    "paper_text": "constant resnet18 would have improved it by 2.4 points",
+    "paper_value": "2.4",
+    "evidence_file": "search_repeats/search_vs_random_final.json",
+    "evidence_value": "0.83341-0.80906=0.02435=2.43 pp",
+    "status": "rounding_ok",
+    "details": "2.43 rounds to 2.4."
+   },
+   {
+    "id": 30,
+    "location": "search_vs_random para 3",
+    "paper_text": "well-behaved configuration is bounded below by roughly 7.5, while the two collapse-prone backbones return exactly 0.0",
+    "paper_value": "floor ~7.5; zeros exclusive to 2 backbones",
+    "evidence_file": "search_repeats/search_repeats.json",
+    "evidence_value": "efficientnet_b0 scored 0.0 (run08 t63, run10 t32); min non-zero trial 4.56",
+    "status": "scope_overclaim",
+    "details": "A third backbone (efficientnet_b0) returned exact 0.0 twice; 'roughly 7.5' floor loose (non-zero minimum 4.56)."
+   },
+   {
+    "id": 31,
+    "location": "why-earlier-searches box",
+    "paper_text": "The four search runs whose results the manuscript reports selected efficientnet_b0",
+    "paper_value": "4 runs -> efficientnet_b0",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "stage2, stage2_rtx3090, stage2_rtx3090_100trials, stage2_topjournal all best=efficientnet_b0",
+    "status": "ambiguous_mapping",
+    "details": "4 of 5 stage2-type runs selected b0; mvtec_stage2_test/bottle selected b1; which 4 are 'reported' unverifiable."
+   },
+   {
+    "id": 32,
+    "location": "why-earlier-searches box",
+    "paper_text": "efficientnet_b0 ... which does not collapse",
+    "paper_value": "b0 never collapses",
+    "evidence_file": "search_repeats/search_repeats.json",
+    "evidence_value": "efficientnet_b0 score 0.0 in run08 t63 and run10 t32",
+    "status": "scope_overclaim",
+    "details": "Proxy scores of 0.0 observed for b0, contradicting exclusivity of collapse to b1/mnv3 (rare: 2/~1195 trials)."
+   },
+   {
+    "id": 33,
+    "location": "search_vs_random para 1",
+    "paper_text": "a search space that is two thirds inert",
+    "paper_value": "2/3 inert",
+    "evidence_file": "search_forensics/search_forensics.json",
+    "evidence_value": "inert_axis note: feature_dim cannot reach detector",
+    "status": "rounding_ok",
+    "details": "28/42=2/3 implied by 3 dims collapsing to backbone-only; consistent."
+   },
+   {
+    "id": 34,
+    "location": "resolvability para 4",
+    "paper_text": "reporting differences smaller than about three points as unresolved",
+    "paper_value": "~3 points",
+    "evidence_file": "proxy_diag/samplesize_analysis.json",
+    "evidence_value": "mdd_paired_15cat_pp=2.978",
+    "status": "rounding_ok",
+    "details": "'About three' consistent with 2.98."
+   }
+  ],
+  "segment_verdict": "FAIL",
+  "notes": "Driver of FAIL: claim 8 asserts 2.98 > 3.98 ('larger than the entire spread'), which is arithmetically false per the files (both values correct individually). Secondary: mobilenetv3 81.85% conflicts with the only per-backbone truth present (81.95%); PatchCore figures (0.51 pp, 17 runs) unsupported. run09 recorded 90/100 trials though paper says 100 per run. Paper consistently uses search_vs_random_final.json values (80.91/81.65/83.34/0.32/1.2) where summary file differs slightly.",
+  "_segment": "S4 results — resolvability + repeated searches",
+  "_raw": "Short audit: most figures trace exactly to `samplesize_analysis.json` and `search_vs_random_final.json`, but the \"2.98 larger than 3.98\" comparison is arithmetically false, the mobilenetv3 AUROC (81.85%) conflicts with the only per-backbone truth provided (81.95%), and the PatchCore comparison is unsupported by any given file.\n\n```json\n{\n  \"claims\": [\n    {\"id\": 1, \"location\": \"resolvability item 1\", \"paper_text\": \"sigma_seed = 1.96, pooled within-cell SD over training seeds (90 cells replicated three times; 180 residual df)\", \"paper_value\": \"1.96 / 90 / 180\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"pooled_sd=1.9559; n_multiseed_cells=90; df=180.0\", \"status\": \"exact_match\", \"details\": \"All three components match; 1.9559 rounds to 1.96.\"},\n    {\"id\": 2, \"location\": \"resolvability item 1\", \"paper_text\": \"median 0.58, maximum 7.74\", \"paper_value\": \"0.58 / 7.74\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"median_of_cell_sd=0.5755; max_of_cell_sd=7.7409\", \"status\": \"exact_match\", \"details\": \"Standard rounding to displayed precision.\"},\n    {\"id\": 3, \"location\": \"resolvability item 2\", \"paper_text\": \"sigma_res = 3.30, two-way ANOVA residual\", \"paper_value\": \"3.30\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"sigma_anova_residual=3.29856\", \"status\": \"exact_match\", \"details\": \"sqrt(ms_res)=3.2986 pp; rounds to 3.30.\"},\n    {\"id\": 4, \"location\": \"resolvability item 3\", \"paper_text\": \"sigma_delta = 4.12 ... averaged over the 91 backbone pairs\", \"paper_value\": \"4.12 / 91\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"paired_diff_sd_pp.mean=4.11727; n_pairs=91\", \"status\": \"exact_match\", \"details\": \"14x13/2=91 pairs; mean 4.1173 rounds to 4.12.\"},\n    {\"id\": 5, \"location\": \"resolvability intro\", \"paper_text\": \"The 210-detector matrix\", \"paper_value\": \"210\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"n_cells=210\", \"status\": \"exact_match\", \"details\": \"Matches; 14 backbones x 15 categories.\"},\n    {\"id\": 6, \"location\": \"resolvability para 2\", \"paper_text\": \"requires 240 independent training runs per backbone\", \"paper_value\": \"240\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"n_per_arm_single_category_unpaired=240.208\", \"status\": \"exact_match\", \"details\": \"Rounds to 240; formula consistent with sigma=1.956, delta=0.5.\"},\n    {\"id\": 7, \"location\": \"resolvability para 2\", \"paper_text\": \"minimum detectable difference is 2.98 points\", \"paper_value\": \"2.98\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"mdd_with_15_categories_paired=2.9783\", \"status\": \"exact_match\", \"details\": \"Rounds to 2.98.\"},\n    {\"id\": 8, \"location\": \"resolvability para 2\", \"paper_text\": \"2.98 points --- larger than the entire 3.98-point spread of the fourteen backbones\", \"paper_value\": \"2.98 > 3.98\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"backbone_spread_pp=3.9795; mdd=2.9783\", \"status\": \"number_mismatch\", \"details\": \"Arithmetic/comparison error: 2.98 is SMALLER than 3.98, not larger. Both values exist in file; 'larger than' is false.\"},\n    {\"id\": 9, \"location\": \"resolvability para 2\", \"paper_text\": \"six times the margin the field argues about\", \"paper_value\": \"2.98/0.5 = 6\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"2.9783/0.5=5.96\", \"status\": \"rounding_ok\", \"details\": \"5.96 rounds to 'six times'.\"},\n    {\"id\": 10, \"location\": \"resolvability para 2\", \"paper_text\": \"Adding two more training seeds per cell ... moves this only to 2.95 points\", \"paper_value\": \"2.95\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"mdd_with_15cat_x3seed_paired=2.95257\", \"status\": \"exact_match\", \"details\": \"Rounds to 2.95; 3 seeds/cell consistent with df=180.\"},\n    {\"id\": 11, \"location\": \"resolvability para 2\", \"paper_text\": \"would take 532 categories; the benchmark has fifteen\", \"paper_value\": \"532 / 15\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"categories_needed_paired=532.21; anova b=15\", \"status\": \"exact_match\", \"details\": \"Rounds to 532; 15 categories confirmed.\"},\n    {\"id\": 12, \"location\": \"resolvability para 3\", \"paper_text\": \"PatchCore-style ... seed standard deviation of 0.51 points and a requirement of only 17 runs ... factor of 14 below\", \"paper_value\": \"0.51 / 17 / 14x\", \"evidence_file\": \"(none provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"No evidence file contains PatchCore harness numbers. 240/17=14.1 consistent, but inputs unverifiable.\"},\n    {\"id\": 13, \"location\": \"resolvability para 4\", \"paper_text\": \"statistically detectable at 210 detectors (p = 0.039)\", \"paper_value\": \"p=0.039\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"F_rows=1.8440, a=14, df_res=180\", \"status\": \"ambiguous_mapping\", \"details\": \"p not stored; F(13,180)=1.844 implies p~0.04, consistent with 0.039 but not directly verifiable.\"},\n    {\"id\": 14, \"location\": \"resolvability intro\", \"paper_text\": \"PatchCore reached 99.1% ... strongest methods reach 99.6% ... roughly a hundred images per category\", \"paper_value\": \"99.1 / 99.6 / ~100\", \"evidence_file\": \"(none provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"External literature citations; expected absent from these files.\"},\n    {\"id\": 15, \"location\": \"search_vs_random para 1\", \"paper_text\": \"100 trials ... twelve independent seeds\", \"paper_value\": \"100 / 12\", \"evidence_file\": \"search_repeats/search_repeats.json\", \"evidence_value\": \"trials=100 all runs; seeds 5000-5011 (n_runs=12)\", \"status\": \"exact_match\", \"details\": \"Note run09 recorded only 90/100 trials; selection claims unaffected.\"},\n    {\"id\": 16, \"location\": \"search_vs_random para 1\", \"paper_text\": \"three quick training epochs per candidate, uniform sampling from the 42 cells\", \"paper_value\": \"3 epochs / 42 cells\", \"evidence_file\": \"(none provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Config constants not recorded; 42=14x3 consistent with space but sampling scheme unverified.\"},\n    {\"id\": 17, \"location\": \"search_vs_random para 1\", \"paper_text\": \"the searched feature dimension cannot reach the detector\", \"paper_value\": \"true\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"inert_axis.note: feature_dim cannot reach deployed detector (256-d bottleneck hard-coded)\", \"status\": \"exact_match\", \"details\": \"Directly supported.\"},\n    {\"id\": 18, \"location\": \"search_vs_random para 1\", \"paper_text\": \"eight of the twelve returned efficientnet_b1 ... four returned mobilenetv3_small_100\", \"paper_value\": \"8 / 4\", \"evidence_file\": \"search_repeats/search_repeats_summary.json\", \"evidence_value\": \"backbone_counts: efficientnet_b1=8, mobilenetv3_small_100=4\", \"status\": \"exact_match\", \"details\": \"Matches.\"},\n    {\"id\": 19, \"location\": \"search_vs_random para 1\", \"paper_text\": \"efficientnet_b1 (true rank 12 of 14, 80.43% mean AUROC)\", \"paper_value\": \"rank 12 / 80.43%\", \"evidence_file\": \"search_repeats/search_vs_random_final.json + summary\", \"evidence_value\": \"true_rank_of_selected=12; truth 0.804324=80.43%\", \"status\": \"exact_match\", \"details\": \"Both components match.\"},\n    {\"id\": 20, \"location\": \"search_vs_random para 1\", \"paper_text\": \"mobilenetv3_small_100 (rank 7 of 14, 81.85%)\", \"paper_value\": \"rank 7 / 81.85%\", \"evidence_file\": \"search_vs_random_final.json + search_repeats_summary.json\", \"evidence_value\": \"rank=7 ok; truth_per_backbone=0.819547=81.95%\", \"status\": \"number_mismatch\", \"details\": \"Rank matches, but only per-backbone truth given says 81.95%, not 81.85%; final_truth_analysis per-backbone values not provided.\"},\n    {\"id\": 21, \"location\": \"search_vs_random para 1\", \"paper_text\": \"only 2 of the 14 backbones and 6 of the 42 configurations appeared at all\", \"paper_value\": \"2 / 6\", \"evidence_file\": \"search_repeats/search_repeats_summary.json\", \"evidence_value\": \"unique_backbones_selected=2; unique_configs_selected=6\", \"status\": \"exact_match\", \"details\": \"Matches.\"},\n    {\"id\": 22, \"location\": \"search_vs_random para 1\", \"paper_text\": \"probability ... 7.2x10^-11\", \"paper_value\": \"7.2e-11\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"p_all_in_collapse_subset=7.2248e-11\", \"status\": \"exact_match\", \"details\": \"(2/14)^12 = 7.22e-11; verified.\"},\n    {\"id\": 23, \"location\": \"search_vs_random para 2\", \"paper_text\": \"search's output attains 80.91% mean AUROC\", \"paper_value\": \"80.91%\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"search_mean_true_auroc=0.8090584\", \"status\": \"exact_match\", \"details\": \"Rounds to 80.91; matches final file (summary file gives 80.94).\"},\n    {\"id\": 24, \"location\": \"search_vs_random para 2\", \"paper_text\": \"random gives 81.65% (bootstrap s.d. 0.32 points)\", \"paper_value\": \"81.65% / 0.32\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"random_mean=0.8165089; bootstrap_sd=0.0032187\", \"status\": \"exact_match\", \"details\": \"0.81651 -> 81.65%; 0.003219 -> 0.32 pp.\"},\n    {\"id\": 25, \"location\": \"search_vs_random para 2\", \"paper_text\": \"best backbone in the space gives 83.34%\", \"paper_value\": \"83.34%\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"oracle_true_auroc=0.8334095 (resnet18)\", \"status\": \"exact_match\", \"details\": \"Matches final file; summary file's 83.81% is the other truth source.\"},\n    {\"id\": 26, \"location\": \"search_vs_random para 2 + caption\", \"paper_text\": \"sits at the 1.2th percentile ... worse than 98.8% of uniform draws\", \"paper_value\": \"1.2 / 98.8%\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"percentile_of_search_in_random=1.2285\", \"status\": \"exact_match\", \"details\": \"1.2285 -> 1.2; 100-1.23=98.77 -> 98.8.\"},\n    {\"id\": 27, \"location\": \"search_vs_random para 2\", \"paper_text\": \"mean true rank of 10.3 of 14 against 7.5 for random\", \"paper_value\": \"10.3 / 7.5\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"mean_true_rank_of_selected=10.333; random_expected_rank=7.5\", \"status\": \"exact_match\", \"details\": \"Matches.\"},\n    {\"id\": 28, \"location\": \"search_vs_random para 2 + caption\", \"paper_text\": \"never once selected one of the four strongest backbones\", \"paper_value\": \"0 runs\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"runs_selecting_top4=0\", \"status\": \"exact_match\", \"details\": \"Selected ranks 12 and 7 only.\"},\n    {\"id\": 29, \"location\": \"search_vs_random para 2\", \"paper_text\": \"constant resnet18 would have improved it by 2.4 points\", \"paper_value\": \"2.4\", \"evidence_file\": \"search_repeats/search_vs_random_final.json\", \"evidence_value\": \"0.83341-0.80906=0.02435=2.43 pp\", \"status\": \"rounding_ok\", \"details\": \"2.43 rounds to 2.4.\"},\n    {\"id\": 30, \"location\": \"search_vs_random para 3\", \"paper_text\": \"well-behaved configuration is bounded below by roughly 7.5, while the two collapse-prone backbones return exactly 0.0\", \"paper_value\": \"floor ~7.5; zeros exclusive to 2 backbones\", \"evidence_file\": \"search_repeats/search_repeats.json\", \"evidence_value\": \"efficientnet_b0 scored 0.0 (run08 t63, run10 t32); min non-zero trial 4.56\", \"status\": \"scope_overclaim\", \"details\": \"A third backbone (efficientnet_b0) returned exact 0.0 twice; 'roughly 7.5' floor loose (non-zero minimum 4.56).\"},\n    {\"id\": 31, \"location\": \"why-earlier-searches box\", \"paper_text\": \"The four search runs whose results the manuscript reports selected efficientnet_b0\", \"paper_value\": \"4 runs -> efficientnet_b0\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"stage2, stage2_rtx3090, stage2_rtx3090_100trials, stage2_topjournal all best=efficientnet_b0\", \"status\": \"ambiguous_mapping\", \"details\": \"4 of 5 stage2-type runs selected b0; mvtec_stage2_test/bottle selected b1; which 4 are 'reported' unverifiable.\"},\n    {\"id\": 32, \"location\": \"why-earlier-searches box\", \"paper_text\": \"efficientnet_b0 ... which does not collapse\", \"paper_value\": \"b0 never collapses\", \"evidence_file\": \"search_repeats/search_repeats.json\", \"evidence_value\": \"efficientnet_b0 score 0.0 in run08 t63 and run10 t32\", \"status\": \"scope_overclaim\", \"details\": \"Proxy scores of 0.0 observed for b0, contradicting exclusivity of collapse to b1/mnv3 (rare: 2/~1195 trials).\"},\n    {\"id\": 33, \"location\": \"search_vs_random para 1\", \"paper_text\": \"a search space that is two thirds inert\", \"paper_value\": \"2/3 inert\", \"evidence_file\": \"search_forensics/search_forensics.json\", \"evidence_value\": \"inert_axis note: feature_dim cannot reach detector\", \"status\": \"rounding_ok\", \"details\": \"28/42=2/3 implied by 3 dims collapsing to backbone-only; consistent.\"},\n    {\"id\": 34, \"location\": \"resolvability para 4\", \"paper_text\": \"reporting differences smaller than about three points as unresolved\", \"paper_value\": \"~3 points\", \"evidence_file\": \"proxy_diag/samplesize_analysis.json\", \"evidence_value\": \"mdd_paired_15cat_pp=2.978\", \"status\": \"rounding_ok\", \"details\": \"'About three' consistent with 2.98.\"}\n  ],\n  \"segment_verdict\": \"FAIL\",\n  \"notes\": \"Driver of FAIL: claim 8 asserts 2.98 > 3.98 ('larger than the entire spread'), which is arithmetically false per the files (both values correct individually). Secondary: mobilenetv3 81.85% conflicts with the only per-backbone truth present (81.95%); PatchCore figures (0.51 pp, 17 runs) unsupported. run09 recorded 90/100 trials though paper says 100 per run. Paper consistently uses search_vs_random_final.json values (80.91/81.65/83.34/0.32/1.2) where summary file differs slightly.\"\n}\n```"
+ },
+ {
+  "claims": [
+   {
+    "id": 1,
+    "location": "Table tab:fusion row 1",
+    "paper_text": "mean, uniform weights (default) Mean AUROC 82.80",
+    "paper_value": "82.80%",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Primary E2 file absent from evidence set; cannot verify."
+   },
+   {
+    "id": 2,
+    "location": "Table tab:fusion row 1",
+    "paper_text": "Worst category 42.22 (default)",
+    "paper_value": "42.22%",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "uniform|mean worst 0.431236 (43.12%)",
+    "status": "missing_evidence",
+    "details": "fusion_summary absent; second script gives 43.12, difference unacknowledged for worst."
+   },
+   {
+    "id": 3,
+    "location": "Table tab:fusion row 2",
+    "paper_text": "max, uniform weights 86.84",
+    "paper_value": "86.84%",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "uniform|max 0.867390 (86.74%)",
+    "status": "missing_evidence",
+    "details": "fusion_summary absent; ksweep script gives 86.74, not 86.84."
+   },
+   {
+    "id": 4,
+    "location": "Table tab:fusion row 3",
+    "paper_text": "top-k, uniform weights 90.21",
+    "paper_value": "90.21%",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "uniform|topk_0.01 mean 0.902123",
+    "status": "rounding_ok",
+    "details": "Cross-script corroboration; primary fusion_summary absent."
+   },
+   {
+    "id": 5,
+    "location": "Table tab:fusion row 3",
+    "paper_text": "top-k worst category 78.37",
+    "paper_value": "78.37%",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "uniform|topk_0.01 worst 0.764594 (76.46%)",
+    "status": "number_mismatch",
+    "details": "Same policy/models: ksweep reports 76.46; fusion_summary absent; 1.9pt cross-table gap unacknowledged."
+   },
+   {
+    "id": 6,
+    "location": "Table tab:fusion row 4",
+    "paper_text": "best single policy (w0.3_0.6_0.1, top-k) 90.60",
+    "paper_value": "90.60%",
+    "evidence_file": "fusion_multiseed/fusion_multiseed_summary.json",
+    "evidence_value": "w0.3_0.6_0.1_topk 2-seed mean 0.905332 (90.53)",
+    "status": "missing_evidence",
+    "details": "Seed-42 value absent; neither 90.53 (43/44) nor 90.65 (ksweep) equals 90.60."
+   },
+   {
+    "id": 7,
+    "location": "Table tab:fusion row 5",
+    "paper_text": "per-category oracle over 82 policies 93.72 / 84.67",
+    "paper_value": "93.72%, 84.67%",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Full-training-set oracle not in any provided file."
+   },
+   {
+    "id": 8,
+    "location": "subsec 5.1",
+    "paper_text": "We evaluate 82 policies: the 66-point simplex grid at step 0.1 crossed with top-k, the 21-point grid at step 0.2 crossed with mean and with max, plus the canonical uniform variants",
+    "paper_value": "82 policies",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "66+21+21=108 plus variants",
+    "status": "number_mismatch",
+    "details": "Own enumeration sums to 108+; contradicts tab:pseudo caption's 111 candidate policies."
+   },
+   {
+    "id": 9,
+    "location": "Table tab:pseudo caption",
+    "paper_text": "from 111 candidate policies",
+    "paper_value": "111",
+    "evidence_file": "policy_select/policy_select.json",
+    "evidence_value": "75 listed policies per category; no count field",
+    "status": "missing_evidence",
+    "details": "Policy count unrecorded in files; inconsistent with '82' claim above."
+   },
+   {
+    "id": 10,
+    "location": "subsec 5.2",
+    "paper_text": "Every one of the eight highest-scoring policies uses top-k pooling",
+    "paper_value": "8/8 top-k",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "absent (multiseed shows only 5 policies; top-2 are top-k)",
+    "status": "missing_evidence",
+    "details": "Full seed-42 ranking unavailable."
+   },
+   {
+    "id": 11,
+    "location": "subsec 5.2",
+    "paper_text": "seeds (43 and 44) gives +8.07 and +7.78 points",
+    "paper_value": "+8.07, +7.78",
+    "evidence_file": "fusion_multiseed/fusion_multiseed_summary.json",
+    "evidence_value": "gain_pp 43: 8.0725; 44: 7.7774",
+    "status": "exact_match",
+    "details": "Both match to displayed precision."
+   },
+   {
+    "id": 12,
+    "location": "subsec 5.2",
+    "paper_text": "the three independent estimates agree to within 0.7 points",
+    "paper_value": "spread ≤0.7",
+    "evidence_file": "fusion_multiseed/fusion_multiseed_summary.json",
+    "evidence_value": "7.42/8.07/7.78 range 0.65",
+    "status": "rounding_ok",
+    "details": "Arithmetic holds; 7.42 itself unverified (fusion_summary absent)."
+   },
+   {
+    "id": 13,
+    "location": "subsec 5.2",
+    "paper_text": "the aggregated policy means over the three seeds are 82.36% for the default and 90.28% for top-k",
+    "paper_value": "82.36%, 90.28% (3 seeds)",
+    "evidence_file": "fusion_multiseed/fusion_multiseed_summary.json",
+    "evidence_value": "n_cells 30, seeds [43,44]; sum_mean 0.82360, sum_topk 0.90285",
+    "status": "aggregation_mismatch",
+    "details": "File aggregates two seeds (43,44) only; values match 2-seed aggregate exactly, not three."
+   },
+   {
+    "id": 14,
+    "location": "subsec 5.2",
+    "paper_text": "raises mean AUROC from 82.80% to 90.21%, a gain of 7.42 points",
+    "paper_value": "7.42",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "displayed 90.21−82.80=7.41",
+    "status": "missing_evidence",
+    "details": "Seed-42 pair unverifiable; displayed difference is 7.41, not 7.42."
+   },
+   {
+    "id": 15,
+    "location": "Table tab:ksweep row 1",
+    "paper_text": "mean over all pixels (default) 82.67 / 43.12",
+    "paper_value": "82.67, 43.12",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "uniform|mean 0.826707 / 0.431236",
+    "status": "exact_match",
+    "details": "Both values match."
+   },
+   {
+    "id": 16,
+    "location": "Table tab:ksweep rows 2–5",
+    "paper_text": "1px 86.74/68.52/+4.07; 0.1% 87.86/70.46/+5.19; 0.5% 89.64/74.09/+6.97; 1% 90.21/76.46/+7.54",
+    "paper_value": "as listed",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "0.867390/0.685215; 0.878572/0.704583; 0.896388/0.740862; 0.902123/0.764594",
+    "status": "exact_match",
+    "details": "All means, worsts, deltas match."
+   },
+   {
+    "id": 17,
+    "location": "Table tab:ksweep rows 6–9",
+    "paper_text": "2% 90.66/79.24/+7.99; 5% 91.08/77.53/+8.41; 10% 90.92/73.68/+8.25; 20% 90.17/71.51/+7.50",
+    "paper_value": "as listed",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "0.906647/0.792417; 0.910785/0.775272; 0.909160/0.736842; 0.901651/0.715121",
+    "status": "exact_match",
+    "details": "All means, worsts, deltas match."
+   },
+   {
+    "id": 18,
+    "location": "subsec 5.2 ksweep text",
+    "paper_text": "rises from 86.74% at k=1 pixel to a maximum of 91.08% at k=5%",
+    "paper_value": "86.74 → 91.08",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "max uniform_mean_by_k = 0.910785 at 0.05",
+    "status": "exact_match",
+    "details": "Maximum correctly located."
+   },
+   {
+    "id": 19,
+    "location": "subsec 5.2 ksweep text",
+    "paper_text": "stays above 89.6% for every k between 0.5% and 20%",
+    "paper_value": "all >89.6",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "min in range 0.896388 (89.64)",
+    "status": "exact_match",
+    "details": "Holds, marginally."
+   },
+   {
+    "id": 20,
+    "location": "subsec 5.2 ksweep text",
+    "paper_text": "worst-category statistic peaks earlier, at k=2% (79.24%)",
+    "paper_value": "peak 79.24 at 2%",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "uniform_worst_by_k max 0.792417 at 0.02",
+    "status": "exact_match",
+    "details": "Peak location and value correct."
+   },
+   {
+    "id": 21,
+    "location": "subsec 5.2 ksweep text",
+    "paper_text": "any value in that range recovers 7 to 8.4 points",
+    "paper_value": "7–8.4",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "deltas 6.97–8.41",
+    "status": "rounding_ok",
+    "details": "6.97 rounds to 7.0; acceptable."
+   },
+   {
+    "id": 22,
+    "location": "Table tab:ksweep caption",
+    "paper_text": "82.67% ... differs by 0.13 points from the 82.80%",
+    "paper_value": "0.13",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "82.80−82.67=0.13",
+    "status": "rounding_ok",
+    "details": "Arithmetic correct; 82.80 unverifiable."
+   },
+   {
+    "id": 23,
+    "location": "subsec 5.2 noise floor",
+    "paper_text": "82.40% in the earlier manuscript",
+    "paper_value": "82.40%",
+    "evidence_file": "(not provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Earlier manuscript not in evidence."
+   },
+   {
+    "id": 24,
+    "location": "subsec 5.2 noise floor",
+    "paper_text": "The three agree to within 0.4 points ... two ... to within 0.13 points",
+    "paper_value": "0.4 / 0.13",
+    "evidence_file": "fusion_ksweep/fusion_ksweep_summary.json",
+    "evidence_value": "82.67 present; 82.80, 82.40 absent",
+    "status": "missing_evidence",
+    "details": "Only one of three values verifiable; arithmetic consistent if stated values hold."
+   },
+   {
+    "id": 25,
+    "location": "subsec 5.2 screw",
+    "paper_text": "screw ... default 42.22%, top-k 84.01%, best per-category 87.76% — gains 41.8 and 45.5",
+    "paper_value": "42.22/84.01/87.76",
+    "evidence_file": "policy_select/policy_select.json (screw)",
+    "evidence_value": "split model: sum_mean 0.4023, sum_topk 0.7600, oracle 0.8313",
+    "status": "missing_evidence",
+    "details": "Full-training numbers absent; split-model values differ (different training set)."
+   },
+   {
+    "id": 26,
+    "location": "subsec 5.2",
+    "paper_text": "metal_nut +19.65, grid +18.71, toothbrush +13.61, carpet +13.44, capsule +11.61",
+    "paper_value": "as listed",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Seed-42 per-category topk-minus-mean deltas unverifiable."
+   },
+   {
+    "id": 27,
+    "location": "subsec 5.2",
+    "paper_text": "grid +27.90, carpet +21.55, metal_nut +21.41 over the default",
+    "paper_value": "as listed",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Per-category oracle-minus-default deltas unverifiable."
+   },
+   {
+    "id": 28,
+    "location": "subsec 5.2",
+    "paper_text": "transistor (−2.00), zipper (−3.02), tile (−4.62), pill (−4.80), cable (−5.06)",
+    "paper_value": "as listed",
+    "evidence_file": "fusion_multiseed/fusion_multiseed_summary.json",
+    "evidence_value": "seeds 43/44 deltas differ (e.g. cable −5.27/−5.21, transistor −2.25/−2.38)",
+    "status": "missing_evidence",
+    "details": "Seed-42 deltas absent; 43/44 same direction, different magnitude."
+   },
+   {
+    "id": 29,
+    "location": "subsec 5.2",
+    "paper_text": "per-category selection adds a further 3.5 points on top of the uniform top-k",
+    "paper_value": "3.5",
+    "evidence_file": "(fusion_policy/fusion_summary.json not provided)",
+    "evidence_value": "93.72−90.21=3.51",
+    "status": "missing_evidence",
+    "details": "Arithmetic consistent with unverifiable table values."
+   },
+   {
+    "id": 30,
+    "location": "subsec 5.3",
+    "paper_text": "best reaches 82.28% against a default of 82.39% (−0.12 points) ... worst 81.12% (−1.28) ... oracle 93.39% ... 1–2 of 15 categories",
+    "paper_value": "as listed",
+    "evidence_file": "(distributional-criteria results not provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "No file covers these; displayed deltas are 0.11/1.27."
+   },
+   {
+    "id": 31,
+    "location": "Table tab:pseudo default row",
+    "paper_text": "default 81.62 / 81.90 / 80.98 / 81.50",
+    "paper_value": "as listed",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "0.816198/0.818973/0.809846; mean 0.815006",
+    "status": "exact_match",
+    "details": "All four cells match."
+   },
+   {
+    "id": 32,
+    "location": "Table tab:pseudo pseudo rows",
+    "paper_text": "best 89.99/89.96/85.81/88.59; top-5 89.96/90.03/86.08/88.69; top-10 89.70/89.98/86.25/88.64; top-20 89.34/89.72/87.28/88.78",
+    "paper_value": "as listed",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "0.899947/0.899626/0.858115/0.885896; 0.899645/0.900322/0.860763/0.886910; 0.896981/0.899802/0.862498/0.886427; 0.893422/0.897232/0.872804/0.887819",
+    "status": "exact_match",
+    "details": "All 16 cells match to displayed precision."
+   },
+   {
+    "id": 33,
+    "location": "Table tab:pseudo oracle rows",
+    "paper_text": "oracle 93.19/93.36/92.90/93.15; oracle top-5 93.81/93.52/93.12/93.48",
+    "paper_value": "as listed",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "0.931870/0.933582/0.929004/0.931485; 0.938100/0.935218/0.931160/0.934826",
+    "status": "exact_match",
+    "details": "All 8 cells match."
+   },
+   {
+    "id": 34,
+    "location": "subsec 5.4",
+    "paper_text": "recovers +7.09 of the +11.65 points available — 61% of the oracle gap",
+    "paper_value": "7.09 / 11.65 / 61%",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "gain 7.0891; gap 11.6480; recovery 60.861%",
+    "status": "exact_match",
+    "details": "All three match."
+   },
+   {
+    "id": 35,
+    "location": "subsec 5.4",
+    "paper_text": "the gain is +8.37, +8.07 and +4.83 points on seeds 42, 43 and 44",
+    "paper_value": "8.37/8.07/4.83",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "gain_pp per_seed 8.3749/8.0654/4.8270",
+    "status": "exact_match",
+    "details": "Seed ordering correct."
+   },
+   {
+    "id": 36,
+    "location": "subsec 5.4",
+    "paper_text": "The oracle gap is nearly constant across seeds (11.46–11.92)",
+    "paper_value": "11.46–11.92",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "11.5671/11.4610/11.9159",
+    "status": "exact_match",
+    "details": "Range endpoints match."
+   },
+   {
+    "id": 37,
+    "location": "subsec 5.4",
+    "paper_text": "would have claimed 8.4 points where the honest three-seed figure is 7.1",
+    "paper_value": "8.4 / 7.1",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "8.3749 / 7.0891",
+    "status": "rounding_ok",
+    "details": "Standard rounding."
+   },
+   {
+    "id": 38,
+    "location": "subsec 5.4",
+    "paper_text": "mean Spearman ρ = 0.53 in every seed (0.529–0.536)",
+    "paper_value": "0.53 (0.529–0.536)",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "0.5363/0.5289/0.5306; mean 0.5319",
+    "status": "exact_match",
+    "details": "Range matches; '0.53 in every seed' loose for 0.536."
+   },
+   {
+    "id": 39,
+    "location": "subsec 5.4",
+    "paper_text": "selects the per-category oracle policy in only one of the forty-five category-seed cells",
+    "paper_value": "1/45",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "oracle_hit 0/0.0667/0; mean 0.0222",
+    "status": "exact_match",
+    "details": "1/15 on seed 43 only = 1/45 total."
+   },
+   {
+    "id": 40,
+    "location": "subsec 5.4",
+    "paper_text": "Ensembling the top five ... 88.69 against 88.59 ... weakest seed 86.08 against 85.81",
+    "paper_value": "88.69/88.59; 86.08/85.81",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "ens_top5 mean 0.886910 vs 0.885896; seed44 0.860763 vs 0.858115",
+    "status": "exact_match",
+    "details": "Both comparisons verified."
+   },
+   {
+    "id": 41,
+    "location": "subsec 5.4 split note",
+    "paper_text": "trained on 70% of the normal training images, with the remaining 30% held out for selection",
+    "paper_value": "70/30 split",
+    "evidence_file": "policy_select/policy_select.json",
+    "evidence_value": "n_fit:n_holdout = 4:1 in all 15 categories (e.g. 167/42, 256/64)",
+    "status": "config_mismatch",
+    "details": "Recorded split is 80/20, not 70/30, for every category."
+   },
+   {
+    "id": 42,
+    "location": "subsec 5.4 split note",
+    "paper_text": "the seed-42 default row is therefore 81.62% rather than the 82.80%",
+    "paper_value": "81.62 vs 82.80",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "default seed42 0.816198; 82.80 unverified",
+    "status": "missing_evidence",
+    "details": "81.62 verified; 82.80 comparator absent; split rationale contradicted (see id 41)."
+   },
+   {
+    "id": 43,
+    "location": "Figure fig6 caption",
+    "paper_text": "recovers most of the available gap, and most of it on the categories where the default policy fails badly (screw, grid)",
+    "paper_value": "screw, grid recovered",
+    "evidence_file": "pseudo_select/pseudo_multiseed.json",
+    "evidence_value": "no per-category pseudo results provided",
+    "status": "unsupported_claim",
+    "details": "Per-category label-free results absent from evidence."
+   },
+   {
+    "id": 44,
+    "location": "subsec 5.2 protocol",
+    "paper_text": "EfficientNet-B0 student, 500 epochs, batch size 64, seed 42, ResNet-18 teacher",
+    "paper_value": "as listed",
+    "evidence_file": "(no training-config file provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Method constants; expected to be unrecorded in these result files."
+   },
+   {
+    "id": 45,
+    "location": "subsec 5.4 method",
+    "paper_text": "three families ... five seeds per family, giving fifteen perturbed variants",
+    "paper_value": "3×5=15 variants",
+    "evidence_file": "(no perturbation-config file provided)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Method constant; no file records perturbation setup."
+   }
+  ],
+  "segment_verdict": "WARN",
+  "notes": "Table tab:pseudo and tab:ksweep verify exactly against provided files. Material issues: (1) 'aggregated over the three seeds' 82.36/90.28 is actually the 2-seed (43,44) aggregate in the file; (2) the 70/30 train/holdout split is contradicted by policy_select.json's uniform 80/20 (n_fit:n_holdout=4:1 in all 15 categories); (3) '82 policies' is inconsistent with its own enumeration (66+21+21+variants=108+) and with tab:pseudo's '111 candidate policies'; (4) fusion-table top-k worst category (78.37) conflicts with the ksweep script's 76.46 for the same policy/models, unacknowledged (only the 0.13 default-mean difference is disclosed); (5) all fusion-table headline numbers (82.80, 86.84, 90.60, 93.72, 84.67, 42.22) and per-category gains trace to the absent fusion_summary.json.",
+  "_segment": "S5 results — inference-time scoring policy",
+  "_raw": "```json\n{\n  \"claims\": [\n    {\"id\": 1, \"location\": \"Table tab:fusion row 1\", \"paper_text\": \"mean, uniform weights (default) Mean AUROC 82.80\", \"paper_value\": \"82.80%\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Primary E2 file absent from evidence set; cannot verify.\"},\n    {\"id\": 2, \"location\": \"Table tab:fusion row 1\", \"paper_text\": \"Worst category 42.22 (default)\", \"paper_value\": \"42.22%\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"uniform|mean worst 0.431236 (43.12%)\", \"status\": \"missing_evidence\", \"details\": \"fusion_summary absent; second script gives 43.12, difference unacknowledged for worst.\"},\n    {\"id\": 3, \"location\": \"Table tab:fusion row 2\", \"paper_text\": \"max, uniform weights 86.84\", \"paper_value\": \"86.84%\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"uniform|max 0.867390 (86.74%)\", \"status\": \"missing_evidence\", \"details\": \"fusion_summary absent; ksweep script gives 86.74, not 86.84.\"},\n    {\"id\": 4, \"location\": \"Table tab:fusion row 3\", \"paper_text\": \"top-k, uniform weights 90.21\", \"paper_value\": \"90.21%\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"uniform|topk_0.01 mean 0.902123\", \"status\": \"rounding_ok\", \"details\": \"Cross-script corroboration; primary fusion_summary absent.\"},\n    {\"id\": 5, \"location\": \"Table tab:fusion row 3\", \"paper_text\": \"top-k worst category 78.37\", \"paper_value\": \"78.37%\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"uniform|topk_0.01 worst 0.764594 (76.46%)\", \"status\": \"number_mismatch\", \"details\": \"Same policy/models: ksweep reports 76.46; fusion_summary absent; 1.9pt cross-table gap unacknowledged.\"},\n    {\"id\": 6, \"location\": \"Table tab:fusion row 4\", \"paper_text\": \"best single policy (w0.3_0.6_0.1, top-k) 90.60\", \"paper_value\": \"90.60%\", \"evidence_file\": \"fusion_multiseed/fusion_multiseed_summary.json\", \"evidence_value\": \"w0.3_0.6_0.1_topk 2-seed mean 0.905332 (90.53)\", \"status\": \"missing_evidence\", \"details\": \"Seed-42 value absent; neither 90.53 (43/44) nor 90.65 (ksweep) equals 90.60.\"},\n    {\"id\": 7, \"location\": \"Table tab:fusion row 5\", \"paper_text\": \"per-category oracle over 82 policies 93.72 / 84.67\", \"paper_value\": \"93.72%, 84.67%\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Full-training-set oracle not in any provided file.\"},\n    {\"id\": 8, \"location\": \"subsec 5.1\", \"paper_text\": \"We evaluate 82 policies: the 66-point simplex grid at step 0.1 crossed with top-k, the 21-point grid at step 0.2 crossed with mean and with max, plus the canonical uniform variants\", \"paper_value\": \"82 policies\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"66+21+21=108 plus variants\", \"status\": \"number_mismatch\", \"details\": \"Own enumeration sums to 108+; contradicts tab:pseudo caption's 111 candidate policies.\"},\n    {\"id\": 9, \"location\": \"Table tab:pseudo caption\", \"paper_text\": \"from 111 candidate policies\", \"paper_value\": \"111\", \"evidence_file\": \"policy_select/policy_select.json\", \"evidence_value\": \"75 listed policies per category; no count field\", \"status\": \"missing_evidence\", \"details\": \"Policy count unrecorded in files; inconsistent with '82' claim above.\"},\n    {\"id\": 10, \"location\": \"subsec 5.2\", \"paper_text\": \"Every one of the eight highest-scoring policies uses top-k pooling\", \"paper_value\": \"8/8 top-k\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"absent (multiseed shows only 5 policies; top-2 are top-k)\", \"status\": \"missing_evidence\", \"details\": \"Full seed-42 ranking unavailable.\"},\n    {\"id\": 11, \"location\": \"subsec 5.2\", \"paper_text\": \"seeds (43 and 44) gives +8.07 and +7.78 points\", \"paper_value\": \"+8.07, +7.78\", \"evidence_file\": \"fusion_multiseed/fusion_multiseed_summary.json\", \"evidence_value\": \"gain_pp 43: 8.0725; 44: 7.7774\", \"status\": \"exact_match\", \"details\": \"Both match to displayed precision.\"},\n    {\"id\": 12, \"location\": \"subsec 5.2\", \"paper_text\": \"the three independent estimates agree to within 0.7 points\", \"paper_value\": \"spread ≤0.7\", \"evidence_file\": \"fusion_multiseed/fusion_multiseed_summary.json\", \"evidence_value\": \"7.42/8.07/7.78 range 0.65\", \"status\": \"rounding_ok\", \"details\": \"Arithmetic holds; 7.42 itself unverified (fusion_summary absent).\"},\n    {\"id\": 13, \"location\": \"subsec 5.2\", \"paper_text\": \"the aggregated policy means over the three seeds are 82.36% for the default and 90.28% for top-k\", \"paper_value\": \"82.36%, 90.28% (3 seeds)\", \"evidence_file\": \"fusion_multiseed/fusion_multiseed_summary.json\", \"evidence_value\": \"n_cells 30, seeds [43,44]; sum_mean 0.82360, sum_topk 0.90285\", \"status\": \"aggregation_mismatch\", \"details\": \"File aggregates two seeds (43,44) only; values match 2-seed aggregate exactly, not three.\"},\n    {\"id\": 14, \"location\": \"subsec 5.2\", \"paper_text\": \"raises mean AUROC from 82.80% to 90.21%, a gain of 7.42 points\", \"paper_value\": \"7.42\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"displayed 90.21−82.80=7.41\", \"status\": \"missing_evidence\", \"details\": \"Seed-42 pair unverifiable; displayed difference is 7.41, not 7.42.\"},\n    {\"id\": 15, \"location\": \"Table tab:ksweep row 1\", \"paper_text\": \"mean over all pixels (default) 82.67 / 43.12\", \"paper_value\": \"82.67, 43.12\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"uniform|mean 0.826707 / 0.431236\", \"status\": \"exact_match\", \"details\": \"Both values match.\"},\n    {\"id\": 16, \"location\": \"Table tab:ksweep rows 2–5\", \"paper_text\": \"1px 86.74/68.52/+4.07; 0.1% 87.86/70.46/+5.19; 0.5% 89.64/74.09/+6.97; 1% 90.21/76.46/+7.54\", \"paper_value\": \"as listed\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"0.867390/0.685215; 0.878572/0.704583; 0.896388/0.740862; 0.902123/0.764594\", \"status\": \"exact_match\", \"details\": \"All means, worsts, deltas match.\"},\n    {\"id\": 17, \"location\": \"Table tab:ksweep rows 6–9\", \"paper_text\": \"2% 90.66/79.24/+7.99; 5% 91.08/77.53/+8.41; 10% 90.92/73.68/+8.25; 20% 90.17/71.51/+7.50\", \"paper_value\": \"as listed\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"0.906647/0.792417; 0.910785/0.775272; 0.909160/0.736842; 0.901651/0.715121\", \"status\": \"exact_match\", \"details\": \"All means, worsts, deltas match.\"},\n    {\"id\": 18, \"location\": \"subsec 5.2 ksweep text\", \"paper_text\": \"rises from 86.74% at k=1 pixel to a maximum of 91.08% at k=5%\", \"paper_value\": \"86.74 → 91.08\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"max uniform_mean_by_k = 0.910785 at 0.05\", \"status\": \"exact_match\", \"details\": \"Maximum correctly located.\"},\n    {\"id\": 19, \"location\": \"subsec 5.2 ksweep text\", \"paper_text\": \"stays above 89.6% for every k between 0.5% and 20%\", \"paper_value\": \"all >89.6\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"min in range 0.896388 (89.64)\", \"status\": \"exact_match\", \"details\": \"Holds, marginally.\"},\n    {\"id\": 20, \"location\": \"subsec 5.2 ksweep text\", \"paper_text\": \"worst-category statistic peaks earlier, at k=2% (79.24%)\", \"paper_value\": \"peak 79.24 at 2%\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"uniform_worst_by_k max 0.792417 at 0.02\", \"status\": \"exact_match\", \"details\": \"Peak location and value correct.\"},\n    {\"id\": 21, \"location\": \"subsec 5.2 ksweep text\", \"paper_text\": \"any value in that range recovers 7 to 8.4 points\", \"paper_value\": \"7–8.4\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"deltas 6.97–8.41\", \"status\": \"rounding_ok\", \"details\": \"6.97 rounds to 7.0; acceptable.\"},\n    {\"id\": 22, \"location\": \"Table tab:ksweep caption\", \"paper_text\": \"82.67% ... differs by 0.13 points from the 82.80%\", \"paper_value\": \"0.13\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"82.80−82.67=0.13\", \"status\": \"rounding_ok\", \"details\": \"Arithmetic correct; 82.80 unverifiable.\"},\n    {\"id\": 23, \"location\": \"subsec 5.2 noise floor\", \"paper_text\": \"82.40% in the earlier manuscript\", \"paper_value\": \"82.40%\", \"evidence_file\": \"(not provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Earlier manuscript not in evidence.\"},\n    {\"id\": 24, \"location\": \"subsec 5.2 noise floor\", \"paper_text\": \"The three agree to within 0.4 points ... two ... to within 0.13 points\", \"paper_value\": \"0.4 / 0.13\", \"evidence_file\": \"fusion_ksweep/fusion_ksweep_summary.json\", \"evidence_value\": \"82.67 present; 82.80, 82.40 absent\", \"status\": \"missing_evidence\", \"details\": \"Only one of three values verifiable; arithmetic consistent if stated values hold.\"},\n    {\"id\": 25, \"location\": \"subsec 5.2 screw\", \"paper_text\": \"screw ... default 42.22%, top-k 84.01%, best per-category 87.76% — gains 41.8 and 45.5\", \"paper_value\": \"42.22/84.01/87.76\", \"evidence_file\": \"policy_select/policy_select.json (screw)\", \"evidence_value\": \"split model: sum_mean 0.4023, sum_topk 0.7600, oracle 0.8313\", \"status\": \"missing_evidence\", \"details\": \"Full-training numbers absent; split-model values differ (different training set).\"},\n    {\"id\": 26, \"location\": \"subsec 5.2\", \"paper_text\": \"metal_nut +19.65, grid +18.71, toothbrush +13.61, carpet +13.44, capsule +11.61\", \"paper_value\": \"as listed\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Seed-42 per-category topk-minus-mean deltas unverifiable.\"},\n    {\"id\": 27, \"location\": \"subsec 5.2\", \"paper_text\": \"grid +27.90, carpet +21.55, metal_nut +21.41 over the default\", \"paper_value\": \"as listed\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Per-category oracle-minus-default deltas unverifiable.\"},\n    {\"id\": 28, \"location\": \"subsec 5.2\", \"paper_text\": \"transistor (−2.00), zipper (−3.02), tile (−4.62), pill (−4.80), cable (−5.06)\", \"paper_value\": \"as listed\", \"evidence_file\": \"fusion_multiseed/fusion_multiseed_summary.json\", \"evidence_value\": \"seeds 43/44 deltas differ (e.g. cable −5.27/−5.21, transistor −2.25/−2.38)\", \"status\": \"missing_evidence\", \"details\": \"Seed-42 deltas absent; 43/44 same direction, different magnitude.\"},\n    {\"id\": 29, \"location\": \"subsec 5.2\", \"paper_text\": \"per-category selection adds a further 3.5 points on top of the uniform top-k\", \"paper_value\": \"3.5\", \"evidence_file\": \"(fusion_policy/fusion_summary.json not provided)\", \"evidence_value\": \"93.72−90.21=3.51\", \"status\": \"missing_evidence\", \"details\": \"Arithmetic consistent with unverifiable table values.\"},\n    {\"id\": 30, \"location\": \"subsec 5.3\", \"paper_text\": \"best reaches 82.28% against a default of 82.39% (−0.12 points) ... worst 81.12% (−1.28) ... oracle 93.39% ... 1–2 of 15 categories\", \"paper_value\": \"as listed\", \"evidence_file\": \"(distributional-criteria results not provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"No file covers these; displayed deltas are 0.11/1.27.\"},\n    {\"id\": 31, \"location\": \"Table tab:pseudo default row\", \"paper_text\": \"default 81.62 / 81.90 / 80.98 / 81.50\", \"paper_value\": \"as listed\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"0.816198/0.818973/0.809846; mean 0.815006\", \"status\": \"exact_match\", \"details\": \"All four cells match.\"},\n    {\"id\": 32, \"location\": \"Table tab:pseudo pseudo rows\", \"paper_text\": \"best 89.99/89.96/85.81/88.59; top-5 89.96/90.03/86.08/88.69; top-10 89.70/89.98/86.25/88.64; top-20 89.34/89.72/87.28/88.78\", \"paper_value\": \"as listed\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"0.899947/0.899626/0.858115/0.885896; 0.899645/0.900322/0.860763/0.886910; 0.896981/0.899802/0.862498/0.886427; 0.893422/0.897232/0.872804/0.887819\", \"status\": \"exact_match\", \"details\": \"All 16 cells match to displayed precision.\"},\n    {\"id\": 33, \"location\": \"Table tab:pseudo oracle rows\", \"paper_text\": \"oracle 93.19/93.36/92.90/93.15; oracle top-5 93.81/93.52/93.12/93.48\", \"paper_value\": \"as listed\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"0.931870/0.933582/0.929004/0.931485; 0.938100/0.935218/0.931160/0.934826\", \"status\": \"exact_match\", \"details\": \"All 8 cells match.\"},\n    {\"id\": 34, \"location\": \"subsec 5.4\", \"paper_text\": \"recovers +7.09 of the +11.65 points available — 61% of the oracle gap\", \"paper_value\": \"7.09 / 11.65 / 61%\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"gain 7.0891; gap 11.6480; recovery 60.861%\", \"status\": \"exact_match\", \"details\": \"All three match.\"},\n    {\"id\": 35, \"location\": \"subsec 5.4\", \"paper_text\": \"the gain is +8.37, +8.07 and +4.83 points on seeds 42, 43 and 44\", \"paper_value\": \"8.37/8.07/4.83\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"gain_pp per_seed 8.3749/8.0654/4.8270\", \"status\": \"exact_match\", \"details\": \"Seed ordering correct.\"},\n    {\"id\": 36, \"location\": \"subsec 5.4\", \"paper_text\": \"The oracle gap is nearly constant across seeds (11.46–11.92)\", \"paper_value\": \"11.46–11.92\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"11.5671/11.4610/11.9159\", \"status\": \"exact_match\", \"details\": \"Range endpoints match.\"},\n    {\"id\": 37, \"location\": \"subsec 5.4\", \"paper_text\": \"would have claimed 8.4 points where the honest three-seed figure is 7.1\", \"paper_value\": \"8.4 / 7.1\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"8.3749 / 7.0891\", \"status\": \"rounding_ok\", \"details\": \"Standard rounding.\"},\n    {\"id\": 38, \"location\": \"subsec 5.4\", \"paper_text\": \"mean Spearman ρ = 0.53 in every seed (0.529–0.536)\", \"paper_value\": \"0.53 (0.529–0.536)\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"0.5363/0.5289/0.5306; mean 0.5319\", \"status\": \"exact_match\", \"details\": \"Range matches; '0.53 in every seed' loose for 0.536.\"},\n    {\"id\": 39, \"location\": \"subsec 5.4\", \"paper_text\": \"selects the per-category oracle policy in only one of the forty-five category-seed cells\", \"paper_value\": \"1/45\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"oracle_hit 0/0.0667/0; mean 0.0222\", \"status\": \"exact_match\", \"details\": \"1/15 on seed 43 only = 1/45 total.\"},\n    {\"id\": 40, \"location\": \"subsec 5.4\", \"paper_text\": \"Ensembling the top five ... 88.69 against 88.59 ... weakest seed 86.08 against 85.81\", \"paper_value\": \"88.69/88.59; 86.08/85.81\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"ens_top5 mean 0.886910 vs 0.885896; seed44 0.860763 vs 0.858115\", \"status\": \"exact_match\", \"details\": \"Both comparisons verified.\"},\n    {\"id\": 41, \"location\": \"subsec 5.4 split note\", \"paper_text\": \"trained on 70% of the normal training images, with the remaining 30% held out for selection\", \"paper_value\": \"70/30 split\", \"evidence_file\": \"policy_select/policy_select.json\", \"evidence_value\": \"n_fit:n_holdout = 4:1 in all 15 categories (e.g. 167/42, 256/64)\", \"status\": \"config_mismatch\", \"details\": \"Recorded split is 80/20, not 70/30, for every category.\"},\n    {\"id\": 42, \"location\": \"subsec 5.4 split note\", \"paper_text\": \"the seed-42 default row is therefore 81.62% rather than the 82.80%\", \"paper_value\": \"81.62 vs 82.80\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"default seed42 0.816198; 82.80 unverified\", \"status\": \"missing_evidence\", \"details\": \"81.62 verified; 82.80 comparator absent; split rationale contradicted (see id 41).\"},\n    {\"id\": 43, \"location\": \"Figure fig6 caption\", \"paper_text\": \"recovers most of the available gap, and most of it on the categories where the default policy fails badly (screw, grid)\", \"paper_value\": \"screw, grid recovered\", \"evidence_file\": \"pseudo_select/pseudo_multiseed.json\", \"evidence_value\": \"no per-category pseudo results provided\", \"status\": \"unsupported_claim\", \"details\": \"Per-category label-free results absent from evidence.\"},\n    {\"id\": 44, \"location\": \"subsec 5.2 protocol\", \"paper_text\": \"EfficientNet-B0 student, 500 epochs, batch size 64, seed 42, ResNet-18 teacher\", \"paper_value\": \"as listed\", \"evidence_file\": \"(no training-config file provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Method constants; expected to be unrecorded in these result files.\"},\n    {\"id\": 45, \"location\": \"subsec 5.4 method\", \"paper_text\": \"three families ... five seeds per family, giving fifteen perturbed variants\", \"paper_value\": \"3×5=15 variants\", \"evidence_file\": \"(no perturbation-config file provided)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Method constant; no file records perturbation setup.\"}\n  ],\n  \"segment_verdict\": \"WARN\",\n  \"notes\": \"Table tab:pseudo and tab:ksweep verify exactly against provided files. Material issues: (1) 'aggregated over the three seeds' 82.36/90.28 is actually the 2-seed (43,44) aggregate in the file; (2) the 70/30 train/holdout split is contradicted by policy_select.json's uniform 80/20 (n_fit:n_holdout=4:1 in all 15 categories); (3) '82 policies' is inconsistent with its own enumeration (66+21+21+variants=108+) and with tab:pseudo's '111 candidate policies'; (4) fusion-table top-k worst category (78.37) conflicts with the ksweep script's 76.46 for the same policy/models, unacknowledged (only the 0.13 default-mean difference is disclosed); (5) all fusion-table headline numbers (82.80, 86.84, 90.60, 93.72, 84.67, 42.22) and per-category gains trace to the absent fusion_summary.json.\"\n}\n```"
+ },
+ {
+  "claims": [
+   {
+    "id": 1,
+    "location": "S6 published-values list",
+    "paper_text": "$78.0\\%$ (AutoEncoder) and $85.0\\%$ (VAE)",
+    "paper_value": "AE 78.0%, VAE 85.0%",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Literature values; no file records them. Expected for citations, listed per protocol."
+   },
+   {
+    "id": 2,
+    "location": "S6 published-values list",
+    "paper_text": "$95.6\\%$ (STPM), $96.0\\%$ (SPADE)",
+    "paper_value": "STPM 95.6%, SPADE 96.0%",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Literature values, unverifiable from provided files."
+   },
+   {
+    "id": 3,
+    "location": "S6 published-values list",
+    "paper_text": "$97.9\\%$ (PaDiM), $98.5\\%$ (reverse distillation)",
+    "paper_value": "PaDiM 97.9%, RD 98.5%",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Literature values, unverifiable from provided files."
+   },
+   {
+    "id": 4,
+    "location": "S6 published-values list",
+    "paper_text": "$99.1\\%$ (PatchCore, EfficientAD)",
+    "paper_value": "99.1% both",
+    "evidence_file": "anomalib_baselines/results.json",
+    "evidence_value": "PatchCore bottle image_auroc = null (run errored)",
+    "status": "missing_evidence",
+    "details": "Published value not in files; failed PatchCore re-run exists but paper claims no re-run, so no contradiction."
+   },
+   {
+    "id": 5,
+    "location": "S6 published-values list",
+    "paper_text": "$99.3$--$99.6\\%$ (CFA, FastFlow, SimpleNet, Dinomaly). FastFlow reports $99.4\\%$",
+    "paper_value": "99.3-99.6%; FastFlow 99.4%",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Literature values; internally consistent (99.4 within range) but untraceable."
+   },
+   {
+    "id": 6,
+    "location": "S6 preprint note",
+    "paper_text": "SPADE and FastFlow, are preprints that were never published at a venue",
+    "paper_value": "both preprints only",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "unsupported_claim",
+    "details": "Publication-venue claim not verifiable from evidence files."
+   },
+   {
+    "id": 7,
+    "location": "S6 + Table caption",
+    "paper_text": "all 14 backbones ... trained under one protocol on all 15 categories ... 210 detectors (500 epochs, batch size 64, seed 42, ResNet-18 teacher, reverse distillation)",
+    "paper_value": "14 backbones, 15 categories, 210 detectors, protocol constants",
+    "evidence_file": "none (cites proxy_diag/phaseB_truth.json)",
+    "evidence_value": "file not provided",
+    "status": "missing_evidence",
+    "details": "Cited source file absent; scope and protocol unverifiable."
+   },
+   {
+    "id": 8,
+    "location": "Table tab:controlled",
+    "paper_text": "ResNet-18 13.04 83.34 1 ... ConvNeXtV2-Base 89.69 79.36 14 (14 rows)",
+    "paper_value": "14 param counts, mean AUROCs, ranks",
+    "evidence_file": "none (cites proxy_diag/phaseB_truth.json)",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "All 42 table cells untraceable; source file not among evidence."
+   },
+   {
+    "id": 9,
+    "location": "S6",
+    "paper_text": "reaches $82.47\\%$ mean AUROC ... \\texttt{efficientnet\\_b0} (5.41M parameters)",
+    "paper_value": "82.47%, 5.41M",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Headline number and parameter count untraceable."
+   },
+   {
+    "id": 10,
+    "location": "S6",
+    "paper_text": "the gap to the strongest published single-class detectors is on the order of $15$ points",
+    "paper_value": "~15 points",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Derived from unsupported 82.47% and literature values; arithmetic gives 13.1-17.1."
+   },
+   {
+    "id": 11,
+    "location": "S6 capacity null",
+    "paper_text": "$9.2\\times$ range across five capacity bands and finds no statistically resolvable effect",
+    "paper_value": "9.2x, 5 bands, null effect",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Capacity-band analysis not in provided files."
+   },
+   {
+    "id": 12,
+    "location": "S6",
+    "paper_text": "the deployed size spans $32\\times$",
+    "paper_value": "32x",
+    "evidence_file": "none (Table)",
+    "evidence_value": "89.69/2.81 = 31.9 (table unsupported)",
+    "status": "missing_evidence",
+    "details": "Arithmetic consistent with table but table itself untraceable."
+   },
+   {
+    "id": 13,
+    "location": "S6",
+    "paper_text": "the backbone accounts for $0.54\\%$ of the variance",
+    "paper_value": "0.54%",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Variance decomposition not in provided files."
+   },
+   {
+    "id": 14,
+    "location": "S6 reproduction check",
+    "paper_text": "$82.47\\%$ here against the $82.40\\%$ reported previously, a difference of $0.07$ points",
+    "paper_value": "82.47 vs 82.40, diff 0.07",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Difference arithmetic correct; both inputs untraceable."
+   },
+   {
+    "id": 15,
+    "location": "S6",
+    "paper_text": "at rank 5 of 14 ... top eleven candidates span $2.43$ points",
+    "paper_value": "rank 5/14; 2.43-pt span",
+    "evidence_file": "none (Table)",
+    "evidence_value": "83.34-80.91 = 2.43 (table unsupported)",
+    "status": "missing_evidence",
+    "details": "Consistent with table arithmetic; table unverified."
+   },
+   {
+    "id": 16,
+    "location": "S6",
+    "paper_text": "the first comparison of a full anomaly-detection search space under a single protocol",
+    "paper_value": "priority claim",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "unsupported_claim",
+    "details": "Novelty claim cannot be verified from evidence; hedged with 'to our knowledge'."
+   },
+   {
+    "id": 17,
+    "location": "S7",
+    "paper_text": "leaves a residual standard deviation of $3.30$ points",
+    "paper_value": "3.30 pts",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Two-way decomposition not in provided files."
+   },
+   {
+    "id": 18,
+    "location": "S7",
+    "paper_text": "run-to-run standard deviation of a single detector ... $1.96$ points over three seeds",
+    "paper_value": "1.96 pts, 3 seeds",
+    "evidence_file": "adbench/results/analysis_p1_p3.json",
+    "evidence_value": "seed_sd I-AUROC = 0.0035 (0.35 pts), different analysis",
+    "status": "missing_evidence",
+    "details": "Only seed SD in files is 0.35 pts, different scope; 1.96 untraceable."
+   },
+   {
+    "id": 19,
+    "location": "S7",
+    "paper_text": "minimum detectable difference is $2.98$ points",
+    "paper_value": "2.98 pts",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Derived statistic; inputs untraceable."
+   },
+   {
+    "id": 20,
+    "location": "S7",
+    "paper_text": "larger than the entire $3.98$-point spread of the fourteen backbones",
+    "paper_value": "3.98 pts",
+    "evidence_file": "none (Table)",
+    "evidence_value": "83.34-79.36 = 3.98 (table unsupported)",
+    "status": "missing_evidence",
+    "details": "Arithmetic consistent with unverified table."
+   },
+   {
+    "id": 21,
+    "location": "S7",
+    "paper_text": "six times the $0.5$-point margin that separates PatchCore from the strongest results reported since",
+    "paper_value": "6x of 0.5 pts",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "2.98/0.5 arithmetic fine; 0.5-pt margin is literature claim, untraceable."
+   },
+   {
+    "id": 22,
+    "location": "S7",
+    "paper_text": "would take $240$ independent training runs per backbone, or $532$ categories",
+    "paper_value": "240 runs; 532 categories",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Power calculation not reproducible from provided files."
+   },
+   {
+    "id": 23,
+    "location": "S7 mechanism",
+    "paper_text": "the encoder that consumes it hard-codes a width while the decoder honours the requested one",
+    "paper_value": "width-mismatch mechanism",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Code-level mechanism claim; no code/config evidence supplied."
+   },
+   {
+    "id": 24,
+    "location": "S7",
+    "paper_text": "separates the twelve well-behaved backbones by $5.7\\%$ of its median",
+    "paper_value": "5.7% of median",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Search-signal spread not in provided files."
+   },
+   {
+    "id": 25,
+    "location": "S7",
+    "paper_text": "returns exactly $0.0$ for two of them whenever their student diverges",
+    "paper_value": "0.0 for 2 backbones",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Divergence/zero-score behavior untraceable."
+   },
+   {
+    "id": 26,
+    "location": "S7",
+    "paper_text": "architecture accounts for $0.54\\%$ of the variance ... category for $95.32\\%$",
+    "paper_value": "0.54% / 95.32%",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Variance shares untraceable."
+   },
+   {
+    "id": 27,
+    "location": "S7",
+    "paper_text": "Twelve independent runs selected a configuration prone to this collapse every single time",
+    "paper_value": "12/12 runs",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Search-run outcomes not in provided files."
+   },
+   {
+    "id": 28,
+    "location": "S7",
+    "paper_text": "at the $1.2$th percentile of the random distribution",
+    "paper_value": "1.2th percentile",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Random-distribution comparison untraceable."
+   },
+   {
+    "id": 29,
+    "location": "S7",
+    "paper_text": "The four runs whose results the manuscript originally reported chose a backbone that does not collapse",
+    "paper_value": "4 runs, non-collapsing backbone",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Prior-manuscript runs not evidenced."
+   },
+   {
+    "id": 30,
+    "location": "S7",
+    "paper_text": "worth $+7.92$ points of mean AUROC across three training seeds",
+    "paper_value": "+7.92 pts, 3 seeds",
+    "evidence_file": "adbench/results/analysis_p1_p3.json",
+    "evidence_value": "global mean 85.13; best-k 89.58; delta +4.45 pts, single run, no seed breakdown",
+    "status": "ambiguous_mapping",
+    "details": "Locality table delta is +3.3 to +4.5 pts, one run; 7.92 and 3 seeds untraceable."
+   },
+   {
+    "id": 31,
+    "location": "S7",
+    "paper_text": "it fails below chance on \\texttt{screw}",
+    "paper_value": "screw AUROC < 50% for mean",
+    "evidence_file": "adbench/results/analysis_p1_p3.json",
+    "evidence_value": "no category labels; no reduction-row value < 0.50",
+    "status": "ambiguous_mapping",
+    "details": "Cannot map columns to categories; no below-chance value for mean rows."
+   },
+   {
+    "id": 32,
+    "location": "S7",
+    "paper_text": "top-$k$ pooling repairs that failure to $84\\%$",
+    "paper_value": "84% on screw",
+    "evidence_file": "adbench/results/analysis_p1_p3.json",
+    "evidence_value": "no value = 0.84 in any reduction row",
+    "status": "ambiguous_mapping",
+    "details": "No 0.84 entry and no screw label; untraceable."
+   },
+   {
+    "id": 33,
+    "location": "S7",
+    "paper_text": "The gain is robust across two orders of magnitude in $k$",
+    "paper_value": "k spans 2 orders",
+    "evidence_file": "adbench/results/analysis_p1_p3.json",
+    "evidence_value": "k rows: 4, 2, 1, 0 (span < 1 order)",
+    "status": "ambiguous_mapping",
+    "details": "File k-range does not show two orders of magnitude."
+   },
+   {
+    "id": 34,
+    "location": "S7",
+    "paper_text": "recovers $61\\%$ of the oracle gap ... range from $41\\%$ to $72\\%$",
+    "paper_value": "61%; 41-72% seeds",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Oracle-gap recovery stats untraceable."
+   },
+   {
+    "id": 35,
+    "location": "S7",
+    "paper_text": "the backbone effect is statistically detectable ($p = 0.039$)",
+    "paper_value": "p = 0.039",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "p-value not in provided files."
+   },
+   {
+    "id": 36,
+    "location": "S7 practice",
+    "paper_text": "with a $k$ of two percent, and expect to gain several points",
+    "paper_value": "k = 2%, several points",
+    "evidence_file": "none",
+    "evidence_value": "absent",
+    "status": "missing_evidence",
+    "details": "Recommendation rests on untraceable reduction-gain evidence."
+   }
+  ],
+  "segment_verdict": "FAIL",
+  "notes": "Paper's cited source proxy_diag/phaseB_truth.json was not provided: table, variance shares, MDD, percentiles and p-value are all untraceable. Provided locality file shows a reduction delta of +3.3 to +4.5 pts (single run), materially below the claimed +7.92 across three seeds, though dataset scope (adbench vs MVTec-AD) is uncertain. Failed PatchCore baseline run does not contradict the paper, which claims no re-run of published baselines.",
+  "_segment": "S6 discussion + conclusions",
+  "_raw": "Audited S6–S7 claims against the two supplied files. The paper's cited source (proxy_diag/phaseB_truth.json) is absent, so the table and all headline statistics are untraceable; the locality file does not corroborate the reduction-gain claims.\n\n```json\n{\n  \"claims\": [\n    {\"id\": 1, \"location\": \"S6 published-values list\", \"paper_text\": \"$78.0\\\\%$ (AutoEncoder) and $85.0\\\\%$ (VAE)\", \"paper_value\": \"AE 78.0%, VAE 85.0%\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Literature values; no file records them. Expected for citations, listed per protocol.\"},\n    {\"id\": 2, \"location\": \"S6 published-values list\", \"paper_text\": \"$95.6\\\\%$ (STPM), $96.0\\\\%$ (SPADE)\", \"paper_value\": \"STPM 95.6%, SPADE 96.0%\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Literature values, unverifiable from provided files.\"},\n    {\"id\": 3, \"location\": \"S6 published-values list\", \"paper_text\": \"$97.9\\\\%$ (PaDiM), $98.5\\\\%$ (reverse distillation)\", \"paper_value\": \"PaDiM 97.9%, RD 98.5%\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Literature values, unverifiable from provided files.\"},\n    {\"id\": 4, \"location\": \"S6 published-values list\", \"paper_text\": \"$99.1\\\\%$ (PatchCore, EfficientAD)\", \"paper_value\": \"99.1% both\", \"evidence_file\": \"anomalib_baselines/results.json\", \"evidence_value\": \"PatchCore bottle image_auroc = null (run errored)\", \"status\": \"missing_evidence\", \"details\": \"Published value not in files; failed PatchCore re-run exists but paper claims no re-run, so no contradiction.\"},\n    {\"id\": 5, \"location\": \"S6 published-values list\", \"paper_text\": \"$99.3$--$99.6\\\\%$ (CFA, FastFlow, SimpleNet, Dinomaly). FastFlow reports $99.4\\\\%$\", \"paper_value\": \"99.3-99.6%; FastFlow 99.4%\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Literature values; internally consistent (99.4 within range) but untraceable.\"},\n    {\"id\": 6, \"location\": \"S6 preprint note\", \"paper_text\": \"SPADE and FastFlow, are preprints that were never published at a venue\", \"paper_value\": \"both preprints only\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"unsupported_claim\", \"details\": \"Publication-venue claim not verifiable from evidence files.\"},\n    {\"id\": 7, \"location\": \"S6 + Table caption\", \"paper_text\": \"all 14 backbones ... trained under one protocol on all 15 categories ... 210 detectors (500 epochs, batch size 64, seed 42, ResNet-18 teacher, reverse distillation)\", \"paper_value\": \"14 backbones, 15 categories, 210 detectors, protocol constants\", \"evidence_file\": \"none (cites proxy_diag/phaseB_truth.json)\", \"evidence_value\": \"file not provided\", \"status\": \"missing_evidence\", \"details\": \"Cited source file absent; scope and protocol unverifiable.\"},\n    {\"id\": 8, \"location\": \"Table tab:controlled\", \"paper_text\": \"ResNet-18 13.04 83.34 1 ... ConvNeXtV2-Base 89.69 79.36 14 (14 rows)\", \"paper_value\": \"14 param counts, mean AUROCs, ranks\", \"evidence_file\": \"none (cites proxy_diag/phaseB_truth.json)\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"All 42 table cells untraceable; source file not among evidence.\"},\n    {\"id\": 9, \"location\": \"S6\", \"paper_text\": \"reaches $82.47\\\\%$ mean AUROC ... \\\\texttt{efficientnet\\\\_b0} (5.41M parameters)\", \"paper_value\": \"82.47%, 5.41M\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Headline number and parameter count untraceable.\"},\n    {\"id\": 10, \"location\": \"S6\", \"paper_text\": \"the gap to the strongest published single-class detectors is on the order of $15$ points\", \"paper_value\": \"~15 points\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Derived from unsupported 82.47% and literature values; arithmetic gives 13.1-17.1.\"},\n    {\"id\": 11, \"location\": \"S6 capacity null\", \"paper_text\": \"$9.2\\\\times$ range across five capacity bands and finds no statistically resolvable effect\", \"paper_value\": \"9.2x, 5 bands, null effect\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Capacity-band analysis not in provided files.\"},\n    {\"id\": 12, \"location\": \"S6\", \"paper_text\": \"the deployed size spans $32\\\\times$\", \"paper_value\": \"32x\", \"evidence_file\": \"none (Table)\", \"evidence_value\": \"89.69/2.81 = 31.9 (table unsupported)\", \"status\": \"missing_evidence\", \"details\": \"Arithmetic consistent with table but table itself untraceable.\"},\n    {\"id\": 13, \"location\": \"S6\", \"paper_text\": \"the backbone accounts for $0.54\\\\%$ of the variance\", \"paper_value\": \"0.54%\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Variance decomposition not in provided files.\"},\n    {\"id\": 14, \"location\": \"S6 reproduction check\", \"paper_text\": \"$82.47\\\\%$ here against the $82.40\\\\%$ reported previously, a difference of $0.07$ points\", \"paper_value\": \"82.47 vs 82.40, diff 0.07\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Difference arithmetic correct; both inputs untraceable.\"},\n    {\"id\": 15, \"location\": \"S6\", \"paper_text\": \"at rank 5 of 14 ... top eleven candidates span $2.43$ points\", \"paper_value\": \"rank 5/14; 2.43-pt span\", \"evidence_file\": \"none (Table)\", \"evidence_value\": \"83.34-80.91 = 2.43 (table unsupported)\", \"status\": \"missing_evidence\", \"details\": \"Consistent with table arithmetic; table unverified.\"},\n    {\"id\": 16, \"location\": \"S6\", \"paper_text\": \"the first comparison of a full anomaly-detection search space under a single protocol\", \"paper_value\": \"priority claim\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"unsupported_claim\", \"details\": \"Novelty claim cannot be verified from evidence; hedged with 'to our knowledge'.\"},\n    {\"id\": 17, \"location\": \"S7\", \"paper_text\": \"leaves a residual standard deviation of $3.30$ points\", \"paper_value\": \"3.30 pts\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Two-way decomposition not in provided files.\"},\n    {\"id\": 18, \"location\": \"S7\", \"paper_text\": \"run-to-run standard deviation of a single detector ... $1.96$ points over three seeds\", \"paper_value\": \"1.96 pts, 3 seeds\", \"evidence_file\": \"adbench/results/analysis_p1_p3.json\", \"evidence_value\": \"seed_sd I-AUROC = 0.0035 (0.35 pts), different analysis\", \"status\": \"missing_evidence\", \"details\": \"Only seed SD in files is 0.35 pts, different scope; 1.96 untraceable.\"},\n    {\"id\": 19, \"location\": \"S7\", \"paper_text\": \"minimum detectable difference is $2.98$ points\", \"paper_value\": \"2.98 pts\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Derived statistic; inputs untraceable.\"},\n    {\"id\": 20, \"location\": \"S7\", \"paper_text\": \"larger than the entire $3.98$-point spread of the fourteen backbones\", \"paper_value\": \"3.98 pts\", \"evidence_file\": \"none (Table)\", \"evidence_value\": \"83.34-79.36 = 3.98 (table unsupported)\", \"status\": \"missing_evidence\", \"details\": \"Arithmetic consistent with unverified table.\"},\n    {\"id\": 21, \"location\": \"S7\", \"paper_text\": \"six times the $0.5$-point margin that separates PatchCore from the strongest results reported since\", \"paper_value\": \"6x of 0.5 pts\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"2.98/0.5 arithmetic fine; 0.5-pt margin is literature claim, untraceable.\"},\n    {\"id\": 22, \"location\": \"S7\", \"paper_text\": \"would take $240$ independent training runs per backbone, or $532$ categories\", \"paper_value\": \"240 runs; 532 categories\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Power calculation not reproducible from provided files.\"},\n    {\"id\": 23, \"location\": \"S7 mechanism\", \"paper_text\": \"the encoder that consumes it hard-codes a width while the decoder honours the requested one\", \"paper_value\": \"width-mismatch mechanism\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Code-level mechanism claim; no code/config evidence supplied.\"},\n    {\"id\": 24, \"location\": \"S7\", \"paper_text\": \"separates the twelve well-behaved backbones by $5.7\\\\%$ of its median\", \"paper_value\": \"5.7% of median\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Search-signal spread not in provided files.\"},\n    {\"id\": 25, \"location\": \"S7\", \"paper_text\": \"returns exactly $0.0$ for two of them whenever their student diverges\", \"paper_value\": \"0.0 for 2 backbones\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Divergence/zero-score behavior untraceable.\"},\n    {\"id\": 26, \"location\": \"S7\", \"paper_text\": \"architecture accounts for $0.54\\\\%$ of the variance ... category for $95.32\\\\%$\", \"paper_value\": \"0.54% / 95.32%\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Variance shares untraceable.\"},\n    {\"id\": 27, \"location\": \"S7\", \"paper_text\": \"Twelve independent runs selected a configuration prone to this collapse every single time\", \"paper_value\": \"12/12 runs\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Search-run outcomes not in provided files.\"},\n    {\"id\": 28, \"location\": \"S7\", \"paper_text\": \"at the $1.2$th percentile of the random distribution\", \"paper_value\": \"1.2th percentile\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Random-distribution comparison untraceable.\"},\n    {\"id\": 29, \"location\": \"S7\", \"paper_text\": \"The four runs whose results the manuscript originally reported chose a backbone that does not collapse\", \"paper_value\": \"4 runs, non-collapsing backbone\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Prior-manuscript runs not evidenced.\"},\n    {\"id\": 30, \"location\": \"S7\", \"paper_text\": \"worth $+7.92$ points of mean AUROC across three training seeds\", \"paper_value\": \"+7.92 pts, 3 seeds\", \"evidence_file\": \"adbench/results/analysis_p1_p3.json\", \"evidence_value\": \"global mean 85.13; best-k 89.58; delta +4.45 pts, single run, no seed breakdown\", \"status\": \"ambiguous_mapping\", \"details\": \"Locality table delta is +3.3 to +4.5 pts, one run; 7.92 and 3 seeds untraceable.\"},\n    {\"id\": 31, \"location\": \"S7\", \"paper_text\": \"it fails below chance on \\\\texttt{screw}\", \"paper_value\": \"screw AUROC < 50% for mean\", \"evidence_file\": \"adbench/results/analysis_p1_p3.json\", \"evidence_value\": \"no category labels; no reduction-row value < 0.50\", \"status\": \"ambiguous_mapping\", \"details\": \"Cannot map columns to categories; no below-chance value for mean rows.\"},\n    {\"id\": 32, \"location\": \"S7\", \"paper_text\": \"top-$k$ pooling repairs that failure to $84\\\\%$\", \"paper_value\": \"84% on screw\", \"evidence_file\": \"adbench/results/analysis_p1_p3.json\", \"evidence_value\": \"no value = 0.84 in any reduction row\", \"status\": \"ambiguous_mapping\", \"details\": \"No 0.84 entry and no screw label; untraceable.\"},\n    {\"id\": 33, \"location\": \"S7\", \"paper_text\": \"The gain is robust across two orders of magnitude in $k$\", \"paper_value\": \"k spans 2 orders\", \"evidence_file\": \"adbench/results/analysis_p1_p3.json\", \"evidence_value\": \"k rows: 4, 2, 1, 0 (span < 1 order)\", \"status\": \"ambiguous_mapping\", \"details\": \"File k-range does not show two orders of magnitude.\"},\n    {\"id\": 34, \"location\": \"S7\", \"paper_text\": \"recovers $61\\\\%$ of the oracle gap ... range from $41\\\\%$ to $72\\\\%$\", \"paper_value\": \"61%; 41-72% seeds\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Oracle-gap recovery stats untraceable.\"},\n    {\"id\": 35, \"location\": \"S7\", \"paper_text\": \"the backbone effect is statistically detectable ($p = 0.039$)\", \"paper_value\": \"p = 0.039\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"p-value not in provided files.\"},\n    {\"id\": 36, \"location\": \"S7 practice\", \"paper_text\": \"with a $k$ of two percent, and expect to gain several points\", \"paper_value\": \"k = 2%, several points\", \"evidence_file\": \"none\", \"evidence_value\": \"absent\", \"status\": \"missing_evidence\", \"details\": \"Recommendation rests on untraceable reduction-gain evidence.\"}\n  ],\n  \"segment_verdict\": \"FAIL\",\n  \"notes\": \"Paper's cited source proxy_diag/phaseB_truth.json was not provided: table, variance shares, MDD, percentiles and p-value are all untraceable. Provided locality file shows a reduction delta of +3.3 to +4.5 pts (single run), materially below the claimed +7.92 across three seeds, though dataset scope (adbench vs MVTec-AD) is uncertain. Failed PatchCore baseline run does not contradict the paper, which claims no re-run of published baselines.\"\n}\n```"
+ }
+]
