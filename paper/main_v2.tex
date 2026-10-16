@@ -1,13 +1,12 @@
 % ============================================================================
-% main_v2.tex -- the submitted manuscript (Applied Sciences, MDPI).
+% main_v2.tex -- parallel build of the rewritten manuscript.
 %
-% Self-contained: sections/ and figures_v2/ sit beside this file, so the paper
-% builds from this directory with `latexmk -pdf main_v2.tex'.
+% Purpose: compile the new narrative (sections/) side by side with the
+% existing main_springer.tex, so page count and cross-references can be checked
+% before switching over. The original main_springer.tex and sections/ are left
+% untouched as the fallback.
 %
-% The identical file lives in the submission package as `manuscript.tex', where
-% the same content is laid out with `figures/' instead of `figures_v2/' and the
-% section inputs at their flattened paths. The two builds are hash-checked to
-% produce the same page count.
+% Same class, same preamble, same bibliography. Only the \input paths differ.
 % ============================================================================
 
 \documentclass[pdflatex,iicol,sn-mathphys-num]{sn-jnl}
@@ -73,19 +72,21 @@ run on conforming parts alone. Two decisions determine whether such a system
 works: the architecture, and how per-pixel discrepancies are reduced to an
 image-level score --- the axis the literature documents least. We measure both, and
 what the benchmark resolves. On MVTec-AD the margin contested between
-successive state-of-the-art generations is $0.5$ AUROC points, while the standard
-single-category comparison resolves $2.98$ --- larger than the whole spread of the
-architectures it ranks. Instrumenting a reverse-distillation pipeline, two thirds
-of its space proves deployment-inert: the searched feature dimension never reaches
-the detector. The distillation signal that ranks candidates separates the twelve
-stable backbones by $5.7\%$ of its median and returns exactly zero for two,
-which the minimising rule prefers. Training 210 detectors attributes $0.54\%$ of
-the accuracy variance to the architecture and $95.32\%$ to the category; twelve
-searches all returned a collapse-prone backbone, worse than random. The leverage is
-in the reduction step: top-$k$ pooling raises mean AUROC from $82.36\%$ to
-$90.28\%$ without retraining, and can be selected without labels, recovering
-$61\%$ of the oracle gap. The pipeline reaches $82.47\%$ against published values
-of $95.6$--$99.6\%$, a gap we report rather than hide.}
+state-of-the-art generations is $0.5$ AUROC points, while the most favourable
+comparison the benchmark allows --- pairing over all fifteen categories ---
+resolves only $2.98$ --- more than the whole spread of the
+architectures it ranks. Instrumenting a reverse-distillation pipeline, the
+searched feature dimension never reaches the detector, so its three values
+collapse to one deployed model and two thirds of the space is a duplicate
+grid. The distillation signal that ranks candidates separates the
+twelve degenerate-free backbones by $5.7\%$ of its median and returns exactly zero
+for two, which the minimising rule prefers. Training 210 detectors attributes
+$0.54\%$ of AUROC variance to the architecture and $95.32\%$ to the category;
+twelve searches each returned a collapse-prone backbone, below random. The
+leverage is in the reduction step: top-$k$ pooling raises mean AUROC by $7.5$
+points without retraining, yet a label-free criterion adds little. The
+pipeline reaches $82.47\%$ against published values near $99\%$, a gap we report
+rather than hide.}
 
 \keywords{Industrial visual inspection, Unsupervised anomaly detection, Neural
 architecture search, Knowledge distillation, Score fusion, Proxy reliability}
@@ -126,7 +127,7 @@ This work was supported by the Guangxi Natural Science Foundation (Grant No. 202
 \item \textbf{Author contributions}: All three authors are colleagues in the same school and jointly planned the study. Using the CRediT taxonomy:
 \textbf{Conceptualization}, P.D.; \textbf{methodology}, P.D., H.L. and Y.Z.; \textbf{validation}, P.D.; \textbf{formal analysis}, P.D.; \textbf{writing---original draft preparation}, P.D.; \textbf{writing---review and editing}, H.L. and Y.Z.; \textbf{supervision}, P.D.; \textbf{project administration}, P.D.; \textbf{funding acquisition}, H.L. and P.D. All authors have read and agreed to the published version of the manuscript. P.D. is the corresponding author.
 
-\item \textbf{Use of large language models}: An AI assistant (a large language model) was used substantially in this work. It wrote the code for the diagnostic experiments, the synthetic reproduction and the benchmark harness, executed those experiments, and produced the numerical results reported here; it also produced drafts of the manuscript text. The authors specified the research questions, directed the work, verified the reported results against the recorded experimental outputs, and take full responsibility for the content, the claims and their accuracy.
+\item \textbf{Use of large language models}: An AI assistant (a large language model) was used substantially in this work. It wrote the code for the diagnostic experiments, the synthetic reproduction and the benchmark harness, executed those experiments, and produced the numerical results reported here; it also produced drafts of the manuscript text and the plotting code. No figure or table was generated by a generative model: each figure is a plot of recorded measurements produced by the released script, and each table transcribes the same recorded result files. The authors specified the research questions, directed the work, verified the reported results against the recorded experimental outputs, and take full responsibility for the content, the claims and their accuracy.
 \end{itemize}
 
 %%=============================================================================%% References

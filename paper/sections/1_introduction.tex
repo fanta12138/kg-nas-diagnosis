@@ -28,17 +28,20 @@ combined into the single number that decides whether a part is rejected. The
 second decision is usually made implicitly --- the published pipeline averages the
 discrepancy map over all pixels, a choice that is rarely stated and, to our
 knowledge, never justified. The literature has overwhelmingly invested in the
-first, applying neural architecture search (NAS) to anomaly
-detection~\cite{liu2023simplenet,wang2021stpm} on the argument that the optimal
-architecture is dataset-dependent and should be discovered rather than chosen.
+first, searching over architectures on the argument that the optimal
+architecture is dataset-dependent and should be discovered rather than
+chosen~\cite{qian2024knowledgeguided,xie2017genetic}; a pipeline of the kind we
+study inherits a search stage for exactly this reason.
 
 \runinhead{The margins the field argues about, and the resolution of its
 benchmark.} Progress on the standard benchmark is reported in tenths of a
 percentage point. PatchCore reached $99.1\%$ image-level AUROC on MVTec-AD in
 2022~\cite{roth2022patchcore}; the strongest methods reported since reach
 $99.6\%$~\cite{liu2023simplenet,guo2025dinomaly}. The contested margin is
-therefore $0.5$ points, on a benchmark whose test sets hold roughly a hundred
-images per category. Before asking which design decisions produce such margins,
+therefore $0.5$ points, on a benchmark whose test sets hold $1725$ images across
+all fifteen categories --- between $42$ and $167$ per category, mean
+$115$~\cite{bergmann2021mvtec}. Before asking which design decisions produce such
+margins,
 it is worth asking whether the standard evaluation design can resolve them at all.
 We measure that first, because the answer determines how every subsequent
 comparison in this literature should be read.
@@ -78,9 +81,11 @@ detector at a fixed (backbone, category) is $1.96$ points over three seeds.
 Comparing two backbones across the fifteen categories is therefore a paired test
 whose minimum detectable difference is \textbf{$2.98$ points} --- $75\%$ of the
 entire $3.98$-point spread of the fourteen backbones, and six times the margin
-that separates the 2022 and 2026 state of the art. To resolve $0.5$ points on a
-single category would take $240$ independent training runs per backbone. This is
-the paper's measurement about the field as a whole rather than about this
+that separates the 2022 state of the art from the strongest result reported
+since~\cite{roth2022patchcore,guo2025dinomaly}. To resolve $0.5$ points on a
+single category would take at least $241$ independent training runs per backbone.
+This is
+the paper's measurement about the benchmark design rather than about this
 pipeline.
 
 \runinhead{Two thirds of the search space cannot reach the deployed model.}
@@ -117,26 +122,35 @@ practically irrelevant. The manuscript's selected architecture ranks fifth of
 fourteen and is statistically indistinguishable from twelve of the thirteen
 alternatives. More consequentially, the ranking does not transfer: the mean
 correlation between two categories' orderings of the 14 backbones is
-$\rho = 0.215$, and in $31\%$ of category pairs the categories disagree. Yet the
+$\rho = 0.215$, and in $31\%$ of the $105$ category pairs the categories disagree
+outright. Yet the
 protocol searches on a single category and applies the winner to all fifteen
 (Section~\ref{subsec:capacity_null}).
 
-\runinhead{The consequence is measurable, and it is worse than chance.}
+\runinhead{The consequence is measurable, and the selection is systematically wrong.}
 Running the search itself with independent seeds, the two backbones that collapse
-to zero are selected every time, and the architecture the search returns is worse
-than picking a backbone uniformly at random. A design axis that cannot reach the
+to zero are selected every time: in twelve runs the search returned a
+collapse-prone backbone in twelve, none in the top four of the space, at a
+probability of $7\times10^{-11}$ under uniform sampling. Its mean AUROC ($80.91\%$)
+sits below the mean of uniform random selection ($81.65\%$), though that gap is
+smaller than the $2.98$-point resolution this paper derives, so the defensible
+claim is the systematic selection failure rather than the gap. A design axis that
+cannot reach the
 model, ranked by a signal that does not discriminate, on a quantity that does not
 transfer, is selected --- reliably --- by a failure mode
 (Section~\ref{subsec:search_vs_random}).
 
 \runinhead{The leverage is in the decision nobody documents.} On frozen models,
 changing only the reduction that turns discrepancy maps into an image score moves
-mean AUROC from $82.5\%$ to $90.3\%$ --- $+7.8$ points, consistent across three
-training seeds --- and choosing the policy per category reaches $93.72\%$. The
-policy can further be chosen without any anomaly label, by perturbing held-out
-normal images with synthetic defects and selecting the policy that best separates
-perturbed from clean: across three training seeds this recovers $7.09$ of the
-$11.65$ points available from an oracle, on the same trained models
+mean AUROC from $82.80\%$ to $90.21\%$ --- $+7.42$ points on the seed we report in
+full, and $+8.07$ and $+7.78$ on two further seeds --- and choosing the
+policy per category reaches $93.72\%$. The pooling change needs no criterion and
+no label. We also test whether the policy can be chosen per category without any
+anomaly label, by perturbing held-out normal images with synthetic defects and
+selecting the policy that best separates perturbed from clean; on the same models
+that procedure reaches $88.59\%$ and thus does \emph{not} improve on the fixed
+top-$k$ convention, whose own mean is $88.99\%$ on that split. We report the
+decomposition rather than the larger number
 (Sections~\ref{subsec:policy_results} and~\ref{subsec:pseudo_results}).
 
 \subsection*{Contributions}
@@ -144,10 +158,16 @@ $11.65$ points available from an oracle, on the same trained models
 \begin{enumerate}
   \item \textbf{The resolvability of the standard benchmark design.} We anchor the
   noise floor of this task to the margin the field actually contests, and show
-  that a single-category, single-run comparison resolves $2.98$ points against a
-  contested margin of $0.5$ --- so most published backbone comparisons on this
-  benchmark are not measurements. This is a measurement about the evaluation
-  practice of the field, and it is our primary contribution.
+  that the benchmark as it is normally used resolves $2.98$ points --- the minimum
+  detectable difference of the 15-category \emph{paired} comparison that averaging
+  over the available categories allows, against a contested margin of $0.5$. A
+  genuinely single-category, single-run comparison is worse still: it needs at
+  least $241$
+  independent training runs per backbone to resolve the same $0.5$ points. Either
+  way a backbone comparison reported from one run per configuration on this
+  benchmark is not a measurement of the effect it claims. This is a measurement
+  about the evaluation
+  practice this benchmark induces, and it is our primary contribution.
   \item \textbf{A diagnosis of the architecture axis.} Two thirds of a standard
   search space is deployment-inert; its search signal does not discriminate
   between architectures and degenerates to a score of exactly zero for a subset of
@@ -157,13 +177,17 @@ $11.65$ points available from an oracle, on the same trained models
   $\times$ 15 categories under one protocol (210 detectors), which makes the
   negative result measurable rather than anecdotal.
   \item \textbf{Evidence that a single-category search cannot work.} The backbone
-  ranking does not transfer across categories ($\bar\rho = 0.215$; $31\%$ of
-  category pairs reverse), so a search run on one category estimates a quantity
+  ranking does not transfer across categories ($\bar\rho = 0.215$; $31\%$ of the
+  $105$ category pairs reverse), so a search run on one category estimates a quantity
   that does not exist independently of the category.
-  \item \textbf{A label-free method for the axis that does matter.} Selecting the
-  scoring policy by separation of synthetic pseudo-anomalies recovers $61\%$ of the
-  oracle gap --- $7.09$ of $11.65$ points, averaged over three training seeds ---
-  without any anomaly label and without retraining.
+  \item \textbf{An honest decomposition of the label-free gain on the axis that
+  does matter.} The scoring policy is worth about $7.5$ points of mean AUROC
+  without retraining ($+7.42$ on the seed reported in full, $+7.78$ to $+8.07$ on
+  two further seeds); most of it is available from a fixed top-$k$ pooling, and
+  the label-free selection criterion we propose adds a mean of $-0.40$ points on
+  top of that fixed convention across three training seeds. We present the
+  decomposition rather than the flattering headline, because the useful and
+  reproducible part of this finding is the pooling, not the selector.
 \end{enumerate}
 
 \subsection*{Scope and honesty}

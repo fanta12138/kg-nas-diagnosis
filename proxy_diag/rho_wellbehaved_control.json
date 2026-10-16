@@ -1,0 +1,26 @@
+{
+  "all_14_backbones": {
+    "n_backbones": 14,
+    "n_pairs": 105,
+    "mean_rho": 0.21511756495460033,
+    "sd": 0.40844347545232706,
+    "frac_reversed": 0.3142857142857143,
+    "t_stat": 5.396827785146462
+  },
+  "excl_2_collapse_prone": {
+    "n_backbones": 12,
+    "n_pairs": 105,
+    "mean_rho": 0.2558224258090543,
+    "sd": 0.4356783413304863,
+    "frac_reversed": 0.3047619047619048,
+    "t_stat": 6.016823774366268
+  },
+  "excl_collapse_and_b0": {
+    "n_backbones": 11,
+    "n_pairs": 105,
+    "mean_rho": 0.2782714508100358,
+    "sd": 0.43295994712586694,
+    "frac_reversed": 0.2761904761904762,
+    "t_stat": 6.5859067910354225
+  }
+}

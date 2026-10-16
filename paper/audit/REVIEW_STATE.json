@@ -1,0 +1,61 @@
+{
+  "round": 2,
+  "status": "completed",
+  "last_score": 7.0,
+  "last_verdict": "almost",
+  "reviewer_model": "glm-5.3-flash",
+  "review_protocol": "segmented (7 section calls in round 2) + 1 synthesis call",
+  "stop_condition": "score >= 6/10 AND verdict in {ready, almost}",
+  "stop_condition_met": true,
+  "max_rounds": 4,
+  "round_history": [
+    {
+      "round": 1,
+      "score": 6.0,
+      "verdict": "not ready",
+      "segments": 8,
+      "confirmed_defects": "D1-D20 (applied)",
+      "false_positives": "F1-F12 (rejected, evidence-checked)",
+      "new_controls": [
+        "baseline_decomposition.py",
+        "degenerate_filter_control.py",
+        "rho_wellbehaved_control.py",
+        "rank_stability_control.py"
+      ]
+    },
+    {
+      "round": 2,
+      "score": 7.0,
+      "verdict": "almost",
+      "segments": 7,
+      "blocking_items": "B1-B5",
+      "major_items": "M1-M12",
+      "resolved": "B2-B5 resolved; B1 (canonical-value sweep) unresolved but mechanical",
+      "remaining_items": 10,
+      "remaining_item_type": "text only",
+      "new_computations_required": false
+    }
+  ],
+  "pending_experiments": [],
+  "optional_not_blocking": [
+    "NLM2 harness anchor — reproduce one published reverse-distillation configuration inside this code path to bound the 17.1-point gap (M2); not required for the diagnostic claims, all of which are within-harness"
+  ],
+  "artifacts": {
+    "triage": "review-stage/TRIAGE.md",
+    "segment_reports_r1": "review-stage/seg_P0_preamble.md ... seg_P7_conclusion.md",
+    "synthesis_r1": "review-stage/seg_SYNTHESIS.md",
+    "segment_reports_r2": "review-stage/r2_seg_P0_preamble.md ... r2_seg_P7_conclusion.md",
+    "synthesis_r2": "review-stage/r2_seg_SYNTHESIS.md",
+    "raw_reports": "review-stage/_seg_raw.json, _synth_raw.json, _r2_seg_raw.json, _r2_synth_raw.json",
+    "drivers": "review-stage/run_external_review.py, run_synthesis.py, run_external_review_r2.py, run_synthesis_r2.py",
+    "pre_edit_backup": "audit/r3_backup_20261016_175700/",
+    "cumulative_log": "review-stage/AUTO_REVIEW.md"
+  },
+  "final_build": {
+    "compiler": "latexmk (TeX Live 2026)",
+    "errors": 0,
+    "undefined_references": 0,
+    "pages": 27
+  },
+  "timestamp": "2026-10-16T18:40:00"
+}

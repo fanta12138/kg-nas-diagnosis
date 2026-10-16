@@ -1,0 +1,169 @@
+{
+  "run00": {
+    "argmin_with_degenerates": {
+      "backbone": "efficientnet_b1",
+      "dim": 256,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "deit_tiny_patch16_224",
+      "dim": 512,
+      "score": 6.775531768798828
+    }
+  },
+  "run01": {
+    "argmin_with_degenerates": {
+      "backbone": "efficientnet_b1",
+      "dim": 256,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "deit_tiny_patch16_224",
+      "dim": 512,
+      "score": 6.738555192947388
+    }
+  },
+  "run02": {
+    "argmin_with_degenerates": {
+      "backbone": "mobilenetv3_small_100",
+      "dim": 256,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "efficientnet_b1",
+      "dim": 256,
+      "score": 5.484488010406494
+    }
+  },
+  "run03": {
+    "argmin_with_degenerates": {
+      "backbone": "efficientnet_b1",
+      "dim": 256,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "efficientnet_b1",
+      "dim": 512,
+      "score": 5.9815354347229
+    }
+  },
+  "run04": {
+    "argmin_with_degenerates": {
+      "backbone": "mobilenetv3_small_100",
+      "dim": 256,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "resnet18",
+      "dim": 512,
+      "score": 6.18801212310791
+    }
+  },
+  "run05": {
+    "argmin_with_degenerates": {
+      "backbone": "mobilenetv3_small_100",
+      "dim": 128,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "deit_tiny_patch16_224",
+      "dim": 256,
+      "score": 6.182667255401611
+    }
+  },
+  "run06": {
+    "argmin_with_degenerates": {
+      "backbone": "efficientnet_b1",
+      "dim": 256,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "deit_tiny_patch16_224",
+      "dim": 128,
+      "score": 5.57745099067688
+    }
+  },
+  "run07": {
+    "argmin_with_degenerates": {
+      "backbone": "efficientnet_b1",
+      "dim": 128,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "deit_tiny_patch16_224",
+      "dim": 128,
+      "score": 6.306769371032715
+    }
+  },
+  "run08": {
+    "argmin_with_degenerates": {
+      "backbone": "efficientnet_b1",
+      "dim": 128,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "deit_tiny_patch16_224",
+      "dim": 512,
+      "score": 6.730423450469971
+    }
+  },
+  "run09": {
+    "argmin_with_degenerates": {
+      "backbone": "efficientnet_b1",
+      "dim": 256,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "resnet18",
+      "dim": 256,
+      "score": 4.556467056274414
+    }
+  },
+  "run10": {
+    "argmin_with_degenerates": {
+      "backbone": "mobilenetv3_small_100",
+      "dim": 128,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "deit_tiny_patch16_224",
+      "dim": 128,
+      "score": 5.332240343093872
+    }
+  },
+  "run11": {
+    "argmin_with_degenerates": {
+      "backbone": "mobilenetv3_small_100",
+      "dim": 512,
+      "score": 0.0,
+      "true_auroc": null
+    },
+    "argmin_filtering_zeros": {
+      "backbone": "deit_tiny_patch16_224",
+      "dim": 512,
+      "score": 6.176593780517578
+    }
+  },
+  "_summary": {
+    "backbones_chosen_with_degenerates": {
+      "efficientnet_b1": 7,
+      "mobilenetv3_small_100": 5
+    },
+    "backbones_chosen_filtering_zeros": {
+      "deit_tiny_patch16_224": 8,
+      "efficientnet_b1": 2,
+      "resnet18": 2
+    }
+  }
+}

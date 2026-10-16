@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
@@ -11,7 +12,7 @@ Usage:  python run_claim_audit.py
 """
 import json, os, sys, time, hashlib, urllib.request, urllib.error, re
 
-API_KEY = os.environ.get("GLM_API_KEY", "eb1935406dc8409190b2bec0b03ce050.nkz6H70UQXM0RABQ")
+API_KEY = os.environ["GLM_API_KEY"]
 BASE    = "https://open.bigmodel.cn/api/paas/v4/chat/completions"
 MODEL   = "glm-5.3-flash"
 

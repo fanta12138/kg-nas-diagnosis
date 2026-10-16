@@ -22,19 +22,19 @@ fifteen categories the benchmark provides is therefore a paired test whose minim
 detectable difference is $2.98$ points --- $75\%$ of the entire $3.98$-point
 spread of the fourteen backbones, and six times the $0.5$-point margin that
 separates PatchCore from the strongest results reported since. Resolving that
-margin on a single category would take $240$ independent training runs per
-backbone, or $532$ categories. This is a statement about the benchmark rather than
+margin on a single category would take at least $241$ independent training runs per
+backbone, or $533$ categories. This is a statement about the benchmark rather than
 about our pipeline, and it bounds every architecture comparison made on it.
 
 Within that constraint, the diagnosis of the architecture axis is unambiguous.
 Two thirds of the search space is spent on a feature dimension that cannot reach
 the deployed model, because the encoder that consumes it hard-codes a width while
 the decoder honours the requested one. The search signal does not distinguish
-architectures: it separates the eleven tight well-behaved backbones by $5.7\%$ of
+architectures: it separates the twelve degenerate-free backbones by $5.7\%$ of
 its median, which is the same order as its own run-to-run noise, and it returns
 exactly $0.0$ when a student diverges --- for two backbones in most trials, and
 occasionally for any of them. And the quantity it is used to predict is dominated
-something else entirely: architecture accounts for $0.54\%$ of the variance in
+by something else entirely: architecture accounts for $0.54\%$ of the variance in
 detection accuracy and the category for $95.32\%$
 (Section~\ref{subsec:capacity_null}).
 
@@ -45,25 +45,38 @@ select the best architecture but the one with the heaviest left tail --- which i
 the one that failed. Twelve independent runs selected a configuration prone to
 this collapse every single time, and the architectures they returned perform
 \emph{worse} than uniform random selection, at the $1.2$th percentile of the
-random distribution (Section~\ref{subsec:search_vs_random}). The four runs whose
-results the manuscript originally reported chose a backbone that does not
-collapse, which on this account was luck.
+random distribution (Section~\ref{subsec:search_vs_random}). The four older runs
+whose results the manuscript originally reported chose a backbone that does not
+collapse, which on this account was luck; those four are a different, earlier run
+population, and Section~\ref{subsec:search_vs_random} states the two populations
+separately so that the record is not read as self-contradictory.
 
 The constructive finding is where the accuracy actually is. The reduction that
-turns a multi-scale discrepancy map into an image-level score is worth $+7.92$
-points of mean AUROC across three training seeds --- an order of magnitude more
-than the architecture --- and it is worth those points without retraining
-anything. The default choice, an unweighted mean over all pixels, is not merely
-suboptimal: it fails below chance on \texttt{screw}, and top-$k$ pooling repairs
-that failure to $84\%$. The gain is robust across two orders of magnitude in $k$
-(Section~\ref{sec:leverage}). And the reduction can be chosen without any anomaly
-label, by perturbing held-out normal images with synthetic defects and selecting
-the policy that best separates them from the clean ones: averaged over three
-training seeds this recovers $61\%$ of the oracle gap, though the seeds range from
-$41\%$ to $72\%$, so it is a direction rather than a settled number.
+turns a multi-scale discrepancy map into an image-level score is worth $+7.5$
+points of mean AUROC across three training seeds --- nearly twice the entire
+$3.98$-point spread of the fourteen backbones the architecture axis ranks --- and
+it is worth those points without retraining
+anything. That gain is attributable to a fixed change of pooling, with no
+selection step at all. The default choice, an unweighted mean over all pixels, is
+not merely suboptimal: it fails below chance on \texttt{screw}, and top-$k$
+pooling repairs that failure to $84\%$. The gain is robust across two orders of
+magnitude in $k$ (Section~\ref{sec:leverage}).
+
+Selecting the pooling per category with a label-free criterion we propose does
+\emph{not}, on the evidence we collected, add materially to the fixed choice. On
+the same held-out split and the same trained students, fixing top-$k$ pooling
+already reaches $88.99\%$ on average against $81.50\%$ for the default, while the
+pseudo-anomaly criterion adds $+1.10$, $+0.52$ and $-2.82$ points on the three
+seeds (mean $-0.40$) on top of that fixed convention. We therefore present the
+$\mathbf{+7.5}$-point pooling change as the finding, and the selection criterion as
+an unproven refinement of it whose own three-seed spread ($3.92$ points) exceeds
+the magnitude of its own mean ($0.40$ points)
+(Section~\ref{subsec:pseudo_results}).
 
 Three limitations bound these claims. The diagnosis is established on MVTec-AD,
-with one teacher, one detector family and one training protocol; whether the same
+with one teacher per track (the contrastive proxy teacher and the frozen ImageNet
+deployed teacher described in Section~\ref{subsec:teacher}), one detector family
+and one training protocol; whether the same
 collapse appears in other pipelines is a question our evidence cannot settle,
 though the mechanism --- a thresholded objective that can return its own optimum,
 combined with a minimising selection rule --- is not specific to this codebase.
@@ -80,9 +93,12 @@ question.
 Two things follow for practice. A search whose objective can silently return the
 optimum of its own range must filter degenerate evaluations before minimising, and
 should report the distribution of its per-configuration scores rather than a
-single minimum. And any deployed reverse-distillation detector currently scoring
-images by the mean over its discrepancy map can be re-scored, on the models it
-already has, with a $k$ of two percent, and expect to gain several points of
-accuracy and to stop failing below chance on the categories that currently defeat
-it. Neither of those requires convincing anyone that a new architecture is better,
+single minimum. And a reverse-distillation detector of the family tested here,
+currently scoring images by the mean over its discrepancy map, can be re-scored on
+the models it already has with a $k$ of two percent, which on the fifteen
+categories we measured gained $7$--$8$ points of mean AUROC and removed the
+below-chance failures. We state this as what we measured rather than as a
+guarantee for every pipeline: the pooling gain is established on one detector
+family and should be re-measured before being relied on elsewhere. Neither
+recommendation requires convincing anyone that a new architecture is better,
 which is convenient, because on this benchmark that cannot be shown.

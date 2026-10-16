@@ -33,11 +33,38 @@ reported backbone comparisons on this benchmark are therefore not measurements.
 | `synthetic_mechanism/` | A code-independent synthetic reproduction of the degenerate-objective × `argmin` mechanism. |
 | `adbench/` | An auxiliary three-dataset benchmark harness (MVTec-AD, VisA, MVTec-LOCO) plus the release tooling: citation audit, number-diff, bib trimming. |
 | `anomalib_baselines/` | External-baseline runs through the `anomalib` library. |
-| `audit/` | The claim-audit trace: per-claim checks, reviewer reports, and the scripts that verified them. |
+| `audit/` | The claim-audit trace: per-claim checks, the two-round external review (`review-round1/`, `review-round2/`), the triage of every finding, and the scripts that verified them. See `audit/REVIEW_STATE.json` for the loop state. |
 | `logs/` | Raw run logs, in chronological order. |
 | `paper/` | Manuscript source (`main_v2.tex`), bibliography, figure generator output, and the compiled PDF. |
 | `docs/` | Data setup, method notes, and the original Chinese working notes under `docs/notes_zh/`. |
 | `kgd_paths.py` | Filesystem-root resolver. **Read this first if you intend to run anything.** |
+
+---
+
+## The audit trail
+
+Two independent checks were run against the manuscript before submission, and both
+are shipped in full so that a reader can re-trace every correction.
+
+* **Claim audit** — `paper/PAPER_CLAIM_AUDIT.md` / `.json`, plus the driver under
+  `paper/audit/claim-audit_20261016/`. Every number, comparison and scope claim in
+  the text was checked against the released result files; 5 corrections were applied.
+* **External review** — two rounds of a segmented LLM review, with the per-section
+  reports and the synthesis kept verbatim under `paper/audit/review-round1/` and
+  `paper/audit/review-round2/`. Round 1 returned 6/10 (`not ready`), which produced
+  12 rejected false positives (`F1`–`F12`) and 20 confirmed defects (`D1`–`D20`,
+  all fixed — see `paper/audit/TRIAGE.md`). Round 2 returned **7/10 (`almost`)**,
+  with the four blocking items `B2`–`B5` resolved and only `B1` (a canonical-value
+  sweep, mechanical) outstanding. The loop state is recorded in
+  `paper/audit/REVIEW_STATE.json`; the cumulative log is `paper/audit/AUTO_REVIEW.md`.
+
+The review and audit scripts read their API key from the `GLM_API_KEY` environment
+variable. No credential is stored in this repository:
+
+```bash
+export GLM_API_KEY=...        # your own key
+python paper/audit/review-round2/run_external_review_r2.py
+```
 
 ---
 
@@ -77,9 +104,14 @@ percentile; the best backbone reaches 83.34%).
 **4. The leverage is in the reduction nobody documents.**
 Replacing the unweighted mean over the discrepancy map with top-*k* pooling raises
 mean AUROC from 82.36% to 90.28% across three training seeds — **+7.92 points,
-without retraining anything** — and the policy can be chosen with no anomaly label
-at all, by separating synthetic pseudo-anomalies from clean images, recovering
-**61% of the oracle gap** (7.09 of 11.65 points, three seeds).
+without retraining anything**. A criterion that selects the pooling per category
+from synthetic pseudo-anomalies without any anomaly label **does not improve on
+simply fixing** top-*k*: on the same held-out split and the same trained models the
+fixed convention already reaches 88.99%, while the criterion's own contribution is
++1.10 / +0.52 / −2.82 points (mean **−0.40**) on top of it. We report that
+decomposition rather than the larger headline — `baseline_decomposition.py` in
+`pseudo_select/` produces it, and the paper states it in
+Section 5.4.
 
 We do **not** claim state of the art: the pipeline reaches 82.47% mean AUROC on
 MVTec-AD against published values of 95.6–99.6%. That gap is reported in the paper
@@ -121,7 +153,10 @@ scripts that need no GPU and no dataset:
 
 ```bash
 python proxy_diag/samplesize_analysis.py      # resolvability: 1.96 / 3.30 / 4.12, 240 runs, 2.98 pp
-python pseudo_select/aggregate_multiseed.py   # label-free selection over three seeds: +7.09, 61%
+python pseudo_select/aggregate_multiseed.py   # label-free selection over three seeds: +7.09 over the default
+python pseudo_select/baseline_decomposition.py # static top-k vs selection: +7.49 vs -0.40 (the honest split)
+python search_repeats/degenerate_filter_control.py # filtering zero-score trials: deit_tiny x8, resnet18 x2, b1 x2
+python proxy_diag/rho_wellbehaved_control.py   # transfer correlation: +0.215 / +0.256 / +0.278
 python search_repeats/authoritative_analysis.py  # 12 runs vs chance: 80.91 / 81.65 / 83.34
 python search_forensics/analyze.py            # 19 runs, 834 trials, 8.0% degenerate, 14/19 argmin
 python synthetic_mechanism/synthetic_mechanism.py # 95% of the search advantage lost
@@ -163,7 +198,7 @@ Two strong checks that the release is intact and self-consistent:
 1. `python make_figures_v2.py` regenerates `paper/figures_v2/*.png`
    **byte for byte** from the shipped JSONs.
 2. The manuscript compiles standalone: `cd paper && latexmk -pdf main_v2.tex`
-   → 23 pages, 0 undefined references.
+   → 27 pages, 0 undefined references.
 
 ## Scope and caveats
 

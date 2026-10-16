@@ -1,0 +1,175 @@
+{
+  "seed_42": {
+    "n_backbones": 14,
+    "order": [
+      "resnet18",
+      "resnet34",
+      "resnet50",
+      "mobileone_s0",
+      "efficientnet_b0",
+      "deit_tiny_patch16_224",
+      "mobilenetv3_small_100",
+      "vit_tiny_patch16_224",
+      "convnext_small",
+      "convnextv2_tiny",
+      "convnext_tiny",
+      "efficientnet_b1",
+      "swin_tiny_patch4_window7_224",
+      "convnextv2_base"
+    ],
+    "mean_auroc": {
+      "resnet18": 83.34095080229638,
+      "resnet34": 82.98971227159156,
+      "resnet50": 82.75182588127333,
+      "mobileone_s0": 82.5779266568691,
+      "efficientnet_b0": 82.46691797449428,
+      "deit_tiny_patch16_224": 82.03108782121382,
+      "mobilenetv3_small_100": 81.85265904073152,
+      "vit_tiny_patch16_224": 81.50630977218643,
+      "convnext_small": 81.43227009688273,
+      "convnextv2_tiny": 81.35397111769946,
+      "convnext_tiny": 80.90704674948938,
+      "efficientnet_b1": 80.4324340203582,
+      "swin_tiny_patch4_window7_224": 80.1079457658416,
+      "convnextv2_base": 79.36141102608529
+    },
+    "spread": 3.979539776211084
+  },
+  "seed_43": {
+    "n_backbones": 6,
+    "order": [
+      "resnet18",
+      "efficientnet_b0",
+      "mobilenetv3_small_100",
+      "vit_tiny_patch16_224",
+      "convnextv2_tiny",
+      "swin_tiny_patch4_window7_224"
+    ],
+    "mean_auroc": {
+      "resnet18": 83.91831549133813,
+      "efficientnet_b0": 82.2842090590679,
+      "mobilenetv3_small_100": 81.52519073386603,
+      "vit_tiny_patch16_224": 81.03337830985922,
+      "convnextv2_tiny": 80.6132550078509,
+      "swin_tiny_patch4_window7_224": 80.6052100804174
+    },
+    "spread": 3.313105410920741
+  },
+  "seed_44": {
+    "n_backbones": 6,
+    "order": [
+      "resnet18",
+      "efficientnet_b0",
+      "mobilenetv3_small_100",
+      "vit_tiny_patch16_224",
+      "convnextv2_tiny",
+      "swin_tiny_patch4_window7_224"
+    ],
+    "mean_auroc": {
+      "resnet18": 84.15956039397264,
+      "efficientnet_b0": 82.79798640401255,
+      "mobilenetv3_small_100": 82.48635803861593,
+      "vit_tiny_patch16_224": 81.85919301199557,
+      "convnextv2_tiny": 80.19434179660568,
+      "swin_tiny_patch4_window7_224": 79.76546799598901
+    },
+    "spread": 4.394092397983627
+  },
+  "n_backbones_with_all_seeds": 6,
+  "backbones_with_all_seeds": [
+    "convnextv2_tiny",
+    "efficientnet_b0",
+    "mobilenetv3_small_100",
+    "resnet18",
+    "swin_tiny_patch4_window7_224",
+    "vit_tiny_patch16_224"
+  ],
+  "replicated_seed_dispersion": {
+    "convnextv2_tiny": {
+      "mean": 80.72052264071868,
+      "sd": 0.5872093318237503,
+      "per_seed": [
+        81.35397111769946,
+        80.6132550078509,
+        80.19434179660568
+      ]
+    },
+    "efficientnet_b0": {
+      "mean": 82.51637114585824,
+      "sd": 0.2604342568923237,
+      "per_seed": [
+        82.46691797449428,
+        82.2842090590679,
+        82.79798640401255
+      ]
+    },
+    "mobilenetv3_small_100": {
+      "mean": 81.95473593773782,
+      "sd": 0.48864651498488826,
+      "per_seed": [
+        81.85265904073152,
+        81.52519073386603,
+        82.48635803861593
+      ]
+    },
+    "resnet18": {
+      "mean": 83.80627556253572,
+      "sd": 0.4206484578964161,
+      "per_seed": [
+        83.34095080229638,
+        83.91831549133813,
+        84.15956039397264
+      ]
+    },
+    "swin_tiny_patch4_window7_224": {
+      "mean": 80.15954128074934,
+      "sd": 0.42224195073319704,
+      "per_seed": [
+        80.1079457658416,
+        80.6052100804174,
+        79.76546799598901
+      ]
+    },
+    "vit_tiny_patch16_224": {
+      "mean": 81.46629369801374,
+      "sd": 0.41435907762505336,
+      "per_seed": [
+        81.50630977218643,
+        81.03337830985922,
+        81.85919301199557
+      ]
+    }
+  },
+  "rank_by_seed_replicated_six": {
+    "resnet18": [
+      1,
+      1,
+      1
+    ],
+    "efficientnet_b0": [
+      2,
+      2,
+      2
+    ],
+    "mobilenetv3_small_100": [
+      3,
+      3,
+      3
+    ],
+    "vit_tiny_patch16_224": [
+      4,
+      4,
+      4
+    ],
+    "convnextv2_tiny": [
+      5,
+      5,
+      5
+    ],
+    "swin_tiny_patch4_window7_224": [
+      6,
+      6,
+      6
+    ]
+  }
+}

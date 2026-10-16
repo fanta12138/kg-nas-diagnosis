@@ -36,7 +36,8 @@ extractor~\cite{defard2021padim,roth2022patchcore} or a fixed encoder--decoder
 pair~\cite{deng2022reverse} --- and the step that turns a per-pixel anomaly map
 into the single number on which a part is accepted or rejected is usually left
 implicit. The pipeline we study reduces the multi-scale discrepancy map by an
-unweighted mean over all pixels; Section~\ref{sec:leverage} shows that this one
+unweighted mean over all pixels; Section~\ref{sec:leverage} shows that on the
+detector we instrument this one
 undocumented choice is worth several times more accuracy than the architecture,
 and that it can be revisited without retraining.
 
@@ -66,11 +67,15 @@ that, on average, the NAS algorithms perform \emph{similarly to the random
 policy}; they attribute this to weight sharing degrading the ranking of
 candidates so that it no longer reflects true performance. Our findings agree in
 direction and go further in three respects. First, from ``similar to random'' to
-``worse than random'': in Section~\ref{subsec:search_vs_random} twelve independent
+a \emph{systematically wrong} selection: in
+Section~\ref{subsec:search_vs_random} twelve independent
 runs of the search all return one of the two configurations prone to a degenerate
-evaluation, and the mean accuracy of the architectures they return sits at the
+evaluation, never one of the four strongest backbones, and the mean accuracy of
+the architectures they return sits at the
 $1.2$th percentile of the distribution obtained by uniform sampling ($80.91\%$
-against $81.65\%$, with the best backbone at $83.34\%$). Second, a mechanism
+against $81.65\%$, with the best backbone at $83.34\%$; the $0.74$-point mean gap
+is itself below this paper's $2.98$-point resolution, so we rest the claim on the
+selection behaviour rather than the gap). Second, a mechanism
 rather than a symptom: the cause is not weight sharing but an interaction between
 the objective and the selection rule, as the evaluation can silently return
 exactly $0.0$ when every validation batch is rejected, and since the search
@@ -139,7 +144,7 @@ localisation, by Qian et al.~\cite{qian2024knowledgeguided}.
 That reuse is the premise our results call into question.
 Section~\ref{subsec:proxy_stability} evaluates the distillation proxy directly, by
 repeating the search's own evaluation ten times per configuration, and finds that
-it separates the twelve well-behaved backbones by only $5.7\%$ of its median ---
+it separates the twelve degenerate-free backbones by only $5.7\%$ of its median ---
 the same order as its own run-to-run noise --- while collapsing to an exact zero
 for two of them. Its ordering is uncorrelated with the true ordering of the same
 backbones: Spearman $\rho = -0.12$ over all fifteen categories and $\rho = 0.02$
@@ -160,6 +165,9 @@ protocol consolidation of IM-IAD~\cite{xie2024imiad}, and reports the
 resolvability of the benchmark that both leave unstated; and it contributes a
 controlled comparison of a complete search space under one protocol
 (Section~\ref{sec:positioning}) which makes the diagnosis measurable. On the
-constructive side, it identifies the inference-time scoring policy as the axis
-that actually moves accuracy and gives a label-free procedure for selecting it
-(Section~\ref{subsec:pseudo_results}).
+constructive side, it identifies the inference-time scoring policy --- the
+reduction that turns a discrepancy map into an image score --- as the axis that
+actually moves accuracy, worth roughly $7.5$ points without retraining, and it
+tests a label-free procedure for choosing the pooling per category and reports
+that the procedure does not improve on the fixed pooling choice
+(Table~\ref{tab:pseudo}).

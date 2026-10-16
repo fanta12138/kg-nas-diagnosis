@@ -32,23 +32,25 @@ $|\mathcal{B}| = 14$ backbones and
 $\mathcal{D} = \{128, 256, 512\}$ feature dimensions, giving 42 configurations.
 The dimension enters the search through the student projector,
 \texttt{ContrastiveModel(\allowbreak projection\_dim=\allowbreak feature\_dim)}, so the proxy score does
-depend on it. It does not, however, reach the detector. In the deployment path the
-student encoder builds its bottleneck with a hard-coded width,
-\texttt{StudentEncoder.forward} calling
-\texttt{\_init\_bottleneck(f.shape[1], 256, ...)}, while the decoder is
-constructed with the requested width, \texttt{Decoder(bottleneck\_dim=\dots)}. The
-final training entry point constructs the detector as
+depend on it. It does not, however, reach the detector. The deployed detector is
+assembled in two stages, and both ignore the searched value. In the student
+encoder the bottleneck width is hard-coded: \texttt{StudentEncoder.forward}
+calls \texttt{\_init\_bottleneck(f.shape[1], 256, ...)}, so the encoder always
+produces a 256-dimensional bottleneck. The decoder is declared with a parameter,
+\texttt{Decoder(bottleneck\_dim=\dots)}, but the final training entry point
+constructs the model as
 \texttt{RDDetector(student\_backbone=..., teacher\_arch=...)}, never passing
-\texttt{bottleneck\_dim}; the argument therefore keeps its default of 256 for
-every configuration.
+\texttt{bottleneck\_dim}; the decoder therefore keeps its default of 256 as well.
+Every stage that actually runs is pinned to 256.
 
-Two consequences follow. For any configuration whose searched dimension is not
-256 the two halves of the network disagree, so the discrepancy cannot be
-activated by simply passing the argument --- the axis is unreachable by
-construction rather than merely unused. And all three values of the searched
-dimension produce the \emph{identical} deployed detector for a given backbone: the
-42-configuration space contains only 14 distinct models, so the remaining 28
-configurations are deployment-equivalent duplicates of them.
+Two consequences follow. First, the axis is unreachable rather than merely
+unused: passing the searched value through would not activate it, because the
+encoder half does not accept the argument at all --- the two stages are wired
+independently and only the encoder's hard-coded 256 is on the training path.
+Second, all three values of the searched dimension produce the \emph{identical}
+deployed detector for a given backbone: the 42-configuration space contains only
+14 distinct models, so the remaining 28 configurations are
+deployment-equivalent duplicates of them.
 
 The recorded runs behave as this analysis predicts. Across four independent
 searches on the same data and the same space, the selected backbone is
@@ -78,7 +80,10 @@ reports the winner of that sub-ranking as a discovered design choice.
 A second observation from the same table: the number of trials recorded is
 systematically below the number declared. The search loop catches exceptions and
 \texttt{continue}s without appending a result, so failed trials vanish from the
-record and from the denominator of any success statistic.
+record and from the denominator of any success statistic. (The run directory named
+\texttt{15backbones} is a frozen label from an earlier draft of the experiment; the
+space it actually searched, and the space analysed throughout this paper, contains
+fourteen backbones.)
 
 \subsection{The Proxy Carries Almost No Architecture Signal, and Collapses to Zero}
 \label{subsec:proxy_stability}
@@ -107,10 +112,10 @@ called ten times for each of the 42 configurations on MVTec wood (420
 evaluations). ``Zero'' is the fraction of repeats returning exactly $0.0$; ``CV''
 is the within-configuration coefficient of variation, pooled over each backbone's
 three dimensions. The two collapse-prone backbones are shown individually; of the
-remaining twelve not one degenerate trial occurred in any repeat. Eleven of those
-twelve --- all but \texttt{efficientnet\_b0}, whose repeats are degenerate-free
-but wide --- have pooled medians spanning $7.540$--$7.971$ with CV between
-$2.2\%$ and $12.1\%$; \texttt{efficientnet\_b0} itself has a pooled CV of $74\%$.
+remaining twelve not one degenerate trial occurred in any repeat. All twelve
+degenerate-free backbones have pooled medians spanning $7.538$--$7.971$ with CV
+between $2.2\%$ and $12.1\%$, except \texttt{efficientnet\_b0}, whose pooled CV is
+$74\%$ because its repeats are degenerate-free but wide.
 Their per-backbone values are released with the code.}
 \label{tab:proxy_repeats}
 \resizebox{\columnwidth}{!}{%
@@ -121,7 +126,7 @@ Backbone & Repeats & Zero (\%) & Median proxy & CV (\%) \\
 \texttt{efficientnet\_b1}        & 30 & \textbf{73} & \textbf{0.000} & 169.5 \\
 \texttt{mobilenetv3\_small\_100} & 30 & \textbf{13} & 7.979 & 180.9 \\
 \midrule
-twelve well-behaved backbones (each) & 30 & 0 & 7.540--7.971 & 2.2--74.0 \\
+twelve degenerate-free backbones (each) & 30 & 0 & 7.538--7.971 & 2.2--74.0 \\
 \midrule
 \textbf{all 42 configurations}   & \textbf{420} & \textbf{6.2} & --- & --- \\
 \bottomrule
@@ -132,10 +137,14 @@ twelve well-behaved backbones (each) & 30 & 0 & 7.540--7.971 & 2.2--74.0 \\
 Two regimes appear, and both matter. Twelve of the fourteen backbones are well
 behaved in the sense that matters for the search: not a single degenerate trial
 occurred in any repeat, so $\argmin$ never returns the spurious optimum. Within
-those twelve, eleven have within-configuration coefficients of variation between
-$2.2\%$ and $12.1\%$; the twelfth, \texttt{efficientnet\_b0}, is degenerate-free
-but noisy, with a pooled CV of $74\%$. Its median proxy ($12.1$) is also the
-outlier of the group, which is why we report the span of the eleven. Two backbones
+those twelve, all but \texttt{efficientnet\_b0} have within-configuration
+coefficients of variation between $2.2\%$ and $12.1\%$;
+\texttt{efficientnet\_b0} is degenerate-free
+but noisy, with a pooled CV of $74\%$, so it sits at the upper edge of the CV
+range while its pooled median ($7.971$) sits at the top of the median
+range. We therefore report the median span over the twelve as
+$7.538$--$7.971$, and note that excluding \texttt{efficientnet\_b0} leaves the
+low end unchanged at $7.538$ (ViT-Tiny). Two backbones
 are broken, and severely so: \texttt{efficientnet\_b1} returns exactly $0.0$ in
 $73\%$ of evaluations at every dimension, and \texttt{mobilenetv3\_small\_100} in
 $13\%$. Across all 420 evaluations, 26 ($6.2\%$) returned exactly zero. The cause
@@ -151,22 +160,26 @@ validation batch then trips the hard threshold:
 \centering
 \includegraphics[width=\linewidth]{figures_v2/fig2_proxy_repeatability.png}
 \caption{Proxy repeatability. (a) Ten independent evaluations of each of the 42
-configurations, on a logarithmic axis. Eleven backbones form a tight band near
-$7.6$ (\texttt{efficientnet\_b0} is degenerate-free but sits higher and wider);
+configurations, on a logarithmic axis. Twelve backbones form a tight band near
+$7.6$ (\texttt{efficientnet\_b0} is degenerate-free but sits at the top of the
+band with the widest spread);
 \texttt{efficientnet\_b1} and \texttt{mobilenetv3\_small\_100} intermittently
 return exactly $0.0$ (marked red, plotted on the axis floor) when their student
-diverges. (b) The pooled median of the eleven tight non-collapsing backbones spans
+diverges. (b) The pooled median of the twelve degenerate-free backbones spans
 only $5.7\%$, the same order as the within-configuration noise of a single
 backbone.}
 \label{fig:proxy_repeatability}
 \end{figure}
 
 The more consequential number in Table~\ref{tab:proxy_repeats} is the median
-column. Across the eleven tight non-collapsing backbones --- CNN and Transformer
+column. Across the twelve degenerate-free backbones --- CNN and Transformer
 families, 2015-era through 2023-era, from ResNets~\cite{he2016deep} to ConvNeXt
-V2~\cite{woo2023convnextv2} --- the median proxy spans only $7.54$ to $7.97$, a
+V2~\cite{woo2023convnextv2} --- the median proxy spans only $7.538$ to $7.971$, a
 range of $5.7\%$, while a single backbone's within-configuration noise is of the
-same order ($2$--$12\%$ CV). The proxy contains essentially no
+same order for most of them (Table~\ref{tab:proxy_repeats} gives the
+per-backbone coefficients of variation; all but \texttt{efficientnet\_b0} are
+below $13\%$, and \texttt{efficientnet\_b0} itself is $74\%$). The proxy contains
+essentially no
 architecture-level signal. Any ranking it produces is not a ranking of
 architectures; it is a ranking of which cell happened to be sampled.
 
@@ -254,9 +267,10 @@ A search that ranks noise could still be worth running if the axis it explores
 mattered. We test that directly, by retraining detectors across the whole
 parameter range under five mutually exclusive parameter bands, each trained with
 the identical protocol (500 epochs, batch size 64, seed 42, ResNet-18 teacher,
-reverse distillation). Within each band the search is restricted to backbones
-whose deployed size (encoder plus decoder) falls inside the band, and the
-best-scoring backbone is trained on all 15 MVTec-AD categories.
+reverse distillation). Each band is drawn from the candidates that a
+budget-constrained search had already evaluated, and within the band only
+backbones whose deployed size (encoder plus decoder) falls inside it are ranked;
+the best-scoring such backbone is then trained on all 15 MVTec-AD categories.
 Table~\ref{tab:capacity_null} reports the result.
 
 \begin{table}[t]
@@ -281,18 +295,36 @@ Band & Selected backbone & Params (M) & Mean AUROC (\%) \\
 \end{table}
 
 Multiplying the parameter budget by $9.2\times$ changes mean AUROC by
-$+1.06$ percentage points, and the entire spread across the five bands is
+$+1.07$ percentage points, and the entire spread across the five bands is
 $1.70$ points. The ordering is not monotone: the largest model is worse than the
 second largest. All ten pairwise paired $t$-tests across categories are
-non-significant (smallest $p = 0.058$).
+non-significant (smallest $p = 0.058$; uncorrected for
+multiplicity across the ten contrasts, and no contrast would survive a
+Bonferroni or Benjamini--Hochberg correction, so the family-level conclusion is
+merely reinforced).
 
 We then measured the axis directly: all 14 backbones of the search space were
 trained on all 15 MVTec-AD categories under the identical protocol, giving 210
-detectors, and the resulting matrix was decomposed. A two-way decomposition
-attributes \textbf{$0.54\%$} of the variance to the backbone
-($F(13,182) = 1.844$, $p = 0.039$), \textbf{$95.32\%$} to the category, and
+detectors at seed 42, and the resulting matrix was decomposed. A two-way
+decomposition attributes \textbf{$0.54\%$} of the variance to the backbone
+($F(13,182) = 1.844$, $p = 0.039$; a two-way fixed-effects ANOVA on the
+\emph{single-seed} matrix, with the backbone $\times$ category interaction as the
+error term, testing whether the fourteen backbone means are equal),
+\textbf{$95.32\%$} to the category, and
 $4.13\%$ to their interaction, which is the error term in this repeated-measures
 design (Figure~\ref{fig:variance}).
+
+Two points about how these shares are formed. They are the ANOVA sum-of-squares
+shares of one matrix --- the seed-42 run of each cell --- and not averages over
+the three seeds; seeds enter the analysis only through the variance estimates of
+Section~\ref{subsec:resolvability}, where they appear as the pooled within-cell
+standard deviation. Reporting the shares as point estimates ($0.54\%$ and
+$95.32\%$) is therefore a statement about one fully crossed matrix, and the
+qualitative conclusion (architecture $\ll$ category) is what we carry forward; we
+have not put a confidence interval on the shares themselves, because doing so
+would require the replicated design to be fully crossed in seeds, which it is not
+(only six of the fourteen backbones were replicated at all three seeds;
+Section~\ref{subsec:resolvability}).
 
 The backbone term is statistically significant: with 210 detectors the test has
 the power to detect it. That, precisely, is the point. The effect is detectable
@@ -317,7 +349,14 @@ $3.98$ points of mean AUROC, and the eleven strongest span only $2.43$ points.
 The manuscript's selected architecture, \texttt{efficientnet\_b0}, ranks fifth of
 fourteen and is statistically indistinguishable from twelve of the thirteen
 alternatives; only \texttt{convnextv2\_base} is significantly worse
-($-3.11$ points, $p = 0.013$).
+($-3.11$ points, $p = 0.013$). That $p$ is the smallest of the thirteen
+backbone-versus-backbone contrasts and is not corrected for multiplicity; at the
+13-contrast family level it would not fall below a $0.05$ threshold under a
+Bonferroni correction ($0.05/13 = 0.0038$). We therefore report it as the single
+contrast that reaches nominal significance, and we do not rest any claim on it ---
+the claim we do make, that the backbone cannot be \emph{ranked} by a comparison of
+this size, is supported by the resolvability calculation of
+Section~\ref{subsec:resolvability} independently of any individual $p$.
 
 \runinhead{The search signal does not predict the target.}
 Ranking the 14 backbones by their mean proxy score
@@ -346,11 +385,18 @@ imprecise. Section~\ref{subsec:resolvability} turns that into a number.
 \runinhead{And the ranking does not transfer.}
 Correlating the 14-backbone orderings of every pair of categories (105 pairs)
 gives a mean Spearman $\rho = 0.215$, and in $31\%$ of pairs the two categories
-\emph{disagree} on the ordering ($\rho < 0$). The protocol searches on a single
+\emph{disagree} on the ordering ($\rho < 0$). The correlation is not an artefact
+of including the two collapse-prone backbones: excluding them raises it to
+$\rho = 0.256$ ($t = 6.0$ over the pairs), and excluding
+\texttt{efficientnet\_b0} as well raises it further to $0.278$ ($t = 6.6$). The
+transfer is therefore positive and statistically clear, and still too small to
+make a single-category search sound, because a third of the category pairs reverse
+the ordering outright. The protocol searches on a single
 category, \texttt{wood}, and applies the winner to all fifteen. Since which
 backbone is better depends on the category, a single-category search is not a
 noisy estimate of a real quantity; it is an estimate of a quantity that does not
-exist independently of the category.
+exist independently of the category. The three estimates, with their $t$
+statistics, are emitted by \texttt{proxy\_diag/rho\_wellbehaved\_control.py}.
 
 This is the central observation of the paper. Taken with
 Sections~\ref{subsec:inert} and~\ref{subsec:proxy_stability}, it says that the
@@ -368,8 +414,9 @@ difference can the standard evaluation design detect?} The question is forced by
 the state of the field. On MVTec-AD, PatchCore reached $99.1\%$ image-level
 AUROC~\cite{roth2022patchcore} and the strongest methods reported since reach
 $99.6\%$~\cite{liu2023simplenet,guo2025dinomaly}; the contested margin between
-successive generations is $0.5$ points, on test sets holding roughly a hundred
-images per category. If published comparisons cannot resolve differences of that
+successive generations is $0.5$ points, on test sets holding $42$--$167$ images
+per category (mean $115$)~\cite{bergmann2021mvtec}. If published comparisons
+cannot resolve differences of that
 size, the ranking they produce is not a ranking of methods.
 
 The 210-detector matrix of Section~\ref{subsec:capacity_null} and the replicated
@@ -384,24 +431,38 @@ freedom). The distribution of per-cell standard deviations is heavily skewed ---
 median $0.58$, maximum $7.74$ --- so the pooled figure is the honest single number
 and the median understates the tail.
 \item $\sigma_{\text{res}} = 3.30$, the two-way ANOVA residual on the single-seed
-matrix. This is the working error for a comparison \emph{between} backbones,
-because it also contains the backbone $\times$ category interaction that the
-seed-only figure excludes.
+matrix. With one observation per cell this residual \emph{is} the backbone
+$\times$ category interaction, which is why it is the working error for a
+comparison \emph{between} backbones rather than the seed-only figure.
 \item $\sigma_{\Delta} = 4.12$, the empirical standard deviation of the
 per-category difference between two backbones, averaged over the $91$ backbone
 pairs. This is what a paired comparison across categories actually sees.
 \end{itemize}
 
+The three quantities are related, and stating the relation removes an apparent
+inconsistency. If two backbones' deviations within a category were independent,
+a paired difference would have standard deviation
+$\sqrt{2}\,\sigma_{\text{res}} = 4.66$. The measured $\sigma_{\Delta} = 4.12$ is
+smaller, which corresponds to a within-category residual correlation of
+$\rho_{\text{bs}} = 0.221$ between two backbones: a category that is hard for one
+backbone tends to be hard for the others, so the two deviations move together and
+their difference is less variable than independence would imply. This is a
+property of the data rather than an error, and it is why the paired 15-category
+design is the more resolvable of the two we consider. All three numbers are
+emitted by \texttt{proxy\_diag/samplesize\_analysis.py}.
+
 Two comparisons follow, and both are unfavourable to the design in common use. On
 a \emph{single category}, with two backbones trained independently, the difference
 has resolution $\sigma_{\text{seed}} = 1.96$ per arm; detecting the $0.5$-point
 contested margin at $80\%$ power with a two-sided test at $\alpha = 0.05$ requires
-\textbf{$240$ independent training runs per backbone}. Paired instead across the
+\textbf{at least $241$ independent training runs per backbone} ($240.2$ before
+rounding up). Paired instead across the
 fifteen categories the benchmark provides, the minimum detectable difference is
 \textbf{$2.98$ points} --- $75\%$ of the entire $3.98$-point spread of the
 fourteen backbones, and six times the margin the field argues about. Adding two
 more training seeds per cell, as we do here, moves this only to $2.95$ points. To
-resolve $0.5$ points by pairing over categories would take $532$ categories; the
+resolve $0.5$ points by pairing over categories would take at least $533$
+categories ($532.2$ before rounding up); the
 benchmark has fifteen.
 
 The requirement is also method-specific, which is a further reason it has to be
@@ -442,12 +503,31 @@ can be read directly off the truth matrix of
 Section~\ref{subsec:capacity_null}. Every run returned one of the two backbones
 that collapse to zero: eight of the twelve returned \texttt{efficientnet\_b1}
 (true rank 12 of 14, $80.43\%$ mean AUROC) and four returned
-\texttt{mobilenetv3\_small\_100} (rank 7 of 14, $81.85\%$). None of the other
-twelve backbones was ever selected, and only 2 of the 14 backbones and 6 of the 42
-configurations appeared at all. Under uniform selection the probability of twelve
+\texttt{mobilenetv3\_small\_100} (rank 7 of 14, $81.85\%$). Of the fourteen
+backbones in the space, only these two were ever \emph{returned} as the winner by
+any of the twelve runs; the other twelve were sampled but never selected. Under
+uniform selection the probability of twelve
 runs all landing inside that two-element subset is $7.2\times10^{-11}$. The search
 does not merely fail to find a good architecture; it is reliably drawn to the two
 configurations that break.
+
+Two clarifications are needed here, because an earlier draft of this work reported
+a different set of runs and the two lines of evidence can look contradictory if
+their populations are not stated. First, \emph{what is sampled versus what is
+selected}: every run evaluates a large fraction of the space --- across the twelve
+runs the sampler drew all 14 backbones and between 34 and 42 of the 42
+configurations --- so the concentration in the selected set is a property of the
+selection rule, not of a restricted sampler. Second, \emph{which run population}:
+the four searches discussed in Section~\ref{subsec:inert} (the ones whose results
+the manuscript reports, and which predate the current revision of the engine)
+selected \texttt{efficientnet\_b0}, a backbone of true rank 5 that collapses only
+rarely. The twelve runs here are the later, revised-engine repeats. The two groups
+therefore describe the same failure mode at different rates rather than
+contradicting each other: the four older runs happened not to draw a degenerate
+evaluation for their winner, and Section~\ref{subsec:proxy_stability} documents
+that the revised engine returns no zero-score trial in those four runs at all. We
+report both populations explicitly for that reason, and the claim that follows
+rests on the twelve-run record, which is the larger and the more recent.
 
 The consequence is quantitative, and it is not marginal
 (Figure~\ref{fig:search_vs_random}). Averaged over the twelve
@@ -457,9 +537,26 @@ s.d.\ 0.32 points), and the best backbone in the space gives \textbf{83.34}\%.
 The search result sits at the \textbf{1.2th percentile} of the random-selection
 distribution --- it is worse than $98.8\%$ of uniform draws --- with a mean true
 rank of $10.3$ of $14$ against $7.5$ for random, and it never once selected one of
-the four strongest backbones. Replacing the search with a random number generator
-would have improved the deployed detector; replacing it with the constant
-\texttt{resnet18} would have improved it by $2.4$ points.
+the four strongest backbones. Two caveats on the size of this effect, both of
+which we prefer to state. First, the $0.74$-point mean difference between the
+search's output ($80.91\%$) and the random mean ($81.65\%$) is smaller than the
+$2.98$-point minimum detectable difference this paper derives for a paired
+comparison
+(Section~\ref{subsec:resolvability}) --- so the defensible statement is not ``the
+search is worse than random by $0.74$ points'' but ``the search does not beat
+random, and its selection behaviour is systematically wrong'': it returned a
+collapse-prone backbone in twelve of twelve runs --- eight times
+\texttt{efficientnet\_b1} (true rank $12$ of $14$) and four times
+\texttt{mobilenetv3\_small\_100} (rank $7$) --- so every one of the twelve is of
+true rank $7$ or worse, and none is in the top four, at a probability of
+$7.2\times10^{-11}$ under uniform sampling. Second, the percentile is from a
+bootstrap over $200\,000$ uniform draws of a backbone, whereas the $2.98$ figure
+is a paired minimum detectable difference over the fifteen categories; the two are
+different statistics on different nulls and we do not compare them. It is that
+systematic error, not the $0.74$-point gap, that the evidence supports, and it is
+sufficient: replacing the search with a random number generator would have
+improved the deployed detector; replacing it with the constant
+\texttt{resnet18} would have improved it by $2.3$ points.
 
 The mechanism is the one established in Section~\ref{subsec:proxy_stability}: a
 well-behaved configuration is bounded below by roughly $7$--$8$, while the two
@@ -468,12 +565,33 @@ minimising a single sample per configuration selects the heaviest left tail in t
 space --- and the heaviest left tails belong to the configurations that failed.
 More trials make this more certain rather than less, because every additional
 sample of a collapse-prone backbone is another chance to return the minimum of the
-space. The exclusion is not perfectly clean: in the twelve recorded runs
+space.
+
+The control that isolates the mechanism is to re-run the selection on the
+\emph{same} twelve recorded trial sets with trials scoring exactly $0.0$ filtered
+out, changing nothing else. The twelve runs then select
+\texttt{deit\_tiny} (eight runs, true rank $6$ of $14$), \texttt{resnet18} (two,
+rank $1$) and
+\texttt{efficientnet\_b1} (two, rank $12$) --- a spread that includes the best
+backbone in the space and one near its bottom, but in no case the
+degenerate-value artefact that the unfiltered $\argmin$ returned. The filter does
+not guarantee a good winner; it guarantees that the winner is a real evaluation
+rather than a $0.0$ produced by divergence. The
+failure is therefore the interaction of the degenerate value with the
+minimising rule, and not an intrinsically bad search space: the space contains
+reasonable winners and the sampler reaches them, but the plain $\argmin$ over
+unfiltered scores does not select them. This is why we phrase the recommendation
+as a filter rather than a blacklist, and it is also why the recommendation is not
+specific to the two backbones we observed collapsing. The control is released as
+\texttt{search\_repeats/degenerate\_filter\_control.py}.
+
+The exclusion of the two collapse-prone backbones is not perfectly clean: in the
+twelve recorded runs
 \texttt{efficientnet\_b0} also returned exactly $0.0$ twice, in $2.5\%$ of its 79
 trials, against $82\%$ of 72 for \texttt{efficientnet\_b1} and $22\%$ of 87 for
 \texttt{mobilenetv3\_small\_100} in the same runs. The two extremes dominate the
-minimum, but no backbone is immune, which is why the fix has to be a filter rather
-than a blacklist. Our recommendation therefore follows from the mechanism rather
+minimum, but no backbone is immune, which is consistent with the filter being the
+right instrument. Our recommendation therefore follows from the mechanism rather
 than from any single run: \textbf{a search whose objective can silently return the
 optimum of its own range must filter degenerate evaluations before minimising, and
 should report the distribution of its per-configuration scores rather than a

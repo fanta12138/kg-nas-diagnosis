@@ -33,7 +33,19 @@ space were trained under one protocol on all 15 categories.
 every MVTec-AD category under an identical protocol (500 epochs, batch size 64,
 seed 42, ResNet-18 teacher, reverse distillation; 210 detectors). Deployed size is
 the student encoder plus decoder. The manuscript's selected architecture is marked
-with~$\dagger$.}
+with~$\dagger$. Mean AUROC and Rank are single-seed (seed 42) and should be read
+with the resolution of Section~\ref{subsec:resolvability} in mind: \emph{every}
+adjacent
+rank differs by less than the $2.98$-point minimum detectable difference (the
+largest adjacent gap is $0.75$ points), and only non-adjacent extremes --- for
+instance rank $1$ against rank $13$, a gap of $3.23$ points --- exceed it. The
+ordering is therefore resolved only at its extremes and unresolved across most of
+its length. Six of the fourteen backbones were replicated at two further seeds; among
+those six the ordering is \emph{identical} in all three seeds
+(\texttt{resnet18} $>$ \texttt{efficientnet\_b0} $>$
+\texttt{mobilenetv3\_small\_100} $>$ ViT-Tiny $>$ ConvNeXtV2-Tiny $>$
+Swin-Tiny, maximum rank movement $0$), which is the evidence that the axis is
+real but too small to be ranked by a single-seed comparison of the other eight.}
 \label{tab:controlled}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrr}
@@ -63,8 +75,23 @@ The pipeline described in this paper reaches $82.47\%$ mean AUROC on MVTec-AD wi
 the architecture the search selected, \texttt{efficientnet\_b0} (5.41M parameters),
 against reported values of $95.6\%$--$99.6\%$ for the established detectors. We
 therefore do not claim a competitive operating point: the gap to the strongest
-published single-class detectors is on the order of $15$ points, and we report it
-rather than obscure it. Nor is the gap explained by the parameter budget:
+published single-class detectors is $17.1$ points, and we report it
+rather than obscure it. We can also name at least one candidate cause. The
+deployed detector uses an ImageNet-1k ResNet-18 as its frozen teacher
+(Section~\ref{subsec:teacher}), whereas reverse distillation as published
+pre-trains the teacher on the normal images of the target category; the same code
+path also fixes the student bottleneck at a width the search cannot change. We do
+not claim that these account for the whole gap, and we have not run the
+teacher-adapted variant, so the attribution is a hypothesis rather than a result.
+A second caveat is that the harness itself was not validated against a published
+reverse-distillation configuration: we did not reproduce a reference RD number
+inside our code path, so the $17.1$-point gap could in principle contain a
+harness-level difference (for instance the batch-norm behaviour of the largest
+backbones, which are trained with gradient accumulation and a smaller micro-batch;
+Section~\ref{subsec:implementation}) on top of the teacher choice. We report this
+rather than present the comparison as exact, and we note that it does not affect
+the paper's diagnostic claims, which are all within-harness. Nor is the gap
+explained by the parameter budget:
 Section~\ref{subsec:capacity_null} varies the deployed size over a $9.2\times$
 range across five capacity bands and finds no statistically resolvable effect, and
 across the full space of Table~\ref{tab:controlled} the deployed size spans
@@ -82,10 +109,15 @@ space under a single protocol, and as such it is a reusable resource: the orderi
 it establishes is what makes the negative result in Section~\ref{sec:diagnosis}
 measurable rather than anecdotal. And it shows that the search's output, at rank 5
 of 14, is a reasonable but unremarkable choice from a space whose top eleven
-candidates span $2.43$ points. The truth matrix also reproduces the manuscript's
-headline number: \texttt{efficientnet\_b0} attains $82.47\%$ here against the
-$82.40\%$ reported previously, a difference of $0.07$ points. Since the earlier
-figure came from an independent training run, this confirms that the protocol is
-stable and that the differences discussed here are not artefacts of a drifting
-pipeline. The search itself does \emph{not} reproduce as closely;
+candidates span $2.43$ points. The canonical headline number of this paper is the
+$82.47\%$ mean AUROC of \texttt{efficientnet\_b0} on the fifteen categories, read
+from the seed-42 truth matrix
+(\texttt{proxy\_diag/phaseB\_truth.json}). An earlier, independently trained run of
+the same configuration obtained $82.40\%$ on the same fifteen categories, a
+difference of $0.07$ points. We report that agreement as a stability check and not
+as confirmation: $0.07$ points is far below this paper's own $2.98$-point minimum
+detectable difference, so the two numbers are simply \emph{consistent with} a
+stable protocol, and the sentence cannot be made stronger without contradicting
+Section~\ref{subsec:resolvability}. The search itself does \emph{not} reproduce as
+closely;
 Section~\ref{subsec:proxy_stability} documents why.

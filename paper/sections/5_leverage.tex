@@ -29,17 +29,33 @@ $(\mathbf{w}, \rho)$ as a \emph{scoring policy}, with
 $\mathbf{w}$ on the probability simplex over three scales and
 $\rho \in \{\text{mean}, \text{top-}k, \text{max}\}$, where top-$k$ averages the
 $k$ highest-scoring pixels with $k = 1\%$ of the map. We evaluate 82 policies:
-the 66-point simplex grid at step $0.1$ crossed with top-$k$, the 21-point grid
-at step $0.2$ crossed with mean and with max, plus the canonical uniform
-variants.
+the 66-point simplex grid at step $0.1$ crossed with top-$k$ pooling, plus 9
+single-scale policies (\texttt{s1}, \texttt{s2}, \texttt{s3} $\times$ mean, top-$k$,
+max), 3 policies that sum the three maps without weights, and 4 that normalise each
+map before combining ($66+9+3+4 = 82$). The exact enumeration, with every
+$(\mathbf{w},\rho)$ pair keyed by name, is released in
+\texttt{fusion\_policy/fusion\_summary.json}.
 
-An important property of this axis is that it can be searched exhaustively
+A second and larger policy set is used in
+Section~\ref{subsec:pseudo_results}, where the search over policies has to be
+richer because the criterion rather than the pooling is under test: the finer
+simplex grid at step $0.2$ is paired with all three reductions, and the coarser
+step-$0.1$ grid is paired with top-$k$ pooling, together with the three canonical
+uniform variants, giving $66 + 21 + 21 + 3 = 111$ policies. The two sets are not
+interchangeable, and the numbers below are quoted per set; where they are compared
+directly, Table~\ref{tab:ksweep} says so.
+
+An important property of this axis is that a fixed grid of it can be evaluated
 without retraining: changing $(\mathbf{w},\rho)$ requires no new parameters and no
 extra inference, since the discrepancy maps are already computed and pooling is a
 reduction over them, so every policy in the grid is evaluated on the \emph{same}
-trained model. This is a practical convenience for deployment --- the policy can be
+trained model. The simplex is continuous, so no finite grid can be exhaustive;
+what we evaluate is a fixed grid of the size stated above, and the sensitivity
+sweep of Section~\ref{subsec:policy_results} is what establishes that the grid is
+fine enough for the conclusion. This is a practical convenience for deployment ---
+the policy can be
 re-tuned on an existing detector without repeating the training run --- and it is
-what makes the exhaustive evaluation below affordable.
+what makes the grid evaluation below affordable.
 
 It is worth being explicit that this does not diminish the role of training, and
 we do not present the two axes as competing. Establishing that the architecture
@@ -61,7 +77,9 @@ the result.
 \caption{Scoring policies evaluated on one frozen detector per category
 (15 categories, 82 policies). ``Worst category'' is the lowest per-category
 AUROC, i.e.\ the failure mode that matters in deployment. The default is the
-policy the published pipeline uses.}
+policy the published pipeline uses. The per-category oracle \emph{reads the test
+labels} to pick the best policy for each category and is an upper bound, not an
+achievable result; every other row is label-free.}
 \label{tab:fusion}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrr}
@@ -71,9 +89,10 @@ Policy & Mean AUROC (\%) & Worst category (\%) & Extra retraining \\
 \texttt{mean}, uniform weights (default) & 82.80 & \textbf{42.22} & --- \\
 \texttt{max}, uniform weights            & 86.84 & --- & none \\
 \texttt{top-}k, uniform weights          & 90.21 & 78.37 & none \\
-best single policy (\texttt{w0.3\_0.6\_0.1}, top-$k$) & \textbf{90.60} & --- & none \\
+best single policy over the grid (\texttt{w0.3\_0.6\_0.1}, top-$k$; picked on
+test, so also an oracle) & \textbf{90.60} & --- & none \\
 \midrule
-per-category oracle over 82 policies     & \textbf{93.72} & 84.67 & none \\
+per-category oracle over 82 policies (uses labels)     & \textbf{93.72} & 84.67 & none \\
 \bottomrule
 \end{tabular}}
 
@@ -81,6 +100,9 @@ per-category oracle over 82 policies     & \textbf{93.72} & 84.67 & none \\
 
 Switching the pooling from the arithmetic mean to top-$k$ raises mean AUROC from
 $82.80\%$ to $90.21\%$, a gain of $7.42$ points, with no change to the model.
+(Throughout this section the deltas are computed on the unrounded values and
+rounded only for display, so a delta may differ by $0.01$ from the subtraction of
+the two printed figures --- here $90.2075 - 82.7896 = 7.4179$.)
 Scale weighting adds much less: the best weighted policy reaches $90.60\%$, only
 $0.39$ points above the uniform top-$k$. Every one of the eight highest-scoring
 policies uses top-$k$ pooling, and all of the improvement therefore comes from
@@ -89,15 +111,22 @@ per category raises the mean further, to $93.72\%$---$10.92$ points above the
 default, and again without retraining anything.
 
 The pooling effect is not an artefact of one training run. Repeating the
-comparison with two further seeds (43 and 44) gives $+8.07$ and $+7.78$ points,
-against $+7.42$ for the seed reported here; the three per-seed estimates agree to
-within $0.7$ points. Aggregating the two later seeds gives policy means of
-$82.36\%$ for the default and $90.28\%$ for top-$k$ ($+7.92$ points); combining
-them with the seed reported here gives $82.51\%$ and $90.26\%$ ($+7.75$ points).
-We quote both rather than one, because the seed-42 model enters the first
-comparison through a different evaluation script than it does the second
-(Table~\ref{tab:ksweep}) and we do not average two implementations of the same
-statistic.
+comparison with two further seeds (43 and 44) gives $+8.07$ and $+7.78$ points
+against $+7.42$ for the seed reported here; the per-seed estimates span
+$0.65$ points. Aggregating the two later seeds alone gives policy means of
+$82.36\%$ for the default and $90.28\%$ for top-$k$ ($+7.92$ points, seeds
+$43$--$44$). We quote the per-seed estimates and that within-script aggregate
+rather than one summary number, because seed~42's models enter the reported table
+through a different evaluation script than the later two do
+(Table~\ref{tab:ksweep}): averaging across the two scripts would average two
+implementations of the same statistic, which we decline to do, so we do not quote a
+single three-seed mean for this quantity.
+Throughout, the seed reported in full is seed~42, on which the default and top-$k$
+read $82.80\%$ and $90.21\%$ ($+7.42$); the headline we carry into the abstract
+and conclusion is the conservative $+7.5$ points, the mean on the label-free
+$70/30$ split of Section~\ref{subsec:pseudo_results}. Every quantity we can
+measure for this effect therefore lies between $+7.4$ and $+8.1$ points, and we
+quote the smallest of them as the headline.
 
 \runinhead{The effect is not a hyper-parameter artefact.}
 The comparison fixes $k = 1\%$ of the map, so it is fair to ask whether the gain
@@ -126,10 +155,21 @@ earlier, at $k = 2\%$.}
 \caption{Sensitivity of the pooling gain to the top-$k$ fraction, uniform weights,
 15 categories, computed by a second evaluation script on the same seed-42 trained
 models. Every row in this table shares those maps, so the comparison is internally
-exact; the script's reading of the default policy, $82.67\%$, differs by $0.13$
-points from the $82.80\%$ of Table~\ref{tab:fusion}, which is the level at which
-two independent implementations of the same statistic agree on this pipeline (see
-the text).}
+exact. The two scripts \emph{disagree per category} even though their 15-category
+means agree: for the identical policy (\texttt{sum\_topk} in the first script,
+\texttt{uniform|topk\_0.01} in the second) the two read $90.21\%$ both, but their
+per-category values differ by a mean absolute $0.74$ points and up to $2.49$
+points (\texttt{tile}: $85.79$ vs $88.28$), and the worst-category statistic ---
+the stated rationale for the $k$ range recommended below --- differs by $1.91$
+points (\texttt{pill}: $78.37$ vs $76.46$). The default policy reads $82.67\%$
+here against $82.80\%$ in Table~\ref{tab:fusion}, a $0.13$-point aggregate
+difference that is the same level at which the two implementations agree on this
+pipeline. We keep both scripts in the release and quote the range rather than
+select one, and we flag that the per-category and worst-category numbers in this
+section should be read as implementation-dependent to about two points. Two more
+such pairs, for completeness: max pooling reads $86.74\%$ here against $86.84\%$ in
+Table~\ref{tab:fusion}, and the best weighted policy reads $90.65\%$ here against
+$90.60\%$ there.}
 \label{tab:ksweep}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrr}
@@ -157,13 +197,18 @@ pipeline: $82.80\%$ here, $82.40\%$ in the earlier manuscript (an independent
 training run of the same configuration, protocol and seed), and $82.67\%$ by the
 second evaluation script behind Table~\ref{tab:ksweep}. The three agree to within
 $0.4$ points, and the two that share the same trained models --- the first and the
-third --- to within $0.13$ points. We report this rather than average it away,
-because it sets the scale against which the effects in this section should be
-read: the pooling gain is $7.42$ points, an order of magnitude larger than the
-$0.13$--$0.4$ point spread of repeated measurement of the baseline. It also
-illustrates the paper's central point at a smaller scale: two implementations of
-the same statistic on the same models disagree by $0.13$ points, which is a
-quarter of the $0.5$-point margin the field contests. The per-category oracle, by
+third --- to within $0.13$ points on the aggregate. We report this rather than
+average it away, because it sets the scale against which the effects in this
+section should be read: the pooling gain is $7.42$ points, an order of magnitude
+larger than the $0.13$--$0.4$ point aggregate spread of repeated measurement of
+the baseline. It also illustrates the paper's central point at a smaller scale:
+two implementations of the same statistic on the same models agree to $0.13$ points
+in their 15-category mean --- a quarter of the $0.5$-point margin the field
+contests --- while disagreeing per category by up to $2.49$ points
+(Table~\ref{tab:ksweep}). Repeating a measurement with a second script therefore
+moves the aggregate by a negligible amount and the individual numbers by more than
+the margin being contested, which is itself an argument for reporting the
+resolution of a design alongside its results. The per-category oracle, by
 contrast, is an upper bound that requires anomaly labels and is reported to bound
 what a selection procedure could achieve, not as an attainable number.
 
@@ -192,6 +237,19 @@ therefore not a refinement of a working method: it is the difference between a
 detector that fails below chance on a standard benchmark category and one that
 works on it, and it requires no retraining at all.
 
+\runinhead{Scope of the pooling result.}
+The comparison above is measured on one backbone family: the detectors carrying
+the 82 policies are EfficientNet-B0 students
+(Section~\ref{subsec:policy_results}), and we have not repeated the sweep across
+the other thirteen backbones of the search space. The mechanism we identify --- a
+mean over the map diluting small, localised defects --- is a property of the
+reduction rather than of the network, and the per-category pattern (large gains on
+\texttt{screw}, \texttt{grid}, \texttt{metal\_nut}; small losses on
+\texttt{cable}, \texttt{pill}) is consistent with that reading, but we state
+plainly that the sweep establishes the effect \emph{on this detector}, not across
+architectures. Extending it to the other backbones is the most direct way to test
+the mechanism, and it is future work rather than a claim of this paper.
+
 It is also not the case that top-$k$ pooling dominates the mean everywhere. It
 helps strongly on the six categories just listed, but it is slightly worse on
 \texttt{transistor} ($-2.00$), \texttt{zipper} ($-3.02$), \texttt{tile}
@@ -210,8 +268,12 @@ from normal data alone, which would make the gain available without ever using a
 \runinhead{Normal-distribution criteria fail.}
 A natural first attempt is to choose the policy under which normal training images
 look most tightly clustered, or whose score distribution has the lightest tail. We
-tested six such criteria on a held-out portion of the normal training data, for the
-same set of policies on a fixed model. All six do worse than the default: the best
+tested six such criteria on a held-out portion of the normal training data, for a
+fixed model and its own held-out split; the default and oracle figures quoted in
+this paragraph are that experiment's own ($82.39\%$ and $93.39\%$ on its split, on
+a subset of the 82-policy grid), so they are not directly comparable with the
+$82.80\%$/$93.72\%$ of Table~\ref{tab:fusion}, which uses the full training set
+and the full grid. All six do worse than the default: the best
 reaches $82.28\%$ against a default of $82.39\%$ ($-0.12$ points) and the worst
 $81.12\%$ ($-1.28$ points), while the oracle over the same policies is $93.39\%$;
 the criteria select the oracle policy in only 1--2 of 15 categories. The reason is
@@ -256,7 +318,9 @@ Selection rule & Seed 42 & Seed 43 & Seed 44 & Mean \\
 \midrule
 default policy (\texttt{mean}, uniform) & 81.62 & 81.90 & 80.98 & 81.50 \\
 \midrule
-pseudo-anomaly separation, best policy & 89.99 & 89.96 & 85.81 & \textbf{88.59} \\
+\emph{fixed} $\rho = \text{top-}k$, no selection (baseline) & \textbf{88.90} & \textbf{89.44} & \textbf{88.62} & \textbf{88.99} \\
+\midrule
+pseudo-anomaly separation, best policy & 89.99 & 89.96 & 85.81 & 88.59 \\
 pseudo-anomaly separation, top-5 ensemble & 89.96 & 90.03 & 86.08 & 88.69 \\
 pseudo-anomaly separation, top-10 ensemble & 89.70 & 89.98 & 86.25 & 88.64 \\
 pseudo-anomaly separation, top-20 ensemble & 89.34 & 89.72 & 87.28 & 88.78 \\
@@ -268,10 +332,60 @@ oracle top-5 ensemble (upper bound) & 93.81 & 93.52 & 93.12 & 93.48 \\
 
 \end{table}
 
-The procedure recovers $\mathbf{+7.09}$ of the $+11.65$ points available from
-policy selection --- \textbf{61\% of the oracle gap} --- without using a single
-anomaly label and without retraining. The three seeds are worth reporting
-individually because they do not agree: the gain is $+8.37$, $+8.07$ and $+4.83$
+The rule that carries the gain is the pooling, not the selection. On the same
+models and the same split, simply fixing top-$k$ pooling --- which needs no
+criterion, no pseudo-anomalies and no selection step --- reaches $88.99\%$ on
+average against $81.50\%$ for the default and $88.59\%$--$88.78\%$ for the four
+pseudo-anomaly rules. The pseudo-anomaly criterion therefore does not beat the
+fixed convention on average; it is a refinement whose own contribution is
+$-0.40$ points, and its four variants all land in a $0.2$-point band that lies
+\emph{below} the fixed convention rather than around it.
+
+The procedure at its best policy returns $89.99\%$ on seed 42, $89.96\%$ on seed
+43 and $85.81\%$ on seed 44, against the table's default row of $81.62$, $81.90$
+and $80.98\%$ --- a mean gain of $\mathbf{+7.09}$ points over the default, and
+$\mathbf{61\%}$ of the $+11.65$ points that per-category oracle selection would
+have delivered on the same models.
+
+\runinhead{But most of that gain is not the criterion's.}
+Reporting the gain against the default policy alone would overstate the method,
+and we therefore decompose it. The $61\%$ figure answers ``how much of the oracle
+gap does the label-free procedure close?'', but it does not answer ``how much of
+that does the \emph{criterion} contribute?'', and the two questions have very
+different answers. The decomposition here is computed on this subsection's 70/30
+split, so its fixed-top-$k$ gain ($+7.49$) is not the full-test-set figure
+($+7.42$ on seed 42, $+7.78$ to $+8.07$ on the two later seeds) quoted in
+Section~\ref{subsec:policy_results}; the two differ because the split does, and we
+report both rather than translate one into the other. On the same 70/30 split and
+the same trained students, replacing
+the default with a \emph{fixed} top-$k$ policy --- that is, adopting the pooling
+recommendation of Section~\ref{subsec:policy_results} and choosing no weights at
+all, with no selection and no pseudo-anomaly data --- already reaches
+$\mathbf{88.90\%}$ on seed 42, against $81.62\%$ for the default and $89.99\%$ for
+the full procedure. Across the three seeds the fixed top-$k$ convention gains
+$+7.28$, $+7.54$ and $+7.64$ points (mean $\mathbf{+7.49}$), while the
+pseudo-anomaly criterion adds a further $+1.10$, $+0.52$ and $\mathbf{-2.82}$
+points over that fixed convention (mean $\mathbf{-0.40}$). In other words, of the
+$+7.09$ points attributed above to the label-free procedure, roughly $+7.49$ comes
+from the plain decision to pool by top-$k$ rather than by the mean, and the
+criterion's own contribution averages slightly \emph{below zero}: on two of three
+seeds it is a small positive refinement, and on the third it is worse than simply
+fixing $k$. We report this rather than let the larger number stand on its own,
+because the honest reading of the evidence is that the useful, label-free
+recommendation of this paper is \emph{the pooling}, and that the selection
+criterion is an unproven refinement of it. The decomposition is released as
+\texttt{pseudo\_select/baseline\_decomposition.py} and its JSON output.
+
+This reading is reinforced by the control that filtering degenerate trials does not
+rescue the criterion (Section~\ref{subsec:search_vs_random}), and by the fact that
+the criterion's three-seed spread ($+1.10$ to $-2.82$ over the fixed convention) is
+itself larger than its mean effect. The comparison is
+within-model throughout, so the $+7.49$ is not a split artefact: it is the
+pooling change measured on the same students.
+
+The three seeds are worth reporting
+individually because they do not agree: the gain over the default is $+8.37$,
+$+8.07$ and $+4.83$
 points on seeds 42, 43 and 44. The oracle gap is nearly constant across seeds
 ($11.46$--$11.92$), so the variability lies in the criterion rather than in what
 is available to be recovered. This is the lesson of Section~\ref{subsec:resolvability}

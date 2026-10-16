@@ -27,14 +27,32 @@ categories of the dataset.
 \label{subsec:teacher}
 \input{figures_v2/fig1_pipeline}
 
-The teacher is a ResNet-18~\cite{he2016deep} with a 128-dimensional projection
-head, trained for 100 epochs on the normal training images of the search category
-with a contrastive objective, and frozen thereafter. Its role is to define the
-feature space that both the search signal and the final detector compare against.
-At test time it contributes intermediate features at three resolutions: the
-outputs of \texttt{layer1}, \texttt{layer2} and \texttt{layer3}, of shape
-$64\times56\times56$, $128\times28\times28$ and $256\times14\times14$ for an input
-resized to $224\times224$.
+Two teachers exist in this pipeline and they are not the same network. For the
+search signal of Stage~2, a ResNet-18 teacher with a 128-dimensional projection
+head is pre-trained for 100 epochs on the normal training images of the search
+category
+with a contrastive objective, and frozen thereafter; its role is to define the
+feature space that the proxy score compares against. The \emph{deployed} detector
+of Stage~3, however, builds its teacher from
+ImageNet-1k weights~\cite{deng2022reverse,he2016deep}: the
+\texttt{TeacherFeatureExtractor} instantiates a ResNet-18 initialised from
+\texttt{ResNet18\_Weights.IMAGENET1K\_V1}, freezes it, and never adapts it to the
+category being inspected. The two roles are worth separating explicitly. Every
+detection result reported in this paper --- the variance decomposition of
+Section~\ref{sec:diagnosis}, the policy comparison of Section~\ref{sec:leverage},
+and the positioning of Section~\ref{sec:positioning} --- is produced by the
+\emph{deployed} detector, and therefore rests on the ImageNet teacher; the
+contrastive teacher never scores an image for reporting and enters only through the
+Stage-2 proxy. The ImageNet teacher is a deviation from the reverse-distillation
+recipe, which pre-trains the teacher on the target category's normal images
+without labels; we report it here rather than leave it implicit, and
+Section~\ref{subsec:resolvability} treats it as one candidate explanation for the
+gap to the published numbers of Section~\ref{sec:positioning}.
+
+Whichever teacher is in use contributes intermediate features at three
+resolutions: the outputs of \texttt{layer1}, \texttt{layer2} and \texttt{layer3},
+of shape $64\times56\times56$, $128\times28\times28$ and $256\times14\times14$ for
+an input resized to $224\times224$.
 
 \subsection{Stage 2: Architecture Search}
 \label{subsec:nas}
@@ -51,25 +69,38 @@ their deployed sizes. The three feature dimensions are 128, 256 and 512.
 Each candidate is evaluated by building a student with the candidate's backbone
 and projection dimension, training it for a small number of epochs on the normal
 training images of the search category, and then measuring a composite
-distillation loss on held-out normal images:
+distillation loss over validation batches $\mathcal{B}$ of held-out normal images:
 %
 \begin{equation}
 \label{eq:proxy}
-s(a) \;=\; \frac{1}{|\mathcal{V}|}\sum_{x \in \mathcal{V}}
-\Bigl[\, \mathcal{L}_{\mathrm{kd}}(x) \;+\; 0.3\,\mathcal{L}_{\mathrm{cons}}(x) \Bigr],
+s(a) \;=\; \frac{\sum_{b \in \mathcal{B}} \mathbb{1}\!\left[\ell(b) < \tau\right]\,\ell(b)}
+{\max\!\left(\sum_{b \in \mathcal{B}} \mathbb{1}\!\left[\ell(b) < \tau\right],\, 1\right)},
+\qquad
+\ell(b) \;=\; \mathcal{L}_{\mathrm{kd}}(b) + 0.3\,\mathcal{L}_{\mathrm{cons}}(b),
 \end{equation}
 %
 where $\mathcal{L}_{\mathrm{kd}}$ is the mean-squared error between the student's
 projection and the teacher's, and $\mathcal{L}_{\mathrm{cons}}$ is the
 mean-squared error between the student's projections of two independently
-augmented views of the same image. Lower is better. Every candidate is scored once;
-there is no repetition and therefore no estimate of the signal's own variance.
-Two details of this computation are examined in
-Section~\ref{subsec:proxy_stability} and are stated here for completeness. A
-validation batch contributes to the sum only if its loss is finite and below a
-fixed threshold; otherwise it is skipped. And the average is formed as
-$\text{total} / \max(\text{count}, 1)$, so if every batch of a trial is skipped the
-signal returns exactly zero. Because the backbones produce features of different
+augmented views of the same batch. A validation batch is accumulated only if its
+loss is finite and below a fixed threshold $\tau = 1000$; otherwise it is skipped
+and does not enter either the numerator or the denominator. Lower is better. Each
+trial constructs and trains a fresh student, and the protocol draws $100$ trials
+from a space of only $42$ cells, so a cell is generally visited more than once and
+each visit re-trains a stochastically initialised student. Repeated visits therefore
+do give several independent scores for some cells; the search entry point, however,
+returns only the winning architecture, so the value it reports carries no variance
+estimate. The variance of the signal is estimated
+separately, from the repeated-evaluation study of
+Section~\ref{subsec:proxy_stability}.
+The two numerical consequences of the indicator in
+Equation~\eqref{eq:proxy} are examined in
+Section~\ref{subsec:proxy_stability} and are stated here for completeness. If every
+batch of a trial is skipped the denominator is $\max(0,1) = 1$ and the signal
+returns exactly zero, which is the minimum of the range of $s$. And because a
+skipped batch is excluded rather than counted, the returned value is the mean over
+the batches that survived, not over the batches that were drawn. Because the
+backbones produce features of different
 dimensionality while the teacher projects into a 128-dimensional space, a
 candidate whose projection dimension differs from 128 is additionally given a
 learned linear layer that maps the student's output into the teacher's space
@@ -136,18 +167,18 @@ published pipeline uses $\mathbf{w} = (\tfrac13,\tfrac13,\tfrac13)$ and
 $\rho = \text{mean}$, that is, an unweighted average over all pixels of the sum of
 the three maps. This choice is not forced by the method: given a trained detector
 the maps $m_k$ are already computed, so any policy can be evaluated on the same
-model. Section~\ref{sec:leverage} evaluates the space of policies in
-Equation~\eqref{eq:policy} exhaustively, and shows that this reduction is worth
-substantially more than the architecture that the search selects for.
-
+model. Section~\ref{sec:leverage} evaluates a fixed grid of policies drawn from
+Equation~\eqref{eq:policy}; we do not anticipate its result here, except to note
+that the policy is a design choice the search does not touch.
 \subsection{Protocol and Implementation Details}
 \label{subsec:implementation}
 
 Unless stated otherwise, the detector above is trained for 500 epochs with batch
 size 64 and seed 42, with a ResNet-18 teacher, on the MVTec-AD
 dataset~\cite{bergmann2021mvtec}. The search uses three quick training epochs per
-candidate with batch size 16 on the \texttt{wood} category, and is repeated 100
-times per run. Inputs are resized to $224\times224$ and normalised with ImageNet
+candidate with batch size 16 on the \texttt{wood} category. Each search run
+performs 100 draws from the 42-cell space (Section~\ref{subsec:proxy_stability});
+the recorded runs used 100, of which a variable number completed. Inputs are resized to $224\times224$ and normalised with ImageNet
 statistics. All figures report image-level AUROC averaged over the 15 categories.
 Where a backbone's memory footprint exceeds the device at batch size 64, training
 uses gradient accumulation with a smaller micro-batch, keeping the effective batch
@@ -162,13 +193,16 @@ generative AI explicitly rather than only in the back matter. An AI assistant (a
 large language model) was used substantially. It wrote the code for the diagnostic
 experiments, the synthetic reproduction and the benchmark harness; it executed
 those experiments and produced the numerical results reported here; and it
-produced drafts of the manuscript text, including the figures. It did not
+produced drafts of the manuscript text. It did not
 determine the research questions, the experimental design or the interpretation of
 the results. The authors specified the research questions, directed the work,
 verified every reported result against the recorded experimental outputs, and take
-full responsibility for the content, the claims and their accuracy. No image or
-table in this paper was generated by AI in the sense the policy contemplates: the
-figures are direct plots of recorded measurements, produced by the released script
-\texttt{make\_figures\_v2.py}. All code, logs and derived artefacts are released
+full responsibility for the content, the claims and their accuracy. No figure or
+table in this paper was generated by a generative model. Every figure is a direct
+plot of recorded measurements, produced by the released script
+\texttt{make\_figures\_v2.py} from the released JSON result files, and every table
+is a transcription of the same files; the AI assistant wrote the plotting code and
+ran it, but drew no image content and invented no data. All code, logs and derived
+artefacts are released
 so that every number can be traced to the run that produced it
 (Section~\ref{sec:conclusion}).
