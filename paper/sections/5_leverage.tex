@@ -1,5 +1,5 @@
 % ============================================================================
-% DRAFT v2 -- Section 5: Where the leverage actually is
+% Section 5: Where the leverage actually is
 % Numbers from fusion_policy/fusion_summary.json (E2), policy_select/ (E3),
 % pseudo_select/ (E9, pending).
 % ============================================================================
@@ -67,7 +67,7 @@ represent, and the scoring policy determines how much of that is read out.
 \subsection{Exhaustive Evaluation on a Fixed Model}
 \label{subsec:policy_results}
 
-We train one detector per MVTec-AD category with the manuscript's protocol
+We train one detector per MVTec-AD category with the protocol used throughout this paper
 (EfficientNet-B0 student, 500 epochs, batch size 64, seed 42, ResNet-18 teacher),
 then evaluate all 82 policies on the frozen model. Table~\ref{tab:fusion} reports
 the result.
@@ -193,8 +193,8 @@ $k = 20\%$          & 90.17 & 71.51 & $+7.50$ \\
 
 \runinhead{What the pipeline's own noise floor is.}
 The default policy's mean AUROC has now been measured three times on this
-pipeline: $82.80\%$ here, $82.40\%$ in the earlier manuscript (an independent
-training run of the same configuration, protocol and seed), and $82.67\%$ by the
+pipeline: $82.80\%$ here, $82.40\%$ in an earlier independent training run of
+the same configuration, protocol and seed, and $82.67\%$ by the
 second evaluation script behind Table~\ref{tab:ksweep}. The three agree to within
 $0.4$ points, and the two that share the same trained models --- the first and the
 third --- to within $0.13$ points on the aggregate. We report this rather than
@@ -221,9 +221,8 @@ per-category oracle to $84.67\%$. The clearest case is \texttt{screw}, where the
 default policy scores $42.22\%$, below random guessing, while the same trained
 model scores $84.01\%$ under top-$k$ pooling and $87.76\%$ under the best
 per-category policy --- a gain of $41.8$ and $45.5$ points respectively. This
-deserves emphasis because the manuscript attributes the \texttt{screw} failure to
-a property of the detection paradigm and devotes a section to it; the failure is
-produced by the reduction step. Averaging the discrepancy map over all pixels
+deserves emphasis because the \texttt{screw} failure reads like a property of the
+detection paradigm, whereas it is produced by the reduction step. Averaging the discrepancy map over all pixels
 destroys the signal whenever a defect occupies a small fraction of the image,
 because the few genuinely anomalous pixels are diluted by the vast majority of
 normal ones. \texttt{screw} consists largely of thin, localised thread defects,

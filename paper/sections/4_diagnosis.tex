@@ -1,5 +1,5 @@
 % ============================================================================
-% DRAFT v2 -- Section 4: Where the accuracy comes from (diagnosis)
+% Section 4: Where the accuracy comes from (diagnosis)
 % Every number here traces to:
 %   search_forensics/search_forensics.json     (recorded runs)
 %   proxy_diag/phaseA_proxy.json               (proxy repeatability, 420 calls)
@@ -55,9 +55,15 @@ deployment-equivalent duplicates of them.
 The recorded runs behave as this analysis predicts. Across four independent
 searches on the same data and the same space, the selected backbone is
 \texttt{efficientnet\_b0} every time, whereas the selected feature dimension
-differs between runs:
+differs between runs (Table~\ref{tab:recorded_runs}):
 %
-\begin{center}
+\begin{table}[t]
+\centering
+\caption{The four recorded searches: trials declared and recorded, and the
+configuration the search returned. The backbone is the same in all four runs
+while the feature dimension varies, which is what an unreachable dimension
+predicts (Section~\ref{subsec:inert}).}
+\label{tab:recorded_runs}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lccc}
 \toprule
@@ -69,15 +75,14 @@ Run & Trials (declared / recorded) & Selected backbone & Selected dim \\
 \texttt{stage2\_topjournal\_15backbones\_fixed}  & 100 / 93 & \texttt{efficientnet\_b0} & 256 \\
 \bottomrule
 \end{tabular}}
-
-\end{center}
+\end{table}
 %
 The stable part of the outcome is the part that matters for deployment; the
 unstable part is precisely the part that cannot affect it. The search expends
 two thirds of its ranking capacity on a variable with no deployment meaning, and
 reports the winner of that sub-ranking as a discovered design choice.
 
-A second observation from the same table: the number of trials recorded is
+A second observation from Table~\ref{tab:recorded_runs}: the number of trials recorded is
 systematically below the number declared. The search loop catches exceptions and
 \texttt{continue}s without appending a result, so failed trials vanish from the
 record and from the denominator of any success statistic. (The run directory named
@@ -243,7 +248,7 @@ same configuration. We therefore do not claim to reproduce the recorded search;
 what the two lines of evidence agree on --- and all we rely on here --- is the
 failure mode, its rate ($8.0\%$ against $6.2\%$) and the backbones it afflicts.
 The revised engine also returns no zero-score trial in the four runs whose results
-the manuscript reports, which is itself evidence of the revision; that the four
+this paper reports, which is itself evidence of the revision; that the four
 happened to select \texttt{efficientnet\_b0}, a backbone that does not collapse,
 was in this account luck rather than method
 (Section~\ref{subsec:search_vs_random}).
@@ -346,7 +351,7 @@ for the category, a factor of $175$.}
 \end{figure}
 
 $3.98$ points of mean AUROC, and the eleven strongest span only $2.43$ points.
-The manuscript's selected architecture, \texttt{efficientnet\_b0}, ranks fifth of
+The selected architecture, \texttt{efficientnet\_b0}, ranks fifth of
 fourteen and is statistically indistinguishable from twelve of the thirteen
 alternatives; only \texttt{convnextv2\_base} is significantly worse
 ($-3.11$ points, $p = 0.013$). That $p$ is the smallest of the thirteen
@@ -494,7 +499,7 @@ signal that does not discriminate between architectures and collapses to a score
 of exactly zero for two of them, and a target quantity that architecture barely
 moves. This subsection asks what they amount to in practice, by simply running the
 search. We invoke the search engine's own entry point
-(\texttt{NASSearchEngine.search}) with the manuscript's settings --- 100 trials,
+(\texttt{NASSearchEngine.search}) with the settings used throughout this paper --- 100 trials,
 three quick training epochs per candidate, uniform sampling from the 42 cells ---
 and repeat it with twelve independent seeds. Because the searched feature
 dimension cannot reach the detector (Section~\ref{subsec:inert}), the deployed
@@ -519,7 +524,7 @@ runs the sampler drew all 14 backbones and between 34 and 42 of the 42
 configurations --- so the concentration in the selected set is a property of the
 selection rule, not of a restricted sampler. Second, \emph{which run population}:
 the four searches discussed in Section~\ref{subsec:inert} (the ones whose results
-the manuscript reports, and which predate the current revision of the engine)
+this paper reports, and which predate the current revision of the engine)
 selected \texttt{efficientnet\_b0}, a backbone of true rank 5 that collapses only
 rarely. The twelve runs here are the later, revised-engine repeats. The two groups
 therefore describe the same failure mode at different rates rather than
@@ -583,7 +588,7 @@ reasonable winners and the sampler reaches them, but the plain $\argmin$ over
 unfiltered scores does not select them. This is why we phrase the recommendation
 as a filter rather than a blacklist, and it is also why the recommendation is not
 specific to the two backbones we observed collapsing. The control is released as
-\texttt{search\_repeats/degenerate\_filter\_control.py}.
+\texttt{search\_repeats/}\allowbreak\texttt{degenerate\_filter\_control.py}.
 
 The exclusion of the two collapse-prone backbones is not perfectly clean: in the
 twelve recorded runs
@@ -609,7 +614,7 @@ runs: the four strongest backbones were never selected.}
 \label{fig:search_vs_random}
 \end{figure}
 
-The four search runs whose results the manuscript reports selected
+The four search runs whose results this paper reports selected
 \texttt{efficientnet\_b0} (Section~\ref{subsec:inert}), a backbone that collapses
 only rarely and never in those four runs. That this is luck rather than method is
 the point of Section~\ref{subsec:search_vs_random}, and it is the reason we report

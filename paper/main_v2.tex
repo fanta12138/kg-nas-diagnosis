@@ -28,6 +28,16 @@
 
 %%%% Fix: sn-jnl v3.1 (Dec 2024) + TeX Live 2026 xcolor/hyperref hook conflict.
 \usepackage{hyperref}
+\hypersetup{hidelinks}   % no coloured link boxes: the proof should print in black
+\hypersetup{
+  pdftitle={The Architecture Axis Is Not the Axis: A Diagnostic Study of
+            Neural Architecture Search and Score Fusion in Unsupervised
+            Industrial Anomaly Detection},
+  pdfauthor={Hong Li, Yuanwu Zhou, Peng Deng},
+  pdfkeywords={industrial visual inspection, unsupervised anomaly detection,
+               neural architecture search, knowledge distillation,
+               score fusion, proxy reliability}
+}
 
 %%%% Custom commands (shared with the Elsevier build)
 \input{math_commands}
@@ -67,8 +77,8 @@ Unsupervised Industrial Anomaly Detection}
 \affil*[1]{\orgdiv{School of Civil and Architectural Engineering}, \orgname{Guangxi University of Science and Technology}, \orgaddress{\street{No. 2 Wenchang Road}, \city{Liuzhou}, \postcode{545006}, \state{Guangxi}, \country{China}}}
 
 %%==================================%% Abstract
-\abstract{Unsupervised anomaly detection models normality so that inspection can
-run on conforming parts alone. Two decisions determine whether it works: the
+\abstract{Unsupervised anomaly detection models normality so that inspection
+runs on conforming parts alone. Two decisions determine whether it works: the
 architecture, and how per-pixel discrepancies are reduced to an
 image-level score --- the axis the literature documents least. On MVTec-AD the
 margin contested between
@@ -77,13 +87,13 @@ comparison the benchmark allows --- pairing over all fifteen categories ---
 resolves only $2.98$, more than the whole spread of the
 architectures it ranks. In a reverse-distillation pipeline the
 searched feature dimension never reaches the detector, so its three values
-collapse to one model and two thirds of the space is a duplicate
-grid. The distillation signal that ranks candidates separates the
+collapse to one model and two thirds of the space is
+duplicated. The distillation signal that ranks candidates separates the
 twelve degenerate-free backbones by $5.7\%$ of its median and returns exactly zero
 for two, which the minimising rule prefers. Training 210 detectors attributes
-$0.54\%$ of AUROC variance to the architecture and $95.32\%$ to the category;
+$0.54\%$ of AUROC variance to the architecture, $95.32\%$ to the category;
 twelve searches each returned a collapse-prone backbone, never one of the four
-best. The leverage is the reduction step: top-$k$ pooling raises mean AUROC by
+best. The leverage is the reduction: top-$k$ pooling raises mean AUROC by
 $7.5$ points without retraining, yet a label-free criterion adds little. Our
 pipeline reaches $82.47\%$ against published values near $99\%$, a gap we report
 rather than hide.}

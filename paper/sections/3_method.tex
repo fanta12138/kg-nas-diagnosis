@@ -1,5 +1,5 @@
 % ============================================================================
-% DRAFT v2 -- Section 3: The pipeline under study
+% Section 3: The pipeline under study
 % Reports what the pipeline does, not what it is worth.
 % ============================================================================
 
@@ -73,10 +73,11 @@ distillation loss over validation batches $\mathcal{B}$ of held-out normal image
 %
 \begin{equation}
 \label{eq:proxy}
-s(a) \;=\; \frac{\sum_{b \in \mathcal{B}} \mathbb{1}\!\left[\ell(b) < \tau\right]\,\ell(b)}
-{\max\!\left(\sum_{b \in \mathcal{B}} \mathbb{1}\!\left[\ell(b) < \tau\right],\, 1\right)},
-\qquad
-\ell(b) \;=\; \mathcal{L}_{\mathrm{kd}}(b) + 0.3\,\mathcal{L}_{\mathrm{cons}}(b),
+\begin{aligned}
+s(a) &\;=\; \frac{\sum_{b \in \mathcal{B}} \mathbb{1}\!\left[\ell(b) < \tau\right]\,\ell(b)}
+{\max\!\left(\sum_{b \in \mathcal{B}} \mathbb{1}\!\left[\ell(b) < \tau\right],\, 1\right)},\\[3pt]
+\ell(b) &\;=\; \mathcal{L}_{\mathrm{kd}}(b) + 0.3\,\mathcal{L}_{\mathrm{cons}}(b),
+\end{aligned}
 \end{equation}
 %
 where $\mathcal{L}_{\mathrm{kd}}$ is the mean-squared error between the student's
