@@ -180,14 +180,16 @@ decomposition rather than the larger number
   ranking does not transfer across categories ($\bar\rho = 0.215$; $31\%$ of the
   $105$ category pairs reverse), so a search run on one category estimates a quantity
   that does not exist independently of the category.
-  \item \textbf{An honest decomposition of the label-free gain on the axis that
-  does matter.} The scoring policy is worth about $7.5$ points of mean AUROC
-  without retraining ($+7.42$ on the seed reported in full, $+7.78$ to $+8.07$ on
-  two further seeds); most of it is available from a fixed top-$k$ pooling, and
-  the label-free selection criterion we propose adds a mean of $-0.40$ points on
-  top of that fixed convention across three training seeds. We present the
-  decomposition rather than the flattering headline, because the useful and
-  reproducible part of this finding is the pooling, not the selector.
+  \item \textbf{The axis that does matter, and the law that governs it.} The
+  scoring policy is worth $7.4$ points of mean AUROC without retraining on
+  MVTec-AD and $8.2$ points on VisA (Section~\ref{subsec:mechanism}), and most of
+  it is available from a fixed top-$k$ pooling. The gain is not a free lunch but
+  a consequence of dilution: the mean scales with the defect area, top-$k$ with
+  the tail floor of the map, so the two cross over at a defect size of a few
+  percent, and the crossover predicts which categories lose. The label-free
+  selection criterion we propose adds a mean of $-0.40$ points on top of that
+  fixed convention, so we present the pooling as the finding and the selector as
+  an unproven refinement.
 \end{enumerate}
 
 \subsection*{Scope and honesty}

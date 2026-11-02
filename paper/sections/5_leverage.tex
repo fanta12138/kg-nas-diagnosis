@@ -240,14 +240,12 @@ works on it, and it requires no retraining at all.
 The comparison above is measured on one backbone family: the detectors carrying
 the 82 policies are EfficientNet-B0 students
 (Section~\ref{subsec:policy_results}), and we have not repeated the sweep across
-the other thirteen backbones of the search space. The mechanism we identify --- a
-mean over the map diluting small, localised defects --- is a property of the
-reduction rather than of the network, and the per-category pattern (large gains on
-\texttt{screw}, \texttt{grid}, \texttt{metal\_nut}; small losses on
-\texttt{cable}, \texttt{pill}) is consistent with that reading, but we state
-plainly that the sweep establishes the effect \emph{on this detector}, not across
-architectures. Extending it to the other backbones is the most direct way to test
-the mechanism, and it is future work rather than a claim of this paper.
+the other thirteen backbones of the search space, so it establishes the effect
+\emph{on this detector}. The dataset question is a separate one, and
+Section~\ref{subsec:mechanism} answers it by repeating the sweep on a second
+benchmark. What that experiment shows is that the gain is neither universal nor
+arbitrary: it follows from how badly the mean pooling dilutes the defect, and the
+crossover predicts, category by category, where it should fail.
 
 It is also not the case that top-$k$ pooling dominates the mean everywhere. It
 helps strongly on the six categories just listed, but it is slightly worse on
@@ -256,6 +254,120 @@ helps strongly on the six categories just listed, but it is slightly worse on
 same trained models. The two poolings therefore respond to different defect
 statistics, which is why per-category selection adds a further $3.5$ points on
 top of the uniform top-$k$.
+
+\subsection{Why the Gain Appears, and When It Does Not}
+\label{subsec:mechanism}
+
+\runinhead{The effect replicates on a second benchmark.}
+Every measurement in Section~\ref{subsec:policy_results} is on MVTec-AD. We repeat
+the protocol unchanged on VisA~\cite{zou2022visa}: EfficientNet-B0 students, the
+same ImageNet ResNet-18 teacher, 500 epochs, batch size 64, seed 42, one detector
+per category over the twelve VisA categories, and the same 82 policies. The
+published default reaches $82.35\%$ mean AUROC and the fixed top-$k$ convention
+$90.57\%$, a gain of $+8.22$ points against $+7.42$ on MVTec-AD, with nine of the
+twelve categories improving. The effect is therefore not a property of one
+benchmark, and it is the same effect rather than a coincidentally similar mean:
+the ordering of the 82 policies agrees between the two datasets at Spearman
+$\rho=0.77$ ($p=3\times10^{-17}$), and the eight strongest policies are top-$k$
+based on both.
+
+\runinhead{It is not uniform, and the exceptions are not arbitrary.}
+The same change loses on three VisA categories (\texttt{candle} $-6.6$,
+\texttt{capsules} $-4.8$, \texttt{fryum} $-0.3$) and on five MVTec categories, and
+gains more than sixteen points on six others. Nineteen of the twenty-seven
+categories improve and eight do not, so a rule that merely asserts that top-$k$
+helps would be wrong in nearly a third of the cases. What separates the two
+groups is not the defect size, as one might expect, but how much room the default
+pooling leaves.
+
+\runinhead{A dilution argument.}
+Write the discrepancy map as $\{m_i\}_{i=1}^{P}$, let $a$ be the fraction of the
+image the defect covers, $\delta$ the amount by which it raises the map, and
+$\sigma$ the pixel-level spread of the map on normal images; let $s=\delta/\sigma$
+be the per-pixel signal-to-noise ratio. The mean averages $P_{\text{eff}}$
+effectively independent pixels, so the two populations are separated by $a\delta$
+against a standard error of $\sigma/\sqrt{P_{\text{eff}}}$:
+\begin{equation}
+d'_{\text{mean}} \;=\; a\,s\,\sqrt{P_{\text{eff}}} .
+\label{eq:dmean}
+\end{equation}
+The mean therefore dilutes \emph{linearly} in the defect area: halving the defect
+halves the separation, however strong the defect is. This is exactly the failure
+repaired on \texttt{screw} in Section~\ref{subsec:policy_results}, where
+$a\approx0.3\%$.
+
+Top-$k$ reads the tail instead. On a normal image that tail is noise, whose
+expected height is $c(k)\sigma$ with
+$c(k)=\varphi\!\left(z_{1-k}\right)/k$ --- $2.67$ at $k=1\%$ and $2.06$ at
+$k=5\%$ --- while on an anomalous image the top $K=kP$ pixels are defect pixels as
+soon as $a>k$, so the separation saturates at the defect amplitude minus that
+floor:
+\begin{equation}
+d'_{k} \;=\; \bigl(s-c(k)\bigr)\sqrt{kP/\rho},
+\label{eq:dk}
+\end{equation}
+with $\rho=O(1)$ the variance inflation of a $K$-term mean relative to
+$\sigma^{2}/K$. Equations~\eqref{eq:dmean} and~\eqref{eq:dk} differ in kind: one
+grows with the defect area and the other does not, and the second pays a floor
+that the first does not. Dividing them, top-$k$ is the better estimator exactly
+when
+\begin{equation}
+a \;<\; a^{\star}(k,s) \;=\; \Bigl(1-\frac{c(k)}{s}\Bigr)\sqrt{k/\rho},
+\label{eq:crossover}
+\end{equation}
+which at $k=1\%$ and $\rho\approx1$ reads
+$a^{\star}\approx0.1\,(1-2.67/s)$: about $1.1\%$ of the image at $s=3$, $5.6\%$ at
+$s=6$, and $7.3\%$ at $s=10$. The crossover sits at a few percent of the image,
+which is the range that separates sparse defects (\texttt{screw} $0.34\%$,
+\texttt{cashew} $1.7\%$) from extended ones.
+
+\runinhead{The link to AUROC is concave, which sets the size of the effect.}
+The separations do not reach the reported number linearly. For approximately
+Gaussian scores $\mathrm{AUROC}=\Phi(d'/\sqrt2)$, so
+$\partial\,\mathrm{AUROC}/\partial d'=\varphi(d'/\sqrt2)/\sqrt2$ vanishes as $d'$
+grows: a change in $d'$ buys most where the default is weak and almost nothing
+where it is already close to one, and a category on the wrong side of
+\eqref{eq:crossover} loses only what the flat part of $\Phi$ leaves to lose. Two
+consequences are testable and both hold.
+
+First, the gain should decrease with the AUROC the published default already
+attains. Over the twenty-seven categories of the two benchmarks it does, at
+Spearman $\rho=-0.68$ ($p=9\times10^{-5}$; Figure~\ref{fig:headroom}a), with mean
+gains of $+28.5$, $+10.7$, $-0.9$ and $+1.1$ points in the four baseline bands of
+that panel. The largest gain ($+41.8$) is also six times the largest loss
+($-6.6$), which is the asymmetry a concave link predicts and a symmetric additive
+effect would not.
+
+Second, defect area should matter only through the product $a\,s$, and the
+baseline already measures that product. Conditional on the baseline the area
+should therefore add nothing, and it does not: over the twenty-seven categories
+the marginal correlation of the gain with the median defect area of the category
+is $\rho=-0.28$ ($p=0.15$), and the partial correlation controlling for the
+baseline is $+0.02$ ($p=0.92$; Figure~\ref{fig:headroom}b). Defect area is a cause,
+but only through the dilution term, and that term is already visible in how well
+the default performs.
+
+\runinhead{What this changes for practice.}
+The pooling axis is not a free lunch to be switched on everywhere. It is a repair
+for one specific failure --- a mean that dilutes a sparse defect --- and it costs a
+small, bounded amount where that failure does not occur. In deployment terms:
+apply it when the defect occupies a small fraction of the frame, and expect the
+largest gains on exactly the categories where the default currently fails. Both
+statements follow from \eqref{eq:crossover} rather than from these two benchmarks,
+and both are falsifiable on a new category by measuring its baseline AUROC and its
+defect area, without training anything.
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\linewidth]{figures_v2/fig7_headroom.png}
+\caption{The pooling gain is governed by the headroom, not by the defect size.
+(a) Change in mean AUROC when the published default is replaced by the fixed
+top-$k$ convention, against the AUROC the default already attains, over the 15
+MVTec-AD and 12 VisA categories; the line joins the means of four baseline bands.
+(b) The same change against the median ground-truth defect area of the category.
+Defect area alone does not predict the gain, and adds nothing once the baseline is
+held fixed (partial Spearman $+0.02$, $p=0.92$).}
+\label{fig:headroom}
+\end{figure*}
 
 \subsection{Can the Policy Be Chosen Without Labels?}
 \label{subsec:label_free}

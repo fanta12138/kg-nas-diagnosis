@@ -52,11 +52,14 @@ population, and Section~\ref{subsec:search_vs_random} states the two populations
 separately so that the record is not read as self-contradictory.
 
 The constructive finding is where the accuracy actually is. The reduction that
-turns a multi-scale discrepancy map into an image-level score is worth $+7.5$
-points of mean AUROC across three training seeds --- nearly twice the entire
-$3.98$-point spread of the fourteen backbones the architecture axis ranks --- and
-it is worth those points without retraining
-anything. That gain is attributable to a fixed change of pooling, with no
+turns a multi-scale discrepancy map into an image-level score is worth $+7.4$
+points of mean AUROC on MVTec-AD and $+8.2$ on VisA, neither of which required
+retraining anything; the first is nearly twice the entire $3.98$-point spread of
+the fourteen backbones the architecture axis ranks. The gain is not uniform, and
+Section~\ref{subsec:mechanism} derives why: the mean dilutes linearly in the
+defect area while top-$k$ saturates at the tail floor of the map, so the two cross
+over at a defect size of a few percent and a concave link to AUROC decides how
+much either side of that crossover is worth. That gain is attributable to a fixed change of pooling, with no
 selection step at all. The default choice, an unweighted mean over all pixels, is
 not merely suboptimal: it fails below chance on \texttt{screw}, and top-$k$
 pooling repairs that failure to $84\%$. The gain is robust across two orders of
@@ -68,16 +71,18 @@ the same held-out split and the same trained students, fixing top-$k$ pooling
 already reaches $88.99\%$ on average against $81.50\%$ for the default, while the
 pseudo-anomaly criterion adds $+1.10$, $+0.52$ and $-2.82$ points on the three
 seeds (mean $-0.40$) on top of that fixed convention. We therefore present the
-$\mathbf{+7.5}$-point pooling change as the finding, and the selection criterion as
+pooling change as the finding, and the selection criterion as
 an unproven refinement of it whose own three-seed spread ($3.92$ points) exceeds
 the magnitude of its own mean ($0.40$ points)
 (Section~\ref{subsec:pseudo_results}).
 
-Three limitations bound these claims. The diagnosis is established on MVTec-AD,
-with one teacher per track (the contrastive proxy teacher and the frozen ImageNet
-deployed teacher described in Section~\ref{subsec:teacher}), one detector family
-and one training protocol; whether the same
-collapse appears in other pipelines is a question our evidence cannot settle,
+Three limitations bound these claims. The diagnosis of the architecture axis is
+established on MVTec-AD, with one teacher per track (the contrastive proxy teacher
+and the frozen ImageNet deployed teacher described in
+Section~\ref{subsec:teacher}), one detector family and one training protocol,
+although the scoring-policy result of Section~\ref{subsec:mechanism} is repeated on
+a second benchmark with the same protocol; whether the same collapse appears in
+other pipelines is a question our evidence cannot settle,
 though the mechanism --- a thresholded objective that can return its own optimum,
 combined with a minimising selection rule --- is not specific to this codebase.
 Our recommendation for the architecture axis is deliberately narrow: the backbone

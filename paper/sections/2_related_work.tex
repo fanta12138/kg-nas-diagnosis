@@ -167,7 +167,9 @@ controlled comparison of a complete search space under one protocol
 (Section~\ref{sec:positioning}) which makes the diagnosis measurable. On the
 constructive side, it identifies the inference-time scoring policy --- the
 reduction that turns a discrepancy map into an image score --- as the axis that
-actually moves accuracy, worth roughly $7.5$ points without retraining, and it
-tests a label-free procedure for choosing the pooling per category and reports
-that the procedure does not improve on the fixed pooling choice
+actually moves accuracy, worth $7.4$ points on MVTec-AD and $8.2$ on VisA
+without retraining, and it explains that gain with a dilution argument that also
+predicts on which categories the change loses (Section~\ref{subsec:mechanism}). It
+further tests a label-free procedure for choosing the pooling per category and
+reports that the procedure does not improve on the fixed pooling choice
 (Table~\ref{tab:pseudo}).
