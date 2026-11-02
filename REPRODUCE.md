@@ -31,6 +31,18 @@ to 23 pages with no undefined references.
 python search_forensics/analyze.py          # prints runs=19, trials=834
 ```
 
+### Table 1 (`tab:recorded_runs`) and §4.1
+
+The four recorded searches: trials declared versus recorded, and the configuration
+each returned. The backbone is identical in all four runs while the searched
+feature dimension varies, which is what an unreachable dimension predicts.
+
+```bash
+python search_forensics/forensics.py        # per-run trial counts, zeros, argmin
+```
+Frozen records: `search_forensics/*.json`, plus the per-run `results.json` under
+`unsupervised_nas/experiments/stage2*`.
+
 ### Table 2 (`tab:proxy_repeats`) and Figure 2 (`fig:proxy_repeatability`)
 
 Ten independent evaluations of each of the 42 configurations on MVTec `wood`
@@ -70,7 +82,7 @@ python capacity_experiment/code/final_analysis.py
 ```
 Frozen records: `capacity_experiment/results/budget_*/`
 
-### Table 5 (`tab:variance`) and Figure 3 (`fig:variance_decomposition`)
+### §4.3 and Figure 3 (`fig:variance`) — the two-way decomposition
 
 Two-way decomposition of the 210-detector truth matrix.
 
@@ -123,7 +135,7 @@ python search_repeats/authoritative_analysis.py
 Frozen records: `search_repeats/search_repeats.json`,
 `search_repeats/search_repeats_summary.json`
 
-### Table 6 (`tab:fusion`) and §5.2 — the scoring-policy axis
+### Table 5 (`tab:fusion`) and §5.2 — the scoring-policy axis
 
 82 policies evaluated on one frozen detector per category.
 
@@ -135,7 +147,10 @@ Frozen records: `search_repeats/search_repeats.json`,
 | best single policy (`w0.3_0.6_0.1`, top-*k*) | **90.60** | — |
 | per-category oracle | **93.72** | 84.67 |
 
-Three-seed aggregate (seeds 42/43/44): **82.36 → 90.28, +7.92 points.**
+Two-seed aggregate (seeds 43 and 44 only, and computed by a second evaluation
+script): **82.36 → 90.28, +7.92 points.** The paper quotes the per-seed
+numbers and the per-replication numbers of §5.3 rather than this aggregate,
+and states why in §5.2.
 
 ```bash
 # the frozen per-seed summaries
@@ -144,7 +159,7 @@ python -c "import json;print(json.load(open('fusion_policy/fusion_summary.json')
 Frozen records: `fusion_policy/fusion_summary.json`,
 `fusion_multiseed/fusion_multiseed_summary.json`
 
-### Table 7 (`tab:ksweep`) and Figure 5 (`fig:ksweep`)
+### Table 6 (`tab:ksweep`) and Figure 5 (`fig:ksweep`)
 
 Sensitivity of the pooling gain to the top-*k* fraction: a broad plateau, maximum
 **91.08%** at *k* = 5%, every *k* in 0.5–20% recovering 7–8.4 points.
@@ -155,11 +170,50 @@ python make_figures_v2.py
 Frozen record: `fusion_ksweep/fusion_ksweep_summary.json`
 
 > **Note the 0.13-point discrepancy.** The k-sweep reads the default policy as
-> 82.67% while Table 6 reads 82.80%, both on seed 42 — two independent evaluation
+> 82.67% while Table 5 reads 82.80%, both on seed 42 — two independent evaluation
 > scripts on the same trained models. The paper reports this rather than averaging
 > it away; see `docs/notes_zh/11_声明与引用审计_zh.md` §C.1.
 
-### Table 8 (`tab:pseudo`), Figure 6 (`fig:label_free`) and §5.4
+### §5.3 and Figure 6 (`fig:headroom`) — the gain, and when it fails
+
+The 82-policy sweep is repeated twice: on a second benchmark (VisA, 12 categories)
+and with a second student family (ResNet-18, the same 15 MVTec categories). Same
+teacher, epochs, seed and policy grid in every case.
+
+| run | categories | student | default | top-*k* | Δ |
+|---|---|---|---|---|---|
+| MVTec-AD | 15 | EfficientNet-B0 | 82.80 | 90.21 | **+7.42** |
+| MVTec-AD | 15 | ResNet-18 | 83.14 | 91.14 | **+8.00** |
+| VisA | 12 | EfficientNet-B0 | 82.35 | 90.57 | **+8.22** |
+
+Pooled over the 42 runs, the gain falls with the AUROC the default already attains
+(Spearman −0.67, *p* = 1e−6); the median defect area alone gives −0.29
+(*p* = 0.06) and adds nothing once the baseline is fixed (partial correlation
++0.06, *p* = 0.71). The two student families agree per category at Spearman 0.98
+(*p* = 3e−10) and lose on the same eight categories.
+
+```bash
+# VisA sweep: 12 categories x 500 epochs, ~2.4 h on one RTX 3090
+python fusion_policy/fusion_policy_visa.py --epochs 500
+
+# second student family: 15 MVTec categories, ~40 min
+python fusion_policy/fusion_policy.py --epochs 500 --backbone resnet18
+
+# ground-truth defect area per category (needs the dataset masks)
+python fusion_policy/defect_area.py
+
+# pooled statistics, then the figure
+python fusion_policy/cross_dataset_summary.py
+python fusion_policy/make_figure_headroom.py
+```
+Frozen records: `fusion_policy/fusion_policy.json`, `fusion_policy_visa.json`,
+`fusion_policy_resnet18.json`, `defect_area.json`, `cross_dataset_summary.json`
+
+> Every number in this section — and 70 more in the rest of the paper — is
+> re-derived from these files by `python verify_numbers.py`, which prints a table
+> of 75 checks and exits non-zero if any of them fails.
+
+### Table 7 (`tab:pseudo`), Figure 7 (`fig:label_free`) and §5.4
 
 Label-free selection from synthetic pseudo-anomalies, over three independently
 trained students.
@@ -187,11 +241,11 @@ python synthetic_mechanism/synthetic_mechanism.py
 ```
 Frozen record: `synthetic_mechanism/synthetic_mechanism.json`
 
-### Table 1 and Table 9 (`tab:controlled`)
+### Table 1 and Table 8 (`tab:controlled`)
 
 * Table 1 (published AUROC values) reports numbers **as published by the original
   authors**; they were not re-run here and no script produces them.
-* Table 9 is the 14-backbone controlled comparison: `proxy_diag/phaseB_truth.json`,
+* Table 8 is the 14-backbone controlled comparison: `proxy_diag/phaseB_truth.json`,
   aggregated by `make_figures_v2.py` (Figure 3 path) and by
   `proxy_diag/samplesize_analysis.py`.
 
@@ -200,6 +254,9 @@ Frozen record: `synthetic_mechanism/synthetic_mechanism.json`
 ## Release tooling
 
 ```bash
+# re-derive 75 numbers printed in the paper from the released result files
+python verify_numbers.py                              # exits non-zero on any mismatch
+
 # citation audit: resolve every DOI through Crossref, fall back to DataCite
 python adbench/audit_citations.py                     # writes adbench/citation_audit.json
 python adbench/audit_citations.py path/to/other.bib

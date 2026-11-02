@@ -27,7 +27,7 @@ reported backbone comparisons on this benchmark are therefore not measurements.
 | `search_forensics/` | Forensics over the 19 recorded searches (834 trials): where degenerate zero-score evaluations occur and whether the `argmin` lands on one. |
 | `search_repeats/` | The search re-run with 12 independent seeds, against uniform-random selection. |
 | `capacity_experiment/` | Five parameter-capacity bands, to test whether the gap to state of the art is a parameter-budget effect. |
-| `fusion_policy/`, `fusion_ksweep/`, `fusion_multiseed/` | The **scoring-policy** axis: 82 policies on frozen models, the top-*k* sensitivity sweep, and the three-seed replication. |
+| `fusion_policy/`, `fusion_ksweep/`, `fusion_multiseed/` | The **scoring-policy** axis: 82 policies on frozen models, the top-*k* sensitivity sweep, the three-seed replication, and the cross-dataset / cross-backbone sweeps of §5.3 — `fusion_policy_visa.json` (12 VisA categories), `fusion_policy_resnet18.json` (15 MVTec categories with a ResNet-18 student), `defect_area.json` (ground-truth defect area per category) and `cross_dataset_summary.json`. |
 | `policy_select/`, `paradigm_select/` | Criteria for choosing a policy without labels (the distributional attempt that fails, and the paradigm comparison). |
 | `pseudo_select/` | The **label-free selection** procedure and its three-seed aggregate. |
 | `synthetic_mechanism/` | A code-independent synthetic reproduction of the degenerate-objective × `argmin` mechanism. |
@@ -38,6 +38,7 @@ reported backbone comparisons on this benchmark are therefore not measurements.
 | `paper/` | Manuscript source (`main_v2.tex`), bibliography, figure generator output, and the compiled PDF. |
 | `docs/` | Data setup, method notes, and the original Chinese working notes under `docs/notes_zh/`. |
 | `kgd_paths.py` | Filesystem-root resolver. **Read this first if you intend to run anything.** |
+| `verify_numbers.py` | Re-derives **75 numbers printed in the paper** from the released result files and prints a pass/fail table. One command, no arguments: `python verify_numbers.py`. |
 
 ---
 
@@ -77,10 +78,11 @@ Two-way decomposition of the 210-detector matrix leaves a residual standard
 deviation of 3.30 points; the run-to-run standard deviation of one detector at a
 fixed (backbone, category) is 1.96 points over 180 residual degrees of freedom.
 Comparing two backbones across the 15 categories is a paired test whose minimum
-detectable difference is **2.98 points** — larger than the entire 3.98-point spread
-of the 14 backbones, and six times the 0.5-point margin the field argues about. To
-resolve 0.5 points on a single category takes **240 independent training runs per
-backbone**; to resolve it by pairing over categories would take 532 categories.
+detectable difference is **2.98 points** — 75% of the entire 3.98-point spread of
+the 14 backbones, and six times the 0.5-point margin the field argues about. To
+resolve 0.5 points on a single category takes **at least 241 independent training
+runs per backbone**; to resolve it by pairing over categories would take **at least
+533 categories**, and the benchmark provides fifteen.
 
 **2. Two thirds of the search space cannot reach the deployed model.**
 The searched `feature_dim` enters the search through the student projector but
@@ -97,21 +99,32 @@ and 13% of evaluations, because the student diverges, every validation batch tri
 a hard threshold, and the score is then silently computed as an average over zero
 samples (`nas_engine.py`, line 198: `total_score / max(count, 1)`). Since the search
 minimises, 0.0 is the optimum of the search's own range. Running the search 12 times,
-**every run returned one of those two backbones**, and the detectors they produce are
-**worse than uniform random selection** (80.91% against 81.65%, at the 1.2th
-percentile; the best backbone reaches 83.34%).
+**every run returned one of those two backbones**. The detectors they produce do
+**not beat uniform random selection** (80.91% against 81.65%, at the 1.2th
+percentile; the best backbone reaches 83.34%) — and because that 0.74-point gap is
+itself below the paper's own 2.98-point resolution, the claim rests on the
+selection behaviour rather than on the gap.
 
 **4. The leverage is in the reduction nobody documents.**
 Replacing the unweighted mean over the discrepancy map with top-*k* pooling raises
-mean AUROC from 82.36% to 90.28% across three training seeds — **+7.92 points,
-without retraining anything**. A criterion that selects the pooling per category
-from synthetic pseudo-anomalies without any anomaly label **does not improve on
-simply fixing** top-*k*: on the same held-out split and the same trained models the
-fixed convention already reaches 88.99%, while the criterion's own contribution is
-+1.10 / +0.52 / −2.82 points (mean **−0.40**) on top of it. We report that
-decomposition rather than the larger headline — `baseline_decomposition.py` in
-`pseudo_select/` produces it, and the paper states it in
-Section 5.4.
+mean AUROC **without retraining anything**: +7.42 points on MVTec-AD with an
+EfficientNet-B0 student, +8.00 with a ResNet-18 student, and +8.22 on VisA — 42
+category runs in total, 29 of which improve. The gain is not a free lunch but a
+consequence of dilution, and the repository derives as well as measures it: the
+mean scales with the defect area while top-*k* saturates at the tail floor of the
+map, so the two cross over at a defect size of a few percent
+(`a* = (1 − c/s)·√(k/ρ)`), and a concave link to AUROC sets the size of the effect.
+Across the 42 runs the gain falls with the AUROC the default already attains
+(Spearman −0.67, p = 1e-6), while defect area adds nothing once the baseline is
+fixed (partial correlation +0.06, p = 0.71) — as the product `a·s` predicts. The
+per-category pattern is a property of the category, not of the network: the two
+student families agree at Spearman 0.98 and lose on the same eight categories.
+A criterion that selects the pooling per category from synthetic pseudo-anomalies
+without any anomaly label **does not improve on simply fixing** top-*k*: on the
+same held-out split the fixed convention already reaches 88.99%, while the
+criterion's own contribution is +1.10 / +0.52 / −2.82 points (mean **−0.40**).
+`baseline_decomposition.py` in `pseudo_select/` produces that decomposition, and
+the paper states it in Section 5.5.
 
 We do **not** claim state of the art: the pipeline reaches 82.47% mean AUROC on
 MVTec-AD against published values of 95.6–99.6%. That gap is reported in the paper
@@ -212,6 +225,10 @@ Two strong checks that the release is intact and self-consistent:
 * **`audit/claim-audit_20261008/` is an archive**, kept for provenance. A few of
   its scripts read data from an earlier revision of the manuscript that is not
   shipped; they document how claims were checked, not how to re-run the pipeline.
+* **The pooling result is established on two detector families and two benchmarks.**
+  EfficientNet-B0 and ResNet-18 students; MVTec-AD and VisA; 42 category runs in
+  total. The other twelve backbones of the search space were not swept, and the
+  paper says so rather than implying otherwise.
 * **Measured numbers are host- and version-specific.** The seed noise figures were
   obtained on one RTX 3090 with the versions pinned in `requirements.txt`.
 * The manuscript's own internal inconsistencies are documented, not hidden, in

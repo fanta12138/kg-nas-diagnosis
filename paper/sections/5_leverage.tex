@@ -284,9 +284,12 @@ artefact would not.
 
 \runinhead{It is not uniform, and the exceptions are not arbitrary.}
 The same change loses on three VisA categories (\texttt{candle} $-6.6$,
-\texttt{capsules} $-4.8$, \texttt{fryum} $-0.3$) and on five MVTec categories, and
-gains more than sixteen points on six others. Twenty-nine of the forty-two
-category runs improve and thirteen do not, so a rule that merely asserts that top-$k$
+\texttt{capsules} $-4.8$, \texttt{fryum} $-0.3$) and on five MVTec categories
+(\texttt{transistor}, \texttt{zipper}, \texttt{tile}, \texttt{pill},
+\texttt{cable}), and it is the same eight categories that lose under both
+backbones. At the other end eleven of the forty-two category runs gain more than
+sixteen points, the largest being \texttt{screw} at $+41.8$. Twenty-nine of the
+forty-two category runs improve and thirteen do not, so a rule that merely asserts that top-$k$
 helps would be wrong in nearly a third of the cases. What separates the two
 groups is not the defect size, as one might expect, but how much room the default
 pooling leaves.
@@ -329,8 +332,9 @@ a \;<\; a^{\star}(k,s) \;=\; \Bigl(1-\frac{c(k)}{s}\Bigr)\sqrt{k/\rho},
 which at $k=1\%$ and $\rho\approx1$ reads
 $a^{\star}\approx0.1\,(1-2.67/s)$: about $1.1\%$ of the image at $s=3$, $5.6\%$ at
 $s=6$, and $7.3\%$ at $s=10$. The crossover sits at a few percent of the image,
-which is the range that separates sparse defects (\texttt{screw} $0.34\%$,
-\texttt{cashew} $1.7\%$) from extended ones.
+which is the range that separates sparse defects --- the median defect covers
+$0.29\%$ of the image on \texttt{screw} and $0.15\%$ on \texttt{cashew} --- from
+extended ones.
 
 \runinhead{The link to AUROC is concave, which sets the size of the effect.}
 The separations do not reach the reported number linearly. For approximately
