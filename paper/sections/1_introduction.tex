@@ -182,8 +182,9 @@ decomposition rather than the larger number
   that does not exist independently of the category.
   \item \textbf{The axis that does matter, and the law that governs it.} The
   scoring policy is worth $7.4$ points of mean AUROC without retraining on
-  MVTec-AD and $8.2$ points on VisA (Section~\ref{subsec:mechanism}), and most of
-  it is available from a fixed top-$k$ pooling. The gain is not a free lunch but
+  MVTec-AD, $8.0$ on a second student family and $8.2$ on VisA
+  (Section~\ref{subsec:mechanism}), and most of it is available from a fixed
+  top-$k$ pooling. The gain is not a free lunch but
   a consequence of dilution: the mean scales with the defect area, top-$k$ with
   the tail floor of the map, so the two cross over at a defect size of a few
   percent, and the crossover predicts which categories lose. The label-free

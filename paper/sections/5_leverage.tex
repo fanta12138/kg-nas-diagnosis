@@ -239,11 +239,11 @@ works on it, and it requires no retraining at all.
 \runinhead{Scope of the pooling result.}
 The comparison above is measured on one backbone family: the detectors carrying
 the 82 policies are EfficientNet-B0 students
-(Section~\ref{subsec:policy_results}), and we have not repeated the sweep across
-the other thirteen backbones of the search space, so it establishes the effect
-\emph{on this detector}. The dataset question is a separate one, and
-Section~\ref{subsec:mechanism} answers it by repeating the sweep on a second
-benchmark. What that experiment shows is that the gain is neither universal nor
+(Section~\ref{subsec:policy_results}). Section~\ref{subsec:mechanism} repeats the
+sweep on a second backbone (ResNet-18) and on a second benchmark (VisA), and both
+replications hold, but we have not repeated it across the remaining thirteen
+backbones of the search space, so the effect is established on two detector
+families rather than on all fourteen. What that experiment shows is that the gain is neither universal nor
 arbitrary: it follows from how badly the mean pooling dilutes the defect, and the
 crossover predicts, category by category, where it should fail.
 
@@ -271,11 +271,22 @@ the ordering of the 82 policies agrees between the two datasets at Spearman
 $\rho=0.77$ ($p=3\times10^{-17}$), and the eight strongest policies are top-$k$
 based on both.
 
+\runinhead{A second student family.}
+Replacing the EfficientNet-B0 student with a ResNet-18, under the same teacher,
+protocol and policy grid, raises mean AUROC across the fifteen MVTec-AD
+categories from $83.14\%$ to $91.14\%$ ($+8.00$ points, ten categories improving).
+The more informative result is not the mean but the pattern: the per-category
+gains agree between the two backbones at Spearman $\rho=0.98$
+($p=3\times10^{-10}$), and the same ten categories improve while the same five do
+not. Which categories benefit is therefore a property of the category, not of the
+network --- what a dilution argument predicts, and what a backbone-specific
+artefact would not.
+
 \runinhead{It is not uniform, and the exceptions are not arbitrary.}
 The same change loses on three VisA categories (\texttt{candle} $-6.6$,
 \texttt{capsules} $-4.8$, \texttt{fryum} $-0.3$) and on five MVTec categories, and
-gains more than sixteen points on six others. Nineteen of the twenty-seven
-categories improve and eight do not, so a rule that merely asserts that top-$k$
+gains more than sixteen points on six others. Twenty-nine of the forty-two
+category runs improve and thirteen do not, so a rule that merely asserts that top-$k$
 helps would be wrong in nearly a third of the cases. What separates the two
 groups is not the defect size, as one might expect, but how much room the default
 pooling leaves.
@@ -331,19 +342,21 @@ where it is already close to one, and a category on the wrong side of
 consequences are testable and both hold.
 
 First, the gain should decrease with the AUROC the published default already
-attains. Over the twenty-seven categories of the two benchmarks it does, at
-Spearman $\rho=-0.68$ ($p=9\times10^{-5}$; Figure~\ref{fig:headroom}a), with mean
-gains of $+28.5$, $+10.7$, $-0.9$ and $+1.1$ points in the four baseline bands of
-that panel. The largest gain ($+41.8$) is also six times the largest loss
+attains. Over the forty-two category runs --- fifteen MVTec-AD categories with an
+EfficientNet-B0 student, the same fifteen with a ResNet-18 student, and twelve
+VisA categories with the EfficientNet-B0 student --- it does, at Spearman
+$\rho=-0.67$ ($p=1\times10^{-6}$; Figure~\ref{fig:headroom}a), with mean gains of
+$+28.9$, $+10.3$, $-0.7$ and $+0.9$ points in the four baseline bands of that
+panel. The largest gain ($+41.8$) is also six times the largest loss
 ($-6.6$), which is the asymmetry a concave link predicts and a symmetric additive
 effect would not.
 
 Second, defect area should matter only through the product $a\,s$, and the
 baseline already measures that product. Conditional on the baseline the area
-should therefore add nothing, and it does not: over the twenty-seven categories
-the marginal correlation of the gain with the median defect area of the category
-is $\rho=-0.28$ ($p=0.15$), and the partial correlation controlling for the
-baseline is $+0.02$ ($p=0.92$; Figure~\ref{fig:headroom}b). Defect area is a cause,
+should therefore add nothing, and it does not: over the forty-two runs the
+marginal correlation of the gain with the median defect area of the category is
+$\rho=-0.29$ ($p=0.06$), and the partial correlation controlling for the baseline
+is $+0.06$ ($p=0.71$; Figure~\ref{fig:headroom}b). Defect area is a cause,
 but only through the dilution term, and that term is already visible in how well
 the default performs.
 
@@ -361,11 +374,12 @@ defect area, without training anything.
 \includegraphics[width=\linewidth]{figures_v2/fig7_headroom.png}
 \caption{The pooling gain is governed by the headroom, not by the defect size.
 (a) Change in mean AUROC when the published default is replaced by the fixed
-top-$k$ convention, against the AUROC the default already attains, over the 15
-MVTec-AD and 12 VisA categories; the line joins the means of four baseline bands.
+top-$k$ convention, against the AUROC the default already attains, over 15
+MVTec-AD categories with an EfficientNet-B0 student, the same 15 with a ResNet-18
+student, and 12 VisA categories; the line joins the means of four baseline bands.
 (b) The same change against the median ground-truth defect area of the category.
 Defect area alone does not predict the gain, and adds nothing once the baseline is
-held fixed (partial Spearman $+0.02$, $p=0.92$).}
+held fixed (partial Spearman $+0.06$, $p=0.71$).}
 \label{fig:headroom}
 \end{figure*}
 

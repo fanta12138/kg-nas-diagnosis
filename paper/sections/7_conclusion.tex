@@ -53,8 +53,8 @@ separately so that the record is not read as self-contradictory.
 
 The constructive finding is where the accuracy actually is. The reduction that
 turns a multi-scale discrepancy map into an image-level score is worth $+7.4$
-points of mean AUROC on MVTec-AD and $+8.2$ on VisA, neither of which required
-retraining anything; the first is nearly twice the entire $3.98$-point spread of
+points of mean AUROC on MVTec-AD, $+8.0$ with a second student family and $+8.2$ on
+a second benchmark, none of which required retraining anything; the first is nearly twice the entire $3.98$-point spread of
 the fourteen backbones the architecture axis ranks. The gain is not uniform, and
 Section~\ref{subsec:mechanism} derives why: the mean dilutes linearly in the
 defect area while top-$k$ saturates at the tail floor of the map, so the two cross
@@ -79,9 +79,9 @@ the magnitude of its own mean ($0.40$ points)
 Three limitations bound these claims. The diagnosis of the architecture axis is
 established on MVTec-AD, with one teacher per track (the contrastive proxy teacher
 and the frozen ImageNet deployed teacher described in
-Section~\ref{subsec:teacher}), one detector family and one training protocol,
-although the scoring-policy result of Section~\ref{subsec:mechanism} is repeated on
-a second benchmark with the same protocol; whether the same collapse appears in
+Section~\ref{subsec:teacher}) and one training protocol, although the
+scoring-policy result of Section~\ref{subsec:mechanism} is repeated on a second
+detector family and on a second benchmark with the same protocol; whether the same collapse appears in
 other pipelines is a question our evidence cannot settle,
 though the mechanism --- a thresholded objective that can return its own optimum,
 combined with a minimising selection rule --- is not specific to this codebase.
