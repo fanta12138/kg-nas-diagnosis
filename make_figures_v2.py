@@ -135,8 +135,10 @@ def fig2_proxy():
     ax2.set_yticks(range(len(order)))
     ax2.set_yticklabels([k[:16] for k in order], fontsize=5.2)
     ax2.set_xlabel('median proxy')
-    ax2.set_title('(b) the twelve non-collapsing backbones\nspan only %.1f%%'
+    ax2.set_title('(b) twelve healthy backbones\nspan only %.1f%%'
                   % (100 * (hi - lo) / lo), fontsize=7.0, pad=3)
+    # keep the extreme markers off the frame and clear of the title
+    ax2.set_ylim(-0.75, len(order) - 0.25)
     ax2.xaxis.set_major_locator(MultipleLocator(0.2))
     for a in (ax, ax2):
         a.spines['top'].set_visible(False)
@@ -207,16 +209,13 @@ def fig4_search_vs_random():
     ax.set_title('(a) the search lands at the %.2fth percentile' % pct,
                  fontsize=7.5, pad=3)
     ymax = ax.get_ylim()[1]
-    ax.annotate('search %.2f%%' % (100 * search_mean),
-                xy=(100 * search_mean, ymax * 0.62),
-                xytext=(100 * search_mean - 2.2, ymax * 0.80),
-                fontsize=6.0, color=VERM,
-                arrowprops=dict(arrowstyle='-', lw=0.5, color=VERM))
-    ax.annotate('oracle %.2f%%' % (100 * oracle),
-                xy=(100 * oracle, ymax * 0.42),
-                xytext=(100 * oracle - 3.4, ymax * 0.60),
-                fontsize=6.0, color=GREEN,
-                arrowprops=dict(arrowstyle='-', lw=0.5, color=GREEN))
+    ax.set_ylim(0, ymax * 1.02)
+    # the vertical rules are labelled alongside, upright along the rule, so no
+    # leader has to cross the histogram
+    ax.text(100 * search_mean - 0.10, ymax * 0.99, 'search %.2f%%' % (100 * search_mean),
+            rotation=90, va='top', ha='right', fontsize=5.8, color=VERM)
+    ax.text(100 * oracle + 0.10, ymax * 0.99, 'oracle %.2f%%' % (100 * oracle),
+            rotation=90, va='top', ha='left', fontsize=5.8, color=GREEN)
 
     rank = {b: i for i, b in enumerate(sorted(tv, key=lambda x: -tv[x]), 1)}
     ys = [rank[b] for b in sel]
@@ -225,11 +224,12 @@ def fig4_search_vs_random():
     ax2.axhspan(0.4, 4.6, color=GREEN, alpha=0.12)
     ax2.text(0.7, 2.5, 'four strongest backbones', fontsize=5.8, color=GREEN)
     ax2.axhline(a['random_expected_rank'], color=BLUE, lw=0.8, ls='--')
-    ax2.text(0.7, 8.0, 'random expectation', fontsize=5.8, color=BLUE)
+    ax2.text(0.7, 8.6, 'random expectation', fontsize=5.8, color=BLUE,
+             bbox=dict(facecolor='white', edgecolor='none', pad=0.7))
     ax2.set_xlabel('search run')
     ax2.set_ylabel('true rank of the selected backbone')
     ax2.set_ylim(14.6, 0.4)
-    ax2.set_title('(b) no run ever selected one of the four best',
+    ax2.set_title('(b) no run selected a top-four backbone',
                   fontsize=7.0, pad=3)
     for a_ in (ax, ax2):
         a_.spines['top'].set_visible(False)
@@ -252,10 +252,13 @@ def fig5_ksweep():
     ax.semilogx(x, worst, marker='s', color=ORANGE, label='worst category')
     ax.axhline(base_m, color=BLUE, lw=0.7, ls='--')
     ax.axhline(base_w, color=ORANGE, lw=0.7, ls=':')
-    ax.text(x[0] * 0.85, base_m + 0.5, 'mean pooling (default)\n%.2f%%' % base_m,
-            fontsize=5.8, color=BLUE)
-    ax.text(x[0] * 0.85, base_w - 3.4, 'worst category under\nmean pooling, %.2f%%' % base_w,
-            fontsize=5.8, color=ORANGE)
+    # both blocks sit above their rule, on an opaque patch, so no rule crosses text
+    ax.text(x[0] * 0.85, base_m - 0.9, 'mean pooling (default)\n%.2f%%' % base_m,
+            fontsize=5.8, color=BLUE, va='top',
+            bbox=dict(facecolor='white', edgecolor='none', pad=0.6))
+    ax.text(x[0] * 0.85, base_w + 0.9, 'worst category under\nmean pooling, %.2f%%' % base_w,
+            fontsize=5.8, color=ORANGE, va='bottom',
+            bbox=dict(facecolor='white', edgecolor='none', pad=0.6))
     ax.axvspan(0.5, 20, color=GREEN, alpha=0.09)
     ax.axvline(1.0, color='black', lw=0.6, ls='-.')
     ax.text(1.05, 72.0, '$k=1\\%$', fontsize=6.2)
@@ -295,7 +298,7 @@ def fig6_pseudo():
     ax.set_yticklabels(cats, fontsize=6.0)
     ax.set_xlabel('AUROC (%)')
     ax.set_xlim(35, 102)
-    ax.legend(loc='lower left', ncol=1)
+    ax.legend(loc='upper left', ncol=1)
     ax.set_title('mean: %.2f $\\rightarrow$ %.2f (label-free), oracle %.2f'
                  % (base.mean(), pick.mean(), orac.mean()), fontsize=6.8, pad=3)
     ax.spines['top'].set_visible(False)

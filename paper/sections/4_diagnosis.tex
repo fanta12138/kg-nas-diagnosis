@@ -164,7 +164,7 @@ indentation; the engine prints the distillation term with four decimals, a
 \end{quote}
 
 \runinhead{The proxy does not distinguish architectures.}
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\linewidth]{figures_v2/fig2_proxy_repeatability.png}
 \caption{Proxy repeatability. (a) Ten independent evaluations of each of the 42
@@ -177,7 +177,7 @@ diverges. (b) The pooled median of the twelve degenerate-free backbones spans
 only $5.7\%$, the same order as the within-configuration noise of a single
 backbone.}
 \label{fig:proxy_repeatability}
-\end{figure}
+\end{figure*}
 
 The more consequential number in Table~\ref{tab:proxy_repeats} is the median
 column. Across the twelve degenerate-free backbones --- CNN and Transformer
@@ -611,7 +611,7 @@ should report the distribution of its per-configuration scores rather than a
 single minimum.}
 
 \runinhead{Why the earlier searches looked successful.}
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\linewidth]{figures_v2/fig4_search_vs_random.png}
 \caption{The search against chance. (a) Bootstrap distribution of the true mean
@@ -620,7 +620,7 @@ with the search's output and the oracle marked. The search result sits at the
 $1.2$th percentile. (b) True rank of the backbone returned by each of the twelve
 runs: the four strongest backbones were never selected.}
 \label{fig:search_vs_random}
-\end{figure}
+\end{figure*}
 
 The four search runs whose results this paper reports selected
 \texttt{efficientnet\_b0} (Section~\ref{subsec:inert}), a backbone that collapses
