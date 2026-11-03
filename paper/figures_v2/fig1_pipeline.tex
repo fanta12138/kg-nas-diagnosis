@@ -40,11 +40,11 @@
 \node[lab, above=0.5mm of space, xshift=6mm] {Stage 2};
 
 %% ---------- Stage 3 ----------
-\node[stage, below=11mm of proxy] (rd) {train student $+$ decoder\\500 epochs};
+\node[stage, below=20mm of proxy] (rd) {train student $+$ decoder\\500 epochs};
 \node[data, right=6mm of rd, minimum width=23mm] (maps) {discrepancy maps\\$m_1,m_2,m_3$};
 
 \draw[arr] (rd) -- (maps);
-\node[lab, above=0.5mm of rd, xshift=8mm] {Stage 3};
+\node[lab, below=1.2mm of rd] {Stage 3};
 
 %% ---------- the scoring policy ----------
 \node[data, right=6mm of maps] (pool) {$S(x)=\rho\!\left(\sum_k w_k m_k\right)$\\[1pt]
@@ -53,12 +53,12 @@
 \draw[arr] (maps) -- (pool);
 
 %% ---------- arrows between stages ----------
-\draw[arr] (argmin.south) |- ([yshift=2mm]rd.east) -- (rd.east);
+\draw[arr] (argmin.south) -- ++(0,-7mm) -| (rd.north);
 \draw[arr] (frozen.east) -| ([xshift=3mm]space.north) -- (space.north);
 
 %% ---------- annotation: what the paper measures ----------
 \node[lab, align=left, text width=44mm, anchor=north west]
-  at ([xshift=-2mm,yshift=-4mm]space.south west) {%
+  at ([xshift=-2mm,yshift=-5mm]space.south west) {%
   \textcolor{orange!80!black}{Sections 4.1--4.3:} the searched dimension does not
   reach the detector; the proxy does not separate architectures; the axis carries
   $0.54\%$ of the variance.};

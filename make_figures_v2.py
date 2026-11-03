@@ -157,15 +157,18 @@ def fig3_variance():
     ax.set_xticks(range(3))
     ax.set_xticklabels(lab, fontsize=6.6)
     ax.set_ylabel('share of variance in AUROC (%)')
-    ax.set_ylim(0, 100)
+    ax.set_ylim(0, 114)
     for b, x in zip(bars, val):
-        ax.text(b.get_x() + b.get_width() / 2, x + 1.8, '%.2f%%' % x,
-                ha='center', fontsize=6.8)
-    ax.annotate('', xy=(0, 6), xytext=(1, 6),
-                arrowprops=dict(arrowstyle='<->', lw=0.6, color='black'))
-    ax.text(0.5, 9.5, '$176\\times$', ha='center', fontsize=7)
-    ax.text(0.02, 0.90, '$F(13,182)=1.844$, $p=0.039$', transform=ax.transAxes,
-            fontsize=6.2)
+        ax.text(b.get_x() + b.get_width() / 2, x + 2.2, '%.2f%%' % x,
+                ha='center', va='bottom', fontsize=6.8)
+    # the 176x comparison is a bracket above both bars, so no connector crosses a bar
+    yb = 107.0
+    ax.plot([0, 0, 1, 1], [yb - 4.5, yb, yb, yb - 4.5],
+            color='black', lw=0.6, clip_on=False)
+    ax.text(0.5, yb + 2.0, '$176\\times$', ha='center', va='bottom', fontsize=7)
+    # F and p on two lines, in the empty upper-left quadrant
+    ax.text(0.03, 0.74, '$F(13,182)=1.844$\n$p=0.039$', transform=ax.transAxes,
+            fontsize=6.0, va='top', linespacing=1.3)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     save(fig, 'fig3_variance_decomposition')
