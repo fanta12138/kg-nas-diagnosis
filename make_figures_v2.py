@@ -45,6 +45,8 @@ BLUE, ORANGE, GREEN, VERM, PURPLE, SKY, YELLOW, PINK = OI[5], OI[1], OI[3], OI[6
 plt.rcParams.update({
     'font.family': 'serif',
     'font.serif': ['Times New Roman', 'DejaVu Serif'],
+    'mathtext.fontset': 'stix',          # math in a Times-compatible face
+    'mathtext.fallback': 'stix',
     'font.size': 8,
     'axes.linewidth': 0.6,
     'axes.labelsize': 8,
@@ -197,25 +199,37 @@ def fig4_search_vs_random():
     fig, (ax, ax2) = plt.subplots(1, 2, figsize=(DBL, 2.3),
                                   gridspec_kw={'width_ratios': [1.35, 1]})
 
-    ax.hist(100 * boot, bins=60, color=SKY, edgecolor='none', alpha=0.85,
-            label='uniform random selection')
-    ax.axvline(100 * search_mean, color=VERM, lw=1.2)
-    ax.axvline(100 * rnd_mean, color=BLUE, lw=1.0, ls='--')
-    ax.axvline(100 * oracle, color=GREEN, lw=1.0, ls=':')
+    counts, _, _ = ax.hist(100 * boot, bins=60, color=SKY, edgecolor='none',
+                           alpha=0.85, label='uniform random selection')
+    hmax = float(counts.max())
+    # stop the rules at the top of the tallest bar: a full-height dashed rule
+    # leaves a detached dash floating above the peak
+    top = hmax * 1.02
+    ax.vlines(100 * search_mean, 0, top, color=VERM, lw=1.2)
+    ax.vlines(100 * rnd_mean, 0, top, color=BLUE, lw=1.0, ls='--')
+    ax.vlines(100 * oracle, 0, top, color=GREEN, lw=1.0, ls=':')
     ax.set_xlabel('true mean AUROC of the selected backbone (%)')
     ax.set_ylabel('bootstrap count')
     ax.set_xlim(100 * pool.min() - 1.6, 100 * oracle + 0.9)
-    ax.legend(loc='upper right')
+    # the three rules are named in the legend, on an opaque patch, so no label
+    # has to sit on the data or run along a rule
+    from matplotlib.lines import Line2D
+    from matplotlib.patches import Patch
+    ax.legend(handles=[Patch(facecolor=SKY, alpha=0.85,
+                             label='uniform random selection'),
+                       Line2D([], [], color=VERM, lw=1.2,
+                              label='search, %.2f%%' % (100 * search_mean)),
+                       Line2D([], [], color=BLUE, lw=1.0, ls='--',
+                              label='random mean, %.2f%%' % (100 * rnd_mean)),
+                       Line2D([], [], color=GREEN, lw=1.0, ls=':',
+                              label='oracle, %.2f%%' % (100 * oracle))],
+              loc='upper left', frameon=True, facecolor='white',
+              edgecolor='none', framealpha=0.95, fontsize=5.2,
+              handletextpad=0.5, borderpad=0.3, labelspacing=0.3)
     ax.set_title('(a) the search lands at the %.2fth percentile' % pct,
                  fontsize=7.5, pad=3)
     ymax = ax.get_ylim()[1]
     ax.set_ylim(0, ymax * 1.02)
-    # the vertical rules are labelled alongside, upright along the rule, so no
-    # leader has to cross the histogram
-    ax.text(100 * search_mean - 0.10, ymax * 0.99, 'search %.2f%%' % (100 * search_mean),
-            rotation=90, va='top', ha='right', fontsize=5.8, color=VERM)
-    ax.text(100 * oracle + 0.10, ymax * 0.99, 'oracle %.2f%%' % (100 * oracle),
-            rotation=90, va='top', ha='left', fontsize=5.8, color=GREEN)
 
     rank = {b: i for i, b in enumerate(sorted(tv, key=lambda x: -tv[x]), 1)}
     ys = [rank[b] for b in sel]
