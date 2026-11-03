@@ -1,0 +1,26 @@
+{
+  "all_14": {
+    "n_backbones": 14,
+    "n_category_pairs": 105,
+    "mean_rho": 0.215118,
+    "frac_negative": 0.3143,
+    "permutation_p": 0.0,
+    "null_mean": -0.000179,
+    "null_sd": 0.027003,
+    "permutation_draws": 20000,
+    "null_scheme": "backbone order shuffled within each category",
+    "z_above_null": 7.97
+  },
+  "excl_collapse_prone": {
+    "n_backbones": 12,
+    "n_category_pairs": 105,
+    "mean_rho": 0.255822,
+    "frac_negative": 0.3048
+  },
+  "excl_collapse_and_b0": {
+    "n_backbones": 11,
+    "n_category_pairs": 105,
+    "mean_rho": 0.278271,
+    "frac_negative": 0.2762
+  }
+}

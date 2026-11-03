@@ -393,11 +393,14 @@ Correlating the 14-backbone orderings of every pair of categories (105 pairs)
 gives a mean Spearman $\rho = 0.215$, and in $31\%$ of pairs the two categories
 \emph{disagree} on the ordering ($\rho < 0$). The correlation is not an artefact
 of including the two collapse-prone backbones: excluding them raises it to
-$\rho = 0.256$ ($t = 6.0$ over the pairs), and excluding
-\texttt{efficientnet\_b0} as well raises it further to $0.278$ ($t = 6.6$). The
-transfer is therefore positive and statistically clear, and still too small to
-make a single-category search sound, because a third of the category pairs reverse
-the ordering outright. The protocol searches on a single
+$\rho = 0.256$, and excluding \texttt{efficientnet\_b0} as well raises it further
+to $0.278$. The 105 category pairs are not independent --- each category appears
+in fourteen of them --- so we test the mean by permutation rather than by a
+pair-level $t$-test: shuffling the backbone order independently within each
+category, $20\,000$ times, puts the observed $0.215$ eight null standard
+deviations above zero ($p < 5\times10^{-5}$). The transfer is therefore positive
+and far too small to make a single-category search sound, because a third of the
+category pairs reverse the ordering outright. The protocol searches on a single
 category, \texttt{wood}, and applies the winner to all fifteen. Since which
 backbone is better depends on the category, a single-category search is not a
 noisy estimate of a real quantity; it is an estimate of a quantity that does not
