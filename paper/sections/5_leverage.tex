@@ -321,20 +321,21 @@ $k=5\%$ --- while on an anomalous image the top $K=kP$ pixels are defect pixels 
 soon as $a>k$, so the separation saturates at the defect amplitude minus that
 floor:
 \begin{equation}
-d'_{k} \;=\; \bigl(s-c(k)\bigr)\sqrt{kP/\rho},
+d'_{k} \;=\; \bigl(s-c(k)\bigr)\sqrt{kP/\kappa},
 \label{eq:dk}
 \end{equation}
-with $\rho=O(1)$ the variance inflation of a $K$-term mean relative to
+with $\kappa=O(1)$ the variance inflation of a $K$-term mean relative to
 $\sigma^{2}/K$. Equations~\eqref{eq:dmean} and~\eqref{eq:dk} differ in kind: one
 grows with the defect area and the other does not, and the second pays a floor
-that the first does not. Dividing them, top-$k$ is the better estimator exactly
-when
+that the first does not. Dividing them with $P_{\text{eff}}=P$, top-$k$ is the
+better estimator exactly when
 \begin{equation}
-a \;<\; a^{\star}(k,s) \;=\; \Bigl(1-\frac{c(k)}{s}\Bigr)\sqrt{k/\rho},
+a \;<\; a^{\star}(k,s) \;=\; \Bigl(1-\frac{c(k)}{s}\Bigr)\sqrt{k/\kappa},
 \label{eq:crossover}
 \end{equation}
-which at $k=1\%$ and $\rho\approx1$ reads
-$a^{\star}\approx0.1\,(1-2.67/s)$: about $1.1\%$ of the image at $s=3$, $5.6\%$ at
+which at $k=1\%$ and $\kappa\approx1$ reads $a^{\star}\approx0.1\,(1-2.67/s)$ --- an
+upper bound, since a smaller $P_{\text{eff}}$ lowers it ---: about $1.1\%$ of the
+image at $s=3$, $5.6\%$ at
 $s=6$, and $7.3\%$ at $s=10$. The crossover sits at a few percent of the image,
 which is the range that separates sparse defects --- the median defect covers
 $0.29\%$ of the image on \texttt{screw} and $0.15\%$ on \texttt{cashew} --- from
