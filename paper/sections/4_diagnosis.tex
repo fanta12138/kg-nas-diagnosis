@@ -154,7 +154,9 @@ are broken, and severely so: \texttt{efficientnet\_b1} returns exactly $0.0$ in
 $73\%$ of evaluations at every dimension, and \texttt{mobilenetv3\_small\_100} in
 $13\%$. Across all 420 evaluations, 26 ($6.2\%$) returned exactly zero. The cause
 is visible in the engine's own diagnostics --- the student diverges, and every
-validation batch then trips the hard threshold:
+validation batch then trips the hard threshold.\footnote{Reproduced without its leading emoji and
+indentation; the engine prints the distillation term with four decimals, a
+29-digit integer at this magnitude, abbreviated here.} The line reads:
 
 \begin{quote}
 % shrink only if the log line is wider than the column (layout-neutral)
