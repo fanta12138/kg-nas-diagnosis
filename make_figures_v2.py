@@ -165,11 +165,13 @@ def fig3_variance():
     for b, x in zip(bars, val):
         ax.text(b.get_x() + b.get_width() / 2, x + 2.2, '%.2f%%' % x,
                 ha='center', va='bottom', fontsize=6.8)
-    # the 176x comparison is a bracket above both bars, so no connector crosses a bar
+    # the ratio is computed from the unrounded shares, so it cannot drift from the
+    # 'factor of N' quoted in the caption
+    ratio = v['category'] / v['backbone']
     yb = 107.0
     ax.plot([0, 0, 1, 1], [yb - 4.5, yb, yb, yb - 4.5],
             color='black', lw=0.6, clip_on=False)
-    ax.text(0.5, yb + 2.0, '$176\\times$', ha='center', va='bottom', fontsize=7)
+    ax.text(0.5, yb + 2.0, '$%d\\times$' % round(ratio), ha='center', va='bottom', fontsize=7)
     # F and p on two lines, in the empty upper-left quadrant
     ax.text(0.03, 0.74, '$F(13,182)=1.844$\n$p=0.039$', transform=ax.transAxes,
             fontsize=6.0, va='top', linespacing=1.3)

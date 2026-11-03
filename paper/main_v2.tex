@@ -76,17 +76,16 @@ Unsupervised Industrial Anomaly Detection}
 %%==================================%% Abstract
 \abstract{Two decisions set the accuracy of an anomaly detector: which network to
 deploy, and how the per-pixel map becomes the accept/reject score. The second is
-made silently --- an unweighted mean over all pixels --- and on the detector we
-study it is the one that matters. Changing only that reduction, on trained models,
-raises mean AUROC from 82.80\% to 90.21\% on MVTec-AD and from 82.35\% to 90.57\%
-on VisA, and lifts a category that otherwise fails below chance from 42.22\% to
-84.01\%, with no retraining and no labels. The gain follows a dilution law: the
-mean scales with defect area, top-$k$ with the tail floor, so it holds only while
-the defect covers under a tenth of the image and fades where the default
-saturates. The architecture axis contributes 0.54\% of the variance in accuracy
-against 95.32\% for the category, two thirds of a standard 42-cell search space
-cannot reach the deployed model, and twelve searches each returned a
-collapse-prone backbone. The benchmark cannot adjudicate either choice: against a
+made silently --- an unweighted mean over all pixels --- and it is the one that
+matters. Changing only that reduction, on trained models, raises mean AUROC from
+82.80\% to 90.21\% on MVTec-AD and from 82.35\% to 90.57\% on VisA, and lifts a
+below-chance category from 42.22\% to 84.01\%, with no retraining or labels.
+It follows a dilution law: the mean scales with defect area, top-$k$ with the tail
+floor, so it holds only while the defect covers under a tenth of the image and
+fades where the default saturates. The architecture axis contributes 0.54\% of the
+variance in accuracy against 95.32\% for the category, two thirds of the 42-cell
+search space cannot reach the deployed model, and twelve searches all returned a
+collapse-prone backbone. The benchmark cannot adjudicate either: against a
 0.5-point margin, the standard comparison resolves 2.98. We report a pipeline at
 82.47\% where published methods reach 99\%, and show where the missing points are,
 and are not.}
