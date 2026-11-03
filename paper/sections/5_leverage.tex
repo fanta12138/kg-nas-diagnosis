@@ -28,7 +28,7 @@ Neither is forced by the method. We therefore treat the pair
 $(\mathbf{w}, \rho)$ as a \emph{scoring policy}, with
 $\mathbf{w}$ on the probability simplex over three scales and
 $\rho \in \{\text{mean}, \text{top-}k, \text{max}\}$, where top-$k$ averages the
-$k$ highest-scoring pixels with $k = 1\%$ of the map. We evaluate 82 policies:
+$k$ highest-scoring pixels with $k = 1\%$ of the map. We evaluate 82 policies (Table~\ref{tab:fusion}):
 the 66-point simplex grid at step $0.1$ crossed with top-$k$ pooling, plus 9
 single-scale policies (\texttt{s1}, \texttt{s2}, \texttt{s3} $\times$ mean, top-$k$,
 max), 3 policies that sum the three maps without weights, and 4 that normalise each
