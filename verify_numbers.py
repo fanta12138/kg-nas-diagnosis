@@ -176,6 +176,14 @@ check('runs improved', 29, int((dlt > 0).sum()), 0)
 check('runs not improved', 13, int((dlt < 0).sum()), 0)
 check('runs gaining >16 pp', 11, int((dlt > 16).sum()), 0)
 
+# §4.5 the gain from replacing the search with a constant resnet18
+sv = load('search_repeats/search_vs_random_final.json')
+check('resnet18 minus search mean (pp)', 2.4,
+      100 * (sv['oracle_true_auroc'] - sv['search_mean_true_auroc']), 0.06)
+check('search mean AUROC', 80.91, 100 * sv['search_mean_true_auroc'], 0.02)
+check('random mean AUROC', 81.65, 100 * sv['random_mean_true_auroc'], 0.02)
+check('mean true rank of selection', 10.3, sv['mean_true_rank_of_selected'], 0.06)
+
 edges = [40.0, 70.0, 85.0, 95.0, 101.0]
 bands = []
 for lo, hi in zip(edges[:-1], edges[1:]):

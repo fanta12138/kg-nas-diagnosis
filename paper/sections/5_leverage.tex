@@ -38,10 +38,10 @@ $(\mathbf{w},\rho)$ pair keyed by name, is released in
 
 A second and larger policy set is used in
 Section~\ref{subsec:pseudo_results}, where the search over policies has to be
-richer because the criterion rather than the pooling is under test: the finer
-simplex grid at step $0.2$ is paired with all three reductions, and the coarser
-step-$0.1$ grid is paired with top-$k$ pooling, together with the three canonical
-uniform variants, giving $66 + 21 + 21 + 3 = 111$ policies. The two sets are not
+richer because the criterion rather than the pooling is under test: the coarser
+simplex grid at step $0.2$ (21 points) is paired with two of the three reductions,
+and the finer step-$0.1$ grid (66 points) with top-$k$ pooling, together with the
+three canonical uniform variants, giving $66 + 21 + 21 + 3 = 111$ policies. The two sets are not
 interchangeable, and the numbers below are quoted per set; where they are compared
 directly, Table~\ref{tab:ksweep} says so.
 
@@ -77,9 +77,10 @@ the result.
 \caption{Scoring policies evaluated on one frozen detector per category
 (15 categories, 82 policies). ``Worst category'' is the lowest per-category
 AUROC, i.e.\ the failure mode that matters in deployment. The default is the
-policy the published pipeline uses. The per-category oracle \emph{reads the test
-labels} to pick the best policy for each category and is an upper bound, not an
-achievable result; every other row is label-free.}
+policy the published pipeline uses. Two rows \emph{read the test labels} --- the
+best single policy, picked per category on test, and the per-category oracle ---
+and both are upper bounds rather than achievable results; the remaining rows are
+label-free.}
 \label{tab:fusion}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrr}
@@ -105,8 +106,8 @@ rounded only for display, so a delta may differ by $0.01$ from the subtraction o
 the two printed figures --- here $90.2075 - 82.7896 = 7.4179$.)
 Scale weighting adds much less: the best weighted policy reaches $90.60\%$, only
 $0.39$ points above the uniform top-$k$. Every one of the eight highest-scoring
-policies uses top-$k$ pooling, and all of the improvement therefore comes from
-the reduction step rather than from the scale weights. Choosing the policy
+policies uses top-$k$ pooling, so $7.41$ of the $7.80$ points come from the
+reduction step and the remaining $0.39$ from the scale weights. Choosing the policy
 per category raises the mean further, to $93.72\%$---$10.92$ points above the
 default, and again without retraining anything.
 
@@ -220,7 +221,9 @@ pooling the worst category rises from $42.22\%$ to $78.37\%$, and under the
 per-category oracle to $84.67\%$. The clearest case is \texttt{screw}, where the
 default policy scores $42.22\%$, below random guessing, while the same trained
 model scores $84.01\%$ under top-$k$ pooling and $87.76\%$ under the best
-per-category policy --- a gain of $41.8$ and $45.5$ points respectively. This
+per-category policy --- a gain of $41.8$ and $45.5$ points respectively. The
+second of these is an oracle, chosen per category on the test labels, and is
+quoted only to bound what the reduction can recover. This
 deserves emphasis because the \texttt{screw} failure reads like a property of the
 detection paradigm, whereas it is produced by the reduction step. Averaging the discrepancy map over all pixels
 destroys the signal whenever a defect occupies a small fraction of the image,
@@ -278,16 +281,17 @@ categories from $83.14\%$ to $91.14\%$ ($+8.00$ points, ten categories improving
 The more informative result is not the mean but the pattern: the per-category
 gains agree between the two backbones at Spearman $\rho=0.98$
 ($p=3\times10^{-10}$), and the same ten categories improve while the same five do
-not. Which categories benefit is therefore a property of the category, not of the
-network --- what a dilution argument predicts, and what a backbone-specific
-artefact would not.
+not. Within the two student families we tested --- which share one teacher and
+one protocol --- the pattern is therefore consistent with a property of the
+category rather than of the network, which is what a dilution argument predicts
+and what a backbone-specific artefact would not.
 
 \runinhead{It is not uniform, and the exceptions are not arbitrary.}
 The same change loses on three VisA categories (\texttt{candle} $-6.6$,
 \texttt{capsules} $-4.8$, \texttt{fryum} $-0.3$) and on five MVTec categories
 (\texttt{transistor}, \texttt{zipper}, \texttt{tile}, \texttt{pill},
-\texttt{cable}), and it is the same eight categories that lose under both
-backbones. At the other end eleven of the forty-two category runs gain more than
+\texttt{cable}). The five MVTec losers are the same five under both students; the
+three VisA losers are measured with the EfficientNet-B0 student only. At the other end eleven of the forty-two category runs gain more than
 sixteen points, the largest being \texttt{screw} at $+41.8$. Twenty-nine of the
 forty-two category runs improve and thirteen do not, so a rule that merely asserts that top-$k$
 helps would be wrong in nearly a third of the cases. What separates the two
@@ -473,7 +477,8 @@ $-0.40$ points, and its four variants all land in a $0.2$-point band that lies
 The procedure at its best policy returns $89.99\%$ on seed 42, $89.96\%$ on seed
 43 and $85.81\%$ on seed 44, against the table's default row of $81.62$, $81.90$
 and $80.98\%$ --- a mean gain of $\mathbf{+7.09}$ points over the default, and
-$\mathbf{61\%}$ of the $+11.65$ points that per-category oracle selection would
+$\mathbf{61\%}$ of the $+11.65$ points that per-category selection of a \emph{single}
+policy would
 have delivered on the same models.
 
 \runinhead{But most of that gain is not the criterion's.}
@@ -523,9 +528,11 @@ number, and a single-seed report of the label-free gain would have claimed $8.4$
 points where the honest three-seed figure is $7.1$.
 
 Two features of the procedure are stable even though its headline gain is not.
-The pseudo criterion ranks policies by their true AUROC at a mean Spearman
-$\rho = 0.53$ in \emph{every} seed ($0.529$--$0.536$): the ordering it learns is
-reproducible, while the policy at the top of that ordering is not. And the
+The ordering the pseudo criterion produces \emph{agrees with} the true-AUROC
+ordering at a mean Spearman $\rho = 0.53$ in \emph{every} seed ($0.529$--$0.536$);
+true AUROC is used here only to score that agreement after the fact, never by the
+criterion itself. The ordering is reproducible across seeds, while the policy at
+the top of it is not. And the
 criterion selects the per-category oracle policy in only one of the forty-five
 category-seed cells, yet still attains $88.59\%$ on average --- it does not need
 to identify the optimum, only to move near-optimal policies to the front.

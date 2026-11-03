@@ -72,16 +72,18 @@ ConvNeXtV2-Base  & 89.69 & 79.36 & 14 \\
 \end{table}
 
 The pipeline described in this paper reaches $82.47\%$ mean AUROC on MVTec-AD with
-the architecture the search selected, \texttt{efficientnet\_b0} (5.41M parameters),
+the architecture the four recorded searches selected, \texttt{efficientnet\_b0}
+(5.41M parameters),
 against reported values of $95.6\%$--$99.6\%$ for the established detectors. We
 therefore do not claim a competitive operating point: the gap to the strongest
 published single-class detectors is $17.1$ points, and we report it
 rather than obscure it. We can also name at least one candidate cause. The
 deployed detector uses an ImageNet-1k ResNet-18 as its frozen teacher
-(Section~\ref{subsec:teacher}), whereas reverse distillation as published
-pre-trains the teacher on the normal images of the target category; the same code
-path also fixes the student bottleneck at a width the search cannot change. We do
-not claim that these account for the whole gap, and we have not run the
+(Section~\ref{subsec:teacher}), while the search that produced it ranks candidates
+against a contrastive teacher trained on the normal images of the search category:
+the two teachers see different feature spaces. The same code path also fixes the
+student bottleneck at a width the search cannot change. We do not claim that these
+account for the whole gap to published methods, and we have not run a
 teacher-adapted variant, so the attribution is a hypothesis rather than a result.
 A second caveat is that the harness itself was not validated against a published
 reverse-distillation configuration: we did not reproduce a reference RD number

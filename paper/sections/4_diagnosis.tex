@@ -554,15 +554,17 @@ random, and its selection behaviour is systematically wrong'': it returned a
 collapse-prone backbone in twelve of twelve runs --- eight times
 \texttt{efficientnet\_b1} (true rank $12$ of $14$) and four times
 \texttt{mobilenetv3\_small\_100} (rank $7$) --- so every one of the twelve is of
-true rank $7$ or worse, and none is in the top four, at a probability of
-$7.2\times10^{-11}$ under uniform sampling. Second, the percentile is from a
-bootstrap over $200\,000$ uniform draws of a backbone, whereas the $2.98$ figure
-is a paired minimum detectable difference over the fifteen categories; the two are
-different statistics on different nulls and we do not compare them. It is that
+true rank $7$ or worse, and none is in the top four; the observed pattern --- all
+twelve landing inside those two backbones --- has probability $7.2\times10^{-11}$
+under uniform sampling. Second, the percentile is from a bootstrap over
+$200\,000$ replicates of twelve uniform draws, whereas the $2.98$ figure is a
+paired minimum detectable difference over the fifteen categories: different
+statistics on different nulls, and the percentile is not tested against that
+bound. It is that
 systematic error, not the $0.74$-point gap, that the evidence supports, and it is
 sufficient: replacing the search with a random number generator would have
 improved the deployed detector; replacing it with the constant
-\texttt{resnet18} would have improved it by $2.3$ points.
+\texttt{resnet18} would have improved it by $2.4$ points.
 
 The mechanism is the one established in Section~\ref{subsec:proxy_stability}: a
 well-behaved configuration is bounded below by roughly $7$--$8$, while the two
